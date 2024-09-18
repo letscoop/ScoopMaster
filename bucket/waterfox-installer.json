@@ -1,16 +1,16 @@
 {
-    "version": "6.0.9",
+    "version": "6.0.19",
     "description": "Fast and Private Web Browser based on Firefox.",
     "homepage": "https://www.waterfox.net/",
     "license": "https://github.com/WaterfoxCo/Waterfox/blob/current/LICENSE",
     "architecture": {
         "64bit": {
-            "url": "https://cdn1.waterfox.net/waterfox/releases/G6.0.9/WINNT_x86_64/Waterfox%20Setup%20G6.0.9.exe#/waterfox-installer.exe",
-            "hash": "5044632adfe98a186cac1a646846af2aef48bfaacb668ce7a160de08ceacf57b"
+            "url": "https://cdn1.waterfox.net/waterfox/releases/G6.0.19/WINNT_x86_64/Waterfox%20Setup%20G6.0.19.exe#/waterfox-installer.exe",
+            "hash": "556e93eeadf05927102c9676cc93122f4b8afa6d0a921f96b9fced3caa7eab4a"
         },
         "32bit": {
-            "url": "https://cdn1.waterfox.net/waterfox/releases/G6.0.9/WINNT_x86_64/Waterfox%20Setup%20G6.0.9.exe#/waterfox-installer.exe",
-            "hash": "5044632adfe98a186cac1a646846af2aef48bfaacb668ce7a160de08ceacf57b"
+            "url": "https://cdn1.waterfox.net/waterfox/releases/G6.0.19/WINNT_x86_64/Waterfox%20Setup%20G6.0.19.exe#/waterfox-installer.exe",
+            "hash": "556e93eeadf05927102c9676cc93122f4b8afa6d0a921f96b9fced3caa7eab4a"
         }
     },
     "bin": "waterfox-installer.exe",
@@ -18,6 +18,9 @@
         "github": "https://github.com/WaterfoxCo/Waterfox",
         "regex": "G([\\d.]+)"
     },
+    "post_install":[
+        "waterfox-installer"
+    ],
     "autoupdate": {
         "architecture": {
             "64bit": {

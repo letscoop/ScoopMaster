@@ -1,13 +1,13 @@
 {
-    "version": "2.9.9",
+    "version": "2.11.11",
     "description": "Windscribe 2.0 desktop client for Windows, Mac and Linux.",
     "homepage": "https://github.com/Windscribe/Desktop-App",
     "license": "GPL-2",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Windscribe/Desktop-App/releases/download/v2.9.9/Windscribe_2.9.9.exe",
-            "hash": "d2a817e8f2738cacc646d3dc2194d7fd28f2ce1de435be24fa98ed8928b4daa2"
+            "url": "https://github.com/Windscribe/Desktop-App/releases/download/v2.11.11/Windscribe_2.11.11.exe",
+            "hash": "4fe31d4e40fb10cd0662cb5f4e8cedaf99abfa9e1dfd25d89a6601d6d03aa8fb"
         }
     },
     "checkver": "github",

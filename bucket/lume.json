@@ -1,10 +1,10 @@
 {
-    "version": "3.0.1",
+    "version": "4.1.2",
     "description": "Ambitious nostr client",
     "homepage": "https://lume.nu/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/luminous-devs/lume/releases/download/v3.0.1/Lume_3.0.1_x64_en-US.msi",
-    "hash": "29f9034e4e76f7326c1703e0c6e12075d372726398b64eee08da32e56225b7ce",
+    "url": "https://github.com/luminous-devs/lume/releases/download/v4.1.2/Lume_4.1.2_x64_en-US.msi",
+    "hash": "a04001de68977589f4eb9434459aee4fd464f9c0ea50cf3e5fcd2a028d09a92f",
     "extract_dir": "PFiles/Lume",
     "shortcuts": [
         [
@@ -13,7 +13,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/luminous-devs/lume"
+        "url": "https://api.github.com/repos/luminous-devs/lume/releases",
+        "regex": "/Lume_(?<version>[\\d.]+)_x64_en-US.msi"
     },
     "autoupdate": {
         "url": "https://github.com/luminous-devs/lume/releases/download/v$version/Lume_$version_x64_en-US.msi"

@@ -1,6 +1,0 @@
-{
-    "version": "1.0.0.3",
-    "url": "https://github.com/aloxjp/scoop-edinet/releases/download/v1.0.0/ALM.zip",
-    "bin": "ALM\\alm.ps1",
-     "hash": "D3CDF4E109106F5F69BEC1659161903130AAB70E356B4B929C48EDB9A415B6B3"
-}

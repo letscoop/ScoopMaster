@@ -1,13 +1,13 @@
 {
     "homepage": "https://github.com/be5invis/Iosevka",
-    "version": "29.0.1",
+    "version": "31.6.1",
     "description": "Slender typeface for code, from code.",
     "checkver": {
         "url": "https://github.com/be5invis/Iosevka/releases/latest",
         "re": "href=\"/be5invis/Iosevka/tree/v((\\d+\\.)+\\d+)\""
     },
-    "url": "https://github.com/be5invis/Iosevka/releases/download/v29.0.1/SuperTTC-Iosevka-29.0.1.zip",
-    "hash": "e99479d0a12b4f1162ad12860b66adb17b05b106f0714ef2e0bc259bd5dd53a4",
+    "url": "https://github.com/be5invis/Iosevka/releases/download/v31.6.1/SuperTTC-Iosevka-31.6.1.zip",
+    "hash": "6ba820a01f0dd5fe282f3132cb5474042a5a75cb21a876c0c4d96996bd8118ad",
     "autoupdate": {
         "url": "https://github.com/be5invis/Iosevka/releases/download/v$version/SuperTTC-Iosevka-$version.zip"
     },

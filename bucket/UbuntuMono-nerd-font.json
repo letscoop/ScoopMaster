@@ -1,10 +1,10 @@
 {
-    "version": "3.1.1",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'UbuntuMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/UbuntuMono.tar.xz",
-    "hash": "4b187dc6d9f345b1d45f623fb3a451e0f602f20b53bc290915b3c6d4fc598c6a",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.tar.xz",
+    "hash": "2b678521c5c8a963ba2c8f7846e21df4323838c64d70d59cb1ff38124d7f7396",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

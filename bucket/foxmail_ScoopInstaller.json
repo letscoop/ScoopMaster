@@ -1,13 +1,13 @@
 {
-    "version": "7.2.25.245",
+    "version": "7.2.25.306",
     "description": "Foxmail like you've never seen it before.",
     "homepage": "https://www.foxmail.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.foxmail.com/mac/en/terms_of_service"
     },
-    "url": "https://dldir1.qq.com/foxmail/windows/FoxmailSetup_7.2.25.245.exe#/dl.7z",
-    "hash": "0d5b46d5d56e4d9f669c1d28a242a5df25a30ef5712eab581cebeee3fcc9cd95",
+    "url": "https://dldir1.qq.com/foxmail/windows/FoxmailSetup_7.2.25.306.exe#/dl.7z",
+    "hash": "4f4498590e33731e790ec9e9c667cb49727047e28a158f72e4495dfcf9a4b770",
     "pre_install": [
         "$file = 'FMStorage.list'",
         "if (!(Test-Path \"$persist_dir\\$file\")) {",

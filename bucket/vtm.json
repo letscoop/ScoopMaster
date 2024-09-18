@@ -1,34 +1,34 @@
 {
-    "version": "0.9.74",
-    "description": "Terminal multiplexer with window manager and session sharing",
-    "homepage": "https://github.com/netxs-group/vtm",
+    "version": "0.9.99.09",
+    "description": "Text-based desktop environment",
+    "homepage": "https://github.com/directvt/vtm",
     "license": "MIT",
     "architecture": {
-        "arm64": {
-            "url": "https://github.com/netxs-group/vtm/releases/download/v0.9.74/vtm_windows_arm64.zip",
-            "hash": "6ebc7ae978644e1c51938256d70aa03b8c86a64168a123dfc089270b0ef685e0"
-        },
         "64bit": {
-            "url": "https://github.com/netxs-group/vtm/releases/download/v0.9.74/vtm_windows_x86_64.zip",
-            "hash": "e2febf83e27499c157e1b444fb2e9061948a5d503c88cea3fdef4e95d4c22315"
+            "url": "https://github.com/directvt/vtm/releases/download/v0.9.99.09/vtm_windows_x86_64.zip",
+            "hash": "272440d878f63986ee91fc1180e4ab773924711c2e0cb577d97369324de4efd2"
         },
         "32bit": {
-            "url": "https://github.com/netxs-group/vtm/releases/download/v0.9.74/vtm_windows_x86.zip",
-            "hash": "3377ffb2f53faa0cda223644c18fb06daa64a31856c5fac3d257f40c1261a192"
+            "url": "https://github.com/directvt/vtm/releases/download/v0.9.99.09/vtm_windows_x86.zip",
+            "hash": "e4f9d7d9630418350034914b89a2b8a3bc0d31ec7410fa7f326d5c25dc3c49c4"
+        },
+        "arm64": {
+            "url": "https://github.com/directvt/vtm/releases/download/v0.9.99.09/vtm_windows_arm64.zip",
+            "hash": "2f688641a3261bfbfc4f6bbd0e110b1ab4d838ad5dbe6bc855d642a2ac53c754"
         }
     },
     "bin": "vtm.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
-            "arm64": {
-                "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_arm64.zip"
-            },
             "64bit": {
-                "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_x86_64.zip"
+                "url": "https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_x86_64.zip"
             },
             "32bit": {
-                "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_x86.zip"
+                "url": "https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_arm64.zip"
             }
         }
     }

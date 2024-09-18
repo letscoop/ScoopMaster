@@ -1,23 +1,25 @@
 {
-    "autoupdate": {
-        "url": "https://github.com/crystal-lang/crystal/releases/download/$version/crystal-$version-windows-x86_64-msvc-unsupported.zip"
-    },
-    "bin": [
-        "crystal.exe",
-        "shards.exe"
-    ],
-    "checkver": {
-        "github": "https://github.com/crystal-lang/crystal"
-    },
-    "depends": "vswhere",
+    "version": "1.13.2",
     "description": "Crystal for Windows Preview",
-    "hash": "eee6a835d0c3bb9ea2dce5b92c53eb2f11079c06cfd3011ba82f5454bbf7b811",
     "homepage": "https://crystal-lang.org/",
     "license": {
         "identifier": "Apache-2.0",
         "url": "https://github.com/crystal-lang/crystal/blob/master/LICENSE"
     },
-    "post_install": "If (Test-Path $env:LOCALAPPDATA\\crystal\\cache) { rm -r -fo $env:LOCALAPPDATA\\crystal\\cache}",
-    "url": "https://github.com/crystal-lang/crystal/releases/download/1.11.2/crystal-1.11.2-windows-x86_64-msvc-unsupported.zip",
-    "version": "1.11.2"
+    "url": [
+        "https://github.com/crystal-lang/crystal/releases/download/1.13.2/crystal-1.13.2-windows-x86_64-msvc-unsupported.zip"
+    ],
+    "hash": [
+        "5E01CBCDFBCE0119F6D35C077299800EB1452890586D276DA1FB45AA4EA7AF8B"
+    ],
+    "depends": [
+        "vswhere"
+    ],
+    "bin": [
+        "crystal.exe",
+        "shards.exe"
+    ],
+    "post_install": [
+        "If (Test-Path $env:LOCALAPPDATA\\crystal\\cache) { rm -r -fo $env:LOCALAPPDATA\\crystal\\cache}"
+    ]
 }

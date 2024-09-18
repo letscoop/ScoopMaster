@@ -1,24 +1,23 @@
 {
-    "version": "8.6.1",
-    "description": "API client for GraphQL, REST, and gRPC (CLI)",
-    "homepage": "https://insomnia.rest/products/inso",
-    "license": "MIT",
+    "version": "10.1.0-beta.0",
+    "description": "A CLI for Insomnia, allows you to use Insomnia application functionality in your terminal",
+    "homepage": "https://docs.insomnia.rest/inso-cli/introduction",
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Kong/insomnia/releases/download/lib%408.6.1/inso-windows-8.6.1.zip",
-            "hash": "21507d0cf4a19450910137fde0e2b01ff71df01e6c84e506cf3a7cff85f8e2fc"
+            "url": "https://github.com/Kong/insomnia/releases/download/core@10.1.0-beta.0/inso-windows-10.1.0-beta.0.zip",
+            "hash": "4e17af4040ade5e8503b79fcd1a724b3ce66a358b86d47d1d1919da16599bf24"
         }
     },
     "bin": "inso.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/Kong/insomnia/releases",
-        "jsonpath": "$..tag_name",
-        "regex": "lib@([\\d.]+)"
+        "url": "https://github.com/Kong/insomnia/releases.atom",
+        "regex": "Repository/\\d+/core@(.+?)<"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Kong/insomnia/releases/download/lib%40$version/inso-windows-$version.zip"
+                "url": "https://github.com/Kong/insomnia/releases/download/core@$version/inso-windows-$version.zip"
             }
         }
     }

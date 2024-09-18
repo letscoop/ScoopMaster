@@ -1,35 +1,33 @@
 {
-    "homepage": "https://github.com/FredrikNoren/ungit",
-    "version": "1.5.25",
+    "version": "1.5.27",
     "description": "The easiest way to use git. On any platform. Anywhere.",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/FredrikNoren/ungit/blob/master/LICENSE.md"
-    },
+    "homepage": "https://github.com/FredrikNoren/ungit",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/FredrikNoren/ungit/releases/download/v1.5.25/ungit-1.5.25-win32-x64.zip",
-            "bin": "ungit.exe",
-            "hash": "fd6acb16ee47f63c2ecaecb2f185109c53c60bc7e0d9a1418b823ff549795d8f",
+            "url": "https://github.com/FredrikNoren/ungit/releases/download/v1.5.27/ungit-1.5.27-win32-x64.zip",
+            "hash": "a1634a838c9e655ea66ba0a44526d2704fdf6469b9eb05de97993dde6ca88d06",
             "extract_dir": "ungit-win32-x64"
         },
         "32bit": {
-            "url": "https://github.com/FredrikNoren/ungit/releases/download/v1.5.25/ungit-1.5.25-win32-ia32.zip",
-            "bin": "ungit.exe",
-            "hash": "d07b4f7fc5dc430257b102acf812793a37185e43421a7afb0d1019198a7bdd3f",
+            "url": "https://github.com/FredrikNoren/ungit/releases/download/v1.5.27/ungit-1.5.27-win32-ia32.zip",
+            "hash": "f7dbef1cdd17463b770cfcb065cdc1e7c3538796d6884cb858dc441675204488",
             "extract_dir": "ungit-win32-ia32"
+        },
+        "arm64": {
+            "url": "https://github.com/FredrikNoren/ungit/releases/download/v1.5.27/ungit-1.5.27-win32-arm64.zip",
+            "hash": "89426bb9e8c01b5bf072c7c0ed81490768843339324b0ffa1241973bb865c938",
+            "extract_dir": "ungit-win32-arm64"
         }
     },
-    "checkver": {
-        "github": "https://github.com/FredrikNoren/ungit",
-        "regex": "\\/releases\\/tag\\/v([\\d.]+)"
-    },
+    "bin": "ungit.exe",
     "shortcuts": [
         [
             "ungit.exe",
-            "Ungit"
+            "ungit"
         ]
     ],
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -37,6 +35,9 @@
             },
             "32bit": {
                 "url": "https://github.com/FredrikNoren/ungit/releases/download/v$version/ungit-$version-win32-ia32.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/FredrikNoren/ungit/releases/download/v$version/ungit-$version-win32-arm64.zip"
             }
         }
     }

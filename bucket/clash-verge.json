@@ -1,33 +1,21 @@
 {
-    "version": "1.5.8",
-    "description": "A Clash GUI based on tauri.",
     "homepage": "https://github.com/clash-verge-rev/clash-verge-rev",
-    "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.5.8/Clash.Verge_1.5.8_x64_portable.zip",
-            "hash": "edcf6202704d8d453412888c12acaf479009cc29204b83b2f5e9eed2ccd8f5b6"
-        }
-    },
-    "post_install": [
-        "ensure \"$dir\\.config\" | Out-Null",
-        "if (!(Test-Path \"$dir\\.config\\PORTABLE\")) {",
-        "    New-Item -Path \"$dir\\.config\\PORTABLE\" -ItemType file | Out-Null",
-        "}"
-    ],
+    "description": "A Clash GUI based on tauri. ",
+    "version": "1.7.7",
+    "license": "GPL-3.0",
+    "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v1.7.7/Clash.Verge_1.7.7_x64_portable.zip",
+    "hash": "c3b8c63b908a2674811643cb89635ef89e32a1b9b39114ff087a01890a5d8ee0",
+    "bin": "Clash Verge.exe",
     "shortcuts": [
         [
             "Clash Verge.exe",
             "Clash Verge"
         ]
     ],
-    "persist": ".config",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/clash-verge-rev/clash-verge-rev"
+    },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/Clash.Verge_$version_x64_portable.zip"
-            }
-        }
+        "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v$version/Clash.Verge_$version_x64_portable.zip"
     }
 }

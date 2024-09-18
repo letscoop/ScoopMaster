@@ -1,10 +1,10 @@
 {
-    "version": "1.6.1",
+    "version": "2.1.1",
     "description": "The GitKraken CLI",
     "homepage": "https://www.gitkraken.com/cli",
     "license": "https://raw.githubusercontent.com/gitkraken/gk-cli/main/LICENSE",
-    "url": "https://github.com/gitkraken/gk-cli/releases/download/v1.6.1/gk_1.6.1_Windows_x86_64.zip",
-    "hash": "9eb454bafcdbe718991c2e59ccb6a2865cdd197e46a7852495c784fab1ff2ed7",
+    "url": "https://github.com/gitkraken/gk-cli/releases/download/v2.1.1/gk_2.1.1_Windows_x86_64.zip",
+    "hash": "3beeb91602a96e838e3ea34bdb6517b7247815184a03233311d2932baf7cc745",
     "bin": "gk.exe",
     "checkver": {
         "github": "https://github.com/gitkraken/gk-cli"

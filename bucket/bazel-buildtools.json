@@ -1,5 +1,5 @@
 {
-    "version": "6.4.0",
+    "version": "7.3.1",
     "description": "Developer tools for working with Google's bazel buildtool.",
     "homepage": "https://github.com/bazelbuild/buildtools",
     "license": "Apache-2.0",
@@ -9,14 +9,14 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildifier-windows-amd64.exe#/buildifier.exe",
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/buildozer-windows-amd64.exe#/buildozer.exe",
-                "https://github.com/bazelbuild/buildtools/releases/download/v6.4.0/unused_deps-windows-amd64.exe#/unused_deps.exe"
+                "https://github.com/bazelbuild/buildtools/releases/download/v7.3.1/buildifier-windows-amd64.exe#/buildifier.exe",
+                "https://github.com/bazelbuild/buildtools/releases/download/v7.3.1/buildozer-windows-amd64.exe#/buildozer.exe",
+                "https://github.com/bazelbuild/buildtools/releases/download/v7.3.1/unused_deps-windows-amd64.exe#/unused_deps.exe"
             ],
             "hash": [
-                "da8372f35e34b65fb6d997844d041013bb841e55f58b54d596d35e49680fe13c",
-                "e7f05bf847f7c3689dd28926460ce6e1097ae97380ac8e6ae7147b7b706ba19b",
-                "db8ceaffcda9200a5249815a5117cc3dec2fce0d2a46100c6e10b9dda667075e"
+                "370cd576075ad29930a82f5de132f1a1de4084c784a82514bd4da80c85acf4a8",
+                "58d41ce53257c5594c9bc86d769f580909269f68de114297f46284fbb9023dcf",
+                "7075a28a1b34fefb1f54cc444d0be3d75282167b64adb7d9cae12c8fa2dc08bd"
             ]
         }
     },

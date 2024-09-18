@@ -1,15 +1,15 @@
 {
-    "version": "24.02.0_A",
+    "version": "24.08.1",
     "description": "Video editing software based on the MLT Framework, KDE and Qt",
     "homepage": "https://kdenlive.org",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://download.kde.org/stable/kdenlive/24.02/windows/kdenlive-24.02.0_A_standalone.exe#/dl.7z",
-            "hash": "a90ee59c37045fe11d57d7807e3c4c8e75c6c389b3a9f2efc2a7951a92ef12b3"
+            "url": "https://download.kde.org/stable/kdenlive/24.08/windows/kdenlive-24.08.1_standalone.exe#/dl.7z",
+            "hash": "7b49d3a9858b9da24cfa0c5d554e2890995757f0f0e13b793de79935b0db6021"
         }
     },
-    "extract_dir": "kdenlive-24.02.0_A_standalone",
+    "extract_dir": "kdenlive-24.08.1_standalone",
     "bin": "bin\\kdenlive.exe",
     "shortcuts": [
         [

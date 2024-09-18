@@ -1,13 +1,13 @@
 {
     "homepage": "https://www.xyplorer.com/index.php",
-    "version": "25.70.0100",
+    "version": "26.40.0100",
     "description": "A file manager for Windows.",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.xyplorer.com/LicenseXY.txt"
     },
     "url": "https://www.xyplorer.com/download/xyplorer_full_noinstall.zip",
-    "hash": "ad16ba3769f8c26fdde6623b045e2676d153a88c9af0041232988da6741f4ffd",
+    "hash": "21468d16cb4c9133bd64b3677822dc7d59f605bec06b8338bdc853d6a3311422",
     "bin": "XYplorer.exe",
     "shortcuts": [
         [

@@ -1,16 +1,20 @@
 {
-    "homepage": "https://github.com/PowerShell/PowerShell",
+    "homepage": "https://github.com/PowerShell/PowerShell/",
     "description": "PowerShell (Preview), the cross-platform task automation and configuration management framework/tool.",
-    "version": "7.5.0-preview.2",
+    "version": "7.5.0-preview.4",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0-preview.2/PowerShell-7.5.0-preview.2-win-x64.zip",
-            "hash": "e3b3025982632b9c8b1bac4ab16c72623e41e4db6d2cb770c6e5d22304cdd5f4"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0-preview.4/PowerShell-7.5.0-preview.4-win-x64.zip",
+            "hash": "b4279d8e1920ceed04c762bb2a0b454365f4484aa55e257615daa1fb0def02d5"
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0-preview.2/PowerShell-7.5.0-preview.2-win-x86.zip",
-            "hash": "e322270099ed943019a009c81ab6827f3381a5219178c4ef3793975f90a87e1d"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0-preview.4/PowerShell-7.5.0-preview.4-win-x86.zip",
+            "hash": "81b59a1c9c4863a740cbefc46dd735a10fed8ea7a28003c79bbb17f57c29e36c"
+        },
+        "arm64": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.5.0-preview.4/PowerShell-7.5.0-preview.4-win-arm64.zip",
+            "hash": "fd122730a2102deeb2216036e646379267ca64df083eecc1c35919dd4982f1ad"
         }
     },
     "bin": "pwsh.exe",
@@ -21,8 +25,9 @@
         ]
     ],
     "checkver": {
-        "url": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/README.md",
-        "regex": "\\[pv-windows-64\\].*releases/download/v([\\d.]+-[\\w.]+)/PowerShell"
+        "url": "https://api.github.com/repos/PowerShell/PowerShell/releases?per_page=10",
+        "jsonpath": "$[?(@.prerelease)].tag_name",
+        "regex": "v([\\d.]+-preview.\\d+)"
     },
     "autoupdate": {
         "architecture": {
@@ -31,6 +36,9 @@
             },
             "32bit": {
                 "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.zip"
             }
         },
         "hash": {

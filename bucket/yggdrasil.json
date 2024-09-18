@@ -1,21 +1,21 @@
 {
-    "version": "0.5.5",
+    "version": "0.5.8",
     "description": "An experiment in scalable routing as an encrypted IPv6 overlay network",
     "homepage": "https://yggdrasil-network.github.io",
     "license": "LGPL-3.0-or-later",
     "notes": "Use add-service.ps1 to add Yggdrasil service and remove-service.ps1 to remove Yggdrasil service",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.5/yggdrasil-0.5.5-x64.msi",
-            "hash": "72dce4067123f68d3a69fdf4a72ba01585c707dc34059e5a8602a462da89cab8"
+            "url": "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.8/yggdrasil-0.5.8-x64.msi",
+            "hash": "e91b2e3b0ec0cf2410feeddcb29290a65f5442129f057f34a7df73c6477fc4f1"
         },
         "32bit": {
-            "url": "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.5/yggdrasil-0.5.5-x86.msi",
-            "hash": "2f1c5f9047d0b1f1a98dc2028a1cecd1337277d3efd5859f1292b24563214e66"
+            "url": "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.8/yggdrasil-0.5.8-x86.msi",
+            "hash": "3645165f3135683e0d0a0bb93e972df325dc2fbdc9f916d10f765ed1c2f5e77a"
         },
         "arm64": {
-            "url": "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.5/yggdrasil-0.5.5-arm64.msi",
-            "hash": "395259577e5d010dff96d93f53d5418302042d8970eaccaa89563d5e1642f204"
+            "url": "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.8/yggdrasil-0.5.8-arm64.msi",
+            "hash": "67dc8c755f960eb4711cc32cb80a87149c9611933defecc3470a55cd360bffc7"
         }
     },
     "extract_dir": "PFiles\\Yggdrasil",

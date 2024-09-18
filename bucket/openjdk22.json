@@ -1,15 +1,15 @@
 {
     "description": "Official production-ready open-source builds of OpenJDK 22",
     "homepage": "https://jdk.java.net/22",
-    "version": "22-36",
+    "version": "22.0.2-9",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.java.net/java/GA/jdk22/830ec9fcccef480bb3e73fb7ecafe059/36/GPL/openjdk-22_windows-x64_bin.zip",
-            "hash": "8f5138fecb53c08c20abd4fa6812f9400051f3852582a2142ffda0dff73a5824"
+            "url": "https://download.java.net/java/GA/jdk22.0.2/c9ecb94cd31b495da20a27d4581645e8/9/GPL/openjdk-22.0.2_windows-x64_bin.zip",
+            "hash": "f2a9b9ab944e71a64637fcdc6b13a1188cf02d4eb9ecf71dc927e98b3e45f5dc"
         }
     },
-    "extract_dir": "jdk-22",
+    "extract_dir": "jdk-22.0.2",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"

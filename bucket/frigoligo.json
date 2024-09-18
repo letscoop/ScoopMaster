@@ -1,0 +1,24 @@
+{
+    "version": "1.2.0",
+    "description": "Frigoligo is a wallabag client crafted using Flutter.",
+    "homepage": "https://github.com/casimir/frigoligo",
+    "license": "MIT",
+    "notes": [
+        "Config and data are stored in %USERPROFILE%\\AppData\\Roaming\\net.casimir-lab\\frigoligo",
+        "They will not be automatically removed during uninstallation even with -p flag. Delete them manually if needed."
+    ],
+    "url": "https://github.com/casimir/frigoligo/releases/download/v1.2.0/frigoligo-v1.2.0-win-x64.zip",
+    "hash": "3048d48025c805b743c627dac177b5b438c514afed1d26b96baaf95a37f31f6e",
+    "extract_dir": "frigoligo",
+    "shortcuts": [
+        [
+            "frigoligo.exe",
+            "Frigoligo"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/casimir/frigoligo/releases/download/v$version/frigoligo-v$version-win-x64.zip",
+        "extract_dir": "frigoligo"
+    }
+}

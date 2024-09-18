@@ -1,16 +1,16 @@
 {
-    "version": "0.8.0",
+    "version": "0.8.4",
     "description": "A modern scalable NoSQL database with BlueQL, designed for performance, scalability and flexibility. Skytable gives you spaces, models, data types, complex collections and more to build powerful experiences.",
     "homepage": "https://skytable.io/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/skytable/skytable/releases/download/v0.8.0/sky-bundle-v0.8.0-x86_64-windows.zip",
-            "hash": "13b0ad7542cc91a2cfd228e59b92548dd99216c69e1b12348ba7a72b3f4ea842"
+            "url": "https://github.com/skytable/skytable/releases/download/v0.8.4/sky-bundle-v0.8.4-x86_64-windows.zip",
+            "hash": "d579869f7b56453a6a353dc9d693be262412b48c0db11de345e5a7b380ed8a79"
         },
         "32bit": {
-            "url": "https://github.com/skytable/skytable/releases/download/v0.8.0/sky-bundle-v0.8.0-i686-windows.zip",
-            "hash": "422a30c4e51483497e9d525d8269dd876fc7ee58f53d1604667e6051b39aefc1"
+            "url": "https://github.com/skytable/skytable/releases/download/v0.8.4/sky-bundle-v0.8.4-i686-windows.zip",
+            "hash": "fb2914399ff229e5d91312872c49e18eeffe9cf59e27ef33d5af5505663f43e1"
         }
     },
     "bin": [

@@ -1,6 +1,6 @@
 {
     "##": "Rename from zip to 7z is needed due to 'invalid archive entry' error.",
-    "version": "3.3.0",
+    "version": "3.5.1",
     "description": "A Go based command line tool for exercism.io",
     "homepage": "https://exercism.org/",
     "license": "MIT",
@@ -8,12 +8,12 @@
     "notes": "To configure the CLI, follow the instructions at https://exercism.io/cli-walkthrough.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/exercism/cli/releases/download/v3.3.0/exercism-3.3.0-windows-x86_64.zip#/dl.7z",
-            "hash": "0490b02ddbea66f0898003113433c69b0762a460edb1ad1c98df332a19113b0f"
+            "url": "https://github.com/exercism/cli/releases/download/v3.5.1/exercism-3.5.1-windows-x86_64.zip#/dl.7z",
+            "hash": "f2bf03cbd72cf6ba5374d81d9f3d4fb8c4acba168111a75ef5a4234def826a23"
         },
         "32bit": {
-            "url": "https://github.com/exercism/cli/releases/download/v3.3.0/exercism-3.3.0-windows-i386.zip#/dl.7z",
-            "hash": "e7dca99dda2b7b4ad83cec05c7ded40dd3e95b9c9bc6dbd0710312f0532bfc14"
+            "url": "https://github.com/exercism/cli/releases/download/v3.5.1/exercism-3.5.1-windows-i386.zip#/dl.7z",
+            "hash": "186f91c34790a9586712d6d18b52cb3826fb59e4c106f82b45aafca860a43508"
         }
     },
     "checkver": {

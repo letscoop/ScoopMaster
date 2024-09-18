@@ -1,19 +1,27 @@
 {
-    "version": "3.5",
-    "description": "Ultra-fast Genshin Impact Auto Pickup.",
+    "version": "3.8.4",
+    "description": "ZLUDA lets you run unmodified CUDA applications with near-native performance on AMD GPUs (ROCm 6)",
     "homepage": "https://github.com/lshqqytiger/ZLUDA",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/lshqqytiger/ZLUDA/blob/master/LICENSE"
+    "license": "Apache-2.0 OR MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/lshqqytiger/ZLUDA/releases/download/rel.c0804ca624963aab420cb418412b1c7fbae3454b/ZLUDA-windows-rocm6-amd64.zip",
+            "hash": "82985c2dcc63e94a79f661e696ef4756ff428e7dfb111a6c9708611753facaaa"
+        }
     },
-    "url": "https://github.com/lshqqytiger/ZLUDA/releases/download/v3.5-win/ZLUDA-windows-amd64.zip",
-    "hash": "fb7b98d5cdd2af517d66527e79d296768f5ef21367ef53b4156f77e16bdff0aa",
+    "extract_dir": "zluda",
     "bin": "zluda.exe",
     "env_add_path": ".",
     "checkver": {
-        "regex": "v((?:\\d+\\.?)+)-win"
+        "github": "https://github.com/lshqqytiger/ZLUDA",
+        "jsonpath": "$..['tag_name','name']",
+        "regex": "(?s)(?<tag>rel\\.\\w+).*?v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/lshqqytiger/ZLUDA/releases/download/v$version-win/ZLUDA-windows-amd64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lshqqytiger/ZLUDA/releases/download/$matchTag/ZLUDA-windows-rocm6-amd64.zip"
+            }
+        }
     }
 }

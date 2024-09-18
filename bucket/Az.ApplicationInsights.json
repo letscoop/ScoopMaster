@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:5a37884fdeefc90222892a735ab2d6f7095a0d31c4f3f9b8e7ca4a3a528255d9934971a0fff696601f4b8e759fb0390abb22052b6f65a890330b572974a0a15a",
+    "hash": "sha512:bf7bca98aed941514aac4bcc3249e869c793d51f7028a893eb86edbe60b5ced1cf2c08918cbe6da8cbba478fd94b6cd40fc5c5fdbeca1912be0dc02b3e3a4b5c",
     "description": "Microsoft Azure PowerShell: ApplicationInsights cmdlets",
     "psmodule": {
         "name": "Az.ApplicationInsights"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ApplicationInsights/2.2.3#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ApplicationInsights/2.2.5#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "2.2.3"
+    "version": "2.2.5"
 }

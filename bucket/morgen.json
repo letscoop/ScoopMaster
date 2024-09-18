@@ -1,12 +1,12 @@
 {
-    "version": "3.2.6 - Build 24030744t22rbti",
+    "version": "3.5.8 - Build 24091863jundq6a",
     "license": "Proprietary",
     "description": "Consolidate calendars, schedule meetings, and block time for work that matters.",
     "homepage": "https://www.morgen.so/",
     "architecture": {
         "64bit": {
-            "url": "https://download.todesktop.com/210203cqcj00tw1/Morgen%20Setup%203.2.6 - Build 24030744t22rbti-x64.exe",
-            "hash": "f447388002eb6e534c4dd894434070d0a17906a2d428708ce4e46c5757c257fd",
+            "url": "https://download.todesktop.com/210203cqcj00tw1/Morgen%20Setup%203.5.8 - Build 24091863jundq6a-x64.exe",
+            "hash": "7a7b1955d7958e55107b2e69d73306ba4c5f01524c499df3728020f2c89b6ca3",
             "installer": {
                 "script": "Start-Process $dir\\$fname -ArgumentList \"/S\" -wait; Remove-Item $dir\\$fname"
             },

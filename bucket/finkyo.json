@@ -1,25 +1,20 @@
 {
+    "version": "0.3.10",
+    "description": "An file server written in Rust",
     "homepage": "https://github.com/quantulr/finkyo",
-    "version": "0.1.0",
     "license": "MIT",
-    "description": "file server.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/quantulr/finkyo/releases/download/v0.1.0/finkyo-windows-amd64.zip",
-            "hash": "b949b052a49f4adb00daf852d4155b73205b749aa5d089e972b146fec80d5e85",
-            "bin": [
-                [
-                    "finkyo.exe",
-                    "finkyo"
-                ]
-            ]
+            "url": "https://github.com/quantulr/finkyo/releases/download/v0.3.10/finkyo-windows-amd64.exe#/finkyo.exe",
+            "hash": "9a1ba6968724b37986afadbef6673c03120dfdee6722be457b7df7b96fee32df"
         }
     },
+    "bin": "finkyo.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/quantulr/finkyo/releases/download/v$version/finkyo-windows-amd64.zip"
+                "url": "https://github.com/quantulr/finkyo/releases/download/v$version/finkyo-windows-amd64.exe#/finkyo.exe"
             }
         }
     }

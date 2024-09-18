@@ -1,12 +1,12 @@
 {
-    "version": "6.6.6.13",
+    "version": "6.7.1",
     "homepage": "https://cy-email.com",
     "description": "精巧纯净又稳定的邮件客户端，集收发、追踪、群发一身",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dl.cy-email.com/dm6/Download/dmpro_setup6.6.6.13.exe",
-            "hash": "sha512:5cc39af595712fb75d73652a969256ab317e4dbf567cb856a1441efdb0134ada202eba4d17db605eee1110ba4b07e403ecb855dfa7c4df1f73967b9b0d6fc782",
+            "url": "https://dl.cy-email.com/dm6/Download/dmpro_setup6.7.1.exe#/innosetup.exe",
+            "hash": "b2263128f26b10f907b94a191c1d6ba14ac669e8743e47d8275fd22a5f70f79c",
             "shortcuts": [
                 [
                     "DreamMail.exe",
@@ -16,9 +16,7 @@
         }
     },
     "innosetup": true,
-    "persist": [
-        "User"
-    ],
+    "persist": "User",
     "checkver": {
         "url": "https://cy-email.com",
         "regex": "最新版本：(\\d+\\.\\d+\\.\\d+)"

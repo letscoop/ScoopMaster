@@ -1,12 +1,12 @@
 {
-    "version": "2023.12.24",
+    "version": "2024.09.02",
     "description": "Friendship management tool for VRChat",
     "homepage": "https://github.com/vrcx-team/VRCX",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vrcx-team/VRCX/releases/download/v2023.12.24/VRCX_20231224.zip",
-            "hash": "4e180edacbb9cc109a9e5778d07987c80870ef15e52dcfc43d8fcd70fc1200b3"
+            "url": "https://github.com/vrcx-team/VRCX/releases/download/v2024.09.02/VRCX_20240902.zip",
+            "hash": "e85f7d9e42d03ef7b9b252fb2fedc3480acfaedf44ede38f160c8f7e627a195d"
         }
     },
     "shortcuts": [

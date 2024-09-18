@@ -1,16 +1,16 @@
 {
-    "version": "24.1.4",
+    "version": "24.9.1",
     "description": "A reverse proxy that enables you to expose your localhost to the internet.",
     "homepage": "https://localxpose.io/",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://loclx-client.s3.amazonaws.com/loclx-windows-amd64.zip",
-            "hash": "a09ccec49d55906120238e9030bcc5ae128ce93b3563bcbb873bd4978fe8bbd7"
+            "hash": "fc27d0088ad545f8e403a29cbb0ac5b2789da69ae702f7646e3731917ebd5abd"
         },
         "32bit": {
             "url": "https://loclx-client.s3.amazonaws.com/loclx-windows-386.zip",
-            "hash": "0edf448e1f37b933d6289766bb21dbdc6f4510972b240c37e9ad46684c4df930"
+            "hash": "f3b4d4f9fa6c02e0a1bf0d9e41e63a875a1fd43749b46510814eea3a72da95c5"
         }
     },
     "bin": "loclx.exe",

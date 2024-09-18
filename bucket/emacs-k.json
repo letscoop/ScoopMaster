@@ -1,45 +1,24 @@
 {
-    "##": "https://github.com/kiennq/scoop-misc/commits/master/bucket/emacs-k.json",
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "homepage": "https://github.com/kiennq/emacs-build",
     "license": "GPLv3",
-    "version": "30.228.20240309.3e76e1a",
-    "url": "https://github.com/kiennq/emacs-build/releases/download/v30.228.20240309.3e76e1a/emacs-master-x86_64-full.zip",
-    "hash": "7037bcd0d2aa1e0e41303a5f58977a887ac5ca7b493b36b1766d448328b4084b",
-    "bin": [
-        "bin\\runemacs.exe",
-        "bin\\emacs.exe",
-        "bin\\emacsclient.exe",
-        "bin\\emacsclientw.exe",
-        "bin\\etags.exe",
-        "bin\\ctags.exe",
-        "bin\\gzip.exe",
-        [
-            "bin\\x86_64-w64-mingw32-agrep.exe",
-            "agrep"
-        ],
-        [
-            "bin\\emacsclientw.exe",
-            "emw",
-            "-c -n -a \"\""
+    "version": "31.315.20240904.04cfac4",
+    "url": "https://github.com/kiennq/emacs-build/releases/download/v31.315.20240904.04cfac4/emacs-04cfac4-ucrt-x86_64-mps.msix",
+    "hash": "8583dc336216031e9b19a6142ebe7176bcf92ee06e6d04fa19d170ac122e9fc8",
+    "installer": {
+        "script": [
+            "Get-ChildItem \"$dir\\*.msix\" | Add-AppxPackage -AllowUnsigned -ForceApplicationShutdown",
+            "Remove-Item -Force \"$dir\\*.msix\""
         ]
-    ],
+    },
+    "uninstaller": {
+        "script": "Get-AppxPackage -Name \"emacs-k\" | Remove-AppxPackage"
+    },
     "checkver": {
         "github": "https://github.com/kiennq/emacs-build",
-        "re": "/tag/v([\\d\\w.-]+)"
+        "regex": "/tag/v([\\d\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/kiennq/emacs-build/releases/download/v$version/emacs-master-x86_64-full.zip"
-    },
-    "shortcuts": [
-        [
-            "bin\\runemacs.exe",
-            "Emacs"
-        ],
-        [
-            "bin\\emacsclientw.exe",
-            "Emacs Client",
-            "-c -n -a \"\""
-        ]
-    ]
+        "url": "https://github.com/kiennq/emacs-build/releases/download/v$version/emacs-$buildVersion-ucrt-x86_64-mps.msix"
+    }
 }

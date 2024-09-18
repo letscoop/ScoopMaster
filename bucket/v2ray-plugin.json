@@ -1,13 +1,13 @@
 {
-    "version": "5.14.1",
+    "version": "5.17.0",
     "description": "A SIP003 plugin based on v2ray.",
     "homepage": "https://github.com/teddysun/v2ray-plugin",
     "license": "MIT",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/teddysun/v2ray-plugin/releases/download/v5.14.1/v2ray-plugin-windows-amd64-v5.14.1.tar.gz",
-            "hash": "b85f1508417af6a1e3cd54c4de16372a52c5220597acaae40a867ec8b430b772"
+            "url": "https://github.com/teddysun/v2ray-plugin/releases/download/v5.17.0/v2ray-plugin-windows-amd64-v5.17.0.tar.gz",
+            "hash": "310c831b0857f5ee83376e85a7015ae3ad760d3e63454648c39bb915c1fe3a64"
         }
     },
     "checkver": {

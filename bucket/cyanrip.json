@@ -1,12 +1,12 @@
 {
-    "version": "0.9.2",
+    "version": "0.9.3.1",
     "description": "A fully featured CD ripping program able to take out most of the tedium.",
     "homepage": "https://github.com/cyanreg/cyanrip/",
     "license": "LGPL-2.1-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cyanreg/cyanrip/releases/download/v0.9.2/cyanrip-win64.exe#/cyanrip.exe",
-            "hash": "ce6c91ff2b3c6975ead6ed4388fb310d1f069ee511a5fd378af09f4c995226c2"
+            "url": "https://github.com/cyanreg/cyanrip/releases/download/v0.9.3.1/cyanrip-win64.exe#/cyanrip.exe",
+            "hash": "ea9075cad63ccecedfacefb8481c13b40d3ffb124a5c8c1bad7b408660a1c08d"
         }
     },
     "bin": "cyanrip.exe",

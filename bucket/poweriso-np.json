@@ -1,5 +1,5 @@
 {
-    "version": "8.7",
+    "version": "8.9",
     "homepage": "https://www.poweriso.com/index.htm",
     "description": "A powerful CD / DVD / BD image file processing tool, which allows you to open, extract, burn, create, edit, compress, encrypt, split and convert ISO files, and mount ISO files with internal virtual drive.",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "32bit": {
             "url": "https://www.poweriso.net/PowerISO8.exe#/setup.exe",
-            "hash": "a636a22ba499261bf77b114676f49241f9c4532d586bb206db1cbddcb9c6bf8d",
+            "hash": "6b2a8f5d26e2ef7bc71aebfee4519ada06a4bd9a982a99208430625c426d9f11",
             "installer": {
                 "script": [
                     "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
@@ -31,7 +31,7 @@
         },
         "64bit": {
             "url": "https://www.poweriso.net/PowerISO8-x64.exe#/setup.exe",
-            "hash": "be2c1e8b419d8f8e85fb7a4a4e6a6c908244ee9520f9657da932c23cf7ed4ddb",
+            "hash": "cac86780dd560b81feab752a38f05a186477de300d25eeaa7526e7812aec5cd3",
             "installer": {
                 "script": [
                     "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",

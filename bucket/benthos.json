@@ -1,33 +1,43 @@
 {
-    "version": "4.25.1",
-    "description": "Declarative stream processing for mundane tasks and data engineering.",
-    "homepage": "https://www.benthos.dev/",
-    "license": "MIT",
+    "version": "4.36.0",
+    "description": "Redpanda Connect (Originally Benthos) is a high performance and resilient stream processor, able to connect various sources and sinks",
+    "homepage": "https://docs.redpanda.com/redpanda-connect/about/",
+    "license": {
+        "identifier": "Apache-2.0|RCL",
+        "url": "https://github.com/redpanda-data/connect/tree/main/licenses"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Jeffail/benthos/releases/download/v4.25.1/benthos_4.25.1_windows_amd64.tar.gz",
-            "hash": "3967acb2a22f3086f775dccd4109aeb2aa6367f12ef434c526b2bc82066e0726"
+            "url": "https://github.com/redpanda-data/connect/releases/download/v4.36.0/redpanda-connect_4.36.0_windows_amd64.tar.gz",
+            "hash": "48501481356f5a8654941642bcc92091214a86b4eb03ed34fddbbbd4c5e40522"
         },
         "arm64": {
-            "url": "https://github.com/Jeffail/benthos/releases/download/v4.25.1/benthos_4.25.1_windows_arm64.tar.gz",
-            "hash": "de6e0ac6bae85f9f503aef0f7a483c284de8570ddb3f148c2a10a000dd3230d8"
+            "url": "https://github.com/redpanda-data/connect/releases/download/v4.36.0/redpanda-connect_4.36.0_windows_arm64.tar.gz",
+            "hash": "8afe0f3ec07c961ba135c2ace5fad7c0a65b5c4251d0c9c01eab52e9476f05be"
         }
     },
-    "bin": "benthos.exe",
+    "bin": [
+        "redpanda-connect.exe",
+        [
+            "redpanda-connect.exe",
+            "benthos"
+        ]
+    ],
     "checkver": {
-        "github": "https://github.com/Jeffail/benthos"
+        "github": "https://github.com/redpanda-data/connect"
     },
+    "notes": "benthos has been renamed to redpanda-connect. Consider installing lemon/redpanda-connect",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Jeffail/benthos/releases/download/v$version/benthos_$version_windows_amd64.tar.gz"
+                "url": "https://github.com/redpanda-data/connect/releases/download/v$version/redpanda-connect_$version_windows_amd64.tar.gz"
             },
             "arm64": {
-                "url": "https://github.com/Jeffail/benthos/releases/download/v$version/benthos_$version_windows_arm64.tar.gz"
+                "url": "https://github.com/redpanda-data/connect/releases/download/v$version/redpanda-connect_$version_windows_arm64.tar.gz"
             }
         },
         "hash": {
-            "url": "$baseurl/benthos_$version_checksums.txt"
+            "url": "$baseurl/redpanda-connect_$version_checksums.txt"
         }
     }
 }

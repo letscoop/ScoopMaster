@@ -1,16 +1,16 @@
 {
-    "version": "2.6.0",
+    "version": "2.9.0",
     "description": "一个基于 electron 的音乐软件",
     "homepage": "https://github.com/lyswhut/lx-music-desktop",
     "license": "Apache-2.0 license",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.6.0/lx-music-desktop-v2.6.0-win7_x64-green.7z",
-            "hash": "e43bb856e1841fa3c3ab972d09c88e91781a43fd542eff1f8bdd593bb1294cf4"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.9.0/lx-music-desktop-v2.9.0-win7_x64-green.7z",
+            "hash": "607188c950dd90f44d5b59b5b3ce3bff7fbe4ab10a39f106ce69d7ed96a8b249"
         },
         "32bit": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.6.0/lx-music-desktop-v2.6.0-win7_x86-green.7z",
-            "hash": "74e5d12391461b1097ee0b1f410ee9688fbc0bdc9b40767f75f0ae8783967ca9"
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.9.0/lx-music-desktop-v2.9.0-win7_x86-green.7z",
+            "hash": "9e2594a6dab86c19e4e0d33bcde8b9764e57d1788473f3ccb3f423377b65f30e"
         }
     },
     "shortcuts": [
@@ -19,14 +19,27 @@
             "洛雪音乐助手"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "script": [
+            "$url = 'https://api.github.com/repos/lyswhut/lx-music-desktop/releases'",
+            "$cont = (Invoke-WebRequest $url).Content",
+            "$r = 'lx-music-desktop-v([\\d.]+)-win_x64-green\\.' ",
+            "if (!($cont -match $r)) { error \"Could not match $r in $url\"; continue }",
+            "$version = $matches[1]",
+            "$r = 'lx-music-desktop-v([\\d.]+)-win7_x86-green\\.' ",
+            "if (!($cont -match $r)) { error \"Could not match $r in $url\"; continue }",
+            "$x86 = $matches[1]",
+            "Write-Output $version $x86"
+        ],
+        "regex": "([\\d.]+) (?<x86>[\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win7_x64-green.7z"
             },
             "32bit": {
-                "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win7_x86-green.7z"
+                "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$matchX86/lx-music-desktop-v$matchX86-win7_x86-green.7z"
             }
         }
     }

@@ -1,16 +1,12 @@
 {
-    "version": "8.12.1000.2402",
+    "version": "9.2.2000.2408",
     "description": "星愿浏览器（Twinkstar Browser）是一款好用，可靠，时尚的浏览器，兼容Chrome插件，提供漫画阅读模式，视频下载，鼠标手势，超级拖拽等功能",
     "homepage": "https://www.twinkstar.com/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://d1.twinkstar.com/more_pkg/win/Twinkstar_v8.12.1000.2402_ReleaseF64_portable.7z",
-            "hash": "463b8766b77f83b5cbfaa98f1a623ad72d2286f88f70e325e33a9d37b285a8b3"
-        },
-        "32bit": {
-            "url": "https://d1.twinkstar.com/more_pkg/win/Twinkstar_v8.12.1000.2402_ReleaseF32_portable.7z",
-            "hash": "897b3e9c004b65b3f4e80a536d292db9d0ee5b36dfa726372c80631978b3af22"
+            "url": "https://d1.twinkstar.com/more_pkg/win/Twinkstar_v9.2.2000.2408_Release_portable.7z",
+            "hash": "3ea7b253417897d04c43bacf5e20bccac97f60ab27ed2c7cb9690334ab574cab"
         }
     },
     "post_install": "Remove-Item \"$dir\\Uninstall*\", \"$dir\\tsupdater*\"  -Force -Recurse",
@@ -29,9 +25,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://d1.twinkstar.com/more_pkg/win/Twinkstar_v$version_Release$matchRelease64_portable.7z"
-            },
-            "32bit": {
-                "url": "https://d1.twinkstar.com/more_pkg/win/Twinkstar_v$version_Release$matchRelease32_portable.7z"
             }
         }
     }

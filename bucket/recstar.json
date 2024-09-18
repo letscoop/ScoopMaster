@@ -1,12 +1,12 @@
 {
-    "version": "1.0.0",
+    "version": "1.1.2",
     "description": "Open source reclist audio recording application for concatenative singing voice synthesis",
     "homepage": "https://github.com/sdercolin/recstar/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sdercolin/recstar/releases/download/1.0.0/recstar-1.0.0-win64.zip",
-            "hash": "b9d402d28f2eabba28d76cd48d9e003d18b75174d68810495ee65c46603be21e"
+            "url": "https://github.com/sdercolin/recstar/releases/download/1.1.2/recstar-1.1.2-win64.zip",
+            "hash": "9b22a5bea8b25338d6155b0cab3604229581e3ed7310b995cd5e6fe59ba1e58f"
         }
     },
     "bin": "RecStar.exe",

@@ -1,5 +1,5 @@
 {
-    "version": "10.23.1-canary240202-1241",
+    "version": "11.2.14-canary240621-0734",
     "description": "Complete API development environment (canary version)",
     "homepage": "https://www.postman.com/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.pstmn.io/download/10.23.1-canary240202-1241/PostmanCanary-win64-10.23.1-canary240202-1241-full.nupkg",
-            "hash": "sha1:75ecaeb25ff4c41ff4d3ebf9c2fd22294d2941db"
+            "url": "https://dl.pstmn.io/download/11.2.14-canary240621-0734/PostmanCanary-win64-11.2.14-canary240621-0734-full.nupkg",
+            "hash": "sha1:239d0994861a6386c73081a90f4d87dfc844cd53"
         }
     },
     "extract_dir": "lib\\net45",

@@ -1,23 +1,23 @@
 {
-    "version": "18.0.3",
+    "version": "18.5.1",
     "description": "DDraceNetwork, a free cooperative platformer game",
     "homepage": "https://ddnet.org/",
-    "license": "SIL Open Font License",
+    "license": "Zlib",
     "architecture": {
         "64bit": {
-            "url": "https://ddnet.org/downloads/DDNet-18.0.3-win64.zip",
-            "hash": "8ba7f37813146b621549abc8fd08e0b8be71c5ae643d14441000fe859f620d4b",
-            "extract_dir": "DDNet-18.0.3-win64"
+            "url": "https://ddnet.org/downloads/DDNet-18.5.1-win64.zip",
+            "hash": "4fcfec97bbe41ba7f04b2a4bf0b7c20fa103128c8ce38bd80beefb4fcbe31c9b",
+            "extract_dir": "DDNet-18.5.1-win64"
         },
         "32bit": {
-            "url": "https://ddnet.org/downloads/DDNet-18.0.3-win32.zip",
-            "hash": "8f2482fe059a116bdccf858e296ba5977dcd7b459dcbd552e51d7297adbc4aee",
-            "extract_dir": "DDNet-18.0.3-win32"
+            "url": "https://ddnet.org/downloads/DDNet-18.5.1-win32.zip",
+            "hash": "82ac62dd0d5fb8f170dff36239f724128ecebd70aea9ec588b3514b6fd1c9981",
+            "extract_dir": "DDNet-18.5.1-win32"
         }
     },
     "checkver": {
         "url": "https://ddnet.org/downloads/",
-        "regex": "DDNet-([\\d.]+)-win64.zip"
+        "regex": "DDNet-([\\d.]+)-"
     },
     "autoupdate": {
         "architecture": {
@@ -31,7 +31,7 @@
             }
         },
         "hash": {
-            "url": "https://ddnet.org/downloads/DDNet-$version.sha256",
+            "url": "https://ddnet.org/downloads/sha256sums.txt",
             "regex": ""
         }
     },

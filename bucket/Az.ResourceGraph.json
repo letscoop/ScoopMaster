@@ -1,5 +1,5 @@
 {
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ResourceGraph/0.13.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ResourceGraph/1.0.0#/mod.nupkg",
     "description": "Microsoft Azure PowerShell - Azure Resource Graph cmdlets in Windows PowerShell and PowerShell Core. Allows querying resources with a powerful query language.  For more information on Resource Graph, please visit the following: https://docs.microsoft.com/azure/governance/resource-graph/",
     "autoupdate": {
         "hash": {
@@ -8,7 +8,7 @@
         },
         "url": "https://www.powershellgallery.com/api/v2/Package/Az.ResourceGraph/$version#/mod.nupkg"
     },
-    "version": "0.13.0",
+    "version": "1.0.0",
     "depends": "Az.Accounts",
     "psmodule": {
         "name": "Az.ResourceGraph"
@@ -23,5 +23,5 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:b2b47085f332aaaa0643f5591ef72a79c0d8bdd99a7579e559b314794c8342514ae38df4243a65137ba1f4875cdb6d35306d3da9d125ff8013ccd026c1e958ca"
+    "hash": "sha512:f654d23b52d25e04cb7aa01e217c705e903e0fd18b995945175b1bf79d4e0c5a9bcfec38b534fea6c970f07c01038afae0bfe2cb0220206f06d1bf154a1aa752"
 }

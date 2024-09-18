@@ -1,23 +1,23 @@
 {
-    "version": "18969",
+    "version": "19207",
     "description": "An extensible editor for ​OpenStreetMap",
     "homepage": "https://josm.openstreetmap.de/",
     "license": "GPL-2.0-or-later",
     "suggest": {
-        "JRE with JFX": "java/zulufx11-jre"
+        "JRE with JFX": "java/zulufx21-jre"
     },
     "url": [
-        "https://josm.openstreetmap.de/download/josm-snapshot-18969.jar",
+        "https://josm.openstreetmap.de/download/josm-snapshot-19207.jar",
         "https://raw.githubusercontent.com/openstreetmap/josm/master/native/windows/logo.ico"
     ],
     "hash": [
-        "6bc9ae470138fbd59d615cfb95813d7519ea548190c4bf1c16621d06bd91eb95",
+        "7580c99865c829dd86863c8a069423a087f3f60881b2015d0b44da2a997188f6",
         "8fa65ecdf506316ce5630c9e55ff1bf245516527bfb774d5b1588f4a72bbebde"
     ],
     "pre_install": [
         "Push-Location",
         "Set-Location $dir",
-        "Set-Content -Value (\"@echo off`nif `\"%1`\" == `\"h`\" goto begin`nmshta vbscript:createobject(`\"wscript.shell`\").run(`\"%~nx0 h`\",0)(window.close)&&exit`n:begin`njavaw -D64 -jar \" + (Get-ChildItem josm*.jar)[0].Name) -Path josm.cmd",
+        "Set-Content -Value \"@echo off`nif `\"%1`\" == `\"h`\" goto begin`nmshta vbscript:createobject(`\"wscript.shell`\").run(`\"%~nx0 h`\",0)(window.close)&&exit`n:begin`njavaw -D64 --add-exports=java.base/sun.security.action=ALL-UNNAMED --add-exports=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-exports=java.desktop/com.sun.imageio.spi=ALL-UNNAMED -jar $((Get-ChildItem josm*.jar)[0].Name)\" -Path josm.cmd",
         "Pop-Location"
     ],
     "shortcuts": [
@@ -29,7 +29,8 @@
         ]
     ],
     "checkver": {
-        "regex": "newest tested version, currently (\\d+)"
+        "url": "https://josm.openstreetmap.de/wiki/Changelog",
+        "regex": "Stable release (\\d+)"
     },
     "autoupdate": {
         "url": "https://josm.openstreetmap.de/download/josm-snapshot-$version.jar"

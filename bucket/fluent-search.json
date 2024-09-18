@@ -1,42 +1,34 @@
 {
-    "version": "0.9.92.998",
-    "description": "使用它，你可以搜索正在运行的应用程序、浏览器标签、应用程序内内容、文件等。With it, you can search for running apps, browser tabs, in-app content, files and more.",
-    "homepage": "https://fluentsearch.net",
-    "license": "Unknown",
-    "url": "https://stfluentsearch.blob.core.windows.net/fluent-search/Fluent-Search.exe#/_installer_.exe",
-    "hash": "a23bea3776b443a38737ae7d9500a0ea6049ddfb71ad6eaaf9bf6fe53c93b568",
-    "innosetup": true,
+    "version": "0.9.20.0",
+    "description": "Search tool for running apps, browser tabs, in-app content, files and more.",
+    "homepage": "https://fluentsearch.net/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://stfluentsearch.blob.core.windows.net/fluent-search/fluent-search-portable.zip",
+            "hash": "664e385e80749d8ddfd77245a1de756016dd3f1f03aa6b8a830a4a7efc6531d6"
+        }
+    },
+    "pre_install": "if([environment]::OSVersion.Version.Major -lt 10) { error 'This app requires Windows 10 or 11'; break }",
     "shortcuts": [
         [
             "FluentSearch.exe",
-            "FluentSearch"
+            "Fluent Search"
         ]
     ],
-    "pre_install": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "persist -dir @(\"$user_AppData\\Blast\") @(\"$persist_dir\\Blast\")",
-        "create_app_lnk \"$dir\\FluentSearch.exe\" \"$desktop\\FluentSearch.lnk\""
-    ],
-    "pre_uninstall": [
-        "$bucket=(scoop bucket list | where-Object { $_.Source -match '(gitee|github).com/abgox/abgo_bucket'})[0].Name",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "stop_process",
-        "remove_files @(\"$desktop\\FluentSearch.lnk\",\"$user_AppData\\Blast\",\"$user_LocalAppData\\FluentSearch\")"
+    "persist": [
+        "Blast\\FluentSearchPlugins",
+        "Blast\\Settings"
     ],
     "checkver": {
-        "script": [
-            ". \"$pwd\\bin\\utils.ps1\"",
-            "$dl_info = get_installer_info 'BlastApps/FluentSearch'",
-            "\"ver:$($dl_info.PackageVersion);\"",
-            "\"x64:$($dl_info.x64_exe.InstallerUrl);\""
-        ],
-        "regex": "ver:(?<version>.+?); x64:(?<x64>.+?);"
+        "url": "https://fluentsearch.net/blog",
+        "regex": "Fluent Search version ([\\d.]+)</a>"
     },
     "autoupdate": {
-        "url": "$matchX64#/_installer_.exe",
-        "hash": {
-            "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/BlastApps/FluentSearch/$version/BlastApps.FluentSearch.installer.yaml",
-            "regex": "Architecture: x64[\\s\\S]+?InstallerSha256:\\s?(.+)"
+        "architecture": {
+            "64bit": {
+                "url": "https://stfluentsearch.blob.core.windows.net/fluent-search/fluent-search-portable.zip"
+            }
         }
     }
 }

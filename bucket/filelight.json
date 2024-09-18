@@ -1,30 +1,34 @@
 {
-    "version": "23.08.4-1625",
-    "description": "Disk usage visualizer",
-    "homepage": "https://apps.kde.org/filelight",
-    "license": "GPL-2.0-or-later",
-    "notes": "If you want to get the latest development branch-based installer, please install `filelight-nightly` from Versions bucket.",
+    "version": "1515",
+    "description": "Filelight is an application to visualize the disk usage on your computer by showing folders using an easy-to-understand view of concentric rings. Filelight makes it simple to free up space!",
+    "homepage": "https://apps.kde.org/filelight/",
+    "license": "LGPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://binary-factory.kde.org/job/Filelight_Release_win64/1625/artifact/filelight-23.08.4-1625-windows-cl-msvc2019-x86_64.7z",
-            "hash": "ff1f419ab94570864e1ea59901982c8d6ee9db67094c8cf900f4e4ea798a2077"
+            "url": "https://cdn.kde.org/ci-builds/utilities/filelight/master/windows/filelight-master-1515-windows-cl-msvc2022-x86_64.7z",
+            "hash": "753fe75c242f865a7ae3db0386fee3d448dc19e7cf3385c3fbee379535f48379"
         }
     },
-    "bin": "bin\\filelight.exe",
+    "bin": [
+        [
+            "bin\\filelight.exe",
+            "filelight"
+        ]
+    ],
     "shortcuts": [
         [
             "bin\\filelight.exe",
-            "Filelight"
+            "Konsole"
         ]
     ],
     "checkver": {
-        "url": "https://binary-factory.kde.org/job/Filelight_Release_win64/",
-        "regex": "filelight-([\\d.-]+)-windows-cl-(?<lib>\\w+)-x86_64\\.7z"
+        "url": "https://cdn.kde.org/ci-builds/utilities/filelight/master/windows/",
+        "regex": "filelight-master-(\\d+)-windows-cl-msvc2022-x86_64.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://binary-factory.kde.org/job/Filelight_Release_win64/$preReleaseVersion/artifact/filelight-$version-windows-cl-$matchLib-x86_64.7z",
+                "url": "https://cdn.kde.org/ci-builds/utilities/filelight/master/windows/filelight-master-$version-windows-cl-msvc2022-x86_64.7z",
                 "hash": {
                     "url": "$url.sha256"
                 }

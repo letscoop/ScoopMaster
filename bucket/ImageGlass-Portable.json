@@ -1,13 +1,13 @@
 {
-    "version": "9.0.10.201",
+    "version": "9.1.8.723",
     "homepage": "https://imageglass.org",
     "description": "ImageGlass. A lightweight, versatile image viewer",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/d2phap/ImageGlass/releases/download/9.0.10.201/ImageGlass_9.0.10.201_x64.zip",
-            "hash": "222b97a8746b337b06dc7f072fedaf4b22884ecc4152657e80da1461a432759c",
-            "extract_dir": "ImageGlass_Kobe_9.0.10.201_x64"
+            "url": "https://github.com/d2phap/ImageGlass/releases/download/9.1.8.723/ImageGlass_9.1.8.723_x64.zip",
+            "hash": "881999047ef09a0fca80b1906c4a0010316b732ece23b31f10d1102f0e11c96d",
+            "extract_dir": "ImageGlass_Kobe_9.1.8.723_x64"
         }
     },
     "pre_install": [

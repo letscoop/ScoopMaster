@@ -1,0 +1,21 @@
+{
+    "version": "0.9.4",
+    "description": "Terminal UI to list, browse and run APIs defined with openapi spec",
+    "homepage": "https://github.com/zaghaghi/openapi-tui",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/zaghaghi/openapi-tui/releases/download/0.9.4/openapi-tui-0.9.4-windows-x86_64.tar.gz",
+            "hash": "49b928e0e206dd4ac90baf4087676088a2c0f07ea6f1815c1d778e515dcea0d2"
+        }
+    },
+    "bin": "openapi-tui.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zaghaghi/openapi-tui/releases/download/$version/openapi-tui-$version-windows-x86_64.tar.gz"
+            }
+        }
+    }
+}

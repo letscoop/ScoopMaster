@@ -1,10 +1,10 @@
 {
     "homepage": "https://sourceforge.net/projects/controlremote/",
     "description": "",
-    "version": "3.0.14",
+    "version": "3.1.0",
     "license": "Fair License",
-    "url": "https://downloads.sourceforge.net/project/controlremote/RMIRDevelopment/RMIR.v3.0.14-bin.zip",
-    "hash": "c201904a111859555381400b04a3913ab090da41a6dc7fb68bc116457340133b",
+    "url": "https://downloads.sourceforge.net/project/controlremote/RMIRDevelopment/RMIR.v3.1.0-bin.zip",
+    "hash": "3ea9293039ca44746e7af1d111476876dff0599850f539c57c61115e1fc50b88",
     "persist": "RemoteMaster.properties",
     "pre_install": [
         "if (!(Test-Path $persist_dir\\RemoteMaster.properties)) {",

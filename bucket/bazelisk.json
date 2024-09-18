@@ -1,12 +1,12 @@
 {
-    "version": "1.19.0",
-    "description": "A user-friendly launcher for Bazel.",
-    "homepage": "https://github.com/bazelbuild/bazelisk/",
+    "version": "1.21.0",
+    "description": "A user-friendly launcher for Bazel",
+    "homepage": "https://github.com/bazelbuild/bazelisk",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bazelbuild/bazelisk/releases/download/v1.19.0/bazelisk-windows-amd64.exe#/bazelisk.exe",
-            "hash": "d04555245a99dfb628e33da24e2b9198beb8f46d7e7661c313eb045f6a59f5e4"
+            "url": "https://github.com/bazelbuild/bazelisk/releases/download/v1.21.0/bazelisk-windows-amd64.exe#/bazelisk.exe",
+            "hash": "3da1895614f460692635f8baa0cab6bb35754fc87d9badbd2b3b2ba55873cf89"
         }
     },
     "bin": "bazelisk.exe",

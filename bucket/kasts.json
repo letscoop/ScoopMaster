@@ -1,12 +1,12 @@
 {
-    "version": "23.08.4-151",
-    "description": "Kasts is a convergent podcast application that looks good on desktop and mobile.",
+    "version": "24.05-3241",
+    "description": "Convergent podcast application",
     "homepage": "https://apps.kde.org/kasts/",
     "license": "LGPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://binary-factory.kde.org/job/Kasts_Release_win64/lastSuccessfulBuild/artifact/kasts-23.08.4-151-windows-cl-msvc2019-x86_64.7z",
-            "hash": "afa053cb758f52826f1cdcb845b03966ecc5c3c6d15cd145e0f202b1ec24c63d"
+            "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-24.05/windows/kasts-release_24.05-3241-windows-gcc-x86_64.7z",
+            "hash": "c5e4d83d4564af1880ccfd1556539817976c6fee7a09798f8c3b3838acc2181d"
         }
     },
     "bin": "bin\\kasts.exe",
@@ -17,13 +17,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://binary-factory.kde.org/job/Kasts_Release_win64/",
-        "regex": "kasts-([\\d.-]+)-windows-cl-msvc2019-x86_64\\.7z"
+        "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-24.05/windows/",
+        "regex": "kasts-release_([\\d.-]+)-windows-gcc-x86_64\\.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://binary-factory.kde.org/job/Kasts_Release_win64/lastSuccessfulBuild/artifact/kasts-$version-windows-cl-msvc2019-x86_64.7z",
+                "url": "https://cdn.kde.org/ci-builds/multimedia/kasts/release-$matchHead/windows/kasts-release_$version-windows-gcc-x86_64.7z",
                 "hash": {
                     "url": "$url.sha256"
                 }

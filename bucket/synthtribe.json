@@ -1,35 +1,37 @@
 {
-    "version": "2.6.9",
+    "version": "2.8.1",
     "description": "Control Behringer's synthesizers and do firmware updates.",
     "homepage": "https://www.behringer.com/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://community.musictribe.com/terms-of-use"
     },
-    "url": "https://mediadl.musictribe.com/download/software/behringer/synthTool/SYNTHTRIBE_V2.6.9-Windows.zip",
-    "hash": "70599092240C50B1596970D57E5A29507FCEA124315F97135E257DFFABF7F533",
-    "extract_dir": "SYNTHTRIBE V2.6.9(Windows)\\SYNTHTRIBE V2.6.9(Windows)_Signed",
-    "pre_install": [
-        "Get-ChildItem \"$dir\\SYNTHTRIBE*.exe\" | Rename-Item -NewName 'SYNTHTRIBE.exe'"
-    ],
+    "url": "https://mediadl.musictribe.com/download/software/behringer/synthTool/SYNTHTRIBE_V2.8.1-Windows.zip",
+    "hash": "7da174602426acd377186ba1585110b360f33044ef20910108a5d19ce3aa4609",
+    "extract_dir": "SYNTHTRIBE_V2.8.1-Windows",
     "shortcuts": [
         [
-            "SYNTHTRIBE.exe",
+            "SYNTHTRIBE_2.8.1.exe",
             "SYNTHTRIBE"
         ]
     ],
     "checkver": {
-        "_": "Found this path using dev tools while loading https://www.behringer.com/product.html?modelCode=P0DTD",
         "script": [
-            "$url = 'https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=P0DTD'",
+            "$url = 'https://www.behringer.com/.rest/musictribe/v1/products/media-library?brandName=behringer&modelCode=0722-ABR'",
             "$json = $(Invoke-WebRequest -Headers $head $url).Content | ConvertFrom-Json",
             "$list = ($json | Where-Object title -eq 'Software').list",
-            "$list | ForEach-Object { if ($_.title -match 'for Windows V([\\d.]+)') { $matches[1] } }"
+            "$list | ForEach-Object { if ($_.title -match 'Behringer SYNTHTRIBE for Windows V([\\d.]+)') { $matches[1] } }"
         ],
-        "regex": "([\\d.]+)"
+        "regex": "(.+)"
     },
     "autoupdate": {
         "url": "https://mediadl.musictribe.com/download/software/behringer/synthTool/SYNTHTRIBE_V$version-Windows.zip",
-        "extract_dir": "SYNTHTRIBE V$version(Windows)\\SYNTHTRIBE V$version(Windows)_Signed"
+        "extract_dir": "SYNTHTRIBE_V$version-Windows",
+        "shortcuts": [
+            [
+                "SYNTHTRIBE_$version.exe",
+                "SYNTHTRIBE"
+            ]
+        ]
     }
 }

@@ -1,0 +1,68 @@
+{
+    "version": "2024.2.1-242.21829.233",
+    "description": "Cross-Platform IDE for Rust by JetBrains.",
+    "homepage": "https://www.jetbrains.com/rust/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.jetbrains.com/store/license.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.jetbrains.com/rustrover/RustRover-2024.2.1.exe#/dl.7z",
+            "hash": "5b18e72d7dda14ca73038ba88f50d17d0f2e4e140a108f4dcd382cbf4b03306f"
+        },
+        "arm64": {
+            "url": "https://download.jetbrains.com/rustrover/RustRover-2024.2.1-aarch64.exe#/dl.7z",
+            "hash": "9dbf821e919f1866f12eab112c328e20c1fba5f47a16d153c1ec7fdb1f6bf197"
+        }
+    },
+    "extract_to": "IDE",
+    "pre_install": [
+        "Get-ChildItem \"$persist_dir\\IDE\\bin\\rustrover64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$dir\\IDE\\bin\"",
+        "Get-ChildItem \"$persist_dir\\IDE\\bin\\jetbrains_client64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$dir\\IDE\\bin\""
+    ],
+    "installer": {
+        "script": [
+            "& \"$bucketsdir\\extras\\scripts\\jetbrains\\portable.ps1\" \"$dir\" \"$persist_dir\"",
+            "Remove-Item \"$dir\\IDE\\`$*\" -Force -Recurse"
+        ]
+    },
+    "bin": [
+        [
+            "IDE\\bin\\rustrover64.exe",
+            "rustrover"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "IDE\\bin\\rustrover64.exe",
+            "JetBrains\\RustRover"
+        ]
+    ],
+    "persist": [
+        "IDE\\bin\\idea.properties",
+        "profile"
+    ],
+    "pre_uninstall": [
+        "Get-ChildItem \"$dir\\IDE\\bin\\rustrover64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$persist_dir\\IDE\\bin\"",
+        "Get-ChildItem \"$dir\\IDE\\bin\\jetbrains_client64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$persist_dir\\IDE\\bin\""
+    ],
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=RR&latest=true&platform=zip&type=release",
+        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+        "replace": "${ver}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.jetbrains.com/rustrover/RustRover-$matchVer.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://download.jetbrains.com/rustrover/RustRover-$matchVer-aarch64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

@@ -1,12 +1,12 @@
 {
-    "version": "0.12.1",
+    "version": "0.13.1",
     "description": "A command line tool that transforms Lua code",
     "homepage": "https://darklua.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/seaofvoices/darklua/releases/download/v0.12.1/darklua-windows-x86_64.zip",
-            "hash": "cd6cecddd5cc8d5864b948df3ed45cafb4c217dacc7245be2e717a35e682acd0"
+            "url": "https://github.com/seaofvoices/darklua/releases/download/v0.13.1/darklua-windows-x86_64.zip",
+            "hash": "7a1f4238b80a3f5be4160d324f9ba187dc34749bb0e618514dbf609ab94db40d"
         }
     },
     "bin": "darklua.exe",
@@ -16,7 +16,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/seaofvoices/darklua/releases/download/v$version/darklua-windows-x86_64.zip",            }
+                "url": "https://github.com/seaofvoices/darklua/releases/download/v$version/darklua-windows-x86_64.zip"
+            }
         }
     }
 }

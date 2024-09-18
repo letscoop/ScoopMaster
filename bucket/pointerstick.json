@@ -1,31 +1,28 @@
 {
-    "version": "6.35",
+    "version": "6.41",
     "description": "PointerStick is a portable tool that presents on the Windows Desktop a virtual pointer stick, for example for Presentations.",
-    "homepage": "http://www.softwareok.com/?seite=Freeware/PointerStick",
+    "homepage": "http://www.softwareok.eu/?seite=Freeware/PointerStick",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "http://www.softwareok.com/Download/PointerStick_x64.zip",
-            "hash": "544d890a1cfb86f8a34c9e131734c2fbb866e96ac9f9af4034cb734bbf5fa8e5",
-            "shortcuts": [
-                [
-                    "PointerStick_x64.exe",
-                    "PointerStick"
-                ]
-            ]
+            "url": "http://www.softwareok.eu/Download/PointerStick_x64.zip",
+            "hash": "0b19b57b2114db541e6237860ed339ee46920d6ca8ebe98ce4da359c80339140"
         },
         "32bit": {
-            "url": "http://www.softwareok.com/Download/PointerStick.zip",
-            "hash": "b5e075473ec113fcda475558a7670b2df2f94b6ffe28b1c690d39da7bbd2f125",
-            "shortcuts": [
-                [
-                    "PointerStick.exe",
-                    "PointerStick"
-                ]
-            ]
+            "url": "http://www.softwareok.eu/Download/PointerStick.zip",
+            "hash": "a6a1dabb2ec48f64ebe9f2794bfbc3d3a6bfe8081e484a93075daf5b5d2a1906"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\PointerStick.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\PointerStick.ini\" -Value $null }",
+    "shortcuts": [
+        [
+            "PointerStick.exe",
+            "PointerStick"
+        ]
+    ],
+    "pre_install": [
+        "Get-ChildItem \"$dir\" 'PointerStick*.exe' | Select-Object -First 1 | Rename-Item -NewName 'PointerStick.exe'",
+        "if (!(Test-Path \"$persist_dir\\PointerStick.ini\")) { Set-Content -Encoding ASCII -Path \"$dir\\PointerStick.ini\" -Value $null }"
+    ],
     "persist": "PointerStick.ini",
     "checkver": {
         "regex": "PointerStick ([\\d.]+)"
@@ -33,10 +30,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "http://www.softwareok.com/Download/PointerStick_x64.zip"
+                "url": "http://www.softwareok.eu/Download/PointerStick_x64.zip"
             },
             "32bit": {
-                "url": "http://www.softwareok.com/Download/PointerStick.zip"
+                "url": "http://www.softwareok.eu/Download/PointerStick.zip"
             }
         }
     }

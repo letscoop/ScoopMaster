@@ -1,13 +1,13 @@
 {
-    "version": "7.3.2",
+    "version": "7.5.1",
     "description": "EDMC plugin: collect accurate science data from the galaxy, and coordinates missions.",
     "homepage": "https://github.com/canonn-science/EDMC-Canonn",
     "license": "GPL-3.0",
     "depends": "edmc",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/canonn-science/EDMC-Canonn/archive/refs/tags/7.3.2.zip",
-            "hash": "f1ee13a8c2b5d598aa6a8c792a407dcaf13b61975bf0fd43f4727d427f85c174"
+            "url": "https://github.com/canonn-science/EDMC-Canonn/archive/refs/tags/7.5.1.zip",
+            "hash": "ca9ea640ca7b8f18a4cc63c3162892f703b57559eeaaed2d2adbfa06501a1aaa"
         }
     },
     "checkver": {

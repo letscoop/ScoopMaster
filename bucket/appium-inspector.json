@@ -1,16 +1,16 @@
 {
-    "version": "2024.3.1",
+    "version": "2024.8.2",
     "description": "A GUI inspector for mobile apps and more, powered by a (separately installed) Appium server",
     "homepage": "https://github.com/appium/appium-inspector",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/appium/appium-inspector/releases/download/v2024.3.1/Appium-Inspector-windows-2024.3.1-x64.zip",
-            "hash": "df8ea4919e7c3fe8427d3540d1297f9cf0339a470efe2f7f4c57ae3d60296726"
+            "url": "https://github.com/appium/appium-inspector/releases/download/v2024.8.2/Appium-Inspector-2024.8.2-win-x64.zip",
+            "hash": "bbd33bf6215bfd1d210f04a7012489f7468b03aaca92933b8ee1326f1c2de639"
         },
-        "32bit": {
-            "url": "https://github.com/appium/appium-inspector/releases/download/v2024.3.1/Appium-Inspector-windows-2024.3.1-ia32.zip",
-            "hash": "f4bfc17d3d767c2998ab4219c32312ef5191d57c56334d9055e2e11d0c8c6314"
+        "arm64": {
+            "url": "https://github.com/appium/appium-inspector/releases/download/v2024.8.2/Appium-Inspector-2024.8.2-win-arm64.zip",
+            "hash": "6fa285f329b28a2228bd001146a4aea1bdfebfde5ce3736c22887c249925f1fb"
         }
     },
     "shortcuts": [
@@ -23,10 +23,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-windows-$version-x64.zip"
+                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-$version-win-x64.zip"
             },
-            "32bit": {
-                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-windows-$version-ia32.zip"
+            "arm64": {
+                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-$version-win-arm64.zip"
             }
         }
     }

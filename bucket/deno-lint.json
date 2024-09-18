@@ -1,5 +1,5 @@
 {
-    "version": "0.57.1",
+    "version": "0.67.0",
     "description": "Blazing fast linter for JavaScript and TypeScript written in Rust",
     "homepage": "https://lint.deno.land/",
     "license": "MIT",
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/denoland/deno_lint/releases/download/0.57.1/dlint-x86_64-pc-windows-msvc.zip",
-            "hash": "17cc6b2b330c3835cab2f6ab1a97e4c3728ce31806ad7b3ecc3716d595ef33be"
+            "url": "https://github.com/denoland/deno_lint/releases/download/0.67.0/dlint-x86_64-pc-windows-msvc.zip",
+            "hash": "72d5f9a78c66c8d39c4f7bec57c28bc4c054af52c24734366f6711eddde88fb7"
         }
     },
     "bin": "dlint.exe",

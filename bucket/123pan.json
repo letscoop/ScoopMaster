@@ -1,10 +1,10 @@
 {
-    "version": "2.0.5.0",
-    "description": "123 云盘，一款云存储服务产品。A cloud storage service product.",
+    "version": "2.2.1.0",
+    "description": "The official client for 123 cloud dirve service",
     "homepage": "https://www.123pan.com/",
-    "license": "Unknown",
-    "url": "https://app.123pan.com/app/pc/windows/131/123pan_2.0.5.exe#/dl.7z",
-    "hash": "42c76097f755d9556b84ba8a1e17f536f9f0a9f1cc44c6dc9a32fc1566808d38",
+    "license": "Proprietary",
+    "url": "https://app.123957.com/pc-pro/windows/221/123pan_2.2.1.exe#/dl.7z",
+    "hash": "29199ddbf64b4e519f99f3c4230a7b4d382476c632e1f84daaa8cffdb4e83216",
     "shortcuts": [
         [
             "123pan.exe",
@@ -12,17 +12,16 @@
         ]
     ],
     "pre_install": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Expand-7zipArchive \"$dir\\app.7z\" \"$dir\" -Removal",
-        "persist -dir @(\"$user_AppData\\123pan\") @(\"$persist_dir\\123pan\")",
-        "create_app_lnk \"$dir\\123pan.exe\" \"$desktop\\123云盘.lnk\""
+        "Expand-7zipArchive \"$dir\\app.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\app.7z\" -Force -Recurse"
     ],
-    "pre_uninstall": [
-        "$bucket=(scoop bucket list | where-Object { $_.Source -match '(gitee|github).com/abgox/abgo_bucket'})[0].Name",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "stop_process",
-        "remove_files @(\"$desktop\\123云盘.lnk\",\"$user_AppData\\123pan\")"
-    ],
+    "uninstaller": {
+        "script": [
+            "$runtimeCache = \"$env:APPDATA\\123pan\"",
+            "Write-Host \"`nRemoving RuntimeCacheCache:$runtimeCache\"",
+            "Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue"
+        ]
+    },
     "checkver": {
         "script": [
             ". \"$pwd\\bin\\utils.ps1\"",

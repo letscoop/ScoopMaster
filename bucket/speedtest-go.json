@@ -1,20 +1,20 @@
 {
-    "version": "1.6.10",
+    "version": "1.7.9",
     "description": "CLI and Go API to Test Internet Speed using speedtest.net",
     "homepage": "https://github.com/showwin/speedtest-go",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/showwin/speedtest-go/releases/download/v1.6.10/speedtest-go_1.6.10_Windows_x86_64.tar.gz",
-            "hash": "d01358e1a4bd30e28c313aebf7cc2cb9ec8094aab81756a5d70f1ce00b2fe6e6"
+            "url": "https://github.com/showwin/speedtest-go/releases/download/v1.7.9/speedtest-go_1.7.9_Windows_x86_64.tar.gz",
+            "hash": "50abe222a49c00266b65ec5bbac8c1dc65a169ec269cfb262b1b68ea5e61b6f1"
         },
         "32bit": {
-            "url": "https://github.com/showwin/speedtest-go/releases/download/v1.6.10/speedtest-go_1.6.10_Windows_i386.tar.gz",
-            "hash": "216e001caa52d1e30064cd2644917da89a5592006bc66d91706970ae93e91a68"
+            "url": "https://github.com/showwin/speedtest-go/releases/download/v1.7.9/speedtest-go_1.7.9_Windows_i386.tar.gz",
+            "hash": "e78e13a0bf345bc17742edaab79186c0338ffed782e4b85d317a9be17a7d4ee1"
         },
         "arm64": {
-            "url": "https://github.com/showwin/speedtest-go/releases/download/v1.6.10/speedtest-go_1.6.10_Windows_arm64.tar.gz",
-            "hash": "ca451032f7201a3d0c789ba66af8d1600c6ea1594f1396871b876dfd3211ebb6"
+            "url": "https://github.com/showwin/speedtest-go/releases/download/v1.7.9/speedtest-go_1.7.9_Windows_arm64.tar.gz",
+            "hash": "4811467a1275cfb25508665561683256d0851d12adb719db482d5e03b487e3df"
         }
     },
     "bin": "speedtest-go.exe",

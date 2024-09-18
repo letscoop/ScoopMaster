@@ -1,19 +1,19 @@
 {
-    "version": "0.12.8",
+    "version": "0.14.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/itzg/mc-monitor/releases/download/0.12.8/mc-monitor_0.12.8_windows_amd64.zip",
+            "url": "https://github.com/itzg/mc-monitor/releases/download/0.14.1/mc-monitor_0.14.1_windows_amd64.zip",
             "bin": [
                 "mc-monitor.exe"
             ],
-            "hash": "e07cd24d411c2054af7d4fbfcec65a595e79a857e71b9c9719070b2c1e530cfb"
+            "hash": "5e14d0f7205b73e30cd4c24eac35b059a67bf0acbddfce2d8e3ddc13838b3215"
         },
         "arm64": {
-            "url": "https://github.com/itzg/mc-monitor/releases/download/0.12.8/mc-monitor_0.12.8_windows_arm64.zip",
+            "url": "https://github.com/itzg/mc-monitor/releases/download/0.14.1/mc-monitor_0.14.1_windows_arm64.zip",
             "bin": [
                 "mc-monitor.exe"
             ],
-            "hash": "945f9c0aaf84c6423718a59d5bc8fa253a8d5d3a764ad1b29f3639a736267071"
+            "hash": "bba942b27bed001357ea827449a9ec3c62cf35c5f9d31aa2f940974cc4abb223"
         }
     },
     "license": "MIT",

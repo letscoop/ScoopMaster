@@ -1,16 +1,20 @@
 {
-    "version": "20240308",
+    "version": "20240909",
     "description": "An oldschool sample-based music composition tool",
     "homepage": "http://schismtracker.org",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/schismtracker/schismtracker/releases/download/20240308/schismtracker-20240308-win64.zip",
-            "hash": "0461f15652c88a9b9c9b019ed3306c66589dc6c9c849d0c42d4844f48a629160"
+            "url": "https://github.com/schismtracker/schismtracker/releases/download/20240909/schismtracker-20240909-windows-x86_64.zip",
+            "hash": "c24be73c5619bf7d0243a290fb833424d247a7a864de845e01696da3eb9950e1"
         },
         "32bit": {
-            "url": "https://github.com/schismtracker/schismtracker/releases/download/20240308/schismtracker-20240308-win32.zip",
-            "hash": "ea5ed4a51957e5d85b0082630e3e833e5ad6d346f3d25a445c704be236f1a9d7"
+            "url": "https://github.com/schismtracker/schismtracker/releases/download/20240909/schismtracker-20240909-windows-i686.zip",
+            "hash": "9961c09e80bee5e6e37c4e2c2005b2e81f77565505503e15bc68e4020e9cbfda"
+        },
+        "arm64": {
+            "url": "https://github.com/schismtracker/schismtracker/releases/download/20240909/schismtracker-20240909-windows-aarch64.zip",
+            "hash": "756f0a107792e34808cb46edc05e54617f1b16e976f21f65b954ad33a36b1cf6"
         }
     },
     "bin": "schismtracker.exe",
@@ -26,10 +30,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/schismtracker/schismtracker/releases/download/$version/schismtracker-$version-win64.zip"
+                "url": "https://github.com/schismtracker/schismtracker/releases/download/$version/schismtracker-$version-windows-x86_64.zip"
             },
             "32bit": {
-                "url": "https://github.com/schismtracker/schismtracker/releases/download/$version/schismtracker-$version-win32.zip"
+                "url": "https://github.com/schismtracker/schismtracker/releases/download/$version/schismtracker-$version-windows-i686.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/schismtracker/schismtracker/releases/download/$version/schismtracker-$version-windows-aarch64.zip"
             }
         }
     }

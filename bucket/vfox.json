@@ -1,5 +1,5 @@
 {
-    "version": "0.2.4",
+    "version": "0.5.4",
     "description": "Manage multiple SDK versions with a single CLI tool, extendable via plugins",
     "homepage": "https://vfox.lhan.me/",
     "license": "Apache-2.0",
@@ -9,25 +9,24 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/version-fox/vfox/releases/download/v0.2.4/vfox_0.2.4_windows_x86_64.zip",
-            "hash": "4d06b31f8fe5a92f77e326ddcfed7331647494e6891126c00cd9368d1443d80e",
-            "extract_dir": "vfox_0.2.4_windows_x86_64"
+            "url": "https://github.com/version-fox/vfox/releases/download/v0.5.4/vfox_0.5.4_windows_x86_64.zip",
+            "hash": "5b3018329226573464634dc0aabe5503cbb3937f2023dbbf42196a227bbf8be2",
+            "extract_dir": "vfox_0.5.4_windows_x86_64"
         },
         "32bit": {
-            "url": "https://github.com/version-fox/vfox/releases/download/v0.2.4/vfox_0.2.4_windows_i386.zip",
-            "hash": "86e19f5831de6f8735eb577bf126b14400b3d95616c68da04bd7fa557280fec7",
-            "extract_dir": "vfox_0.2.4_windows_i386"
+            "url": "https://github.com/version-fox/vfox/releases/download/v0.5.4/vfox_0.5.4_windows_i386.zip",
+            "hash": "478658accb86b0431c79157612e4e649411d5b9a2484140f1835a0e8e2101239",
+            "extract_dir": "vfox_0.5.4_windows_i386"
         },
         "arm64": {
-            "url": "https://github.com/version-fox/vfox/releases/download/v0.2.4/vfox_0.2.4_windows_aarch64.zip",
-            "hash": "4640fdf5faa6d1683256f3a63de2501bd81c8f0f1cf5d19110a3883c6d399bc7",
-            "extract_dir": "vfox_0.2.4_windows_aarch64"
+            "url": "https://github.com/version-fox/vfox/releases/download/v0.5.4/vfox_0.5.4_windows_aarch64.zip",
+            "hash": "33f7854d2b87812716b46d41aa10f11c647041f322c5764a2b9b186b866c240f",
+            "extract_dir": "vfox_0.5.4_windows_aarch64"
         }
     },
     "bin": "vfox.exe",
     "checkver": {
-        "url": "https://github.com/version-fox/vfox/raw/main/internal/version.go",
-        "regex": "\"([\\d\\.]+)\""
+        "github": "https://github.com/version-fox/vfox"
     },
     "autoupdate": {
         "architecture": {
@@ -45,8 +44,7 @@
             }
         },
         "hash": {
-            "url": "https://github.com/version-fox/vfox/releases/download/v$version/checksums.txt",
-            "find": "$sha256[\\S\\s]+$basename"
+            "url": "$baseurl/checksums.txt"
         }
     }
 }

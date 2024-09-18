@@ -1,14 +1,10 @@
 {
-    "version": "22621.3296.64.1_9e9c016",
-    "homepage": "https://github.com/valinet/ExplorerPatcher",
+    "version": "22621.3880.66.6",
     "description": "An open-source project that aims to restore the working environment on Windows 11.",
+    "homepage": "https://github.com/valinet/ExplorerPatcher",
     "license": "GPL-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/valinet/ExplorerPatcher/releases/download/22621.3296.64.1_9e9c016/ep_setup.exe",
-            "hash": "167f90fad0d3df4e2bfd4a6b07e459a6e414f63fa20e473aedc8c82f3b21eaef"
-        }
-    },
+    "url": "https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe",
+    "hash": "d7f98b8af8a3bfe9d93ce31558a62e4d5d0cd425bc30bbc0d517901e5b82bf46",
     "pre_install": [
         "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
         "Start-Process \"$dir\\ep_setup.exe\" -Wait -Verb 'RunAs'"
@@ -21,14 +17,9 @@
         "}"
     ],
     "checkver": {
-        "github": "https://github.com/valinet/ExplorerPatcher",
-        "regex": "tag/([\\w._]+)"
+        "github": "https://github.com/valinet/ExplorerPatcher"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/valinet/ExplorerPatcher/releases/download/$version/ep_setup.exe"
-            }
-        }
+        "url": "https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe"
     }
 }

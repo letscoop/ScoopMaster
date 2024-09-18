@@ -5,8 +5,8 @@
             "url": "https://github.com/sileshn/ArchWSL2/releases/download/20230401/ArchWSL2.zip"
         },
         "arm64": {
-            "hash": "cd0b2c7ca7668dff86ed2ba1e622f60607595af4bf92b9e2fbf118e4e1d35caa",
-            "url": "https://github.com/sileshn/ArchWSL2/releases/download/20240301/ArchWSL2_arm64.zip"
+            "hash": "c7aaa59bc3926de14b11aad245be2de3ab09264d81d39951b44e776a0c90a580",
+            "url": "https://github.com/sileshn/ArchWSL2/releases/download/20240901/ArchWSL2_arm64.zip"
         }
     },
     "autoupdate": {
@@ -70,5 +70,5 @@
             "Invoke-ExternalCommand \"$dir\\Arch.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "version": "20240301"
+    "version": "20240901"
 }

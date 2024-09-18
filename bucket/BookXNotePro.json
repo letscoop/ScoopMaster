@@ -1,15 +1,15 @@
 {
     "homepage": "http://www.bookxnote.com/",
     "license": "Proprietary",
-    "version": "2.0.0.1121",
+    "version": "2.0.0.1124",
     "architecture": {
         "64bit": {
-            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x64-2.0.0.1121-20240206.zip",
-            "hash": "b7c4592f9af57e0e9f22aa842d57a97f4d62de151e04436e4327c359ca8f4c00"
+            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x64-2.0.0.1124-20240619.zip",
+            "hash": "68269d71e812455cba35c2eb24eb631dd716a621094dd80115e89a21566ac33d"
         },
         "32bit": {
-            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x86-2.0.0.1121-20240206.zip",
-            "hash": "c70ad0f9a243092182aceb371cc9abafcb0f81654eea1db36b3fe0a5d99dc033"
+            "url": "http://www.bookxnote.com/setup/bookxnotepro-windows-x86-2.0.0.1124-20240619.zip",
+            "hash": "49af48ceb410aaf0f2a3444b2c895d8ded636de759609fb8d3643b0adf61ef4d"
         }
     },
     "installer": {

@@ -1,13 +1,13 @@
 {
-    "version": "6.33",
+    "version": "6.55",
     "description": "V2Ray的图形化客户端(已包含Core)",
     "homepage": "https://github.com/2dust/v2rayN",
     "license": "GPL-3.0-only",
     "suggest": {
         ".NET Desktop Runtime": "extras/windowsdesktop-runtime-lts"
     },
-    "url": "https://github.com/2dust/v2rayN/releases/download/6.33/v2rayN-With-Core.zip",
-    "hash": "70bd43db627c50e8bd67e1531458a7754be6d556e30453d8e8c2dad6f285372b",
+    "url": "https://github.com/2dust/v2rayN/releases/download/6.55/v2rayN-With-Core.zip",
+    "hash": "29ffe0ef176096cd22c6001d5b875e1db94de00176d7348d7493def3f80ffef8",
     "extract_dir": "v2rayN-With-Core",
     "shortcuts": [
         [

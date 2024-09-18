@@ -1,5 +1,5 @@
 {
-    "version": "1.88.0-insider_1710479126661",
+    "version": "1.94.0-insider_1726651423722",
     "description": "Visual Studio Code is a lightweight but powerful source code editor (Insiders, Portable Edition).",
     "homepage": "https://code.visualstudio.com/",
     "license": {
@@ -12,11 +12,14 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://vscode.download.prss.microsoft.com/dbazure/download/insider/be210b3a60c7d60030c1d3d92da00d008edf6ab9/VSCode-win32-x64-1.88.0-insider.zip",
-            "hash": "3aebbef0134ad7df0c06f53a7aea66060e0b7c6c56e784289b4395aafd969f5e"
+            "url": "https://vscode.download.prss.microsoft.com/dbazure/download/insider/4f485cf59847506bc1ba2aaab127d31dcbe2c9dc/VSCode-win32-x64-1.94.0-insider.zip",
+            "hash": "404274c10864162f9aaae59e39eb8d802b5141d259db60be8c0e017551737e17"
         }
     },
     "env_add_path": "bin",
+    "uninstaller": {
+        "script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
+    },
     "bin": [
         [
             "bin\\code-insiders.cmd",
@@ -60,19 +63,18 @@
     ],
     "persist": "data",
     "checkver": {
-        "url": "https://code.visualstudio.com/sha?build=insider",
-        "jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')]",
-        "regex": "\"url\": \"https:(?<url>.*zip)\",\\s+\"name\": \"(?<name>[\\d.]+-insider)\",(?>.|\\s)+?\"timestamp\": (?<time>[\\d]{13})",
-        "replace": "${name}_${time}"
+        "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/insider/latest",
+        "jsonpath": "$..['url','productVersion','timestamp']",
+        "regex": "\"(?<url>.+)\",\"(?<productVersion>.+)\",(?<timestamp>.+)]",
+        "replace": "${productVersion}_${timestamp}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https:$matchUrl",
+                "url": "$matchUrl",
                 "hash": {
-                    "url": "https://code.visualstudio.com/sha?build=insider",
-                    "mode": "json",
-                    "jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')].sha256hash"
+                    "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/insider/latest",
+                    "jsonpath": "$.sha256hash"
                 }
             }
         }

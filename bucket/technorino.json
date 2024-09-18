@@ -1,12 +1,12 @@
 {
-    "version": "8074343290",
+    "version": "10873601966",
     "description": "Chat client for twitch.tv. Only nightlies are supported (fork of Chatterino 2).",
     "homepage": "https://github.com/2547techno/technorino",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.5.0.zip",
-            "hash": "125c00657b161c56d4cec78c19fe22891c129b49e95e8aa4d3cc3a68ee46a5a7",
+            "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.7.1.zip",
+            "hash": "a84bf70b545b5bba05d454bb6cfc84a9e275ec36f83b67b2155d00169ea1a322",
             "extract_dir": "Chatterino2",
             "pre_install": "Get-ChildItem \"$dir/chatterino.exe\" | Rename-Item -NewName { $_.name.Replace('chatte', 'techno') }"
         }
@@ -19,13 +19,16 @@
     ],
     "bin": "technorino.exe",
     "checkver": {
-        "url": "https://api.github.com/repositories/604452497/actions/workflows/build.yml/runs?branch=technorino&status=success",
-        "jsonpath": "$.workflow_runs[0].id"
+        "script": [
+            "(Invoke-RestMethod 'https://api.github.com/repositories/604452497/actions/workflows/build.yml/runs?branch=technorino&status=success').workflow_runs[0].id,",
+            "(Invoke-RestMethod https://raw.githubusercontent.com/2547techno/technorino/technorino/.github/workflows/build.yml | Select-String 'os: windows-latest\\s+qt-version: ([\\d.]+)').Matches.Groups[1].Value -join ' '"
+        ],
+        "regex": "(\\d+) (?<qt>[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.5.0.zip"
+                "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-$matchQt.zip"
             }
         }
     }

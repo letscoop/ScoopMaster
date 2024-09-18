@@ -1,11 +1,11 @@
 {
-    "version": "2024.3.9794",
+    "version": "2024.9.10073",
     "description": "NTLite. Cutting-edge Windows configuration tool",
     "homepage": "https://www.ntlite.com/",
     "license": "Proprietary",
     "changelog": "https://www.ntlite.com/changelog/",
     "url": "http://downloads.ntlite.com/files/NTLite_setup_x64.exe",
-    "hash": "79c86e58fb0e7701d6d4e4564a1c4402367c68df4e3221deacfb32b281072e2a",
+    "hash": "aae48f7f1ca5976006d377392ec9cbcf4f46cd513a286396edc5515c08d79a99",
     "shortcuts": [
         [
             "NTLite.exe",

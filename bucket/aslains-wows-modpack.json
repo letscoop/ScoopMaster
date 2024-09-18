@@ -1,10 +1,10 @@
 {
-    "url": "https://flcl.uk/public/Aslains_WoWs_Modpack_Installer_v.13.2.0_03.exe#installer.exe",
-    "hash": "9afbef150c20485d67e3625187f8dff6b02ed31ccdff6ee0e566042fbb4fac9d",
-    "version": "v.13.2.0_03",
+    "url": "https://flcl.uk/public/Aslains_WoWs_Modpack_Installer_v.13.8.0_03.exe#installer.exe",
+    "hash": "2baa9049e8d34ca377f6d95d74a3fe8f54c33f1a2f3efad09fe55296f483ce2c",
+    "version": "v.13.8.0_03",
     "license": "Unknown",
     "homepage": "https://aslain.com/index.php?/topic/2020-download-%E2%98%85-world-of-warships-%E2%98%85-modpack/",
-    "installer": "installer.exe",
+    "post_install": "installer.exe",
     "checkver": {
         "url": "https://aslain.com/index.php?/topic/2020-download-%E2%98%85-world-of-warships-%E2%98%85-modpack/",
         "regex": "https://flcl.uk/public/Aslains_WoWs_Modpack_Installer_(v[\\d._]+).exe"

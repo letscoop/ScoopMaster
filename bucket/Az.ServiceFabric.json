@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:9725ff70faa54cd94b0ab5d8d06b3e13fdbf517217d7c01f30bd180bf1a1d9c6fa88cac007b224c306ed5e3d55dea28901e2c20788df49891b3ad7dfc469b51f",
+    "hash": "sha512:40f73289374c0715b66a759bb1b916e1e4f7f98e0d0f3a3c277d178a7930bc76fcc5e97f2ad3b469117b58cbd2ad8940368a4963e07480a6945e70c4a3c4e81b",
     "description": "Microsoft Azure PowerShell - Service Fabric cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on Service Fabric, please visit the following: https://learn.microsoft.com/azure/service-fabric/",
     "psmodule": {
         "name": "Az.ServiceFabric"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ServiceFabric/3.3.2#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.ServiceFabric/3.3.4#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "3.3.2"
+    "version": "3.3.4"
 }

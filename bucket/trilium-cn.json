@@ -1,13 +1,13 @@
 {
-    "version": "0.63.3",
+    "version": "0.63.7",
     "description": "Translation for Trilium Notes. Trilium Notes 中文适配, 体验优化",
     "homepage": "https://github.com/Nriver/trilium-translation",
     "license": "AGPL-3.0-or-later",
     "notes": "https://github.com/ViCrack/scoop-bucket/blob/master/bucket/trilium-cn.json",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Nriver/trilium-translation/releases/download/v0.63.3_20240312/trilium-cn-windows-x64.zip",
-            "hash": "25c2bbbf7ef64ff69b7385b72356a32699810e78cab44b0caa00e9bc19b2cf69"
+            "url": "https://github.com/Nriver/trilium-translation/releases/download/v0.63.7_20240530/trilium-cn-windows-x64.zip",
+            "hash": "21e8993a34351d4b1f1342d10550bb35acf0746c66021bf00aa3534275ad16c2"
         }
     },
     "extract_dir": "trilium-windows-x64",

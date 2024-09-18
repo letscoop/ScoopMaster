@@ -1,11 +1,11 @@
 {
-    "version": "24.2.27",
+    "version": "24.9.10",
     "description": "FX Draw Tools. High-productivity drawing environment designed specifically for mathematics teachers",
     "homepage": "https://www.efofex.com/fxdraw.php",
     "license": "Proprietary",
     "changelog": "https://www.efofex.com/downloads.php#versions",
     "url": "https://www.efofex.com/downloadexe.php?&file=FXDrawTools.exe#/setup.exe",
-    "hash": "77c594ab9dfc4d1354d75de76f3a608f1799c25187fc292a8371ad545940dcee",
+    "hash": "86ad5faaf09acf5b294cb06e38f039dba258ef9713761797f20cbc75f30595f2",
     "pre_download": "Assert-Administrator",
     "pre_install": [
         "$processname = \"FXDraw\"",

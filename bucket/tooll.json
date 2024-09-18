@@ -8,8 +8,8 @@
         "github": "https://github.com/still-scene/t3"
     },
     "description": "Defold is a completely free to use game engine for development of desktop, mobile and web games.",
-    "extract_dir": "Tooll-v3.9.1",
-    "hash": "d7264ca275449c4de620f249602865c47c2793dcb6c1416c60e97aae7cc3baf2",
+    "extract_dir": "Tooll-v3.9.3",
+    "hash": "7ef49f32d307f2f8f6ade51a714116b38475208789212a8c764d369fc254a165",
     "homepage": "https://github.com/still-scene/t3",
     "license": "MIT",
     "shortcuts": [
@@ -21,6 +21,6 @@
     "suggest": {
         "dotnet": "versions/dotnet-sdk-lts"
     },
-    "url": "https://github.com/still-scene/t3/releases/download/v3.9.1/Tooll-v3.9.1.zip",
-    "version": "3.9.1"
+    "url": "https://github.com/still-scene/t3/releases/download/v3.9.3/Tooll-v3.9.3.zip",
+    "version": "3.9.3"
 }

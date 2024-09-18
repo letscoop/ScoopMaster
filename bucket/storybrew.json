@@ -1,10 +1,10 @@
 {
-    "version": "1.89",
+    "version": "1.92",
     "description": "A storyboard editor for osu!",
     "homepage": "https://github.com/Damnae/storybrew",
     "license": "MIT",
-    "url": "https://github.com/Damnae/storybrew/releases/download/1.89/storybrew.1.89.zip",
-    "hash": "sha512:18ad4d94f61f513c36ab0dca725e65c31585c494fde83f6da3dac21bb2d534095776982f516a55a4dbb4a77d4fe004ff3c1f89c4c2bf8f644e05fe8d98e8385a",
+    "url": "https://github.com/Damnae/storybrew/releases/download/1.92/storybrew.1.92.zip",
+    "hash": "ab17429d5f9d62ad59546a0ebb60c2d231e91b2d7f0f7bb75a9b4bec379b4891",
     "extract_to": "",
     "bin": "StorybrewEditor.exe",
     "shortcuts": [

@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "a73f34baea9b3739fa501b7311cd00cd24ad243755e6081c24e7996141b671ea",
-            "url": "https://github.com/obs-ndi/obs-ndi/releases/download/4.13.1/obs-ndi-4.13.1-windows-x64-Installer.exe"
+            "hash": "fcb22daee2a36933aab0bf95240a5033854fb2d32668ead7c7c3fb060d421747",
+            "url": "https://github.com/DistroAV/DistroAV/releases/download/4.14.1/obs-ndi-4.14.1-windows-x64.zip"
         }
     },
     "autoupdate": {
@@ -10,15 +10,15 @@
             "64bit": {
                 "hash": {
                     "regex": "$basename: ([0-9a-f]{64})",
-                    "url": "https://github.com/obs-ndi/obs-ndi/releases/tag/$version"
+                    "url": "https://github.com/DistroAV/DistroAV/releases/tag/$version"
                 },
-                "url": "https://github.com/obs-ndi/obs-ndi/releases/download/$version/obs-ndi-$version-windows-x64-Installer.exe"
+                "url": "https://github.com/DistroAV/DistroAV/releases/download/$version/obs-ndi-$version-windows-x64.zip"
             }
         }
     },
     "checkver": "github",
     "description": "NewTek NDI integration for OBS Studio.",
-    "homepage": "https://github.com/obs-ndi/obs-ndi",
+    "homepage": "https://github.com/DistroAV/DistroAV",
     "innosetup": true,
     "installer": {
         "script": [
@@ -36,7 +36,7 @@
     },
     "license": {
         "identifier": "GPL-2.0-only",
-        "url": "https://github.com/obs-ndi/obs-ndi/blob/master/LICENSE"
+        "url": "https://github.com/DistroAV/DistroAV/blob/master/LICENSE"
     },
     "suggest": {
         "NDI Runtime": "ox/ndi-runtime",
@@ -56,5 +56,5 @@
             "}"
         ]
     },
-    "version": "4.13.1"
+    "version": "4.14.1"
 }

@@ -1,10 +1,10 @@
 {
-    "version": "2309",
+    "version": "2408",
     "description": "Snappy Driver Installer",
     "homepage": "http://sdi-tool.org",
     "license": "GPL-3.0-only",
-    "url": "http://sdi-tool.org/releases/SDI_R2309.zip",
-    "hash": "a971e5387743bd87ec7652a24e1ce05ca4de8846d4096adcf976ff50d85a5b23",
+    "url": "http://sdi-tool.org/releases/SDI_R2408.zip",
+    "hash": "8da63fbc0ce6a9ddefe42b1a4ba91618958133d9351116a83fcaefab882e466a",
     "architecture": {
         "64bit": {
             "shortcuts": [

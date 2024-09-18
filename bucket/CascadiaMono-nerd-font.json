@@ -1,10 +1,10 @@
 {
-    "version": "3.1.1",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'CascadiaMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaMono.tar.xz",
-    "hash": "e5a0d7ade7f8d85ed55dea69123598646efe7b45955e283c279197b5a9a0c884",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.tar.xz",
+    "hash": "9672540e8707d221fe48fa5da49aec5a605b2d38a85c9fed959eb76990b33367",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

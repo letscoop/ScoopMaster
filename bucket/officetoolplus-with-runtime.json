@@ -1,20 +1,20 @@
 {
     "homepage": "https://github.com/YerongAI/Office-Tool",
     "description": "Office Tool Plus is a tool for managing, downloading and installing Office.",
-    "version": "10.8.5.0",
+    "version": "10.14.28.0",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.8.5.0/Office_Tool_with_runtime_v10.8.5.0_x64.zip",
-            "hash": "e4db76bf9845480802fa686f707e7a58f8e5666563f212c96fdbca813590d3bd"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.14.28.0/Office_Tool_with_runtime_v10.14.28.0_x64.zip",
+            "hash": "059d1ada9dff0a98b4fc268589c1864436ebc0c682356c1e67b9d7eec30ebe11"
         },
         "32bit": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.8.5.0/Office_Tool_with_runtime_v10.8.5.0_x86.zip",
-            "hash": "d036a52f8c4985712679cbb912509cc1a6fd8e1ff2d16b91e46ac152a8d8518a"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.14.28.0/Office_Tool_with_runtime_v10.14.28.0_x86.zip",
+            "hash": "b9ff57c919434da4b307b7b1e5f5d4d008fee531fba5d31e1c5fbeb75afc4c67"
         },
         "arm64": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.8.5.0/Office_Tool_with_runtime_v10.8.5.0_arm64.zip",
-            "hash": "bff81396718243dcbb7cd5e12b9509369fbaf1fa4f7c41d12e7afce2aa73886a"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v10.14.28.0/Office_Tool_with_runtime_v10.14.28.0_arm64.zip",
+            "hash": "3280b9f54225e5c65afb715991af7b33040e3763cd61488c6b101cfbb8a21f15"
         }
     },
     "extract_dir": "Office Tool",

@@ -1,19 +1,19 @@
 {
-    "version": "136",
+    "version": "140",
     "description": "Multi-system emulator focused on accuracy and preservation",
     "homepage": "https://ares-emu.net",
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ares-emulator/ares/releases/download/v136/ares-windows.zip",
-            "hash": "0bd53fbd3e166c3386135e90e008ea19efc71b07be88bb111229a51815ab2a30"
+            "url": "https://github.com/ares-emulator/ares/releases/download/v140/ares-windows.zip",
+            "hash": "407a4481f1440692ae70e7930ae07b13d77676c88eddab494865b429a04dd0ba"
         },
         "arm64": {
-            "url": "https://github.com/ares-emulator/ares/releases/download/v136/ares-windows-msvc-arm64.zip",
-            "hash": "5f2fcb0399066cd0750af6644d7f1d41310354a35578d2a5699fdb7dc0978828"
+            "url": "https://github.com/ares-emulator/ares/releases/download/v140/ares-windows-msvc-arm64.zip",
+            "hash": "2b25ccc76ee5ff8ab318283fcbddf3c829557ce78414efce38da9fe6636645e0"
         }
     },
-    "extract_dir": "ares-v136",
+    "extract_dir": "ares-v140",
     "post_install": [
         "if (!(Test-Path \"$persist_dir\\settings.bml.bak\")) {",
         "   New-Item -ItemType File \"$dir\\settings.bml\" | Out-Null",

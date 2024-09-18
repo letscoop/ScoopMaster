@@ -2,16 +2,16 @@
     "homepage": "https://github.com/zhongyang219/MusicPlayer2",
     "description": "Audio player which supports music collection playback, lyrics display, format conversion and many other functions.",
     "license": "GPL-3.0-only",
-    "version": "2.76",
+    "version": "2.77.1",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/V2.76/MusicPlayer2_V2.76_x86.zip",
-            "hash": "ceeb9c6d93b60c5ad9b88bf73fa33e707aacdbb3994bf1b4d0fc299e2a5b80ff",
+            "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/V2.77.1/MusicPlayer2_V2.77.1_x86.zip",
+            "hash": "b589cceda1553ae4e2467faa489030e71c30a81ce9b14df1fcb498bbf1617d8f",
             "extract_dir": "MusicPlayer2"
         },
         "64bit": {
-            "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/V2.76/MusicPlayer2_V2.76_x64.zip",
-            "hash": "bf49e24e3560b9f732c579bdb74f53c68d3718a27ac5e43256922b077657c788",
+            "url": "https://github.com/zhongyang219/MusicPlayer2/releases/download/V2.77.1/MusicPlayer2_V2.77.1_x64.zip",
+            "hash": "46144191ee0dfccd05a211699f3e8d4922ac42f38ef3d5dbd1fc9ac4c65b3e11",
             "extract_dir": "MusicPlayer2_x64"
         }
     },

@@ -7,9 +7,9 @@
     },
     "extract_dir": "defoldsdk",
     "description": "Defold is a completely free to use game engine for development of desktop, mobile and web games.",
-    "hash": "f0564d143e99ff63e6c26b449308561be81afd1185614ee4102c8614c2bbdbb4",
+    "hash": "5da3fc879de18bc2153be61641092e588523937407df45b73fe82ecf25c4a994",
     "homepage": "https://defold.com/",
     "license": "https://defold.com/license/",
-    "url": "https://github.com/defold/defold/releases/download/1.7.0-beta/defoldsdk.zip",
-    "version": "1.7.0"
+    "url": "https://github.com/defold/defold/releases/download/1.9.3-beta/defoldsdk.zip",
+    "version": "1.9.3"
 }

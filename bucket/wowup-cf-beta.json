@@ -1,13 +1,13 @@
 {
-    "version": "2.11.1-beta.1",
+    "version": "2.20.0",
     "description": "World of Warcraft addon updater with CurseForge support. (Beta version)",
     "homepage": "https://wowup.io",
     "license": {
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/WowUp/WowUp.CF/blob/main/LICENSE"
     },
-    "url": "https://github.com/WowUp/WowUp.CF/releases/download/v2.11.1-beta.1/WowUp-CF-Setup-2.11.1-beta.1.exe#/dl.7z",
-    "hash": "4beaeb622c2745e4c0cb407d8e6e0db5ded4f328419d953cb59202bf41baecff",
+    "url": "https://github.com/WowUp/WowUp.CF/releases/download/v2.20.0/WowUp-CF-Setup-2.20.0.exe#/dl.7z",
+    "hash": "d25da8ff3f1229177dae03ba139a943743d2229ac14ba5ee027511b14f3a6bac",
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
@@ -24,7 +24,7 @@
     "checkver": {
         "url": "https://api.github.com/repos/WowUp/WowUp.CF/releases",
         "jsonpath": "$[0].tag_name",
-        "regex": "(?!v)(.+)"
+        "regex": "v(.+)"
     },
     "autoupdate": {
         "url": "https://github.com/WowUp/WowUp.CF/releases/download/v$version/WowUp-CF-Setup-$version.exe#/dl.7z"

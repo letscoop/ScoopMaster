@@ -1,13 +1,13 @@
 {
-    "version": "3.204",
+    "version": "3.302",
     "homepage": "https://www.copytrans.net/copytranscloudly/",
     "description": "A fast and easy app that lets you delete all photos and videos from your iCloud account as well as download all photos and videos from iCloud to your Windows device.",
     "license": {
         "identifier": "Shareware",
         "url": "https://www.copytrans.net/support/terms-and-conditions/"
     },
-    "url": "https://www.copytrans.net/bin/CopyTransCloudlyv3.204.zip",
-    "hash": "35045a6c70113133a7b4cd1785d5f576add9fde2c3736c0ede0e6e9ca25cd49f",
+    "url": "https://www.copytrans.net/bin/CopyTransCloudlyv3.302.zip",
+    "hash": "4e25da03fd73e8e7ddc59b8382eb6b857052676bd6ee3bccfb71db16ff81271a",
     "bin": "CopyTransCloudly.exe",
     "shortcuts": [
         [

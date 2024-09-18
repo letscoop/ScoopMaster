@@ -1,17 +1,17 @@
 {
-    "version": "7.7.0",
+    "version": "7.18.0",
     "description": "Powerful and easy to use e-book manager",
     "homepage": "https://calibre-ebook.com",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": [
-                "https://download.calibre-ebook.com/7.7.0/calibre-64bit-7.7.0.msi",
-                "https://github.com/Cirn09/calibre-do-not-translate-my-path/releases/download/v7.7.0/win-patch-backend-v7.7.0.zip"
+                "https://download.calibre-ebook.com/7.18.0/calibre-64bit-7.18.0.msi",
+                "https://github.com/Cirn09/calibre-do-not-translate-my-path/releases/download/v7.18.0/win-patch-backend-v7.18.0.zip"
             ],
             "hash": [
-                "sha512:c60c39c2bc4e14d758cff2e2ef844039387921eb20b39a045599c7c0bfaa1d7c7307f2fa3f3a8a5860f8ed5c29990a80b7b9280c768981282a61c83cdd44abc5",
-                "372b37068c20a1ffe54a0eadb18b539118d6586cce6b81eba70b422c8705c3b3"
+                "sha512:9527f2385af07a2467f87e41d9a5e97963306c21cdfbe3f65b779bdc1fd38dc04d48b92f0b97e8bae9fc402d6d82120f73244f2dc9a7d7fdc1c17f5a0398076d",
+                "aecc680c1bab64b5bf86445dafed692d3e7f404a885e3746abac4108a3075ff7"
             ],
             "extract_dir": [
                 "PFiles64\\Calibre2",
@@ -19,7 +19,6 @@
             ]
         }
     },
-    "pre_install": "Remove-Item \"$dir\\Calibre2\" -Force -Recurse",
     "installer": {
         "script": [
             " if (Test-Path \"$dir\\app\\bin\\python-lib.bypy.frozen\") {",

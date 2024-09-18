@@ -1,12 +1,12 @@
 {
-    "version": "3.0.2",
+    "version": "3.1.1",
     "description": "A simple standalone Windows application that renders and displays Markdown files.",
     "homepage": "https://github.com/c3er/mdview",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/c3er/mdview/releases/download/v3.0.2/mdview-3.0.2-x64.zip",
-            "hash": "a295d5f7d2e186dbfcc89c0eaaefe93b92e8a17dbded05a5771eff1ffe9059f9"
+            "url": "https://github.com/c3er/mdview/releases/download/v3.1.1/mdview-3.1.1-x64.zip",
+            "hash": "1fcd8e21d330bb6919e74e24e54050daefd7ae55c71a387d318140aba19bad48"
         }
     },
     "shortcuts": [

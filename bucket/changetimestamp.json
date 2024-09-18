@@ -1,9 +1,9 @@
 {
-    "version": "0.93",
+    "version": "1.02",
     "description": "Change Timestamp.",
     "homepage": "https://dns-plus.net/ctime.html",
-    "url": "https://dns-plus.net/download/ctime093.zip",
-    "hash": "765f05efe258d02ec95261bc4ff52f5c3005df0c2a4df1f5f316eeb32607b103",
+    "url": "https://dns-plus.net/download/ctime102.zip",
+    "hash": "sha512:b087f7830f68d7fcbc36daa1b08a4e93cc4994c1ccea86a9ed9c1f09fca4f3a967ebde39440458fd55ee1cec219e43595c8c274495c160c76c47348a491952c9",
     "shortcuts": [
         [
             "ctime.exe",

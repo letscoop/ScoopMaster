@@ -1,12 +1,12 @@
 {
-    "version": "1.0.8.313",
-    "description": "WPF 开发的一款即开即用、即用即走的翻译工具",
-    "homepage": "https://github.com/ZGGSONG/STranslate",
+    "version": "1.2.3.916",
+    "description": "A ready-to-use, ready-to-go translation and OCR tool developed by WPF",
+    "homepage": "https://stranslate.zggsong.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ZGGSONG/STranslate/releases/download/1.0.8.313/STranslate_1.0.8.313_win-x64.zip",
-            "hash": "6c5ddfaf6af26afcbc4c784ccc1123bfd4dd52ee10670e43d73fdd67f5cf9a71"
+            "url": "https://github.com/ZGGSONG/STranslate/releases/download/1.2.3.916/STranslate_1.2.3.916_win-x64_7z.7z",
+            "hash": "9e7963eb09e9146a8edee2b31bbdec480271245e1f2f50e5a43bd6ee92bed52d"
         }
     },
     "shortcuts": [
@@ -16,13 +16,17 @@
         ]
     ],
     "post_install": "Remove-Item \"$dir\\Updater*\" -Force -Recurse",
-    "notes": "STranslate is NOT portable.",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/ZGGSONG/STranslate"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ZGGSONG/STranslate/releases/download/$version/STranslate_$version_win-x64.zip"
+                "url": "https://github.com/ZGGSONG/STranslate/releases/download/$version/STranslate_$version_win-x64_7z.7z"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }

@@ -1,28 +1,25 @@
 {
-    "version": "0.0.11",
+    "version": "1.0.2",
     "description": "Moralerspace font based on Monaspace, IBM Plex Sans JP, Kiwi-Maru and Stick",
     "homepage": "https://github.com/yuru7/moralerspace",
     "license": "OFL-1.1-RFN",
     "url": [
-        "https://github.com/yuru7/moralerspace/releases/download/v0.0.11/Moralerspace_v0.0.11.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v0.0.11/MoralerspaceHW_v0.0.11.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v0.0.11/MoralerspaceJPDOC_v0.0.11.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v0.0.11/MoralerspaceHWJPDOC_v0.0.11.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v0.0.11/MoralerspaceNF_v0.0.11.zip",
-        "https://github.com/yuru7/moralerspace/releases/download/v0.0.11/MoralerspaceHWNF_v0.0.11.zip"
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/Moralerspace_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHW_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceJPDOC_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWJPDOC_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceNF_v1.0.2.zip",
+        "https://github.com/yuru7/moralerspace/releases/download/v1.0.2/MoralerspaceHWNF_v1.0.2.zip"
     ],
     "hash": [
-        "359dd7e97dcfe21a455e7e9236a3771a80aa73f107eada8613683ed7c38f78e6",
-        "5a00c8390bb4c23c692daa12b8a4a7ccfed09c63f405e06b6231d4f9bc649773",
-        "87668a1acbc69a3fe0a6d1f5f60fc0657953b70b6f40a74795d37364740cc284",
-        "517edb350f05832a9dcb0eec335a6856ebe91c87a52dd099040796d0f90b3f90",
-        "39d419c8da532665e77a85a7712638eacd3712f8e763185fd0942823d719b0e0",
-        "50582ec70fa1fe7d8ad77ef0c4c7be078fbdd73a0f4f66157dd44e3ee6618317"
+        "edafef240510a47f8fd34bfcb78fb05badf795cd0cef03766c9e58c3faf6ef83",
+        "d3c7288f071288e5edadb049211b76b42b7214b5c1a3d43e49848dad9c319b78",
+        "0c22320b9466d5cfb9e66c9ecba1bef6a71afe2a5890e81927efd78ba721261e",
+        "f2e7a6ea84135157fadebba74120350903308a84b4fa53a6193ad3c4282b9596",
+        "06dbd8f2bdd5259d07e43e9fd5601f6a62f80a69813cab1801c9e9dc499c71ce",
+        "dcdccaf2620422e63f00f39589afc5b5052fe62d8fa6ec1a8c244da3e6982868"
     ],
-    "depends": [
-        "sudo",
-        "unoun/scoop-helper"
-    ],
+    "depends": "unoun/scoop-helper",
     "installer": {
         "script": [
             "$helper = \"$(appdir scoop-helper)\\current\\scoop-font-helper.ps1\"",

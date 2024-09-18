@@ -2,9 +2,9 @@
     "homepage": "https://www.opentween.org/",
     "description": "TwitterクライアントのTweenからフォークしたオープンなプロジェクト",
     "license": "GPL-3.0",
-    "version": "3.13.0",
-    "url": "https://github.com/opentween/OpenTween/releases/download/OpenTween_v3.13.0/OpenTween_3.13.0.zip",
-    "hash": "d63cb25776e03ca881ffe40644d875d41d26d977f08c4f15a7067f1d5e8d2ddc",
+    "version": "3.15.1",
+    "url": "https://github.com/opentween/OpenTween/releases/download/OpenTween_v3.15.1/OpenTween_3.15.1.zip",
+    "hash": "6c452b6ef9460ba0fc32a189ad4689f6cb56c57c96c4c40ed109ac16371caa66",
     "shortcuts": [
         [
             "OpenTween.exe",

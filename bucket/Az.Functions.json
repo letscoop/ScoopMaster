@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:7d9f3d45f415847a59da527185f4e47dca5375e50c9f48964301d2dfa74fbd8bc215621b23cce172eaba6eb91aef7e338f7f73776f8f01ffc7fb1b22f5c7b71d",
+    "hash": "sha512:92b88ce20e6825c39f40a90e7fbff7bd939954d137dc92f027a3889bf85ebbec6bdec5c79d4862ad00f43c88ea1a747f3923584b2b1e9eb1878f2c12a418e1e3",
     "description": "Microsoft Azure PowerShell - Azure Functions service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For information on Azure Functions, please visit the following: https://docs.microsoft.com/azure/azure-functions/",
     "psmodule": {
         "name": "Az.Functions"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Functions/4.0.7#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Functions/4.1.0#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "4.0.7"
+    "version": "4.1.0"
 }

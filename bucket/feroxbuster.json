@@ -1,16 +1,17 @@
 {
-    "version": "2.10.2",
-    "description": "A fast, simple, recursive content discovery tool written in Rust",
+    "version": "2.11.0",
+    "description": "一个用 Rust 编写的快速，简单，递归的内容发现工具。A fast, simple, recursive content discovery tool written in Rust.(Scoop bucket for Cybersecurity by whoopscs)",
     "homepage": "https://github.com/epi052/feroxbuster",
     "license": "MIT",
+    "notes": "Scoop bucket for Cybersecurity by whoopscs(https://github.com/whoopscs/scoop-security).",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/epi052/feroxbuster/releases/download/v2.10.2/x86_64-windows-feroxbuster.exe.zip",
-            "hash": "5bd8f19d6393fee38b5b57d504eb0f80f39984ddcca5ebebbe7c8efc5b6afbbe"
+            "url": "https://github.com/epi052/feroxbuster/releases/download/v2.11.0/x86_64-windows-feroxbuster.exe.zip",
+            "hash": "8d41d19edfad1c787d0c783dba016bd1bf45ec5f51fe13a485b19e38e10bd688"
         },
         "32bit": {
-            "url": "https://github.com/epi052/feroxbuster/releases/download/v2.10.2/x86-windows-feroxbuster.exe.zip",
-            "hash": "9d402ef1ca4a66270771c50f0df40e781cc14200b8aff4f82a25e50483a43fae"
+            "url": "https://github.com/epi052/feroxbuster/releases/download/v2.11.0/x86-windows-feroxbuster.exe.zip",
+            "hash": "532de21c5f075ce170d0ec1e9fcbfe527dcf7d5c9498e042f9376f1effb381ab"
         }
     },
     "bin": "feroxbuster.exe",

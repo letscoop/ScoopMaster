@@ -1,5 +1,5 @@
 {
-    "version": "17.9.3",
+    "version": "17.11.4",
     "description": "Microsoft Visual Studio Community 2022. ",
     "homepage": "https://www.visualstudio.com/downloads/",
     "license": {
@@ -7,7 +7,7 @@
         "url": "https://visualstudio.microsoft.com/license-terms"
     },
     "url": "https://aka.ms/vs/17/release/vs_community.exe",
-    "hash": "facc1882d28c4e817282786749ca1effad3a8c74d6e0ab9a69be116dc9903bf7",
+    "hash": "08466775b2a072741745d5694e8049a8693950194f96716092a676ce393df825",
     "installer": {
         "script": [
             "Invoke-ExternalCommand -FilePath \"$dir\\vs_community.exe\" -Args @('--quiet', '--wait') -RunAs | Out-Null",
@@ -18,7 +18,7 @@
     },
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
-        "regex": ">Visual Studio 2022 version ([\\d.]+)<"
+        "regex": ">Version ([\\d.]+)<"
     },
     "autoupdate": {
         "url": "https://aka.ms/vs/17/release/vs_community.exe"

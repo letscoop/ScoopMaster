@@ -1,5 +1,5 @@
 {
-    "version": "2.5.3",
+    "version": "2.5.5",
     "description": "Plays internet radio streams and manages your favorite stations.",
     "homepage": "https://www.ophthalmostar.de/freeware/#netradio",
     "license": "Freeware",
@@ -7,7 +7,7 @@
         ".NET Desktop Runtime": "extras/windowsdesktop-runtime-lts"
     },
     "url": "https://www.ophthalmostar.de/NetRadio.zip",
-    "hash": "b7f9ef3b4c72b08482e9bb7d5fe84695440e76fc1ca0f888ea218dae4b875ac2",
+    "hash": "b7bce60694f3c6e2180f019aec4c630444bc3d0089210f72690756b5a946dd01",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\NetRadio.xml\")) {",
         "    Add-Content \"$dir\\NetRadio.xml\" '<NetRadio></NetRadio>' -Encoding Ascii",

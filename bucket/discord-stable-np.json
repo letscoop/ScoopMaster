@@ -6,8 +6,16 @@
         "identifier": "Freeware",
         "url": "https://discordapp.com/terms"
     },
-    "url": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86#/dl.7z",
-    "hash": "7335719742e7bf490e90429d7fdff85d6ebb923cdb3f4262d218559f670c554e",
+    "architecture": {
+        "64bit": {
+            "url": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64#/dl.7z",
+            "hash": "d24dddbdf2970f6a51611a193bcd839faf3d7a28d4dc96adcb3c20a11424209e"
+        },
+        "32bit": {
+            "url": "https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86#/dl.7z",
+            "hash": "4865f70b92896ecb15ffd09caaf579ea533978a4e4306d499dfdc2e19bd46b0d"
+        }
+    },
     "pre_install": [
         "$packages = New-Item $dir -Name 'packages' -ItemType 'directory'",
         "Move-Item $dir\\RELEASES -Destination $packages",
@@ -37,11 +45,5 @@
     "checkver": {
         "url": "https://discordapp.com/api/updates/stable/RELEASES",
         "regex": "Discord-([\\d.]+)-full"
-    },
-    "autoupdate": {
-        "url": "http://dl.discordapp.net/apps/win/Discord-$version-full.nupkg",
-        "hash": {
-            "url": "https://discordapp.com/api/updates/stable/RELEASES"
-        }
     }
 }

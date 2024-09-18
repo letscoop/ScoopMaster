@@ -1,20 +1,20 @@
 {
-    "version": "6.7.1",
+    "version": "6.7.6",
     "description": "All-in-one messaging apps for various services",
     "homepage": "https://ferdium.org/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.1/Ferdium-win-AutoSetup-6.7.1-x64.exe#/dl.7z",
-            "hash": "sha512:d8224a3264e07afbb30957f384189b04cf1e28af62539c145437cf98856fb1427358925ec889760c6b696b3f2baf345244af18bb91619eba0a329bc8ad4268a7"
+            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.6/Ferdium-win-AutoSetup-6.7.6-x64.exe#/dl.7z",
+            "hash": "sha512:8b2f6d084cbc38fb9afb3f6870cddba57438565a98e28e3b5565e4caf1943d65fd99dab90dd5d9502493fcc45e8254e26dee49e231d5f49c8b7a0fb11affbf06"
         },
         "32bit": {
-            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.1/Ferdium-win-AutoSetup-6.7.1-ia32.exe#/dl.7z",
-            "hash": "sha512:7f94349f7cc653d5091d2e685cadbfe01c234ce1fc7a9cd1d75593f5c167af608035a948def39633a7500572cde3ae6232274c0b0cf5f4ed9a0beae359173318"
+            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.6/Ferdium-win-AutoSetup-6.7.6-ia32.exe#/dl.7z",
+            "hash": "sha512:d6ff04d070939fc5935b043ec1fbb693e4cd840220738e934d130af45a87f32c5b7f3b5ba1d81f93baa2330f58a2a3755810a365e16b5db6f133209dcb5f78a9"
         },
         "arm64": {
-            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.1/Ferdium-win-AutoSetup-6.7.1-arm64.exe#/dl.7z",
-            "hash": "sha512:3d018ee2b2b957adb4fdecc6fa43d2734a6809be34dfa8809b78c61828722035e80343c0075fe6ad96a5694332acd28cef1310975c2d45bf75ecc5f23bc6150c"
+            "url": "https://github.com/ferdium/ferdium-app/releases/download/v6.7.6/Ferdium-win-AutoSetup-6.7.6-arm64.exe#/dl.7z",
+            "hash": "sha512:1b77cc95baba2f08dc17ddcfe11f231282f02aeec19aa775fc176ed513dc5dc8058842b9c9831eb74dbe0b1bc51336149b9bc44a6dfd33fa0234e1836d1f3b98"
         }
     },
     "pre_install": [

@@ -1,10 +1,10 @@
 {
-    "version": "3.1.1",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched '0xProto' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/0xProto.tar.xz",
-    "hash": "4c69fe95a7e53feebef29e321d6ed4a4e0c91ad969d8f6ac8ccc66fc6f510528",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/0xProto.tar.xz",
+    "hash": "cf165059645c02212fbdb5a27858056772d12a762468a0971c5bed3de88d0427",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

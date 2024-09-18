@@ -1,10 +1,10 @@
 {
     "homepage": "https://dotnet.microsoft.com/",
     "description": "The dotnet desktop runtime enables you to run dotnet desktop applications. This release includes the .NET Core Runtime, you do not need to install it separately.",
-    "version": "8.0.3",
+    "version": "8.0.6",
     "license": "MIT",
-    "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.3/windowsdesktop-runtime-8.0.3-win-x86.exe#/setup.exe",
-    "hash": "sha512:b9b14552661f35b173c1539ffb422f31b13926dcd0d7aeba5283a467288f4db288f6afeede2fe3e57ed7d3ef3847dba7bd2725b8791396a0633dd14d957b1d34",
+    "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.6/windowsdesktop-runtime-8.0.6-win-x86.exe#/setup.exe",
+    "hash": "sha512:8cd87203979b7ca6c191bb5f46f71ade8f00439a564fbe73caa48c8bc0d33701893fff51d0e1c58fcb9cd83cdc420748fb30f4daa221e7417012d136bbd2310f",
     "depends": "dark",
     "installer": {
         "script": "Start-Process -Wait \"$dir\\setup.exe\" \"/install /quiet /norestart\" -Verb RunAs"

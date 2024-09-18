@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "hash": "7f88ec213c9e85d08caf50919faebad8f970f9f8f50b97bc6660675aea6db9ce",
-            "url": "https://github.com/nuspell/nuspell/archive/refs/tags/v5.1.4.zip"
+            "hash": "e718435eaa939ff4440c810754e3d04313f8ef0fa02a4745f5a5299753e5e9db",
+            "url": "https://github.com/nuspell/nuspell/archive/refs/tags/v5.1.6.zip"
         }
     },
     "bin": "nuspell.exe",
@@ -19,5 +19,5 @@
     "description": "Fast and safe spellchecking C++ library",
     "homepage": "https://nuspell.github.io",
     "license": "LGPL-3.0",
-    "version": "5.1.4"
+    "version": "5.1.6"
 }

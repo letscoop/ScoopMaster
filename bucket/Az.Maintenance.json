@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:5cdf5fccb2b89f958d2e5a4ec58f2abd4a87d5c64d70aefa17af32424868608f7413ad63d28f82d02511f55b5018d66393688547a0da4f9cd4aad07c7c45c2e4",
+    "hash": "sha512:a81d809dec02c83aea18ca2a14b4eaeeb422c791d097177c0840bbd843d450dd9378650c431f3c47518bc265554a2b4ef53e1d47f8f93d214e485505f7bea0b6",
     "description": "Microsoft Azure PowerShell - Maintenance cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on Maintenance, please visit the following: https://docs.microsoft.com/azure/maintenance/",
     "psmodule": {
         "name": "Az.Maintenance"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Maintenance/1.4.1#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Maintenance/1.4.3#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "1.4.1"
+    "version": "1.4.3"
 }

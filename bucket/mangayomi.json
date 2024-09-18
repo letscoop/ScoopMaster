@@ -1,10 +1,10 @@
 {
-    "version": "0.1.85",
+    "version": "0.3.0",
     "description": "Free and open source manga reader and anime streaming app that support external source extension for Android, iOS, macOS, Linux and Windows",
     "homepage": "https://github.com/kodjodevf/mangayomi",
     "license": "Apache-2.0",
-    "url": "https://github.com/kodjodevf/mangayomi/releases/download/v0.1.85/Mangayomi-v0.1.85-windows.exe",
-    "hash": "9c52a637fe660702b3220b8852a5e1db2222f703dedd3a287cfac1f3ffb212b1",
+    "url": "https://github.com/kodjodevf/mangayomi/releases/download/v0.3.0/Mangayomi-v0.3.0-windows.exe",
+    "hash": "26c2d7f95be7c6458fbfb6962294b0eec1322eadfa2df7e6fa912aabf39b616a",
     "innosetup": true,
     "shortcuts": [
         [

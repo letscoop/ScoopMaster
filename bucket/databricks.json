@@ -1,0 +1,36 @@
+{
+    "version": "0.224.1",
+    "description": "The Databricks command-line interface (also known as the Databricks CLI) provides a tool to automate the Databricks platform from your terminal, command prompt, or automation scripts.",
+    "homepage": "https://docs.databricks.com/en/dev-tools/cli/index.html",
+    "license": {
+        "identifier": "Databricks",
+        "url": "https://github.com/databricks/cli/blob/main/LICENSE"
+    },
+    "bin": "databricks.exe",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/databricks/cli/releases/download/v0.224.1/databricks_cli_0.224.1_windows_amd64.zip",
+            "hash": "a95e57114b3a76292474cd8f080a3e66f45756a291a56835f49c7046f7feaf3d"
+        },
+        "arm64": {
+            "url": "https://github.com/databricks/cli/releases/download/v0.224.1/databricks_cli_0.224.1_windows_arm64.zip",
+            "hash": "f79671babde40bee3e6e7635a4fe99fb690680798d46ee4293e8248f3446c3ac"
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/databricks/cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/databricks_cli_$version_SHA256SUMS"
+        }
+    }
+}

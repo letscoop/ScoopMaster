@@ -1,10 +1,10 @@
 {
-    "version": "0.10.1",
+    "version": "0.11.0",
     "license": "GPL-3.0-only",
     "description": "A vector-based drawing app for sketching, handwritten notes.",
     "homepage": "https://rnote.flxzt.net/",
-    "url": "https://github.com/flxzt/rnote/releases/download/v0.10.1/rnote-win-installer-0.10.1-x86_64.exe#/setup.exe",
-    "hash": "aa27330d8e41329365e71359ae3514f693d00f61831a63e0adbb7273f89262f9",
+    "url": "https://github.com/flxzt/rnote/releases/download/v0.11.0/rnote-win-installer-0.11.0-x86_64.exe#/setup.exe",
+    "hash": "3c71b399a21eb6d7eb5137d2cdbedb5f7e7639924d45168d0bb6a18d45d42768",
     "innosetup": true,
     "shortcuts": [
         [

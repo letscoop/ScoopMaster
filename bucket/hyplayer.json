@@ -1,22 +1,22 @@
 {
     "##": "The shortcut will be created when adding the Appx package",
-    "version": "2.1.37.5755",
+    "version": "2.1.37.5863",
     "description": "基于UWP的第三方网易云音乐播放器",
     "homepage": "https://github.com/HyPlayer/HyPlayer",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HyPlayer/HyPlayer/releases/download/2.1.37.5755/HyPlayer_2.1.37.5755_x64_ARM64.msixbundle#/HyPlayer.msixbundle",
-            "hash": "1fb2428d1f9b635461a5ea3975bacfefb7ffc96ff56161f0240dcb7b0cc2bf87"
+            "url": "https://github.com/HyPlayer/HyPlayer/releases/download/2.1.37.5863/HyPlayer_2.1.37.5863_x64_ARM64.msixbundle#/HyPlayer.msixbundle",
+            "hash": "160e0c360ecba3a4de05aaacfb533cf2cd92c4e076878dab654d1dbb0c594e24"
         }
     },
     "pre_install": [
-        "if ($env:CI -eq \"true\") { Exit }",
+        "if ($env:CI -eq \"true\") { Return }",
         "if ($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell 3>$null }",
         "Add-AppxPackage \"$dir\\HyPlayer.msixbundle\" -ForceTargetApplicationShutdown -AllowUnsigned"
     ],
     "pre_uninstall": [
-        "if ($env:CI -eq \"true\") { Exit }",
+        "if ($env:CI -eq \"true\") { Return }",
         "if ($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell 3>$null }",
         "$package = Get-AppxPackage '48848aaaaaaccd.HyPlayer'",
         "if (!$package) { warn \"$app is already uninstalled out of scoop.\" ; return }",

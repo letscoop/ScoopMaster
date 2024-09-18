@@ -2,15 +2,15 @@
     "homepage": "https://im.qq.com/pcqq/index.shtml",
     "description": "An instant messaging software service developed by Tencent",
     "license": "Freeware",
-    "version": "9.9.7.240305",
+    "version": "9.9.15.240902",
     "architecture": {
         "64bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.7_240305_x64_01.exe#/dl.7z",
-            "hash": "18ff4722148ca302bac9cbf25d5d104ed30778824921822520bf15bc8d41ac7f"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240902_x64_01.exe#/dl.7z",
+            "hash": "4911e1e5cc0cb51e9d78395d95be1b5cf900e7d413d0870907310e8e0d14c18b"
         },
         "32bit": {
-            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.7_240305_x86_01.exe#/dl.7z",
-            "hash": "89f0046c71938262261b2f976eee6246d91af58e66316f287e6aa75559bed9d6"
+            "url": "https://dldir1.qq.com/qqfile/qq/QQNT/Windows/QQ_9.9.15_240902_x86_01.exe#/dl.7z",
+            "hash": "757312daf31d98f4eaf95537af9bce030684cd8617f6f573ca1510bf37fdb070"
         }
     },
     "extract_dir": "Files",
@@ -21,8 +21,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://im.qq.com/pcqq",
-        "regex": "QQNT\\\\u002FWindows\\\\u002FQQ_([\\d\\.]+)_([\\d]+)_x86_01\\.exe",
+        "script": [
+            "$url = 'https://im.qq.com/pcqq/index.shtml'",
+            "$resp = Invoke-WebRequest -Uri $url",
+            "$cont = $resp.Content",
+            "$pattern = 'https://qq-web.cdn-go.cn.*windowsDownloadUrl.js'",
+            "$jsUrl = [regex]::Match($cont, $pattern).Value",
+            "Invoke-WebRequest -Uri $jsUrl"
+        ],
+        "regex": "QQNT/Windows/QQ_([\\d\\.]+)_([\\d]+)_x86_01.exe",
         "replace": "${1}.${2}"
     },
     "autoupdate": {

@@ -1,9 +1,9 @@
 {
     "homepage": "https://www.atlantiswordprocessor.com/en/lite.htm",
     "license": "freeware",
-    "version": "4.3.7.2",
+    "version": "4.4.1.2",
     "url": "https://www.atlantiswordprocessor.com/download/atlantis3en_lite.exe",
-    "hash": "2f2d46f4cd0141eec71cb466b84d0970f8d7854e55ec8deb2369c89698852d4b",
+    "hash": "37d39caea28018866d67a74829c29bdea667d4312ad7e843ed01e8a6afa495ae",
     "bin": "",
     "checkver": "<b>Setup file of Atlantis Word Processor Lite ([\\d.]+)</b>",
     "autoupdate": {

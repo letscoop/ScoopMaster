@@ -1,20 +1,20 @@
 {
     "homepage": "https://slproweb.com/products/Win32OpenSSL.html",
-    "version": "3.0.13",
+    "version": "3.0.15",
     "license": "Apache-2.0",
     "description": "TLS/SSL toolkit (3.0.X LTS Light)",
     "architecture": {
         "64bit": {
-            "url": "https://slproweb.com/download/Win64OpenSSL_Light-3_0_13.exe",
-            "hash": "bf0d493b973ad71db8cd9d357a1b7fd425a0c86331ecc68b145859681bae4ef5"
+            "url": "https://slproweb.com/download/Win64OpenSSL_Light-3_0_15.exe",
+            "hash": "568ddd05351bca992f2598d914e613016d2f910d5cabe5b7d035c865cba3a1cb"
         },
         "32bit": {
-            "url": "https://slproweb.com/download/Win32OpenSSL_Light-3_0_13.exe",
-            "hash": "0dad5d2cceda99a3a3b8deaa947c8b84904f4028d6d1b62c31dfeb555ab2b5fd"
+            "url": "https://slproweb.com/download/Win32OpenSSL_Light-3_0_15.exe",
+            "hash": "8ec1cad86c78e5474b0ac0c41c2231f0e8ffac21ec35c0d1c209337e6983495f"
         },
         "arm64": {
-            "url": "https://slproweb.com/download/Win64ARMOpenSSL_Light-3_0_13.exe",
-            "hash": "8501416a542b2a438fe3a1572bf155d8b677ef29de1398a10fcb850da6ba8729"
+            "url": "https://slproweb.com/download/Win64ARMOpenSSL_Light-3_0_15.exe",
+            "hash": "1d492ff1471aeee5ec01218140d07023ba19834cad34b5378639b5adab30e356"
         }
     },
     "depends": "innounp",

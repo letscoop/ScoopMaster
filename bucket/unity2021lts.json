@@ -1,5 +1,5 @@
 {
-    "version": "2021.3.36f1",
+    "version": "2021.3.43f1",
     "description": "Unity 3D 2021 (Long Term Support) editor and build tools",
     "homepage": "https://unity3d.com/unity/qa/lts-releases",
     "license": "https://unity.com/legal/terms-of-service",
@@ -7,8 +7,8 @@
         "To register:",
         " PS> unity -quit -batchmode -nographics -serial SE-R-I-A-L -username \"username\" -password \"password\""
     ],
-    "url": "https://download.unity3d.com/download_unity/7a0645017be0/Windows64EditorInstaller/UnitySetup64-2021.3.36f1.exe",
-    "hash": "54aba527ddd9fe0dfb74f4230e1c8db30475d5ebce9367eb77087e1ddd249823",
+    "url": "https://download.unity3d.com/download_unity/6f9470916942/Windows64EditorInstaller/UnitySetup64-2021.3.43f1.exe",
+    "hash": "6ce3e216b95117482a1e85ece8fd4238b6d140be26dda35626f1ad1c80249532",
     "installer": {
         "script": "Start-Process -FilePath \"$dir\\UnitySetup64-${version}.exe\" -ArgumentList \"/S /D=$dir\" -Wait"
     },
@@ -17,11 +17,11 @@
     },
     "bin": "Editor\\Unity.exe",
     "checkver": {
-        "url": "https://unity.com/releases/editor/lts-releases.xml",
-        "regex": "unityhub://2021(.[0-9]+.*?)/(.*)&lt;",
-        "replace": "2021${1}"
+        "url": "https://unity.com/releases/editor/archive",
+        "regex": "unityhub://2021.(\\d+\\.\\d+f\\d+)/([a-f0-9]+)",
+        "replace": "2021.${1}"
     },
     "autoupdate": {
-        "url": "https://download.unity3d.com/download_unity/$match2/Windows64EditorInstaller/UnitySetup64-2021$match1.exe"
+        "url": "https://download.unity3d.com/download_unity/$match2/Windows64EditorInstaller/UnitySetup64-2021.$match1.exe"
     }
 }

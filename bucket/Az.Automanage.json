@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:bed6102d914a6691afc2d65d00cf1d13dabb4a6001b5346249455050cbf591cee159875d3a1b2d2a075e726107cac04f08922bbb0d0175e83e232cd95b86e614",
+    "hash": "sha512:789c28b471759ba9f06f4893f3579202d64047dc5817617b622a0f81180d8ceba91a79a45964df196eb562dfa663ee958df7e9cf88534e61186597d40e7e4971",
     "description": "Microsoft Azure PowerShell: Automanage cmdlets",
     "psmodule": {
         "name": "Az.Automanage"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Automanage/1.0.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Automanage/1.0.2#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "1.0.0"
+    "version": "1.0.2"
 }

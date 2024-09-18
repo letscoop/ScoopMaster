@@ -1,26 +1,26 @@
 {
-    "version": "0.0.12",
+    "version": "0.0.14",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Windows_i386.zip",
+            "url": "https://github.com/zacowan/totle/releases/download/v0.0.14/totle_Windows_i386.zip",
             "bin": [
                 "totle.exe"
             ],
-            "hash": "73f5d282beeae340a58f1bfbd2b588821d039faca7abbcdf841e72a68c7dba8e"
+            "hash": "9dee50db3b66c9e59b23a7967b6653e219bd76a545b55e9092109718f03e1155"
         },
         "64bit": {
-            "url": "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Windows_x86_64.zip",
+            "url": "https://github.com/zacowan/totle/releases/download/v0.0.14/totle_Windows_x86_64.zip",
             "bin": [
                 "totle.exe"
             ],
-            "hash": "d655cc0e3d44a7190b6185f9e931044fac209d9059b34c53963c4c98af545ac5"
+            "hash": "97d9604d36b00c9219b7f439e50e76f303269845b01ce7ad08afb99c1cfe2b9f"
         },
         "arm64": {
-            "url": "https://github.com/zacowan/totle/releases/download/v0.0.12/totle_Windows_arm64.zip",
+            "url": "https://github.com/zacowan/totle/releases/download/v0.0.14/totle_Windows_arm64.zip",
             "bin": [
                 "totle.exe"
             ],
-            "hash": "d52d3ce509d474af450a65bb8256304baffdf8375adbef396e3eb0a7f9237aa8"
+            "hash": "130ce544b21cfd7afd5e7d229b33aee0e9c11f335fe2bd1bbfb331bb56ba0efc"
         }
     },
     "homepage": "https://github.com/zacowan/totle",

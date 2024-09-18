@@ -1,5 +1,5 @@
 {
-    "version": "0.33.0",
+    "version": "1.0.6",
     "description": "Komga and Kavita metadata fetcher.",
     "homepage": "https://github.com/Snd-R/komf",
     "license": "MIT",
@@ -8,9 +8,16 @@
         "Java17": "java/openjdk17",
         "Komga": "extras/komga"
     },
-    "url": "https://github.com/Snd-R/komf/releases/download/0.33.0/komf-0.33.0.jar#/komf.jar",
-    "hash": "040bd276f54ccfdb4ce87bb9ddbc03fc7f79cd93f92c4e3c38fa0f80e1124c2c",
-    "bin": "komf.jar",
+    "url": "https://github.com/Snd-R/komf/releases/download/1.0.6/komf-1.0.6.jar#/komf.jar",
+    "hash": "a668bafd6d3baeac2ff3f376acbaba25c8502f6560a9350d308e6e8562947cd3",
+    "bin": [
+        [
+            "komf.jar",
+            "komf",
+            "--config-dir=\"$dir\\config\""
+        ]
+    ],
+    "persist": "config",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Snd-R/komf/releases/download/$version/komf-$version.jar#/komf.jar"

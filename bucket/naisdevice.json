@@ -1,9 +1,9 @@
 {
-  "version": "2024-03-14-093738",
+  "version": "2024-08-13-155610",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/nais/device/releases/download/2024-03-14-093738/naisdevice.exe",
-      "hash": "099e88d1e2179954f8c2eff4681ec96695bc772498849e0d095ac79a63b35d57",
+      "url": "https://github.com/nais/device/releases/download/2024-08-13-155610/naisdevice.exe",
+      "hash": "56360853d1f485d232a0480957df0d449ce94bac4d64ae1680fe1411f0dbc86b",
       "installer": {
         "script": [
           "Write-Output \"Executing installer at $dir\\$fname\"",
@@ -26,5 +26,5 @@
   "homepage": "https://github.com/nais/device",
   "checkver": "github",
   "license": "MIT",
-  "description": "naisdevice is a application suite that enables NAV developers to connect to internal resources in a secure and friendly manner."
+  "description": "naisdevice is a application suite that enables NAV developers to connect to internal resources in a secure and friendly manner"
 }

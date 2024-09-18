@@ -1,5 +1,5 @@
 {
-    "version": "6.24",
+    "version": "7.01",
     "description": "Powerful archive manager - Japanese version",
     "homepage": "https://rarlab.com/",
     "license": {
@@ -9,12 +9,12 @@
     "notes": "Set up context menu within settings window.",
     "architecture": {
         "64bit": {
-            "url": "https://www.rarlab.com/rar/winrar-x64-624jp.exe#/dl.7z",
-            "hash": "948b2aced8dcf664c6a321c0908408b5e3e0ebbef87eb84c69cc4bfd6186058d"
+            "url": "https://www.rarlab.com/rar/winrar-x64-701jp.exe#/dl.7z",
+            "hash": "448b443ae6dfdf35ff85630f00986c1ab27ca64caad404420f963037d13aafe2"
         },
         "32bit": {
-            "url": "https://www.rarlab.com/rar/winrar-x32-624jp.exe#/dl.7z",
-            "hash": "43345d46ab63d1f16134e65e1192d8cfb17eaeaffa1a233b145e79d7ca7f36b5"
+            "url": "https://www.rarlab.com/rar/winrar-x32-701jp.exe#/dl.7z",
+            "hash": "f980dfd664af5960e9d3eee3a83e2ff99d98095a659030a1e2e129aa90cfc1dc"
         }
     },
     "pre_install": [

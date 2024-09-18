@@ -1,26 +1,18 @@
 {
-    "version": "2.5.10",
+    "version": "2.5.19",
     "description": "All-in-one collaboration platform for API documentation, API debugging, API Mock and API test automation.",
     "homepage": "https://apifox.com",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.apifox.cn/download/2.5.10/Apifox-2.5.10.exe#/dl.7z",
-            "hash": "sha512:056b170942dc9cb06ce81567e210c28b13b8b3db2eb55e2221d7f305828f278c360002e4ffd51a6393ea33a43dfbd533a9ea014454d8f1385e51cd126f2fc630",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
-            ]
-        },
-        "32bit": {
-            "url": "https://cdn.apifox.cn/download/2.5.10/Apifox-windows-x86-2.5.10.exe#/dl.7z",
-            "hash": "sha512:1c2d6170871ec6c505d6fc2d7941eaa1f0bac95ba0fb85bcbf4999afc75b458b1c3284d80c7422f9fa9990ced8a2645e61c5ade132680bca2507ab9ef0234acc",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
-            ]
+            "url": "https://cdn.apifox.cn/download/2.5.19/Apifox-2.5.19.exe#/dl.7z",
+            "hash": "sha512:c23e687b53551c63fdf0bb328b62fa0ec6f3fd195207ea74dacdda075cec9277deeb861f533851da5b6aaae2939c4d3ce2963e060101a7a9715ead21f901339c"
         }
     },
+    "pre_install": [
+        "Get-Item \"$dir\\`$PLUGINSDIR\\app*.7z\" | Expand-7zipArchive -DestinationPath \"$dir\"",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
+    ],
     "shortcuts": [
         [
             "Apifox.exe",
@@ -29,23 +21,20 @@
         ]
     ],
     "persist": "UserData",
+    "pre_uninstall": [
+        "Stop-Process -Name 'ApifoxAppAgent' -ErrorAction SilentlyContinue",
+        "Wait-Process -Name 'ApifoxAppAgent' -ErrorAction SilentlyContinue -Timeout 30"
+    ],
     "checkver": {
-        "url": "https://cdn.apifox.cn/download/latest.yml",
-        "regex": "version: ([\\d.]+)"
+        "url": "https://apifox.com/help/app/changelog",
+        "regex": ">([\\d.]+)<"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://cdn.apifox.cn/download/$version/Apifox-$version.exe#/dl.7z",
                 "hash": {
-                    "url": "https://cdn.apifox.cn/download/latest.yml",
-                    "regex": "sha512: $base64"
-                }
-            },
-            "32bit": {
-                "url": "https://cdn.apifox.cn/download/$version/Apifox-windows-x86-$version.exe#/dl.7z",
-                "hash": {
-                    "url": "https://cdn.apifox.cn/download/x32/latest.yml",
+                    "url": "$baseurl/latest.yml",
                     "regex": "sha512: $base64"
                 }
             }

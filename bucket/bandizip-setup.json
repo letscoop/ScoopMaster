@@ -1,5 +1,5 @@
 {
-    "version": "7.32",
+    "version": "7.36",
     "description": "Yet another typical ZIP archiver",
     "homepage": "http://www.bandisoft.com/bandizip/",
     "license": {
@@ -9,12 +9,12 @@
     "architecture": {
         "64bit": {
             "url": "https://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-X64.EXE",
-            "hash": "7dd2cb9472b291866239fdd49bca9ea66ef437caf68bc2f49c18370f6981d5ba",
+            "hash": "bd4e722bf8f4389bab67198ff66c26175c54e77e0be1034b17457fad7de8f2ac",
             "pre_install": "Rename-Item \"$dir\\Bandizip.x64.exe\" 'Bandizip.exe'"
         },
         "32bit": {
             "url": "https://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE",
-            "hash": "bdc291a02f43f7d402adfb0bb81a5826ded47e24e310a6e7ab8def3573273de1",
+            "hash": "1bfce0d1a01b011645e226091a19fd3c34b0a9c444ffce687b4eb8a23777aa7a",
             "pre_install": "Rename-Item \"$dir\\Bandizip.x86.exe\" 'Bandizip.exe'"
         }
     },

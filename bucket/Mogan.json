@@ -1,10 +1,10 @@
 {
-    "version": "1.2.5.1",
+    "version": "1.2.9",
     "description": "Mogan (based on GNU TeXmacs): Let us enjoy exploring science and technology!",
     "homepage": "https://mogan.app",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/XmacsLabs/mogan/releases/download/v1.2.5.1/MoganResearch-v1.2.5.1-64bit-installer.zip",
-    "hash": "f05ef94ac913e7c11a5a3cefa604b5d56c7608b2613b6a7967d64d57a82cf476",
+    "url": "https://github.com/XmacsLabs/mogan/releases/download/v1.2.9/MoganResearch-v1.2.9-64bit-portable.zip",
+    "hash": "16ce3e3ea3dd7f17c3a9c621d0ff40b281240d81b1f88a1026159d52bc54622d",
     "bin": "bin\\MoganResearch.exe",
     "shortcuts": [
         [
@@ -34,7 +34,7 @@
         "github": "https://github.com/XmacsLabs/mogan"
     },
     "autoupdate": {
-        "url": "https://github.com/XmacsLabs/mogan/releases/download/v$version/MoganResearch-v$version-64bit-installer.zip",
+        "url": "https://github.com/XmacsLabs/mogan/releases/download/v$version/MoganResearch-v$version-64bit-portable.zip",
         "hash": {
             "url": "https://mogan.app/guide/Install.html"
         }

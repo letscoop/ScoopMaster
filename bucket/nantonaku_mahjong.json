@@ -1,10 +1,10 @@
 {
-    "version": "0.58",
+    "version": "0.73",
     "description": "Mahjong game.",
     "homepage": "https://tagumahi.fanbox.cc/",
-    "url": "https://ftp.vector.co.jp/76/70/3371/n_ma058.zip",
-    "hash": "ead09d8e4805ddf3322d705c3ac93753c2ce09b0a46d328d00e9481fb1a4713c",
-    "extract_dir": "n_ma058",
+    "url": "https://ftp.vector.co.jp/77/17/3371/n_ma073.zip",
+    "hash": "sha512:f2e28610be7cc206106cbdcff97d9106ec2db859add1067f35d5ef73ac3cbae930f9eb08efa97f0c59edb60f037e84ffa9975ee76a4920a1c80affbe33e995b2",
+    "extract_dir": "n_ma073",
     "shortcuts": [
         [
             "なんとなく麻雀.exe",

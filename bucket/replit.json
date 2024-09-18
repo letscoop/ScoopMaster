@@ -1,10 +1,10 @@
 {
-    "version": "1.0.8",
+    "version": "1.0.12",
     "description": "Replit Desktop App",
     "homepage": "https://replit.com",
     "architecture": {
         "64bit": {
-            "hash": "4627d22599800620c48d6c73bd02f4d3d2cea22e081c4a8d97c02aeece72bbb9",
+            "hash": "57db641f0a8ad5276b90659831db21bc46a052f86b11ba07d90f2480785763e4",
             "url": "https://desktop.replit.com/download/win32?update=true"
         }
     },

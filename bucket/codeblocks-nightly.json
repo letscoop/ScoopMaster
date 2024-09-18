@@ -1,46 +1,21 @@
 {
-    "version": "20231229",
-    "description": "Free open-source C/C++/Fortran IDE (standalone nightly version)",
-    "homepage": "http://www.codeblocks.org",
-    "license": "GPL-3.0-only",
-    "notes": [
-        "This is the standalone version of the Code::Blocks IDE (does not include any compilers/debuggers).",
-        "You might want to use, e.g., compilers/debuggers provided by MSYS2 distribution platform (www.msys2.org)."
-    ],
+    "home": "http://www.codeblocks.org",
+    "version": "13538",
     "architecture": {
         "64bit": {
             "url": [
-                "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/2023/CB_20231229_rev13421_win64.7z",
-                "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/Mingw64dlls13.1.0.7z",
-                "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/wxmsw32u_gcc_cb_wx324_2D_gcc1310-mingw64.7z"
+                "http://sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/2024/CB_20240730_rev13538_win64.7z",
+                "https://sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/Prerequisites/wxmsw32u_gcc_cb_wx325_2D_gcc1410-mingw64.7z",
+                "http://sourceforge.net/projects/codeblocks/files/Binaries/Nightlies/Prerequisites/Mingw64dlls14.1.0.7z"
             ],
             "hash": [
-                "sha1:e5a8bbe8a94348dc7ae55f413f29625c5e9e9493",
-                "sha1:d95bf29b43e5d6d05075144fd6296237395afa14",
-                "sha1:d031cf0ae3fe49bb06c652ce8a57ff8a9494ea14"
+                "cf840fa384d209424effe5ae195ae0f56c317ea78c71f5449f1b601d2e55c73e",
+                "7d586dfa9faf2cc8dcb7d9b2c888bcb25eb448f0b829b4669757f6d2dc72e004",
+                "fc86d61321ff27d9ee5351e2ffecfcb3ecb81c87e2f550b4760a106395098a95"
             ]
         }
     },
-    "bin": "codeblocks.exe",
     "shortcuts": [
-        [
-            "codeblocks.exe",
-            "CodeBlocks"
-        ]
-    ],
-    "checkver": {
-        "sourceforge": "codeblocks",
-        "regex": "Nightlies/(?<Year>\\d{4})/CB_(?<version>\\d{8})_rev(?<Revision>\\d+)_win64.7z"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": [
-                    "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/$matchYear/CB_$version_rev$matchRevision_win64.7z",
-                    "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/Mingw64dlls13.1.0.7z",
-                    "https://downloads.sourceforge.net/project/codeblocks/Binaries/Nightlies/Prerequisites/wxmsw32u_gcc_cb_wx324_2D_gcc1310-mingw64.7z"
-                ]
-            }
-        }
-    }
+        ["codeblocks.exe", "CodeBlocks Nightly"]
+    ]
 }

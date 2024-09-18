@@ -1,6 +1,6 @@
 {
    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "1.7.00.6058",
+   "version": "1.7.00.24670",
    "description": "Proprietary business communication platform developed by Microsoft",
    "homepage": "https://teams.com/",
    "license": {
@@ -13,16 +13,16 @@
    ],
    "architecture": {
       "32bit": {
-         "url": "https://statics.teams.cdn.office.net/production-windows/1.7.00.6058/Teams_windows.exe#/dl.exe",
-         "hash": "9b13835964605235f03a7062044ab3a70c85b241c2cf5b79dbc1262ea2d19551"
+         "url": "https://statics.teams.cdn.office.net/production-windows/1.7.00.24670/Teams_windows.exe#/dl.exe",
+         "hash": "e644d37045a86ea1a155d0ffc2e0afe8aa98e7614ffeb2c0382fbdaeaebae076"
       },
       "64bit": {
-         "url": "https://statics.teams.cdn.office.net/production-windows-x64/1.7.00.6058/Teams_windows_x64.exe#/dl.exe",
-         "hash": "ecbf7ad51ada1590bc96df398a46fbb76a10869104e78be1a6b33225fc747156"
+         "url": "https://statics.teams.cdn.office.net/production-windows-x64/1.7.00.24670/Teams_windows_x64.exe#/dl.exe",
+         "hash": "da4f56b153369f68d059c1be1419b62162145091eb254c779fabf7c182407938"
       },
       "arm64": {
-         "url": "https://statics.teams.cdn.office.net/production-windows-arm64/1.7.00.6058/Teams_windows_arm64.exe#/dl.exe",
-         "hash": "380fb5cddda8c86e85d1c9cb912a4f0764227109fc20aeba20bc86c292d8e8e2"
+         "url": "https://statics.teams.cdn.office.net/production-windows-arm64/1.7.00.24670/Teams_windows_arm64.exe#/dl.exe",
+         "hash": "28cf1c86ffe6d4ad6f2a311c65682fde69cf93a6fad28cf4a71d4fa50c71e4f5"
       }
    },
    "installer": {
@@ -37,7 +37,7 @@
          "   $registryPath = $registryPath.Replace('HKCU', 'HKLM')",
          "}",
          "@(",
-         "   \"New-Item -Path '$registryPath' > `$null 2>&1\"",
+         "   \"New-Item -Path '$registryPath' -ErrorAction Continue > `$null 2>&1\"",
          "   \"New-ItemProperty -Force -Path '$registryPath' -Name 'Microsoft Teams (work or school)' -PropertyType String -Value '$exepath' > `$null\"",
          ") | Set-Content -Path \"$dir\\add-startup.ps1\"",
          "@(",

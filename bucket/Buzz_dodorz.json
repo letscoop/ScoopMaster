@@ -1,16 +1,10 @@
 {
-    "homepage": "https://github.com/chidiwilliams/buzz",
+    "homepage": "https://chidiwilliams.github.io/buzz",
     "description": "Transcribes and translates audio offline on your personal computer.",
     "license": "MIT",
-    "version": "0.8.4",
-    "url": "https://github.com/chidiwilliams/buzz/releases/download/v0.8.4/Buzz-0.8.4-windows.exe",
-    "hash": "28ebe6d11a4183e4954697fce64de9099370d089c5bb49fe893814fc6df21ed6",
-    "installer": {
-        "script": [
-            "$exefile = (Get-ChildItem \"$dir\" 'Buzz-*-windows.exe' | Select-Object -First 1).FullName",
-            "Rename-Item \"$exefile\" \"$dir\\Buzz.exe\""
-        ]
-    },
+    "version": "1.0.1",
+    "url": "https://github.com/chidiwilliams/buzz/releases/download/v1.0.1/Buzz-1.0.1-windows.exe",
+    "hash": "9103ff776bd31797f7d9de481786c51e837ccd9af08f267ea0af2786ded330a4",
     "bin": "Buzz.exe",
     "shortcuts": [
         [
@@ -18,7 +12,9 @@
             "Buzz"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/chidiwilliams/buzz"
+    },
     "autoupdate": {
         "url": "https://github.com/chidiwilliams/buzz/releases/download/v$version/Buzz-$version-windows.exe"
     }

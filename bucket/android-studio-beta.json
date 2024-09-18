@@ -1,29 +1,6 @@
 {
-    "architecture": {
-        "64bit": {
-            "hash": "9ee22b3da4dcf9b2c9fbf7db852910e90381d1564de029b7a019b1172734c436",
-            "shortcuts": [
-                [
-                    "bin\\studio64.exe",
-                    "Android Studio Beta"
-                ]
-            ],
-            "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2023.2.1.2/android-studio-2023.2.1.2-windows.zip"
-        }
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/$version/android-studio-$version-windows.zip"
-            }
-        }
-    },
-    "checkver": {
-        "regex": "Android Studio \\w+ \\| ([\\d.]+) (?:Beta|RC) (\\d+)",
-        "replace": "${1}.${2}"
-    },
-    "description": "The official IDE for Android development, which includes everything you need to build Android apps. (Beta version)",
-    "extract_dir": "android-studio",
+    "version": "2024.2.1.7",
+    "description": "The official IDE for Android development, which includes everything you need to build Android apps.",
     "homepage": "https://developer.android.com/studio/preview",
     "license": {
         "identifier": "Freeware",
@@ -32,5 +9,28 @@
     "suggest": {
         "Android SDK": "android-clt"
     },
-    "version": "2023.2.1.2"
+    "architecture": {
+        "64bit": {
+            "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.2.1.7/android-studio-2024.2.1.7-windows.zip",
+            "hash": "546953f2f76e04a8e418fac4eacf12b48f377b3b784e1aeb4ad41dc7b4161bb7",
+            "shortcuts": [
+                [
+                    "bin\\studio64.exe",
+                    "Android Studio Beta"
+                ]
+            ]
+        }
+    },
+    "pre_install": "'uninstall.exe' | ForEach-Object { Remove-Item \"$dir/$_\" -Recurse }",
+    "extract_dir": "android-studio",
+    "checkver": {
+        "regex": "agree_beta_win_bundle_download[\\s\\S]+?android-studio-([\\d.]+)-windows\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://redirector.gvt1.com/edgedl/android/studio/ide-zips/$version/android-studio-$version-windows.zip"
+            }
+        }
+    }
 }

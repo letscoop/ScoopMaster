@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "version": "0.18.0",
+    "version": "0.22.1",
     "description": "Cross platform shell management.",
     "homepage": "https://aliae.dev/",
     "license": {
@@ -13,24 +13,22 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v0.18.0/aliae-windows-amd64.exe",
-            "hash": "1b7941dd7548ab31576bee6f8d4faf7fe90412dcc0842f35d9db2b42fb3eb794"
+            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v0.22.1/aliae-windows-amd64.exe",
+            "hash": "84dabf7af376a20d68b494e18f194c96730329343ed1a01504f1d22ea504dca7"
         },
         "32bit": {
-            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v0.18.0/aliae-windows-386.exe",
-            "hash": "78ce094d7eeb96bee79917ece6fc71b4c8196e9dde55c03e07eeeb0c1802d0d9"
+            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v0.22.1/aliae-windows-386.exe",
+            "hash": "ed45d8e537de47cfcb0f3134f6a9e090b3923faa00709e247621f874b108e01c"
         },
         "arm64": {
-            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v0.18.0/aliae-windows-arm64.exe",
-            "hash": "7ab2fbfcebd4d2c2d4ad9457502e26393d4327c65aad4d89cea80331ddfe1193"
+            "url": "https://github.com/JanDeDobbeleer/aliae/releases/download/v0.22.1/aliae-windows-arm64.exe",
+            "hash": "62532f208b61dc05c6dda877273af6de40e03035e5320f5039de5bc307ac108a"
         }
     },
-    "installer": {
-        "script": [
-            "New-Item -ItemType Directory -Path \"$dir\\bin\" -Force | Out-Null",
-            "Move-Item -Path \"$dir\\aliae-windows-*.exe\" -Destination \"$dir\\bin\\aliae.exe\" -Force"
-        ]
-    },
+    "pre_install": [
+        "New-Item -ItemType Directory -Path \"$dir\\bin\" -Force | Out-Null",
+        "Move-Item \"$dir\\aliae-windows-*.exe\" \"$dir\\bin\\aliae.exe\""
+    ],
     "env_add_path": "bin",
     "checkver": {
         "github": "https://github.com/JanDeDobbeleer/aliae"

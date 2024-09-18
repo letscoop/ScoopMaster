@@ -1,29 +1,34 @@
 {
-    "version": "23.08.4-1002",
+    "version": "24.02-511",
     "description": "KTrip helps you navigate in public transport. It allows you to find journeys between specified locations, departures for a specific station and shows real-time delay and disruption information.",
     "homepage": "https://apps.kde.org/ktrip/",
     "license": "LGPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://binary-factory.kde.org/job/KTrip_Release_win64/lastSuccessfulBuild/artifact/ktrip-23.08.4-1002-windows-cl-msvc2019-x86_64.7z",
-            "hash": "ab052f043c3898f8b01847dbceff8c4a5f5d5a9251daded0c92a7d2e6eebfa05"
+            "url": "https://cdn.kde.org/ci-builds/utilities/ktrip/release-24.02/windows/ktrip-release_24.02-511-windows-cl-msvc2022-x86_64.7z",
+            "hash": "345cf485fdcc79f4f4092a6f6d358d18e9720f45cc9ba7d01efcecb4aabb02f0"
         }
     },
-    "bin": "bin\\ktrip.exe",
+    "bin": [
+        [
+            "bin\\ktrip.exe",
+            "ktrip"
+        ]
+    ],
     "shortcuts": [
         [
             "bin\\ktrip.exe",
-            "KTrip"
+            "Konsole"
         ]
     ],
     "checkver": {
-        "url": "https://binary-factory.kde.org/job/KTrip_Release_win64/",
-        "regex": "ktrip-([\\d.-]+)-windows-cl-msvc2019-x86_64\\.7z"
+        "url": "https://cdn.kde.org/ci-builds/utilities/ktrip/release-24.02/windows/",
+        "regex": "ktrip-release_([\\d.-]+)-windows-cl-msvc2022-x86_64.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://binary-factory.kde.org/job/KTrip_Release_win64/lastSuccessfulBuild/artifact/ktrip-$version-windows-cl-msvc2019-x86_64.7z",
+                "url": "https://cdn.kde.org/ci-builds/utilities/ktrip/release-$matchHead/windows/ktrip-release_$version-windows-cl-msvc2022-x86_64.7z",
                 "hash": {
                     "url": "$url.sha256"
                 }

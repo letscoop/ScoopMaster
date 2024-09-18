@@ -1,19 +1,19 @@
 {
-    "version": "1.2.2",
+    "version": "1.6.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/charmbracelet/mods/releases/download/v1.2.2/mods_1.2.2_Windows_x86_64.zip",
+            "url": "https://github.com/charmbracelet/mods/releases/download/v1.6.0/mods_1.6.0_Windows_x86_64.zip",
             "bin": [
-                "mods_1.2.2_Windows_x86_64/mods.exe"
+                "mods_1.6.0_Windows_x86_64/mods.exe"
             ],
-            "hash": "a542c0ddb0d30f3a04fff3a0b2ab43135d795089790e20c5cfbe1eba033e2089"
+            "hash": "5abceabd2460e7d3d94359c80a6a4f645a9c9e211365e33ddb2843754bd76f8a"
         },
         "arm64": {
-            "url": "https://github.com/charmbracelet/mods/releases/download/v1.2.2/mods_1.2.2_Windows_arm64.zip",
+            "url": "https://github.com/charmbracelet/mods/releases/download/v1.6.0/mods_1.6.0_Windows_arm64.zip",
             "bin": [
-                "mods_1.2.2_Windows_arm64/mods.exe"
+                "mods_1.6.0_Windows_arm64/mods.exe"
             ],
-            "hash": "c82d186523dcb8e1e37e9fe0413afa8d98b0d11efd425d9a6fb0e9b289fa7954"
+            "hash": "b32adc546ba93963a98e103ed37efd7d2667b3243acd85e9f45660945b191815"
         }
     },
     "homepage": "https://charm.sh/",

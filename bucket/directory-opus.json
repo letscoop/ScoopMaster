@@ -1,27 +1,16 @@
 {
-  "version": "12.32",
-  "description": "The file manager for Windows.",
-  "homepage": "https://www.gpsoft.com.au/",
-  "license": "Proprietary",
-  "url": "https://cdn.gpsoft.com.au/Opus12/DOpusInstall.exe",
-  "hash": "5b669ad072cc903aa257b9802aa38dcbf98a9ed0bfca64897c767c1a9221be3d",
-  "innosetup": true,
-  "installer": {
-    "script": "Get-ChildItem -Recurse \"$dir\" -Filter \"*,*\" | Foreach-Object { Move-Item $_.FullName $_.FullName.Replace(\",1\", \"\") }"
-  },
-  "bin": "dopus.exe",
-  "shortcuts": [
-    [
-      "dopus.exe",
-      "Directory Opus"
-    ]
-  ],
-  "checkver": {
-    "url": "https://www.gpsoft.com.au/DScripts/download.asp",
-    "regex": "Download Directory Opus ([\\d.]+)"
-  },
-  "autoupdate": {
-    "url": "https://cdn.gpsoft.com.au/Opus12/DOpusInstall.exe",
-    "hash": "$url.sha256"
-  }
+    "##": "This file is a template. Fill the blanks and add or remove fields as necessary.",
+    "version": "13.5",
+    "description": "irectory Opus is a complete replacement for Explorer, with far more functionality than any other file manager available today.",
+    "homepage": "https://www.gpsoft.com.au/",
+    "license": "",
+    "notes": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.gpsoft.com.au/files/Opus13/DOpusInstall-13.5.exe#/dl.7z",
+            "hash": "sha256:cd583dd102b93e2bcabf01e0b37eab7f9d024cf7eee0f963bdae05a59e84db3f"
+        }
+    },
+    "innosetup": true,
+    "bin": "dopus.exe"
 }

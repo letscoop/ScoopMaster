@@ -1,5 +1,5 @@
 {
-    "version": "3.4.2",
+    "version": "3.6.3",
     "description": "An easy-to-use, multi-track audio editor and recorder",
     "homepage": "https://www.audacityteam.org",
     "license": {
@@ -8,14 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-64bit.zip",
-            "hash": "0df85eda8b79ebcceca673a7f7dec32c4fcb4625342b91995217f3124b57f7d4",
-            "extract_dir": "audacity-win-3.4.2-64bit"
+            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.6.3/audacity-win-3.6.3-64bit.zip",
+            "hash": "f965c74333cfb93ec3d05569c23b0e2ee300b6aa93a04c5109dcf05ccd6b8fb1",
+            "extract_dir": "audacity-win-3.6.3-64bit"
         },
         "32bit": {
-            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.4.2/audacity-win-3.4.2-32bit.zip",
-            "hash": "9b9fceae802e76f5c91b42074331094c1fb90b9f519bee196f40aeb1ee863ce5",
-            "extract_dir": "audacity-win-3.4.2-32bit"
+            "url": "https://github.com/audacity/audacity/releases/download/Audacity-3.6.3/audacity-win-3.6.3-32bit.zip",
+            "hash": "5cf5dc993565b5ff850dea29ea82b17f2a0c22bd1d2f28771596ce67f8753580",
+            "extract_dir": "audacity-win-3.6.3-32bit"
         }
     },
     "pre_install": [

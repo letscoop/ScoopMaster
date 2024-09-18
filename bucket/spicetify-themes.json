@@ -1,5 +1,5 @@
 {
-    "version": "2024-03-07T23.48.42",
+    "version": "2024-09-10T02.47.26",
     "description": "Community-created themes for Spicetify.",
     "homepage": "https://github.com/spicetify/spicetify-themes",
     "license": "MIT",
@@ -8,7 +8,7 @@
         "spotify": "extras/spotify"
     },
     "url": "https://github.com/spicetify/spicetify-themes/archive/master.zip",
-    "hash": "1c0e5815c57cd345031da967ae1007231f128b8c090d20335919ed72234693ca",
+    "hash": "4cf06ecf6412cff359c250e8c969454482f878b3ee848b1ad2635ef22da5c576",
     "extract_dir": "spicetify-themes-master",
     "installer": {
         "script": [

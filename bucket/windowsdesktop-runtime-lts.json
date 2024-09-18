@@ -1,21 +1,21 @@
 {
-    "version": "8.0.3",
+    "version": "8.0.8",
     "description": "Microsoft .NET Desktop Runtime LTS (Long-term support)",
     "homepage": "https://dotnet.microsoft.com/download/dotnet",
     "license": "MIT",
     "notes": "You can now remove this installer with 'scoop uninstall windowsdesktop-runtime-lts'",
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.3/windowsdesktop-runtime-8.0.3-win-x64.exe",
-            "hash": "sha512:f4cf0300eb4e1750b75a9d973db2d100cd8fb244ef0c7bc5ab448dcc72091055c516d7fe6ea41215bdccec13fc08c5b3c444400c74b214af7f996e5780275f08"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.8/windowsdesktop-runtime-8.0.8-win-x64.exe",
+            "hash": "sha512:27484ffb1e9ce5e6290cda8f5f49563cf4a9e2692aa57429fcd0d3de4f30fc2fce204b1b120349ed50712e95d3fa51037ebaf9b7fd60c41856857b1372e0eac7"
         },
         "32bit": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.3/windowsdesktop-runtime-8.0.3-win-x86.exe",
-            "hash": "sha512:b9b14552661f35b173c1539ffb422f31b13926dcd0d7aeba5283a467288f4db288f6afeede2fe3e57ed7d3ef3847dba7bd2725b8791396a0633dd14d957b1d34"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.8/windowsdesktop-runtime-8.0.8-win-x86.exe",
+            "hash": "sha512:3101e64ab772cef8081ca5f441f599d1906c9a3869e7ff20ee1725e121a54dd0569e55dfd842e748a0dd6bff902562834922681c9bb43ede6760aed1206c7966"
         },
         "arm64": {
-            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.3/windowsdesktop-runtime-8.0.3-win-arm64.exe",
-            "hash": "sha512:97e5ad8ae1e6418476a8f972f5c1365aeda826e2cf883ee145a5c3a9090a747e6e53a1388d1962aeafbe35f779b3e970b1be02e625b4445d1b41af4b4400cc62"
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/8.0.8/windowsdesktop-runtime-8.0.8-win-arm64.exe",
+            "hash": "sha512:6c8d48681b18c403e1daf1eff2d141d98a2c538d26f49dde6dc02701c0300bfc5e101dfd47e9eb54f2d9328e5eeebb44366a08d99c48efa3eb1c6f71c98b78c2"
         }
     },
     "pre_install": "if (!(is_admin)) { error 'Admin privileges are required.'; break }",

@@ -1,21 +1,34 @@
 {
-    "version": "0.25.0",
-    "description": "BetterGI · 更好的原神 - 自动拾取 | 自动剧情 | 全自动钓鱼(AI) | 全自动七圣召唤 | 自动伐木 | 快速传送 | 自动秘境",
-    "homepage": "https://bgi.huiyadan.com/",
+    "version": "0.34.1",
+    "description": "BetterGI · 更好的原神 - UI Automation Testing Tools For Genshin Impact",
+    "homepage": "https://bgi.huiyadan.com",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/babalae/better-genshin-impact/releases/download/0.25.0/BetterGI_v0.25.0.7z",
-    "hash": "87ef06985a32ac09338454b811ebd24431e480a3767e623429df5222eaf46d5b",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/babalae/better-genshin-impact/releases/download/0.34/BetterGI_v0.34.1.7z",
+            "hash": "b97a3065ef00ac1aa6ed87009839ba096b55e831333ec25dcc10e04bc50d9e64"
+        }
+    },
     "extract_dir": "BetterGI",
     "shortcuts": [
         [
             "BetterGI.exe",
-            "更好的原神"
+            "BetterGI"
         ]
     ],
-   "checkver": {
-        "github": "https://github.com/babalae/better-genshin-impact"
+    "persist": [
+        "User",
+        "log"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/babalae/better-genshin-impact/releases/latest",
+        "regex": "/releases/download/(?<tag>[^/]+)/BetterGI_v([\\d.]+).7z"
     },
     "autoupdate": {
-        "url": "https://github.com/babalae/better-genshin-impact/releases/download/$matchVersion/BetterGI_v$matchVersion.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/babalae/better-genshin-impact/releases/download/$matchTag/BetterGI_v$version.7z"
+            }
+        }
     }
 }

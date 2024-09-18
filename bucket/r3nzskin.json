@@ -1,5 +1,5 @@
 {
-    "version": "3.2.6",
+    "version": "3.3.0",
     "description": "Skin changer for League of Legends (LOL)",
     "homepage": "https://github.com/R3nzTheCodeGOD/R3nzSkin",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/R3nzTheCodeGOD/R3nzSkin/releases/download/v3.2.6/R3nzSkin.zip",
-            "hash": "2f227995eeda1f67a87295c6eecf4bc5bb135a68f99ddebaa07384c4de0308df"
+            "url": "https://github.com/R3nzTheCodeGOD/R3nzSkin/releases/download/v3.3.0/R3nzSkin.zip",
+            "hash": "ba7ec562a7d6b72e2e2e5c48c65a6665fade6bdbdbe73cb0010c33af7bed65cc"
         }
     },
     "installer": {

@@ -1,15 +1,15 @@
 {
-    "homepage": "https://github.com/PowerShell/PowerShell",
-    "license": "MIT",
-    "version": "7.4.1",
+    "homepage": "https://github.com/PowerShell/PowerShell/",
+    "description": "PowerShell Core",
+    "version": "6.2.4",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/PowerShell-7.4.1-win-x64.zip",
-            "hash": "32dfa0d6b59538e28631549f04d3f74f3d3a24bc6eaf3aa7ab0b74f94ecc026e"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v6.2.4/PowerShell-6.2.4-win-x64.zip",
+            "hash": ""
         },
         "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/PowerShell-7.4.1-win-x86.zip",
-            "hash": "55f6ca98c8bedc1436e0b16a6a5522caf68f2d7b27312b640dee071e3596e3af"
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v6.2.4/PowerShell-6.2.4-win-x86.zip",
+            "hash": ""
         }
     },
     "bin": "pwsh.exe",
@@ -19,18 +19,13 @@
             "PowerShell Core"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/PowerShell/PowerShell/releases/latest",
-        "regex": "/releases/tag/v([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
-            }
+        "64bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.zip"
+        },
+        "32bit": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
         }
     }
 }

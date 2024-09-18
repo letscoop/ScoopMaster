@@ -1,16 +1,16 @@
 {
-    "version": "1.6.2",
+    "version": "1.8.2",
     "description": "An OSS tool for building, changing, and versioning infrastructure safely and efficiently. OpenTofu can manage existing and popular service providers as well as custom in-house solutions.",
     "homepage": "https://opentofu.org/",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/opentofu/opentofu/releases/download/v1.6.2/tofu_1.6.2_windows_amd64.zip",
-            "hash": "c5150e390374838f236df5a694ed319664c641335fc8a7b908b2be2feadae40c"
+            "url": "https://github.com/opentofu/opentofu/releases/download/v1.8.2/tofu_1.8.2_windows_amd64.zip",
+            "hash": "50af268bfdc9df41e895b8820f98ad5fe3f34a44ded1653fa16109ea67faa55e"
         },
         "32bit": {
-            "url": "https://github.com/opentofu/opentofu/releases/download/v1.6.2/tofu_1.6.2_windows_386.zip",
-            "hash": "06e11baf8ff3aa9a67e3bb7545157ed782273f129b9b0e34d87968bc71bb4948"
+            "url": "https://github.com/opentofu/opentofu/releases/download/v1.8.2/tofu_1.8.2_windows_386.zip",
+            "hash": "4d67a47f37865ea292b7ee88251d463c130bcb75c49ad6a94f46e57cff0a2ed6"
         }
     },
     "bin": "tofu.exe",

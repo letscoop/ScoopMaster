@@ -1,10 +1,10 @@
 {
-    "version": "3.1.1",
+    "version": "3.2.1",
     "description": "Nerd Fonts patched 'Ubuntu' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Ubuntu.tar.xz",
-    "hash": "75e0d25255b2b92cb7975442037fe707194ded123752a24cae092b0d2fc6a076",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Ubuntu.tar.xz",
+    "hash": "6a254d48c837974e7c43fb92124e8e057c1d4b31c9ebe635f5c562233a24f3ad",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

@@ -1,5 +1,5 @@
 {
-    "version": "1.0.3",
+    "version": "1.2.1",
     "description": "Lightweight, simple and open source QQNT plugin loader.",
     "homepage": "https://github.com/LiteLoaderQQNT/LiteLoaderQQNT",
     "license": "MIT",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/1.0.3/LiteLoaderQQNT.zip",
-            "hash": "9386da93bed1b80604d1e811eda6160fe502af02cc35a40cceda50b09f02bc09"
+            "url": "https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/releases/download/1.2.1/LiteLoaderQQNT.zip",
+            "hash": "affbd02573900d4f5743e33386d41b38adaac6ed9a130d57e7c8c75f8dc68838"
         }
     },
     "env_set": {
@@ -38,17 +38,17 @@
         "}"
     ],
     "post_uninstall": [
-            "$envfilePath = \"$(appdir qq-nt $global)\\current\\Files\\resources\\app\\app_launcher\\index.js\"",
-            "if (Test-Path \"$envfilePath\") {",
-            "    $firstLine = Get-Content \"$envfilePath\" -TotalCount 1;",
-            "    if ($firstLine -like '*LiteLoaderQQNT\\current*') {",
-            "        $filecontent = Get-Content \"$envfilePath\";",
-            "        info \"delete $firstLine from $envfilePath\"",
-            "        $filecontent = $filecontent[1..($filecontent.Count - 1)];",
-            "        $filecontent | Set-Content \"$envfilePath\";",
-            "    }",
-            "}"
-        ],
+        "$envfilePath = \"$(appdir qq-nt $global)\\current\\Files\\resources\\app\\app_launcher\\index.js\"",
+        "if (Test-Path \"$envfilePath\") {",
+        "    $firstLine = Get-Content \"$envfilePath\" -TotalCount 1;",
+        "    if ($firstLine -like '*LiteLoaderQQNT\\current*') {",
+        "        $filecontent = Get-Content \"$envfilePath\";",
+        "        info \"delete $firstLine from $envfilePath\"",
+        "        $filecontent = $filecontent[1..($filecontent.Count - 1)];",
+        "        $filecontent | Set-Content \"$envfilePath\";",
+        "    }",
+        "}"
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {

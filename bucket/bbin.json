@@ -1,17 +1,15 @@
 {
-    "version": "0.2.1",
+    "version": "0.2.4",
     "description": "Babashka script or project installer",
     "homepage": "https://github.com/babashka/bbin",
     "license": "MIT",
-    "notes": [
-        "Folder ~\\.local\\bin was added to your PATH environment variable."
-    ],
+    "notes": "Folder ~\\.local\\bin was added to your PATH environment variable.",
     "depends": "scoop-clojure/babashka",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/babashka/bbin/archive/refs/tags/v0.2.1.zip",
-            "hash": "ce9c7e88af0fd098382d38e680835f622f9b7345d9ddbf55bfc92227c352a8cf",
-            "extract_dir": "bbin-0.2.1"
+            "url": "https://github.com/babashka/bbin/archive/refs/tags/v0.2.4.zip",
+            "hash": "f30b8a1ee1dbd3b91720dd6e13cd108f1864583da61bf41583722dcb620cbbed",
+            "extract_dir": "bbin-0.2.4"
         }
     },
     "installer": {

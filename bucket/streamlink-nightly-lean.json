@@ -1,5 +1,5 @@
 {
-    "version": "6.7.0-5-g251fe08",
+    "version": "6.10.0-24-ge847708",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -16,12 +16,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.7.0-5-g251fe08-py312-x86_64.zip.zip",
-            "hash": "58fa7fbc2a81caca9b2ca79c6cf9bc230cb1aab2d257ae85a4ddbd564e250a71"
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.10.0-24-ge847708-py312-x86_64.zip.zip",
+            "hash": "9fb76b11964431398ac2a47074757dec9e1a3b0f60564c417c1cde6631cc2db5"
         },
         "32bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.7.0-5-g251fe08-py312-x86.zip.zip",
-            "hash": "9db93fe603619148f7ff105efe8f513037c08baa1e69f01e836f6974c4ff7e74"
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.10.0-24-ge847708-py312-x86.zip.zip",
+            "hash": "1e95f63af362cc66276b7bfa62229296020d16327caf0963a90ff57f8406fb9c"
         }
     },
     "pre_install": [
@@ -33,14 +33,12 @@
         "} else { $paths += 'Python' }",
         "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-py312-x86*/$_\" \"$dir\" }",
         "Remove-Item -Recurse \"$dir/streamlink-$version-py312-x86*\"",
-        "if (!(Test-Path \"$persist_dir/config\")) {",
-        "    if (Test-Path \"$env:APPDATA/streamlink/config\") {",
-        "        info 'Copying existing ''config'' from ''%APPDATA%/streamlink/config'''",
-        "        $null = Copy-Item \"$env:APPDATA/streamlink/config\" \"$dir/config\"",
-        "    } else {",
-        "        $null = New-Item \"$dir/config\"",
-        "    }",
-        "}"
+        "if (Test-Path \"$persist_dir/config\") { return }",
+        "if (Test-Path \"$env:APPDATA/streamlink/config\") {",
+        "    info 'Copying existing ''config'' from ''%APPDATA%\\streamlink\\config'''",
+        "    return $null = Copy-Item \"$env:APPDATA/streamlink/config\" \"$dir/config\"",
+        "}",
+        "$null = New-Item \"$dir/config\""
     ],
     "bin": [
         [

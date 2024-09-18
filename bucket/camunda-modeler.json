@@ -1,16 +1,16 @@
 {
-    "version": "5.21.0",
+    "version": "5.27.0",
     "description": "Made for developers, edit your BPMN process diagrams and DMN decision tables.",
     "homepage": "https://camunda.org/download/modeler/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/camunda/camunda-modeler/releases/download/v5.21.0/camunda-modeler-5.21.0-win-x64.zip",
-            "hash": "3d4e5e0b70790ba338b190b7ccf2b76836f766a0c5268d6b2c1f7974af25f5f8"
+            "url": "https://github.com/camunda/camunda-modeler/releases/download/v5.27.0/camunda-modeler-5.27.0-win-x64.zip",
+            "hash": "0055ba027d1de8b822c750d720036388dff22f1417e00c00dc0b9cef4d9d5da2"
         },
         "32bit": {
-            "url": "https://github.com/camunda/camunda-modeler/releases/download/v5.21.0/camunda-modeler-5.21.0-win-ia32.zip",
-            "hash": "326883b9f9d7b48a83ec9145b4e03b3e915185553f7a79695d87d6a5eccc163a"
+            "url": "https://github.com/camunda/camunda-modeler/releases/download/v5.27.0/camunda-modeler-5.27.0-win-ia32.zip",
+            "hash": "e2fde4df381c8d1ab84a2f86d38258540b8089b3ebc9b435405c5a96cc438a40"
         }
     },
     "bin": "Camunda Modeler.exe",

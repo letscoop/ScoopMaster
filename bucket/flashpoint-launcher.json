@@ -1,10 +1,10 @@
 {
-    "version": "12.1.1",
+    "version": "13.0.1",
     "description": "Launcher for BlueMaxima's Flashpoint",
     "license": "MIT",
     "homepage": "https://bluemaxima.org/flashpoint/",
-    "url": "https://github.com/FlashpointProject/launcher/releases/download/12.1.1/Flashpoint-12.1.1_win-x64.7z",
-    "hash": "f2702e6bc902962c7994512e5c61d4cb195baa4f3be78f7c8639f44c236b4777",
+    "url": "https://github.com/FlashpointProject/launcher/releases/download/13.0.1/Flashpoint-13.0.1_win-x64.7z",
+    "hash": "b43028626fe962084eef7cd2fbd7533bf0f7122810888bd816a075b0c929a3f4",
     "shortcuts": [
         [
             "Flashpoint.exe",

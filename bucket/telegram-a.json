@@ -1,12 +1,12 @@
 {
-    "version": "10.4.6",
+    "version": "10.9.13",
     "description": "Telegram Web A",
     "homepage": "https://github.com/Ajaxy/telegram-tt",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Ajaxy/telegram-tt/releases/download/v10.4.6/Telegram-A-x64.exe#/dl.7z",
-            "hash": "341d4d3611fe3991c2157c8dfc134fdb8927c83fc9b4ab8f01ae80326d9a92d2",
+            "url": "https://github.com/Ajaxy/telegram-tt/releases/download/v10.9.13/Telegram-A-x64.exe#/dl.7z",
+            "hash": "4893133677ff50d8b9de773c9c9091379f2533867b3cdea635e89e0b593594e2",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$R0\", \"$dir\\`$PLUGINSDIR\" -Force -Recurse"

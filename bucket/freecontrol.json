@@ -1,5 +1,5 @@
 {
-    "version": "1.6.9",
+    "version": "1.7.2",
     "description": "在PC上控制Android设备。",
     "homepage": "https://github.com/pdone/FreeControl",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pdone/FreeControl/releases/download/v1.6.9/FreeControl.exe",
-            "hash": "c5a7df2931286ac3e7ae97dbafb29ce74e9f2b1495e5137c17520bef747ffbe6"
+            "url": "https://github.com/pdone/FreeControl/releases/download/v1.7.2/FreeControl.exe",
+            "hash": "e569f417d971d4b6790011292d2a929fd4c004c81f9676257ddb9ab08a975442"
         }
     },
     "installer": {

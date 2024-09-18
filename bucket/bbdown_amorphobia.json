@@ -1,16 +1,16 @@
 {
-    "version": "1.6.1",
+    "version": "1.6.3",
     "description": "一款命令行式哔哩哔哩下载器",
     "homepage": "https://github.com/nilaoda/BBDown",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nilaoda/BBDown/releases/download/1.6.1/BBDown_1.6.1_20230817_win-x64.zip",
-            "hash": "248c3aafb8e767f9cfa55e36f2a1a19b1653bbcdb44c1a2fec394560eb79c1a1"
+            "url": "https://github.com/nilaoda/BBDown/releases/download/1.6.3/BBDown_1.6.3_20240814_win-x64.zip",
+            "hash": "40f1e2af0d4e74df765c6f93d2e931f9bea201d5168d0bc62dc35a54b7e0ec02"
         },
         "arm64": {
-            "url": "https://github.com/nilaoda/BBDown/releases/download/1.6.1/BBDown_1.6.1_20230817_win-arm64.zip",
-            "hash": "6f160f88a2feab201d8f503f3fe8e626d037c456c52a50971bb9ceec3e0f4040"
+            "url": "https://github.com/nilaoda/BBDown/releases/download/1.6.3/BBDown_1.6.3_20240814_win-arm64.zip",
+            "hash": "da8fc9cbf1031f4c4ca97af82d98bbfd1bbc55bd8ea49602da8d3d1613c190ff"
         }
     },
     "bin": [

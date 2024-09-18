@@ -1,10 +1,10 @@
 {
-    "version": "3.0.0-rc.5",
+    "version": "3.0.0-rc.10",
     "description": "Steam++ is a toolbox with lots of Steam tools",
     "homepage": "https://steampp.net/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/BeyondDimension/SteamTools/releases/download/3.0.0-rc.5/Steam++_v3.0.0-rc.5_win_x64.7z",
-    "hash": "D3E632C83DB5ED277AAAF2185F0FBF274C98CF4B7664AFC35E810DA49E9E0087",
+    "url": "https://github.com/BeyondDimension/SteamTools/releases/download/3.0.0-rc.10/Steam++_v3.0.0-rc.10_win_x64.7z",
+    "hash": "652ECA2568A914FCEF9A43AAED69F4583324BC97974983D816FB0B508CF90A04",
     "shortcuts": [
         [
             "Steam++.exe",
@@ -13,13 +13,14 @@
     ],
     "persist": "AppData",
     "checkver": {
-        "github": "https://github.com/SteamTools-Team/SteamTools"
+        "url": "https://api.github.com/repos/SteamTools-Team/SteamTools/releases/latest",
+        "regex": "v([\\d.]+(-[\\d\\w.]+)?)_win_x64.7z"
     },
     "autoupdate": {
         "url": "https://github.com/SteamTools-Team/SteamTools/releases/download/$version/Steam++_v$version_win_x64.7z",
         "hash": {
-            "url": "https://api.github.com/repos/SteamTools-Team/SteamTools/releases",
-            "regex": "v$version_win_x64.7z.{14}(?<sha256>[\\w]+)"
+            "url": "https://api.github.com/repos/SteamTools-Team/SteamTools/releases/latest",
+            "regex": "win_x64.7z[\\w\\W]{14}(?<sha256>[\\w]+)"
         }
     }
 }

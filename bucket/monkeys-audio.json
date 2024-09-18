@@ -1,12 +1,12 @@
 {
     "architecture": {
         "32bit": {
-            "hash": "5b9c0f312ae4a56a9c109f012229c82c181d32fae8073b8fee56864729681851",
-            "url": "https://monkeysaudio.com/files/MAC_1055.exe"
+            "hash": "44c5cd6ecf3c22ff62d1f9b3e0f4fb94b0baab5de2c3c5468e43ecc0788d66fa",
+            "url": "https://monkeysaudio.com/files/MAC_1076.exe"
         },
         "64bit": {
-            "hash": "73a0d4a8f735f5a31c208148c31b76ede1d7cc9e5cf98a9134a586493b4c9225",
-            "url": "https://monkeysaudio.com/files/MAC_1055_x64.exe"
+            "hash": "8fc8890d86120a1fd32ebadb0e50c29c631a13104396754c809c90c7d6f2278f",
+            "url": "https://monkeysaudio.com/files/MAC_1076_x64.exe"
         }
     },
     "autoupdate": {
@@ -34,5 +34,5 @@
             "Monkey's Audio"
         ]
     ],
-    "version": "10.55"
+    "version": "10.76"
 }

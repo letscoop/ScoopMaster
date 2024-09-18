@@ -1,55 +1,25 @@
 {
-    "##": "Checkver URL https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel",
-    "version": "122.0.2365.92",
-    "description": "Microsoft Edge. The chromium based Microsoft Edge browser.",
-    "homepage": "https://www.microsoft.com/en-us/edge/business",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://www.microsoft.com/en-us/servicesagreement/"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "http://go.microsoft.com/fwlink/?LinkID=2093437#/setup.msi_",
-            "hash": "bce51486d390b17326b93b1ef32b4f966b12b857828065df4987a3fb362a7978"
-        },
-        "32bit": {
-            "url": "http://go.microsoft.com/fwlink/?LinkID=2093505#/setup.msi_",
-            "hash": "0879fdc8ca7894175dc5452bdb59b7068f89b93abeda7d495fb6f15c70e4c2a5"
-        }
-    },
-    "installer": {
-        "script": [
-            "$programname = \"Microsoft Edge*\"",
-            "$installpath = \"$dir\\setup.msi_\"",
-            "$ProgramFiles = [Environment]::GetFolderPath(\"ProgramFilesX86\")",
-            "$filepath = \"$ProgramFiles\\Microsoft\\Edge\\Application\\$version\\msedge.dll\"",
-            "if(((Test-Path -Path $filepath -PathType Leaf) -eq $false) -or ((Get-Command $filepath).Version -lt [System.Version]\"$version\"))",
-            "{",
-            "   Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", '/qn') -RunAs | Out-Null",
-            "   if(((Test-Path -Path $filepath -PathType Leaf) -eq $false) -or ((Get-Command $filepath).Version -lt [System.Version]\"$version\"))",
-            "   {",
-            "       exit 1",
-            "   }",
-            "}",
-            "if (Test-Path -Path \"$dir\\setup.msi_\") { Remove-Item \"$dir\\setup.msi_\" -Force }"
-        ]
-    },
-    "post_install": [
-        "$CommonDesktopPath = [Environment]::GetFolderPath(\"CommonDesktopDirectory\")",
-        "if (Test-Path \"$CommonDesktopPath\\Microsoft Edge.lnk\") {Remove-Item \"$CommonDesktopPath\\Microsoft Edge.lnk\" -Force}"
-    ],
+    "homepage": "http://takabosoft.com/edge",
+    "description": "256 color-only dot editor.",
+    "version": "1.29b",
+    "url": "http://takabosoft.com/download/win/edge/edge129b.ZIP",
+    "hash": "6d31751121bbfdcf2b71500553f55a7146b2ec328bd94a2850fe2751c28ec675",
     "checkver": {
-        "url": "https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel",
-        "regex": ">Version ([\\d.]+)"
+        "url": "http://takabosoft.com/edge",
+        "re": "EDGE Ver\\.(?<version>[\\d]+\\.[\\d]+\\w?)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://go.microsoft.com/fwlink/?LinkID=2093437#/setup.msi_"
-            },
-            "32bit": {
-                "url": "http://go.microsoft.com/fwlink/?LinkID=2093505#/setup.msi_"
-            }
-        }
-    }
+        "url": "http://takabosoft.com/download/win/edge/edge$majorVersion$minorVersion.ZIP"
+    },
+    "bin": "edge.exe",
+    "shortcuts": [
+        [
+            "edge.exe",
+            "EDGE"
+        ],
+        [
+            "manual.chm",
+            "EDGE Manual"
+        ]
+    ]
 }

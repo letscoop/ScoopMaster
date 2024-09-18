@@ -1,12 +1,12 @@
 {
-    "version": "8239945777",
+    "version": "10861891719",
     "description": "Chat client for https://twitch.tv",
     "homepage": "https://github.com/SevenTV/chatterino7",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.5.0.zip",
-            "hash": "1d84a67b312c8c8d6b16a71a9f806540586ca412f85b67aaf11af8b0aacdb766",
+            "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.7.1.zip",
+            "hash": "a47a047a227545f16c4338b03b274f86b8863f38663d81c2f19bf343a04815e5",
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Get-ChildItem \"$dir/chatterino.exe\" | Rename-Item -NewName { $_.name.Replace('o', 'o7-portable') }",
@@ -29,13 +29,16 @@
     ],
     "bin": "chatterino7-portable.exe",
     "checkver": {
-        "url": "https://api.github.com/repositories/342454835/actions/workflows/build.yml/runs?branch=chatterino7&status=success",
-        "jsonpath": "$.workflow_runs[0].id"
+        "script": [
+            "(Invoke-RestMethod 'https://api.github.com/repositories/342454835/actions/workflows/build.yml/runs?branch=chatterino7&status=success').workflow_runs[0].id,",
+            "(Invoke-RestMethod https://raw.githubusercontent.com/SevenTV/chatterino7/chatterino7/.github/workflows/build.yml | Select-String 'os: windows-latest\\s+qt-version: ([\\d.]+)').Matches.Groups[1].Value -join ' '"
+        ],
+        "regex": "(\\d+) (?<qt>[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.5.0.zip"
+                "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/chatterino-windows-x86-64-Qt-$matchQt.zip"
             }
         }
     }

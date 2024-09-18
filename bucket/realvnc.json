@@ -1,10 +1,14 @@
 {
-    "version": "7.10.0",
+    "version": "7.12.1",
     "description": "RealVNC Viewer",
     "homepage": "https://www.realvnc.com",
     "license": "Proprietary",
-    "url": "https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-7.10.0-Windows-64bit.exe#/VNC-Viewer-Windows-64bit.exe",
-    "hash": "d33275c5a324b161b1703cb9d9787eca7739948d11fd1000e233723bf08e0303",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-7.12.1-Windows-64bit.exe#/VNC-Viewer-Windows-64bit.exe",
+            "hash": "4cf12d040a7b081106d84870b057e1d118880151d996d7dbacedc292eee8690f"
+        }
+    },
     "shortcuts": [
         [
             "VNC-Viewer-Windows-64bit.exe",
@@ -16,6 +20,10 @@
         "regex": "VNC-Viewer-(?<version>[\\d.]+)-Windows-64bit\\.exe"
     },
     "autoupdate": {
-        "url": "https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-$version-Windows-64bit.exe#/VNC-Viewer-Windows-64bit.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-$version-Windows-64bit.exe#/VNC-Viewer-Windows-64bit.exe"
+            }
+        }
     }
 }

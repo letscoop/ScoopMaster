@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "2428cbdf1cd1e7f60eafbb2736cb29c0ddce32c354d52c86adc0e776b25b7eb4",
-            "url": "https://github.com/sileshn/SlackwareWSL2/releases/download/20240201/SlackwareWSL2.zip"
+            "hash": "a5ae019dc47d11eb936187fc28df9bf4c968f896fbb267661e3c60b3e48beb28",
+            "url": "https://github.com/sileshn/SlackwareWSL2/releases/download/20240901/SlackwareWSL2.zip"
         }
     },
     "autoupdate": {
@@ -63,5 +63,5 @@
             "Invoke-ExternalCommand \"$dir\\Slackware.exe\" 'clean', '-y' | Out-Null"
         ]
     },
-    "version": "20240201"
+    "version": "20240901"
 }

@@ -1,5 +1,5 @@
 {
-    "version": "1.17",
+    "version": "1.19",
     "homepage": "https://www.nirsoft.net/utils/handle_counters_view.html",
     "bin": "HandleCountersView.exe",
     "shortcuts": [
@@ -15,11 +15,11 @@
     "architecture": {
         "64bit": {
             "url": "https://www.nirsoft.net/utils/handlecountersview-x64.zip",
-            "hash": "e70d944e32905f565c5bd5d8e6eb1e3a70597c687ef623a2ae8a1758396f4def"
+            "hash": "3a199e445825c35af9d3f36047f5e4edfb1567072f892b4b62bedcc3b99b957d"
         },
         "32bit": {
             "url": "https://www.nirsoft.net/utils/handlecountersview.zip",
-            "hash": "c0b6bb5ec0b2eea260be1bcbcefbee6350548a448268559804e6731f96c9434a"
+            "hash": "c4180891911ae8c31719d8c9fa2e70f86e60a02b4085f014646feac51c60dcd6"
         }
     },
     "description": "Shows handle counter for every process",

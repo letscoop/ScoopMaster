@@ -9,12 +9,12 @@
     "env_set": {
         "NDI_RUNTIME_DIR_V5": "$dir"
     },
-    "hash": "c255860560c86edffd77697413ee0abb33847809e811449f790d1d00a0771cbf",
+    "hash": "93baed79f27203c61a090093bd4a1bafbb606c6a8e768d9dea650ad23b7bdf71",
     "homepage": "https://ndi.video/tools/ndi-core-suite/",
     "innosetup": true,
     "license": {
         "identifier": "Freeware"
     },
-    "url": "https://downloads.ndi.tv/SDK/NDI_SDK/NDI%205%20Runtime.exe",
-    "version": "5.6"
+    "url": "https://downloads.ndi.tv/SDK/NDI_SDK/NDI%206%20Runtime.exe",
+    "version": "6.0.1"
 }

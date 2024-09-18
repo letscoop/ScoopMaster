@@ -1,12 +1,12 @@
 {
-    "version": "0.5.0",
+    "version": "0.28.0",
     "description": "An open source user-friendly database for logs from VictoriaMetrics.",
     "homepage": "https://docs.victoriametrics.com/VictoriaLogs/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v0.5.0-victorialogs/victoria-logs-windows-amd64-v0.5.0-victorialogs.zip",
-            "hash": "66320348a166e90f3b9d621ab86ac4e426bce62819d2b2ce8885d9c6e4ac6e91"
+            "url": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v0.28.0-victorialogs/victoria-logs-windows-amd64-v0.28.0-victorialogs.zip",
+            "hash": "71af6fd5f078d9f39f7ea1b262407b6f518698b6efdfd8aa78fcfde11b7b04f1"
         }
     },
     "bin": "victoria-logs.exe",
@@ -15,7 +15,7 @@
     "notes": "Example: victoria-logs.exe -storageDataPath=$dir\\victoria-logs-data\\",
     "checkver": {
         "url": "https://github.com/VictoriaMetrics/helm-charts/raw/master/charts/victoria-logs-single/Chart.yaml",
-        "regex": "appVersion: v(.*?)-victorialogs"
+        "regex": "appVersion: v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

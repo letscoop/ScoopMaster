@@ -1,12 +1,12 @@
 {
-    "version": "9.1.2",
+    "version": "9.1.5",
     "description": "TreeSize tells you where precious disk space has gone. ",
     "homepage": "https://www.jam-software.com/",
     "license": "Unknown",
     "architecture": {
         "64bit": {
             "url": "https://downloads.jam-software.de/treesize/TreeSize-x64-Demo.exe#/dl.7z",
-            "hash": "8c7afda4edc70f44953281efe05e6cab16b85cbc14cfe6ebea20ee708d987bd7"
+            "hash": "41027b86a65ef71a4b89e5b82c076df1852e1e239e2df03d114a7bbb28e4c89e"
         }
     },
     "innosetup": true,

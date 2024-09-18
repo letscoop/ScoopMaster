@@ -1,10 +1,10 @@
 {
-    "version": "6300",
+    "version": "6311",
     "description": "AutoWikiBrowser is a semi-automated Wikipedia editor, designed to make tedious, repetitive tasks quicker and easier.",
     "homepage": "http://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser",
     "license": "GPL-2.0",
-    "url": "https://sourceforge.net/projects/autowikibrowser/files/autowikibrowser/AutoWikiBrowser6300/AutoWikiBrowser6300.zip",
-    "hash": "sha1:9a97451123c157c05bb9180b9f5a1ce083e9fa2c",
+    "url": "https://sourceforge.net/projects/autowikibrowser/files/autowikibrowser/AutoWikiBrowser6311/AutoWikiBrowser6311.zip",
+    "hash": "f08ecce9733f57780994b46c43a83071d8357a328fee1dce23dcd8cdcabe3671",
     "bin": "AutoWikiBrowser.exe",
     "shortcuts": [
         [

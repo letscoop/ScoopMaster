@@ -1,11 +1,11 @@
 {
     "##": "This package is not in official bucket because it is overly complicated. Need a smart way to organize it.",
-    "version": "2024-03-02",
+    "version": "2024-09-19",
     "description": "MS-DOS emulator for Win32-x64 command prompt.",
     "homepage": "http://takeda-toshiya.my.coocan.jp/msdos/",
     "license": "GPL-2.0-or-later",
     "url": "http://takeda-toshiya.my.coocan.jp/msdos/msdos.7z",
-    "hash": "11d03f76be520843114f2fcf4ca8604ea569cbbc7cfb10673bb457904d4a7126",
+    "hash": "78df631aa47e141b553378644533eb68525866aa274d31e633d978881c9188d8",
     "extract_dir": "msdos",
     "pre_install": [
         "if ($architecture -eq '64bit') { Move-Item \"$dir\\binary\\*_x64\" \"$dir\\\" }",

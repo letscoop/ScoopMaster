@@ -1,12 +1,12 @@
 {
-    "version": "6.5.2.19936",
+    "version": "6.7.3.21005",
     "description": "Stream Deck. Lets you take control of your content and focus on what's important: your audience.",
     "homepage": "https://www.elgato.com/en/gaming/downloads#sd-win",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://edge.elgato.com/egc/windows/sd/Stream_Deck_6.5.2.19936.msi",
-            "hash": "3900b1cbe9a9587daff263918f8f77db1e114030ceb4695ff31fbc7a48a2f4ef"
+            "url": "https://edge.elgato.com/egc/windows/sd/Stream_Deck_6.7.3.21005.msi",
+            "hash": "2da3658e78b10511e7c18a27bb277464c5c3a5593d23a877b7734d6dfe1d283f"
         }
     },
     "extract_dir": "Elgato\\StreamDeck",

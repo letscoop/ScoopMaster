@@ -1,5 +1,5 @@
 {
-    "version": "0.2.15",
+    "version": "0.2.23",
     "description": "Download media content from a DASH-MPEG or DASH-WebM MPD manifest",
     "homepage": "https://github.com/emarsden/dash-mpd-cli",
     "license": "MIT",
@@ -15,8 +15,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/emarsden/dash-mpd-cli/releases/download/v0.2.15/dash-mpd-cli-windows.exe#/dash-mpd-cli.exe",
-            "hash": "6d4fbf21ab9be2be30210950e1e6055458b639ea922001033950ef2c7d031f8e"
+            "url": "https://github.com/emarsden/dash-mpd-cli/releases/download/v0.2.23/dash-mpd-cli-windows.exe#/dash-mpd-cli.exe",
+            "hash": "7d66e951a32325f95407049dac311697d688b30c89b9a5be6d26a6b24301138e"
         }
     },
     "bin": "dash-mpd-cli.exe",
