@@ -8,7 +8,7 @@
 
 </br>
 
-And don't miss **[SS (Scoop Super Search)](https://github.com/okibcn/ss)**, the associated CLI search utility.
+And don't miss **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)**, the associated CLI search utility.
 
 </br>
 
@@ -41,7 +41,7 @@ The system uses the platform in two ways:
 
 </br>
 
-**ScoopMaster** also provides a **[database](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SS (Scoop Super Search)](https://github.com/okibcn/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
+**ScoopMaster** also provides a **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
 
 </br>
 
@@ -56,11 +56,11 @@ ____
 
 </br>
 
-To add this bucket, paste this in a PowerShell session: 
+To add this bucket, paste this in a PowerShell session:
 ```pwsh
-scoop bucket add .SM https://github.com/okibcn/ScoopMaster
+scoop bucket add .SM https://github.com/thecats1105/ScoopMaster
 ```
-install any app in the bucket just type 
+install any app in the bucket just type
 ```
 scoop install <app_name>
 ```
@@ -71,7 +71,7 @@ scoop bucket rm .SM
 
 If you want all your local apps to be updated to the latest version provided by ScoopMaster, just change the update source for that app. You can do it for all of them by copy-n-paste this in PowerShell:
 ```pwsh
-gci ~/scoop/apps/*/current/install.json | % { 
+gci ~/scoop/apps/*/current/install.json | % {
     (gc $_) -Replace '(?<=bucket":\s+")[^"]+',".SM" |Set-Content $_ }
 scoop update
 scoop update *
@@ -83,7 +83,7 @@ scoop update *
 
 </br>
 
-The **[database](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)** doesn't need any install instructions. If want to use it for searching purposes, you can use the ultra-fast **[SS (Scoop Super Search)](https://github.com/okibcn/ss)** utility. it provides instant result to simple queries and complex regex searches. Refer to its homepage for installation instructions.
+The **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** doesn't need any install instructions. If want to use it for searching purposes, you can use the ultra-fast **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** utility. it provides instant result to simple queries and complex regex searches. Refer to its homepage for installation instructions.
 
 
 
@@ -99,10 +99,10 @@ The bucket doesn't require any operation other than the installation, removal, a
 
 </br>
 
-The **[database](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/okibcn/ScoopMaster/releases/tag/Databases)**.
+The **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)**.
 
 
-IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/okibcn/ss)** that can be installed typing:
+IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** that can be installed typing:
 ```pwsh
 scoop install ss
 ```
@@ -117,11 +117,11 @@ ss scoop search fast
 ```
 - Search for an app in which the app name contains both 'nvidia' AND 'driver'
 ```pwsh
-ss -n nvidia driver 
+ss -n nvidia driver
 ```
 - Simple search for the **ss** app
 ```pwsh
-ss -s ss 
+ss -s ss
 ```
 - Returns apps containing 'tool' and, 'nvidia' or 'radeon'
 ```pwsh
@@ -133,15 +133,15 @@ ss -l search scoop
 ```
 - Full extended regex support. Latests versions of apps ending in 'ss' starting with 's'
 ```pwsh
-ss -n -l -e ss$ ^s 
+ss -n -l -e ss$ ^s
 ```
 - UTF-8 search of all the apps containing the word 音乐 (music) in the description.
 ```pwsh
-ss -l 音乐 
+ss -l 音乐
 ```
 - stores in the `$apps` variable a PSObject with all the Scoop manifests — more than 52,000.
 ```pwsh
-$apps = ss -r .* 
+$apps = ss -r .*
 ```
 
 </br>
