@@ -28,9 +28,9 @@ $lZips=$lBuckets | %{
         $_ >> badrepos.txt
         return}
     $owner_repo=$matches[1].replace('/','~')
-    return "$_/archive/refs/heads/master.zip`n    out=$owner_repo.zip"
+    return "$_/archive/refs/heads/main.zip`n    out=$owner_repo.zip"
 }
-$lZips > zip_list.txt   
+$lZips > zip_list.txt
 
 # DOWNLOAD BUCKETS
 aria2c --save-session aria2-out.txt -j 16 -i zip_list.txt -d zips
@@ -92,7 +92,7 @@ Write-Host "PROCESS COMPLETED. $nlocal different packages with the most recent m
 if(Test-Path ERROR_manifest.txt){
     Write-Host "The following manifests have errors:"
     cat ./ERROR_manifest.txt
-} 
+}
 
 
 ## PROCESS PACKETS IN BUCKETS
@@ -116,15 +116,15 @@ if(Test-Path ERROR_manifest.txt){
 #     $progress++
 #     $percent = [math]::round(100 * $progress / $nbuckets)
 #     Write-Progress -Activity "Processing " -Status "$percent% processing: $bucket" -PercentComplete $percent
-#     $ZIPURL = "$bucket/archive/refs/heads/master.zip" 
+#     $ZIPURL = "$bucket/archive/refs/heads/main.zip"
 #     wget -q $ZIPURL
-#     if(test-path master.zip){
-#         7z e master.zip */bucket/*.json -ojsons | Out-Null
-#         rm master.zip
+#     if(test-path main.zip){
+#         7z e main.zip */bucket/*.json -ojsons | Out-Null
+#         rm main.zip
 #     }else{
 #         Write-Host("WARNING: Bucket $bucket doesnt exist.")
 #     }
-#     # Expand-Archive .\master.zip -Passthough | Out-Null
+#     # Expand-Archive .\main.zip -Passthough | Out-Null
 #     gci jsons/*.json | %{
 #         # FOR EACH PACKETFILE IN BUCKET
 #         $name=$_.BaseName
