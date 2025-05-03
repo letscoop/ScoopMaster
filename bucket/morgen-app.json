@@ -1,0 +1,42 @@
+{
+    "version": "3.6.12",
+    "description": "Turn to-dos into daily action plans",
+    "homepage": "https://www.morgen.so/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.morgen.so/privacy"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.todesktop.com/210203cqcj00tw1/Morgen%20Setup%203.6.12%20-%20Build%2025041663fgwb739-x64.exe#/dl.7z",
+            "hash": "sha512:6f6935a05e137b098ccc11332f95e0b11ee343d5ca5f2b9034172d2641843bfa24d582d72afb465354353440c4f728576a414577189ae6afccc7bf45dd067fae",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Morgen.exe",
+            "Morgen App",
+            "--user-data-dir=\"$dir\\data\\user-data\""
+        ]
+    ],
+    "persist": "data",
+    "checkver": {
+        "url": "https://download.todesktop.com/210203cqcj00tw1/latest.yml",
+        "regex": "Setup\\s+([\\d.]+).*Build\\s+(?<Build>[\\w]+)-x64.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.todesktop.com/210203cqcj00tw1/Morgen%20Setup%20$version%20-%20Build%20$matchBuild-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)x64.*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

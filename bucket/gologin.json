@@ -1,0 +1,30 @@
+{
+    "version": "3.3.91",
+    "description": "Antidetect browser",
+    "homepage": "https://gologin.com",
+    "license": "Proprietary",
+    "url": "https://releases.gologin.com/GoLogin%20Setup%203.3.91.exe#/dl.7z",
+    "hash": "1b101964e75e443c854f9c895c58e54aea6e3b4e9af0e958cbfb3ef3269858bb",
+    "architecture": {
+        "64bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        },
+        "32bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\resources\\app-update.yml\" -Force -Recurse",
+    "shortcuts": [
+        [
+            "GoLogin.exe",
+            "GoLogin"
+        ]
+    ],
+    "checkver": {
+        "url": "https://releases.gologin.com/latest.yml",
+        "regex": "version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://releases.gologin.com/GoLogin%20Setup%20$version.exe#/dl.7z"
+    }
+}

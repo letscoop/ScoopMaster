@@ -1,11 +1,11 @@
 {
-    "version": "3.1.1",
+    "version": "3.1.8",
     "description": "The main goal of UniGetUI is to create an intuitive GUI for the most common CLI package managers for Windows.",
     "homepage": "https://github.com/marticliment/UniGetUI/",
     "license": "LGPL-2.1-only",
     "changelog": "https://github.com/marticliment/UniGetUI/releases",
-    "url": "https://github.com/marticliment/UniGetUI/releases/download/3.1.1/UniGetUI.Installer.exe",
-    "hash": "dc03f02df89f23f6f0afa47b8b8830a81516d3d5d83095c1da5c59760950c758",
+    "url": "https://github.com/marticliment/UniGetUI/releases/download/3.1.8/UniGetUI.Installer.exe",
+    "hash": "646abe5ba7a0f2cc5fd8dceccfbe6f58036fc542ba921f67eaabc4e488a444c2",
     "innosetup": true,
     "shortcuts": [
         [

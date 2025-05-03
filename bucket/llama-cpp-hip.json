@@ -1,0 +1,42 @@
+{
+    "version": "b5269",
+    "description": "(ROCm/HIP gfx1100 Backend) llama.cpp enables LLM inference with minimal setup and state-of-the-art performance on a wide range of hardware.",
+    "homepage": "https://github.com/ggml-org/llama.cpp",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ggml-org/llama.cpp/releases/download/b5269/llama-b5269-bin-win-hip-x64-gfx1100.zip",
+            "hash": "1e64904d9d73e43cacb754e4d58dc0d830851aacbd4e2bce84870ee314bd99e4"
+        }
+    },
+    "bin": [
+        "llama-cli.exe",
+        "llama-server.exe",
+        "llama-perplexity.exe",
+        "llama-bench.exe",
+        "llama-run.exe",
+        "llama-batched.exe",
+        "llama-batched-bench.exe",
+        "llama-cvector-generator.exe",
+        "llama-embedding.exe",
+        "llama-gguf.exe",
+        "llama-gguf-hash.exe",
+        "llama-gguf-split.exe",
+        "llama-imatrix.exe",
+        "llama-quantize.exe",
+        "llama-tokenize.exe",
+        "llama-tts.exe",
+        "llama-mtmd-cli.exe"
+    ],
+    "checkver": {
+        "url": "https://github.com/ggml-org/llama.cpp/releases.atom",
+        "regex": "Repository/\\d+/(b\\d+)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-hip-x64-gfx1100.zip"
+            }
+        }
+    }
+}

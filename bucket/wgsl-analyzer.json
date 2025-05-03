@@ -1,15 +1,18 @@
 {
-    "version": "0.8.1",
+    "version": "2025-04-04",
     "license": {
         "identifier": "MIT|Apache-2.0",
         "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/blob/main/LICENSE.md"
     },
     "homepage": "https://github.com/wgsl-analyzer/wgsl-analyzer",
-    "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/releases/download/v0.8.1/wgsl_analyzer-win32-x64.exe#/wgsl_analyzer.exe",
-    "hash": "ad5b2523cd863c9b1964cb4dda9a07525ba783f86bae81b9d0fc0028aa4cc792",
+    "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/releases/download/2025-04-04/wgsl-analyzer-x86_64-pc-windows-msvc.zip",
+    "hash": "d6aa813d2bc83d5f6bdcdfe628cac895f5296b01b7f8abae811f070b7ac06d46",
     "bin": "wgsl_analyzer.exe",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/wgsl-analyzer/wgsl-analyzer",
+        "regex": "/releases/tag/([\\d-]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/releases/download/v$version/wgsl_analyzer-win32-x64.exe#/wgsl_analyzer.exe"
+        "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/releases/download/$version/wgsl-analyzer-x86_64-pc-windows-msvc.zip"
     }
 }

@@ -1,16 +1,16 @@
 {
-    "version": "3.0.1",
+    "version": "3.1.3",
     "description": "Manipulate with any object or data in Lokalise workspace.",
     "homepage": "https://github.com/lokalise/lokalise-cli-2-go",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lokalise/lokalise-cli-2-go/releases/download/v3.0.1/lokalise2_windows_x86_64.zip",
-            "hash": "877a81047c6ce00e8a49daafd3e2f3d3e2f89ed29974a30551210589b4eb3f44"
+            "url": "https://github.com/lokalise/lokalise-cli-2-go/releases/download/v3.1.3/lokalise2_windows_x86_64.zip",
+            "hash": "e8abca5d2e64f744bf98d65323f2d7d22f6cc8dd722dc45a304c6ac8684ddb29"
         },
         "32bit": {
-            "url": "https://github.com/lokalise/lokalise-cli-2-go/releases/download/v3.0.1/lokalise2_windows_i386.zip",
-            "hash": "0c0596a96bd705bbda1eb1fec07d7e2364e87fca6c95fe0d7a70683f6756ed1a"
+            "url": "https://github.com/lokalise/lokalise-cli-2-go/releases/download/v3.1.3/lokalise2_windows_i386.zip",
+            "hash": "038477a306d88489db1e67e7fa1100e5de1d544722af37e57b8a809c117ab4b3"
         }
     },
     "bin": "lokalise2.exe",

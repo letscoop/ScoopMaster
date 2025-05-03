@@ -1,12 +1,12 @@
 {
-    "version": "7.9.2",
+    "version": "9.6.3",
     "description": "Douyin Streaming Tool",
     "homepage": "https://streamingtool.douyin.com/",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-7.9.2-x64.exe#/dl.7z",
-            "hash": "b64ca8ed2f8c71ac66470667cd91ae6363c27af50b3ea16fd08541f219372f0d",
+            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-9.6.3-x64.exe#/dl.7z",
+            "hash": "196b525f5536c1a0ff180a4758cd33e8a7c2c302311597915ce128707e35f96f",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -15,8 +15,8 @@
             }
         },
         "32bit": {
-            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-7.9.2-x86.exe#/dl.7z",
-            "hash": "55711a4c2008db100b9c675b04ef21bde334b7370934eed6c5e181cce358b7b0",
+            "url": "https://lf6-cdn-tos.douyinstatic.com/obj/venus/StreamingTool-9.6.3-x86.exe#/dl.7z",
+            "hash": "8b399b69d598db0cf26d47e5f1276b50131f1ec30737ee1928f99c0bf9f212e9",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-86.7z\" \"$dir\"",
@@ -33,15 +33,15 @@
     ],
     "checkver": {
         "script": "return (iwr -useb 'https://streamingtool.douyin.com/api/invoke/download' -Method HEAD -MaximumRedirection 0 -SkipHttpErrorCheck -ErrorAction:SilentlyContinue).Headers['Location']",
-        "regex": "https://(?<path>.*?)/StreamingTool-([\\d.]+)"
+        "regex": "https://lf6-cdn-tos.douyinstatic.com/(?<path>.*?)/StreamingTool-([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://$matchPath/StreamingTool-$version-x64.exe#/dl.7z"
+                "url": "https://lf6-cdn-tos.douyinstatic.com/$matchPath/StreamingTool-$version-x64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://$matchPath/StreamingTool-$version-x86.exe#/dl.7z"
+                "url": "https://lf6-cdn-tos.douyinstatic.com/$matchPath/StreamingTool-$version-x86.exe#/dl.7z"
             }
         }
     }

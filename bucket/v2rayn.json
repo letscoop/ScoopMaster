@@ -1,5 +1,5 @@
 {
-    "version": "6.59",
+    "version": "7.12.0",
     "description": "A V2Ray client for Windows, support Xray & v2fly core",
     "homepage": "https://github.com/2dust/v2rayN",
     "license": "GPL-3.0-only",
@@ -10,19 +10,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/2dust/v2rayN/releases/download/6.59/v2rayN.zip",
-            "hash": "4c928e4d77c209d0e72652fd7b05f493e7703dae2eb9552e47bca3a57b6499db"
-        },
-        "32bit": {
-            "url": "https://github.com/2dust/v2rayN/releases/download/6.59/v2rayN-32.zip",
-            "hash": "dfe1a0e51b756fb5dfb6bccc8af5f239c3d286d865cbdd87b3e964106d9a5e31"
+            "url": "https://github.com/2dust/v2rayN/releases/download/7.12.0/v2rayN-windows-64.zip",
+            "hash": "a87f22a30f2c79e3a1fd7bb8a010418d73a5f77a691b969bab141a92d2b8b9de",
+            "extract_dir": "v2rayN-windows-64"
         },
         "arm64": {
-            "url": "https://github.com/2dust/v2rayN/releases/download/6.59/v2rayN-arm64.zip",
-            "hash": "3e431ed4d29af6f3a4a9305bc6c45f566201c77f59b089bd9f910cebd5f8229d"
+            "url": "https://github.com/2dust/v2rayN/releases/download/7.12.0/v2rayN-windows-arm64.zip",
+            "hash": "55078d72e6b11dd82c537fa4b7dd8562f0e39a97eac5490126d13ba0bbc7e47f",
+            "extract_dir": "v2rayN-windows-arm64"
         }
     },
-    "extract_dir": "v2rayN",
     "pre_install": [
         "foreach ($form in @('*.exe', '*.dat')) {",
         "    foreach ($_ in Get-ChildItem \"$(appdir xray $global)\\current\" -File) {",
@@ -56,13 +53,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-32.zip"
+                "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-windows-64.zip"
             },
             "arm64": {
-                "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-arm64.zip"
+                "url": "https://github.com/2dust/v2rayN/releases/download/$version/v2rayN-windows-arm64.zip"
             }
         }
     }

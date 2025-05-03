@@ -1,0 +1,28 @@
+{
+    "version": "0.26.3",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/pomdtr/smallweb/releases/download/v0.26.3/smallweb_Windows_i386.tar.gz",
+            "bin": [
+                "smallweb.exe"
+            ],
+            "hash": "52b28cc0357a1436cbcc843666d60ee9fb7d44eceed7104e9ec646a483011a8e"
+        },
+        "64bit": {
+            "url": "https://github.com/pomdtr/smallweb/releases/download/v0.26.3/smallweb_Windows_x86_64.tar.gz",
+            "bin": [
+                "smallweb.exe"
+            ],
+            "hash": "bad002f5317a4c521118c13e99f7aa1ee496369afebc4a293054426a800629cd"
+        },
+        "arm64": {
+            "url": "https://github.com/pomdtr/smallweb/releases/download/v0.26.3/smallweb_Windows_arm64.tar.gz",
+            "bin": [
+                "smallweb.exe"
+            ],
+            "hash": "952c84831700de6b3f7fe7297d1295cf3d9252669794316bc3cc77a2ebfa2ff1"
+        }
+    },
+    "homepage": "https://smallweb.run",
+    "description": "Your Internet Folder"
+}

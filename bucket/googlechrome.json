@@ -1,19 +1,19 @@
 {
-    "version": "129.0.6668.59",
+    "version": "136.0.7103.49",
     "description": "Fast, secure, and free web browser, built for the modern web.",
     "homepage": "https://www.google.com/chrome/",
     "license": {
         "identifier": "Freeware",
-        "url": "https://www.google.com/chrome/privacy/eula_text.html"
+        "url": "https://www.google.com/chrome/terms/"
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/release2/chrome/gkjbxl7dmfzadbbqlmb6vzen2e_129.0.6668.59/129.0.6668.59_chrome_installer.exe#/dl.7z",
-            "hash": "c3c2f17c672ec5bac219226d8c4e946a5cd1c25f9165d90c2feea01bc99ef4ba"
+            "url": "https://dl.google.com/release2/chrome/hhlkvkbqamlmu4vjicjai5gpvu_136.0.7103.49/136.0.7103.49_chrome_installer.exe#/dl.7z",
+            "hash": "e4822000d9f23a72f7e04b123a1bf6093e7fb348d819c6d964f3b50d530c0848"
         },
         "32bit": {
-            "url": "https://dl.google.com/release2/chrome/k4qrch3fys3zdyhbhkvdnyzmtq_129.0.6668.59/129.0.6668.59_chrome_installer.exe#/dl.7z",
-            "hash": "b8f59aabe6d91152b9dcd02734128a55a9d65de1681877be33357f4c311f1b56"
+            "url": "https://dl.google.com/release2/chrome/mjku4bnxbbbb6a7tn4n2lxpzaa_136.0.7103.49/136.0.7103.49_chrome_installer.exe#/dl.7z",
+            "hash": "e3ae6a21317f076fd07207f5262b09c13ea81613ffa11835a13035005e5ed375"
         }
     },
     "installer": {
@@ -22,27 +22,18 @@
     "bin": [
         [
             "chrome.exe",
-            "chrome",
-            "--user-data-dir=\"$dir\\User Data\""
+            "chrome"
         ]
     ],
     "shortcuts": [
         [
             "chrome.exe",
-            "Google Chrome",
-            "--user-data-dir=\"$dir\\User Data\""
+            "Google Chrome"
         ]
-    ],
-    "post_install": [
-        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
-        "    info '[Portable Mode]: Copying user data...'",
-        "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
-        "}"
     ],
     "env_set": {
         "CHROME_EXECUTABLE": "$dir\\chrome.exe"
     },
-    "persist": "User Data",
     "checkver": {
         "url": "https://scoopinstaller.github.io/UpdateTracker/googlechrome/chrome.min.xml",
         "regex": "(?sm)<stable32><version>(?<version>[\\d.]+)</version>.+release2/chrome/(?<32>[\\w-]+)_.+<stable64>.+release2/chrome/(?<64>[\\w-]+)_.+</stable64>"

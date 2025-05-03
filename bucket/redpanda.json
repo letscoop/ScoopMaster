@@ -1,0 +1,30 @@
+{
+    "version": "25.1.2",
+    "description": "Redpanda is a streaming data platform for developers. Kafka API compatible. 10x faster. No ZooKeeper. No JVM!",
+    "homepage": "https://www.redpanda.com",
+    "license": "https://github.com/redpanda-data/redpanda/blob/dev/licenses/rcl.md",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/redpanda-data/redpanda/releases/download/v25.1.2/rpk-windows-amd64.zip",
+            "hash": "49102a83dbce5a37916f6f241e786b341e739ccc1c7425038a4cb0b5aa23876f"
+        },
+        "arm64": {
+            "url": "https://github.com/redpanda-data/redpanda/releases/download/v25.1.2/rpk-windows-arm64.zip",
+            "hash": "f34809cdc5274eb9345ae2ded848f32c069e9f0a90478ed3feeae43917786b68"
+        }
+    },
+    "bin": "rpk.exe",
+    "checkver": {
+        "github": "https://github.com/redpanda-data/redpanda"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/redpanda-data/redpanda/releases/download/v$version/rpk-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/redpanda-data/redpanda/releases/download/v$version/rpk-windows-arm64.zip"
+            }
+        }
+    }
+}

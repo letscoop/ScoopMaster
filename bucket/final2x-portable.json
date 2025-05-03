@@ -1,5 +1,5 @@
 {
-    "version": "2024-07-01",
+    "version": "2024-12-14",
     "description": "2^x Image Super-Resolution",
     "homepage": "https://github.com/Tohrusky/Final2x",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-07-01/Final2x-windows-x64-unpacked.zip",
-            "hash": "36855cb1827bcad240f0d82e051c62d2c64de408924cafebd7ba46949f7b0d4c"
+            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-12-14/Final2x-windows-x64-unpacked.7z",
+            "hash": "1d718728e372002626c963b444002a9434a6e78816eb3bcb0cf8e67d6a39ad40"
         },
         "arm64": {
-            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-07-01/Final2x-windows-arm64-unpacked.zip",
-            "hash": "2d6dee79f15640663a764555a01b8214316fcbdce4baba4e18d1ae116aabb6a3"
+            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-12-14/Final2x-windows-arm64-unpacked.7z",
+            "hash": "4c8d0dc09d57987f60cc7558ab36fc732e94ebcdd3d3895783328c826ba5e377"
         }
     },
     "installer": {
@@ -33,15 +33,16 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/Tohrusky/Final2x/releases",
-        "regex": "/releases/tag/([\\d-]+)"
+        "jp": "$[0].assets[*].browser_download_url",
+        "regex": "/releases/download/([\\d-]+)/(?<arm64>Final2x-windows-arm64-unpacked\\.(?:zip|7z)).*?(?<x64>Final2x-windows-x64-unpacked\\.(?:zip|7z))"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Tohrusky/Final2x/releases/download/$version/Final2x-windows-x64-unpacked.zip"
+                "url": "https://github.com/Tohrusky/Final2x/releases/download/$version/$matchX64"
             },
             "arm64": {
-                "url": "https://github.com/Tohrusky/Final2x/releases/download/$version/Final2x-windows-arm64-unpacked.zip"
+                "url": "https://github.com/Tohrusky/Final2x/releases/download/$version/$matchArm64"
             }
         }
     }

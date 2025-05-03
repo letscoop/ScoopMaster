@@ -7,16 +7,15 @@
         "Import org-protocol by running 'regedt32 \"$dir\\org-protocol.reg\"'",
         "See: https://orgmode.org/worg/org-contrib/org-protocol.html"
     ],
-    "version": "31.315.20240904.04cfac4",
-    "url": "https://github.com/kiennq/emacs-build/releases/download/v31.315.20240904.04cfac4/emacs-04cfac4-ucrt-x86_64-mps.msix",
-    "hash": "8583dc336216031e9b19a6142ebe7176bcf92ee06e6d04fa19d170ac122e9fc8",
+    "version": "31.340.20250501.3b18648",
+    "url": "https://github.com/kiennq/emacs-build/releases/download/v31.340.20250501.3b18648/emacs-3b18648-ucrt-x86_64-mps.msix",
+    "hash": "31567fae6afd4660b6a420dfe41f39cd177be163f3dbf00ed9f0fb7b34a4cc7c",
     "bin": [
         "bin\\runemacs.exe",
         "bin\\emacs.exe",
         "bin\\emacsclient.exe",
         "bin\\emacsclientw.exe",
         "bin\\etags.exe",
-        "bin\\ctags.exe",
         "bin\\gzip.exe",
         [
             "bin\\x86_64-w64-mingw32-agrep.exe",

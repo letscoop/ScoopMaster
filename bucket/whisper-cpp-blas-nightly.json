@@ -1,29 +1,29 @@
 {
-    "version": "3055",
+    "version": "3933",
     "description": "(BLAS Nightly Version) whisper.cpp is high-performance inference of OpenAI's Whisper automatic speech recognition (ASR) model",
     "homepage": "https://github.com/ggerganov/whisper.cpp",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/ggerganov/whisper.cpp/actions/runs/10903513514/whisper-blas-bin-x64.zip",
-            "hash": "a661b6840e7f1bfd9ab94940e0be6aa9b4a1905779975f4652adb9b4d3773e62"
+            "url": "https://nightly.link/ggml-org/whisper.cpp/actions/runs/14795045784/whisper-blas-bin-x64.zip",
+            "hash": "9c5827eca65ed2a0fba7874b49eb5702f121ccdb93107e36de96417c2fe79416"
         },
         "32bit": {
-            "url": "https://nightly.link/ggerganov/whisper.cpp/actions/runs/10903513514/whisper-blas-bin-Win32.zip",
-            "hash": "21563711b5d12c64dbd2dffbcd928fdaf32203f6798c40b4ce08054de115eaf2"
+            "url": "https://nightly.link/ggml-org/whisper.cpp/actions/runs/14795045784/whisper-blas-bin-Win32.zip",
+            "hash": "a4ca19047e2279db7769a583b91db9a715341146bf497b1e07cc8c50d176847e"
         }
     },
     "bin": [
         [
-            "main.exe",
+            "whisper-cli.exe",
             "whisper-cpp"
         ],
         [
-            "bench.exe",
+            "whisper-bench.exe",
             "whisper-cpp-bench"
         ],
         [
-            "command.exe",
+            "whisper-command.exe",
             "whisper-cpp-command"
         ],
         [
@@ -31,12 +31,16 @@
             "whisper-cpp-quantize"
         ],
         [
-            "server.exe",
+            "whisper-server.exe",
             "whisper-cpp-server"
         ],
         [
-            "stream.exe",
+            "whisper-stream.exe",
             "whisper-cpp-stream"
+        ],
+        [
+            "whisper-talk-llama.exe",
+            "whisper-cpp-talk-llama"
         ]
     ],
     "checkver": {
@@ -46,10 +50,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/ggerganov/whisper.cpp/actions/runs/$matchRun/whisper-blas-bin-x64.zip"
+                "url": "https://nightly.link/ggml-org/whisper.cpp/actions/runs/$matchRun/whisper-blas-bin-x64.zip"
             },
             "32bit": {
-                "url": "https://nightly.link/ggerganov/whisper.cpp/actions/runs/$matchRun/whisper-blas-bin-Win32.zip"
+                "url": "https://nightly.link/ggml-org/whisper.cpp/actions/runs/$matchRun/whisper-blas-bin-Win32.zip"
             }
         }
     }

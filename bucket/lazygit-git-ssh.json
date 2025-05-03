@@ -1,0 +1,33 @@
+{
+    "version": "66caa25dcd4c247589e6adc71a6bc088678f3212",
+    "description": "Simple terminal UI for git commands (git ssh clone)",
+    "license": "MIT license",
+    "homepage": "https://github.com/jesseduffield/lazygit",
+    "notes": "Type lazygit to start\nIt can also be used in neovim by using floatterm or the lazygit wrapper",
+    "url": "https://raw.githubusercontent.com/ingenarel/ingenarel-scoop-bucket/refs/heads/master/decoy/lazygit-decoy",
+    "hash": "d72b2f3d693210bef2f2b0067df8b1112b39cb5483c0af2c73ea32e7257fe030",
+    "depends": [
+        "go",
+        "git"
+    ],
+    "pre_install": [
+        "echo '' 'trying to uninstall conflicts'",
+        "scoop uninstall lazygit lazygit-git",
+        "cd $dir",
+        "git clone --depth 1 --branch master git@github.com:jesseduffield/lazygit.git",
+        "echo 'building lazygit...' ''",
+        "cd lazygit",
+        "go build -ldflags '-s -w' .",
+        "echo 'Removing unneeded stuff' ''",
+        "cd $dir",
+        "Move-Item lazygit/lazygit.exe lazygit.exe",
+        "Remove-Item -Recurse -Force lazygit"
+    ],
+    "bin": [
+        "lazygit.exe"
+    ],
+    "conflicts": [
+        "lazygit",
+        "lazygit-git"
+    ]
+}

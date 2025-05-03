@@ -1,19 +1,19 @@
 {
-    "version": "6.0.6.0",
+    "version": "6.2.4.5",
     "description": "(Chinese version) A Todo list, checklist and task manager app.",
     "homepage": "https://dida365.com/",
     "license": {
-        "identifier": "Unknown",
+        "identifier": "Proprietary",
         "url": "https://dida365.com/tos"
     },
     "architecture": {
         "64bit": {
-            "url": "https://cdn.dida365.cn/download/win64/dida_win_setup_release_x64_6060.exe",
-            "hash": "339ea172272b7462e80844a3c2d45cee7f0e0c3b000ae9dbee399cdf9c647662"
+            "url": "https://cdn.dida365.cn/download/win64/dida_win_setup_release_x64_6245.exe",
+            "hash": "c231c0b62f652a38757ab0f1b44eddfb4496cca001c65448b236b1bfa838be55"
         },
         "32bit": {
-            "url": "https://cdn.dida365.cn/download/win/dida_win_setup_release_x86_6060.exe",
-            "hash": "f0b7d65f5a64d1d0c1d8420c201ba0cca51d9438fc99ad5f7f88ec82b2a528c2"
+            "url": "https://cdn.dida365.cn/download/win/dida_win_setup_release_x86_6245.exe",
+            "hash": "2d3c432ba0a32e0d1860a4838e86a2f1da7c83d1c102e62209d2262f61182b1b"
         }
     },
     "innosetup": true,

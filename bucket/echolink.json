@@ -1,0 +1,31 @@
+{
+    "version": "2.4.140",
+    "description": "EchoLink software allows licensed Amateur Radio stations to communicate with one another over the Internet, using streaming-audio technology.",
+    "homepage": "https://www.echolink.org/",
+    "license": "OpenSSL",
+    "url": "https://d34yfhzor7jtt3.cloudfront.net/EchoLinkSetup-2-4-140.exe",
+    "hash": "e6f9056b8c17ee25ebbf40a2a25b70f4db8ce254730d556dc0c06eba5049097b",
+    "installer": {
+        "script": [
+            "$extracted = \"$dir\\extracted\"",
+            "$msi = \"$dir\\msi\"",
+            "Expand-DarkArchive \"$dir\\$fname\" \"$extracted\"",
+            "Expand-MsiArchive \"$extracted\\AttachedContainer\\EchoLinkSetupProject.msi\" \"$msi\"",
+            "Move-Item \"$msi\\K1RFD\\EchoLink\\*\" \"$dir\" -Force",
+            "Remove-Item $extracted, $msi, \"$dir\\$fname\" -Force -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "EchoLink.exe",
+            "EchoLink"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.echolink.org/download.htm",
+        "regex": "Version ([\\d.]+)&nbsp;|%nbsp;Size"
+    },
+    "autoupdate": {
+        "url": "https://d34yfhzor7jtt3.cloudfront.net/EchoLinkSetup-$dashVersion.exe"
+    }
+}

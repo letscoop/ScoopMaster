@@ -1,5 +1,5 @@
 {
-    "version": "167172",
+    "version": "191279",
     "description": "Docker Desktop. Open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptops, data center VMs, or the cloud.",
     "homepage": "https://www.docker.com",
     "license": {
@@ -14,8 +14,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://desktop.docker.com/win/main/amd64/167172/Docker%20Desktop%20Installer.exe",
-            "hash": "fb4f24872f6c0a75b6260ea369a3f0744a13d1e567f5e7f8fb76dffb701e31c2"
+            "url": "https://desktop.docker.com/win/main/amd64/191279/Docker%20Desktop%20Installer.exe",
+            "hash": "93449c17f76ced7eb1aae6acd79bb25fe2cb741e5b4707e42066df11fecce20d"
         }
     },
     "installer": {

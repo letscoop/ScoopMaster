@@ -1,12 +1,12 @@
 {
     "architecture": {
         "32bit": {
-            "hash": "b6e9e2a5326380f361f7aff08549b50f836f18aabb0a151e4a9cb1937351c195",
-            "url": "https://cc.gdl.netease.com/NetEase_DD_Setup_1.0.35_100035_303303_x32.exe#/dl.7z"
+            "hash": "ba5534b2d83a82cc7da36de526c5cac73846c541691bc5869577671254af0242",
+            "url": "https://cc.gdl.netease.com/NetEase_DD_Setup_100063_309053_x32.exe#/dl.7z"
         },
         "64bit": {
-            "hash": "9c7825915482234c89caefeeae4476429fd76ff0fbb5220116ab24aed0a78b53",
-            "url": "https://cc.gdl.netease.com/NetEase_DD_Setup_1.0.35_100035_303304_x64.exe#/dl.7z"
+            "hash": "b79f5fea60c07b0ccb05e4d4d02239a6d8334320066a3bdea9bfb61b0fefa7dc",
+            "url": "https://cc.gdl.netease.com/NetEase_DD_Setup_100063_309055_x64.exe#/dl.7z"
         }
     },
     "autoupdate": {
@@ -43,5 +43,5 @@
             "网易DD"
         ]
     ],
-    "version": "1.0.35"
+    "version": "1.0.63"
 }

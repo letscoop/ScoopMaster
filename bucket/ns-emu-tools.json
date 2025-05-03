@@ -1,12 +1,12 @@
 {
-    "version": "0.5.0",
+    "version": "0.5.3",
     "description": "NsEmuTools 是一个用于安装/更新 NS 模拟器的工具",
     "homepage": "https://github.com/triwinds/ns-emu-tools",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/triwinds/ns-emu-tools/releases/download/0.5.0/NsEmuTools-dir.7z",
-            "hash": "3311a6b512e0242cda1d71cba0c7bbeb071a1d32b8ea0dc183e7eb8b7e1df346"
+            "url": "https://github.com/triwinds/ns-emu-tools/releases/download/0.5.3/NsEmuTools-dir.7z",
+            "hash": "f4f44bcf41d8f2e315bef653bf1c9573336740cb3956cd9273c12a34ca58ff18"
         }
     },
     "extract_dir": "NsEmuTools",

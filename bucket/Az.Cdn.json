@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:2703418b12fdb091e9d9cbc663dd15ae7ccd3e4c3f4a390bf30d436bea63e945d9353bdf2d1a655c0414330cecec087a654bb899a4561c20b93f074133586231",
+    "hash": "sha512:e2d5ef8d433b31d63fc9adab4c7b5d2adac6410f1972f5cecfec1070e81525ac676362c2177f6854f9df6c575bc1a068e698e9c6780dfd82628b6ca008a0c8e5",
     "description": "Microsoft Azure PowerShell: Cdn cmdlets",
     "psmodule": {
         "name": "Az.Cdn"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Cdn/3.2.2#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.Cdn/3.3.1#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "3.2.2"
+    "version": "3.3.1"
 }

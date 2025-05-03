@@ -1,12 +1,12 @@
 {
-    "version": "1.0.9",
+    "version": "1.0.16",
     "description": "Mod manager for RimWorld",
     "homepage": "https://github.com/RimSort/RimSort",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/RimSort/RimSort/releases/download/v1.0.9/RimSort-v1.0.9-Windows_x86_64.zip",
-            "hash": "ccf8623044dc1e81643f8ec908253cf4c3e75d262558adf6c1d15de410faf8e5"
+            "url": "https://github.com/RimSort/RimSort/releases/download/v1.0.16/RimSort-v1.0.16-Windows_x86_64.zip",
+            "hash": "a8a25a62ce448b4d7ae67407a0ee567c4cd01fe26b8dd6c9d76b0e08416fc4b1"
         }
     },
     "shortcuts": [
@@ -15,9 +15,7 @@
             "RimSort"
         ]
     ],
-    "persist": [
-        "User Files"
-    ],
+    "persist": "User Files",
     "checkver": {
         "github": "https://github.com/RimSort/RimSort"
     },

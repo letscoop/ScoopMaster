@@ -1,5 +1,5 @@
 {
-    "version": "1.76",
+    "version": "1.82",
     "homepage": "https://www.nirsoft.net/utils/chrome_cookies_view.html",
     "url": "https://www.nirsoft.net/utils/chromecookiesview.zip",
     "bin": "ChromeCookiesView.exe",
@@ -13,7 +13,7 @@
         "chromecookiesview_lng.ini",
         "chromecookiesview.cfg"
     ],
-    "hash": "d8555fcd69243037decf6b7d7b0b0d8d083477946236ccae78f485311f53e811",
+    "hash": "0b9ddd8c34765dbc00177f20ca58728f44bb6222ca9cca3f969662bbc49c7ad0",
     "description": "Alternative to the standard internal cookies viewer of Google Chrome",
     "license": "Freeware",
     "notes": "If this application is useful to you, please consider donating to NirSoft - https://www.nirsoft.net/donate.html",

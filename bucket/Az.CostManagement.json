@@ -1,5 +1,5 @@
 {
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.CostManagement/0.3.2#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.CostManagement/0.3.4#/mod.nupkg",
     "psmodule": {
         "name": "Az.CostManagement"
     },
@@ -9,8 +9,8 @@
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
     "homepage": "https://www.powershellgallery.com/packages/Az.CostManagement",
-    "version": "0.3.2",
-    "hash": "sha512:04211870b6a09458eedb00be2a9403c2f9ccd4c9cd66327b4c2377cfaa906a7e6756f9e0a1ff11c5c1a4d076833377ca21fe8e625104719ad0c7896669cf3bd2",
+    "version": "0.3.4",
+    "hash": "sha512:becd54bf4c76b90ad8863d9ad00f2abb6a7359c12a6835a08a8fccd473d07fc9a79a7a220f776719019190fa8f9efe329c61673a8a433013bb066cf3209199dd",
     "description": "Microsoft Azure PowerShell: Cost cmdlets",
     "autoupdate": {
         "url": "https://www.powershellgallery.com/api/v2/Package/Az.CostManagement/$version#/mod.nupkg",

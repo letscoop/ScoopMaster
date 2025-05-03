@@ -1,16 +1,16 @@
 {
-    "version": "5.6.2",
+    "version": "5.16.0",
     "description": "An Arknights game assissant",
     "homepage": "https://maa.plus/",
     "license": "AGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.6.2/MAA-v5.6.2-win-x64.zip",
-            "hash": "eee98fae48d000cc8a28d4b115ec2812f322b3dafa5cc7f53a887c755c04013a"
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.16.0/MAA-v5.16.0-win-x64.zip",
+            "hash": "98bb3d35d977686dd3d30a8d0903120e05310536a72c9c7c49117b1a90519569"
         },
         "arm64": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.6.2/MAA-v5.6.2-win-arm64.zip",
-            "hash": "a21aa363606d003cd3f4b9d9694317108fd5723846a12f749e8fbf11fd7b858f"
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.16.0/MAA-v5.16.0-win-arm64.zip",
+            "hash": "d8048916cae0dd700d8753f72aa9b3d7ace338304bdc94d3598e076afb9004ec"
         }
     },
     "suggest": {

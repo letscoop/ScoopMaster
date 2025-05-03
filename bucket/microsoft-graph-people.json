@@ -1,0 +1,26 @@
+{
+    "version": "2.27.0",
+    "description": "Microsoft Graph PowerShell Cmdlets",
+    "homepage": "https://github.com/microsoftgraph/msgraph-sdk-powershell",
+    "license": "https://aka.ms/devservicesagreement",
+    "depends": "microsoft-graph-authentication",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content_Types*.xml\" -Recurse",
+    "pre_uninstall": [
+        "$InstalledDeps = $manifest.depends | Where-Object { Test-Path \"$(appdir $_)\\current\" }",
+        "if (-not $InstalledDeps) { return }",
+        "if ($global) { scoop uninstall --global $InstalledDeps }",
+        "else { scoop uninstall $InstalledDeps }"
+    ],
+    "checkver": {
+        "regex": "<h2>([\\d\\.]+)</h2>",
+        "url": "https://www.powershellgallery.com/packages/microsoft.graph.people"
+    },
+    "autoupdate": {
+        "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.people.$version.nupkg"
+    },
+    "hash": "e76176dc0d02b5a2867d5fa0ba1db42d576a15965d4f669679c5d37b4a23ecee",
+    "url": "https://psg-prod-eastus.azureedge.net/packages/microsoft.graph.people.2.27.0.nupkg",
+    "psmodule": {
+        "name": "Microsoft.Graph.People"
+    }
+}

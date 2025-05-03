@@ -1,0 +1,37 @@
+{
+    "version": "2504-beta",
+    "description": "Rewrite of the Dependency Walker utility",
+    "homepage": "https://github.com/hfiref0x/WinDepends",
+    "license": "MIT",
+    "suggest": {
+        ".NET Desktop Runtime": [
+            "extras/windowsdesktop-runtime",
+            "extras/windowsdesktop-runtime-lts"
+        ]
+    },
+    "url": "https://github.com/hfiref0x/WinDepends/releases/download/2504-beta/WinDepends_v1.0.0.2504_beta_snapshot.zip",
+    "hash": "55edc345c9bedfa03b99b21f17c3b357c5c9b526ade9ee61e540f0f4925057fa",
+    "bin": "WinDepends.exe",
+    "shortcuts": [
+        [
+            "WinDepends.exe",
+            "WinDepends"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "$cont = (Invoke-RestMethod -UseBasicParsing -Method Get -Headers @{'Accept'='application/vnd.github+json';'Accept-Encoding'='gzip'} -MaximumRedirection 0 -Uri 'https://api.github.com/repos/hfiref0x/WinDepends/releases?per_page=1')[0]",
+            "$basever = $cont.tag_name.TrimStart('v')",
+            "foreach ($_ in $cont.assets) {",
+            "  if ($_.name -cmatch '^WinDepends_([\\w\\.-]+)(?<!_pdbs)\\.zip$') {",
+            "    Write-Output ('basever:\"' + $basever + '\"') ('filever:\"' + $matches[1] + '\"')",
+            "    break",
+            "  }",
+            "}"
+        ],
+        "regex": "basever:\"(.+)\"\\sfilever:\"(?<filever>.+)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/hfiref0x/WinDepends/releases/download/$version/WinDepends_$matchFilever.zip"
+    }
+}

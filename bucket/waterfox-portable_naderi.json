@@ -1,10 +1,10 @@
 {
-    "version": "6.0.19",
+    "version": "6.5.6",
     "description": "The 100% fresh, free-range, ethical browser (portable classic branch).",
     "homepage": "https://www.waterfox.net",
     "license": "MPL-2.0",
-    "url": "https://cdn1.waterfox.net/waterfox/releases/G6.0.19/WINNT_x86_64/Waterfox%20Setup%20G6.0.19.exe#/dl.7z",
-    "hash": "556e93eeadf05927102c9676cc93122f4b8afa6d0a921f96b9fced3caa7eab4a",
+    "url": "https://cdn1.waterfox.net/waterfox/releases/6.5.6/WINNT_x86_64/Waterfox%20Setup%206.5.6.exe#/dl.7z",
+    "hash": "dd567e68547dc740894fb8a8aa68e2f1ccc52db48a0d69951b544a8f3a839987",
     "extract_dir": "core",
     "bin": [
         [
@@ -26,6 +26,6 @@
         "regex": "/releases/tag/(?:v|V|g|G)?([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://cdn1.waterfox.net/waterfox/releases/G$version/WINNT_x86_64/Waterfox%20Setup%20G$version.exe#/dl.7z"
+        "url": "https://cdn1.waterfox.net/waterfox/releases/$version/WINNT_x86_64/Waterfox%20Setup%20$version.exe#/dl.7z"
     }
 }

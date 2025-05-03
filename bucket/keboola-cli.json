@@ -1,19 +1,19 @@
 {
-    "version": "2.33.0",
+    "version": "2.38.6",
     "architecture": {
         "64bit": {
-            "url": "https://cli-dist.keboola.com/zip/keboola-cli_2.33.0_windows_amd64.zip",
+            "url": "https://cli-dist.keboola.com/zip/keboola-cli_2.38.6_windows_amd64.zip",
             "bin": [
                 "kbc.exe"
             ],
-            "hash": "623f9020e7718295484eb32211ba9a5112d56118e52af0e1b5c34e8257db72cd"
+            "hash": "292ab5323dbba63f4e00ac51ab7257f38ad8fb4fb553a83aa22242df667b8e30"
         },
         "arm64": {
-            "url": "https://cli-dist.keboola.com/zip/keboola-cli_2.33.0_windows_arm64.zip",
+            "url": "https://cli-dist.keboola.com/zip/keboola-cli_2.38.6_windows_arm64.zip",
             "bin": [
                 "kbc.exe"
             ],
-            "hash": "c39f7c0b0fd3fc04800155adf3341be7e3fc9cda10d8467c6be1e9e3ae06bcd0"
+            "hash": "fcebd7ba070aff784a5c514c6916d3b74aac927c558d550160af0c61c17e25b2"
         }
     },
     "homepage": "https://www.keboola.com/product/cli",

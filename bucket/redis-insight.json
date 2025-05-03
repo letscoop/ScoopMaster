@@ -1,12 +1,12 @@
 {
-    "version": "2.56.0",
+    "version": "2.68.0",
     "description": "A visual tool that provides capabilities to design, develop and optimize your Redis application.",
     "homepage": "https://github.com/RedisInsight/RedisInsight",
     "license": "SSPL",
     "architecture": {
         "64bit": {
             "url": "https://s3.amazonaws.com/redisinsight.download/public/latest/Redis-Insight-win-installer.exe",
-            "hash": "33fd8f66faa678e6e30673f42903440de83f6eeed6dc380df2efc6e71a55a157"
+            "hash": "6431ced585c62ddbfa8cf4ec86e0c8faa6d53a8b5dd5a1dc0e29fb71177c4565"
         }
     },
     "installer": {

@@ -1,0 +1,20 @@
+{
+    "version": "1.28",
+    "description": "6502 cross-assembler compatible with the original MAC/65 macroassembler",
+    "homepage": "https://github.com/CycoPH/atasm",
+    "license": "GPL-2.0-only",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/CycoPH/atasm/releases/download/V1.28/atasm.exe",
+            "hash": "37e195e768555666fc480937278ac74dad07898f265d1b07b2b42af0ed90248a"
+        }
+    },
+    "bin": "atasm.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/CycoPH/atasm/releases/download/V$version/atasm.exe"
+    }
+}

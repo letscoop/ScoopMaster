@@ -1,0 +1,35 @@
+{
+    "version": "0.1.7",
+    "description": "CLI for printing license information of rust cargo projects to the terminal.",
+    "homepage": "https://github.com/WyvernIXTL/flicense-rs",
+    "license": "BSL-1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/WyvernIXTL/flicense-rs/releases/download/v0.1.7/flicense-v0.1.7-x86_64-pc-windows-msvc.7z",
+            "hash": "17d01455730353b47bcb8e562fc270cdf18226825d48263d6a8d2080e5da4158"
+        },
+        "32bit": {
+            "url": "https://github.com/WyvernIXTL/flicense-rs/releases/download/v0.1.7/flicense-v0.1.7-i686-pc-windows-msvc.7z",
+            "hash": "b6cbfe0fba10bca650d94918dfbea788ba3e3e499b49b1ec4ae4b37be441baa0"
+        },
+        "arm64": {
+            "url": "https://github.com/WyvernIXTL/flicense-rs/releases/download/v0.1.7/flicense-v0.1.7-aarch64-pc-windows-msvc.7z",
+            "hash": "98151e35b96206e10ad089abf158a4d4403d93d0284671c0fc701ad5db2c8ded"
+        }
+    },
+    "bin": "flicense.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/WyvernIXTL/flicense-rs/releases/download/v$version/flicense-v$version-x86_64-pc-windows-msvc.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/WyvernIXTL/flicense-rs/releases/download/v$version/flicense-v$version-i686-pc-windows-msvc.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/WyvernIXTL/flicense-rs/releases/download/v$version/flicense-v$version-aarch64-pc-windows-msvc.7z"
+            }
+        }
+    }
+}

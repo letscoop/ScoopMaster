@@ -1,10 +1,10 @@
 {
     "homepage": "https://dns-plus.net/#tcpmon",
     "description": "TCP Monitor Plus",
-    "version": "2.96",
+    "version": "3.05",
     "license": "Unknown",
-    "url": "https://dns-plus.net/download/tcpmon296.zip",
-    "hash": "51969c8cdf849dae72c76e79e3ad26944522b3c742d15f0c2800b98ce152899d",
+    "url": "https://dns-plus.net/download/tcpmon305.zip",
+    "hash": "c267bd6fadc3411d205a102bff2bf3d8cc473c123299fe73ffe90aaa07c3e38f",
     "bin": "tcpmon.exe",
     "shortcuts": [
         [

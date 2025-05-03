@@ -1,0 +1,33 @@
+{
+    "version": "8844c2920af87fb261e6b2bfd778cf7b5e99276f",
+    "description": "A Discord and SpaceBar :electron:-based client implemented without Discord API. (git ssh clone)",
+    "license": "MIT license",
+    "homepage": "https://github.com/SpacingBat3/WebCord",
+    "url": "https://raw.githubusercontent.com/ingenarel/ingenarel-scoop-bucket/refs/heads/master/decoy/webcord-decoy",
+    "hash": "763c707cf45a1fa106108fd833e84105bdf42ae108147ef090ab9d7a538a1ae0",
+    "depends": [
+        "git",
+        "nodejs"
+    ],
+    "pre_install": [
+        "echo '' 'trying to uninstall conflicts'",
+        "scoop uninstall webcord webcord-git",
+        "cd $dir",
+        "git clone --depth 1 --branch master git@github.com:SpacingBat3/WebCord.git",
+        "echo 'building webcord...' ''",
+        "cd webcord",
+        "npm ci",
+        "npm run package",
+        "echo 'Removing unneeded stuff' ''",
+        "cd $dir",
+        "Move-Item webcord/out/devel/WebCord-win32-x64 WebCord-win32-x64",
+        "Remove-Item -Recurse -Force webcord"
+    ],
+    "bin": [
+        "WebCord-win32-x64/webcord.exe"
+    ],
+    "conflicts": [
+        "webcord",
+        "webcord-git"
+    ]
+}

@@ -1,5 +1,5 @@
 {
-    "version": "113.0.5230.62",
+    "version": "118.0.5461.60",
     "description": "Opera. Fast, secure, easy-to-use browser.",
     "homepage": "https://www.opera.com/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download1.operacdn.com/pub/opera/desktop/113.0.5230.62/win/Opera_113.0.5230.62_Autoupdate_x64.exe#/dl.7z",
-            "hash": "ddfa9fe3b21777502b23ad5ec86b504a7cb3a9c53158cd448b45758c34a961e3"
+            "url": "https://download1.operacdn.com/pub/opera/desktop/118.0.5461.60/win/Opera_118.0.5461.60_Autoupdate_x64.exe#/dl.7z",
+            "hash": "e0defcf8ecf97e8a8d549569622c5b6dde0077c84ce1c919c4b46bccd9c71bd4"
         },
         "32bit": {
-            "url": "https://download1.operacdn.com/pub/opera/desktop/113.0.5230.62/win/Opera_113.0.5230.62_Autoupdate.exe#/dl.7z",
-            "hash": "0058feb7a3a6b48dc8a210bba6b76e2e00ff61d9e280d877af7a6c1046c615fc"
+            "url": "https://download1.operacdn.com/pub/opera/desktop/118.0.5461.60/win/Opera_118.0.5461.60_Autoupdate.exe#/dl.7z",
+            "hash": "96cfdc6a219d4aedf6c4581dd50e24ae65eb4555f1946adca877260ec181f14b"
         }
     },
     "installer": {

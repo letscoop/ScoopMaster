@@ -1,10 +1,10 @@
 {
-    "version": "5.4.1",
+    "version": "5.5.2",
     "description": "The ultimate data recovery software",
     "homepage": "https://www.isobuster.com/",
     "license": "Shareware",
     "url": "https://www.isobuster.com/dl.php?d=isobuster.com&v=1&l=0#/isobuster_install.exe",
-    "hash": "bcb235bb6099ab98966229b34c4da6fa2a370042bbe8650e4f4d7ce4d7578816",
+    "hash": "d32ebdce150409c6e0ec049d970996b23b1692dfd96e38b3ad9c252d5f73755b",
     "innosetup": true,
     "bin": "isobuster.exe",
     "shortcuts": [

@@ -1,0 +1,35 @@
+{
+    "version": "2025.1.34.0",
+    "description": "A remote connection management software for individual, MSPs, and IT professionals.",
+    "homepage": "https://devolutions.net/remote-desktop-manager/",
+    "license": "Proprietary",
+    "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.Bin.2025.1.34.0.zip",
+    "hash": "15eb49d364c43bcb6dce7b1dfe307c9a4ec12d3ead5bca4e70a0880404af0f70",
+    "architecture": {
+        "64bit": {
+            "shortcuts": [
+                [
+                    "RemoteDesktopManager_x64.exe",
+                    "Remote Desktop Manager"
+                ]
+            ]
+        },
+        "arm64": {
+            "shortcuts": [
+                [
+                    "RemoteDesktopManager_ARM64.exe",
+                    "Remote Desktop Manager"
+                ]
+            ]
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\Devolutions.Updater*\" -Force",
+    "notes": "Remote Desktop Manager is NOT portable.",
+    "checkver": {
+        "url": "https://devolutions.net/products.htm/",
+        "regex": "RDMFree.Version=([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://cdn.devolutions.net/download/Devolutions.RemoteDesktopManager.Bin.$version.zip"
+    }
+}

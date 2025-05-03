@@ -1,28 +1,19 @@
 {
-    "version": "4.36.0",
-    "description": "Redpanda Connect (Originally Benthos) is a high performance and resilient stream processor, able to connect various sources and sinks",
-    "homepage": "https://docs.redpanda.com/redpanda-connect/about/",
-    "license": {
-        "identifier": "Apache-2.0|RCL",
-        "url": "https://github.com/redpanda-data/connect/tree/main/licenses"
-    },
+    "version": "4.54.1",
+    "description": "Fancy stream processing made operationally mundane",
+    "homepage": "https://docs.redpanda.com/redpanda-connect",
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/redpanda-data/connect/releases/download/v4.36.0/redpanda-connect_4.36.0_windows_amd64.tar.gz",
-            "hash": "48501481356f5a8654941642bcc92091214a86b4eb03ed34fddbbbd4c5e40522"
+            "url": "https://github.com/redpanda-data/connect/releases/download/v4.54.1/redpanda-connect_4.54.1_windows_amd64.tar.gz",
+            "hash": "96762385bf9f38e1a209d13008bc561172888844e453d0274778895b993e63bc"
         },
         "arm64": {
-            "url": "https://github.com/redpanda-data/connect/releases/download/v4.36.0/redpanda-connect_4.36.0_windows_arm64.tar.gz",
-            "hash": "8afe0f3ec07c961ba135c2ace5fad7c0a65b5c4251d0c9c01eab52e9476f05be"
+            "url": "https://github.com/redpanda-data/connect/releases/download/v4.54.1/redpanda-connect_4.54.1_windows_arm64.tar.gz",
+            "hash": "02403f4b328f5634eb748dfdd12b82af7e04b0c33a36da1f3376b28670c2bcd3"
         }
     },
-    "bin": [
-        "redpanda-connect.exe",
-        [
-            "redpanda-connect.exe",
-            "benthos"
-        ]
-    ],
+    "bin": "redpanda-connect.exe",
     "checkver": {
         "github": "https://github.com/redpanda-data/connect"
     },
@@ -34,9 +25,6 @@
             "arm64": {
                 "url": "https://github.com/redpanda-data/connect/releases/download/v$version/redpanda-connect_$version_windows_arm64.tar.gz"
             }
-        },
-        "hash": {
-            "url": "$baseurl/redpanda-connect_$version_checksums.txt"
         }
     }
 }

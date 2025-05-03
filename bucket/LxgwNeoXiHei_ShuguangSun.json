@@ -1,12 +1,12 @@
 {
-    "version": "1.206",
-    "description": "霞鹜新晰黑",
-    "homepage": "https://github.com/lxgw/LxgwNeoXiHei",
-    "license": "OFL-1.1",
-    "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.206/LXGWNeoXiHei.ttf",
-    "hash": "8ec2d02c3e5d7f382e16493b437a077b925dea1f9703f42483d32acaa1d0f2fe",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v$version/LXGWNeoXiHei.ttf"
-    }
+  "version": "1.216.1",
+  "description": "霞鹜新晰黑",
+  "homepage": "https://github.com/lxgw/LxgwNeoXiHei",
+  "license": "OFL-1.1",
+  "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.216.1/LXGWNeoXiHei.ttf",
+  "hash": "c30b02192672fd607b4016d16a6b34e83180ea8ca9b0f2933744c66255f78d03",
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v$version/LXGWNeoXiHei.ttf"
+  }
 }

@@ -1,13 +1,13 @@
 {
-    "version": "1.7.5",
+    "version": "1.7.11",
     "description": "qETRC is a train graphing software",
     "homepage": "https://github.com/CDK6182CHR/qETRC",
     "license": "GPL-3.0-only",
     "notes": "Train graphing software based on pyETRC; written by XEP.",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CDK6182CHR/qETRC/releases/download/V1.7.5/qETRC-win64_V1.7.5.7z",
-            "hash": "16fd5d2f283874b1c60f42b657216b1597a32e1c8b1993cdaa0818306e067e18",
+            "url": "https://github.com/CDK6182CHR/qETRC/releases/download/V1.7.11/qETRC-win64_V1.7.11.7z",
+            "hash": "fa9b9b445cad4558dd098858a6a79ba42a557fc7779d8acf5da15825333aa1c3",
             "extract_dir": "win64"
         }
     },

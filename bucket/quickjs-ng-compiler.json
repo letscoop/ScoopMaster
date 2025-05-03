@@ -1,0 +1,35 @@
+{
+    "homepage": "https://github.com/quickjs-ng/quickjs",
+    "version": "0.10.0",
+    "description": "The Next Generation QuickJS JavaScript Engine",
+    "license": "MIT",
+    "notes": "Please run 'qjsc-ng --help' in the Windows Terminal for more information.",
+    "pre_install": "Get-ChildItem \"$dir\\qjsc-windows-*.exe\" | Rename-Item -NewName 'qjsc.exe'",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/quickjs-ng/quickjs/releases/download/v0.10.0/qjsc-windows-x86_64.exe",
+            "hash": "ab303c60beccd3fb482804bcb3adcb7aaee09bf35c61ff417fe7bda980c68f12"
+        },
+        "32bit": {
+            "url": "https://github.com/quickjs-ng/quickjs/releases/download/v0.10.0/qjsc-windows-x86.exe",
+            "hash": "c208c74fd2ca6672d7c61c875cc186058acf7c3411d4e01240633740fa8385b2"
+        }
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/quickjs-ng/quickjs/releases/download/v$version/qjsc-windows-x86_64.exe"
+            },
+            "32bit": {
+                "url": "https://github.com/quickjs-ng/quickjs/releases/download/v$version/qjsc-windows-x86.exe"
+            }
+        }
+    },
+    "bin": [
+        [
+            "qjsc.exe",
+            "qjsc-ng"
+        ]
+    ]
+}

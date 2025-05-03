@@ -1,0 +1,24 @@
+{
+    "version": "0.0.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-windows-amd64.tar.gz",
+            "bin": [
+                "atun.exe"
+            ],
+            "hash": "3fe47e179fab9e0c4ef292d2003572551d1bb7a865927e9a04eee0b6260c3259"
+        },
+        "arm64": {
+            "url": "https://github.com/AutomationD/atun/releases/download/v0.0.0/atun-windows-arm64.tar.gz",
+            "bin": [
+                "atun.exe"
+            ],
+            "hash": "23471296fdad15f1e95ec125474595d5742ef0182a1034632a333f01519b10ec"
+        }
+    },
+    "license": "Apache License 2.0",
+    "description": "Atun is a simple SSM/SSH tunnel manager",
+    "depends": [
+        "python"
+    ]
+}

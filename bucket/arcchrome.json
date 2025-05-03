@@ -1,0 +1,41 @@
+{
+    "version": "1.50.1.62002",
+    "description": "A browser that doesn’t just meet your needs — it anticipates them.",
+    "homepage": "https://arc.net/downloaded",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://arc.net/privacy"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.arc.net/windows/prod/1.50.1.62002/Arc.x64.msix#/dl.7z",
+            "hash": "079550ccec02d1dac32dd96e4e372fab7b91418b3e1c826f9a3a04e9a0f9df4b"
+        }
+    },
+    "bin": [
+        [
+            "Arc.exe",
+            "Arc Browser"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Arc.exe",
+            "Arc Browser"
+        ]
+    ],
+    "checkver": {
+        "url": "https://releases.arc.net/windows/prod/Arc.appinstaller",
+        "regex": "(?s)Version=\"([\\d.]+)\".*?Version=\"([\\d.]+)\".*?Version=\"([\\d.]+)\""
+    },
+    "autoupdate": {
+        "hash": {
+            "mode": "download"
+        },
+        "architecture": {
+            "64bit": {
+                "url": "https://releases.arc.net/windows/prod/$version/Arc.x64.msix#/dl.7z"
+            }
+        }
+    }
+}

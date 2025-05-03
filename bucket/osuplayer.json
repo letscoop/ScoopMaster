@@ -1,16 +1,16 @@
 {
-    "version": "2024.913.0",
+    "version": "2025.312.0",
     "homepage": "https://github.com/Founntain/osuplayer",
     "description": "Official osu!player repository. osu!player is a music player for the game osu! made by Dean 'peppy' Herbert. Written in the cross-platform framework AvaloniaUI",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Founntain/osuplayer/releases/download/2024.913.0/win-x64.zip",
-            "hash": "0c70a91426361c2e66def34fbe27937b45e09c53ecc6b0706ff7fe20233f1b71"
+            "url": "https://github.com/Founntain/osuplayer/releases/download/2025.312.0/win-x64.zip",
+            "hash": "62fb284a9df2932a53b9654b32331c08cc31e66abb419535c195ead83c7c1ce2"
         },
         "32bit": {
-            "url": "https://github.com/Founntain/osuplayer/releases/download/2024.913.0/win-x86.zip",
-            "hash": "9510114bd0ce7ab448738ad8093822323c6bdf0bec503a33b3d183339ad0b01e"
+            "url": "https://github.com/Founntain/osuplayer/releases/download/2025.312.0/win-x86.zip",
+            "hash": "9b10d748af2e1cb489b786fed1309bda0f911649a92bfc943502417c701911e4"
         }
     },
     "shortcuts": [

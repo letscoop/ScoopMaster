@@ -4,7 +4,7 @@
         "replace": "${ver}",
         "regex": "(?i)<d:Version>(?<ver>[^<]+)<.d:Version>"
     },
-    "hash": "sha512:7d34c71d3ad6e8121ed72b29a4070e29482ed853e3418845d199140e819ca6f05e33bc2c8ffc6ee8f6912deb0404d12ec04df908627907a06ed6c71850e8cd3d",
+    "hash": "sha512:6fcdc9fd296a1cadfa5c04b05be6d856be6a80a0f54b71fc17409d675f99ce93d0c605a8ad020e4e8c7649a3625e7a365370f58a585d8db4cddfb1af238fe3e5",
     "description": "Microsoft Azure PowerShell - Event Hubs service cmdlets for Azure Resource Manager in Windows PowerShell and PowerShell Core.  For more information on Event Hubs, please visit the following: https://learn.microsoft.com/azure/event-hubs/",
     "psmodule": {
         "name": "Az.EventHub"
@@ -21,7 +21,7 @@
         "identifier": "Refer to Webpage",
         "url": "https://aka.ms/azps-license"
     },
-    "url": "https://www.powershellgallery.com/api/v2/Package/Az.EventHub/5.0.0#/mod.nupkg",
+    "url": "https://www.powershellgallery.com/api/v2/Package/Az.EventHub/5.2.0#/mod.nupkg",
     "depends": "Az.Accounts",
-    "version": "5.0.0"
+    "version": "5.2.0"
 }

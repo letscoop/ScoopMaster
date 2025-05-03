@@ -1,0 +1,43 @@
+{
+    "version": "3.22.8.105745",
+    "license": "Proprietary",
+    "description": "Spark is the perfect tool for businesses, allowing you to compose, delegate and manage emails directly with your colleagues",
+    "homepage": "https://www.sparkmailapp.com/",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sparkmailapp.com/Spark3/win/dist/3.22.8.105745/Spark.exe",
+            "hash": "c1113495c8c0e75f41237c517fed1b86d538cc198bd8cf581e34f4f9660857a5",
+            "installer": {
+                "args": [
+                    "/s",
+                    "/S",
+                    "/q",
+                    "/Q",
+                    "/quiet",
+                    "/qn",
+                    "/silent",
+                    "/SILENT"
+                ]
+            },
+            "uninstaller": {
+                "script": "$p = \"$env:LOCALAPPDATA\\Programs\\SparkDesktop\\Uninstall Spark Desktop.exe\"; Invoke-Expression \"& '$p' /currentuser /S\""
+            }
+        }
+    },
+    "pre_uninstall": [
+        "$bucket=(scoop bucket list | where-Object { $_.Source -match 'Scoop-Store'})[0].Name",
+        ". \"$bucketsdir\\$bucket\\scripts\\utils.ps1\"",
+        "stop_process"
+    ],
+    "checkver": {
+        "url": "https://downloads.sparkmailapp.com/Spark3/win/dist/appcast.xml",
+        "regex": "Version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sparkmailapp.com/Spark3/win/dist/$version/Spark.exe"
+            }
+        }
+    }
+}

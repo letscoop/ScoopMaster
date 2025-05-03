@@ -1,29 +1,39 @@
 {
-    "version": "7.67",
-    "homepage": "https://github.com/rigaya/NVEnc",
-    "description": "Transcoding software using NVENC of NVIDIA.",
-    "license": "MIT",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/rigaya/NVEnc/releases/download/7.67/NVEncC_7.67_Win32.7z",
-            "hash": "643d447707b0a2cd024f6a694b01f7a762f353a6b9c746ea3d41674050dd3fec"
-        },
-        "64bit": {
-            "url": "https://github.com/rigaya/NVEnc/releases/download/7.67/NVEncC_7.67_x64.7z",
-            "hash": "26278ec1c081c8342666aeffe86f6f1cc0e665999b75b6e55b51e486902deb57",
-            "pre_install": "Rename-Item \"$dir\\NVEncC64.exe\" 'NVEncC.exe'"
-        }
+  "homepage": "https://github.com/rigaya/NVEnc",
+  "description": "Transcoding software using NVENC of NVIDIA.",
+  "version": "8.04",
+  "license": "MIT",
+  "architecture": {
+    "32bit": {
+      "url": "https://github.com/rigaya/NVEnc/releases/download/8.04/NVEncC_8.04_Win32.7z",
+      "hash": "f249c799ad5d38b48d9da9fc3289abd06fdd798094fe09b58283400114d26f42",
+      "bin": [
+        [
+          "NVEncC.exe",
+          "nvencc"
+        ]
+      ]
     },
-    "bin": "NVEncC.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/rigaya/NVEnc/releases/download/$version/NVEncC_$version_Win32.7z"
-            },
-            "64bit": {
-                "url": "https://github.com/rigaya/NVEnc/releases/download/$version/NVEncC_$version_x64.7z"
-            }
-        }
+    "64bit": {
+      "url": "https://github.com/rigaya/NVEnc/releases/download/8.04/NVEncC_8.04_x64.7z",
+      "hash": "0a814a07f9753c006d1dc1419783885e85cb89efeb3548e26f9eb206758bdfd7",
+      "bin": [
+        [
+          "NVEncC64.exe",
+          "nvencc"
+        ]
+      ]
     }
+  },
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "https://github.com/rigaya/NVEnc/releases/download/$version/NVEncC_$version_Win32.7z"
+      },
+      "64bit": {
+        "url": "https://github.com/rigaya/NVEnc/releases/download/$version/NVEncC_$version_x64.7z"
+      }
+    }
+  }
 }

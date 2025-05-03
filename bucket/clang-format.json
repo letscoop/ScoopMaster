@@ -1,0 +1,46 @@
+{
+    "version": "20.1.3",
+    "description": "Clang-Format is an LLVM-based code formatting tool",
+    "homepage": "https://pypi.org/project/clang-format/",
+    "license": "Apache-2.0",
+    "depends": "python",
+    "architecture": {
+        "64bit": {
+            "url": "https://files.pythonhosted.org/packages/py2.py3/c/clang_format/clang_format-20.1.3-py2.py3-none-win_amd64.whl",
+            "hash": "2584cac1070c058432c6374bac0099464e8c2f5e61bbe51cd8ad58c883e0911f"
+        },
+        "32bit": {
+            "url": "https://files.pythonhosted.org/packages/py2.py3/c/clang_format/clang_format-20.1.3-py2.py3-none-win32.whl",
+            "hash": "8ab1c0fe45e6baa34910cc9195160a2854ac71ae40d6f83ae5b4dc467969d1ab"
+        }
+    },
+    "installer": {
+        "script": [
+            "Push-Location \"$dir\"",
+            "python -m venv cf",
+            ".\\cf\\Scripts\\activate",
+            "try {",
+            "    python -m pip install \"$fname\"",
+            "}",
+            "finally {",
+            "    Remove-Item \"$fname\"",
+            "    deactivate",
+            "    Pop-Location",
+            "}"
+        ]
+    },
+    "bin": "cf\\Scripts\\clang-format.exe",
+    "checkver": {
+        "github": "https://github.com/ssciwr/clang-format-wheel/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://files.pythonhosted.org/packages/py2.py3/c/clang_format/clang_format-$version-py2.py3-none-win32.whl"
+            },
+            "64bit": {
+                "url": "https://files.pythonhosted.org/packages/py2.py3/c/clang_format/clang_format-$version-py2.py3-none-win_amd64.whl"
+            }
+        }
+    }
+}

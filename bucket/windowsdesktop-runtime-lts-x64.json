@@ -1,5 +1,5 @@
 {
-    "version": "8.0.8",
+    "version": "8.0.14",
     "description": "Microsoft .NET LTS Desktop Runtime",
     "homepage": "https://dotnet.microsoft.com/download/dotnet",
     "license": {
@@ -9,8 +9,8 @@
     "notes": "You can now remove this installer with 'scoop uninstall windowsdesktop-runtime-lts-x64'",
     "architecture": {
         "64bit": {
-            "url": "https://download.visualstudio.microsoft.com/download/pr/907765b0-2bf8-494e-93aa-5ef9553c5d68/a9308dc010617e6716c0e6abd53b05ce/windowsdesktop-runtime-8.0.8-win-x64.exe",
-            "hash": "sha512:27484ffb1e9ce5e6290cda8f5f49563cf4a9e2692aa57429fcd0d3de4f30fc2fce204b1b120349ed50712e95d3fa51037ebaf9b7fd60c41856857b1372e0eac7"
+            "url": "https://download.visualstudio.microsoft.com/download/pr/64760cc4-228f-48e4-b57d-55f882dedc69/b181f927cb937ef06fbb6eb41e81fbd0/windowsdesktop-runtime-8.0.14-win-x64.exe",
+            "hash": "sha512:3997c2586be132c741176473f80d304c51d3bdd7d1f8987b20ab648cdd27f0c57141af0064eaf5b6a2cacc51f6872ee159e0171704dad222dbbfbedac49e553b"
         }
     },
     "pre_install": "if (!(is_admin)) { error 'Admin privileges are required.'; break }",

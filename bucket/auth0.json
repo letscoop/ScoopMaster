@@ -1,0 +1,25 @@
+{
+    "version": "1.12.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/auth0/auth0-cli/releases/download/v1.12.0/auth0-cli_1.12.0_Windows_x86_64.zip",
+            "bin": [
+                "auth0.exe"
+            ],
+            "hash": "19310b5b4eb20118db2ea39f17d95a966f6eb0ada42252770c3da8a82642ec03"
+        },
+        "arm64": {
+            "url": "https://github.com/auth0/auth0-cli/releases/download/v1.12.0/auth0-cli_1.12.0_Windows_arm64.zip",
+            "bin": [
+                "auth0.exe"
+            ],
+            "hash": "9d86672a58580e8c91af962ccd5bb6362a70b339177098479e85e0a436eb1b0c"
+        }
+    },
+    "homepage": "https://auth0.github.io/auth0-cli",
+    "license": "MIT",
+    "description": "Build, manage and test your Auth0 integrations from the command line",
+    "post_install": [
+        "Write-Host 'Thanks for installing the Auth0 CLI'"
+    ]
+}

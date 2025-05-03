@@ -1,0 +1,42 @@
+{
+    "version": "136.7103.56",
+    "description": "Browser aiming for safer, faster, and more stable way for all users to experience the web.",
+    "license": "BSD-3-Clause",
+    "homepage": "https://www.chromium.org",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/macchrome/winchrome/releases/download/v136.7103.56-M136.0.7103.56-r1440670-Win64/ungoogled-chromium-136.0.7103.56-1_Win64.7z",
+            "hash": "b0ed940b074a36f4cc71a6a229af70d357acb5567f252901e56f578d84374b9c"
+        }
+    },
+    "bin": [
+        [
+            "chrome.exe",
+            "chromium-marmaduke-dev"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "chrome.exe",
+            "Chromium (Marmaduke-dev)"
+        ]
+    ],
+    "installer": {
+        "script": [
+            "Get-ChildItem \"$dir\\*chromium*\\*\" -Recurse | Move-Item -Destination \"$dir\"",
+            "Remove-Item -Path \"$dir\\*chromium*\""
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repos/macchrome/winchrome/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v(?<version>[\\d\\.]+)-M(?<majorversion>[\\d\\.]+)-(?<otherversion>[\\w\\d\\-\\.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/macchrome/winchrome/releases/download/v$version-M$matchMajorversion-$matchOtherversion/ungoogled-chromium-$matchMajorversion-1_Win64.7z"
+            }
+        }
+    }
+}

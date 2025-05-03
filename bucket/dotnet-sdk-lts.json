@@ -1,5 +1,5 @@
 {
-    "version": "8.0.401",
+    "version": "8.0.408",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "homepage": "https://www.microsoft.com/net/",
     "license": "MIT",
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.401/dotnet-sdk-8.0.401-win-x64.zip",
-            "hash": "sha512:384c473811118f47d50e937e29bb4f03413a07dc859c30486b1129d99ac80a61527c77baceafcf1ce42533ab307d65b476e5d0d7c503f930440456a0f75b92dd"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.408/dotnet-sdk-8.0.408-win-x64.zip",
+            "hash": "sha512:49ff4363663d28b8f55b7af4cad4cb469cf9ff1bc6e826117b2381180a7c5e7c8d5aaefd02c7b5ae06c87609816858bbf554c68a8308ac6260d3d5b432123272"
         },
         "32bit": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.401/dotnet-sdk-8.0.401-win-x86.zip",
-            "hash": "sha512:ee5e467d9285843cf4b68913c1dffc40ee0f828aa39b75e60cd9514d08d7c1a0c809e282ea4d0cd2a18376f80298fc05680f26a96d11247f7abf1347c8fa4671"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.408/dotnet-sdk-8.0.408-win-x86.zip",
+            "hash": "sha512:6c7bb3c815cfcf8640448299b00dabc58fa6f074c6d3b88bcdeb79dc01c165e63df2ae26fcb566a0e7bb9477140e910fc1d2d19b495a4d2127b90c2344ff0752"
         },
         "arm64": {
-            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.401/dotnet-sdk-8.0.401-win-arm64.zip",
-            "hash": "sha512:5e4ab2b0d4623796a5aa9d209084b9bd19a5d5db2c9165b9be0cd8dc2953a73a26e681c7c7f5816e0b96a771f91995d7ee9949ff578da8f43990f3bd9c203195"
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/8.0.408/dotnet-sdk-8.0.408-win-arm64.zip",
+            "hash": "sha512:d20039dbc61d684a5fccc081d9112c59fe36024831f32ed521b9bba0198e19a2d698a8fc113825f46ceb0d3c96e7de663eb8005ebdcaa48fbf2cd09467428762"
         }
     },
     "env_add_path": ".",

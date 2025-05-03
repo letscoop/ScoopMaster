@@ -1,0 +1,32 @@
+{
+    "version": "v0.3.0-beta36",
+    "description": "PDF导航（大纲/目录）添加工具",
+    "homepage": "https://github.com/chroming/pdfdir",
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/chroming/pdfdir/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/chroming/pdfdir/releases/download/v0.3.0-beta36/pdfdir_win.zip",
+            "hash": "f84e2c00d00f7d43e996a7ca35af2153e368cb948661dac489edb85a0e7f3b21"
+        }
+    },
+    "shortcuts": [
+        [
+            "pdfdir.exe",
+            "pdfdir"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/chroming/pdfdir/releases/latest",
+        "jsonpath": "$.name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/chroming/pdfdir/releases/download/$version/pdfdir_win.zip"
+            }
+        }
+    }
+}

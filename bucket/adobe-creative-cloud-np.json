@@ -1,11 +1,19 @@
 {
    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-   "version": "6.1.0.587",
+   "version": "6.6.0.611",
    "description": "This is a collection of 20+ desktop and mobile apps and services for photography, design, video, web, UX, and more.",
    "homepage": "https://www.adobe.com/creativecloud.html",
    "license": "Proprietary",
-   "url": "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/6_1_0/win64/ACCCx6_1_0_587.zip",
-   "hash": "044382c501f0f9f4b0d8d0ab8293ba30935cd59f1e16a79231309947d3bac259",
+   "architecture": {
+      "64bit": {
+         "url": "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/6.6.0/611/win64/ACCCx6_6_0_611.zip",
+         "hash": "2dd7afe55aa5bd19e1431a9e15658cefa13add2592394a423ac48c4e9faaf022"
+      },
+      "arm64": {
+         "url": "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/6.6.0/611/winarm64/ACCCx6_6_0_611.zip",
+         "hash": "cf24de1a37bf7afb53873e86d40e9e456b6ab82c71b40f71f5fa496e593e645e"
+      }
+   },
    "installer": {
       "script": "Invoke-ExternalCommand \"$dir\\Set-up.exe\" -RunAs > $null"
    },
@@ -21,6 +29,13 @@
       "regex": "Version\\s*(\\d+(?:\\.\\d+)+),?\\s+(?:(?:was\\s+)?released|for\\s+Windows|\\(Windows)"
    },
    "autoupdate": {
-      "url": "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/$majorVersion_$minorVersion_$patchVersion/win64/ACCCx$underscoreVersion.zip"
+      "architecture": {
+         "64bit": {
+            "url": "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/$majorVersion.$minorVersion.$patchVersion/$buildVersion/win64/ACCCx$underscoreVersion.zip"
+         },
+         "arm64": {
+            "url": "https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/$majorVersion.$minorVersion.$patchVersion/$buildVersion/winarm64/ACCCx$underscoreVersion.zip"
+         }
+      }
    }
 }

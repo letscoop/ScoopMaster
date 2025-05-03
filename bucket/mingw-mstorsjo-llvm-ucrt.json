@@ -1,23 +1,23 @@
 {
-    "version": "19.1.0-20240917",
+    "version": "20.1.4-20250430",
     "description": "LLVM toolchain based on mingw-w64. (UCRT, mstorsjo build)",
     "homepage": "https://github.com/mstorsjo/llvm-mingw/",
     "license": "GPL-3.0-or-later,ZPL-2.1,Apache-2.0 WITH LLVM-exception,ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-x86_64.zip",
-            "hash": "7e11dfc9c576046dd2eb37187b6f2fd1ace8f2e2259ee6434174262d62ecaee2",
-            "extract_dir": "llvm-mingw-20240917-ucrt-x86_64"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250430/llvm-mingw-20250430-ucrt-x86_64.zip",
+            "hash": "fc98793537a5c61b159a366c61c7e6eba1a4bb4835ab69bc3683c8373f62105c",
+            "extract_dir": "llvm-mingw-20250430-ucrt-x86_64"
         },
         "32bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-i686.zip",
-            "hash": "ea45344a082098bb57623a6e1fa9b461a6c51e415770ea696d3527e0c0deb6ec",
-            "extract_dir": "llvm-mingw-20240917-ucrt-i686"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250430/llvm-mingw-20250430-ucrt-i686.zip",
+            "hash": "cd94eae13abb1612e4b04ede65b699a0c5247135ea11ff9e5580088ad9b278f4",
+            "extract_dir": "llvm-mingw-20250430-ucrt-i686"
         },
         "arm64": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20240917/llvm-mingw-20240917-ucrt-aarch64.zip",
-            "hash": "14d662fc8d7b40f0cfd062ef5f3e8cbbc1b643004d9a20d1eb9b1e212e1782ef",
-            "extract_dir": "llvm-mingw-20240917-ucrt-aarch64"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250430/llvm-mingw-20250430-ucrt-aarch64.zip",
+            "hash": "46be741db12b2ba4b0f0f8f22bef2bd86780de4b139092f3413664b5a8b42337",
+            "extract_dir": "llvm-mingw-20250430-ucrt-aarch64"
         }
     },
     "post_install": "Copy-Item \"$dir\\bin\\mingw32-make.exe\" \"$dir\\bin\\make.exe\"",

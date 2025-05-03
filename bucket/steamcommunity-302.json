@@ -1,43 +1,21 @@
 {
-    "version": "12.1.43",
+    "version": "13.0.04",
     "description": "Reverse proxy tool to access Steam Community in mainland China.",
-    "homepage": "https://www.dogfight360.com/blog/686/",
+    "homepage": "https://www.dogfight360.com/blog/18682/",
     "license": "Freeware",
-    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2024/09/steamcommunity_302_V12.1.43_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#/dl",
-    "hash": "61df11029b684dc0853effe2430edadae3fbd317912aba63ad68bc73c4a98fb3",
+    "url": "https://www.dogfight360.com/blog/wp-content/uploads/2025/04/steamcommunity_302_AMD64_V13.0.04.zip#/dl",
+    "hash": "4a9ee4b3e5bde869619292f148e391723e4801f35c51ec282f6b5441e477cbb1",
     "installer": {
         "script": [
-            "7z x \"$dir/dl\" -o\"$dir\" -pdogfight360",
+            "7z x \"$dir/dl\" -o\"$dir\"",
             "Get-ChildItem \"$dir\\steamcommunity_302*\" -Directory | ?{$_.psiscontainer -eq $true} | Get-ChildItem | Move-Item -Destination \"$dir\"",
             "if (Test-Path \"$dir\\steamcommunity_302\") {",
             "  Get-ChildItem \"$dir\\steamcommunity_302\" | Move-Item -Destination \"$dir\"",
             "}",
-            "Get-ChildItem \"$dir\\steamcommunity_302_V*.exe\" | Rename-Item -NewName \"steamcommunity_302.exe\"",
             "Get-ChildItem \"$dir\\steamcommunity_302*\" -Directory | ?{$_.psiscontainer -eq $true} | Remove-Item",
             "Remove-Item \"$dir/dl\""
         ]
     },
-    "pre_install": [
-        "If ( -not (Test-Path \"$persist_dir\\S302.ini\")) {",
-        "  New-Item -ItemType File -Path \"$dir\\S302.ini\" -Force",
-        "}"
-    ],
-    "post_install": [
-        "'steamcommunity_302.caddy.json', 'S302.xml', 'steamcommunity.crt', 'steamcommunity.key', 'steamcommunity.csr', 'steamcommunityCA.key', 'steamcommunityCA.pem' | ForEach-Object {",
-        "  If (Test-Path \"$persist_dir\\$_\") {",
-        "    Move-Item -Path \"$persist_dir\\$_\" -Destination \"$dir\" -Force",
-        "  }",
-        "}"
-    ],
-    "pre_uninstall": [
-        "'steamcommunity_302.caddy.json', 'S302.ini','S302.xml', 'steamcommunity.crt', 'steamcommunity.key', 'steamcommunity.csr', 'steamcommunityCA.key', 'steamcommunityCA.pem' | ForEach-Object {",
-        "  If (Test-Path \"$dir\\$_\") {",
-        "    Write-Host \"Moving $_ back to $persist_dir\"",
-        "    Move-Item -Path \"$dir\\$_\" -Destination \"$persist_dir\" -Force",
-        "  }",
-        "}"
-    ],
-    "persist": "S302.ini",
     "shortcuts": [
         [
             "steamcommunity_302.exe",
@@ -46,9 +24,9 @@
     ],
     "depends": "main/7zip",
     "checkver": {
-        "regex": "uploads/(?<date>[\\d/]+)/steamcommunity_302_V([\\d.]+)"
+        "regex": "uploads/(?<date>[\\d/]+)/steamcommunity_302_AMD64_V([\\d]+(?:\\.[\\d]+)*)"
     },
     "autoupdate": {
-        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchDate/steamcommunity_302_V$version_%E8%A7%A3%E5%8E%8B%E5%AF%86%E7%A0%81dogfight360.zip#/dl"
+        "url": "https://www.dogfight360.com/blog/wp-content/uploads/$matchDate/steamcommunity_302_AMD64_V$version.zip#/dl"
     }
 }

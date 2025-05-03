@@ -1,0 +1,38 @@
+{
+    "version": "3.4.7",
+    "description": "Hydra is a game launcher with its own embedded bittorrent client",
+    "homepage": "https://hydra-launcher.net/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hydralauncher/hydra/releases/download/v3.4.7/hydralauncher-3.4.7-setup.exe#/dl.7z",
+            "hash": "sha512:6cf52bb50244b034c46b9d02e74cc6f120dbe6ccb1d1239cc1b1a77155ca4454f5763f45f6fd6dcd84c7b2b81e43555179101ace110af55a5779d45025e28e1e",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Hydra.exe",
+            "Hydra",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "github": "https://github.com/hydralauncher/hydra"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hydralauncher/hydra/releases/download/v$version/hydralauncher-$version-setup.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

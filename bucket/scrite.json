@@ -1,0 +1,36 @@
+{
+    "version": "1.1",
+    "homepage": "https://www.scrite.io/",
+    "description": "Crossplatform Screenwriting Software",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.scrite.io/software/Scrite-1.1-64bit-Setup.exe#/dl.7z",
+            "hash": "123e7690d9e34437f78554b330f04a8fe752bba2260e5fc8dd7963739fec5f57"
+        },
+        "32bit": {
+            "url": "https://www.scrite.io/software/Scrite-1.1-32bit-Setup.exe#/dl.7z",
+            "hash": "0338689087926f6ff778d0d38bdacabeef513c1f9fc32cf216c19a78239cf8fd"
+        }
+    },
+    "shortcuts": [
+        [
+            "Scrite.exe",
+            "Scrite"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.scrite.io/index.php/download-windows",
+        "regex": "/software/Scrite-([\\d.]+(-Beta)?)-64bit-Setup.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.scrite.io/software/Scrite-$version-64bit-Setup.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://www.scrite.io/software/Scrite-$version-32bit-Setup.exe#/dl.7z"
+            }
+        }
+    }
+}

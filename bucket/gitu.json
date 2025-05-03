@@ -1,13 +1,13 @@
 {
-    "version": "0.25.0",
+    "version": "0.30.3",
     "description": "A TUI Git client inspired by Magit",
     "homepage": "https://github.com/altsem/gitu",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/altsem/gitu/releases/download/v0.25.0/gitu-v0.25.0-x86_64-pc-windows-msvc.zip",
-            "hash": "93242616d29cc0af69cb2e22bc50da712a4c18803cd2e6fce69d8cc1daca9217",
-            "extract_dir": "gitu-v0.25.0-x86_64-pc-windows-msvc"
+            "url": "https://github.com/altsem/gitu/releases/download/v0.30.3/gitu-v0.30.3-x86_64-pc-windows-msvc.zip",
+            "hash": "565c0874e67180f7b9e1477cb7979d61a51f67ecbfbd11bd57c7b34df482908f",
+            "extract_dir": "gitu-v0.30.3-x86_64-pc-windows-msvc"
         }
     },
     "bin": "gitu.exe",

@@ -1,10 +1,10 @@
 {
-    "version": "20240912-180908",
+    "version": "20250501-1321",
     "homepage": "https://www.deltaconnected.com/arcdps/",
     "architecture": {
         "64bit": {
             "url": "https://www.deltaconnected.com/arcdps/x64/d3d11.dll",
-            "hash": "c94b2f1bfe07280a38c79ae7359ba2c90133017312d37e4827760d9c9ab1dd63"
+            "hash": "107ae7ec7d99b4a2bdcab27b6b2a8d3846123cd6451e6bed627984ee46767456"
         }
     },
     "checkver": {
