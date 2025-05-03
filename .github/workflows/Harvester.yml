@@ -15,7 +15,7 @@ on:
         description: 'Debug session enabled'
         required: false
         default: false
-        type: boolean  
+        type: boolean
       release:
         description: 'Delivery Channel'
         required: false
@@ -23,7 +23,7 @@ on:
         type: choice
         options:
           - "Artifact"
-          - "Release"        
+          - "Release"
 
 jobs:
   build:
@@ -207,7 +207,18 @@ jobs:
               $oldpercent=$percent
             }
             $date = $file.LastWriteTimeUtc.ToString("yyyy-MM-ddTHH:mm:ssZ")
-            $filecontent = gc $file 
+            try {
+                $realFile = if ($file.LinkType -eq "SymbolicLink") {
+                    (Get-Item $file).Target
+                } else {
+                    $file.FullName
+                }
+                $filecontent = gc $realFile
+            } catch {
+                Write-Host "ERROR: Failed to read file (may be a broken symlink): $file"
+                $file.fullname >> ERROR_manifest.txt
+                continue
+            }
             try{
                 $json = $filecontent | ConvertFrom-Json
                 $version = $json.version
@@ -261,6 +272,7 @@ jobs:
                 $nApps++
                 continue
             }
+            if (!$name) { continue }
 
             $app=[ref]$hash.Rows[-1]
             $current = if ($hash.Rows[-1].Bucket -match '^okibcn/' ) {'O'} else {'_'}
@@ -295,7 +307,7 @@ jobs:
                 }
             }
         }
-        $hash = $hash | select   | Sort-Object Name 
+        $hash = $hash | select   | Sort-Object Name
         $scoopDBfile = "./LastAppsDB.csv"
         $hash | ConvertTo-csv > $scoopDBfile
 
@@ -384,7 +396,7 @@ jobs:
         if ( "${{github.event.inputs.release}}" -eq 'Artifact') {7z a '-x!*.7z' ScoopMaster.7z *}
 
         $downloads=((( gh api repos/okibcn/ScoopMaster/releases | jq . ) -match  "download_count" | sls '\d+' ).matches | Measure-Object Value -Sum ).Sum
-        
+
         $stats=@{}
         $stats.Add('date',"$($env:UPDATE)")
         $stats.Add('prevDate',"$((gc stats.json | ConvertFrom-Json).date.ToString("yyyy-MM-ddTHH:mm:ssZ"))")
@@ -468,21 +480,23 @@ jobs:
 
 
     - name: "👍 Full Upload as Artifact"
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       # if: github.event_name == 'workflow_dispatch'
       if: github.event.inputs.release == 'Artifact'
       with:
         name: Logs
         path: |
           *.7z
+        overwrite: true
 
 
     - name: "👍 Standard Upload logs as Artifact"
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       # if: github.event_name == 'workflow_dispatch'
       if: github.event_name != 'workflow_dispatch' || github.event.inputs.release == 'Release'
       with:
         name: Logs
         path: |
           *.txt
+        overwrite: true
 
