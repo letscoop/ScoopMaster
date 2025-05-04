@@ -10,7 +10,7 @@
 
 </br>
 
-And don't miss **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)**, the associated CLI search utility.
+And don't miss **[SSx (Scoop Super Search)](https://github.com/thecats1105/ssx)**, the associated CLI search utility.
 
 </br>
 
@@ -106,7 +106,7 @@ The **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databas
 
 IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** that can be installed typing:
 ```pwsh
-scoop install ss
+scoop install ssx
 ```
 
 These are some examples of its capabilites:
