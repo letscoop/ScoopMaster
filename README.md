@@ -1,10 +1,12 @@
 # Scoop Master Bucket/Database
 
+## Original by [okibcn/ScoopMaster](https://github.com/okibcn/ScoopMaster)
+
 </br>
 
 **Scoop Master**, the way to keep all the apps in Scoop ultra-updated. One bucket for all.
 
-(Do you find this project useful? give it a ⭐)
+(Do you find this project useful? give it a ⭐ to [okibcn/ScoopMaster](https://github.com/okibcn/ScoopMaster) (and also here))
 
 </br>
 
