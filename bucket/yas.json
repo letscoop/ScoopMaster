@@ -11,6 +11,9 @@
     },
     "pre_install": "ren $dir\\yas_artifact_v$version.exe yas.exe",
     "bin": "yas.exe",
+    "persist": [
+        "mona.json"
+    ],
     "checkver": {
         "github": "https://github.com/wormtql/yas"
     },
