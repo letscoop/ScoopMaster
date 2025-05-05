@@ -338,6 +338,14 @@ jobs:
 
         7z a AllAppsDB.7z AllAppsDB.csv
         7z a LastAppsDB.7z LastAppsDB.csv
+        # checksum.json
+        $checksum=@{}
+        $checksum.Add('AllAppsDB.csv',"$((Get-FileHash -Algorithm SHA1 AllAppsDB.csv).Hash)")
+        $checksum.Add('AllAppsDB.7z',"$((Get-FileHash -Algorithm SHA1 AllAppsDB.7z).Hash)")
+        $checksum.Add('LastAppsDB.csv',"$((Get-FileHash -Algorithm SHA1 LastAppsDB.csv).Hash)")
+        $checksum.Add('LastAppsDB.7z',"$((Get-FileHash -Algorithm SHA1 LastAppsDB.7z).Hash)")
+        $checksum | ConvertTo-Json > checksum.json
+        move-item checksum.json ScoopMaster
         move-item *DB.* ScoopMaster
 
     - name: "📦 Prepare updated repo"
@@ -462,7 +470,9 @@ jobs:
       with:
         tag_name: Databases
         body_path: body.txt
-        files: ./*DB.*
+        files: |
+          ./checksum.json
+          ./*DB.*
 
 
     - name: "⭐ Update repo (Commit-n-Push)"
