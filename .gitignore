@@ -6,3 +6,4 @@ checkver-*.html
 *.txt
 *.7z
 *.csv
+checksum.json
