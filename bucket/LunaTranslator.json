@@ -1,55 +1,23 @@
 {
-    "homepage": "https://lunatranslator.org/",
-    "description": "Galgame translator",
-    "license": "GPL-3.0",
-    "version": "9.0.4",
-    "architecture": {
-        "64bit": {
-            "url": "https://lunatranslator.org/r2/luna/LunaTranslator_v9.0.4_x64.zip",
-            "hash": "2b704cb35972a4194d3bb095c58b58e38a74f4dfaa75d394e2dfd931a1d64ec3",
-            "extract_to": "temp",
-            "pre_install": [
-                "Move-Item -Path \"$dir\\temp\\LunaTranslator\\*\" -Destination \"$dir\"",
-                "Remove-Item \"$dir\\temp\" -Force -Recurse"
-            ]
-        },
-        "32bit": {
-            "url": "https://lunatranslator.org/r2/luna/LunaTranslator_v9.0.4_x86.zip",
-            "hash": "effa8db9ae9ae67f73e11825af76a195fad3ace766573c94229cfeebf52158d6",
-            "extract_to": "temp",
-            "pre_install": [
-                "Move-Item -Path \"$dir\\temp\\LunaTranslator_x86\\*\" -Destination \"$dir\"",
-                "Remove-Item \"$dir\\temp\" -Force -Recurse"
-            ]
-        }
-    },
+    "version": "9.1.0",
+    "description": "Galgame翻译工具, 支持剪贴板, OCR, HOOK, 支持30余种翻译工具, 支持TTS",
+    "homepage": "https://github.com/HIllya51/LunaTranslator",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v9.1.0/LunaTranslator.zip",
+    "hash": "5c101750deb3147db8ba858fc1da34d38a3f2ad9d13454e98dcbd63cbb9340a1",
+    "extract_dir": "LunaTranslator",
     "shortcuts": [
         [
-            "LunaTranslator.exe",
+            "LunaTranslator_no_Admin.exe",
             "LunaTranslator"
         ]
     ],
     "persist": [
-        "cache",
-        "translation_record",
-        "userconfig"
+        "userconfig",
+        "resources"
     ],
-    "checkver": {
-        "script": [
-            "$req = Invoke-WebRequest -Uri 'https://lunatranslator.org/Resource/DownloadLuna/64' -MaximumRedirection 0 -ErrorAction SilentlyContinue",
-            "$m = $req.Content | Select-String -pattern 'LunaTranslator_v([\\d.]+)_x64\\.zip'",
-            "Write-Output $m.matches.groups[1].value"
-        ],
-        "regex": "(?<version>[\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://lunatranslator.org/r2/luna/LunaTranslator_v$version_x64.zip"
-            },
-            "32bit": {
-                "url": "https://lunatranslator.org/r2/luna/LunaTranslator_v$version_x86.zip"
-            }
-        }
+        "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator.zip"
     }
 }
