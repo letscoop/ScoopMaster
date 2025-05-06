@@ -43,7 +43,7 @@ The system uses the platform in two ways:
 
 </br>
 
-**ScoopMaster** also provides a **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
+**ScoopMaster** also provides a **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SSx (Scoop Super Search)](https://github.com/thecats1105/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
 
 </br>
 
