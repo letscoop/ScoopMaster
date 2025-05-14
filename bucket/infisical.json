@@ -1,22 +1,15 @@
 {
-    "version": "0.41.2",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Infisical/infisical/releases/download/infisical-cli/v0.41.2/infisical_0.41.2_windows_amd64.zip",
-            "bin": [
-                "infisical.exe"
-            ],
-            "hash": "cb806b42a21c95aaff56c85c7950d6b52e7b84739af62a293b99e78df8f465e1"
-        },
-        "arm64": {
-            "url": "https://github.com/Infisical/infisical/releases/download/infisical-cli/v0.41.2/infisical_0.41.2_windows_arm64.zip",
-            "bin": [
-                "infisical.exe"
-            ],
-            "hash": "058a68dd485e46d5f1017190328200b2b9b0caf5c64ab463d67f2f145874c8cd"
-        }
-    },
-    "homepage": "https://infisical.com",
-    "license": "MIT",
-    "description": "The official Infisical CLI"
+  "version": "0.10.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/Infisical/infisical/releases/download/infisical-cli/v0.10.0/infisical_0.10.0_windows_amd64.zip",
+      "bin": [
+        "infisical.exe"
+      ],
+      "hash": "c93fa3611cb7f38d2e72f96e0054fb6dc65d49b45091961226cd327ebe57743c"
+    }
+  },
+  "homepage": "https://infisical.com",
+  "license": "MIT",
+  "description": "The official Infisical CLI"
 }
