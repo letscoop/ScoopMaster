@@ -1,10 +1,10 @@
 {
-    "version": "9.3.0",
+    "version": "9.3.1",
     "description": "Visual Novel Translator, support HOOK / OCR /clipboard",
     "homepage": "https://github.com/HIllya51/LunaTranslator",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v9.3.0/LunaTranslator.zip",
-    "hash": "06b74970967f6c6325cd6a540db8539edb9e9f6311a479fb0b57aa5d03b44198",
+    "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v9.3.1/LunaTranslator.zip",
+    "hash": "b3c29a845748266a8933a44779202d6f450a8661795eaedc1e24bef84c5ec0ef",
     "pre_install": [
         "Rename-Item -Path \"$($dir)\\LunaTranslator\" -NewName \"dir\" -Force",
         "Get-ChildItem -Path \"$($dir)\\dir\" -Recurse | ForEach-Object { Move-Item -Path $_.FullName -Destination \"$($dir)\\$($_.Name)\" -Force }",
