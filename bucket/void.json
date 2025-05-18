@@ -17,6 +17,15 @@
             "hash": "191f8f327a16d3990f14714f8c2b9719ed4fcfa488de06e70d4ad1cbc16531e1"
         }
     },
+    "env_add_path": "bin",
+    "shortcuts": [
+        [
+            "Void.exe",
+            "Void",
+            "--user-data-dir=\"$dir\\data\" --extensions-dir=\"$dir\\data\\extensions\""
+        ]
+    ],
+    "persist": "data",
     "post_install": [
         "$dirpath = \"$dir\".Replace('\\', '\\\\')",
         "$exepath = \"$dir\\Void.exe\".Replace('\\', '\\\\')",
@@ -46,14 +55,15 @@
         "    (Get-Content \"$extensions_file\") -replace '(?<=void(/|\\\\\\\\)).*?(?=(/|\\\\\\\\)data(/|\\\\\\\\)extensions)', $version | Set-Content \"$extensions_file\"",
         "}"
     ],
-    "env_add_path": "bin",
-    "shortcuts": [
-        [
-            "Void.exe",
-            "Void"
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall')",
+            "{",
+            "   reg import \"$dir\\uninstall-context.reg\" ",
+            "   reg import \"$dir\\uninstall-associations.reg\" ",
+            "}"
         ]
-    ],
-    "persist": "data",
+    },
     "checkver": {
         "github": "https://github.com/voideditor/binaries"
     },
