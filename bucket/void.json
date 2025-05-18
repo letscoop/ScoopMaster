@@ -18,13 +18,7 @@
         }
     },
     "env_add_path": "bin",
-    "shortcuts": [
-        [
-            "Void.exe",
-            "Void",
-            "--user-data-dir=\"$dir\\data\\user-data\" --extensions-dir=\"$dir\\data\\extensions\""
-        ]
-    ],
+    "shortcuts": [["Void.exe", "Void"]],
     "persist": "data",
     "post_install": [
         "$dirpath = \"$dir\".Replace('\\', '\\\\')",
