@@ -22,7 +22,7 @@
         [
             "Void.exe",
             "Void",
-            "--user-data-dir=\"$dir\\data\" --extensions-dir=\"$dir\\data\\extensions\""
+            "--user-data-dir=\"$dir\\data\\user-data\" --extensions-dir=\"$dir\\data\\extensions\""
         ]
     ],
     "persist": "data",
