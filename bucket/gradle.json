@@ -6,7 +6,7 @@
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://mirrors.cloud.tencent.com/gradle/gradle-8.14-all.zip",
+    "url": "https://services.gradle.org/distributions/gradle-8.14-all.zip",
     "hash": "efe9a3d147d948d7528a9887fa35abcf24ca1a43ad06439996490f77569b02d1",
     "extract_dir": "gradle-8.14",
     "post_install": [
@@ -25,9 +25,9 @@
         "regex": "The current Gradle release is version ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://mirrors.cloud.tencent.com/gradle/gradle-$version-all.zip",
+        "url": "https://services.gradle.org/distributions/gradle-$version-all.zip",
         "hash": {
-            "url": "https://services.gradle.org/distributions/gradle-$version-all.zip.sha256"
+            "url": "$url.sha256"
         },
         "extract_dir": "gradle-$version"
     }
