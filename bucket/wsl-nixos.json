@@ -26,10 +26,6 @@
         "script": "wsl.exe --install --from-file \"$dir\\nixos.wsl\""
     },
     "post_install": "scoop hold $app",
-    "bin": [
-        "nixos",
-        "wsl.exe -d NixOS"
-    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/nix-community/NixOS-WSL/releases/download/$version/nixos.wsl",
