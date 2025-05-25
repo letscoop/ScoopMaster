@@ -275,10 +275,10 @@ jobs:
             if (!$name) { continue }
 
             $app=[ref]$hash.Rows[-1]
-            $current = if ($hash.Rows[-1].Bucket -match '^thecats1105/' ) {'O'} else {'_'}
+            $current = if ($hash.Rows[-1].Bucket -match '^letscoop/' ) {'O'} else {'_'}
             $current = $current + $hash.Rows[-1].autoupdate + $hash.Rows[-1].Version
             $current = if ($hash.Rows[-1].Bucket -match '^ScoopInstaller/' ) {$current + 'S'} else {$current + $hash.Rows[-1].Priority}
-            $candidate = if ($row.Bucket -match '^thecats1105/' ) {'O'} else {'_'}
+            $candidate = if ($row.Bucket -match '^letscoop/' ) {'O'} else {'_'}
             $candidate = $candidate + $row.autoupdate + $row.Version
             $candidate = if ($row.Bucket -match '^ScoopInstaller/' ) {$candidate + 'S'} else {$candidate + $row.Clone}
 
@@ -320,7 +320,7 @@ jobs:
         Write-host "##   ============================================================="
         Write-host "##"
         foreach ( $row in $hash ) {
-            [void]$FullDB.Rows.Add($row.Name, $row.Version, $row.Date, "thecats1105/ScoopMaster", $row.Description, $row.Homepage, $row.Autoupdate)
+            [void]$FullDB.Rows.Add($row.Name, $row.Version, $row.Date, "letscoop/ScoopMaster", $row.Description, $row.Homepage, $row.Autoupdate)
             $file="jsons/$( $row.Bucket.replace('/','~') )/$($row.Name).json"
             Get-Content $file > "local/$($row.Name).json"
             $progress++
@@ -359,7 +359,7 @@ jobs:
         ############################
 
         # cd ..
-        # aria2c https://github.com/thecats1105/ScoopMaster/archive/refs/heads/master.zip -o ScoopMaster.zip
+        # aria2c https://github.com/letscoop/ScoopMaster/archive/refs/heads/master.zip -o ScoopMaster.zip
         # 7z e ScoopMaster.zip */bucket/* -obucket
         # cd ScoopMaster
 
@@ -403,7 +403,7 @@ jobs:
 
         if ( "${{github.event.inputs.release}}" -eq 'Artifact') {7z a '-x!*.7z' ScoopMaster.7z *}
 
-        $downloads=((( gh api repos/thecats1105/ScoopMaster/releases | jq . ) -match  "download_count" | sls '\d+' ).matches | Measure-Object Value -Sum ).Sum
+        $downloads=((( gh api repos/letscoop/ScoopMaster/releases | jq . ) -match  "download_count" | sls '\d+' ).matches | Measure-Object Value -Sum ).Sum
 
         $stats=@{}
         $stats.Add('date',"$($env:UPDATE)")

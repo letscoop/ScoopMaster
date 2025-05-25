@@ -43,7 +43,7 @@ The system uses the platform in two ways:
 
 </br>
 
-**ScoopMaster** also provides a **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SSx (Scoop Super Search)](https://github.com/thecats1105/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
+**ScoopMaster** also provides a **[database](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)** with updated data of every known app manifest in internet. This way search engines such as **[SSx (Scoop Super Search)](https://github.com/letscoop/ss)** can use it to provide ultra-fast — less than 500 milliseconds — and accurate search results, even better than the official [scoop.sh](https://scoop.sh) directory.
 
 </br>
 
@@ -60,7 +60,7 @@ ____
 
 To add this bucket, paste this in a PowerShell session:
 ```pwsh
-scoop bucket add .SM https://github.com/thecats1105/ScoopMaster
+scoop bucket add .SM https://github.com/letscoop/ScoopMaster
 ```
 install any app in the bucket just type
 ```
@@ -85,7 +85,7 @@ scoop update *
 
 </br>
 
-The **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** doesn't need any install instructions. If want to use it for searching purposes, you can use the ultra-fast **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** utility. it provides instant result to simple queries and complex regex searches. Refer to its homepage for installation instructions.
+The **[database](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)** doesn't need any install instructions. If want to use it for searching purposes, you can use the ultra-fast **[SS (Scoop Super Search)](https://github.com/letscoop/ss)** utility. it provides instant result to simple queries and complex regex searches. Refer to its homepage for installation instructions.
 
 
 
@@ -101,7 +101,7 @@ The bucket doesn't require any operation other than the installation, removal, a
 
 </br>
 
-The **[database](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/thecats1105/ScoopMaster/releases/tag/Databases)**.
+The **[database](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)**.
 
 
 IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** that can be installed typing:
