@@ -1,30 +1,28 @@
 {
-  "version": "0.7.3",
-  "description": "CGI Server for test uses instead of ANHTTPD",
-  "homepage": "https://github.com/hymkor/xnhttpd",
-  "license": "MIT License",
-  "architecture": {
-    "32bit": {
-      "url": "https://ghproxy.com/https://github.com/hymkor/xnhttpd/releases/download/v0.7.3/xnhttpd-v0.7.3-windows-386.zip",
-      "hash": "d7c5ad5f55a031df0fae6daef4b7c945cd9359656bf1882d6dfceb04aa275f3f"
-    },
-    "64bit": {
-      "url": "https://ghproxy.com/https://github.com/hymkor/xnhttpd/releases/download/v0.7.3/xnhttpd-v0.7.3-windows-amd64.zip",
-      "hash": "309db0ea1d3dd01e217c13bbec31f5313d74a738eb955cdcbd449d514069fce6"
-    }
-  },
-  "bin": [
-    "xnhttpd.exe"
-  ],
-  "checkver": "github",
-  "autoupdate": {
+    "version": "0.8.0",
+    "description": "CGI Server for test uses instead of ANHTTPD",
+    "homepage": "https://github.com/hymkor/xnhttpd",
+    "license": "MIT License",
     "architecture": {
-      "32bit": {
-        "url": "https://ghproxy.com/https://github.com/hymkor/xnhttpd/releases/download/v$version/xnhttpd-v$version-windows-386.zip"
-      },
-      "64bit": {
-        "url": "https://ghproxy.com/https://github.com/hymkor/xnhttpd/releases/download/v$version/xnhttpd-v$version-windows-amd64.zip"
-      }
+        "32bit": {
+            "url": "https://github.com/hymkor/xnhttpd/releases/download/v0.8.0/xnhttpd-v0.8.0-windows-386.zip",
+            "hash": "5c132057174492ca0df4bc607428fa8d7affe03a393a57bfa9b6804d0bed3c47"
+        },
+        "64bit": {
+            "url": "https://github.com/hymkor/xnhttpd/releases/download/v0.8.0/xnhttpd-v0.8.0-windows-amd64.zip",
+            "hash": "32a8bea4d9fa2e214c743117cb94e17576203f726b5537389af0d5f60af53e25"
+        }
+    },
+    "bin": "xnhttpd.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/hymkor/xnhttpd/releases/download/v$version/xnhttpd-v$version-windows-386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/hymkor/xnhttpd/releases/download/v$version/xnhttpd-v$version-windows-amd64.zip"
+            }
+        }
     }
-  }
 }

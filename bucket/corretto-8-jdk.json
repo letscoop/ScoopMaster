@@ -1,0 +1,43 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "8.452.09.1",
+    "description": "A no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK).",
+    "homepage": "https://aws.amazon.com/corretto/",
+    "license": {
+        "identifier": "GPL-2.0-with-classpath-exception",
+        "url": "https://openjdk.org/legal/gplv2+ce.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://corretto.aws/downloads/resources/8.452.09.1/amazon-corretto-8.452.09.1-windows-x64-jdk.zip",
+            "hash": "81aa93761a990de21b0f15df4d289643741f9670af2f97a5a6580a4088748b73"
+        },
+        "32bit": {
+            "url": "https://corretto.aws/downloads/resources/8.452.09.1/amazon-corretto-8.452.09.1-windows-x86-jdk.zip",
+            "hash": "274398f8ad9469accf05ef7dc09001b4c8818d6d45bbae6486682cb221c3a860"
+        }
+    },
+    "extract_dir": "jdk1.8.0_452",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/corretto/corretto-8"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x64-jdk.zip"
+            },
+            "32bit": {
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x86-jdk.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/corretto/corretto-8/releases/tag/$version",
+            "regex": ">$basename<[\\s\\S]*?>$sha256<"
+        },
+        "extract_dir": "jdk1.8.0_$minorVersion"
+    }
+}

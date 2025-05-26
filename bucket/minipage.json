@@ -1,0 +1,21 @@
+{
+    "version": "0.4.0",
+    "description": "Minimal Static Page Generator",
+    "homepage": "https://github.com/hymkor/minipage",
+    "license": "MIT License",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/hymkor/minipage/releases/download/v0.4.0/minipage-v0.4.0-windows-amd64.zip",
+            "hash": "ebd9d50d7404d86616aff4820888a3c1813f74db6d70b30c0175b66a2f1cfb6a"
+        }
+    },
+    "bin": "minipage.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/hymkor/minipage/releases/download/v$version/minipage-v$version-windows-amd64.zip"
+            }
+        }
+    }
+}
