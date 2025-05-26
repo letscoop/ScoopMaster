@@ -1,28 +1,30 @@
 {
-    "version": "0.5.0",
-    "description": "SMake: Make Powered by S-expressions",
-    "homepage": "https://github.com/hymkor/smake",
-    "license": "MIT License",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/hymkor/smake/releases/download/v0.5.0/smake-v0.5.0-windows-386.zip",
-            "hash": "486e64fb707291930a0d3d946d8ec294347a15268bdf74cbb1507b9746a7afb0"
-        },
-        "64bit": {
-            "url": "https://github.com/hymkor/smake/releases/download/v0.5.0/smake-v0.5.0-windows-amd64.zip",
-            "hash": "1a3c6b0919b91a24090b3110be69d235de94a77f9845917973f0204bff8c18e8"
-        }
+  "version": "0.3.0",
+  "description": "SMake (Make by S-expression)",
+  "homepage": "https://github.com/hymkor/smake",
+  "license": "MIT License",
+  "architecture": {
+    "32bit": {
+      "url": "https://ghproxy.com/https://github.com/hymkor/smake/releases/download/v0.3.0/smake-v0.3.0-windows-386.zip",
+      "hash": "90032d961884c4676be95d3f22f21dd5accc8dd2b13f92e332366de14361c6df"
     },
-    "bin": "smake.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/hymkor/smake/releases/download/v$version/smake-v$version-windows-386.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/hymkor/smake/releases/download/v$version/smake-v$version-windows-amd64.zip"
-            }
-        }
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/hymkor/smake/releases/download/v0.3.0/smake-v0.3.0-windows-amd64.zip",
+      "hash": "30e91782fa21bfd3f53459abe5f2c172df1ba4ffcb636838d4ce53965113c5c1"
     }
+  },
+  "bin": [
+    "smake.exe"
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "https://ghproxy.com/https://github.com/hymkor/smake/releases/download/v$version/smake-v$version-windows-386.zip"
+      },
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/hymkor/smake/releases/download/v$version/smake-v$version-windows-amd64.zip"
+      }
+    }
+  }
 }
