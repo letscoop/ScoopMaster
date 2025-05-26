@@ -1,5 +1,5 @@
 {
-    "version": "2.8.2-beta1",
+    "version": "3.0.0-beta2",
     "description": "跨平台剪贴板同步方案 / Cross-Platform Cipboard Syncing Solution",
     "homepage": "https://github.com/Jeric-X/SyncClipboard",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Martchus/tageditor/releases/download/v3.9.5/tageditor-3.9.5-x86_64-w64-mingw32.exe.zip",
-            "hash": "a5b4caba4a01ee7e1e0bf2218873993fa4f70b267a9676ba3472a91319647445"
+            "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v3.0.0-beta2/SyncClipboard_win_x64_portable.zip",
+            "hash": "943dd3f09e730bcf4d80fdb3d3ce175ad1adc9ab09f86b6c74cbc968c99b28a8"
         },
-        "32bit": {
-            "url": "https://github.com/Martchus/tageditor/releases/download/v3.9.0/tageditor-3.9.0-i686-w64-mingw32.exe.zip",
-            "hash": "f581972f457cefabbaa0bc90610d6332a64cb40d912ad3c23417fe9242b799f6"
+        "arm64": {
+            "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v3.0.0-beta2/SyncClipboard_win_arm64_portable.zip",
+            "hash": "000a6e6e6151e8e5ec9ba544c2924f383e87f57a1f32f658a808f655fade04df"
         }
     },
     "installer": {
