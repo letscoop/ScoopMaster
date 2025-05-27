@@ -1,14 +1,18 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-    "homepage": "https://www.xyplorer.com/index.php",
-    "version": "27.00.0500",
-    "description": "A file manager for Windows.",
+    "version": "27.00.0501",
+    "description": "Portable Dual Pane Multi-Tabbed File manager for Windows",
+    "homepage": "https://www.xyplorer.com",
     "license": {
         "identifier": "Proprietary",
-        "url": "https://www.xyplorer.com/LicenseXY.txt"
+        "url": "https://www.xyplorer.com/company.php#legal"
     },
-    "url": "https://www.xyplorer.com/download/xyplorer_full_noinstall.zip",
-    "hash": "0cfeaa11ef82c25bd91fecad4f14e56ef5538e5c99b6d5a0a911170c6e2c90fb",
+    "url": "https://www.xyplorer.com/download/xyplorer_27.00.0501_beta_noinstall.zip",
+    "hash": "6836240137c4df405c1c632d54022f187501569206232ffbb8c357bb20e12651",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\lic.ini\")) { New-Item \"$dir\\lic.ini\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\startup.ini\")) { New-Item \"$dir\\startup.ini\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\admin.ini\")) { New-Item \"$dir\\admin.ini\" | Out-Null }"
+    ],
     "bin": "XYplorer.exe",
     "shortcuts": [
         [
@@ -16,12 +20,19 @@
             "XYplorer"
         ]
     ],
-    "persist": "Data",
+    "persist": [
+        "Data",
+        "AC",
+        "startup.ini",
+        "admin.ini",
+        "lic.ini"
+    ],
     "checkver": {
-        "url": "https://www.xyplorer.com/download.php",
-        "re": "([\\d.]+),\\s*released"
+        "url": "http://www.xyplorer.com/xyfc/viewtopic.php?f=1&t=4&sd=d",
+        "regex": "2. .a href=\"https://www.xyplorer.com/download/xyplorer_([\\d.]+)(.+?_noinstall).zip"
     },
     "autoupdate": {
-        "url": "https://www.xyplorer.com/download/xyplorer_full_noinstall.zip"
+        "note": "Check update log at http://www.xyplorer.com/xyfc/viewtopic.php?f=1&t=4&sd=d",
+        "url": "https://www.xyplorer.com/download/xyplorer_$version$match2.zip"
     }
 }
