@@ -1,35 +1,35 @@
 {
-    "version": "2025.05.27",
-    "description": "Terminal multiplexer with window manager and session sharing",
-    "homepage": "https://github.com/netxs-group/vtm",
-    "license": "MIT",
-    "architecture": {
-        "arm64": {
-            "url": "https://github.com/netxs-group/vtm/releases/download/v2025.05.27/vtm_windows_arm64.zip",
-            "hash": "206a65e62e280d2520c71144c33011f81907ab717b3f27e24438f82cf1372bee"
-        },
-        "64bit": {
-            "url": "https://github.com/netxs-group/vtm/releases/download/v2025.05.27/vtm_windows_x86_64.zip",
-            "hash": "051733819698388ec9c1bbfceb990fae1d235458ed4df1fa66deac4a70771999"
-        },
-        "32bit": {
-            "url": "https://github.com/netxs-group/vtm/releases/download/v2025.05.27/vtm_windows_x86.zip",
-            "hash": "018236fbb0a63e38e19b155abb70f5f8abb129c073a97edc1e3b7ac2e046ccbd"
-        }
+  "version": "2025.05.27",
+  "description": "Terminal multiplexer with window manager and session sharing",
+  "homepage": "https://github.com/netxs-group/vtm",
+  "license": "MIT",
+  "architecture": {
+    "arm64": {
+      "url": "https://github.com/netxs-group/vtm/releases/download/v2025.05.27/vtm_windows_arm64.zip",
+      "hash": "206a65e62e280d2520c71144c33011f81907ab717b3f27e24438f82cf1372bee"
     },
-    "bin": "vtm.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "arm64": {
-                "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_arm64.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_x86_64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_x86.zip"
-            }
-        }
+    "64bit": {
+      "url": "https://github.com/netxs-group/vtm/releases/download/v2025.05.27/vtm_windows_x86_64.zip",
+      "hash": "051733819698388ec9c1bbfceb990fae1d235458ed4df1fa66deac4a70771999"
+    },
+    "32bit": {
+      "url": "https://github.com/netxs-group/vtm/releases/download/v2025.05.27/vtm_windows_x86.zip",
+      "hash": "018236fbb0a63e38e19b155abb70f5f8abb129c073a97edc1e3b7ac2e046ccbd"
     }
+  },
+  "bin": "vtm.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "arm64": {
+        "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_arm64.zip"
+      },
+      "64bit": {
+        "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_x86_64.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/netxs-group/vtm/releases/download/v$version/vtm_windows_x86.zip"
+      }
+    }
+  }
 }
