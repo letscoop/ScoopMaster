@@ -1,8 +1,11 @@
 {
     "version": "1.8.0",
     "description": "Lightweight and flexible command-line JSON processor",
-    "homepage": "https://github.com/jqlang/jq",
+    "homepage": "https://stedolan.github.io/jq/",
     "license": "MIT",
+    "suggest": {
+        "jid": "jid"
+    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/jqlang/jq/releases/download/jq-1.8.0/jq-windows-amd64.exe#/jq.exe",
@@ -15,7 +18,7 @@
     },
     "bin": "jq.exe",
     "checkver": {
-        "github": "https://github.com/stedolan/jq/",
+        "github": "https://github.com/jqlang/jq/",
         "regex": "tag/jq-([\\d.]+)"
     },
     "autoupdate": {
@@ -28,7 +31,7 @@
             }
         },
         "hash": {
-            "url": "$baseurl/sha256sum.txt"
+            "url": "https://raw.githubusercontent.com/stedolan/jq/jq-$version/sig/v$version/sha256sum.txt"
         }
     }
 }
