@@ -7,8 +7,7 @@
     "hash": "be7e2afed70afebcb53cbc1468cbf99d5f5b5b747be227c6f3dd0c211a3cc0fe",
     "installer": {
         "script": [
-            "New-Item -Type SymbolicLink -Path $scoopdir\\shims\\pip.pyz -Target $dir\\pip-$version.pyz",
-            "# Copy-Item -Path $dir\\pip-$version.pyz -Destination $scoopdir\\shims\\pip.pyz"
+            "New-Item -Type SymbolicLink -Path $scoopdir\\shims\\pip.pyz -Target $dir\\pip-$version.pyz"
         ]
     },
     "uninstaller": {
