@@ -20,8 +20,10 @@
         "userdata"
     ],
     "post_install": [
-        "if (!(Test-Path \"$persist_dir\\config.ini\")) { Set-Content -Path \"$dir\\config.ini\" -Value \"\" -Encoding UTF8 }",
-        "if (!(Test-Path \"$persist_dir\\MDCx.config\")) { Set-Content -Path \"$dir\\MDCx.config\" -Value \"\" -Encoding UTF8 }"
+        "if (!(Test-Path \"$persist_dir\\config.ini\")) { Set-Content -Path \"$persist_dir\\config.ini\" -Value \"\" -Encoding UTF8 }",
+        "if (!(Test-Path \"$persist_dir\\MDCx.config\")) { Set-Content -Path \"$persist_dir\\MDCx.config\" -Value \"\" -Encoding UTF8 }",
+        "Copy-Item \"$persist_dir\\config.ini\" \"$dir\\config.ini\" -Force",
+        "Copy-Item \"$persist_dir\\MDCx.config\" \"$dir\\MDCx.config\" -Force"
     ],
     "checkver": {
         "url": "https://api.github.com/repos/sqzw-x/mdcx/releases/latest",
