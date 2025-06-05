@@ -1,22 +1,18 @@
 {
     "version": "10.3.4.2",
-    "description": "Galgame翻译工具, 支持剪贴板, OCR, HOOK, 支持30余种翻译工具, 支持TTS",
+    "description": "A Visual Novel translation tool, with HOOK / OCR / clipboard support",
     "homepage": "https://github.com/HIllya51/LunaTranslator",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.3.4.2/LunaTranslator_x64_win10.zip",
             "hash": "7247e81e7b992d8d1b57ad92064ed9e18f3f008b2f4bd8deb9a3bf3c6b6fe98e",
-            "pre_install": [
-                "Rename-Item -Path \"$($dir)\\LunaTranslator*\" -NewName \"dir\" -Force",
-                "Get-ChildItem -Path \"$($dir)\\dir\" -Recurse | ForEach-Object { Move-Item -Path $_.FullName -Destination \"$($dir)\\$($_.Name)\" -Force }",
-                "Remove-Item -Path \"$($dir)\\dir\" -Recurse -Force"
-            ]
+            "extract_dir": "LunaTranslator_x64_win10"
         },
         "32bit": {
             "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v10.3.4.2/LunaTranslator_x86_win7.zip",
-            "extract_dir": "LunaTranslator*",
-            "hash": "d36a3ed64e53d2709b8d9f3ad7c19f3da3f78fb735060f900f63695e8af66e9c"
+            "hash": "d36a3ed64e53d2709b8d9f3ad7c19f3da3f78fb735060f900f63695e8af66e9c",
+            "extract_dir": "LunaTranslator_x86_win7"
         }
     },
     "shortcuts": [
@@ -26,13 +22,17 @@
         ],
         [
             "LunaTranslator_admin.exe",
-            "LunaTranslator (Admin)"
+            "LunaTranslator (admin)"
+        ],
+        [
+            "LunaTranslator_debug.bat",
+            "LunaTranslator (debug)"
         ]
     ],
     "persist": [
+        "cache",
         "userconfig",
-        "translation_record",
-        "cache"
+        "translation_record"
     ],
     "checkver": "github",
     "autoupdate": {
