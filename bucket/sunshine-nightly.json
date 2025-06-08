@@ -1,5 +1,5 @@
 {
-    "version": "2025.608.34147",
+    "version": "2025.608.44930",
     "description": "A Gamestream host for Moonlight",
     "homepage": "https://github.com/LizardByte/Sunshine",
     "license": "GPL-3.0-only",
@@ -9,12 +9,17 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/LizardByte/Sunshine/releases/download/v2025.608.34147/sunshine-windows-portable.zip",
-            "hash": "405f799479ced9f238efebf2b3f4b9f1cf43fca84232635b619126291160927a"
+            "url": "https://github.com/LizardByte/Sunshine/releases/download/v2025.608.44930/sunshine-windows-portable.zip",
+            "hash": "526d44ec718266cb77f4e0aaa29276750cbbe409459d76b50a4e845f65ff7776"
         }
     },
     "extract_dir": "Sunshine",
     "pre_install": "Set-Content \"$dir/sunshine.bat\" (@('@echo off', 'pushd %~dp0 && sunshine.exe %* && popd') -join \"`r`n\")",
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App"
+    ],
     "bin": [
         "sunshine.bat",
         "tools/dxgi-info.exe",
