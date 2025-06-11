@@ -22,7 +22,7 @@ ____
 --------
 </br>
 
-To help users to maintain all the apss updated, this repo provides two services, a bucket with all the apps, and a database for fast app search. The platform surveys internet for known buckets and creates Bucket and database snapshots every 30 minutes. At this time the metrics for the **ScoopMaster** platform in its current snapshot are:
+To help users to maintain all the apss updated, this repo provides two services, a bucket with all the apps, and a database for fast app search. The platform surveys internet for known buckets and creates Bucket and database snapshots every hours. At this time the metrics for the **ScoopMaster** platform in its current snapshot are:
 
 - The database indexes **192588** manifests.
 - The harvester gathers data from **1983** buckets.
@@ -35,7 +35,7 @@ The system uses the platform in two ways:
 
 </br>
 
-**ScoopMaster** provides manifests for every app in any known Scoop bucket, updated every 30 minutes to ensure fresh app versions. This way you only need one bucket in your Scoop bucket list. It takes the manifests from all the known buckets and maintains a bucket with the most recent version of each known package just for you.
+**ScoopMaster** provides manifests for every app in any known Scoop bucket, updated every hours to ensure fresh app versions. This way you only need one bucket in your Scoop bucket list. It takes the manifests from all the known buckets and maintains a bucket with the most recent version of each known package just for you.
 
 </br>
 
@@ -101,7 +101,7 @@ The bucket doesn't require any operation other than the installation, removal, a
 
 </br>
 
-The **[database](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every 30 minutes. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)**.
+The **[database](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)** is writen in CSV format with UTF-8 no BOM encoding. It is updated every hours. Raw and 7z compressed versions are provided in the **[Download page](https://github.com/letscoop/ScoopMaster/releases/tag/Databases)**.
 
 
 IF you want to experience the speed and the data contained, you can use the official ScoopMaster search utility **[SS (Scoop Super Search)](https://github.com/thecats1105/ss)** that can be installed typing:
@@ -153,7 +153,7 @@ $apps = ss -r .*
 
 </br>
 
-The data in this repo is generated automatically from the rest of the buckets in internet. If you want your app to be indexed by the database and be available in the **ScoopMaster** Bucket, or you find a problem with an app, just modify any other bucket and the app will be updated in the next bucket and database snapshot within 30 minutes.
+The data in this repo is generated automatically from the rest of the buckets in internet. If you want your app to be indexed by the database and be available in the **ScoopMaster** Bucket, or you find a problem with an app, just modify any other bucket and the app will be updated in the next bucket and database snapshot within hours.
 
 To make a new manifest contribution in any other bucket, please read the [Contributing Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md).
 
