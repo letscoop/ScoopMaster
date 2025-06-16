@@ -7,11 +7,6 @@
     "hash": "bf20a9e99ca6e9f14d0978012df1868a9bcb9c5c4cbe8a51abf5af9507893dbf",
     "extract_dir": "go-musicfox_4.6.1_windows_amd64",
     "bin": "musicfox.exe",
-    "post_uninstall": [
-        "$runtimeCache=\"$env:APPDATA\\go-musicfox\"",
-        "write-host `nRemoving runtimeCache: $runtimeCache -ForegroundColor Yellow",
-        "Remove-Item $runtimeCache -Recurse -Force -ErrorAction SilentlyContinue"
-    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/go-musicfox/go-musicfox/releases/download/v$version/go-musicfox_$version_windows_amd64.zip",
