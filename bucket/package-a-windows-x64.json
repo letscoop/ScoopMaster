@@ -1,0 +1,31 @@
+{
+  "version": "v0.0.8",
+  "description": "Repository to test CI/CD for modules to not test it in modules repositories.",
+  "homepage": "https://github.com/asimov-modules/asimov-modules-test-ci",
+  "license": "Unlicense",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/asimov-modules/asimov-modules-test-ci/releases/download/v0.0.8/package-a-windows-x64.zip",
+      "hash": "sha256:7a6d1e8727853730adb870522d7218ab2030479a4bb917b62ac4a7223a590f86"
+    }
+  },
+  "bin": [
+    "package-a-bin-1.exe",
+    "package-a-bin-2.exe"
+  ],
+  "checkver": {
+    "url": "https://github.com/asimov-modules/asimov-modules-test-ci/releases",
+    "regex": "releases/tag/v?([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/asimov-modules/asimov-modules-test-ci/releases/download/$version/package-a-windows-x64.zip",
+        "hash": {
+          "url": "$url.sha256",
+          "regex": "([a-fA-F0-9]{32,128})[\\x20\\t]+.*`$basename(?:[\\x20\\t]+\\d+)?"
+        }
+      }
+    }
+  }
+}
