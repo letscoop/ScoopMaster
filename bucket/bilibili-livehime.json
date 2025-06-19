@@ -1,12 +1,14 @@
 {
-    "homepage": "https://live.bilibili.com/liveHime",
-    "description": "BiliBili Live Streaming tool",
-    "license": "Unknown",
-    "version": "7.15.0.9170",
+    "version": "7.15.1.9204",
+    "description": "bilibili直播姬",
+    "homepage": "https://link.bilibili.com/p/eden/download#/web",
+    "license": {
+        "identifier": "Unknown"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-7.15.0.9170-x64.exe",
-            "hash": "md5:f64c6eb647c0c92e26f6d1cfbf13901d"
+            "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-7.15.1.9204-x64.exe",
+            "hash": "md5:cee33471971a4de04b487911e2bfc30e"
         }
     },
     "depends": "innounp",
@@ -16,7 +18,7 @@
     "shortcuts": [
         [
             "livehime.exe",
-            "Bilibili Live Hime"
+            "livehime"
         ]
     ],
     "checkver": {
@@ -26,12 +28,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-$version-x64.exe",
-                "hash": {
-                    "url": "https://api.live.bilibili.com/xlive/app-blink/v1/liveVersionInfo/getHomePageLiveVersion?system_version=2",
-                    "jsonpath": "$.data.file_md5"
-                }
+                "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-$version-x64.exe"
             }
+        },
+        "hash": {
+            "url": "https://api.live.bilibili.com/xlive/app-blink/v1/liveVersionInfo/getHomePageLiveVersion?system_version=2",
+            "jsonpath": "$.data.file_md5"
         }
     }
 }
