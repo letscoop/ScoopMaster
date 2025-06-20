@@ -3,13 +3,18 @@
     "description": "Powerful and easy to use e-book manager",
     "homepage": "https://calibre-ebook.com",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/kovidgoyal/calibre/releases/download/v8.5.0/calibre-portable-installer-8.5.0.exe",
-    "hash": "352b4a1c0bfedddefcff1fdffd7ecf93995d9d2d5fa8fbce0bd84c5639b5c342",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/kovidgoyal/calibre/releases/download/v8.5.0/calibre-portable-installer-8.5.0.exe",
+            "hash": "sha512:68c83cd46a63af6e0ab5c0e06a88b4ca90f9bbf5147147abb48e440557f29b10a194fe12b56a342c53004216deda8a5a4d2b8ec8dfa5bca71997399902fd5ba2"
+        }
+    },
     "installer": {
         "script": [
-            "start \"$dir\\calibre-portable-installer-$version.exe\" @(\"$dir\") -wait",
-            "mv \"$dir\\Calibre Portable\\**\" \"$dir\"",
-            "rm \"$dir\\Calibre Portable\""
+            "Start-Process \"$dir\\calibre-portable-installer-$version.exe\" @(\"$env:TEMP\") -Wait",
+            "Move-Item \"$env:TEMP\\Calibre Portable\\**\" \"$dir\"",
+            "Remove-Item \"$env:TEMP\\Calibre Portable\"",
+            "Icacls $dir /t /c /reset"
         ]
     },
     "bin": [
@@ -18,9 +23,11 @@
             "calibre"
         ],
         "calibre-portable.exe",
+        "Calibre\\calibre-complete.exe",
         "Calibre\\calibre-customize.exe",
         "Calibre\\calibredb.exe",
         "Calibre\\calibre-debug.exe",
+        "Calibre\\calibre-parallel.exe",
         "Calibre\\calibre-server.exe",
         "Calibre\\calibre-smtp.exe",
         "Calibre\\ebook-convert.exe",
@@ -62,6 +69,13 @@
         "github": "https://github.com/kovidgoyal/calibre"
     },
     "autoupdate": {
-        "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-portable-installer-$version.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-portable-installer-$version.exe",
+                "hash": {
+                    "url": "https://calibre-ebook.com/signatures/calibre-portable-installer-$version.exe.sha512"
+                }
+            }
+        }
     }
 }
