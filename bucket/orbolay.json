@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SpikeHD/Orbolay/releases/download/v0.1.0-alpha3/orbolay-aarch64-pc-windows-msvc.exe#/orbolay.exe",
-            "hash": "a521fc8b9378ea523d45e09f6da4edbcbd8299b839fed8500f3c5db46542c3c3"
-        },
-        "arm64": {
             "url": "https://github.com/SpikeHD/Orbolay/releases/download/v0.1.0-alpha3/orbolay-x86_64-pc-windows-msvc.exe#/orbolay.exe",
             "hash": "3215e6ed3457bfb94f883db4d995e48ca03c024d016a58992ce71da6b3114a80"
+        },
+        "arm64": {
+            "url": "https://github.com/SpikeHD/Orbolay/releases/download/v0.1.0-alpha3/orbolay-aarch64-pc-windows-msvc.exe#/orbolay.exe",
+            "hash": "a521fc8b9378ea523d45e09f6da4edbcbd8299b839fed8500f3c5db46542c3c3"
         }
     },
     "checkver": {
