@@ -1,6 +1,6 @@
 {
     "version": "6.1",
-    "description": "Scoop Super Search, instantaneous results, UTF-8 and regex compatible. The fastest search engine for Scoop.",
+    "description": "Scoop Super Search, instantaneous results, UTF-8 and regex compatible. The fastest search engine for Scoop. This is duplicate from original place because original not works for me!",
     "homepage": "https://github.com/okibcn/ss",
     "license": "GPL-3.0-only",
     "notes": [
