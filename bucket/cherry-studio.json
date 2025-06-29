@@ -28,15 +28,17 @@
         ]
     ],
     "post_install": [
-        "if (Test-Path $env:APPDATA\\CherryStudio) {",
-        "    Copy-Item -Path $env:APPDATA\\CherryStudio\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
-        "    Remove-Item $env:APPDATA\\CherryStudio -Force -Recurse",
-        "}",
-        "New-Item -ItemType Junction -Path $env:APPDATA\\CherryStudio -Target $persist_dir\\data | Out-Null"
+        "if (Test-Path \"$persist_dir\\data\\*\") {",
+        "    New-Item \"$Env:AppData\\CherryStudio\" -ItemType Directory -Force | Out-Null",
+        "    Copy-Item \"$persist_dir\\data\\*\" \"$Env:AppData\\CherryStudio\" -Recurse",
+        "}"
     ],
-    "uninstaller": {
-        "script": "Remove-Item $env:APPDATA\\CherryStudio -Force -Recurse"
-    },
+    "pre_uninstall": [
+        "if (Test-Path \"$Env:AppData\\CherryStudio\\*\") {",
+        "    Remove-Item \"$persist_dir\\data\" -Recurse -Force",
+        "    Move-Item \"$Env:AppData\\CherryStudio\" \"$persist_dir\\data\" -Force",
+        "}"
+    ],
     "persist": "data",
     "checkver": {
         "github": "https://github.com/CherryHQ/cherry-studio"
