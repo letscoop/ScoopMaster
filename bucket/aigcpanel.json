@@ -17,6 +17,7 @@
       }
     }
   },
+  "bin": "AigcPanel.exe",
   "shortcuts": [
     [
       "AigcPanel.exe",
