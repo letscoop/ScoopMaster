@@ -19,8 +19,8 @@
     },
     "shortcuts": [
         [
-            "dehelper.exe",
-            "德语助手"
+            "frhelper.exe",
+            "frhelper"
         ]
     ],
     "checkver": {
