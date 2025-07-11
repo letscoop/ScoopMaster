@@ -1,14 +1,28 @@
 {
     "homepage": "https://www.dcloud.io/hbuilderx.html",
-    "version": "4.66.2025051912",
-    "license": "https://hx.dcloud.net.cn/license",
-    "url": "https://download.dcloud.io/download/HBuilderX.4.66.2025051912.zip",
-    "hash": "MD5:C3D64E268532874420F080444954FD40",
-    "bin": "HBuilderX\\HBuilderX.exe",
-    "shortcuts": [
-        ["HBuilderX\\HBuilderX.exe", "HBuilderX - A Superpowered IDE for VUE."]
+    "version": "4.75.2025071105",
+    "license": "Freeware",
+    "extract_dir": "HBuilderX",
+    "url": "https://download1.dcloud.net.cn/download/HBuilderX.4.75.2025071105.zip",
+    "hash": "41420f884d93447367d28019727b305f5d250dff3125fb0eeedf48a0f41171fc",
+    "bin": [
+        [
+            "HBuilderX.exe",
+            "HBuilderX"
+        ]
     ],
+    "persist": "plugins",
+    "shortcuts": [
+        [
+            "HBuilderX.exe",
+            "HBuilderX"
+        ]
+    ],
+    "checkver": {
+        "url": "https://download1.dcloud.net.cn/hbuilderx/release.json",
+        "jsonpath": "$.win[2].version"
+    },
     "autoupdate": {
-        "url": "https://download.dcloud.net.cn/download/HBuilderX.$version.zip"
+        "url": "https://download1.dcloud.net.cn/download/HBuilderX.$version.zip"
     }
 }
