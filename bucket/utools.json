@@ -1,8 +1,8 @@
 {
+    "version": "7.2.1",
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
     "license": "Proprietary",
-    "version": "7.2.1",
     "architecture": {
         "64bit": {
             "url": "https://res.u-tools.cn/version2/uTools-7.2.1.exe#/dl.7z",
@@ -10,16 +10,9 @@
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
-        },
-        "32bit": {
-            "url": "https://res.u-tools.cn/version2/uTools-7.2.1-ia32.exe#/dl.7z",
-            "hash": "sha512:9457e5d205f4a1f61ee3806377f6c99e6760cc894753608029ac10325cd17b4f335919434e731a3d934e9ff669de920f1e9b59e727e85d74cb87ea1e67597b88",
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
-            }
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "shortcuts": [
         [
             "uTools.exe",
@@ -38,14 +31,6 @@
                     "url": "https://res.u-tools.cn/version2/latest.yml?",
                     "mode": "extract",
                     "regex": "(?sm)$version.exe.*?sha512: $base64"
-                }
-            },
-            "32bit": {
-                "url": "https://res.u-tools.cn/version2/uTools-$version-ia32.exe#/dl.7z",
-                "hash": {
-                    "url": "https://res.u-tools.cn/version2/latest-ia32.yml?",
-                    "mode": "extract",
-                    "regex": "(?sm)$version-ia32.exe.*?sha512: $base64"
                 }
             }
         }
