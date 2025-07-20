@@ -1,16 +1,16 @@
 {
-    "version": "2025.07.19",
+    "version": "2025.07.20",
     "description": "Command-line program to download image galleries and collections from several image hosting sites (nightly build)",
     "homepage": "https://github.com/mikf/gallery-dl",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/gdl-org/builds/releases/download/2025.07.19/gallery-dl_windows.exe#/gallery-dl.exe",
-            "hash": "6eb3672dd5d2cac94dd0828e8daadcdb4be6d7fef259885b1ced4dda8c221b83"
+            "url": "https://github.com/gdl-org/builds/releases/download/2025.07.20/gallery-dl_windows.exe#/gallery-dl.exe",
+            "hash": "ef94630ccc4486af3e9d35dc34d1c6a1650380b96ae305f229a9b148bf10d846"
         },
         "32bit": {
-            "url": "https://github.com/gdl-org/builds/releases/download/2025.07.19/gallery-dl_windows_x86.exe#/gallery-dl.exe",
-            "hash": "cd9642c3463c374ff4a23918b9f0d294370d1f0dd7555b8a8bdb0b5dd2fa9e0b"
+            "url": "https://github.com/gdl-org/builds/releases/download/2025.07.20/gallery-dl_windows_x86.exe#/gallery-dl.exe",
+            "hash": "db42267623507ce61f1a32edd12fcdb274109f97935aa48cf230233b58c0d661"
         }
     },
     "pre_install": "if (-not (Test-Path \"$persist_dir\\gallery-dl.conf\")) { Set-Content \"$dir\\gallery-dl.conf\" '{}' -Encoding Ascii | Out-Null }",
