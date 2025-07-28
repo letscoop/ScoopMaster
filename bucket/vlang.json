@@ -1,22 +1,21 @@
 {
-    "version": "weekly.2025.31",
-    "description": "The V Programming Language. Simple, fast, safe, compiled.",
-    "homepage": "https://github.com/vlang/v",
-    "license": "MIT",
-    "notes": [
-        "Vlang contains TCC with the prebuilt binary. For making optimized builds of your software you have to install GNU/GCC or LLVM/Clang",
-        "See https://github.com/vlang/v/wiki/Installing-a-C-compiler-on-Windows for more information."
-    ],
-    "url": "https://github.com/vlang/v/releases/download/weekly.2025.31/v_windows.zip",
-    "hash": "59341f301aad279930f8edea997c1a7a5e803d846de6235cd293512197517b8d",
-    "extract_dir": "v",
-    "bin": "v.exe",
-    "checkver": {
-        "url": "https://github.com/vlang/v/releases/latest",
-        "regex": "<h1[^>]*>(?<version>(?:weekly)?[\\d\\.]+)</h1>"
-    },
-    "autoupdate": {
-        "url": "https://github.com/vlang/v/releases/download/$version/v_windows.zip",
-        "hash": "download"
-    }
+  "version": "2025.30",
+  "description": "The V Programming Language. Simple, fast, safe, compiled.",
+  "homepage": "https://vlang.io",
+  "license": "MIT",
+  "notes": "Vlang contains self-hosted TCC. For making optimized builds of your software you have to install GNU/GCC or LLVM/Clang",
+  "suggest": {
+    "An LLVM/Clang/LLD based mingw-w64 toolchain": "Scoop-littleli/llvm-mingw"
+  },
+  "url": "https://github.com/vlang/v/releases/download/weekly.2025.30/v_windows.zip",
+  "hash": "2f09408520913aa16997fdd441ef38835895debae6b3a362bfb9d68764e4972f",
+  "extract_dir": "v",
+  "bin": "v.exe",
+  "checkver": {
+    "regex": "/releases/tag/weekly\\.([\\d.]+)",
+    "url": "https://github.com/vlang/v/releases/latest"
+  },
+  "autoupdate": {
+    "url": "https://github.com/vlang/v/releases/download/weekly.$version/v_windows.zip"
+  }
 }

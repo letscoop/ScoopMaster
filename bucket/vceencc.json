@@ -1,39 +1,39 @@
 {
-    "homepage": "https://github.com/rigaya/VCEEnc",
-    "description": "Transcoding software using VCE of AMD.",
-    "version": "8.38",
-    "license": "MIT",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/rigaya/VCEEnc/releases/download/8.38/VCEEncC_8.38_Win32.7z",
-            "hash": "cb5908e1b10e5fe1af36203886145183d171b9045e4b1ce9762c0ab13b51035b",
-            "bin": [
-                [
-                    "VCEEncC.exe",
-                    "vceencc"
-                ]
-            ]
-        },
-        "64bit": {
-            "url": "https://github.com/rigaya/VCEEnc/releases/download/8.38/VCEEncC_8.38_x64.7z",
-            "hash": "c5242538a2531784bc4a941f8b06f66cf4e110efae0e7fedf23830e363b68ce8",
-            "bin": [
-                [
-                    "VCEEncC64.exe",
-                    "vceencc"
-                ]
-            ]
-        }
+  "homepage": "https://github.com/rigaya/VCEEnc",
+  "description": "Transcoding software using VCE of AMD.",
+  "version": "8.16",
+  "license": "MIT",
+  "architecture": {
+    "32bit": {
+      "url": "https://ghproxy.com/https://github.com/rigaya/VCEEnc/releases/download/8.16/VCEEncC_8.16_Win32.7z",
+      "hash": "c3b26c3d00b012120d8789547870f5e1298a7292b9eb35addf60b184f078bff3",
+      "bin": [
+        [
+          "VCEEncC.exe",
+          "vceencc"
+        ]
+      ]
     },
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/rigaya/VCEEnc/releases/download/$version/VCEEncC_$version_Win32.7z"
-            },
-            "64bit": {
-                "url": "https://github.com/rigaya/VCEEnc/releases/download/$version/VCEEncC_$version_x64.7z"
-            }
-        }
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/rigaya/VCEEnc/releases/download/8.16/VCEEncC_8.16_x64.7z",
+      "hash": "ff6209c8b2e7293924ba624448ff5c93453d89257076d9762429794b60a37fe7",
+      "bin": [
+        [
+          "VCEEncC64.exe",
+          "vceencc"
+        ]
+      ]
     }
+  },
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "https://ghproxy.com/https://github.com/rigaya/VCEEnc/releases/download/$version/VCEEncC_$version_Win32.7z"
+      },
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/rigaya/VCEEnc/releases/download/$version/VCEEncC_$version_x64.7z"
+      }
+    }
+  }
 }

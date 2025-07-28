@@ -1,21 +1,14 @@
 {
-    "version": "3.15.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://download.stateful.com/runme/3.15.0/runme_windows_x86_64.zip",
-            "bin": [
-                "runme.exe"
-            ],
-            "hash": "8ce4247a70d7cf66edb81c63be7327d4cba29e98c9d7dad51ab359080c482da9"
-        },
-        "arm64": {
-            "url": "https://download.stateful.com/runme/3.15.0/runme_windows_arm64.zip",
-            "bin": [
-                "runme.exe"
-            ],
-            "hash": "c60476ed805e0e487954699c646a151ca057b9c46c0fdc209d251ed9e5b89da0"
-        }
-    },
-    "homepage": "https://runme.dev",
-    "description": "Execute your runbooks, docs, and READMEs."
+  "version": "1.6.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://download.stateful.com/runme/1.6.0/runme_windows_x86_64.zip",
+      "bin": [
+        "runme.exe"
+      ],
+      "hash": "ca1b4baaa07679108892b78b6354260b5b4ab79c689173cbaf9ca4560ecc1f10"
+    }
+  },
+  "homepage": "https://stateful.com",
+  "description": "Execute code snippets directly from Markdown files."
 }

@@ -1,12 +1,12 @@
 {
-    "version": "2025.7.2",
+    "version": "2025.3.1",
     "description": "A GUI inspector for mobile apps and more, powered by a (separately installed) Appium server.",
     "homepage": "http://appium.io/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/appium/appium-inspector/releases/download/v2025.7.2/Appium-Inspector-2025.7.2-win-x64.zip",
-            "hash": "sha512:8c6276cc7b3269b5196edefa17fb7a9bc5d0bcbdcd95cf1c2c8fe3716ed1f036f09967f34c3d3aa98a99d84a3641f4f6551729e4154d4183f37fcba207174d8a"
+            "url": "https://ghproxy.com/https://github.com/appium/appium-inspector/releases/download/v2025.3.1/Appium-Inspector-windows-2025.3.1.zip",
+            "hash": "1bf09a1fff643c5741af21f8160b2e70caad62d0584ed2b271b49bd3c2efd57f"
         }
     },
     "shortcuts": [
@@ -21,11 +21,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-$version-win-x64.zip",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512: $base64"
-                }
+                "url": "https://ghproxy.com/https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-windows-$version.zip"
             }
         }
     }

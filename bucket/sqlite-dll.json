@@ -1,30 +1,15 @@
 {
-    "version": "3.50.2",
+    "version": "3.43.2",
     "description": "A small, fast, self-contained, high-reliability and full-featured SQL database engine",
     "homepage": "https://www.sqlite.org/",
     "license": "blessing",
-    "architecture": {
-        "32bit": {
-            "url": "https://www.sqlite.org/2025/sqlite-dll-win-x86-3500200.zip",
-            "hash": "8d08ec0e129db0cb06835425bdc0fd9e6db272d607024590edc255742626110c"
-        },
-        "64bit": {
-            "url": "https://www.sqlite.org/2025/sqlite-dll-win-x64-3500200.zip",
-            "hash": "71a383e95b399e77cf9536e2e3d35c1a16600b6a2b59abcaa3888ae79d885130"
-        }
-    },
+    "url": "https://www.sqlite.org/2023/sqlite-dll-win32-x86-3430200.zip",
+    "hash": "0b64b189cb41d065f9355de93ce2f41c40865429801bec3a555b30aca839058c",
     "checkver": {
         "url": "https://www.sqlite.org/download.html",
-        "regex": "(?sm)\\d+-bit DLL \\(x\\d+\\) for SQLite version ([\\d.]+)\\..*?(?<year>\\d+)/sqlite-tools-win-x64-(?<clean>\\d+)"
+        "regex": "(?sm)\\d+-bit DLL \\(x\\d+\\) for SQLite version ([\\d.]+)\\..*?(?<year>\\d+)/sqlite-dll-win32-x86-(?<clean>\\d+)"
     },
     "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://www.sqlite.org/$matchYear/sqlite-dll-win-x86-$matchClean.zip"
-            },
-            "64bit": {
-                "url": "https://www.sqlite.org/$matchYear/sqlite-dll-win-x64-$matchClean.zip"
-            }
-        }
+        "url": "https://www.sqlite.org/$matchYear/sqlite-dll-win32-x86-$matchClean.zip"
     }
 }

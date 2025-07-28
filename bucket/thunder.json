@@ -1,40 +1,51 @@
 {
-    "version": "11.1.12.1692",
-    "description": "迅雷11,绿色本地VIP精简版",
-    "homepage": "https://www.423down.com/10289.html",
+    "version": "11.2.2.1716",
+    "description": "迅雷11 绿色精简版",
+    "homepage": "https://www.ghxi.com/thunder11green.html",
+    "license": "Unknown",
     "depends": "sudo",
-    "url": "https://onedrive.lstheart.tk/d/ScoopSofts/Thunder/Thunder_v11.1.12.1692.exe#dl.7z",
-    "hash": "5118e8cadb95eadde79e030b4b620a41f6283e746f2fcc9cebf1cc42d7861247",
+    "url": "https://od.233366.xyz/api/raw/?path=/NAS%E5%A4%87%E4%BB%BD/Download/software/Thunder_11.2.2.1716v2_Green.7z",
+    "hash": "b7d8dd01e9cf5553f87a625a0972a8f6ac75aad0d680cc964086d48f9cb202dd",
     "extract_dir": "Thunder",
     "installer": {
-        "script": "sudo cmd /c \"$dir\\!绿化.bat\""
+        "script": [
+            "# install",
+            "if (!(Test-Path $persist_dir)) {",
+            "    New-Item $persist_dir -Type Directory -Force | Out-Null",
+            "}",
+            "$runtimeCachePersist = \"$persist_dir\\appdata\"",
+            "if (!(Test-Path $runtimeCachePersist)) {",
+            "    New-Item $runtimeCachePersist -Type Directory -Force | Out-Null",
+            "}",
+            "function PersistsFolder([String] $folder) {",
+            "    $folderName = $folder.Split(\"\\\")[-1]",
+            "    if (Test-Path $runtimeCachePersist\\$folderName) {",
+            "        Remove-Item $folder -Force -Recurse -ErrorAction SilentlyContinue",
+            "        New-Item -Type Junction -Path $folder -Target $runtimeCachePersist\\$folderName | Out-Null",
+            "    } else {",
+            "        if (Test-Path $folder) {",
+            "            Move-Item $folder $runtimeCachePersist -Force",
+            "            New-Item -Type Junction -Path $folder -Target $runtimeCachePersist\\$folderName | Out-Null",
+            "        }",
+            "    }",
+            "}",
+            "@(\"$env:APPDATA\\thunder\", \"$env:APPDATA\\Thunderx\") | ForEach-Object { PersistsFolder $_ }"
+        ]
     },
     "uninstaller": {
-        "script": "sudo cmd /c \"$dir\\!卸载.bat\""
-    },
-    "bin": [
-        [
-            "Program/Thunder.exe",
-            "Thunder"
+        "script": [
+            "# uninstall",
+            "$runtimeCachePersist = \"$persist_dir\\appdata\"",
+            "function PersistsFolder([String] $folder) {",
+            "    $folderName = $folder.Split(\"\\\")[-1]",
+            "    if (!(Test-Path $runtimeCachePersist\\$folderName)) {",
+            "        Move-Item $folder $runtimeCachePersist -Force",
+            "    } else {",
+            "        Remove-Item $folder -Force -Recurse -ErrorAction SilentlyContinue",
+            "    }",
+            "}",
+            "@(\"$env:APPDATA\\thunder\", \"$env:APPDATA\\Thunderx\") | ForEach-Object { PersistsFolder $_ }"
         ]
-    ],
-    "shortcuts": [
-        [
-            "Program/Thunder.exe",
-            "迅雷"
-        ]
-    ],
-    "nowait": true,
-    "notes": [
-        "安装破解版软件,安装时建议关闭杀毒软件",
-        "若桌面未生成快捷方式,请手动执行应用目录下的bat文件",
-        ""
-    ],
-    "checkver": {
-        "re": "迅雷11 v([\\d.]+)",
-        "encode": "UTF-8"
     },
-    "autoupdate": {
-        "url": "https://onedrive.lstheart.tk/d/ScoopSofts/Thunder/Thunder_v$version.exe#dl.7z"
-    }
+    "shortcuts": [["Program/Thunder.exe", "Thunder"]]
 }

@@ -1,24 +1,14 @@
 {
-    "version": "2.7.0",
-    "description": "To mash the mouse button automatically.",
-    "homepage": "https://cosmic-voyager.com/luna.html",
-    "url": "https://cosmic-voyager.com/wp-content/uploads/2023/10/Luna270.zip",
-    "hash": "sha512:c2ef4adc2d21da308809383ded5edf77bfbef5b5ea3ee44096b57ae3de13b1b81c7ca4e7c6781bcbbc9106563393e55c24b7a293355efe3f4d93724d0921d550",
-    "extract_dir": "Luna270",
-    "pre_install": [
-        "New-Item -Path \"$dir\\\" -Name \"Luna.ini\" -ItemType \"file\""
-    ],
-    "persist": [
-        "Luna.ini"
-    ],
-    "shortcuts": [
-        [
-            "Luna.exe",
-            "Lunatic Mouse"
-        ]
-    ],
-    "checkver": {
-        "url": "https://cosmic-voyager.com/lunamouse/",
-        "regex": "<p>ver ([\\d\\.]+) \\([\\d/]+\\)</p>"
-    }
+  "version": "2.1.1",
+  "description": "To mash the mouse button automatically.",
+  "homepage": "https://cosmic-voyager.com/luna.html",
+  "url": "https://cosmic-voyager.com/php/download_count/download.php?download=1#/Luna211.zip",
+  "hash": "0a3886501b28d9a696811fa516ad0e909c813112d43cfa5fe18ec42f5d13aa03",
+  "extract_dir": "Luna211",
+  "shortcuts": [
+    [
+      "Luna.exe",
+      "Lunatic Mouse"
+    ]
+  ]
 }

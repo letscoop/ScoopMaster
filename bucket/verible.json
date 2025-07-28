@@ -1,30 +1,25 @@
 {
-    "version": "0.0-4013-gba3dc371",
-    "description": "Verible is a suite of SystemVerilog developer tools, including a parser, style-linter, and formatter.",
-    "homepage": "https://github.com/chipsalliance/verible",
-    "license": "Apache-2.0",
-    "url": "https://github.com/chipsalliance/verible/releases/download/v0.0-4013-gba3dc371/verible-v0.0-4013-gba3dc371-win64.zip",
-    "bin": [
-        "\\verible-patch-tool.exe",
-        "\\verible-verilog-diff.exe",
-        "\\verible-verilog-format.exe",
-        "\\verible-verilog-kythe-extractor.exe",
-        "\\verible-verilog-kythe-kzip-writer.exe",
-        "\\verible-verilog-lint.exe",
-        "\\verible-verilog-ls.exe",
-        "\\verible-verilog-obfuscate.exe",
-        "\\verible-verilog-preprocessor.exe",
-        "\\verible-verilog-project.exe",
-        "\\verible-verilog-syntax.exe"
-    ],
-    "extract_dir": "verible-v0.0-4013-gba3dc371-win64",
-    "hash": "e3aa0613a23417820eb97113dde85b739e9f1283502f2c20b4f28e546d288137",
-    "checkver": {
-        "url": "https://github.com/chipsalliance/verible/releases",
-        "re": "v(?<version>[\\d]*\\.[\\d]*\\-[\\d]{4}\\-[\\da-zA-Z]*)"
-    },
-    "autoupdate": {
-        "url": "https://github.com/chipsalliance/verible/releases/download/v$version/verible-v$version-win64.zip",
-        "extract_dir": "verible-v$version-win64"
-    }
+  "version": "0.0-2827-g0407177d",
+  "description": "Verible is a suite of SystemVerilog developer tools, including a parser, style-linter, and formatter.",
+  "homepage": "https://github.com/chipsalliance/verible",
+  "checkver": "github",
+  "license": "Apache-2.0",
+  "url": "https://ghproxy.com/https://github.com/chipsalliance/verible/releases/download/v0.0-2827-g0407177d/verible-v0.0-2827-g0407177d-win64.zip",
+  "bin": [
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-patch-tool.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-diff.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-format.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-kythe-extractor.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-lint.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-ls.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-obfuscate.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-preprocessor.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-project.exe",
+    "\\verible-v0.0-2827-g0407177d-win64\\verible-verilog-syntax.exe"
+  ],
+  "hash": "90729c607db702b1bbde69cbd4e78b0de986b467053fec40a8e33fb4ec26d429",
+  "autoupdate": {
+    "url": "https://ghproxy.com/https://github.com/chipsalliance/verible/releases/download/v$version/verible-v$version-win64.zip"
+  },
+  "_from": "okibcn/ScoopMaster"
 }
