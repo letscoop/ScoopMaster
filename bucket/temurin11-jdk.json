@@ -5,8 +5,12 @@
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/LatestRelease/OpenJDK11U-jdk_x64_windows_hotspot_11.0.28_6.zip",
+            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28+6/OpenJDK11U-jdk_x64_windows_hotspot_11.0.28_6.zip",
             "hash": "1422b070f94c93d3fdba7e0bcaa269389c92a928de54e47d988a1002d3a35dc2"
+        },
+        "32bit": {
+            "url": "https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28+6/OpenJDK11U-jdk_x86-32_windows_hotspot_11.0.28_6.zip",
+            "hash": "21835a3a761932d93a79759dc1c823112d54a3288f0f04e65a188eaf45cc6d69"
         }
     },
     "extract_dir": "jdk-11.0.28+6",
@@ -28,11 +32,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/adoptium/releases/temurin11-binaries/LatestRelease/$matchName"
+                "url": "https://github.com/$matchLink/download/$matchTag/$matchName"
+            },
+            "32bit": {
+                "url": "https://github.com/$matchLink/download/$matchTag/$matchPrefix_x86-32_$matchSuffix"
             }
         },
         "hash": {
-            "url": "https://github.com/$matchLink/download/$matchTag/$matchName.sha256.txt",
+            "url": "$url.sha256.txt",
             "find": "^([a-fA-F0-9]+)\\s"
         },
         "extract_dir": "$matchTag"
