@@ -1,0 +1,12 @@
+{
+  "version": "0.1.2",
+  "description": "Hexdump and visualizer tool",
+  "homepage": "https://github.com/mrmisra/hexdump",
+  "license": "GPL-v3",
+  "url": "https://github.com/mrmisra/hexdump/releases/download/0.1.2/hexdump.zip",
+  "hash": "721dca7626e2368cb17fe92be1c8c6d70cfaa056be0fb929dd51ac7b429bbc20",
+  "bin": "hexdump.exe",
+  "autoupdate": {
+    "url": "https://github.com/mrmisra/hexdump/releases/download/$version/hexdump.zip"
+  }
+}

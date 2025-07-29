@@ -1,0 +1,32 @@
+{
+    "version": "2.5.3+383",
+    "description": "Enjoy smooth gameplay, stunning graphics, and endless fun.",
+    "homepage": "https://fafarunner.com",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/fafarunner/fafarunner/releases/download/v2.5.3+383/fafarunner-2.5.3.383-windows-setup-x64.exe#/FaFaRunnerSetup.exe",
+            "hash": "cbce04a3c404bd7583c6dfa33f4bc2abf7e5f84d179aff16da877db64adad867"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "FaFaRunner.exe",
+            "FaFa Runner"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/fafarunner/fafarunner/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/v((\\d+(?:\\.\\d+)+)(?:%2B(\\d+))?)/fafarunner-(?<short>\\d+(?:\\.\\d+)+)-windows-setup-x64\\.exe",
+        "replace": "${2}+${3}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/fafarunner/fafarunner/releases/download/v$version/fafarunner-$matchShort-windows-setup-x64.exe#/FaFaRunnerSetup.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "version": "1.66.0",
+    "description": "Heptabase is a visual note-taking app that helps you learn complex topics",
+    "homepage": "https://heptabase.com/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://heptabase.com/terms_of_service"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/heptameta/project-meta/releases/download/v1.66.0/Heptabase-Setup-1.66.0.exe#/dl.7z",
+            "hash": "sha512:a0e706a87c2e4c0fdc8cb1339551dff8168ee5a97fd227c5ba425b1afd559859a213687db5cedbb5c7f9d182bd575650742f98821894f2a3f8f06bd1c580fd9c",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Heptabase.exe",
+            "Heptabase"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/heptameta/project-meta"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/heptameta/project-meta/releases/download/v$version/Heptabase-Setup-$version.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

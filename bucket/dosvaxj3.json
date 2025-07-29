@@ -1,23 +1,37 @@
 {
-  "version": "230707",
-  "description": "Fork of DOSVAX, an Intel x86-based PC emulator with Japanese keyboard.",
-  "homepage": "https://www.nanshiki.co.jp/software/dosvaxj3.html",
-  "license": "GPL-2.0-or-later",
-  "architecture": {
-    "32bit": {
-      "url": "https://www.nanshiki.co.jp/free/dosvaxj3jp230707_32.zip",
-      "hash": "134c666c557ec630ba8c81d4b17074cc0a2eaee300e968fb364441d8d04f45b6"
+    "version": "250702",
+    "description": "Fork of DOSVAX, an Intel x86-based PC emulator with Japanese keyboard.",
+    "homepage": "https://www.nanshiki.co.jp/software/dosvaxj3.html",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "32bit": {
+            "url": "https://www.nanshiki.co.jp/free/dosvaxj3jp250702_32.zip",
+            "hash": "1633e42f3e29ea16ce2f0bcc191a0fbafbd30250b6f0ea40fce7ca45bf5ff87a"
+        },
+        "64bit": {
+            "url": "https://www.nanshiki.co.jp/free/dosvaxj3jp250702.zip",
+            "hash": "3c9a6618df27e0c0d204fba9d0444f44f1d13aae3ecc812e9b99875ed1ee1f93"
+        }
     },
-    "64bit": {
-      "url": "https://www.nanshiki.co.jp/free/dosvaxj3jp230707.zip",
-      "hash": "bdcc2a7fccdc98e4cdb6a8c44395f3de76605acc7facbbbc559954c91a32aa30"
+    "shortcuts": [
+        [
+            "dosboxj.exe",
+            "DOSVAXJ3"
+        ]
+    ],
+    "persist": "dosboxj.conf",
+    "checkver": {
+        "url": "https://www.nanshiki.co.jp/software/dosvaxj3.html",
+        "regex": "<b>DOSVAXJ3 Build JP([\\d]+) 64bit版</b>　\\([\\d/]+\\)<br>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://www.nanshiki.co.jp/free/dosvaxj3jp$version_32.zip"
+            },
+            "64bit": {
+                "url": "https://www.nanshiki.co.jp/free/dosvaxj3jp$version.zip"
+            }
+        }
     }
-  },
-  "shortcuts": [
-    [
-      "dosboxj.exe",
-      "DOSVAXJ3"
-    ]
-  ],
-  "persist": "dosboxj.conf"
 }

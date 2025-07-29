@@ -1,42 +1,24 @@
 {
-    "version": "2025.7.29",
-    "description": "Polyglot tool version manager and task runner",
-    "homepage": "https://mise.jdx.dev/",
+    "version": "v2025.3.0",
+    "description": "dev tools, env vars, task runner",
+    "homepage": "https://github.com/jdx/mise",
     "license": "MIT",
-    "notes": [
-        "Persistence and environment variables settings of the manifest have been revoked, you can find persisted data at '$persist_dir', if you have installed the manifest before.",
-        "",
-        "See documentation for notes on configuring your shell: https://mise.jdx.dev/installing-mise.html"
-    ],
-    "suggest": {
-        "vcredist": "extras/vcredist2022"
-    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jdx/mise/releases/download/v2025.7.29/mise-v2025.7.29-windows-x64.zip",
-            "hash": "a41be2d7f617e744d294765d8c771b32f8344aaca61ff9e4320e4f8fba7d7942"
-        },
-        "arm64": {
-            "url": "https://github.com/jdx/mise/releases/download/v2025.7.29/mise-v2025.7.29-windows-arm64.zip",
-            "hash": "0b6e7975082169deca0dfe4d2f6ae9f2a02e3368d10445fafad9ed2b2e42ab0b"
+            "url": "https://ghproxy.cn/https://github.com/jdx/mise/releases/download/v2025.3.0/mise-v2025.3.0-win-x64.zip",
+            "hash": "1bf09a1fff643c5741af21f8160b2e70caad62d0584ed2b271b49bd3c2efd57f"
         }
     },
-    "extract_dir": "mise",
-    "bin": "bin/mise.exe",
+    "bin": "mise/bin/mise.exe",
     "checkver": {
-        "github": "https://github.com/jdx/mise"
+        "github": "https://github.com/jdx/mise",
+        "regex": "releases/tag/(v[\\d\\.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/jdx/mise/releases/download/v$version/mise-v$version-windows-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/jdx/mise/releases/download/v$version/mise-v$version-windows-arm64.zip"
+                "url": "https://ghproxy.cn/https://github.com/jdx/mise/releases/download/$version/mise-$version-win-x64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHASUMS256.txt"
         }
     }
 }

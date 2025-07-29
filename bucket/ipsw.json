@@ -1,22 +1,22 @@
 {
-  "version": "3.1.374",
-  "architecture": {
-    "32bit": {
-      "url": "https://ghproxy.com/https://github.com/blacktop/ipsw/releases/download/v3.1.374/ipsw_3.1.374_windows_i386.zip",
-      "bin": [
-        "ipsw_3.1.374_windows_i386/ipsw.exe"
-      ],
-      "hash": "d3e8624aecceb1bf7639e39ad31bcff5a3baea20a20069c9e21c20ac78d25cf0"
+    "version": "3.1.623",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/blacktop/ipsw/releases/download/v3.1.623/ipsw_3.1.623_windows_x86_64.zip",
+            "bin": [
+                "ipsw.exe"
+            ],
+            "hash": "bea058f06c951d129e8b5cac0c092b0d279d226d72690cc974029ca1786f3cac"
+        },
+        "arm64": {
+            "url": "https://github.com/blacktop/ipsw/releases/download/v3.1.623/ipsw_3.1.623_windows_arm64.zip",
+            "bin": [
+                "ipsw.exe"
+            ],
+            "hash": "630c374df232aa41433b5f0de1d4718a0c051e94358aed2ae65ec44da8db5778"
+        }
     },
-    "64bit": {
-      "url": "https://ghproxy.com/https://github.com/blacktop/ipsw/releases/download/v3.1.374/ipsw_3.1.374_windows_x86_64.zip",
-      "bin": [
-        "ipsw_3.1.374_windows_x86_64/ipsw.exe"
-      ],
-      "hash": "d17d31cd8eb5ef0b24392d07b6f010eb3bfdf5194302522f68f0b589b1e5b3f7"
-    }
-  },
-  "homepage": "https://blacktop.github.io/ipsw",
-  "license": "MIT",
-  "description": "iOS/macOS Research Swiss Army Knife"
+    "homepage": "https://blacktop.github.io/ipsw",
+    "license": "MIT",
+    "description": "iOS/macOS Research Swiss Army Knife"
 }

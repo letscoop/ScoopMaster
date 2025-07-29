@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "description": "A GUI for Jujutsu, a Git-compatible DVCS",
+    "homepage": "https://github.com/Natural-selection1/vizjj",
+    "license": "Apache-2.0",
+    "suggest": {
+        "jj": "main/jj"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Natural-selection1/vizjj/releases/download/v0.2.0/vizjj_0.2.0_x64_en-US.msi",
+            "hash": "d82cc05618403233002954281eb0487ecd99539190a58373c1b20d1afb129377"
+        }
+    },
+    "extract_dir": "PFiles\\vizjj",
+    "bin": "vizjj.exe",
+    "shortcuts": [
+        [
+            "vizjj.exe",
+            "Vizjj"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Natural-selection1/vizjj/releases/download/v$version/vizjj_$version_x64_en-US.msi"
+            }
+        }
+    }
+}
