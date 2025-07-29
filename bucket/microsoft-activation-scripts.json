@@ -1,21 +1,21 @@
 {
-    "homepage": "https://github.com/massgravel/Microsoft-Activation-Scripts",
-    "version": "3.4",
-    "description": "A Windows and Office activator using HWID / Ohook / KMS38 / Online KMS activation methods, with a focus on open-source code and fewer antivirus detections.",
-    "checkver": {
-        "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/releases/latest",
-        "re": "releases/tag/(\\d+\\.\\d+)\""
-    },
-    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/tags/3.4.zip",
-    "hash": "c6304c022795f8ac584fc835ffbdef0f2fa884375ba6026fba980d0f85957316",
-    "autoupdate": {
-        "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/tags/$version.zip"
-    },
-    "installer": {
-        "keep": "false",
-        "script": [
-            "%{git clone \"https://github.com/massgravel/Microsoft-Activation-Scripts\" \"$dir\\scripts\"}",
-            "Remove-Item -Recurse -Path \"$dir\" -Include \"Microsoft*\""
-        ]
-    }
+  "version": "0.2025.06.03.5ad6226",
+  "description": "A Windows and Office activator using HWID / KMS38 / Online KMS activation methods, with a focus on open-source code and fewer antivirus detections.",
+  "homepage": "https://massgrave.dev/",
+  "license": {
+    "identifier": "GPL-3.0 license",
+    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/blob/master/LICENSE"
+  },
+  "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/master.zip",
+  "hash": "b14db0c28487d8f3ef043af25489233c7719c1e6ea950b09ae38c34c1569b069",
+  "extract_dir": "Microsoft-Activation-Scripts-master",
+  "env_add_path": "MAS\\All-In-One-Version",
+  "checkver": {
+    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/commits/master.atom",
+    "regex": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>(?<short>[0-9a-f]{7})[0-9a-f]{33})",
+    "replace": "0.${1}.${2}.${3}.${short}"
+  },
+  "autoupdate": {
+    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/master.zip"
+  }
 }
