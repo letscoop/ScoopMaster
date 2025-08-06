@@ -15,6 +15,10 @@
         "32bit": {
             "url": "https://github.com/brave/brave-browser/releases/download/v1.80.125/BraveBrowserStandaloneSilentSetup32.exe#/setup.exe",
             "hash": "f3755b067b7357c7f66815e6a7e0639731e728ae2100a012ab7c250a4f6f701a"
+        },
+        "arm64": {
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.80.125/BraveBrowserStandaloneSilentSetupArm64.exe#/setup.exe",
+            "hash": "ccd8e987435f817069a9fea7af7e17da5258c5aa6cfd2feb98b5c4bdf7b5795c"
         }
     },
     "pre_install": [
@@ -60,7 +64,14 @@
             },
             "32bit": {
                 "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup32.exe#/setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetupArm64.exe#/setup.exe"
             }
+        },
+        "hash": {
+            "url": "$url.sha256",
+            "regex": "$sha256.*?\\.exe"
         }
     }
 }
