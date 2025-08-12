@@ -5,12 +5,20 @@
     "license": "MIT License",
     "url": "https://imtip.aardio.com/update/ImTip.7z",
     "hash": "5c716b292796cae12c89bbc9fc67d9d14ec12c945c68d987a13faab24239edfe",
+    "pre_install": [
+        "# Create portable config dir",
+        "if (!(Test-Path -Path \"$dir\\.ImTip\")) {",
+        "    (New-Item -ItemType \"directory\" -Path \"$dir\" -Name \".ImTip\") | Out-Null",
+        "}"
+    ],
+    "bin": "ImTip.exe",
     "shortcuts": [
         [
             "ImTip.exe",
             "ImTip"
         ]
     ],
+    "persist": ".ImTip",
     "checkver": "v([\\d.]+)",
     "autoupdate": {
         "url": "https://imtip.aardio.com/update/ImTip.7z"
