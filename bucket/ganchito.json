@@ -1,15 +1,15 @@
 {
-    "version":  "1.0.1",
+    "version":  "1.0.0",
     "description": "O Ganchito facilita a criação do arqui commit-msg adicionando regras de commits semânticos.",
     "license":  "MIT License",
   	"notes": [
-        "Correção de erros de ortografia no README"
+        "Primeira versão do utilitário de git hooks."
     ],    
     "url":  "http://github.com/rafaelsouzars/ganchito",
   	"architecture": {
           "64bit": {
-              "url": "https://github.com/rafaelsouzars/ganchito/releases/download/v1.0.1/ganchito_x64_v1.0.1.zip",
-              "hash": "e49c136b060906eb1d6290ca55de1a542bae8361bb1d5c2f187159f52c442c22"
+              "url": "https://github.com/rafaelsouzars/ganchito/releases/download/v1.0.0/ganchito_x64_v1.0.0.zip",
+              "hash": "a0fb07d5f43f0bac2cd38b74565db943496c0d6fa395f14d346b11572143adfe"
           }
     },
   	"pre_install": [
@@ -23,7 +23,7 @@
     "bin":  "ganchito.exe",
   	"checkver": {
           "url": "https://github.com/rafaelsouzars/ganchito/releases",
-          "regex": "/assets/v([\\d\\.\\d.\\d])"
+          "regex": "assets/v([\\d\\.\\]+)"
       },
       "autoupdate": {
           "architecture": {
