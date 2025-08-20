@@ -46,7 +46,7 @@
                 "url":
                 [
                     "https://github.com/Sanheiii/ok-star-resonance/archive/refs/tags/v$version.zip#dl.7z",
-                    "https://cnb.cool/Sanheiii/ok-star-resonance/-/git/archive/v0.0.12.zip#dl.7z"
+                    "https://cnb.cool/Sanheiii/ok-star-resonance/-/git/archive/v$version.zip#dl.7z"
                 ],
                 "extract_dir": "ok-star-resonance-$version"
             }
