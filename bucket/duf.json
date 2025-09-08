@@ -1,6 +1,6 @@
 {
     "version": "0.9.1",
-    "description": "Disk Usage/Free Utility - a better 'df' alternative",
+    "description": "Disk Usage/Free Utility.",
     "homepage": "https://github.com/muesli/duf",
     "license": "MIT",
     "architecture": {
