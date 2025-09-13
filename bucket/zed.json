@@ -1,27 +1,29 @@
 {
-  "version": "0.203.5",
-  "description": "High-performance, multiplayer code editor",
-  "homepage": "https://github.com/pirafrank/zed_unofficial_win_builds",
-  "license": "AGPL-3.0, Apache-2.0, GPL-3.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/pirafrank/zed_unofficial_win_builds/releases/download/v0.203.5/zed.zip",
-      "hash": "fca6caadf8ffaab0474bd02227be1278844386dfa23f96156a3815fe44cd00e3"
-    }
-  },
-  "bin": "zed.exe",
-  "shortcuts": [["zed.exe", "Zed"]],
-  "checkver": {
-    "github": "https://github.com/pirafrank/zed_unofficial_win_builds"
-  },
-  "autoupdate": {
+    "version": "0.203.5",
+    "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source.",
+    "homepage": "https://zed.dev/",
+    "license": "AGPL-3.0, Apache-2.0, GPL-3.0",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/pirafrank/zed_unofficial_win_builds/releases/download/v$version/zed.zip"
-      },
-      "hash": {
-        "url": "$baseurl/zed.zip.sha256"
-      }
+        "64bit": {
+            "url": "https://github.com/deevus/zed-windows-builds/releases/download/v0.203.5/zed.zip",
+            "hash": "c01e749ed809ec95a1a5f6f238e7409d6ce01f09fa2c98978c7d228a048cd388"
+        }
+    },
+    "bin": "zed.exe",
+    "shortcuts": [
+        [
+            "zed.exe",
+            "Zed"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/deevus/zed-windows-builds/releases",
+        "regex": "v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/deevus/zed-windows-builds/releases/download/v$version/zed.zip",
+        "hash": {
+            "url": "https://github.com/deevus/zed-windows-builds/releases/download/v$version/sha256sums.txt"
+        }
     }
-  }
 }
