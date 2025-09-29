@@ -1,0 +1,29 @@
+{
+    "version": "7.60.5.106",
+    "description": "云盘: 百度云盘",
+    "homepage": "http://pan.baidu.com",
+    "license": "Unknown",
+    "url": "https://webcdn.m.qq.com/spcmgr/download/BaiduNetdisk_txgj1_7.60.5.106.exe#/dl.7z",
+    "hash": "9cff9867b62451e73b815d1ca0d4b5bbd157dcc15618b80769e4134667a087bd",
+    "pre_install": "Remove-Item -R -Path \"$dir\\`$TEMP\",\"$dir\\`$PLUGINSDIR\"",
+    "shortcuts": [
+        [
+            "BaiduNetdisk.exe",
+            "百度云盘"
+        ]
+    ],
+    "persist": "users",
+    "checkver": {
+        "script": [
+            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq[req][soft_id_list]=32414' -Method 'POST'",
+            "$content = $res.Content | ConvertFrom-Json",
+            "$verName = $content.resp.soft_list[0].ver_name",
+            "$fileName = $content.resp.soft_list[0].file_name",
+            "Write-Output \"$verName|$fileName\""
+        ],
+        "regex": "(?<version>[\\d.]+)\\|(?<id>.*)"
+    },
+    "autoupdate": {
+        "url": "https://webcdn.m.qq.com/spcmgr/download/$matchId#/dl.7z"
+    }
+}
