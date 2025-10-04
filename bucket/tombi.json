@@ -1,23 +1,30 @@
 {
-  "version": "0.6.19",
-  "description": "TOML Formatter / Linter / Language Server",
-  "homepage": "https://tombi-toml.github.io/tombi/",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/tombi-toml/tombi/releases/download/v0.6.19/tombi-cli-0.6.19-x86_64-pc-windows-msvc.zip",
-      "hash": "0bf8c92d2026dd6267d7c0f450d2b3ede2861518259b997af64f5e07df5c9876"
-    }
-  },
-  "bin": "tombi.exe",
-  "checkver": {
-    "github": "https://github.com/tombi-toml/tombi"
-  },
-  "autoupdate": {
+    "version": "0.6.20",
+    "description": "TOML Formatter / Linter / Language Server ",
+    "homepage": "https://tombi-toml.github.io/tombi",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/tombi-toml/tombi/releases/download/v$version/tombi-cli-$version-x86_64-pc-windows-msvc.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/tombi-toml/tombi/releases/download/v0.6.20/tombi-cli-0.6.20-x86_64-pc-windows-msvc.zip",
+            "hash": "fde914bd5bf89becf5c55322f06115903e6edc04a4a570fa018da7dc48fc174e"
+        },
+        "arm64": {
+            "url": "https://github.com/tombi-toml/tombi/releases/download/v0.6.20/tombi-cli-0.6.20-aarch64-pc-windows-msvc.zip",
+            "hash": "ea450ab2e5a7014cc0f7ada68ec6e55892f5b37fbc3479f3c719b705f45bef5c"
+        }
+    },
+    "bin": "tombi.exe",
+    "checkver": {
+        "github": "https://github.com/tombi-toml/tombi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tombi-toml/tombi/releases/download/v$version/tombi-cli-$version-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/tombi-toml/tombi/releases/download/v$version/tombi-cli-$version-aarch64-pc-windows-msvc.zip"
+            }
+        }
     }
-  }
 }
