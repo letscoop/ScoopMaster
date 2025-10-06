@@ -5,6 +5,7 @@
     "license": "GPL-3.0-only",
     "url": "https://download.gimp.org/mirror/pub/gimp/v3.0/windows/gimp-3.0.6-setup.exe",
     "hash": "32101c31d32516dc4b9020295b9f9bf994b5372dfc690820d7b533b9bc93d694",
+    "innosetup": true,
     "installer": {
         "script": [
             "$scriptver = $version -split '[-.]'",
@@ -55,7 +56,6 @@
             "GIMP"
         ]
     ],
-    "innosetup": true,
     "checkver": {
         "url": "https://www.gimp.org/downloads/",
         "regex": "gimp-(?<version>[\\d.]+)-setup(?<build>-\\d)?\\.exe",
