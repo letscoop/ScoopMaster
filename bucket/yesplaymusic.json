@@ -1,14 +1,26 @@
 {
-    "version": "0.4.9",
-    "description": "高颜值的第三方网易云播放器",
-    "homepage": "https://github.com/qier222/YesPlayMusic",
-    "license": {
-        "identifier": "MIT"
+    "version": "0.4.10",
+    "description": "Cloud music player based on NetEase Player, featuring more elegant UI",
+    "homepage": "https://music.qier222.com/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/qier222/YesPlayMusic/releases/download/v0.4.10/YesPlayMusic-0.4.10.exe#/dl.7z",
+            "hash": "00fb21baab7233f38c93f6dec4ead72472b62f81a6798bfaa0c5f7c0c8558e32"
+        }
     },
-    "url": "https://ghproxy.cn/https://github.com/qier222/YesPlayMusic/releases/download/v0.4.9/YesPlayMusic-0.4.9.exe",
-    "hash": "1bf09a1fff643c5741af21f8160b2e70caad62d0584ed2b271b49bd3c2efd57f",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" | Out-Null",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+    ],
     "installer": {
-        "script": "Rename-Item -NewName (Join-Path $dir YesPlayMusic.exe) -Path (Join-Path $dir YesPlayMusic-$version.exe)"
+        "script": [
+            "ensure \"$persist_dir\" | Out-Null",
+            "New-Item \"$env:APPDATA\\yesplaymusic\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
+        ]
+    },
+    "uninstaller": {
+        "script": "Remove-Item \"$env:APPDATA\\yesplaymusic\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
     },
     "shortcuts": [
         [
@@ -16,11 +28,16 @@
             "YesPlayMusic"
         ]
     ],
-    "uninstaller": {
-        "script": "Remove-Item -Path $env:APPDATA\\YesPlayMusic -Recurse"
+    "checkver": {
+        "url": "https://api.github.com/repos/qier222/YesPlayMusic/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "/releases/download/v([\\d.-]+)/(?<file>YesPlayMusic(?:.|-)([\\d.]+)\\.exe)"
     },
-    "checkver": "github",
     "autoupdate": {
-        "url": "https://ghproxy.cn/https://github.com/qier222/YesPlayMusic/releases/download/v$version/YesPlayMusic-$version.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/qier222/YesPlayMusic/releases/download/v$version/$matchFile#/dl.7z"
+            }
+        }
     }
 }
