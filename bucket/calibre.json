@@ -3,13 +3,17 @@
     "description": "Powerful and easy to use e-book manager",
     "homepage": "https://calibre-ebook.com",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/kovidgoyal/calibre/releases/download/v8.13.0/calibre-portable-installer-8.13.0.exe",
-    "hash": "19ad45b92e454a90363b7239a7c0302f79e2f9f5da783c3a0ce37caa754d6f5c",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.calibre-ebook.com/8.13.0/calibre-portable-installer-8.13.0.exe",
+            "hash": "sha512:e48d0be75542035f4c7377d26faa61ffc2fa957e636696425194e1c209917e4770296ce3965c63c2a8a7bf2182940aa6274ed942465c2654191e38fd789506f2"
+        }
+    },
     "installer": {
         "script": [
-            "start \"$dir\\calibre-portable-installer-$version.exe\" @(\"$dir\") -wait",
-            "mv \"$dir\\Calibre Portable\\**\" \"$dir\"",
-            "rm \"$dir\\Calibre Portable\""
+            "Start-Process \"$dir\\calibre-portable-installer-$version.exe\" @(\"$dir\") -Wait",
+            "Move-Item \"$dir\\Calibre Portable\\**\" \"$dir\"",
+            "Remove-Item \"$dir\\Calibre Portable\""
         ]
     },
     "bin": [
@@ -18,9 +22,11 @@
             "calibre"
         ],
         "calibre-portable.exe",
+        "Calibre\\calibre-complete.exe",
         "Calibre\\calibre-customize.exe",
         "Calibre\\calibredb.exe",
         "Calibre\\calibre-debug.exe",
+        "Calibre\\calibre-parallel.exe",
         "Calibre\\calibre-server.exe",
         "Calibre\\calibre-smtp.exe",
         "Calibre\\ebook-convert.exe",
@@ -62,6 +68,13 @@
         "github": "https://github.com/kovidgoyal/calibre"
     },
     "autoupdate": {
-        "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-portable-installer-$version.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://download.calibre-ebook.com/$version/calibre-portable-installer-$version.exe",
+                "hash": {
+                    "url": "https://calibre-ebook.com/signatures/calibre-portable-installer-$version.exe.sha512"
+                }
+            }
+        }
     }
 }
