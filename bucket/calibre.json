@@ -5,15 +5,16 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://download.calibre-ebook.com/8.13.0/calibre-portable-installer-8.13.0.exe",
+            "url": "https://github.com/kovidgoyal/calibre/releases/download/v8.13.0/calibre-portable-installer-8.13.0.exe",
             "hash": "sha512:e48d0be75542035f4c7377d26faa61ffc2fa957e636696425194e1c209917e4770296ce3965c63c2a8a7bf2182940aa6274ed942465c2654191e38fd789506f2"
         }
     },
     "installer": {
         "script": [
-            "Start-Process \"$dir\\calibre-portable-installer-$version.exe\" @(\"$dir\") -Wait",
-            "Move-Item \"$dir\\Calibre Portable\\**\" \"$dir\"",
-            "Remove-Item \"$dir\\Calibre Portable\""
+            "Start-Process \"$dir\\calibre-portable-installer-$version.exe\" @(\"$env:TEMP\") -Wait",
+            "Move-Item \"$env:TEMP\\Calibre Portable\\**\" \"$dir\"",
+            "Remove-Item \"$env:TEMP\\Calibre Portable\"",
+            "Icacls $dir /t /c /reset"
         ]
     },
     "bin": [
@@ -70,7 +71,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.calibre-ebook.com/$version/calibre-portable-installer-$version.exe",
+                "url": "https://github.com/kovidgoyal/calibre/releases/download/v$version/calibre-portable-installer-$version.exe",
                 "hash": {
                     "url": "https://calibre-ebook.com/signatures/calibre-portable-installer-$version.exe.sha512"
                 }
