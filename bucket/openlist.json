@@ -1,22 +1,20 @@
 {
     "version": "4.1.5",
-    "description": "A new AList Fork to Anti Trust Crisis",
+    "description": "A file list program that supports multiple storages, powered by Gin and SolidJS, fork of AList.",
     "homepage": "https://oplist.org/",
-    "license": {
-        "identifier": "AGPL-3.0 license"
-    },
+    "license": "AGPL-3.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/OpenListTeam/OpenList/releases/download/v4.1.5/openlist-windows-amd64.zip",
-            "hash": "d784fa2907a58455a12ae6cdb9896bf72a10236a47d391449e0bb2da370cff40"
+            "hash": "md5:13b486dc9ec203af4522973d37adb1e5"
         },
         "32bit": {
             "url": "https://github.com/OpenListTeam/OpenList/releases/download/v4.1.5/openlist-windows-386.zip",
-            "hash": "367ad2c858d171a5be2ac3ab6e36d0d09c0f63bb24588b745c955e207032c03d"
+            "hash": "md5:9fba63d4a5c0eaf7c43196f2074e12fb"
         },
         "arm64": {
             "url": "https://github.com/OpenListTeam/OpenList/releases/download/v4.1.5/openlist-windows-arm64.zip",
-            "hash": "b3de0e731b1d990b9762522365eafbb9d5afa9a9092352496bf6d3647d87622a"
+            "hash": "md5:0df750472299e7ab944ace07d6b5153f"
         }
     },
     "bin": [
@@ -44,6 +42,9 @@
             "arm64": {
                 "url": "https://github.com/OpenListTeam/OpenList/releases/download/v$version/openlist-windows-arm64.zip"
             }
+        },
+        "hash": {
+            "url": "$baseurl/md5.txt"
         }
     }
 }
