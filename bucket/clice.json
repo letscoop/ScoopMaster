@@ -17,7 +17,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/clice-io/clice",
+        "url": "https://github.com/clice-io/clice/releases",
         "regex": "tag/(v[\\d\\.]+-alpha\\.\\d)",
         "replace": "${1}"
     },
