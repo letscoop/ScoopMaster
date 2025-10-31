@@ -1,29 +1,30 @@
 {
-    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
-    "version": "2.0.29",
-    "description": "Anthropic's agentic coding tool that lives in your terminal",
-    "homepage": "https://docs.anthropic.com/en/docs/claude-code/overview",
+    "version": "2.0.30",
+    "description": "An agentic coding tool that lives in your terminal",
+    "homepage": "https://claude.com/product/claude-code",
     "license": "Proprietary",
+    "suggest": {
+        "git": "main/git"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.29/win32-x64/claude.exe",
-            "hash": "100c7270b7066d569e0f5658badc71de3ad95f0cf298beefb737fc75d3ee2591"
+            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.30/win32-x64/claude.exe",
+            "hash": "a4ca2775f2e4bb04560205891e0b5f399d9cce0ad915252ca0109a3dfb7d4f8b"
         }
     },
     "bin": "claude.exe",
+    "env_set": {
+        "CLAUDE_CODE_GIT_BASH_PATH": "$env:GIT_INSTALL_ROOT\\bin\\bash.exe"
+    },
     "checkver": {
         "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/stable",
-        "regex": "(.*)"
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/win32-x64/claude.exe"
             }
-        },
-        "hash": {
-            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/$version/manifest.json",
-            "jsonpath": "$.platforms['win32-x64'].checksum"
         }
     }
 }
