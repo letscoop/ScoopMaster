@@ -1,14 +1,37 @@
 {
     "version": "0.12.8",
-    "description": "Get up and running with Llama 2, Mistral, Gemma, and other large language models.",
-    "homepage": "https://github.com/ollama/ollama",
+    "description": "Get up and running with large language models locally.",
+    "homepage": "https://ollama.com/",
     "license": "MIT",
-    "url": "https://github.com/ollama/ollama/releases/download/v0.12.8/OllamaSetup.exe",
-    "innosetup": true,
+    "notes": "Ollama with deamon has been moved to 'extras/ollama-full'.",
+    "suggest": {
+        "Ollama Full": "extras/ollama-full"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ollama/ollama/releases/download/v0.12.8/ollama-windows-amd64.zip",
+            "hash": "fb56e6fd696e65e6e8066edadc6526114112a214840893c9dea92b5f1f885e79"
+        },
+        "arm64": {
+            "url": "https://github.com/ollama/ollama/releases/download/v0.12.8/ollama-windows-arm64.zip",
+            "hash": "c9c68b56b06a4695ae12e7863b1935211a9a9c6bdadb96fdbe8bc4859128d958"
+        }
+    },
     "bin": "ollama.exe",
-    "hash": "1bf7dd931f27854a3926fd8bb7eb0434d461f7c96c9176368915d4858e71ea40",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/ollama/ollama"
+    },
     "autoupdate": {
-        "url": "https://github.com/ollama/ollama/releases/download/v$version/OllamaSetup.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha256sum.txt"
+        }
     }
 }
