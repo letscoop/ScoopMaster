@@ -13,18 +13,11 @@
             "hash": "1fc8b28c5ae31c4d7158f24b2f036f263915892ba8c4c43302784cb1cff5cd82"
         }
     },
-    "bin": "MAA.exe",
     "shortcuts": [
         [
             "MAA.exe",
             "MaaAssistantArknights"
         ]
-    ],
-    "persist": [
-        "adb",
-        "cache",
-        "config",
-        "debug"
     ],
     "suggest": {
         "emulators": [
@@ -33,6 +26,7 @@
         ],
         "adb": "adb"
     },
+    "persist": "config",
     "checkver": {
         "github": "https://github.com/MaaAssistantArknights/MaaAssistantArknights"
     },
