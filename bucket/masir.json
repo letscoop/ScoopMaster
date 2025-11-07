@@ -4,7 +4,7 @@
   "homepage": "https://github.com/LGUG2Z/masir",
   "license": {
     "identifier": "Komorebi",
-    "url": "https://github.com/LGUG2Z/komorebi/blob/master/LICENSE.md"
+    "url": "https://github.com/LGUG2Z/masir/blob/master/LICENSE.md"
   },
   "notes": "masir can be run as a standalone process or launched alongside komorebi using the komorebic start command with the --masir flag.",
   "suggest": {
