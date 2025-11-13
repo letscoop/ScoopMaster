@@ -1,12 +1,12 @@
 {
-    "version": "20251112-fcf6b28-448",
+    "version": "449-20251112-8a82035",
     "description": "The practical and pragmatic code editor.",
     "homepage": "https://pragtical.dev/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/pragtical/pragtical/releases/download/rolling/pragtical-rolling-windows-x86_64.zip",
-            "hash": "79efc6e4b78526b50f8b343fd3bb32d2b3bab345074bdb82d748772ffc1f7ddb"
+            "hash": "d07ad2dbc5342ba507ba11273b519fd2b5f87a5b9166448fbb4b1157d994889b"
         }
     },
     "extract_dir": "pragtical",
@@ -26,8 +26,8 @@
             "$date = json_path $page $.workflow_runs[0].created_at",
             "Write-Output \"$runId $date $sha\""
         ],
-        "regex": "^(?<runId>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
-        "replace": "${year}${month}${day}-${hash}-${runId}"
+        "regex": "^(?<version>[^ ]+) (?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2})[^ ]+ (?<hash>.{7})(?<rest>.*)$",
+        "replace": "${version}-${year}${month}${day}-${hash}"
     },
     "autoupdate": {
         "architecture": {
