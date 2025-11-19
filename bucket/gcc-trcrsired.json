@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/trcrsired/gcc-releases/releases/download/20251010/x86_64-w64-mingw32__x86_64-w64-mingw32.tar.xz#/dl.xz",
+            "url": "https://github.com/trcrsired/gcc-releases/releases/download/20251010/x86_64-w64-mingw32.x86_64-w64-mingw32.tar.xz#/dl.xz",
             "hash": "08ae52fe50a4df95123c490db0353a4fdfe84c8aff181963475b917a07d1b533"
         }
     },
@@ -31,7 +31,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/trcrsired/gcc-releases/releases/download/$version/x86_64-w64-mingw32__x86_64-w64-mingw32.tar.xz#/dl.xz"
+                "url": "https://github.com/trcrsired/gcc-releases/releases/download/$version/x86_64-w64-mingw32.x86_64-w64-mingw32.tar.xz#/dl.xz"
             }
         }
     }
