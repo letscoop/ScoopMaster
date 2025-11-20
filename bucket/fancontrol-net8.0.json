@@ -29,7 +29,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Rem0o/FanControl.Releases/releases/download/V$version/FanControl_$version_net_8_0_Installer.exe"
+                "url": "https://github.com/Rem0o/FanControl.Releases/releases/download/V$version/FanControl_$version_net_10_0_Installer.exe"
             }
         }
     }
