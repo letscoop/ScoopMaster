@@ -1,29 +1,13 @@
 {
-    "version": "1.4.8",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/carapace-sh/carapace-bridge/releases/download/v1.4.8/carapace-bridge_1.4.8_windows_386.zip",
-            "bin": [
-                "carapace-bridge.exe"
-            ],
-            "hash": "57b9a15c5e254f63cfc47a815e593fb9d578bdfe56f8cac618bdcbc418e7a871"
-        },
-        "64bit": {
-            "url": "https://github.com/carapace-sh/carapace-bridge/releases/download/v1.4.8/carapace-bridge_1.4.8_windows_amd64.zip",
-            "bin": [
-                "carapace-bridge.exe"
-            ],
-            "hash": "d537f07c28aa1dac64a380880cbe3e4c6ec00325a48691cd7d3b6d1aa2850dd0"
-        },
-        "arm64": {
-            "url": "https://github.com/carapace-sh/carapace-bridge/releases/download/v1.4.8/carapace-bridge_1.4.8_windows_arm64.zip",
-            "bin": [
-                "carapace-bridge.exe"
-            ],
-            "hash": "028ecc675d249d1f87465d5d43e856da2ad525f0fc2942f405d5bbdab21bbb61"
-        }
-    },
-    "homepage": "https://github.com/carapace-sh/carapace-bridge",
+    "version": "1.0.2",
+    "description": "调用各种框架的补全，并为 carapace-bin 提供桥接操作。",
+    "homepage": "https://github.com/rsteube/carapace-bridge",
     "license": "MIT",
-    "description": "A multi-shell completion bridge"
+    "url": "https://github.com/rsteube/carapace-bridge/releases/download/v1.0.2/carapace-bridge_windows_amd64.zip",
+    "hash": "02798f567e6b97fd253d6c075742a7fcfd17d42e9e4f324be83a0fbce48b6b87",
+    "bin": "carapace-bridge.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/rsteube/carapace-bridge/releases/download/v$version/carapace-bridge_windows_amd64.zip"
+    }
 }
