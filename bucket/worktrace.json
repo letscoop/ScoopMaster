@@ -1,12 +1,12 @@
 {
-  "version": "0.3.4",
+  "version": "0.3.7",
   "description": "Time tracking and JIRA integration tool",
   "homepage": "https://github.com/sebkasanzew/worktrace",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/sebkasanzew/worktrace/releases/download/v0.3.4/Worktrace_0.3.4_x64-portable.zip",
-      "hash": "0d011ad740337152f5d30ae6ce7dc827bafb523f4fe842b7b868909bcf2d0c1a"
+      "url": "https://github.com/sebkasanzew/worktrace/releases/download/v0.3.7/Worktrace_0.3.7_x64-portable.zip",
+      "hash": "78a9ee7fd522b89820c145e9a17244b6bf9330ecfe480282e6a29e0d5a280366"
     }
   },
   "bin": "Worktrace.exe",
