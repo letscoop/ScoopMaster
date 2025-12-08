@@ -1,7 +1,7 @@
 {
     "version": "2.11",
     "description": "A snipping tool, which allows you to pin the screenshot back onto the screen.",
-    "homepage": "https://zh.snipaste.com/",
+    "homepage": "https://www.snipaste.com/",
     "license": "Unknown",
     "suggest": {
         "vcredist": "extras/vcredist2022"
@@ -30,8 +30,8 @@
     ],
     "persist": "history",
     "checkver": {
-        "url": "https://dl.snipaste.com/sha-1.txt",
-        "regex": "v([\\d.]+)"
+        "url": "https://www.snipaste.com/versions",
+        "jsonpath": "$.win_desktop_version"
     },
     "autoupdate": {
         "architecture": {
