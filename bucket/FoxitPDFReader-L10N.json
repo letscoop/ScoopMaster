@@ -7,7 +7,7 @@
         "url": "https://www.foxit.com/pdf-editor/eula.html"
     },
     "url": "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Windows&version=&package_type=&language=zh-CN&distID=#/latest-setup.exe",
-    "hash": "c85f927712ab6bbe2076a806d4a6bd2503bd25f552b2868d9f37ac0892b53a27",
+    "hash": "f72daae81be3e848ebaf0c0bf70e4030e4a266ea0f6f232f08f30324971cbc6c",
     "innosetup": true,
     "bin": "FoxitPDFReader.exe",
     "shortcuts": [
