@@ -1,12 +1,8 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "16.20.2",
-    "description": "An open-source, cross-platform JavaScript runtime environment.",
+    "description": "As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications.",
     "homepage": "https://nodejs.org",
-    "license": {
-        "identifier": "MIT",
-        "url": "https://github.com/nodejs/node/blob/main/LICENSE"
-    },
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://nodejs.org/dist/v16.20.2/node-v16.20.2-win-x64.7z",
@@ -19,10 +15,21 @@
             "extract_dir": "node-v16.20.2-win-x86"
         }
     },
-    "env_add_path": ".",
+    "persist": [
+        "bin",
+        "cache"
+    ],
+    "env_add_path": [
+        ".",
+        "bin"
+    ],
+    "post_install": [
+        "# Set npm prefix to install modules inside bin and npm cache so they persist",
+        "Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path \"$dir\\node_modules\\npm\\npmrc\""
+    ],
     "checkver": {
         "url": "https://nodejs.org/dist/latest-v16.x/",
-        "regex": "node-v([\\d.]+)-win-x64\\.7z"
+        "regex": "node-v([\\d.]+)-x64\\.msi"
     },
     "autoupdate": {
         "architecture": {
