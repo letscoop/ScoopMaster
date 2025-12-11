@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-x86_64.zip",
             "hash": "48508db38598eabbba30a89d42a000d51c80d4fcf05e6ab99b4dee7827ab9f6d",
             "extract_dir": "goneovim-windows-x86_64"
         },
         "arm64": {
-            "url": "https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-arm64.zip",
             "hash": "9c456e7a201c2f2bdf98f8a86b37a538c305a5bafe7eb72280e5863f602ac815",
             "extract_dir": "goneovim-windows-arm64"
         }
@@ -43,10 +43,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-x86_64.zip"
             },
             "arm64": {
-                "url": "https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/akiyosi/goneovim/releases/download/nightly/goneovim-windows-arm64.zip"
             }
         }
     }

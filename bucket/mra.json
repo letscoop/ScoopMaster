@@ -1,19 +1,48 @@
 {
-    "homepage": "https://github.com/Saratoga-Official/MRA",
-    "version": "2.5.7",
-    "license": "MIT",
-    "hash": "be74e30e792f7f781956426b7563c99c1b40acf3f57d18794972acf620d5a778",
-    "url": "https://github.com/Saratoga-Official/MRA/releases/download/v2.5.7/MRA-win-x86_64-v2.5.7.zip",
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/Saratoga-Official/MRA/releases/download/v$version/MRA-win-x86_64-v$version.zip",
-        "extract_dir": "MRA-win-x86_64-v$version"
+    "version": "0.111",
+    "description": "A free music recognition application for Windows. It listens to your microphone or system audio to identify songs, providing artist, album, and lyric information[citation:1][citation:4].",
+    "homepage": "https://mra.jadquir.com/",
+    "license": {
+        "identifier": "Freeware",
+        "notes": "Offers a freemium model with optional supporter tiers for extra features[citation:1][citation:2]."
     },
-    "persist": "config",
-    "bin": [
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Jadquir/mra-files/releases/download/0.111/MRA_0111_x64.zip",
+            "hash": "sha256:15b43dd6260384e5cf78b43c88e540adece9af9e7237a419593be4c5ef789635"
+        }
+    },
+    "installer": {
+        "script": [
+            "# Move files from the root folder to the main directory",
+            "$rootDir = Get-ChildItem \"$dir\" -Directory | Where-Object { $_.Name -match '^MRA_' } | Select-Object -First 1",
+            "if ($rootDir) {",
+            "    Get-ChildItem \"$rootDir\" | Move-Item -Destination \"$dir\" -Force",
+            "    Remove-Item \"$rootDir\" -Recurse -Force",
+            "}"
+        ]
+    },
+    "bin": "MRA.exe",
+    "shortcuts": [
         [
             "MRA.exe",
-            "maa-mra"
+            "MRA - Music Identifier"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Jadquir/mra-files/releases",
+        "regex": "/releases/tag/([\\d.]+)",
+        "replace": "$1"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Jadquir/mra-files/releases/download/$version/MRA_$cleanVersion_x64.zip",
+                "hash": {
+                    "mode": "download"
+                }
+            }
+        }
+    },
+    "notes": "The app requires internet connectivity for song identification. Some antivirus programs may flag its auto-updater[citation:1][citation:2]."
 }
