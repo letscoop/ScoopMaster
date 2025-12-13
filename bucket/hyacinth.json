@@ -1,31 +1,24 @@
 {
-    "version": "2.1",
-    "description": "Struts2、Fastjson、Weblogic（xml）、Shiro、Log4j、Jboss、SpringCloud、等漏洞检测利用",
-    "homepage": "https://github.com/pureqh/Hyacinth",
-    "license": "UNKNOWN",
+    "version": "1.4",
+    "description": "一款java漏洞集合工具",
+    "homepage": "https://github.com/pureqh/Hyacinth/",
+    "license": "",
+    "notes": "",
     "suggest": {
-        "JRE": "sec/oraclejre8"
-    },
-    "url": "https://github.com/pureqh/Hyacinth/releases/download/hyacinth-v2.0.1/hyacinth-v2.1.jar#/hyacinth.jar",
-    "hash": "06031ffaff30b861e9ad22f707b2c4f9fb9bb6e40d359f9bb499fda21270d876",
-    "pre_install": [
-        "Set-Content \"$dir\\hyacinth.bat\" '@pushd %~dp0",
-        "@call oraclejre8",
-        "@start javaw.exe -jar \"hyacinth.jar\" %*",
-        "@popd' -Encoding Ascii"
-    ],
-    "bin": "hyacinth.bat",
-    "shortcuts": [
-        [
-            "hyacinth.bat",
-            "Hyacinth"
+        "JDK": [
+            "java/oraclejdk",
+            "java/openjdk"
         ]
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/pureqh/Hyacinth/releases/latest",
-        "regex": "download/(?<tag>hyacinth-v[\\d\\.]+)/hyacinth-v([\\d.]+).jar"
     },
+    "url": "https://github.com/pureqh/Hyacinth/archive/refs/heads/main.zip",
+    "hash": "",
+    "post_install": [
+        "Move-Item -Path \"$dir\\Hyacinth-main\\*\" -Destination \"$dir\\\"",
+        "Remove-Item \"$dir\\Hyacinth-main\" -Force -Recurse",
+        "Rename-Item \"$dir\\hyacinth-v1.4.jar\" 'hyacinth.jar'"
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/pureqh/Hyacinth/releases/download/$matchTag/hyacinth-v$version.jar#/hyacinth.jar"
+        "url": "https://github.com/pureqh/Hyacinth/releases/download/hyacinth-v$version/hyacinth-v$version.jar"
     }
 }
