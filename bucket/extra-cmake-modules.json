@@ -1,0 +1,33 @@
+{
+    "version": "6.21.0",
+    "description": "Extra modules and scripts for CMake.",
+    "homepage": "https://github.com/KDE/extra-cmake-modules",
+    "license": {
+        "identifier": "BSD-3-Clause",
+        "url": "https://github.com/KDE/extra-cmake-modules/blob/master/COPYING-CMAKE-SCRIPTS"
+    },
+    "url": "https://github.com/KDE/extra-cmake-modules/archive/refs/tags/v6.21.0.zip",
+    "hash": "c015f888a56d13d762f8dd4eab22fd9bad843edaccb97187cf47c757f2031aac",
+    "depends": "cmake",
+    "extract_dir": "extra-cmake-modules-6.21.0",
+    "extract_to": "source",
+    "installer": {
+        "script": [
+            "cmake -Wno-dev -Wno-deprecated -S \"$dir\\source\" -B \"$dir\\build\" -DCMAKE_INSTALL_PREFIX=\"$dir\" | Out-Null",
+            "cmake --build \"$dir\\build\" --config Release | Out-Null",
+            "cmake --install \"$dir\\build\" | Out-Null",
+            "Remove-Item -Recurse -Force \"$dir\\source\", \"$dir\\build\" -ErrorAction SilentlyContinue"
+        ]
+    },
+    "env_set": {
+        "ECM_DIR": "$dir"
+    },
+    "checkver": {
+        "url": "https://github.com/KDE/extra-cmake-modules/tags",
+        "regex": "/releases/tag/(?:v|V)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/KDE/extra-cmake-modules/archive/refs/tags/v$version.zip",
+        "extract_dir": "extra-cmake-modules-$version"
+    }
+}

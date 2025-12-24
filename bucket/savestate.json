@@ -1,0 +1,17 @@
+{
+    "checkver": {
+        "github": "https://github.com/Matteo842/SaveState"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Matteo842/SaveState/releases/download/v$version/SaveState_v$version_Win.zip"
+    },
+    "version": "2.0.0",
+    "url": "https://github.com/Matteo842/SaveState/releases/download/v2.0.0/SaveState_v2.0.0_Win.zip",
+    "hash": "3863526cd9aa1f539ecb386d84a133490fab3ec661f6b415c7f33d5f3af51427",
+    "shortcuts": [
+        [
+            "SaveState.exe",
+            "SaveState"
+        ]
+    ]
+}
