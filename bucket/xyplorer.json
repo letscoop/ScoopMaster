@@ -6,7 +6,7 @@
         "identifier": "Proprietary",
         "url": "https://www.xyplorer.com/purchase.php"
     },
-    "url": "https://api.xrgzs.top/sdlp/lanzou/?url=https://www.lanzoui.com/icYhg3es6bib&type=down#/dl.7z",
+    "url": "https://api.xrgzs.top/lanzou/?url=https://www.lanzoui.com/icYhg3es6bib&type=down#/dl.7z",
     "hash": "de6578bdd135ca09b561c32f46026ce743d23c7d6a49452823c43bf2c0e222be",
     "extract_dir": "XYplorer",
     "bin": "XYplorer.exe",
@@ -31,6 +31,6 @@
         "regex": "XYplorer-(.*)-zhCN.7z=====(?<sharekey>.*)"
     },
     "autoupdate": {
-        "url": "https://api.xrgzs.top/sdlp/lanzou/?url=https://www.lanzoui.com/$matchSharekey&type=down#/dl.7z"
+        "url": "https://api.xrgzs.top/lanzou/?url=https://www.lanzoui.com/$matchSharekey&type=down#/dl.7z"
     }
 }
