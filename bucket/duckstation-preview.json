@@ -12,11 +12,11 @@
         "Learn more at: https://web.archive.org/web/20210620033009/https://www.duckstation.org/wiki/BIOS"
     ],
     "suggest": {
-        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+        "Microsoft Visual C++ Runtime 2022": "scoop-cn/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip",
+            "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip",
             "hash": "33c724a1ecbafc0a8c4d56ca15d066f7729cbb7d2cc9bf32b2c00eb56ee4940b",
             "post_install": [
                 "New-item \"$dir\\portable.txt\" -ItemType File | Out-Null",
@@ -34,7 +34,7 @@
             ]
         },
         "arm64": {
-            "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-arm64-release.zip",
+            "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-arm64-release.zip",
             "hash": "dcec5bb2cff478bc58ea84b048d526deb98bc65ff735239793f0fd71ae68f624",
             "post_install": [
                 "New-item \"$dir\\portable.txt\" -ItemType File | Out-Null",
@@ -92,10 +92,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip"
+                "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-x64-release.zip"
             },
             "arm64": {
-                "url": "https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-arm64-release.zip"
+                "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/preview/duckstation-windows-arm64-release.zip"
             }
         }
     }
