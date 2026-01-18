@@ -1,0 +1,45 @@
+{
+    "$schema": "https://raw.githubusercontent.com/lukesampson/scoop/master/schema.json",
+    "##": "prefer the exe version as is more complete than basic zip",
+    "version": "2026.01.15",
+    "description": "astronomical stacking program, plate solver, and fits file viewer",
+    "homepage": "https://www.hnsky.org/astap.htm",
+    "license": "GPL-3.0-or-later",
+    "notes": "Recommend install STAR database, such as smaller D05 or D20, large D50, or very large D80, or other databases depending on use case.",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.hnsky.org/astap_setup.exe",
+            "hash": "0756033672cb544fb36b3d24c703f71d5b376538205aab06451a6f35d1760e27"
+        },
+        "32bit": {
+            "url": "https://www.hnsky.org/astapwin32.zip",
+            "hash": "343762e6da60e36b5e76a3806633d7673755a616de518eba070f9b3cc629e5d1"
+        }
+    },
+    "innosetup": true,
+    "bin": [
+        "astap_cli.exe",
+        "dcraw.exe",
+        "unprocessed_raw.exe"
+    ],
+    "shortcuts": [
+        [
+            "astap.exe",
+            "Astrometric stacking program"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.hnsky.org/astap.htm",
+        "regex": "ASTAP_installer.*_?v(\\d+\\.\\d+\\.\\d+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.hnsky.org/astap_setup.exe"
+            },
+            "32bit": {
+                "url": "https://www.hnsky.org/astapwin32.zip"
+            }
+        }
+    }
+}
