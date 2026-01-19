@@ -1,6 +1,6 @@
 {
     "##": "Please keep the key properties of games/prismlauncher and versions/prismlauncher-git in sync.",
-    "version": "10.0-e8b5d49",
+    "version": "10.0-f60535d",
     "description": "An open source Minecraft launcher with the ability to manage multiple instances, accounts and mods. Focused on user freedom and free redistributability.",
     "homepage": "https://prismlauncher.org/",
     "license": "GPL-3.0-only",
@@ -9,16 +9,16 @@
         "reg import \"$dir\\install-associations.reg\""
     ],
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/PrismLauncher/PrismLauncher/workflows/build/develop/PrismLauncher-Windows-MinGW-w64-Portable-e8b5d49-Debug.zip",
-            "hash": "41e12b77cabf86ccff430cefbfe9981a1deaad051e7102d3aa4619825b7701a6"
+            "url": "https://nightly.link/PrismLauncher/PrismLauncher/workflows/build/develop/PrismLauncher-Windows-MinGW-w64-Portable-f60535d-Debug.zip",
+            "hash": "7fbafeee5047785ce30bab272138752b489586ffd0c9d8edd6cc3ec8b236b324"
         },
         "arm64": {
-            "url": "https://nightly.link/PrismLauncher/PrismLauncher/workflows/build/develop/PrismLauncher-Windows-MinGW-arm64-Portable-e8b5d49-Debug.zip",
-            "hash": "f54fbe14740e79c2411ba192cf7fd45aa7f1b2b824e7879c559e3785e7c6665c"
+            "url": "https://nightly.link/PrismLauncher/PrismLauncher/workflows/build/develop/PrismLauncher-Windows-MinGW-arm64-Portable-f60535d-Debug.zip",
+            "hash": "7242473fee1b10b2bef340125fe87c2877276b475ee534bb0247be692825b44b"
         }
     },
     "pre_install": [
@@ -38,9 +38,9 @@
     ],
     "post_install": [
         "'install-associations', 'uninstall-associations' | ForEach-Object {",
-        "    if (Test-Path \"$bucketsdir\\scoop-cn\\scripts\\prismlauncher-git\\$_.reg\") {",
+        "    if (Test-Path \"$bucketsdir\\versions\\scripts\\prismlauncher-git\\$_.reg\") {",
         "        $exePath = \"$dir\\prismlauncher.exe\".Replace('\\', '\\\\')",
-        "        $content = (Get-Content \"$bucketsdir\\scoop-cn\\scripts\\prismlauncher-git\\$_.reg\").Replace('$EXEPATH', $exePath)",
+        "        $content = (Get-Content \"$bucketsdir\\versions\\scripts\\prismlauncher-git\\$_.reg\").Replace('$EXEPATH', $exePath)",
         "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
         "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
         "    }",
@@ -83,7 +83,7 @@
         "script": [
             "$apiUrl = 'https://api.github.com/repositories/553135896/actions/workflows/build.yml/runs?branch=develop&status=success&event=push'",
             "$fullSha = (Invoke-RestMethod -Uri $apiUrl).workflow_runs[0].head_sha",
-            "$cmakeContent = Invoke-WebRequest \"https://gh-proxy.org/https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/$fullSha/CMakeLists.txt\" | Select-Object -ExpandProperty Content",
+            "$cmakeContent = Invoke-WebRequest \"https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/$fullSha/CMakeLists.txt\" | Select-Object -ExpandProperty Content",
             "$majorVersion = [regex]::Match($cmakeContent, 'set\\(Launcher_VERSION_MAJOR (\\d+)\\)').Groups[1].Value",
             "$minorVersion = [regex]::Match($cmakeContent, 'set\\(Launcher_VERSION_MINOR (\\d+)\\)').Groups[1].Value",
             "$version = \"$majorVersion.$minorVersion-$fullSha\"",
