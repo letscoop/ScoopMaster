@@ -1,55 +1,16 @@
 {
     "version": "3.0.35",
-    "description": "Reqable issue track repo",
-    "homepage": "https://reqable.com/",
-    "license": "Copyright © 2023 Reqable",
-    "url": "https://github.com/reqable/reqable-app/releases/download/3.0.35/reqable-app-windows-x86_64.exe",
-    "hash": "e56a8eed4c286a48661b1aa202a38db0cafb85cd8b6a2a0ad3d8ef35343bf846",
-    "innosetup": true,
-    "architecture": {
-        "64bit": {
-            "bin": [
-                [
-                    "Reqable.exe",
-                    "Reqable"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "Reqable.exe",
-                    "Reqable"
-                ]
-            ]
-        },
-        "32bit": {
-            "bin": [
-                [
-                    "Reqable.exe",
-                    "Reqable"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "Reqable.exe",
-                    "Reqable"
-                ]
-            ]
-        }
-    },
-    "installer": {
-        "script": [
-            "ensure \"$persist_dir\" | Out-Null",
-            "New-Item \"$env:APPDATA\\Reqable\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
-        ]
-    },
-    "uninstaller": {
-        "script": "Remove-Item \"$env:APPDATA\\Reqable\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
-    },
-    "checkver": {
-        "url": "https://api.github.com/repos/reqable/reqable-app/releases",
-        "regex": "(?sm)browser_download_url.*?releases/download/([\\d.]+)/reqable-app-windows-x86_64\\.exe"
-    },
+    "homepage": "https://github.com/reqable/reqable-app",
+    "checkver": "github",
+    "url": "https://github.com/reqable/reqable-app/releases/download/3.0.35/reqable-app-windows-x86_64.zip",
+    "hash": "b28217b0bc14b326498a90d1a614cd2df2497a7b10b14fcd61daf79ff1abcdd9",
     "autoupdate": {
-        "url": "https://github.com/reqable/reqable-app/releases/download/$version/reqable-app-windows-x86_64.exe"
-    }
+        "url": "https://github.com/reqable/reqable-app/releases/download/$version/reqable-app-windows-x86_64.zip"
+    },
+    "shortcuts": [
+        [
+            "Reqable.exe",
+            "Reqable"
+        ]
+    ]
 }
