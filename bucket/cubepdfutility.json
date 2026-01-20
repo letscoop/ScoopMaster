@@ -1,47 +1,47 @@
 {
-    "version": "4.3.6",
-    "homepage": "https://www.cube-soft.jp/cubepdfutility",
-    "architecture": {
-        "64bit": {
-            "url": "https://www.cube-soft.jp/archive/cubepdf-utility-4.3.6-x64.exe",
-            "hash": "27383068ca946c1bbaf722f7564fb06e0f2ea22c0360f614beb5f6f8e4500489"
-        },
-        "32bit": {
-            "url": "https://www.cube-soft.jp/archive/cubepdf-utility-4.3.6.exe",
-            "hash": "64a21b0df935e68edb6a22f08240f0ffa7350adca7a012485c6baaee91656a33"
-        }
+  "version": "2.4.1",
+  "homepage": "https://www.cube-soft.jp/cubepdfutility",
+  "architecture": {
+    "64bit": {
+      "url": "https://www.cube-soft.jp/archive/cubepdf-utility-2.4.1-x64.exe",
+      "hash": "0b49c13a555515619e99d276e95005814412bd4d032705de13b2b8298ed0a1d6"
     },
-    "installer": {
-        "args": [
-            "/Silent",
-            "/Lang=ja",
-            "/Dir=\"$dir\"",
-            "/NoIcons=0",
-            "/Tasks="
-        ]
-    },
-    "shortcuts": [
-        [
-            "CubePdfUtilitySplash.exe",
-            "CubePDF Utility"
-        ]
-    ],
-    "uninstaller": {
-        "file": "unins000.exe",
-        "args": "/Silent"
-    },
-    "checkver": {
-        "url": "https://www.cube-soft.jp/cubepdfutility",
-        "re": "CubePDF Utility ([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version-x64.exe"
-            },
-            "32bit": {
-                "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version.exe"
-            }
-        }
+    "32bit": {
+      "url": "https://www.cube-soft.jp/archive/cubepdf-utility-2.4.1.exe",
+      "hash": "0be020695335063359786171489739a18d341c97c7259401087b3d5da18278cf"
     }
+  },
+  "installer": {
+    "args": [
+      "/Silent",
+      "/Lang=ja",
+      "/Dir=\"$dir\"",
+      "/NoIcons=0",
+      "/Tasks="
+    ]
+  },
+  "shortcuts": [
+    [
+      "CubePdfUtilitySplash.exe",
+      "CubePDF Utility"
+    ]
+  ],
+  "uninstaller": {
+    "file": "unins000.exe",
+    "args": "/Silent"
+  },
+  "checkver": {
+    "url": "https://www.cube-soft.jp/cubepdfutility",
+    "re": "CubePDF Utility ([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version-x64.exe"
+      },
+      "32bit": {
+        "url": "https://www.cube-soft.jp/archive/cubepdf-utility-$version.exe"
+      }
+    }
+  }
 }
