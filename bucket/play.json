@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/mustafachyi/mpv-yt-go/releases/download/v1.0.7/play-windows-amd64.exe",
-            "hash": "faa6b2b99a7b854673a115ae081833bf8c96ec6b0bc5f487a935752884b85a0a"
+            "hash": "927dadf31d26b3cd05b70f70fc86f969fa70d565b4489473bce8abef1fbe3f4a"
         }
     },
     "bin": [
