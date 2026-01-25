@@ -1,10 +1,10 @@
 {
-    "version": "2.20.0",
+    "version": "2.22.0",
     "description": "World of Warcraft addon updater with CurseForge.",
     "homepage": "https://wowup.io/",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/WowUp/WowUp.CF/releases/download/v2.20.0/WowUp-CF-Setup-2.20.0.exe#/dl.7z",
-    "hash": "sha512:884f1c0a8b68d944845c8726b03d77c0ec870454ba9e199776015c91ac9907a5e3cf61277514dd49c841aa04ac21dd30c5fb23fd215999d299ce83accc9c76a7",
+    "url": "https://github.com/WowUp/WowUp.CF/releases/download/v2.22.0/WowUp-CF-Setup-2.22.0.exe#/dl.7z",
+    "hash": "sha512:e0e309ed66a4a9bdbbcb42114c12c2bae2e60767c6f12ddb0bd38507abe12b37003a7a9d54fc8d7121c5e5e5f89c307eaf8904754eb60a7a4cf65fae6a55f429",
     "extract_dir": "$PLUGINSDIR",
     "installer": {
         "script": [
