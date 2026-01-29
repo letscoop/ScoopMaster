@@ -1,8 +1,9 @@
 {
-    "version": "7.03.51009.0",
-    "description": "Comprehensive Remote Management Solution",
+    "version": "7.03.51009",
+    "description": "Royal TS. Comprehensive Remote Management Solution",
     "homepage": "https://www.royalapps.com/ts/win",
     "license": "Shareware",
+    "changelog": "https://support.royalapps.com/support/solutions/articles/17000113667-royal-ts-v6-release-notes",
     "architecture": {
         "64bit": {
             "url": "https://download.royalapps.com/royalts/royalts_7.03.51009.0_x64.zip",
@@ -26,12 +27,12 @@
     ],
     "checkver": {
         "url": "https://royalapps.com/go/kb-ts-win-previousversions-current",
-        "regex": "royalts_([\\d.]+)_x64.zip"
+        "regex": "/royalts/royalts_([\\d.]+).0_x64.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.royalapps.com/royalts/royalts_$version_x64.zip"
+                "url": "https://download.royalapps.com/royalts/royalts_$version.0_x64.zip"
             }
         }
     }
