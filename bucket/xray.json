@@ -13,10 +13,13 @@
             "hash": "8a1f674554751e460dc2d21ab634686c8fbec93bf8096db405b1238a92f72b55"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config.json\")) {",
+        "    Set-Content \"$dir\\config.json\" '{}' -Encoding 'Ascii'",
+        "}"
+    ],
     "bin": "xray.exe",
-    "env_set": {
-        "V2RAYA_V2RAY_BIN": "$(scoop prefix xray)\\xray.exe"
-    },
+    "persist": "config.json",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
