@@ -1,16 +1,20 @@
 {
-    "version": "2.0.0.2",
-    "description": "一款功能强、可定制、跨平台，适用于班级多媒体屏幕的课表信息显示工具，可以一目了然地显示各种信息",
-    "homepage": "https://classisland.tech",
-    "license": "GPL-3.0-only",
+    "version": "2.0.2.0",
+    "description": "一款适用于班级多媒体屏幕的课表的信息显示工具，可以一目了然地显示各种信息。",
+    "homepage": "https://classisland.tech/",
+    "license": "GPL-3.0-or-later",
     "architecture": {
-        "64bit": {
-            "url": "https://get.classisland.tech/d/ClassIsland-Ningbo-S3/classisland/distribution-v2/2.0/2.0.0.2/ClassIsland_app_windows_x64_selfContained_folder.zip",
-            "hash": "43cf08a5c7a1bcf1af7186d4909305fe9e488ab572041ce7f624c2a7cd38c056"
-        },
         "arm64": {
-            "url": "https://get.classisland.tech/d/ClassIsland-Ningbo-S3/classisland/distribution-v2/2.0/2.0.0.2/ClassIsland_app_windows_arm64_selfContained_folder.zip",
-            "hash": "5c042417791fbb62e46d468ee754f68efcfa126eed58796cba3b8d20961ec770"
+            "url": "https://github.com/ClassIsland/ClassIsland/releases/download/2.0.2.0/ClassIsland_app_windows_arm64_selfContained_folder.zip",
+            "hash": "452ce5175464476036b52989f74518965de7124afbb086cd2fd966434f526b1c"
+        },
+        "64bit": {
+            "url": "https://github.com/ClassIsland/ClassIsland/releases/download/2.0.2.0/ClassIsland_app_windows_x64_selfContained_folder.zip",
+            "hash": "e414d0beb3417679bca78ae60c2a4f0e76975e1e29c9e44b7717661f51ed48d6"
+        },
+        "32bit": {
+            "url": "https://github.com/ClassIsland/ClassIsland/releases/download/2.0.2.0/ClassIsland_app_windows_x86_selfContained_folder.zip",
+            "hash": "6dda79542bfb21dfb69f797fcd77fbb0470e4c386ba1f0e8e34855f089ddbf01"
         }
     },
     "shortcuts": [
@@ -19,25 +23,22 @@
             "ClassIsland"
         ]
     ],
-    "post_uninstall": [
-        "if ($cmd -eq 'uninstall') { ",
-        "   Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\ClassIsland.lnk\" -Force -ErrorAction SilentlyContinue",
-        "   Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ClassIsland.lnk\" -Force -ErrorAction SilentlyContinue",
-        "   Remove-Item \"$env:USERPROFILE\\Desktop\\ClassIsland.lnk\" -Force -ErrorAction SilentlyContinue",
-        "   Remove-Item \"$env:USERPROFILE\\Desktop\\快捷换课.url\" -Force -ErrorAction SilentlyContinue",
-        "}"
-    ],
     "persist": "data",
+    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\ClassIsland.lnk\" -Force -ErrorAction SilentlyContinue | Out-Null",
     "checkver": {
-        "github": "https://github.com/ClassIsland/ClassIsland"
+        "url": "https://api.github.com/repos/ClassIsland/ClassIsland/releases?per_page=1",
+        "jsonpath": "$.tag_name"
     },
     "autoupdate": {
         "architecture": {
-            "64bit": {
-                "url": "https://get.classisland.tech/d/ClassIsland-Ningbo-S3/classisland/distribution-v2/$majorVersion.$minorVersion/$version/ClassIsland_app_windows_x64_selfContained_folder.zip"
-            },
             "arm64": {
-                "url": "https://get.classisland.tech/d/ClassIsland-Ningbo-S3/classisland/distribution-v2/$majorVersion.$minorVersion/$version/ClassIsland_app_windows_arm64_selfContained_folder.zip"
+                "url": "https://github.com/ClassIsland/ClassIsland/releases/download/$version/ClassIsland_app_windows_arm64_selfContained_folder.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/ClassIsland/ClassIsland/releases/download/$version/ClassIsland_app_windows_x64_selfContained_folder.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/ClassIsland/ClassIsland/releases/download/$version/ClassIsland_app_windows_x86_selfContained_folder.zip"
             }
         }
     }
