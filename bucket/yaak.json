@@ -1,17 +1,17 @@
 {
-    "version": "2026.2.10",
-    "description": "A fast, privacy-first API client for REST, GraphQL, SSE, WebSocket, and gRPC – built with Tauri, Rust, and React.",
-    "homepage": "https://github.com/zyqfork/yaak",
+    "version": "2026.1.2",
+    "description": "The most intuitive desktop API client. Organize and execute REST, GraphQL, WebSockets, Server Sent Events, and gRPC 🦬 ",
+    "homepage": "https://yaak.app",
     "license": "MIT",
-    "url": "https://github.com/zyqfork/yaak/releases/download/v2026.2.10/Yaak_2026.2.10_x64-setup.exe",
-    "hash": "51b0ba27e6075f7ff301c35966e737fd9c130c50cf1bb196adf214d3f3dd9857",
-    "installer": {
-        "script": [
-            "$exe = Get-ChildItem \"$dir\\Yaak_*_x64-setup.exe\" -ErrorAction SilentlyContinue | Select-Object -First 1",
-            "if ($exe) { Start-Process -FilePath $exe.FullName -ArgumentList '/S', \"/D=$dir\" -Wait -NoNewWindow }"
+    "url": "https://github.com/yaakapp/app/releases/download/v2026.1.2/Yaak_2026.1.2_x64-setup.exe/#dl.7z",
+    "hash": "5f493b2646d559a02ffcef58f117d33c19ed2ba2d62766707358c107abeeb8c1",
+    "post_install": "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "bin": [
+        [
+            "yaak-app.exe",
+            "yaak"
         ]
-    },
-    "post_install": "Remove-Item \"$dir\\Yaak_*_x64-setup.exe\" -Force -ErrorAction SilentlyContinue",
+    ],
     "shortcuts": [
         [
             "yaak-app.exe",
@@ -19,9 +19,9 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/zyqfork/yaak"
+        "github": "https://github.com/yaakapp/app"
     },
     "autoupdate": {
-        "url": "https://github.com/zyqfork/yaak/releases/download/v$version/Yaak_$version_x64-setup.exe"
+        "url": "https://github.com/yaakapp/app/releases/download/v$version/Yaak_$version_x64-setup.exe/#dl.7z"
     }
 }
