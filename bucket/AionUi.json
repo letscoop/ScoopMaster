@@ -1,39 +1,35 @@
 {
     "version": "1.8.7",
-    "description": "Free, local, open-source 24/7 AI Cowork workspace for Gemini, Claude, Codex, OpenCode, Qwen Code, and more",
+    "description": "AionUi - AI-powered desktop application",
     "homepage": "https://github.com/iOfficeAI/AionUi",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.8.7/AionUi-1.8.7-win-x64.exe#/dl.7z",
-            "hash": "1d1c0fb473910e4efc95630e786248c2904e79fa27d8d4a3e436c8558227f772",
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
-            }
+            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.8.7/AionUi-1.8.7-win-x64.exe",
+            "hash": "1d1c0fb473910e4efc95630e786248c2904e79fa27d8d4a3e436c8558227f772"
         },
         "arm64": {
-            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.8.7/AionUi-1.8.7-win-arm64.exe#/dl.7z",
-            "hash": "f588d838551835d38f08fc34d6e8e7df4e4eeddb7dc18a58dc687a039cc12044",
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-arm64.7z\" \"$dir\""
-            }
+            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v1.8.7/AionUi-1.8.7-win-arm64.exe",
+            "hash": "f588d838551835d38f08fc34d6e8e7df4e4eeddb7dc18a58dc687a039cc12044"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "bin": "AionUi.exe",
     "shortcuts": [
         [
             "AionUi.exe",
             "AionUi"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/iOfficeAI/AionUi"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-x64.exe#/dl.7z"
+                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-x64.exe"
             },
             "arm64": {
-                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-arm64.exe#/dl.7z"
+                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-arm64.exe"
             }
         }
     }

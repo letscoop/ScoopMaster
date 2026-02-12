@@ -7,11 +7,11 @@
         "url": "https://github.com/has207/xenia-edge/blob/edge/LICENSE"
     },
     "suggest": {
-        "Microsoft Visual C++ Runtime 2022": "extras/vcredist2022"
+        "Microsoft Visual C++ Runtime 2022": "scoop-cn/vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/has207/xenia-edge/releases/download/f700061/xenia_edge_windows.zip",
+            "url": "https://gh-proxy.org/https://github.com/has207/xenia-edge/releases/download/f700061/xenia_edge_windows.zip",
             "hash": "88f46598ae7cb051fbdac54795afac8bc5ad74ff2599b8a901faf13dfecf72de"
         }
     },
@@ -61,7 +61,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/has207/xenia-edge/releases/download/$matchCommit/xenia_edge_windows.zip"
+                "url": "https://gh-proxy.org/https://github.com/has207/xenia-edge/releases/download/$matchCommit/xenia_edge_windows.zip"
             }
         }
     }
