@@ -1,0 +1,32 @@
+{
+    "version": "5.3.0",
+    "description": "Your pictures, your signature.",
+    "homepage": "https://picguard.app",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/picguard/picguard/releases/download/v5.3.0/picguard-5.3.0-windows-setup-x64.exe#/PicGuardSetup.exe",
+            "hash": "609f4e70c0d627793f31addad326581f1cbc690632a4f431a8ee54cede6846ad"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "PicGuard.exe",
+            "PicGuard"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/picguard/picguard/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/v((\\d+(?:\\.\\d+)+)(?:%2B(\\d+))?)/picguard-(?<short>\\d+(?:\\.\\d+)+)-windows-setup-x64\\.exe",
+        "replace": "${2}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/picguard/picguard/releases/download/v$version/picguard-$matchShort-windows-setup-x64.exe#/PicGuardSetup.exe"
+            }
+        }
+    }
+}

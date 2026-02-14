@@ -1,18 +1,18 @@
 {
-    "version": "0.4.35",
+    "version": "0.5.2",
     "description": "One-stop telemetry collector for nightingale / prometheus / m3db / victoriametrics / thanos / influxdb / tdengine.",
     "homepage": "https://github.com/flashcatcloud/categraf",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v0.4.35/categraf-v0.4.35-windows-amd64.zip",
-            "extract_dir": "categraf-v0.4.35-windows-amd64",
-            "hash": "67d6a3aea84c3602311a606abbf599eb5d0aef36232f1164a25aa2e495974c8f"
+            "url": "https://github.com/flashcatcloud/categraf/releases/download/v0.5.2/categraf-v0.5.2-windows-amd64.zip",
+            "extract_dir": "categraf-v0.5.2-windows-amd64",
+            "hash": "3442b2f96da3665873b66a63a81bbfbdb9374809f80ecb4d2feacafa5e2ca1e3"
         },
         "arm64": {
-            "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v0.4.35/categraf-v0.4.35-windows-arm64.zip",
-            "extract_dir": "categraf-v0.4.35-windows-arm64",
-            "hash": "67d6a3aea84c3602311a606abbf599eb5d0aef36232f1164a25aa2e495974c8f"
+            "url": "https://github.com/flashcatcloud/categraf/releases/download/v0.5.2/categraf-v0.5.2-windows-arm64.zip",
+            "extract_dir": "categraf-v0.5.2-windows-arm64",
+            "hash": "fdee74d2f835ccedf2c30c3a615315b6a64bce3b3cce623f45958c3a1c9d7085"
         }
     },
     "bin": "categraf.exe",
@@ -21,11 +21,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-amd64.zip",
+                "url": "https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-amd64.zip",
                 "extract_dir": "categraf-v$version-windows-amd64"
             },
             "arm64": {
-                "url": "https://ghproxy.com/https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-arm64.zip",
+                "url": "https://github.com/flashcatcloud/categraf/releases/download/v$version/categraf-v$version-windows-arm64.zip",
                 "extract_dir": "categraf-v$version-windows-arm64"
             }
         }
