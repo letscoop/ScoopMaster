@@ -1,33 +1,33 @@
 {
-    "version": "1.18.3",
-    "description": "A utility wrapping Spacelift's GraphQL API for easy programmatic access in command-line contexts.",
-    "homepage": "https://spacelift.io/",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/spacelift-io/spacectl/releases/download/v1.18.3/spacectl_1.18.3_windows_amd64.zip",
-            "hash": "b0a716b841b41dd930f85f5fc3944e6215591923fbea9dda39e1754538c8df74"
-        },
-        "arm64": {
-            "url": "https://github.com/spacelift-io/spacectl/releases/download/v1.18.3/spacectl_1.18.3_windows_arm64.zip",
-            "hash": "804da2858d0cce2c7bce43d0c6c8d98899ad366599c1d5bf579a9f84469f167b"
-        }
+  "version": "0.28.0",
+  "description": "A utility wrapping Spacelift's GraphQL API for easy programmatic access in command-line contexts.",
+  "homepage": "https://spacelift.io/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://mirror.ghproxy.com/https://github.com/spacelift-io/spacectl/releases/download/v0.28.0/spacectl_0.28.0_windows_amd64.zip",
+      "hash": "891bb4cd49f0548a43d6961b2f044b165dd99808fcf6cd01ea24d6feef7fabea"
     },
-    "bin": "spacectl.exe",
-    "checkver": {
-        "github": "https://github.com/spacelift-io/spacectl"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/spacelift-io/spacectl/releases/download/v$version/spacectl_$version_windows_amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/spacelift-io/spacectl/releases/download/v$version/spacectl_$version_windows_arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/spacectl_$version_SHA256SUMS"
-        }
+    "arm64": {
+      "url": "https://mirror.ghproxy.com/https://github.com/spacelift-io/spacectl/releases/download/v0.28.0/spacectl_0.28.0_windows_arm64.zip",
+      "hash": "a7aee6d8a11073538e6905b79838d6430cde4e1f7c652509263dbd2f59ee7eed"
     }
+  },
+  "bin": "spacectl.exe",
+  "checkver": {
+    "github": "https://github.com/spacelift-io/spacectl"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://mirror.ghproxy.com/https://github.com/spacelift-io/spacectl/releases/download/v$version/spacectl_$version_windows_amd64.zip"
+      },
+      "arm64": {
+        "url": "https://mirror.ghproxy.com/https://github.com/spacelift-io/spacectl/releases/download/v$version/spacectl_$version_windows_arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/spacectl_$version_SHA256SUMS"
+    }
+  }
 }

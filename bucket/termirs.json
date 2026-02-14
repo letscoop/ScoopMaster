@@ -1,12 +1,12 @@
 {
-    "version": "0.2.10",
+    "version": "0.2.6",
     "description": "A modern, async SSH terminal client.",
     "homepage": "https://github.com/caelansar/termirs",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/caelansar/termirs/releases/download/v0.2.10/termirs-v0.2.10-x86_64-pc-windows-msvc.zip",
-            "hash": "3beadf00b88813d18de23eb350c6218c663d3b6fd844fc660ee6c75f183b41b6"
+            "url": "https://github.com/caelansar/termirs/releases/download/v0.2.6/termirs-v0.2.6-x86_64-pc-windows-msvc.zip",
+            "hash": "d846dca8f669feb76df4a12d23e5c2cff63056829f4dab6db4ef587026a5662c"
         }
     },
     "bin": "termirs.exe",

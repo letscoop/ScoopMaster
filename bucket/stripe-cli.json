@@ -1,16 +1,15 @@
 {
-    "version": "1.35.0",
-    "description": "A command-line tool for Stripe.",
-    "homepage": "https://stripe.com/docs/stripe-cli",
+    "version": "1.17.2",
+    "homepage": "https://stripe.com",
     "license": "Apache-2.0",
     "architecture": {
-        "64bit": {
-            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.35.0/stripe_1.35.0_windows_x86_64.zip",
-            "hash": "4671e1d6cd2752cfb51854fda09e0de04a0f45b0ba992e839a0dd723c02b1d58"
-        },
         "32bit": {
-            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.35.0/stripe_1.35.0_windows_i386.zip",
-            "hash": "44db9984255d7eb8c49bd419fca2a75ed3e60d754db4de95dc5ca6fa04686dbb"
+            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.17.2/stripe_1.17.2_windows_i386.zip",
+            "hash": "841b5b58cf5a71d5d6674914f598433cab9ca189e6e3dbc9535bff881b214c34"
+        },
+        "64bit": {
+            "url": "https://github.com/stripe/stripe-cli/releases/download/v1.17.2/stripe_1.17.2_windows_x86_64.zip",
+            "hash": "2aa970a39f0d29971878a22f120686941efb34aa7c75b4d499aa1f1d8b814856"
         }
     },
     "bin": "stripe.exe",
@@ -19,15 +18,12 @@
     },
     "autoupdate": {
         "architecture": {
-            "64bit": {
-                "url": "https://github.com/stripe/stripe-cli/releases/download/v$version/stripe_$version_windows_x86_64.zip"
-            },
             "32bit": {
                 "url": "https://github.com/stripe/stripe-cli/releases/download/v$version/stripe_$version_windows_i386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/stripe/stripe-cli/releases/download/v$version/stripe_$version_windows_x86_64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/stripe-windows-checksums.txt"
         }
     }
 }
