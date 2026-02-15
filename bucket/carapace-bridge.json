@@ -1,29 +1,22 @@
 {
-    "version": "1.5.2",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/carapace-sh/carapace-bridge/releases/download/v1.5.2/carapace-bridge_1.5.2_windows_386.zip",
-            "bin": [
-                "carapace-bridge.exe"
-            ],
-            "hash": "0a29d395494646e16c409fd88e2f6b51a41bcec9e4f60a148a0984d169ff2b48"
-        },
-        "64bit": {
-            "url": "https://github.com/carapace-sh/carapace-bridge/releases/download/v1.5.2/carapace-bridge_1.5.2_windows_amd64.zip",
-            "bin": [
-                "carapace-bridge.exe"
-            ],
-            "hash": "5cbb898311f845628fe989ec4f6516707e632d7ed3152c197ad4ec9fcba9a94a"
-        },
-        "arm64": {
-            "url": "https://github.com/carapace-sh/carapace-bridge/releases/download/v1.5.2/carapace-bridge_1.5.2_windows_arm64.zip",
-            "bin": [
-                "carapace-bridge.exe"
-            ],
-            "hash": "f83df32984134dce2b733c97491188cbc8d262d934fa1fa9649f9fc4951a5263"
-        }
+  "version": "0.1.0",
+  "architecture": {
+    "32bit": {
+      "url": "https://ghproxy.com/https://github.com/rsteube/carapace-bridge/releases/download/v0.1.0/carapace-bridge_windows_386.zip",
+      "bin": [
+        "carapace-bridge.exe"
+      ],
+      "hash": "494f94c0636e230340c68816bf37d967c93b76584e2e09ea9948e04d6f4125f8"
     },
-    "homepage": "https://github.com/carapace-sh/carapace-bridge",
-    "license": "MIT",
-    "description": "A multi-shell completion bridge"
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/rsteube/carapace-bridge/releases/download/v0.1.0/carapace-bridge_windows_amd64.zip",
+      "bin": [
+        "carapace-bridge.exe"
+      ],
+      "hash": "05f85e6c9a4e283cd79ea276f7fb4084bdcf3bb035814ffd95fd10544245f6e5"
+    }
+  },
+  "homepage": "https://github.com/rsteube/carapace-bridge",
+  "license": "MIT",
+  "description": "completion bridge"
 }
