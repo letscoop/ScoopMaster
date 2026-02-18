@@ -1,6 +1,6 @@
 {
     "version": "4.13",
-    "description": "A fast distributed storage system for blobs, objects, files, and data lake.",
+    "description": "SeaweedFS is a fast distributed storage system for blobs, objects, files, and data lake, for billions of files!",
     "homepage": "https://github.com/seaweedfs/seaweedfs",
     "license": "Apache-2.0",
     "architecture": {
@@ -10,9 +10,7 @@
         }
     },
     "bin": "weed.exe",
-    "checkver": {
-        "github": "https://github.com/seaweedfs/seaweedfs"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
