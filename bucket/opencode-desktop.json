@@ -1,30 +1,29 @@
 {
-    "version": "1.2.6",
-    "description": "The open source AI coding agent.",
-    "homepage": "https://opencode.ai/",
+    "version": "1.2.9",
+    "description": "AI coding agent, built for the terminal.",
+    "homepage": "https://github.com/anomalyco/opencode",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anomalyco/opencode/releases/download/v1.2.6/opencode-desktop-windows-x64.exe#/dl.7z",
-            "hash": "a2caa061861920ce4e9d0f381e1cf997a7208d9200613aa060cc5b5ace99e624"
+            "url": "https://github.com/anomalyco/opencode/releases/download/v1.2.9/opencode-desktop-windows-x64.exe#/dl.7z",
+            "hash": "70712e3cbf782e69599d4d2ea64d4353677f1b6b1e24abdb0be634021885644f"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction Ignore",
     "bin": [
-        [
-            "opencode-cli.exe",
-            "opencode"
-        ]
+        "OpenCode.exe",
+        "opencode-cli.exe"
     ],
     "shortcuts": [
         [
             "OpenCode.exe",
-            "OpenCode"
+            "OpenCode Desktop"
+        ],
+        [
+            "opencode-cli.exe",
+            "OpenCode CLI"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/anomalyco/opencode"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
