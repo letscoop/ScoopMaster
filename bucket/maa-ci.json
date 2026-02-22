@@ -1,0 +1,34 @@
+{
+    "version": "6.3.3-alpha.1.d010.g01a2329d1",
+    "description": "A one-click tool for the daily tasks of Arknights, supporting all clients.",
+    "homepage": "https://maa.plus/",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MaaAssistantArknights/MaaRelease/releases/download/v6.3.3-alpha.1.d010.g01a2329d1/MAA-v6.3.3-alpha.1.d010.g01a2329d1-win-x64.zip",
+            "hash": "188669ebc307285ddc7a887f0816d58afb46771b6b607add68f4da3a8742169f"
+        }
+    },
+    "shortcuts": [
+        [
+            "MAA.exe",
+            "MaaAssistantArknights CI ver"
+        ]
+    ],
+    "suggest": {
+        "adb": "adb"
+    },
+    "persist": [
+        "cache",
+        "config",
+        "debug",
+        "data"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/MaaAssistantArknights/MaaRelease/releases",
+        "regex": "/releases/tag/(?:v)?([\\d.]+(-((alpha|beta|rc)\\.\\d(.\\w+.\\w+)?)?)?)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/MaaAssistantArknights/MaaRelease/releases/download/v$version/MAA-v$version-win-x64.zip"
+    }
+}
