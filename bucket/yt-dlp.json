@@ -1,17 +1,36 @@
 {
     "version": "2026.03.03",
+    "description": "A youtube-dl fork with additional features and fixes.",
     "homepage": "https://github.com/yt-dlp/yt-dlp",
-    "license": "",
-    "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.03/yt-dlp.exe",
-    "hash": "554e868ca1df425d4fe90c224980f0862fe20e28dced6256461f16752d7a1218",
-    "pre_install": "if (-not (Test-Path \"$persist_dir\\yt-dlp.conf\")) { New-Item \"$dir\\yt-dlp.conf\" -ItemType File | Out-Null }",
+    "license": "Unlicense",
+    "suggest": {
+        "FFmpeg": "main/ffmpeg"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.03/yt-dlp.exe",
+            "hash": "554e868ca1df425d4fe90c224980f0862fe20e28dced6256461f16752d7a1218"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\yt-dlp.conf\")) {",
+        "    New-Item \"$dir\\yt-dlp.conf\" -ItemType File | Out-Null",
+        "}"
+    ],
     "bin": "yt-dlp.exe",
     "persist": [
-        "yt-dlp.conf",
-        "ytdlp_plugins"
+        "yt-dlp-plugins",
+        "yt-dlp.conf"
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA2-256SUMS"
+        }
     }
 }
