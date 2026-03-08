@@ -13,6 +13,11 @@
             "url": "https://github.com/sharkdp/fd/releases/download/v10.4.1/fd-v10.4.1-i686-pc-windows-msvc.zip",
             "hash": "8ddac10385d47fbdc1c66fb66501adcf9af462ae6a11c1e2941f0d5af62703ad",
             "extract_dir": "fd-v10.4.1-i686-pc-windows-msvc"
+        },
+        "arm64": {
+            "url": "https://github.com/sharkdp/fd/releases/download/v10.4.1/fd-v10.4.1-aarch64-pc-windows-msvc.zip",
+            "hash": "4b24051a9d333d6b59d35c97512c3238f91850ac2f3f2fa8715e938665d00a0b",
+            "extract_dir": "fd-v10.4.1-aarch64-pc-windows-msvc"
         }
     },
     "bin": "fd.exe",
@@ -26,6 +31,10 @@
             "32bit": {
                 "url": "https://github.com/sharkdp/fd/releases/download/v$version/fd-v$version-i686-pc-windows-msvc.zip",
                 "extract_dir": "fd-v$version-i686-pc-windows-msvc"
+            },
+            "arm64": {
+                "url": "https://github.com/sharkdp/fd/releases/download/v$version/fd-v$version-aarch64-pc-windows-msvc.zip",
+                "extract_dir": "fd-v$version-aarch64-pc-windows-msvc"
             }
         }
     }
