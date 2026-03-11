@@ -1,20 +1,23 @@
 {
-    "version": "11.0.27.0",
-    "description": "A powerful and useful tool for Office deployments",
-    "homepage": "https://www.officetool.plus",
-    "license": "GPL-3.0-or-later",
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+    "version": "11.1.16.0",
+    "description": "A powerful and useful tool for Office deployments.",
+    "homepage": "https://otp.landian.vip/",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/YerongAI/Office-Tool/blob/main/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.0.27.0/Office_Tool_with_runtime_v11.0.27.0_x64.7z",
-            "hash": "393e2433c7e237e9ef2f0ad737b83227a4578bed96f2868f9128204dc243a18b"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.1.16.0/Office_Tool_with_runtime_v11.1.16.0_x64.zip",
+            "hash": "a2e3d44d2f7efea8863dd1cdad358cfbae6915ce268a5e27858b3beddc1a0601"
         },
         "arm64": {
-            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.0.27.0/Office_Tool_with_runtime_v11.0.27.0_arm64.7z",
-            "hash": "cbc33f32e3277f15719e85d3a7a83e1e7a689473de0e7e21455d172693e8c935"
+            "url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.1.16.0/Office_Tool_with_runtime_v11.1.16.0_arm64.zip",
+            "hash": "0d768fe7f73ab30385ef84c133df67c8dde50db3807e772e1a558fa285bb8118"
         }
     },
     "extract_dir": "Office Tool",
-    "bin": "Office Tool Plus.Console.exe",
     "shortcuts": [
         [
             "Office Tool Plus.exe",
@@ -27,10 +30,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_x64.7z"
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_x64.zip"
             },
             "arm64": {
-                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_arm64.7z"
+                "url": "https://github.com/YerongAI/Office-Tool/releases/download/v$version/Office_Tool_with_runtime_v$version_arm64.zip"
             }
         }
     }
