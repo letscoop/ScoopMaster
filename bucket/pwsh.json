@@ -13,22 +13,12 @@
             "hash": "2106bffb6c42b2ab8b23a0e10573d0770cbf0b3731eb1cd108e59b64f9ceb17c"
         }
     },
-    "pre_install": [
-        "'Microsoft.PowerShell_profile.ps1', 'profile.ps1' | ForEach-Object {",
-        "    if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
-        "}"
-    ],
     "bin": "pwsh.exe",
     "shortcuts": [
         [
             "pwsh.exe",
-            "PowerShell Core",
-            "-WorkingDirectory ~"
+            "PowerShell Core"
         ]
-    ],
-    "persist": [
-        "Microsoft.PowerShell_profile.ps1",
-        "profile.ps1"
     ],
     "checkver": "github",
     "autoupdate": {
