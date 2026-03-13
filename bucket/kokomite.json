@@ -1,18 +1,14 @@
 {
-    "homepage": "http://www.orangemaker.sakura.ne.jp/product/Kokomite/",
     "version": "2-3-4-135",
-    "description": "CubePDF: CubePDF series and their library codes. The project is based on PDFium, iTextSharp, and Ghostscript.",
-    "license": "Apache-2.0",
-    "url": "http://www.orangemaker.sakura.ne.jp/download/Kokomite/Kokomite2-3-4-135.zip",
-    "hash": "f4d9c09169de84c3fb17b365aead86dfbd9b2b2aa3b45dee9be53320eec962ee",
-    "extract_dir": "Kokomite",
-    "pre_install": [
-        "",
-        "if(!(Test-Path(\"$dir\\Kokomite.ini\"))) { New-Item \"$dir\\Kokomite.ini\" | Out-Null }",
-        ""
-    ],
-    "persist": "Kokomite.ini",
-    "bin": "Kokomite.exe",
+    "description": "Cursor follower.",
+    "homepage": "http://www.orangemaker.sakura.ne.jp/product/Kokomite/download.html",
+    "architecture": {
+        "64bit": {
+            "url": "http://www.orangemaker.sakura.ne.jp/download/Kokomite/Kokomite2-3-4-135.zip",
+            "hash": "sha512:15e66370b3b9972b8aac43d896004cd92a9916098f78442733adc4a54652fbe857d6dbd91d58c5bdb2894ada7666764adf531a9b4fddd838242d204318b16b30"
+        }
+    },
+    "extract_dir": "Kokomite2-3-4-135/Kokomite",
     "shortcuts": [
         [
             "Kokomite.exe",
@@ -21,9 +17,6 @@
     ],
     "checkver": {
         "url": "http://www.orangemaker.sakura.ne.jp/product/Kokomite/download.html",
-        "re": "Kokomite(?<version>[\\d.-]+).zip"
-    },
-    "autoupdate": {
-        "url": "http://www.orangemaker.sakura.ne.jp/download/Kokomite/Kokomite$version.zip"
+        "regex": "<a href=\"\\.\\./\\.\\./download/Kokomite/Kokomite[\\d\\-]+\\.zip\">Kokomite([\\d\\-]+)\\.zip</a></td>"
     }
 }

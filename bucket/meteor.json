@@ -1,38 +1,33 @@
 {
-    "version": "0.30.0",
-    "description": "A highly configurable CLI tool for writing conventional commits",
-    "homepage": "https://github.com/stefanlogue/meteor",
-    "license": "MIT",
+    "version": "0.11.0",
+    "description": "An easy-to-use, plugin-driven metadata collection framework to extract data from different sources and sink to any data catalog.",
+    "homepage": "https://raystack.github.io/meteor/",
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stefanlogue/meteor/releases/download/v0.30.0/meteor-windows-amd64.zip",
-            "hash": "4e90682c6b950aadeb240f1eac06d655ed9eadd4976146586804c14956b33189"
-        },
-        "32bit": {
-            "url": "https://github.com/stefanlogue/meteor/releases/download/v0.30.0/meteor-windows-386.zip",
-            "hash": "65c55320144d93ca9cc98fdde98b89143382d75258a363b438646cca4457e423"
+            "url": "https://github.com/raystack/meteor/releases/download/v0.11.0/meteor_0.11.0_windows_amd64.zip",
+            "hash": "2f1eaf9e8b515ae8078515f4a710d79b7861e56b74c30412efa9349dfb543f3c"
         },
         "arm64": {
-            "url": "https://github.com/stefanlogue/meteor/releases/download/v0.30.0/meteor-windows-arm64.zip",
-            "hash": "e4857b524e07044e198b834ce82285d7e77c07c5b8b6779a20cb66198524d7a8"
+            "url": "https://github.com/raystack/meteor/releases/download/v0.11.0/meteor_0.11.0_windows_arm64.zip",
+            "hash": "031dadbd61e0d8b7b485fb5069faf3b3b475b45f430c0f604cd4128b7e13947b"
         }
     },
     "bin": "meteor.exe",
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/raystack/meteor"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/stefanlogue/meteor/releases/download/v$version/meteor-windows-amd64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/stefanlogue/meteor/releases/download/v$version/meteor-windows-386.zip"
+                "url": "https://github.com/raystack/meteor/releases/download/v$version/meteor_$version_windows_amd64.zip"
             },
             "arm64": {
-                "url": "https://github.com/stefanlogue/meteor/releases/download/v$version/meteor-windows-arm64.zip"
+                "url": "https://github.com/raystack/meteor/releases/download/v$version/meteor_$version_windows_arm64.zip"
             }
         },
         "hash": {
-            "url": "$baseurl/meteor_$version_checksums.txt"
+            "url": "$baseurl/checksums.txt"
         }
     }
 }

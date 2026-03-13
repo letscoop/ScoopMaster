@@ -1,40 +1,25 @@
 {
-    "version": "2.143.0",
-    "description": "Ledger Wallet, formerly Ledger Live (Desktop)",
-    "homepage": "https://www.ledger.com/ledger-live",
+    "homepage": "https://github.com/LedgerHQ/ledger-live-desktop",
+    "version": "2.42.0",
     "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://download.live.ledger.com/ledger-live-desktop-2.143.0-win-x64.exe#/dl.7z",
-            "hash": "sha512:edb504d1351117e4308bf74f14c5816d31f40ff94c338b3d95e55afb87e87396c7ceee4e2b3beeec114dd2c22dc7158b292ab1d6bcdb645d5b0ceef443963635",
-            "installer": {
-                "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath \"$dir\" -Removal",
-                    "Remove-Item \"$dir\\`$R0\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse"
-                ]
-            }
-        }
+    "url": "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v2.42.0/ledger-live-desktop-2.42.0-win-x64.exe#/dl.7z",
+    "hash": "ef8044de76c18f1d24195af4447ca8034b0973083e63b2d14be612f6b6906bb7",
+    "extract_dir": "$PLUGINSDIR",
+    "installer": {
+        "script": "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\""
     },
+    "env_set": {
+        "LEDGER_CONFIG_DIRECTORY": "$dir\\data"
+    },
+    "persist": "data",
     "shortcuts": [
         [
-            "Ledger Wallet.exe",
-            "Ledger Wallet"
+            "Ledger Live.exe",
+            "Ledger Live"
         ]
     ],
-    "checkver": {
-        "url": "https://download.live.ledger.com/latest.yml",
-        "regex": "ledger-live-desktop-([\\d.]+)-win"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://download.live.ledger.com/ledger-live-desktop-$version-win-x64.exe#/dl.7z"
-            }
-        },
-        "hash": {
-            "url": "https://download.live.ledger.com/latest.yml",
-            "mode": "extract",
-            "regex": "(?sm)$version-win-x64.exe.*?sha512: $base64"
-        }
+        "url": "https://github.com/LedgerHQ/ledger-live-desktop/releases/download/v$version/ledger-live-desktop-$version-win-x64.exe#/dl.7z"
     }
 }

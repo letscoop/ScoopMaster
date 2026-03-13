@@ -1,37 +1,24 @@
 {
-    "version": "3.2.2",
-    "description": "A JavaScript playground.",
-    "homepage": "https://runjs.app/",
-    "license": "",
+    "homepage": "https://github.com/lukehaas/RunJS",
+    "version": "3.1.2",
+    "license": "GPL-3.0",
+    "url": "https://github.com/lukehaas/RunJS/releases/download/v3.1.2/RunJS-Setup-3.1.2.exe#/dl.7z",
+    "hash": "sha256:494381ab5de1a8170015c7ab38edf202f7a273ce99e8896ab9aea4c9ff57009b",
+    "shortcuts": [["RunJS.exe", "RunJS"]],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lukehaas/RunJS/releases/download/v3.2.2/RunJS-Setup-3.2.2.exe",
-            "hash": "39b6dcedf16436e980da66ae76eb519077b26bf7aff67b2f06ae1aac66907efa",
             "installer": {
                 "script": [
-                    "$file = (Get-ChildItem \"$dir\" 'RunJS*.exe' | Select-Object -First 1).FullName",
-                    "Expand-7ZipArchive \"$file\" \"$dir\\\" -Removal",
-                    "Expand-7ZipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse"
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse"
                 ]
             }
         }
     },
-    "bin": "RunJS.exe",
-    "shortcuts": [
-        [
-            "RunJS.exe",
-            "RunJS"
-        ]
-    ],
     "checkver": {
         "github": "https://github.com/lukehaas/RunJS"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/lukehaas/RunJS/releases/download/v$version/RunJS-Setup-$version.exe#/dl.7z"
-            }
-        }
+        "url": "https://github.com/lukehaas/RunJS/releases/download/$version/RunJS-Setup-$version.exe#/dl.7z"
     }
 }

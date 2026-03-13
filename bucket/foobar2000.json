@@ -1,6 +1,6 @@
 {
-    "version": "2.26-20260304",
-    "description": "Preview build of foobar2000: easy migration between preview and stable",
+    "version": "2.25.7",
+    "description": "An advanced freeware audio player for the Windows platform.",
     "homepage": "https://www.foobar2000.org/",
     "license": {
         "identifier": "Freeware",
@@ -11,12 +11,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.foobar2000.org/files/foobar2000-x64_v2.26_preview_2026-03-04.exe#/dl.7z",
-            "hash": "d90f28780ea760cc8496108970f635a8fe81c58a1792dcb6ddcb4e2b8bd1b9c1"
+            "url": "https://www.foobar2000.org/files/foobar2000-x64_v2.25.7.exe#/dl.7z",
+            "hash": "aa1ee7808981f26fe48de4970eaac063fc22f9d601d725c50db4e1f7ae3c1e9b"
         },
         "32bit": {
-            "url": "https://www.foobar2000.org/files/foobar2000_v2.26_preview_2026-03-04.exe#/dl.7z",
-            "hash": "dc4fdb27733c2389925a76545ec6fb42ecf5acab22f679d1cd789cf4067f2924"
+            "url": "https://www.foobar2000.org/files/foobar2000_v2.25.7.exe#/dl.7z",
+            "hash": "8b35eb72d0fbc5f160c5b104cc05b18ecfb9aceb5dedf367b8aff661c8e6a237"
+        },
+        "arm64": {
+            "url": "https://www.foobar2000.org/files/foobar2000-arm64ec_v2.25.7.exe#/dl.7z",
+            "hash": "f006cb221923f48878ecf70899ede27ed74f7a48859e16607befb090099772e4"
         }
     },
     "installer": {
@@ -47,17 +51,19 @@
     ],
     "persist": "profile",
     "checkver": {
-        "url": "https://www.foobar2000.org/windows",
-        "regex": "([\\d.]+) preview (\\d{4})-(\\d{2})-(\\d{2})",
-        "replace": "${1}-${2}${3}${4}"
+        "url": "https://www.foobar2000.org/download",
+        "regex": "foobar2000_v([\\d.]+)\\."
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.foobar2000.org/files/foobar2000-x64_v$match1_preview_$match2-$match3-$match4.exe#/dl.7z"
+                "url": "https://www.foobar2000.org/files/foobar2000-x64_v$version.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://www.foobar2000.org/files/foobar2000_v$match1_preview_$match2-$match3-$match4.exe#/dl.7z"
+                "url": "https://www.foobar2000.org/files/foobar2000_v$version.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://www.foobar2000.org/files/foobar2000-arm64ec_v$version.exe#/dl.7z"
             }
         }
     }

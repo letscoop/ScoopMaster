@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/pyscripter/pyscripter",
     "description": "an open-source Python Integrated Development Environment (IDE)",
-    "version": "5.3.1",
+    "version": "5.2.1",
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/project/pyscripter/PyScripter-v5.3/PyScripter-5.3.1-x64.zip",
-            "hash": "sha1:0a48aefdba006a946be1272769167e289fb4b579",
+            "url": "https://sourceforge.net/projects/pyscripter/files/PyScripter-v5.2/PyScripter-5.2.1-x64.zip",
+            "hash": "0aed636fbcae63d3020fc47b854681dda25a6ae281b89de016a621b9c959f9e5",
             "extract_dir": "PyScripter"
         },
         "32bit": {
-            "url": "https://sourceforge.net/project/pyscripter/PyScripter-v5.3/PyScripter-5.3.1-x86.zip",
-            "hash": "sha1:579732a693aa6190465279ce23585a9bfeb3bb54",
+            "url": "https://sourceforge.net/projects/pyscripter/files/PyScripter-v5.2/PyScripter-5.2.1-x86.zip",
+            "hash": "8c1a9540829597e15b59572adbe6ba3940f323b98c3c03bbdb42c2502b55ddf9",
             "extract_dir": "PyScripter"
         }
     },
@@ -28,10 +28,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://sourceforge.net/project/pyscripter/PyScripter-v$majorVersion.$minorVersion/PyScripter-$version-x64.zip"
+                "url": "https://sourceforge.net/projects/pyscripter/files/PyScripter-v$majorVersion.$minorVersion/PyScripter-$version-x64.zip"
             },
             "32bit": {
-                "url": "https://sourceforge.net/project/pyscripter/PyScripter-v$majorVersion.$minorVersion/PyScripter-$version-x86.zip"
+                "url": "https://sourceforge.net/projects/pyscripter/files/PyScripter-v$majorVersion.$minorVersion/PyScripter-$version-x86.zip"
             }
         }
     }

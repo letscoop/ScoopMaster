@@ -1,25 +1,22 @@
 {
     "homepage": "https://www.microsoft.com/en-us/edge",
     "description": "The chromium based Microsoft Edge browser (Dev Channel)",
-    "version": "147.0.3901.1",
+    "version": "92.0.891.1",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev&version=147.0.3901.1&dl#/MicrosoftEdge-147.0.3901.1-x64.7z",
-            "hash": "6472eeae2c64e09493f9c784842d9c94d22395b48d29ce4a4ecfceae8843819f"
+            "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/dev/x64#/MicrosoftEdge-Dev-92.0.891.1-x86_x64.7z",
+            "hash": "fd4f1a8c1085991f6e915835cdc43522bab9023997aceec9b111b7a8a7d29874"
         },
         "32bit": {
-            "url": "https://dorado-api.deno.dev/edge?arch=86&channel=dev&version=147.0.3901.1&dl#/MicrosoftEdge-147.0.3901.1-x86.7z",
-            "hash": "d7737c839e93692173701055b36120f1ffaf977021b9720b8883608d01e2882e"
-        },
-        "arm64": {
-            "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=dev&version=147.0.3901.1&dl#/MicrosoftEdge-147.0.3901.1-arm64.7z",
-            "hash": "82df56e6920b59e14fad35c48a8afd50cd260729d0c0aadf98044357ee1a04f3"
+            "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/dev/x86#/MicrosoftEdge-Dev-92.0.891.1-x86.7z",
+            "hash": "f0eafc124d9f16bed3e8407c7cc868be4686c33df6f33e5ce530ebe9b07963ed"
         }
     },
     "installer": {
         "script": "Expand-7zipArchive -Path \"$dir\\MSEDGE.7z\" -ExtractDir \"Chrome-bin\\$version\" -Removal"
     },
+    "bin": "msedge.exe",
     "shortcuts": [
         [
             "msedge.exe",
@@ -27,31 +24,16 @@
         ]
     ],
     "checkver": {
-        "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev",
-        "jsonpath": "$.Version"
+        "url": "https://scoop-services.azurewebsites.net/checkver?app=microsoftedge",
+        "jsonpath": "$.dev.x64.version"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev&version=$version&dl#/MicrosoftEdge-$version-x64.7z",
-                "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=64&channel=dev&version=$version",
-                    "jsonpath": "$.Hashes.Sha256"
-                }
+                "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/dev/x64#/MicrosoftEdge-Dev-$version-x86_x64.7z"
             },
             "32bit": {
-                "url": "https://dorado-api.deno.dev/edge?arch=86&channel=dev&version=$version&dl#/MicrosoftEdge-$version-x86.7z",
-                "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=86&channel=dev&version=$version",
-                    "jsonpath": "$.Hashes.Sha256"
-                }
-            },
-            "arm64": {
-                "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=dev&version=$version&dl#/MicrosoftEdge-$version-arm64.7z",
-                "hash": {
-                    "url": "https://dorado-api.deno.dev/edge?arch=arm64&channel=dev&version=$version",
-                    "jsonpath": "$.Hashes.Sha256"
-                }
+                "url": "https://edge-dl.kidonng.workers.dev/https://api.shuax.com/v2/download/edge/dev/x86#/MicrosoftEdge-Dev-$version-x86.7z"
             }
         }
     }

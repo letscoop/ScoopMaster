@@ -1,26 +1,20 @@
 {
-    "homepage": "https://mirrors.ustc.edu.cn/julia-releases/",
+    "homepage": "https://mirrors.bfsu.edu.cn/julia-releases/",
     "description": "A programming language that is a fresh approach to technical computing.",
-    "version": "1.12.2",
+    "version": "1.7.3",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/julia-releases/bin/winnt/x64/1.12/julia-1.12.2-win64.zip",
-            "hash": "d4f3404259e4f4f94cfe99dd3ead0a811a2a79bcec2e140f5c993c7b41c58ef2"
+            "url": "https://mirrors.bfsu.edu.cn/julia-releases/bin/winnt/x64/1.7/julia-1.7.3-win64.exe",
+            "hash": "ef5915eaf35bb71359072e8c41f84fa73f1059fecb198e7fc838270d4ba5bbae"
         },
         "32bit": {
-            "url": "https://mirrors.ustc.edu.cn/julia-releases/bin/winnt/x86/1.12/julia-1.12.2-win32.zip",
-            "hash": "e207ed10046b3cfd1abd2b2cb3c3db7194685ecfd137f7826dabfc29b66707db"
+            "url": "https://mirrors.bfsu.edu.cn/julia-releases/bin/winnt/x86/1.7/julia-1.7.3-win32.exe",
+            "hash": "71999df72f1886ca9e0240c17ff01c69769979b5cec0a472c8e07ef7266d5303"
         }
     },
-    "extract_dir": "julia-1.12.2",
+    "innosetup": true,
     "bin": "bin\\julia.exe",
-    "shortcuts": [
-        [
-            "bin\\julia.exe",
-            "Julia"
-        ]
-    ],
     "checkver": {
         "url": "https://julialang.org/downloads/",
         "regex": "Current stable release: v([\\d.]+)"
@@ -28,12 +22,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/julia-releases/bin/winnt/x64/$majorVersion.$minorVersion/julia-$version-win64.zip"
+                "url": "https://mirrors.bfsu.edu.cn/julia-releases/bin/winnt/x64/$majorVersion.$minorVersion/julia-$version-win64.exe"
             },
             "32bit": {
-                "url": "https://mirrors.ustc.edu.cn/julia-releases/bin/winnt/x86/$majorVersion.$minorVersion/julia-$version-win32.zip"
+                "url": "https://mirrors.bfsu.edu.cn/julia-releases/bin/winnt/x86/$majorVersion.$minorVersion/julia-$version-win32.exe"
             }
-        },
-        "extract_dir": "julia-$version"
+        }
     }
 }

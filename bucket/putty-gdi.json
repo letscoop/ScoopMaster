@@ -1,44 +1,38 @@
 {
-    "homepage": "http://ice.hotmint.com/putty/",
-    "description": "A free implementation of SSH and Telnet, along with an xterm terminal emulator and GDI version.",
-    "version": "20250211",
-    "license": "http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html",
-    "architecture": {
-        "64bit": {
-            "url": "http://ice.hotmint.com/putty/down/putty-gdi-20250211.zip",
-            "hash": "e85aeb789bde30a004547b4fd35bb9dbab09b521f822885cf57dc4ae01fdcef8",
-            "extract_dir": "putty-gdi-20250211"
-        },
-        "32bit": {
-            "url": "http://ice.hotmint.com/putty/down/putty-gdi-20250211.zip",
-            "hash": "e85aeb789bde30a004547b4fd35bb9dbab09b521f822885cf57dc4ae01fdcef8",
-            "extract_dir": "putty-gdi-20250211\\x86"
-        }
+  "homepage": "http://ice.hotmint.com/putty/index.html",
+  "version": "20240416",
+  "architecture": {
+    "32bit": {
+      "bin": [
+        "*\\x86\\putty.exe",
+        "*\\x86\\puttygen.exe",
+        "*\\x86\\pscp.exe",
+        "*\\x86\\pageant.exe",
+        "*\\x86\\psftp.exe",
+        "*\\x86\\plink.exe"
+      ],
+      "shortcuts": [
+        [ "putty-gdi-20240416\\x86\\putty.exe", "Putty (gdi)" ],
+        [ "putty-gdi-20240416\\x86\\puttygen.exe", "Puttygen (gdi)" ],
+        [ "putty-gdi-20240416\\x86\\pageant.exe", "Pagaeant (gdi)" ]
+      ]
     },
-    "bin": [
-        "putty.exe",
-        "puttytel.exe"
-    ],
-    "shortcuts": [
-        [
-            "putty.exe",
-            "PuTTY"
-        ]
-    ],
-    "checkver": {
-        "url": "http://ice.hotmint.com/putty/",
-        "re": "putty-gdi-([\\d.]+).zip"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://ice.hotmint.com/putty/down/putty-gdi-$version.zip",
-                "extract_dir": "putty-gdi-$version"
-            },
-            "32bit": {
-                "url": "http://ice.hotmint.com/putty/down/putty-gdi-$version.zip",
-                "extract_dir": "putty-gdi-$version\\x86"
-            }
-        }
+    "64bit": {
+      "bin": [
+        "*\\putty.exe",
+        "*\\puttygen.exe",
+        "*\\pscp.exe",
+        "*\\pageant.exe",
+        "*\\psftp.exe",
+        "*\\plink.exe"
+      ],
+      "shortcuts": [
+        [ "putty-gdi-20240416\\putty.exe", "Putty (gdi)" ],
+        [ "putty-gdi-20240416\\puttygen.exe", "Puttygen (gdi)" ],
+        [ "putty-gdi-20240416\\pageant.exe", "Pagaeant (gdi)" ]
+      ]
     }
+  },
+  "url": "https://ice.hotmint.com/putty/down/putty-gdi-20240416.zip",
+  "hash": "c4a45e585031b7aba21297e3cce22351bb8f2f7af69406bd16bb1952d1e8ed23"
 }

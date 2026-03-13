@@ -1,43 +1,26 @@
 {
-    "version": "4.3.18",
+    "version": "3.1.5",
     "description": "Wow. Yet another Pixiv client!",
     "homepage": "https://github.com/Pixeval/Pixeval",
-    "license": "GPL-3.0",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.3.18/Pixeval_4.3.18.0_x64.msix#/dl.7z",
-            "hash": "4f96e0f06e3eea1e3911be116735c09c03dc7e8de2df71fe77b2e35d5d7d752f"
-        },
-        "32bit": {
-            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.3.18/Pixeval_4.3.18.0_x86.msix#/dl.7z",
-            "hash": "d90e65c88e2b422093463f00761630421c08cb7101471b0641ba1ddb5d7c63c4"
-        },
-        "arm64": {
-            "url": "https://github.com/Pixeval/Pixeval/releases/download/4.3.18/Pixeval_4.3.18.0_arm64.msix#/dl.7z",
-            "hash": "7b53015289d4337fd199ce42cde7e2391471a9c038cde7e2be656bd8a20f318c"
+            "url": "https://github.com/Pixeval/Pixeval/releases/download/3.1.5/Pixeval-x64.zip",
+            "hash": "24b72e621f76471fe8359e0ef395f846aaf2d0c104c6028e313614a1784e401b"
         }
     },
-    "bin": "Pixeval.exe",
+    "extract_dir": "Pixeval-x64",
     "shortcuts": [
         [
             "Pixeval.exe",
             "Pixeval"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/Pixeval/Pixeval/releases/latest",
-        "regex": "(?sm)browser_download_url.*?releases/download/([\\d.]+)/Pixeval_([\\d.]+).0_x64.msix"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Pixeval/Pixeval/releases/download/$version/Pixeval_$version.0_x64.msix#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://github.com/Pixeval/Pixeval/releases/download/$version/Pixeval_$version.0_x86.msix#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://github.com/Pixeval/Pixeval/releases/download/$version/Pixeval_$version.0_arm64.msix#/dl.7z"
+                "url": "https://github.com/Pixeval/Pixeval/releases/download/$version/Pixeval-x64.zip"
             }
         }
     }
