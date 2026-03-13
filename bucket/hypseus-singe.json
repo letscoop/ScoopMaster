@@ -1,0 +1,22 @@
+{
+    "version": "2.11.7",
+    "description": "Hypseus is a SDL2 version of Daphne and Singe. Laserdisc game emulation.",
+    "homepage": "https://github.com/DirtBagXon/hypseus-singe",
+    "license": "GPL-3",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v2.11.7/Hypseus.Singe-v2.11.7-win64.zip",
+            "hash": "5e92d02a92f47e4859e9eb2788e18cd15689b51af15561769aff2de167a08e16"
+        }
+    },
+    "extract_dir": "Hypseus Singe",
+    "bin": ["hypseus.exe", "hypseus_subsystem.exe"],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/DirtBagXon/hypseus-singe/releases/download/v$version/Hypseus.Singe-v$version-win64.zip"
+            }
+        }
+    }
+}

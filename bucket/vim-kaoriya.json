@@ -1,18 +1,17 @@
 {
     "homepage": "https://github.com/koron/vim-kaoriya",
     "description": "Vim + kaoriya build system.",
-
-    "version": "8.1.0005.20180520",
+    "version": "8.2.1287.20200724",
     "architecture": {
         "32bit": {
-            "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.1.0005-20180520/vim81-kaoriya-win32-8.1.0005-20180520.zip",
-            "hash": "afacd6e27304136f5ebae3edddf6e747f410880fa6a986d80be772e03ef56d36",
-            "extract_dir": "vim81-kaoriya-win32"
+            "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.1287-20200724/vim82-kaoriya-win32-8.2.1287-20200724.zip",
+            "hash": "dcb3ee8ad4866624859da2499da81bea0bbe2e1fcd5e9874595c6d499b2b94fa",
+            "extract_dir": "vim82-kaoriya-win32"
         },
         "64bit": {
-            "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.1.0005-20180520/vim81-kaoriya-win64-8.1.0005-20180520.zip",
-            "hash": "53e8dd08e2249ce8a54784e16469151a7bf9857ac9acf3a1b341ac4e7da26fb2",
-            "extract_dir": "vim81-kaoriya-win64"
+            "url": "https://github.com/koron/vim-kaoriya/releases/download/v8.2.1287-20200724/vim82-kaoriya-win64-8.2.1287-20200724.zip",
+            "hash": "72e9035943a4fd437c453bd089bc23dd8c440e401735334c0cbe51d5b9e418a0",
+            "extract_dir": "vim82-kaoriya-win64"
         }
     },
     "checkver": {
@@ -32,12 +31,137 @@
             }
         }
     },
-
     "bin": [
-        ["vim.exe", "vim", ""],
-        ["vim.exe", "vimk", ""],
-        ["gvim.exe", "gvim", ""],
-        ["gvim.exe", "gvimk", ""]
+        "vim.exe",
+        [
+            "vim.exe",
+            "vi"
+        ],
+        [
+            "vim.exe",
+            "ex",
+            "-e"
+        ],
+        [
+            "vim.exe",
+            "view",
+            "-R"
+        ],
+        [
+            "vim.exe",
+            "rvim",
+            "-Z"
+        ],
+        [
+            "vim.exe",
+            "rview",
+            "-RZ"
+        ],
+        [
+            "vim.exe",
+            "vimdiff",
+            "-d"
+        ],
+        "gvim.exe",
+        [
+            "gvim.exe",
+            "gview",
+            "-R"
+        ],
+        [
+            "gvim.exe",
+            "evim",
+            "-y"
+        ],
+        [
+            "gvim.exe",
+            "eview",
+            "-Ry"
+        ],
+        [
+            "gvim.exe",
+            "rgvim",
+            "-Z"
+        ],
+        [
+            "gvim.exe",
+            "rgview",
+            "-RZ"
+        ],
+        [
+            "gvim.exe",
+            "gvimdiff",
+            "-d"
+        ],
+        "xxd.exe",
+        [
+            "vim.exe",
+            "vimk"
+        ],
+        [
+            "vim.exe",
+            "vik"
+        ],
+        [
+            "vim.exe",
+            "exk",
+            "-e"
+        ],
+        [
+            "vim.exe",
+            "viewk",
+            "-R"
+        ],
+        [
+            "vim.exe",
+            "rvimk",
+            "-Z"
+        ],
+        [
+            "vim.exe",
+            "rviewk",
+            "-RZ"
+        ],
+        [
+            "vim.exe",
+            "vimdiffk",
+            "-d"
+        ],
+        [
+            "gvim.exe",
+            "gvimk",
+            ""
+        ],
+        [
+            "gvim.exe",
+            "gviewk",
+            "-R"
+        ],
+        [
+            "gvim.exe",
+            "evimk",
+            "-y"
+        ],
+        [
+            "gvim.exe",
+            "eviewk",
+            "-Ry"
+        ],
+        [
+            "gvim.exe",
+            "rgvimk",
+            "-Z"
+        ],
+        [
+            "gvim.exe",
+            "rgviewk",
+            "-RZ"
+        ],
+        [
+            "gvim.exe",
+            "gvimdiffk",
+            "-d"
+        ]
     ],
     "shortcuts": [
         [

@@ -1,0 +1,18 @@
+{
+    "version": "3.23.0",
+    "description": "Native Instruments software manager",
+    "homepage": "https://www.native-instruments.com/en/specials/native-access/",
+    "license": {
+        "identifier": "Proprietary"
+    },
+    "url": "https://www.native-instruments.com/fileadmin/downloads/Native-Access_2.exe#/dl.7z",
+    "hash": "6658438ecf4cdd93c6bff3a237b0942db75ff8eaedce5c4bfb485aca171d566f",
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+    "bin": "Native Access.exe",
+    "shortcuts": [
+        [
+            "Native Access.exe",
+            "Native Access"
+        ]
+    ]
+}

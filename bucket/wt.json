@@ -1,15 +1,74 @@
 {
-    "version": "0.1.24",
+    "version": "1.25.622.0",
+    "description": "Windows Terminal. Customized.",
+    "homepage": "https://github.com/microsoft/terminal",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/timvw/wt/releases/download/v0.1.24/wt_0.1.24_windows_amd64.zip",
-            "bin": [
-                "wt.exe"
-            ],
-            "hash": "5005cee462ab21f90e056d3a6744c3412bc1575f3b05ee9d7c4261f493b88db0"
+            "url": "https://github.com/microsoft/terminal/releases/download/v1.25.622.0/Microsoft.WindowsTerminalPreview_1.25.622.0_x64.zip",
+            "hash": "ba5b75eb769e99221e68fe4bfb3580ed1ade81f24b70334de4cb4742edf1b017"
+        },
+        "32bit": {
+            "url": "https://github.com/microsoft/terminal/releases/download/v1.25.622.0/Microsoft.WindowsTerminalPreview_1.25.622.0_x86.zip",
+            "hash": "4cb07fbdd0ff7bcc5d85c128fb8a44cc9d96e6daab682bba67e0b2bcc35e8bb8"
+        },
+        "arm64": {
+            "url": "https://github.com/microsoft/terminal/releases/download/v1.25.622.0/Microsoft.WindowsTerminalPreview_1.25.622.0_arm64.zip",
+            "hash": "417172b4cd9f11795aebae9fdf06b701ffda4aa1e2bee6bac3c3f6d385792948"
         }
     },
-    "homepage": "https://github.com/timvw/wt",
-    "license": "MIT",
-    "description": "A fast, simple Git worktree helper"
+    "depends": [
+        "jq",
+        "git",
+        "pwsh"
+    ],
+    "extract_dir": "terminal-1.25.622.0",
+    "installer": {
+        "script": "& \"$bucketsdir\\chris\\scripts\\$app\\$app.ps1\" -install"
+    },
+    "bin": [
+        [
+            "wt.exe",
+            "wtp"
+        ],
+        [
+            "wt.exe",
+            "wt"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "WindowsTerminal.exe",
+            "Windows Terminal Preview"
+        ]
+    ],
+    "persist": [
+        ".portable",
+        "settings"
+    ],
+    "pre_uninstall": "if (get-process -name windowsterminal -ea 0) {stop-process -force -name windowsterminal}",
+    "post_uninstall": "& \"$bucketsdir\\chris\\scripts\\$app\\$app.ps1\" -uninstall",
+    "checkver": {
+        "url": "https://api.github.com/repositories/100060912/releases",
+        "jsonpath": "$[?(@.prerelease == true)].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/microsoft/terminal/releases/download/v$version/Microsoft.WindowsTerminalPreview_$version_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/microsoft/terminal/releases/download/v$version/Microsoft.WindowsTerminalPreview_$version_x86.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/microsoft/terminal/releases/download/v$version/Microsoft.WindowsTerminalPreview_$version_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/microsoft/terminal/releases/tag/v$version",
+            "regex": "(?s)$basename.*?$sha256"
+        },
+        "extract_dir": "terminal-$version"
+    }
 }

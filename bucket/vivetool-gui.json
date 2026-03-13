@@ -11,5 +11,11 @@
             "ViVeTool GUI"
         ]
     ],
-    "notes": "ViVeTool GUI has been deprecated since Oct 28, 2025."
+    "checkver": {
+        "url": "https://api.github.com/repos/PeterStrick/ViVeTool-GUI/releases/latest",
+        "regex": "(?sm)browser_download_url.*?/releases/download/v([\\d.]+)/(?<file>.*?\\.zip)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/PeterStrick/ViVeTool-GUI/releases/download/v$version/$matchFile"
+    }
 }

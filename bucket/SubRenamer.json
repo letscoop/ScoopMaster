@@ -1,28 +1,26 @@
 {
-    "version": "2.4.0",
-    "description": "A Tool for Batch Rename Subtitle Files to Match Video Names with One Click.",
-    "homepage": "https://github.com/qwqcode/SubRenamer",
-    "license": "GPL-2.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/qwqcode/SubRenamer/releases/download/v2.4.0/SubRenamer_windows_amd64.zip",
-            "hash": "8b93403d950dc2e6642e92a30cd7d1f7e2ab0f0d316f25101621218161e14efe",
-            "extract_dir": "SubRenamer"
-        }
-    },
-    "shortcuts": [
-        [
-            "SubRenamer.exe",
-            "SubRenamer"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/qwqcode/SubRenamer/releases/download/v$version/SubRenamer_windows_amd64.zip",
-                "extract_dir": "SubRenamer"
-            }
-        }
+  "version": "4.4.1",
+  "description": "SubRenamer is a subtitle renaming tool",
+  "homepage": "https://github.com/arition/SubRenamer",
+  "license": "GPLv3",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/arition/SubRenamer/releases/download/v4.4.1/SubRenamer-win-x64.zip",
+      "hash": "5a5ccf038ef6989cec8ed87f9ba078cfcca10a51b63691c3a2212734314b1d58"
     }
+  },
+  "shortcuts": [
+    [
+      "SubRenamer.exe",
+      "SubRenamer"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/arition/SubRenamer/releases/download/v$version/SubRenamer-win-x64.zip"
+      }
+    }
+  }
 }

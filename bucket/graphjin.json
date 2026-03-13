@@ -1,0 +1,29 @@
+{
+    "version": "3.14.1",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/dosco/graphjin/releases/download/v3.14.1/graphjin_3.14.1_windows_386.tar.gz",
+            "bin": [
+                "graphjin.exe"
+            ],
+            "hash": "69dc6ce0a333e0c89b6f888e86a4e4ea2f7128f9928d1d2aa7a868c135be757e"
+        },
+        "64bit": {
+            "url": "https://github.com/dosco/graphjin/releases/download/v3.14.1/graphjin_3.14.1_windows_amd64.tar.gz",
+            "bin": [
+                "graphjin.exe"
+            ],
+            "hash": "adf244b60907605988e8c494b5ec244dc9c60bc4144096a9a83c6b2e1ed8bcac"
+        },
+        "arm64": {
+            "url": "https://github.com/dosco/graphjin/releases/download/v3.14.1/graphjin_3.14.1_windows_arm64.tar.gz",
+            "bin": [
+                "graphjin.exe"
+            ],
+            "hash": "dd0fb6cb9ab8e4b37bf1cae1fb1230be8060ed53b912cec92de2d4a14564d9af"
+        }
+    },
+    "homepage": "https://graphjin.com",
+    "license": "Apache-2.0",
+    "description": "Build APIs in 5 minutes. An automagical GraphQL to SQL compiler."
+}

@@ -1,0 +1,28 @@
+{
+    "version": "0.9.0",
+    "description": "Insert example-files into `README.md` at the code block in the current directory.",
+    "homepage": "https://github.com/hymkor/example-into-readme",
+    "license": "MIT License",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/hymkor/example-into-readme/releases/download/v0.9.0/example-into-readme-v0.9.0-windows-386.zip",
+            "hash": "28c1aa976fc3e0febbc5c41e2107115a1c774eddfca488561474e0c2bbbd0171"
+        },
+        "64bit": {
+            "url": "https://github.com/hymkor/example-into-readme/releases/download/v0.9.0/example-into-readme-v0.9.0-windows-amd64.zip",
+            "hash": "3f176d095ee8625255f5cf855834a9aa8cb612c1f4312b13e0488ff55e2ef757"
+        }
+    },
+    "bin": "example-into-readme.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/hymkor/example-into-readme/releases/download/v$version/example-into-readme-v$version-windows-386.zip"
+            },
+            "64bit": {
+                "url": "https://github.com/hymkor/example-into-readme/releases/download/v$version/example-into-readme-v$version-windows-amd64.zip"
+            }
+        }
+    }
+}

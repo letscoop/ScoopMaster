@@ -1,30 +1,42 @@
 {
-  "version": "master",
-  "description": "Clink gizmos scripts",
-  "homepage": "https://github.com/chrisant996/clink-gizmos",
-  "license": "MIT",
-  "suggest": {
-    "Clink": "clink"
-  },
-  "url": "https://github.com/chrisant996/clink-gizmos/archive/refs/heads/main.zip",
-  "hash": "0000000000000000000000000000000000000000000000000000000000000000",
-  "extract_dir": "clink-gizmos-main",
-  "installer": {
-    "script": [
-      "$luapath = Join-Path (Split-Path -Path \"$dir\" -Parent) \"current\"",
-      "if (Get-Command clink -ErrorAction SilentlyContinue) {",
-      "   clink installscripts \"$luapath\"",
-      "} else {",
-      "   warn 'Clink installation not found. Please manually install these scripts.'",
-      "}"
-    ]
-  },
-  "uninstaller": {
-    "script": [
-      "$luapath = Join-Path (Split-Path -Path \"$dir\" -Parent) \"current\"",
-      "if (Get-Command clink -ErrorAction SilentlyContinue) {",
-      "   clink uninstallscripts \"$luapath\"",
-      "}"
-    ]
-  }
+    "##": "Maifest based on github.com/gigberg/localbucket/blob/main/bucket/clink-gizmos.json",
+    "version": "0.2026.03.09",
+    "homepage": "https://github.com/chrisant996/clink-gizmos",
+    "description": "A library of Lua scripts for use with Clink",
+    "license": "MIT",
+    "depends": "clink",
+    "url": "https://github.com/chrisant996/clink-gizmos/archive/ff9d3aefc0712891067dc667875a748ca559ccef.zip",
+    "hash": "0df7f552519e01d8f00e6945c566defd925dc56181c999138bc07cb306f89b01",
+    "extract_dir": "clink-gizmos-ff9d3aefc0712891067dc667875a748ca559ccef",
+    "installer": {
+        "script": [
+            "$luapath = Join-Path (Split-Path -Path \"$dir\" -Parent) \"current\"",
+            "if (Get-Command clink -ErrorAction SilentlyContinue) {",
+            "   clink installscripts \"$luapath\"",
+            "} elseif ($Env:CMDER_ROOT) {",
+            "   & \"$Env:CMDER_ROOT\\vendor\\clink\\clink.bat\" installscripts \"$luapath\"",
+            "} else {",
+            "   warn 'Clink or Cmder installation not found. Please manually install these scripts.'",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "$luapath = Join-Path (Split-Path -Path \"$dir\" -Parent) \"current\"",
+            "if (Get-Command clink -ErrorAction SilentlyContinue) {",
+            "   clink uninstallscripts \"$luapath\"",
+            "} elseif ($Env:CMDER_ROOT) {",
+            "   & \"$Env:CMDER_ROOT\\vendor\\clink\\clink.bat\" uninstallscripts \"$luapath\"",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://github.com/chrisant996/clink-gizmos/commits/main.atom",
+        "regex": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>[0-9a-f]{40})",
+        "replace": "0.${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "url": "https://github.com/chrisant996/clink-gizmos/archive/$matchSha.zip",
+        "extract_dir": "clink-gizmos-$matchSha"
+    }
 }

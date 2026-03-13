@@ -1,0 +1,21 @@
+{
+    "version": "0.4.2",
+    "description": "An Agent Client Protocol (ACP)–compatible agent that bridges the OpenAI Codex runtime with ACP clients over stdio",
+    "homepage": "https://github.com/cola-io/codex-acp",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cola-io/codex-acp/releases/download/v0.4.2/codex-acp-v0.4.2-x86_64-pc-windows-msvc.zip",
+            "hash": "cf2ffbc9f924441191836b7a6fbcbf5867a44e1556ad7ff1032b3204daea041f"
+        }
+    },
+    "bin": "codex-acp.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/cola-io/codex-acp/releases/download/v$version/codex-acp-v$version-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

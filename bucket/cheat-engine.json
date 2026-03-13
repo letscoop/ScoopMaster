@@ -1,16 +1,15 @@
 {
-    "homepage": "https://cheatengine.org/index.php",
+    "version": "7.6",
     "description": "Tool for modifying/debugging single player games and applications.",
-    "version": "7.1-2020-04-22T16",
+    "homepage": "https://cheatengine.org/index.php",
     "license": {
         "identifier": "Freeware",
-        "url": "https://github.com/cheat-engine/cheat-engine/issues/60#issuecomment-467317576"
+        "url": "https://www.cheatengine.org/downloads.php"
     },
-    "url": "https://github.com/cheat-engine/cheat-engine/releases/download/7.1/CheatEngine71.exe",
-    "hash": "df54b77363500d9795ab43d78a55989200b66974a2eaf90898fa9ace240659e4",
-    "innosetup": true,
     "architecture": {
         "64bit": {
+            "url": "https://d5iv42o50fxks.cloudfront.net/gNzCWKR/76nk.exe",
+            "hash": "f96eca4a678f34c5d6c5e8b3ebb0f086f17ffc869c021e5576f8b906dace0336",
             "shortcuts": [
                 [
                     "Cheat Engine.exe",
@@ -21,12 +20,14 @@
                     "Cheat Engine Windows Repair"
                 ],
                 [
-                    "Tutorial-x86_64.exe",
+                    "tutorial-x86_64.exe",
                     "Cheat Engine Tutorial"
                 ]
             ]
         },
         "32bit": {
+            "url": "https://d5iv42o50fxks.cloudfront.net/gNzCWKR/76nk.exe",
+            "hash": "f96eca4a678f34c5d6c5e8b3ebb0f086f17ffc869c021e5576f8b906dace0336",
             "shortcuts": [
                 [
                     "Cheat Engine.exe",
@@ -37,18 +38,25 @@
                     "Cheat Engine Windows Repair"
                 ],
                 [
-                    "Tutorial-i386.exe",
+                    "tutorial-i386.exe",
                     "Cheat Engine Tutorial"
                 ]
             ]
         }
     },
+    "innosetup": true,
     "checkver": {
-        "url": "https://api.github.com/repos/cheat-engine/cheat-engine/releases/latest",
-        "regex": "(?sm)updated_at.*?(?<time>[\\dT-]+).*?download/(?<main>[\\d.]+)/CheatEngine(?<clean>\\d+)",
-        "replace": "${2}-${1}"
+        "url": "https://www.cheatengine.org/downloads.php",
+        "regex": "<a class=\"download_link\" href=\"https://[^\"/]+\\.cloudfront\\.net/(?<path>[^/]+)/(?<file>[^\"/]+\\.exe)\"[\\s\\S]*?>[\\s\\S]*?Download Cheat Engine\\s*(?<version>[\\d.]+)</a>"
     },
     "autoupdate": {
-        "url": "https://github.com/cheat-engine/cheat-engine/releases/download/$matchMain/CheatEngine$matchClean.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://d5iv42o50fxks.cloudfront.net/$matchPath/$matchFile"
+            },
+            "32bit": {
+                "url": "https://d5iv42o50fxks.cloudfront.net/$matchPath/$matchFile"
+            }
+        }
     }
 }

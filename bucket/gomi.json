@@ -1,28 +1,31 @@
 {
+    "version": "1.6.2",
+    "description": "A simple trash CLI tool",
+    "homepage": "https://github.com/babarot/gomi",
+    "license": "MIT",
     "architecture": {
-        "32bit": {
-            "hash": "bc47c524e6d49558d6e347ab8fc3df4e2a691744239b29b3dab53bbcb782f50d",
-            "url": "https://github.com/b4b4r07/gomi/releases/download/v1.1.6/gomi_windows_386.exe"
-        },
         "64bit": {
-            "hash": "51ad11d547197591642f35a8776894724a87551c960de68695fe4b054aa824f7",
-            "url": "https://github.com/b4b4r07/gomi/releases/download/v1.1.6/gomi_windows_amd64.exe"
-        }
-    },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/b4b4r07/gomi/releases/download/v$version/gomi_windows_386.exe"
-            },
-            "64bit": {
-                "url": "https://github.com/b4b4r07/gomi/releases/download/v$version/gomi_windows_amd64.exe"
-            }
+            "url": "https://github.com/babarot/gomi/releases/download/v1.6.2/gomi_Windows_x86_64.zip",
+            "hash": "48c6a7a19929d7d5c41bd3b71cc1d460399de9b364cd84a0f48108df3cb3f9a2"
+        },
+        "arm64": {
+            "url": "https://github.com/babarot/gomi/releases/download/v1.6.2/gomi_Windows_arm64.zip",
+            "hash": "87bbfb74c7108956fc2edb7e51ece6b1d491565db240350a67e057a248a6add5"
         }
     },
     "bin": "gomi.exe",
     "checkver": "github",
-    "description": "A simple trash tool that works on CLI",
-    "homepage": "https://github.com/b4b4r07/gomi",
-    "license": "MIT",
-    "version": "1.1.6"
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/babarot/gomi/releases/download/v$version/gomi_Windows_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/babarot/gomi/releases/download/v$version/gomi_Windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/gomi_$version_checksums.txt"
+        }
+    }
 }

@@ -1,0 +1,25 @@
+{
+    "version": "22.1.1",
+    "description": "Collection of modular and reusable compiler and toolchain technologies.",
+    "homepage": "https://www.llvm.org",
+    "license": "NCSA",
+    "architecture": {
+        "arm64": {
+            "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-22.1.1/LLVM-22.1.1-woa64.exe#/dl.7z",
+            "hash": "a935deacb02611d5465b0d7aa2d30af06fb6862d614c50dc9cbf4f53983a90a6"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall.exe\" -Recurse",
+    "env_add_path": "bin",
+    "checkver": {
+        "github": "https://github.com/llvm/llvm-project",
+        "regex": "tag/llvmorg-([\\d._]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/LLVM-$version-woa64.exe#/dl.7z"
+            }
+        }
+    }
+}
