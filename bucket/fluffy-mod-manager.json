@@ -2,8 +2,9 @@
     "version": "2026.03.14.1016",
     "description": "MOD MANAGER & MOD DOWNLOADER & TRAINER & MORE",
     "homepage": "https://www.fluffyquack.com/",
+    "license": "Unknown",
     "url": "https://fluffyquack.com/tools/modmanager.zip",
-    "hash": "",
+    "hash": "7bd72438693e3c96f2c79c8c8b5473028fb4ed6c1affcb88066c1fe8751db05e",
     "bin": "Modmanager.exe",
     "shortcuts": [
         [
