@@ -13,11 +13,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/microsoft/PowerToys/releases/download/v0.98.0/PowerToysUserSetup-0.98.0-x64.exe",
-            "hash": "b8ec0033f9ba6a6d628f2f826e1b00d6b9f9a6869d46d108c5b08b560a46890f"
+            "hash": "0dbc8d647d17751d2a6b9e6976f4e48055bc054d2601e3724813260243430d4b"
         },
         "arm64": {
             "url": "https://github.com/microsoft/PowerToys/releases/download/v0.98.0/PowerToysUserSetup-0.98.0-arm64.exe",
-            "hash": "aed4001d4c3e974faf5d2d46d640547a25be718d8c5feb20f4c9a1c1976d837d"
+            "hash": "6ff46f1ae83bfd9632b54fa5247d18ce70e3051c2cff0ee55d45979cf84b243a"
         }
     },
     "installer": {
