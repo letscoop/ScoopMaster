@@ -1,57 +1,42 @@
 {
-    "homepage": "https://www.haijin-boys.com/",
-    "description": "Simple text editor",
+    "homepage": "https://www.haijin-boys.com/software/mery",
+    "description": "テキストエディター「Mery」ベータ版",
     "license": "Freeware",
-    "version": "3.8.2",
+    "version": "3.7.1",
     "architecture": {
-        "32bit": {
-            "url": "https://www.haijin-boys.com/download/Mery-3.8.2.zip",
-            "hash": "24cec8e52141f215215710f013c8f6c2ad3953aca5b2a5160acc239867ba3b0f"
-        },
         "64bit": {
-            "url": "https://www.haijin-boys.com/download/Mery-x64-3.8.2.zip",
-            "hash": "9263b97d7d658f467cf2e719a472d8aececf4d8034c1500e6aeef129de9bca6e"
+            "url": "https://www.haijin-boys.com/download/MeryPortable-x64-3.7.1.zip",
+            "hash": "9ccd2400c481fd61448f723b8ffe017d63a56229cc9a7c5cae088f8c83bf72ee"
+        },
+        "32bit": {
+            "url": "https://www.haijin-boys.com/download/MeryPortable-3.7.1.zip",
+            "hash": "2ef3e2fdee78b5b5b8d25f81123b68d0c3f2bfe578be802e0c3459b327342c17"
         }
     },
     "extract_dir": "Mery",
-    "bin": "Mery.exe",
+    "bin": "mery.exe",
     "shortcuts": [
         [
-            "Mery.exe",
+            "mery.exe",
             "Mery"
         ]
     ],
-    "persist": [
-        "Mery.ini",
-        "Mery.his",
-        "Dicts",
-        "Ext",
-        "Macros",
-        "Plugins",
-        "migemo.dll",
-        "dict"
-    ],
+    "persist": "mery.ini",
     "pre_install": [
-        "function CreateEmptyFile($name) {",
-        "    if (!(Test-Path \"$persist_dir\\$name\")) {",
-        "        New-Item -Path \"$dir\\$name\" -ItemType File | Out-Null",
-        "    }",
-        "}",
-        "CreateEmptyFile Mery.ini",
-        "CreateEmptyFile Mery.his",
-        "CreateEmptyFile migemo.dll"
+        "if (!(Test-Path \"$persist_dir\")) { New-Item -ItemType directory \"$persist_dir\" | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\mery.ini\")) { New-Item -ItemType file \"$persist_dir\\mery.ini\" | Out-Null }"
     ],
     "checkver": {
         "url": "https://www.haijin-boys.com/software/mery",
-        "re": "Ver (?<version>[\\d.]+)"
+        "re": "テキストエディター「Mery」ベータ版 Ver ([\\d.]+) "
     },
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://www.haijin-boys.com/download/Mery-$version.zip"
-            },
             "64bit": {
-                "url": "https://www.haijin-boys.com/download/Mery-x64-$version.zip"
+                "url": "https://www.haijin-boys.com/download/MeryPortable-x64-$version.zip"
+            },
+            "32bit": {
+                "url": "https://www.haijin-boys.com/download/MeryPortable-$version.zip"
             }
         }
     }
