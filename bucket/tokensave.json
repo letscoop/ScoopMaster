@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/aovestdipaperino/tokensave/releases/download/v1.7.1/tokensave-v1.7.1-x86_64-windows.zip",
-      "hash": "5121b670bdfd920ad5df3585d7494a117e5dbe1d28d8b10d1412c9744f49e6c9"
+      "hash": "f10096d59905bb40f88331d02abc8b08355125483b5103d58aa6d238e8783632"
     }
   },
   "bin": "tokensave.exe",
