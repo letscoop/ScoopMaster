@@ -1,43 +1,43 @@
 {
-  "homepage": "https://brave.com/download-beta/",
-  "version": "1.89.121",
-  "description": "Brave Beta. Secure, Fast & Private Web Browser with Adblocker (beta release)",
-  "license": {
-    "identifier": "Freeware,BSD-3-Clause,GPL-3.0-only,...",
-    "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
-  },
-  "changelog": "",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/brave/brave-browser/releases/download/v1.89.121/brave-v1.89.121-win32-x64.zip",
-      "hash": "199fc68dcf1038a404cb5c935bc03a37d62019ad62bcf958897a9eb19959b75e"
-    }
-  },
-  "bin": [
-    [
-      "brave.exe",
-      "brave-beta"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "brave.exe",
-      "Brave Beta"
-    ]
-  ],
-  "checkver": {
-    "url": "https://github.com/brave/brave-browser/releases",
-    "regex": "Beta v([\\d.]+)"
-  },
-  "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
-      }
+    "homepage": "https://brave.com/download-beta/",
+    "version": "1.89.122",
+    "description": "Brave Beta. Secure, Fast & Private Web Browser with Adblocker (beta release)",
+    "license": {
+        "identifier": "Freeware,BSD-3-Clause,GPL-3.0-only,...",
+        "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
     },
-    "hash": {
-      "url": "$url.sha256",
-      "regex": "$sha256.*?\\.zip"
+    "changelog": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.89.122/brave-v1.89.122-win32-x64.zip",
+            "hash": "f919ca9c89ea24038ee7d2cf47ed08425d3b1d27d229020c520bcb8dd8e3d3f6"
+        }
+    },
+    "bin": [
+        [
+            "brave.exe",
+            "brave-beta"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "brave.exe",
+            "Brave Beta"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/brave/brave-browser/releases",
+        "regex": "Beta v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256",
+            "regex": "$sha256.*?\\.zip"
+        }
     }
-  }
 }

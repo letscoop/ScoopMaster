@@ -1,49 +1,49 @@
 {
-    "version": "1.2.85.519",
-    "description": "Play millions of songs and podcasts on your device",
-    "homepage": "https://spotify.com",
-    "license": "Proprietary",
-    "architecture": {
-        "64bit": {
-            "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-1.2.85.519.g549a528b-4062.exe",
-            "hash": "3546bf93d3bf0f2996f85adc69ede39b767c1effe187d488cbf377ba5662417a"
-        },
-        "arm64": {
-            "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-1.2.85.519.g549a528b-4019.exe",
-            "hash": "f6847a26e2e02394a13d5ffb8cb6349520138ca11bb43a5895dd95befc1ed398"
-        }
+    "version": "1.2.86.502.g8cd7fb22",
+    "description": "A digital music service that gives you access to millions of songs.",
+    "homepage": "https://www.spotify.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.spotify.com/legal/end-user-agreement/"
     },
-    "pre_install": [
-        "Start-Process \"$dir\\$fname\" -ArgumentList @('/extract', \"$dir\") -Wait",
-        "$update = \"$env:LOCALAPPDATA\\Spotify\\Update\"",
-        "Remove-Item $update -Recurse -Force -ErrorAction SilentlyContinue",
-        "New-Item $update | Out-Null",
-        "Set-ItemProperty $update -Name IsReadOnly -Value $true",
-        "$Ace = New-Object System.Security.AccessControl.FileSystemAccessRule(\"${env:USERNAME}\", \"Modify\", \"Deny\")",
-        "$Acl = New-Object System.Security.AccessControl.FileSecurity",
-        "$Acl.AddAccessRule($Ace)",
-        "Set-Acl $update -AclObject $Acl"
-    ],
-    "post_install": "Remove-Item \"$dir\\$fname\"",
+    "url": "https://download.scdn.co/SpotifyFullSetupX64.exe",
+    "hash": "46e61f81688bab5d7a59f01225522d1d50511293b0e63f225d97fdd61a9dd323",
+    "installer": {
+        "script": [
+            "Start-Process -Wait \"$dir\\$fname\" -ArgumentList '/extract', \"`\"$dir`\"\"",
+            "# Disable built-in updater",
+            "Remove-Item -ErrorAction Ignore -Recurse \"$env:LOCALAPPDATA\\Spotify\\Update\" | Out-Null",
+            "$updateFile = New-Item -Path \"$env:LOCALAPPDATA\\Spotify\" -Name Update -ItemType File -Value \"Disabled by Scoop\" -Force",
+            "$updatefile.Attributes = 'ReadOnly', 'System'",
+            "Remove-Item \"$dir\\$fname\", \"$dir\\SpotifyMigrator.exe\" -ErrorAction SilentlyContinue"
+        ]
+    },
     "shortcuts": [
         [
             "Spotify.exe",
             "Spotify"
         ]
     ],
+    "uninstaller": {
+        "script": [
+            "$updateFile = \"$env:LOCALAPPDATA\\Spotify\\update\"",
+            "Remove-Item $updateFile -Force -ErrorAction SilentlyContinue",
+            "if ($cmd -ne 'uninstall') { return }",
+            "Start-Process -Wait \"$dir\\Spotify.exe\" -ArgumentList '/Uninstall', '/Silent'"
+        ]
+    },
     "checkver": {
-        "url": "https://raw.githubusercontent.com/amd64fox/LoaderSpot/main/versions.json",
-        "jsonpath": "$..[?(@.buildType == 'Release')]",
-        "regex": "(?<version>[\\d.]+)\\.(?<build>[\\w]+)-(?<x64>[\\d]+).exe[\\s\\S]*?(?<arm>[\\d]+).exe"
+        "script": [
+            "$dl_url = 'https://download.scdn.co/SpotifyFullSetupX64.exe'",
+            "$dl = cache_path 'spotify' 'unknown' $dl_url",
+            "Invoke-WebRequest $dl_url -OutFile $dl",
+            "$ver = (Get-Item $dl).VersionInfo.ProductVersion",
+            "Move-Item -Force $dl (cache_path 'spotify' $ver $dl_url)",
+            "$ver"
+        ],
+        "regex": "(\\S+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion.$matchBuild-$matchX64.exe"
-            },
-            "arm64": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion.$matchBuild-$matchArm.exe"
-            }
-        }
+        "url": "https://download.scdn.co/SpotifyFullSetupX64.exe"
     }
 }
