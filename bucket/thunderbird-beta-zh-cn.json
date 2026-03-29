@@ -1,14 +1,16 @@
 {
-    "description": "Thunderbird is a free email application that’s easy to set up and customize (Beta)",
+    "description": "Thunderbird is a free email application that's easy to set up and customize (Beta)",
     "homepage": "https://www.thunderbird.net/zh-CN/",
-    "version": "nightly",
+    "version": "140.9.0esr",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.mozilla.org/?product=thunderbird-beta-latest-ssl&os=win64&lang=zh-CN#/thunderbird-beta.7z"
+            "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/140.9.0esr/win64/zh-CN/Thunderbird%20Setup%20140.9.0esr.exe#/dl.7z",
+            "hash": "30bcbbb410316d741e0487c64eb6f0279280840fde7161a5833a07461c4611a1"
         },
         "32bit": {
-            "url": "https://download.mozilla.org/?product=thunderbird-beta-latest-ssl&os=win&lang=zh-CN#/thunderbird-beta.7z"
+            "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/140.9.0esr/win32/zh-CN/Thunderbird%20Setup%20140.9.0esr.exe#/dl.7z",
+            "hash": "15e383b124bff48bbd47aedaca5a5100a541f2f2a99fcc1abbd1656f059c9632"
         }
     },
     "extract_dir": "core",
@@ -16,6 +18,25 @@
         [
             "thunderbird.exe",
             "Thunderbird Beta"
+        ],
+        [
+            "thunderbird.exe",
+            "Thunderbird Beta - Profile Manager",
+            " -p"
         ]
-    ]
+    ],
+    "checkver": {
+        "url": "https://www.thunderbird.net/en-US/thunderbird/beta/all/",
+        "regex": "thunderbird-(.*?)-SSL"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/$version/win64/zh-CN/Thunderbird%20Setup%20$version.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/$version/win32/zh-CN/Thunderbird%20Setup%20$version.exe#/dl.7z"
+            }
+        }
+    }
 }
