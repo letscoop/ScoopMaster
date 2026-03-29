@@ -1,41 +1,35 @@
 {
-    "version": "v3.9.5",
-    "description": "仿 Linux shell 文件处理命令的百度网盘命令行客户端，基于 iikira/BaiduPCS-Go v3.6.2 开发, 并添加了转存功能",
-    "homepage": "https://github.com/qjfoidnh/BaiduPCS-Go/",
+    "version": "4.0.1",
+    "description": "iikira/BaiduPCS-Go 原版基础上集成了分享链接/秒传链接转存功能",
+    "homepage": "https://github.com/qjfoidnh/BaiduPCS-Go",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v3.9.5/BaiduPCS-Go-v3.9.5-windows-x64.zip",
-            "hash": "9E94F7C14CA795280D52966FCC9BF1920DC6967C6C7CACF0CE6C882834A7564A",
-            "extract_dir": "BaiduPCS-Go-v3.9.5-windows-x64"
+            "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v4.0.1/BaiduPCS-Go-v4.0.1-windows-x64.zip",
+            "hash": "bb3bc2409e55820d681daef880a6949748fbc81d740952c2b2c05c28a075a4ee",
+            "extract_dir": "BaiduPCS-Go-v4.0.1-windows-x64"
         },
         "32bit": {
-            "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v3.9.5/BaiduPCS-Go-v3.9.5-windows-x86.zip",
-            "hash": "BCEB62E9C946DA28AB9CAE3215563105FFCA99F9F996A91ED155710E7969623F",
-            "extract_dir": "BaiduPCS-Go-v3.9.5-windows-x86"
-        },
-        "arm64": {
-            "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v3.9.5/BaiduPCS-Go-v3.9.5-windows-arm.zip",
-            "hash": "2B473E8AC6E6643BBAE231611FA2C4E9BF44A50C82D50049F995A67B5B033D4C",
-            "extract_dir": "BaiduPCS-Go-v3.9.5-windows-arm"
+            "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v4.0.1/BaiduPCS-Go-v4.0.1-windows-x86.zip",
+            "hash": "17f9a27d4a6144a062e4771dfa7c7efd206fa9b97cc91a465cc26f9e9a02db9f",
+            "extract_dir": "BaiduPCS-Go-v4.0.1-windows-x86"
         }
     },
-    "persist": "Downloads",
     "bin": "BaiduPCS-Go.exe",
+    "persist": "config",
+    "env_set": {
+        "BAIDUPCS_GO_CONFIG_DIR": "$dir\\config"
+    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/$version/BaiduPCS-Go-$version-windows-x64.zip",
-                "extract_dir": "BaiduPCS-Go-$version-windows-x64"
+                "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v$version/BaiduPCS-Go-v$version-windows-x64.zip",
+                "extract_dir": "BaiduPCS-Go-v$version-windows-x64"
             },
             "32bit": {
-                "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/$version/BaiduPCS-Go-$version-windows-x86.zip",
-                "extract_dir": "BaiduPCS-Go-$version-windows-x86"
-            },
-            "arm64": {
-                "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/$version/BaiduPCS-Go-$version-windows-arm.zip",
-                "extract_dir": "BaiduPCS-Go-$version-windows-arm"
+                "url": "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v$version/BaiduPCS-Go-v$version-windows-x86.zip",
+                "extract_dir": "BaiduPCS-Go-v$version-windows-x86"
             }
         }
     }
