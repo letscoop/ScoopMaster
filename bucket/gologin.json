@@ -1,0 +1,30 @@
+{
+    "version": "4.2.1",
+    "description": "Antidetect browser",
+    "homepage": "https://gologin.com",
+    "license": "Proprietary",
+    "url": "https://releases.gologin.com/Gologin%20Setup%204.2.1.exe#/dl.7z",
+    "hash": "6cb7302911f45adb7cbd523478514a699f3a89a1df711415bd4db4bd4f0bfe0d",
+    "architecture": {
+        "64bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        },
+        "32bit": {
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\resources\\app-update.yml\" -Recurse -Force",
+    "shortcuts": [
+        [
+            "Gologin.exe",
+            "Gologin"
+        ]
+    ],
+    "checkver": {
+        "url": "https://releases.gologin.com/latest.yml",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://releases.gologin.com/Gologin%20Setup%20$version.exe#/dl.7z"
+    }
+}
