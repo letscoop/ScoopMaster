@@ -1,0 +1,32 @@
+{
+    "version": "2026-03-15",
+    "description": "A fast, hermetic, multi-language build system, and a direct successor to the original Buck build system (\"Buck1\").",
+    "homepage": "https://buck2.build",
+    "license": "Apache-2.0|MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/facebook/buck2/releases/download/2026-03-15/buck2-x86_64-pc-windows-msvc.exe.zst",
+            "hash": "13faa32b5d011fd5961304442211e639bd92c9d0c26b4ca3a318b340720594ad"
+        },
+        "arm64": {
+            "url": "https://github.com/facebook/buck2/releases/download/2026-03-15/buck2-aarch64-pc-windows-msvc.exe.zst",
+            "hash": "944e5932affed605bb2bd98cd163d62277ce281374450768f057fa56d89e902c"
+        }
+    },
+    "pre_install": "Get-ChildItem \"$dir\" 'buck2-*.exe' | Select-Object -First 1 | Rename-Item -NewName 'buck2.exe'",
+    "bin": "buck2.exe",
+    "checkver": {
+        "url": "https://github.com/facebook/buck2/releases.atom",
+        "regex": "Repository/\\d+/(\\d.+?)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/facebook/buck2/releases/download/$version/buck2-x86_64-pc-windows-msvc.exe.zst"
+            },
+            "arm64": {
+                "url": "https://github.com/facebook/buck2/releases/download/$version/buck2-aarch64-pc-windows-msvc.exe.zst"
+            }
+        }
+    }
+}
