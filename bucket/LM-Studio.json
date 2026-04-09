@@ -1,47 +1,51 @@
 {
-    "version": "0.4.9-1",
-    "description": "Discover, download, and run local LLMs",
-    "homepage": "https://lmstudio.ai/",
+    "version": "0.4.10",
+    "description": "Run AI models, locally and privately.",
+    "homepage": "https://lmstudio.ai",
     "license": {
-        "identifier": "Apache-2.0",
+        "identifier": "Freeware",
         "url": "https://lmstudio.ai/terms"
     },
     "architecture": {
         "64bit": {
-            "url": "https://installers.lmstudio.ai/win32/x64/0.4.9-1/LM-Studio-0.4.9-1-x64.exe#/dl.7z",
-            "hash": "248f065a587a6b23310fc2508ea67691098b03b8584170625be35a7e44d628ca"
-        },
-        "arm64": {
-            "url": "https://installers.lmstudio.ai/win32/arm64/0.4.9-1/LM-Studio-0.4.9-1-arm64.exe#/dl.7z",
-            "hash": "fdf5644b737896c69f705a6eb1c6a4a93d415f56222eb6022752b7e6f4e53537"
+            "url": "https://installers.lmstudio.ai/win32/x64/0.4.10-1/LM-Studio-0.4.10-1-x64.exe",
+            "hash": "ea5e6a690a4d2e734b9d6a0858863af1cca5e093cd0a53e91efd0b968231a001"
         }
     },
     "installer": {
-        "script": [
-            "$pkgfile = (Get-ChildItem \"$dir\" '*.nupkg' | Select-Object -First 1).FullName",
-            "Expand-7ZipArchive \"$pkgfile\" \"$dir\" -Removal",
-            "Move-Item \"$dir\\lib\\net45\\*\" \"$dir\""
-        ]
+        "file": "LM-Studio-0.4.10-1-x64.exe",
+        "keep": true
     },
-    "shortcuts": [
-        [
-            "LM Studio.exe",
-            "LM Studio"
-        ]
+    "post_install": [
+        "taskkill /F /im \"LM Studio.exe\"",
+        "Move-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\LM Studio\" -Destination \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\"",
+        "function Create-Junction { param ([string]$runtimeCache, [string]$runtimeCachePersist)",
+        "  if (-not (Test-Path $runtimeCache)) { return }",
+        "  if (Test-Path $runtimeCachePersist) {",
+        "    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+        "  } else {",
+        "    mkdir $runtimeCache -ErrorAction SilentlyContinue",
+        "    Move-Item $runtimeCache $runtimeCachePersist -Force",
+        "    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+        "  }",
+        "}",
+        "foreach ($folder in @('LM-Studio', 'LM Studio')) {",
+        "  Create-Junction -runtimeCache \"$env:USERPROFILE\\$folder\" -runtimeCachePersist \"$persist_dir\\USERPROFILE\\$folder\"",
+        "  Create-Junction -runtimeCache \"$env:LOCALAPPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\LOCALAPPDATA\\$folder\"",
+        "  Create-Junction -runtimeCache \"$env:APPDATA\\$folder\" -runtimeCachePersist \"$persist_dir\\APPDATA\\$folder\"",
+        "}"
     ],
+    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\LM Studio\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "persist": "LOCALAPPDATA",
     "checkver": {
-        "url": "https://formulae.brew.sh/api/cask/lm-studio.json",
-        "regex": "\"version\":\\s*\"([\\d.]+),([\\d]+)\"",
-        "replace": "$1-$2"
+        "url": "https://lmstudio.ai/beta-releases.html",
+        "regex": "(\\d+\\.\\d+\\.\\d+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://installers.lmstudio.ai/win32/x64/$version/LM-Studio-$version-x64.exe#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://installers.lmstudio.ai/win32/arm64/$version/LM-Studio-$version-arm64.exe#/dl.7z"
-            }
+        "url": "https://s3.amazonaws.com/releases.lmstudio.ai/$version/LM+Studio-$version+Setup.exe#/LMStudio.exe",
+        "hash": {
+            "mode": "download"
         }
     }
 }
