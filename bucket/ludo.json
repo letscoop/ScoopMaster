@@ -6,7 +6,7 @@
     "notes": "Settings are stored in the \"$env:LOCALAPPDATA\\ludo\" directory.",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/libretro/ludo/releases/download/v0.20.0/Ludo-Windows-x86_64-0.20.0.zip",
+            "url": "https://github.com/libretro/ludo/releases/download/v0.20.0/Ludo-Windows-x86_64-0.20.0.zip",
             "hash": "c3a0ec3b5db36cd9a58ab4a0a902450467e06c5acbef30d31ee48d19644c36e1",
             "extract_dir": "Ludo-Windows-x86_64-0.20.0"
         }
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://gh-proxy.org/https://github.com/libretro/ludo/releases/download/v$version/Ludo-Windows-x86_64-$version.zip",
+                "url": "https://github.com/libretro/ludo/releases/download/v$version/Ludo-Windows-x86_64-$version.zip",
                 "hash": {
                     "url": "$url.sha256",
                     "regex": ",$sha256,"
