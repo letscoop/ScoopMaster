@@ -1,0 +1,31 @@
+{
+    "version": "8.25.8200",
+    "homepage": "https://www.aida64.com",
+    "license": "",
+    "url": "http://download.aida64.com/aida64networkaudit825.zip",
+    "hash": "c0b04193dc3cd3c11e4fd7c01c6c5da6f5a17199b0cc251c497e6d1fa362eab7",
+    "pre_install": [
+        "$file = 'aida64.ini'",
+        "if (!(Test-Path \"$persist_dir\\$file\")) {",
+        "    Set-Content \"$dir\\$file\" @('[Generic]', '', 'NoRegistry=1', 'NetUpdateFreq=0') -Encoding Ascii",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\pkey.txt\")) { New-Item \"$dir\\pkey.txt\" | Out-Null }"
+    ],
+    "persist": [
+        "aida64.ini",
+        "pkey.txt"
+    ],
+    "shortcuts": [
+        [
+            "aida64.exe",
+            "AIDA64 Network Audit"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.aida64.com/downloads/latesta64xe",
+        "regex": "Version:\\s+([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://download.aida64.com/aida64networkaudit$majorVersion$minorVersion.zip"
+    }
+}
