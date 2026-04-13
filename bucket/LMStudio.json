@@ -39,7 +39,7 @@
         ]
     ],
     "checkver": {
-        "regex": "<!-- -->([\\d.]+)</p>"
+        "regex": "\\\\\"title\\\\\"\\s*:\\s*\\\\\"Windows\\\\\"\\s*,\\s*\\\\\"subtitle\\\\\"\\s*:\\s*\\\\\"([\\d.]+)\\\\\""
     },
     "autoupdate": {
         "architecture": {
