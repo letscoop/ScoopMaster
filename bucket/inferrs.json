@@ -1,16 +1,16 @@
 {
-  "version": "0.0.20260413180539",
+  "version": "0.0.20260413201932",
   "description": "A conservative-memory inference engine for LLMs",
   "homepage": "https://github.com/ericcurtin/inferrs",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260413180539/inferrs-x86_64-pc-windows-msvc.zip",
-      "hash": "8683b01f909945f05d97c063ed834a3c35891bcda6b4c3a16ceaaabd1dc82091"
+      "url": "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260413201932/inferrs-x86_64-pc-windows-msvc.zip",
+      "hash": "0c0277e159ef43cb2e9de49b69ac4b859a85aebabeb678d1b5129b860e221929"
     },
     "arm64": {
-      "url": "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260413180539/inferrs-aarch64-pc-windows-msvc.zip",
-      "hash": "84441a497c885b108bfb1e900becf3df672e49441fa7c431fa17c9a4037e448e"
+      "url": "https://github.com/ericcurtin/inferrs/releases/download/0.0.20260413201932/inferrs-aarch64-pc-windows-msvc.zip",
+      "hash": "2379c665fb35305862ffef2de4a00fdc22841ee5e328ce07d8935d6312afa6e1"
     }
   },
   "bin": "inferrs.exe",
