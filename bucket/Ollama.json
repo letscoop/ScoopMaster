@@ -1,39 +1,25 @@
 {
     "version": "0.21.0",
-    "description": "(persist) Get up and running with large language models locally.",
-    "homepage": "https://ollama.com/",
+    "description": "Ollama",
+    "homepage": "https://github.com/ollama/ollama",
     "license": "MIT",
-    "notes": "Ollama with deamon has been moved to 'extras/ollama-full'.",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/ollama/ollama/releases/download/v0.21.0/ollama-windows-amd64.zip",
-            "hash": "b66c1b7a38484ac741cf68fc5a281ae402509c951a59f8808a8a74c0253eb55a"
-        },
-        "arm64": {
-            "url": "https://github.com/ollama/ollama/releases/download/v0.21.0/ollama-windows-arm64.zip",
-            "hash": "69bf5eed731bc903cbab4de215b99eb4379ce9b506c47d5d111b910b96fb7a84"
-        }
-    },
-    "bin": "ollama.exe",
-    "env_set": {
-        "OLLAMA_MODELS": "$dir\\OLLAMA_MODELS",
-        "OLLAMA_HOST": "0.0.0.0"
-    },
-    "persist": "OLLAMA_MODELS",
-    "checkver": {
-        "github": "https://github.com/ollama/ollama"
-    },
+    "url": "https://github.com/ollama/ollama/releases/download/v0.21.0/OllamaSetup.exe",
+    "hash": "3ab56c0e0a4b2b61e172a1b938fc50b98b0f7ceb4064e9ea81cf3cccb07b0546",
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "ollama app,1.exe",
+            "Ollama"
+        ]
+    ],
+    "bin": [
+        [
+            "ollama,1.exe",
+            "ollama"
+        ]
+    ],
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$baseurl/sha256sum.txt"
-        }
+        "url": "https://github.com/ollama/ollama/releases/download/v$version/OllamaSetup.exe"
     }
 }
