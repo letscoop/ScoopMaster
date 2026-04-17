@@ -1,6 +1,6 @@
 {
-    "version": "0.4.12-1",
-    "description": "Run AI models, locally and privately.",
+    "version": "0.4.12",
+    "description": "Discover, download, and run local LLMs",
     "homepage": "https://lmstudio.ai/",
     "license": {
         "identifier": "Proprietary",
@@ -39,17 +39,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://lmstudio.ai/download",
-        "regex": "\\\\\"version\\\\\":\\\\\"(?<ver>[\\d.]+)\\\\\",\\\\\"build\\\\\":\\\\\"(?<build>\\d+)\\\\\"",
-        "replace": "${ver}-${build}"
+        "regex": "\\\\\\\"Windows\\\\\\\",\\\\\\\"version\\\\\\\":\\\\\\\"([\\d.]+)\\\\\\\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://installers.lmstudio.ai/win32/x64/$version/LM-Studio-$version-x64.exe#/dl.7z"
+                "url": "https://installers.lmstudio.ai/win32/x64/$version-1/LM-Studio-$version-1-x64.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://installers.lmstudio.ai/win32/arm64/$version/LM-Studio-$version-arm64.exe#/dl.7z"
+                "url": "https://installers.lmstudio.ai/win32/arm64/$version-1/LM-Studio-$version-1-arm64.exe#/dl.7z"
             }
         }
     }
