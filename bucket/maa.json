@@ -1,36 +1,25 @@
 {
-    "version": "v5.2.3",
-    "description": "A one-click tool for the daily tasks of Arknights, supporting all clients.",
-    "homepage": "https://maa.plus/",
-    "license": "AGPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.2.3/MAA-v5.2.3-win-x64.zip"
-        },
-        "arm64": {
-            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v5.2.3/MAA-v5.2.3-win-arm64.zip"
-        }
-    },
-    "shortcuts":[
+    "version": "6.8.0-beta.1",
+    "description": "An Arknights assistant, supports ZH and EN client",
+    "homepage": "https://www.maa.plus/",
+    "license": "AGPL-3.0",
+    "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.8.0-beta.1/MAA-v6.8.0-beta.1-win-x64.zip",
+    "hash": "0fa83b750194d10b5cbbaba5059f8537fab5ca5c46ca4bf4c4cf49d86607e3b9",
+    "shortcuts": [
         [
             "MAA.exe",
-            "MAA"
+            "MAA Assistant Arknights"
         ]
     ],
     "persist": [
-        "config"
+        "config",
+        "debug"
     ],
     "checkver": {
-        "github": "https://github.com/MaaAssistantArknights/MaaAssistantArknights"
+        "url": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases",
+        "regex": "/releases/tag/v([\\d.]+(-alpha|-beta|-rc)?(\\.\\d+)?)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/$version/MAA-$version-win-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/$version/MAA-$version-win-arm64.zip"
-            }
-        }
+        "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"
     }
 }
