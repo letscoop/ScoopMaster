@@ -18,3 +18,4 @@
     },
     "post_uninstall": "Write-Output \"\"; Write-Warning \"Now you can remove your data in %APPDATA%/com.github.pacalini/pica_comic & %LOCALAPPDATA%/com.github.pacalini/pica_comic.\""
 }
+
