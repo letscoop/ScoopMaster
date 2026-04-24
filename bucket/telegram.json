@@ -1,8 +1,8 @@
 {
     "version": "6.7.8",
-    "description": "Messaging app",
+    "description": "A messaging app with a focus on speed and security",
     "homepage": "https://telegram.org",
-    "license": "GPL-3.0",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.8/tportable-x64.6.7.8.zip",
@@ -11,10 +11,6 @@
         "32bit": {
             "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.8/tportable.6.7.8.zip",
             "hash": "2e8fbb05e180a683d2da619217ff5321dbe29622048e6c50f9da785a3f2025f2"
-        },
-        "arm64": {
-            "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v6.7.8/tportable-arm64.6.7.8.zip",
-            "hash": "bf61f4f1dba850395d843039cab213553fb395192e7ccb68517a09b0fab64792"
         }
     },
     "extract_dir": "Telegram",
@@ -25,7 +21,6 @@
         ]
     ],
     "persist": "tdata",
-    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Telegram.lnk\" -ErrorAction SilentlyContinue",
     "checkver": {
         "github": "https://github.com/telegramdesktop/tdesktop"
     },
@@ -36,9 +31,6 @@
             },
             "32bit": {
                 "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable.$version.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable-arm64.$version.zip"
             }
         }
     }
