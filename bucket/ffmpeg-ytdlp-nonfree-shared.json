@@ -1,0 +1,49 @@
+{
+    "homepage": "https://github.com/Vodes/FFmpeg-Builds",
+    "description": "Nonfree shared ffmpeg autobuilds with yt-dlp patches and arm64 builds.",
+    "license": "GPL-3.0-or-later",
+    "version": "8.0.1-78",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/autobuild-2026-04-25-06-23/ffmpeg-n8.0.1-78-g449453a971-win64-nonfree-shared-8.0.zip",
+            "hash": "dfa4191ed14c6e060d102f86b417494380c365cb279953505bcc55d05226c014",
+            "extract_dir": "ffmpeg-n8.0.1-78-g449453a971-win64-nonfree-shared-8.0"
+        },
+        "arm64": {
+            "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/autobuild-2026-04-25-06-23/ffmpeg-n8.0.1-78-g449453a971-winarm64-nonfree-shared-8.0.zip",
+            "hash": "1194dfd95b98698440e2fef46f23c3558cc1c5f4a59a12a742a608247b4a03d4",
+            "extract_dir": "ffmpeg-n8.0.1-78-g449453a971-winarm64-nonfree-shared-8.0"
+        }
+    },
+    "bin": [
+        [
+            "bin\\ffmpeg.exe",
+            "ffmpeg"
+        ],
+        [
+            "bin\\ffprobe.exe",
+            "ffprobe"
+        ],
+        [
+            "bin\\ffplay.exe",
+            "ffplay"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/Vodes/FFmpeg-Builds/releases",
+        "jsonpath": "$[1].assets[-1:].browser_download_url",
+        "regex": "download\\/(?<build>autobuild-(?:\\d+(?:-\\d+)+))\\/(?<filename>ffmpeg-n(?<version>(?:\\d+\\.)+\\d+-\\d+)-(?<commit>\\w+)-(?<arch>\\w+)-nonfree-shared-(?<release>\\d+.\\d+))\\.(?:zip|tar\\.xz)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/$matchBuild/ffmpeg-n$matchVersion-$matchCommit-win64-nonfree-shared-$matchRelease.zip",
+                "extract_dir": "ffmpeg-n$matchVersion-$matchCommit-win64-nonfree-shared-$matchRelease"
+            },
+            "arm64": {
+                "url": "https://github.com/Vodes/FFmpeg-Builds/releases/download/$matchBuild/ffmpeg-n$matchVersion-$matchCommit-winarm64-nonfree-shared-$matchRelease.zip",
+                "extract_dir": "ffmpeg-n$matchVersion-$matchCommit-winarm64-nonfree-shared-$matchRelease"
+            }
+        }
+    }
+}

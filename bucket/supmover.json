@@ -1,0 +1,29 @@
+{
+    "homepage": "https://github.com/MonoS/SupMover",
+    "description": "A command line tool to shift timings and Screen Area of PGS/Sup subtitles.",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/MonoS/SupMover/blob/master/LICENSE"
+    },
+    "version": "v2.4.3",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MonoS/SupMover/releases/download/v2.4.3/supmover-win.zip",
+            "hash": "7983c4a92ec3e9c9c8c12520cf93e342ef158af5f822975980294a29c78e00b9"
+        }
+    },
+    "bin": [
+        "supmover.exe"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/MonoS/SupMover/tags",
+        "jsonpath": "$[0].name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MonoS/SupMover/releases/download/$version/supmover-win.zip"
+            }
+        }
+    }
+}
