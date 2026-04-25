@@ -1,30 +1,47 @@
 {
-  "version": "3.1.1",
-  "description": "World of Warcraft addon updater.",
-  "homepage": "https://raider.io/addon",
-  "license": {
-    "identifier": "Freeware",
-    "url": "https://raider.io/terms-of-use"
-  },
-  "url": "https://ghproxy.com/https://github.com/RaiderIO/raiderio-client-builds/releases/download/v3.1.1/RaiderIO_Client_Setup.exe#/dl.7z",
-  "hash": "efb8f281ed66b96759d1447e5a992ab8fe3a424b19ff55d0ca1aacc942ecb704",
-  "extract_dir": "$PLUGINSDIR",
-  "installer": {
-    "script": [
-      "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z'",
-      "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
-    ]
-  },
-  "shortcuts": [
-    [
-      "RaiderIO.exe",
-      "RaiderIO Client"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/RaiderIO/raiderio-client-builds"
-  },
-  "autoupdate": {
-    "url": "https://ghproxy.com/https://github.com/RaiderIO/raiderio-client-builds/releases/download/v$version/RaiderIO_Client_Setup.exe#/dl.7z"
-  }
+    "version": "4.10.7",
+    "description": "World of Warcraft addon updater.",
+    "homepage": "https://raider.io/addon",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://raider.io/terms-of-use"
+    },
+    "url": "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v4.10.7/RaiderIO_Client_Setup.exe#/dl.7z",
+    "hash": "48460c784c49d3435a94432b5048c8ec45670401bcc1b96726fba26f194a11b6",
+    "extract_dir": "$PLUGINSDIR",
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude 'app-64.7z'",
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
+        ]
+    },
+    "post_install": [
+        "ensure \"$persist_dir\" | Out-Null",
+        "$targetPath = \"$env:AppData\\RaiderIO\"",
+        "$linkType = (Get-Item -Path \"$targetPath\" -ErrorAction SilentlyContinue).LinkType",
+        "if (Test-Path \"$targetPath\") {",
+        "    if ($linkType -eq 'Junction') {",
+        "        Remove-Item -Path \"$targetPath\" -Force",
+        "    } else {",
+        "        Get-ChildItem -Path \"$targetPath\" -Force | Move-Item -Destination $persist_dir -Force",
+        "        Remove-Item -Path \"$targetPath\" -Force -Recurse",
+        "    }",
+        "}",
+        "New-Item \"$targetPath\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
+    ],
+    "uninstaller": {
+        "script": "Remove-Item -Path \"$env:AppData\\RaiderIO\" -Force -Recurse -ErrorAction SilentlyContinue"
+    },
+    "shortcuts": [
+        [
+            "RaiderIO.exe",
+            "RaiderIO Client"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/RaiderIO/raiderio-client-builds"
+    },
+    "autoupdate": {
+        "url": "https://github.com/RaiderIO/raiderio-client-builds/releases/download/v$version/RaiderIO_Client_Setup.exe#/dl.7z"
+    }
 }
