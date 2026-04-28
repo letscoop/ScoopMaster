@@ -1,0 +1,44 @@
+{
+    "version": "5.0.4",
+    "description": "Beer brewing and recipe creation tool",
+    "homepage": "https://www.brewtarget.beer/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Brewtarget/brewtarget/releases/download/v5.0.4/Brewtarget.5.0.4.Windows.Installer.exe#/dl.7z",
+            "hash": "760c6399cacafe2b2df2c8517a4d0f046576abc4df44191c61e478d611e50bf4"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\$*\" -Recurse",
+    "post_install": [
+        "ensure \"$persist_dir\" | Out-Null",
+        "$appdata = \"$env:LOCALAPPDATA\\brewtarget\"",
+        "if (Test-Path \"$appdata\") {",
+        "   Move-Item \"$appdata\\*\" \"$persist_dir\"",
+        "}",
+        "New-Item -Type Junction -Path \"$appdata\" -Target \"$persist_dir\" | Out-Null"
+    ],
+    "bin": "bin\\brewtarget.exe",
+    "shortcuts": [
+        [
+            "bin\\brewtarget.exe",
+            "Brewtarget",
+            "",
+            "logo.ico"
+        ]
+    ],
+    "post_uninstall": "Remove-Item \"$env:LOCALAPPDATA\\brewtarget\" 2>&1 | Out-Null",
+    "checkver": {
+        "github": "https://github.com/Brewtarget/brewtarget"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Brewtarget/brewtarget/releases/download/v$version/Brewtarget.$version.Windows.Installer.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/Brewtarget.$version.Windows.Installer.exe.sha256sum"
+                }
+            }
+        }
+    }
+}
