@@ -1,28 +1,28 @@
 {
-    "version": "0.27.4",
-    "description": "The Command-line Database Client",
-    "homepage": "https://github.com/hymkor/sqlbless",
-    "license": "MIT License",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/hymkor/sqlbless/releases/download/v0.27.4/sqlbless-v0.27.4-windows-386.zip",
-            "hash": "058859b5fc430b55c268616f9a1ede2916881448de3ee56eeae0132ddffa50b6"
-        },
-        "64bit": {
-            "url": "https://github.com/hymkor/sqlbless/releases/download/v0.27.4/sqlbless-v0.27.4-windows-amd64.zip",
-            "hash": "8213a0ac3d96a2b2c111d75af6fdf61758e1703d9f882b0d11544d1d6a893343"
-        }
+  "version": "0.8.0",
+  "description": "The Command-line Database Client",
+  "homepage": "https://github.com/hymkor/sqlbless",
+  "license": "MIT License",
+  "architecture": {
+    "32bit": {
+      "url": "https://ghproxy.com/https://github.com/hymkor/sqlbless/releases/download/v0.8.0/sqlbless-v0.8.0-windows-386.zip",
+      "hash": "c638d5fbe1d86ea65502f151548a97d932040b744342e0b466c3b801af72333f"
     },
-    "bin": "sqlbless.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://github.com/hymkor/sqlbless/releases/download/v$version/sqlbless-v$version-windows-386.zip"
-            },
-            "64bit": {
-                "url": "https://github.com/hymkor/sqlbless/releases/download/v$version/sqlbless-v$version-windows-amd64.zip"
-            }
-        }
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/hymkor/sqlbless/releases/download/v0.8.0/sqlbless-v0.8.0-windows-amd64.zip",
+      "hash": "6843124e907f83e8f449e423fe1e6e9937d8310e856e34457d60790f7037e75f"
     }
+  },
+  "bin": "sqlbless.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "https://ghproxy.com/https://github.com/hymkor/sqlbless/releases/download/v$version/sqlbless-v$version-windows-386.zip"
+      },
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/hymkor/sqlbless/releases/download/v$version/sqlbless-v$version-windows-amd64.zip"
+      }
+    }
+  }
 }
