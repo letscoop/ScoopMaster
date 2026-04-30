@@ -1,32 +1,39 @@
 {
-    "version": "8.7-4",
-    "description": "A small and friendly GNU editor, inspired by Pico",
-    "homepage": "https://www.nano-editor.org/",
+    "version": "9.0-1",
+    "description": "GNU nano text editor for Windows",
+    "homepage": "https://github.com/chawyehsu/nano-for-windows",
     "license": "GPL-3.0-only",
-    "notes": [
-        "Configure nano by editing its configuration file %USERPROFILE%\\.nanorc",
-        "NOTE: The config file was named nano.rc in the 2.5.3 release, but is now named .nanorc"
-    ],
-    "url": "https://files.lhmouse.com/nano-win/nano-win_10554_v8.7-4-g87c60d98.7z",
-    "hash": "a7cdbdda41f3095e85c9cab1db203658d848cc738f90e8e844825f550d273522",
-    "post_install": [
-        "if (-not (Test-Path \"$env:USERPROFILE\\.nanorc\")) {",
-        "   Copy-Item \"$dir\\.nanorc\" \"$env:USERPROFILE\\.nanorc\"",
-        "}"
-    ],
-    "checkver": {
-        "url": "https://files.lhmouse.com/nano-win/?C=N&O=D",
-        "regex": "nano-win_(?<build>\\d+)_v([\\d.-]+)-(?<commit>\\w+)\\.7z"
-    },
     "architecture": {
         "64bit": {
-            "bin": "pkg_x86_64-w64-mingw32\\bin\\nano.exe"
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-1/nano-9.0-1-win-64.conda#/dl.zip",
+            "hash": "12e70a1b0b2ad4ec61cae20b2af5db00dc76316240e8a290886314a9f5b484f1"
         },
-        "32bit": {
-            "bin": "pkg_i686-w64-mingw32\\bin\\nano.exe"
+        "arm64": {
+            "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v9.0-1/nano-9.0-1-win-arm64.conda#/dl.zip",
+            "hash": "b40ea361484ff0d264f331686e97ec7a2434c56e94199e39cbed2ef0aec44d88"
         }
     },
+    "installer": {
+        "script": [
+            "Rename-Item $dir\\pkg*.tar.zst $dir\\nano.tar.zst",
+            "Expand-7zipArchive $dir\\nano.tar.zst $dir",
+            "Remove-Item $dir\\*.tar.zst,$dir\\metadata.json -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "bin": "bin\\nano.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/chawyehsu/nano-for-windows/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
     "autoupdate": {
-        "url": "https://files.lhmouse.com/nano-win/nano-win_$matchBuild_v$version-$matchCommit.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-64.conda#/dl.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/chawyehsu/nano-for-windows/releases/download/v$version/nano-$version-win-arm64.conda#/dl.zip"
+            }
+        }
     }
 }
