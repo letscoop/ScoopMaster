@@ -4,7 +4,7 @@
     "version": "4.8.8.3",
     "license": "Proprietary",
     "url": "https://dl.todesk.com/irrigation/ToDesk_4.8.8.3.exe#/dl.7z",
-    "hash": "a12499866901540a3c83f303374c46a0b9949eb149adb332c03797c3d0ac29c2",
+    "hash": "86e02d4248aa3b44e929373d8ccc18db059cf250c7ba488caf622f9582e3fb74",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
         "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
