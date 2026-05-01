@@ -9,8 +9,8 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip",
-                "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64-baseline.zip"
+                "https://gh-proxy.org/https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip",
+                "https://gh-proxy.org/https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64-baseline.zip"
             ],
             "hash": [
                 "5b85f602cd81835466da61c062d4353afc0b1e9e4031c3d3e9101be3fa7bacaa",
@@ -18,7 +18,7 @@
             ]
         },
         "arm64": {
-            "url": "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-aarch64.zip",
+            "url": "https://gh-proxy.org/https://github.com/oven-sh/bun/releases/download/canary/bun-windows-aarch64.zip",
             "hash": "5593270ed3b34ee30f550c19467720b0d5dd691c6f765b8586c9b470d46c5c55"
         }
     },
@@ -73,7 +73,7 @@
     },
     "checkver": {
         "script": [
-            "$dl_url = 'https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip'",
+            "$dl_url = 'https://gh-proxy.org/https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip'",
             "$dl_path = cache_path 'bun-canary' 'unknown' $dl_url",
             "$dl_dir = Split-Path -Path $dl_path -Parent",
             "Invoke-WebRequest -Uri $dl_url -OutFile $dl_path",
@@ -88,12 +88,12 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip",
-                    "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64-baseline.zip"
+                    "https://gh-proxy.org/https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64.zip",
+                    "https://gh-proxy.org/https://github.com/oven-sh/bun/releases/download/canary/bun-windows-x64-baseline.zip"
                 ]
             },
             "arm64": {
-                "url": "https://github.com/oven-sh/bun/releases/download/canary/bun-windows-aarch64.zip"
+                "url": "https://gh-proxy.org/https://github.com/oven-sh/bun/releases/download/canary/bun-windows-aarch64.zip"
             }
         },
         "hash": {
