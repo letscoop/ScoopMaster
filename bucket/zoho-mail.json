@@ -1,0 +1,40 @@
+{
+    "version": "1.9.1",
+    "description": "Host your business email",
+    "homepage": "https://zoho.com/mail",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x64-v1.9.1.exe#/dl.7z",
+            "hash": "582d9801c45656e6345a4705c05b152e717b269cd793d2361475f9c1893ba7c9",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        },
+        "32bit": {
+            "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x86-v1.9.1.exe#/dl.7z",
+            "hash": "0d82392f986d441a6c1fe8010914c55b754933a80622063ec5a354e32912d5b0",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\resources\\app-update.yml\" -Recurse -Force",
+    "shortcuts": [
+        [
+            "Zoho Mail - Desktop.exe",
+            "Zoho Mail - Desktop"
+        ]
+    ],
+    "checkver": {
+        "url": "https://downloads.zohocdn.com/zmail-desktop/artifacts.json",
+        "jsonpath": "$.windows",
+        "regex": "([\\d.]+).exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x64-v$version.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x86-v$version.exe#/dl.7z"
+            }
+        }
+    }
+}
