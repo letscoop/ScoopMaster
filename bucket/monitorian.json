@@ -21,10 +21,7 @@
         ]
     ],
     "notes": ".NET Framework 4.8 is required.",
-    "checkver": {
-        "url": "https://github.com/emoacht/Monitorian/releases/latest",
-        "regex": "/releases/tag/([\\d.]+)-Installer"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
