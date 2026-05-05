@@ -16,7 +16,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/FrzMtrsprt/QtUnblockNeteaseMusic/releases",
+        "url": "https://api.github.com/repos/FrzMtrsprt/QtUnblockNeteaseMusic/releases",
         "regex": "/releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
