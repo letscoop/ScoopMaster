@@ -1,27 +1,38 @@
 {
     "version": "2026.1.8",
-    "description": "The main goal of UniGetUI is to create an intuitive GUI for the most common CLI package managers for Windows.",
-    "homepage": "https://github.com/marticliment/UniGetUI/",
-    "license": "LGPL-2.1-only",
+    "description": "GUI for the most common CLI package managers, such as WinGet, Scoop, Chocolatey, Pip, Npm, .NET Tool, PowerShell Gallery and more.",
+    "homepage": "https://devolutions.net/unigetui/",
+    "license": "MIT",
+    "suggest": {
+        "scoop-search": "main/scoop-search"
+    },
     "architecture": {
         "64bit": {
+            "url": "https://github.com/Devolutions/UniGetUI/releases/download/v2026.1.8/UniGetUI.x64.zip",
+            "hash": "1da6eb82fbe1d8bf7163f2c74acdca10d7a8251564aef866e32d7f0f0503c4c1"
+        },
+        "arm64": {
             "url": "https://github.com/Devolutions/UniGetUI/releases/download/v2026.1.8/UniGetUI.arm64.zip",
             "hash": "81cb14ce20629433f71f7f6b8dd6b10c8ff2df869ae604b8e2e59cc6f554e2ba"
         }
     },
+    "pre_install": "Set-Content -Value $null -Path \"$dir\\ForceUniGetUIPortable\"",
     "shortcuts": [
         [
             "UniGetUI.exe",
             "UniGetUI"
         ]
     ],
+    "persist": "Settings",
     "checkver": {
-        "url": "https://github.com/Devolutions/UniGetUI/tags",
-        "regex": "tag/v([\\d.]+)"
+        "github": "https://github.com/Devolutions/UniGetUI"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
+                "url": "https://github.com/Devolutions/UniGetUI/releases/download/v$version/UniGetUI.x64.zip"
+            },
+            "arm64": {
                 "url": "https://github.com/Devolutions/UniGetUI/releases/download/v$version/UniGetUI.arm64.zip"
             }
         },
