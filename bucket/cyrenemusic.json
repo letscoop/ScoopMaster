@@ -42,7 +42,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/moraxs/CyreneMusic/releases",
+        "url": "https://api.github.com/repos/moraxs/CyreneMusic/releases",
         "jp": "$[0].assets[*].browser_download_url",
         "regex": "/releases/download/([\\d.]+)/CyreneMusic_([\\d.]+)"
     },

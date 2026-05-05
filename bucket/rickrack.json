@@ -20,7 +20,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/eigenmiao/Rickrack/releases",
+        "url": "https://api.github.com/repos/eigenmiao/Rickrack/releases",
         "regex": "/releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
