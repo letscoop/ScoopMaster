@@ -1,26 +1,26 @@
 {
-  "version": "1.87.0",
-  "homepage": "https://github.com/dolthub/dolt",
-  "description": "Dolt is a SQL database that you can fork, clone, branch, merge, push and pull just like a git repository.",
-  "license": "Apache-2.0",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/dolthub/dolt/releases/download/v1.87.0/dolt-windows-amd64.zip",
-      "hash": "f445379959d3b89a09b29fb60302147a05887d675c811a2505f478163ac3c89a",
-      "extract_dir": "dolt-windows-amd64"
-    }
-  },
-  "bin": [
-    "bin\\dolt.exe",
-    "bin\\git-dolt.exe",
-    "bin\\git-dolt-smudge.exe"
-  ],
-  "checkver": "github",
-  "autoupdate": {
+    "version": "1.88.0",
+    "homepage": "https://github.com/dolthub/dolt",
+    "description": "Dolt is a SQL database that you can fork, clone, branch, merge, push and pull just like a git repository.",
+    "license": "Apache-2.0",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/dolthub/dolt/releases/download/v$version/dolt-windows-amd64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/dolthub/dolt/releases/download/v1.88.0/dolt-windows-amd64.zip",
+            "hash": "8de6c6b5769be439ace2986db7bcbd175b27f812561ee4685f8e45e219c03695",
+            "extract_dir": "dolt-windows-amd64"
+        }
+    },
+    "bin": [
+        "bin\\dolt.exe",
+        "bin\\git-dolt.exe",
+        "bin\\git-dolt-smudge.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dolthub/dolt/releases/download/v$version/dolt-windows-amd64.zip"
+            }
+        }
     }
-  }
 }

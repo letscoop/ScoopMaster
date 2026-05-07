@@ -16,7 +16,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/IgorMundstein/WinMemoryCleaner/releases",
+        "url": "https://api.github.com/repos/IgorMundstein/WinMemoryCleaner/releases",
         "regex": "/releases/tag/([\\d.]+)"
     },
     "autoupdate": {
