@@ -1,0 +1,16 @@
+{
+    "version": "5.0",
+    "description": "对权限绕过自动化bypass的burpsuite插件",
+    "notes": [
+        "burpsuite扩展",
+        "权限绕过,自动化bypass"
+    ],
+    "homepage": "https://github.com/0x727/BypassPro",
+    "license": "unknown",
+    "url": "https://github.com/0x727/BypassPro/releases/download/v5.0/BypassPro-5.0.jar#/BypassPro.jar",
+    "hash": "7ce57eea02a74ef6f709cda1c769df410cf621e964624d7c129c47e239f85b24",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/0x727/BypassPro/releases/download/v$version/BypassPro-$version.jar#/BypassPro.jar"
+    }
+}
