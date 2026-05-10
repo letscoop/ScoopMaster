@@ -1,9 +1,9 @@
 {
     "version": "42.11.4",
-    "description": "A Windows desktop rapid programming platform",
+    "description": "灵活而强大的动态语言。A flexible and powerful dynamic language.",
     "homepage": "https://www.aardio.com/",
-    "license": "freeware",
-    "url": "https://www.aardio.com/download/ide/aardio.7z",
+    "license": "Freeware",
+    "url": "https://d.aardio.com/ide/aardio.7z",
     "hash": "97f291392093517f9a192f8bc297b98014c7c85f5e2f5e73cf473a378eaaf30b",
     "shortcuts": [
         [
@@ -11,12 +11,15 @@
             "aardio"
         ]
     ],
-    "persist": "config\\USR.CFG",
+    "persist": [
+        "config\\USR.CFG",
+        "project"
+    ],
     "checkver": {
         "url": "https://ide.update.aardio.com/log/",
         "regex": "aardio v([\\d\\.]+)"
     },
     "autoupdate": {
-        "url": "https://www.aardio.com/download/ide/aardio.7z"
+        "url": "https://d.aardio.com/ide/aardio.7z"
     }
 }
