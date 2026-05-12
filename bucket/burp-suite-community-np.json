@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://portswigger-cdn.net/burp/releases/download?product=community&version=2026.5&type=WindowsX64#/setup.exe",
-            "hash": "ae1d270babb690e8872ea08cf07cb92c4d0783cbd2a6256a2f9f38f93db7fd37"
+            "hash": "19bc091ca252da0d69075055eec885bd3b69f2e2be05ee3787fdecc00f13767d"
         }
     },
     "post_install": [
