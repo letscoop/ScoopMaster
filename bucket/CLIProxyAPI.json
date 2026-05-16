@@ -1,27 +1,56 @@
 {
-    "version": "7.0.10",
-    "description": "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Qwen Code, iFlow as an OpenAI/Gemini/Claude/Codex compatible API service, allowing you to enjoy the free Gemini 2.5 Pro, GPT 5, Claude, Qwen model through API",
+    "version": "7.0.11",
+    "description": "OpenAI/Gemini/Claude/Codex compatible API proxy for CLI models.",
     "homepage": "https://github.com/router-for-me/CLIProxyAPI",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.0.10/CLIProxyAPI_7.0.10_windows_amd64.zip",
-            "hash": "90bde28631b5114526a9ee645531c07f0aa343a6a29c197b8b1713f84584a259"
+            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.0.11/CLIProxyAPI_7.0.11_windows_amd64.zip",
+            "hash": "d98e6ab6703fb88c5a206695e19fbb854e50c33ab127d5c3a7245e644b236f0c"
+        },
+        "arm64": {
+            "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.0.11/CLIProxyAPI_7.0.11_windows_aarch64.zip",
+            "hash": "023e754e1f1c554989974f5c058d84db3602970098c3d50fa6055f29680bc4aa"
         }
     },
-    "bin": "cli-proxy-api.exe",
-    "persist": [
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.yaml\")) { Copy-Item \"$dir\\config.example.yaml\" \"$dir\\config.yaml\" }",
+    "bin": [
         [
-            "config.example.yaml",
-            "config.yaml"
+            "cli-proxy-api.exe",
+            "cli-proxy-api",
+            "-config \"$persist_dir\\config.yaml\""
+        ],
+        [
+            "cli-proxy-api.exe",
+            "cliproxyapi",
+            "-config \"$persist_dir\\config.yaml\""
         ]
     ],
-    "checkver": "github",
+    "persist": [
+        "config.yaml",
+        "logs"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/router-for-me/CLIProxyAPI/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_aarch64.zip"
             }
+        },
+        "hash": {
+            "url": "https://api.github.com/repos/router-for-me/CLIProxyAPI/releases/latest",
+            "jsonpath": "$.assets[?(@.name == '$basename')].digest"
         }
-    }
+    },
+    "notes": [
+        "The default Scoop shims use persisted config: $persist_dir\\config.yaml",
+        "OAuth tokens use the app default auth-dir from config.yaml: ~/.cli-proxy-api"
+    ]
 }
