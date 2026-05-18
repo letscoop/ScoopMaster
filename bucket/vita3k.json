@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip",
+            "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip",
             "hash": "f9ee407ddecb3be1cbead1749cc95a00795e9931bb1de04d73dcf3f3f78754b1"
         },
         "arm64": {
-            "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip",
+            "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip",
             "hash": "a440eb9c73e6baa013428bb290e0352d69503f3c3e64aed1264d7e2e4bf3be8a"
         }
     },
@@ -53,10 +53,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip"
+                "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip"
             },
             "arm64": {
-                "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip"
+                "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip"
             }
         }
     }
