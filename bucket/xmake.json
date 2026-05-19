@@ -1,12 +1,8 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "3.0.9",
-    "description": "A cross-platform build utility based on Lua.",
+    "description": "A cross-platform build utility based on Lua",
     "homepage": "https://xmake.io",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/xmake-io/xmake/blob/master/LICENSE.md"
-    },
+    "license": "Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/xmake-io/xmake/releases/download/v3.0.9/xmake-v3.0.9.win64.zip",
