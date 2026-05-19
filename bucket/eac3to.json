@@ -5,8 +5,8 @@
     "license": "Freeware",
     "url": "https://www.videohelp.com/download/eac3to_3.62.rar",
     "hash": "dd052d17134bf201fdd246d67ab2512a0be62c9830d87a784f34b229c13fe4bb",
+    "pre_install": "'error.wav', 'success.wav' | ForEach-Object { Remove-Item \"$dir\\$_\" }",
     "bin": "eac3to.exe",
-    "pre_install": "\"error.wav\", \"success.wav\" | ForEach-Object { $file = \"$dir\\$_\"; Remove-Item $file }",
     "persist": "eac3to.ini",
     "checkver": {
         "url": "https://www.videohelp.com/software/eac3to",
