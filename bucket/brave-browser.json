@@ -1,5 +1,5 @@
 {
-    "version": "1.90.122",
+    "version": "1.90.124",
     "description": "Brave. Secure, Fast & Private Web Browser with Adblocker",
     "homepage": "https://brave.com/",
     "license": {
@@ -9,12 +9,12 @@
     "changelog": "https://brave.com/latest/",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.90.122/BraveBrowserStandaloneSilentSetup.exe#/setup.exe",
-            "hash": "0c51be215653226fbe00cf4ac4f03963db830034cbf9e5a8a2c036121e93cfce"
+            "url": "https://ghproxy.com/https://github.com/brave/brave-browser/releases/download/v1.90.124/BraveBrowserStandaloneSilentSetup.exe#/setup.exe",
+            "hash": "94176d686473f905c7e64a2ef0a5a52e7194e02b7b8442b4ba7c941f10d589db"
         },
         "32bit": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.90.122/BraveBrowserStandaloneSilentSetup32.exe#/setup.exe",
-            "hash": "cc27bfc512d42bd88638c83d245c16a5ab30600110d258ef7b7eb60d77485da4"
+            "url": "https://ghproxy.com/https://github.com/brave/brave-browser/releases/download/v1.90.124/BraveBrowserStandaloneSilentSetup32.exe#/setup.exe",
+            "hash": "94176d686473f905c7e64a2ef0a5a52e7194e02b7b8442b4ba7c941f10d589db"
         }
     },
     "pre_download": "Assert-Administrator",
@@ -57,10 +57,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup.exe#/setup.exe"
+                "url": "https://ghproxy.com/https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup.exe#/setup.exe"
             },
             "32bit": {
-                "url": "https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup32.exe#/setup.exe"
+                "url": "https://ghproxy.com/https://github.com/brave/brave-browser/releases/download/v$version/BraveBrowserStandaloneSilentSetup32.exe#/setup.exe"
             }
         }
     }
