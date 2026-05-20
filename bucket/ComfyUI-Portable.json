@@ -5,7 +5,7 @@
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z",
+            "url": "https://gh-proxy.org/https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z",
             "hash": "7c380d4309bbda395366c49564edf8996181fd45e61b6f353ea417f32bc3b970"
         }
     },
@@ -43,8 +43,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z"
+                "url": "https://gh-proxy.org/https://github.com/comfyanonymous/ComfyUI/releases/latest/download/ComfyUI_windows_portable_nvidia.7z"
             }
         }
     }
 }
+
