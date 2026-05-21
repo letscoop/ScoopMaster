@@ -1,7 +1,7 @@
 {
     "version": "0.107.76",
     "description": "Network-wide ads & trackers blocking DNS server",
-    "homepage": "https://adguard.com/adguard-home.html",
+    "homepage": "https://adguard.com/en/adguard-home/overview.html",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
@@ -19,7 +19,6 @@
     },
     "extract_dir": "AdGuardHome",
     "bin": "AdGuardHome.exe",
-    "persist": "data",
     "checkver": {
         "github": "https://github.com/AdguardTeam/AdGuardHome"
     },
