@@ -21,8 +21,7 @@
     "bin": "Launcher.exe",
     "shortcuts": [
         [
-            "Launcher.exe",
-            "Toontown Rewritten"
+            "Launcher.exe", "Toontown Rewritten"
         ]
     ],
     "persist": [
@@ -52,4 +51,3 @@
         "winter_snow.mf"
     ]
 }
-
