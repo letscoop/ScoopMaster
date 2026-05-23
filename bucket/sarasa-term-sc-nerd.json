@@ -1,10 +1,10 @@
 {
-    "version": "2.3.1",
-    "description": "Sarasa Term SC Nerd 字体是以 Sarasa Term SC字体为基础，修改了Nerd fonts字体补丁程序，然后用该程序将Nerd fonts合并入Sarasa Term SC, 再经过一些后处理，而最后形成的字体。该字体特别适合 简体中文用户在终端或者代码编辑器中使用。",
-    "homepage": "https://github.com/laishulu/Sarasa-Term-SC-Nerd",
+    "version": "2.4.0",
+    "description": "Sarasa Term SC Nerd: Based on the Sarasa Term SC font, the Nerd fonts patch program was modified. This program was then used to merge the Nerd fonts into Sarasa Term SC, with additional post-processing steps applied afterward. This font is particularly suitable for Simplified Chinese users who use terminals or code editors.",
+    "homepage": "https://github.com/mizuikk/Sarasa-Term-SC-Nerd",
     "license": "OFL-1.1",
-    "url": "https://github.com/laishulu/Sarasa-Term-SC-Nerd/releases/download/v2.3.1/SarasaTermSCNerd.ttf.7z",
-    "hash": "44483B749ED826111C150E37F92209927709BB53EC5021129701CC7D97EDA0A9",
+    "url": "https://github.com/mizuikk/Sarasa-Term-SC-Nerd/releases/download/v2.4.0/SarasaTermSCNerd.ttf.7z",
+    "hash": "1012f1716a0873c4d5f12d2d0ff2930fdfb658c85a8d302800ab9bd2165ea003",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -87,6 +87,7 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/laishulu/Sarasa-Term-SC-Nerd/releases/download/v$version/SarasaTermSCNerd.ttf.7z"
+        "url": "https://github.com/mizuikk/Sarasa-Term-SC-Nerd/releases/download/v$version/SarasaTermSCNerd.ttf.7z",
+        "extract_dir": "SarasaTermSCNerd.ttf"
     }
 }
