@@ -1,5 +1,5 @@
 {
-    "version": "4017-cf37c74",
+    "version": "4018-85cb480",
     "description": "Experimental PlayStation Vita emulator",
     "homepage": "https://vita3k.org",
     "license": "GPL-2.0-only",
@@ -8,14 +8,17 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip",
-            "hash": "80378c0579885223b9ad8b095224836b11a38346d5adf55a48edebe0db53dc24"
+            "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip",
+            "hash": "a2fcb66b584e8ce78adae41ce386f735abd0c814b21c8f33f9e6155c93079492"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip",
+            "hash": "b54ec472489a25f1aedf3423eabdd8f48e27d332693b509b258b76d2cd2bc28e"
         }
     },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.yml\")) {",
         "   New-Item \"$dir\\config.yml\" | Out-Null",
-        "   Add-Content -Path \"$dir\\config.yml\" -Value \"pref-path: $persist_dir\\pref\"-Encoding UTF8",
         "}"
     ],
     "bin": "Vita3K.exe",
@@ -50,7 +53,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip"
+                "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip"
             }
         }
     }
