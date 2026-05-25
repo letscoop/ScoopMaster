@@ -5,7 +5,7 @@
     "license": "GNU General Public License v3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yoshiko2/Movie_Data_Capture/releases/download/8.0.1/MDC-8.0.1-Windows-x86_64.zip",
+            "url": "https://gh.jjj.gv.uy/https://github.com/yoshiko2/Movie_Data_Capture/releases/download/8.0.1/MDC-8.0.1-Windows-x86_64.zip",
             "hash": "88484c22b4536c7a687b7fa9f26cca091a3008ac8dccb65e46f7a37780592aef"
         }
     },
@@ -21,8 +21,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/yoshiko2/Movie_Data_Capture/releases/download/$version/MDC-$version-Windows-x86_64.zip"
+                "url": "https://gh.jjj.gv.uy/https://github.com/yoshiko2/Movie_Data_Capture/releases/download/$version/MDC-$version-Windows-x86_64.zip"
             }
         }
     }
 }
+
