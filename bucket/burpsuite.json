@@ -21,5 +21,11 @@
             "url": "https://portswigger.net/burp/releases/data?pageSize=4",
             "jp": "$.ResultSet.Results.[?(@.releaseChannels[0] == 'Stable' && @.title =~ /Professional.*/)].builds.[?(@.BuildCategoryPlatform == 'Jar')].Sha256Checksum"
         }
-    }
+    },
+    "notes": [
+        "【工具类型】: 安全测试工具",
+        "【主要功能】: Burp Suite，领先的Web安全测试工具包",
+        "【适用场景】: Web安全测试、渗透测试、安全评估",
+        "【技术特点】: 基于Java开发，提供图形化界面，功能强大"
+    ]
 }

@@ -8,9 +8,7 @@
         "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/Pillager.bin",
         "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/Pillager.exe"
     ],
-    "hash": [
-
-    ],
+    "hash": [],
     "bin": [
         "Pillager.exe"
     ],
@@ -20,11 +18,16 @@
         "regex": "([\\w.]+)"
     },
     "autoupdate": {
-                "url": [
-                    "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/cs-plugin.zip",
-                    "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/Pillager.bin",
-                    "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/Pillager.exe"
-
-                    ]
-                }
+        "url": [
+            "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/cs-plugin.zip",
+            "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/Pillager.bin",
+            "https://github.com/qwqdanchun/Pillager/releases/download/AutoBuild/Pillager.exe"
+        ]
+    },
+    "notes": [
+        "【工具类型】: 信息收集工具",
+        "【主要功能】: 后渗透信息收集工具，收集目标机器上的敏感信息",
+        "【适用场景】: 后渗透测试、信息收集、安全评估",
+        "【技术特点】: Windows可执行文件，命令行工具，支持Cobalt Strike插件"
+    ]
 }

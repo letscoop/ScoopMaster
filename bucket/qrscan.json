@@ -16,5 +16,11 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/zfb132/QrScan/releases/download/v$version/QrScan_windows_v$version.zip"
-    }
+    },
+    "notes": [
+        "【工具类型】: 二维码工具",
+        "【主要功能】: 离线批量检测图片是否包含二维码以及识别二维码内容",
+        "【适用场景】: 二维码识别、批量处理、安全检查",
+        "【技术特点】: Windows可执行文件，图形化界面，离线运行"
+    ]
 }

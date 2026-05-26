@@ -1,7 +1,7 @@
 {
-    "version": "151.0.1",
+    "version": "151.0.2",
     "description": "Popular open source web browser.",
-    "homepage": "https://www.firefox.com/",
+    "homepage": "https://www.mozilla.org/firefox/",
     "license": "MPL-2.0",
     "notes": [
         "To set profile 'Scoop' as *DEFAULT*, or profiles/settings was lost after update:",
@@ -11,16 +11,16 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/151.0.1/win64/en-US/Firefox%20Setup%20151.0.1.exe#/dl.7z",
-            "hash": "sha512:53b0ad6f9f773a38c0fe0ef120d0b622b9770a631877666910bd37e6f3095c2df22feeee0b719aefd0a6ec0fbbddbb0e0fe5076df3adf861d7a89049e816f677"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/151.0.2/win64/zh-CN/Firefox%20Setup%20151.0.2.exe#/dl.7z",
+            "hash": "sha512:1dc011936fa254372d4c8f96065aeb87948936c94478de6bfdfd2d5f562c50a2fff222b48f7fd3cf97dbab3b7050c31871b6a428a93f7f28f76a4306f2f32b6c"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/151.0.1/win32/en-US/Firefox%20Setup%20151.0.1.exe#/dl.7z",
-            "hash": "sha512:3ecb43000282d1c68c5b88f89b37d16397a723b6753715f0421e71fe1e3ca1cefc4aee340b08e092e4f5ac025cff532f2fabc0e89d9d5a458d3f1c057d8d3b74"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/151.0.2/win32/zh-CN/Firefox%20Setup%20151.0.2.exe#/dl.7z",
+            "hash": "sha512:c1af7dd11b701220b70217c7554caa497d21eb4c8282ea392cebd1b4d5c01eefa66675182ba5370855d03a08db2f1f3028c3811c6f7bef07981570f327241290"
         },
         "arm64": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/151.0.1/win64-aarch64/en-US/Firefox%20Setup%20151.0.1.exe#/dl.7z",
-            "hash": "sha512:416969f01194be89d779ea55d79d670dcf8b29008270d90147719a2d0281911575844a2f9d710e3ec6eb985d10f2f64595b59cbc0452e01e820be91b7090cc13"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/151.0.2/win64-aarch64/zh-CN/Firefox%20Setup%20151.0.2.exe#/dl.7z",
+            "hash": "sha512:65fb5a0db713d3569897cb21899b1ca63f1348150aa43214895cb100931d12e140562fd7200b9f5a3a837cc166d195bd7509a647ba59b27d4571b76e66fcfb55"
         }
     },
     "extract_dir": "core",
@@ -55,24 +55,24 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
                 "hash": {
                     "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win64/en-US/$basename"
+                    "regex": "$sha512\\s+win64/zh-CN/$basename"
                 }
             },
             "32bit": {
-                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win32/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win32/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
                 "hash": {
                     "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win32/en-US/$basename"
+                    "regex": "$sha512\\s+win32/zh-CN/$basename"
                 }
             },
             "arm64": {
-                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64-aarch64/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64-aarch64/zh-CN/Firefox%20Setup%20$version.exe#/dl.7z",
                 "hash": {
                     "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win64-aarch64/en-US/$basename"
+                    "regex": "$sha512\\s+win64-aarch64/zh-CN/$basename"
                 }
             }
         }

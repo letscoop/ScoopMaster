@@ -28,5 +28,11 @@
                 "url": "https://github.com/NHAS/reverse_ssh/releases/download/$version/client.exe"
             }
         }
-    }
+    },
+    "notes": [
+        "【工具类型】: 网络工具",
+        "【主要功能】: 基于SSH协议的反向Shell工具，包含服务端和客户端",
+        "【适用场景】: 反向Shell、远程控制、渗透测试",
+        "【技术特点】: Go语言开发，基于SSH协议，支持服务端和客户端"
+    ]
 }
