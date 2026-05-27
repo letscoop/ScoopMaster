@@ -15,10 +15,16 @@
         "create_startmenu_shortcuts $manifest $original_dir $global $architecture",
         "$manifest.shortcuts = @()"
     ],
+    "bin": [
+        [
+            "wemeetapp.exe",
+            "tencent-meeting"
+        ]
+    ],
     "shortcuts": [
         [
             "wemeetapp.exe",
-            "Tencent Meeting"
+            "腾讯会议"
         ]
     ],
     "checkver": {
@@ -30,4 +36,3 @@
     },
     "notes": "We don't persist your Tencent Meeting data, they are still storaged in \"$env:APPDATA\\Tencent\\WeMeet\"."
 }
-
