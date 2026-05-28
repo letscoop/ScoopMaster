@@ -1,15 +1,15 @@
 {
-  "version": "5.29.0",
+  "version": "5.29.2",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/nais/cli/releases/download/v5.29.0/nais-cli_windows_amd64.tgz",
+      "url": "https://github.com/nais/cli/releases/download/v5.29.2/nais-cli_windows_amd64.tgz",
       "bin": ["nais.exe"],
-      "hash": "a10e5d7a54de15697c922b7f2704956a9666a3c16055dd28d469a2411e600fb9"
+      "hash": "372b40277c2d234144a8867204186128262c7a1618652fecee69c9c5456974cd"
     },
     "arm64": {
-      "url": "https://github.com/nais/cli/releases/download/v5.29.0/nais-cli_windows_arm64.tgz",
+      "url": "https://github.com/nais/cli/releases/download/v5.29.2/nais-cli_windows_arm64.tgz",
       "bin": ["nais.exe"],
-      "hash": "4f45a14df15f4e84f9a82b8cbf4497ba8bd21f375ad066333787cd099bf55653"
+      "hash": "1233b3897543572c2f8fce673967189a75e9cc7673f39b7c0d7fc47cb61f1f69"
     }
   },
   "homepage": "https://github.com/nais/cli",
