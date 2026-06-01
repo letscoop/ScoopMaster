@@ -1,52 +1,62 @@
 {
-    "version": "0.11.17",
+    "version": "0.11.18",
     "description": "An extremely fast Python package installer and resolver, written in Rust.",
     "homepage": "https://docs.astral.sh/uv/",
     "license": "Apache-2.0|MIT",
     "notes": [
-        "Scoop persists data since version 0.11.16. You may need to move data by yourself.",
-        "Before: '$env:APPDATA\\uv', '$env:LOCALAPPDATA\\uv'",
-        "After : '$persist_dir'"
+        "If you install poetry working with conda, which will use poetry in conda env.",
+        "follow this guide :",
+        "1. uv tool install poetry",
+        "2. poetry config virtualenvs.in-project true"
     ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.11.17/uv-x86_64-pc-windows-msvc.zip",
-            "hash": "35fc29e03e62f3cda769bc12773f3cb70ce305d0d36c0d8bd0c117dd0b3fcd14"
+            "url": "https://github.com/astral-sh/uv/releases/download/0.11.18/uv-x86_64-pc-windows-msvc.zip",
+            "hash": "bf8e0021336b7c77bd80a078b612125f385b08f541437edaea8c8ca9e574db0d"
         },
         "32bit": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.11.17/uv-i686-pc-windows-msvc.zip",
-            "hash": "be48cd9aa35c8615eff3dba6a24e214edf00885150eacde032a258399131c59d"
-        },
-        "arm64": {
-            "url": "https://github.com/astral-sh/uv/releases/download/0.11.17/uv-aarch64-pc-windows-msvc.zip",
-            "hash": "f4463aa9671c6d153d32f2a9b272389675a711a9bca806c4ab4a3c7559b045c2"
+            "url": "https://github.com/astral-sh/uv/releases/download/0.11.18/uv-i686-pc-windows-msvc.zip",
+            "hash": "7505112a7bf72f50391c50f2aa07950b95b3c43c7d9fd4da5626876407d15dda"
         }
     },
-    "installer": {
-        "script": [
-            "Add-Path -Path \"$persist_dir\\python\\shims\" -Global:$global -Force",
-            "Add-Path -Path \"$persist_dir\\tools\\shims\" -Global:$global -Force"
-        ]
-    },
+    "pre_install": [
+        "$configContent = @\"",
+        "[[index]]",
+        "url = \"https://pypi.tuna.tsinghua.edu.cn/simple\"",
+        "default = true",
+        "\"@",
+        "Set-Content -Path \"$persist_dir\\uv.toml\" -Value $configContent"
+    ],
     "env_set": {
+        "UV_CONFIG_FILE": "$persist_dir\\uv.toml",
         "UV_CACHE_DIR": "$persist_dir\\cache",
-        "UV_PYTHON_BIN_DIR": "$persist_dir\\python\\shims",
-        "UV_PYTHON_INSTALL_DIR": "$persist_dir\\python\\versions",
-        "UV_TOOL_BIN_DIR": "$persist_dir\\tools\\shims",
-        "UV_TOOL_DIR": "$persist_dir\\tools\\versions"
+        "UV_TOOL_DIR": "$persist_dir\\tools",
+        "UV_TOOL_BIN_DIR": "$persist_dir\\tools\\bin",
+        "UV_PYTHON_INSTALL_DIR": "$persist_dir\\python\\install",
+        "UV_PYTHON_CACHE_DIR": "$persist_dir\\python\\cache",
+        "UV_PYTHON_BIN_DIR": "$persist_dir\\python\\bin",
+        "POETRY_HOME": "$persist_dir\\poetry\\data",
+        "POETRY_CACHE_DIR": "$persist_dir\\poetry\\cache",
+        "POETRY_CONFIG_DIR": "$persist_dir\\poetry\\config",
+        "UV_DEFAULT_INDEX": "https://pypi.tuna.tsinghua.edu.cn/simple",
+        "POETRY_PYPI_MIRROR_URL": "https://pypi.tuna.tsinghua.edu.cn/simple"
     },
+    "env_add_path": "tools\\bin",
     "bin": [
         "uv.exe",
         "uvx.exe",
         "uvw.exe"
     ],
-    "uninstaller": {
-        "script": [
-            "$global = installed $app $true",
-            "Remove-Path -Path \"$persist_dir\\tools\\shims\" -Global:$global -Force",
-            "Remove-Path -Path \"$persist_dir\\python\\shims\" -Global:$global -Force"
-        ]
-    },
+    "persist": [
+        "cache",
+        "tools\\bin",
+        "python\\bin",
+        "python\\install",
+        "python\\cache",
+        "poetry\\data",
+        "poetry\\cache",
+        "poetry\\config"
+    ],
     "checkver": {
         "github": "https://github.com/astral-sh/uv"
     },
@@ -57,9 +67,6 @@
             },
             "32bit": {
                 "url": "https://github.com/astral-sh/uv/releases/download/$version/uv-i686-pc-windows-msvc.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/astral-sh/uv/releases/download/$version/uv-aarch64-pc-windows-msvc.zip"
             }
         },
         "hash": {
