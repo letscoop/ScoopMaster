@@ -1,10 +1,10 @@
 {
-    "version": "0.32.1",
+    "version": "0.32.3",
     "description": "Show usage stats for OpenAI Codex and Claude Code, without having to login. But for Window-Native",
     "homepage": "https://github.com/Finesssee/Win-CodexBar",
     "license": "MIT",
-    "url": "https://github.com/Finesssee/Win-CodexBar/releases/download/v0.32.1/CodexBar-0.32.1-portable.exe#/codexbar.exe",
-    "hash": "7918c83e29e88ef7797813bfb149bc7e2ddc2673804667b5d30b1247b7e35676",
+    "url": "https://github.com/Finesssee/Win-CodexBar/releases/download/v0.32.3/CodexBar-0.32.3-portable.exe#/codexbar.exe",
+    "hash": "399228773c8e87fb375b32bc6f05307851cf2cc6fe1ef3f5846d09ea10ee6031",
     "bin": "codexbar.exe",
     "shortcuts": [
         [
