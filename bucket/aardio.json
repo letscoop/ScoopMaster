@@ -1,10 +1,11 @@
 {
-    "version": "42.28.1",
-    "description": "A Windows desktop rapid programming platform",
     "homepage": "https://www.aardio.com/",
+    "description": "A Windows desktop rapid programming platform",
+    "version": "42.28.2",
     "license": "freeware",
-    "url": "https://www.aardio.com/download/ide/aardio.7z",
-    "hash": "87e3e6e975b928ba9b4d47a351acc2996fc438cd36319e6d463340f65bc42a30",
+    "url": "https://d.aardio.com/ide/aardio.7z",
+    "hash": "269b0199fe1b9d77c0f615cc0d9a4cd8a4e33515f33738c2b49b295bdd106cb8",
+    "bin": "aardio.exe",
     "shortcuts": [
         [
             "aardio.exe",
@@ -14,9 +15,9 @@
     "persist": "config\\USR.CFG",
     "checkver": {
         "url": "https://ide.update.aardio.com/log/",
-        "regex": "aardio v([\\d\\.]+)"
+        "regex": "aardio v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.aardio.com/download/ide/aardio.7z"
+        "url": "https://d.aardio.com/ide/aardio.7z"
     }
 }
