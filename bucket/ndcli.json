@@ -1,13 +1,13 @@
 {
-    "version": "1.16.0",
+    "version": "1.16.2",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/netdefense-io/ndcli-releases/releases/download/v1.16.0/ndcli_1.16.0_windows_amd64.zip",
+            "url": "https://github.com/netdefense-io/ndcli-releases/releases/download/v1.16.2/ndcli_1.16.2_windows_amd64.zip",
             "bin": [
                 "ndcli.exe",
                 "netdefense-mcp.exe"
             ],
-            "hash": "534d13bf3e878139a4f45c0daf2324a81675f1cb9fc2cea45bf37406df965bc1"
+            "hash": "4970dde1e68d9a791cae987dae451240b3b528657b82a7c77c7224b37d8825a1"
         }
     },
     "homepage": "https://github.com/netdefense-io/NDCLI",
