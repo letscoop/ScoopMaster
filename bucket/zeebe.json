@@ -15,7 +15,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/camunda/camunda/releases/download/8.9.7/camunda-zeebe-8.9.7.zip",
+            "url": "https://gh-proxy.org/https://github.com/camunda/camunda/releases/download/8.9.7/camunda-zeebe-8.9.7.zip",
             "hash": "71110527ebd51358268023fdd0694523fd46c8dedab0e0dcc021ef216e2967c7"
         }
     },
@@ -36,7 +36,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/camunda/camunda/releases/download/$version/camunda-zeebe-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/camunda/camunda/releases/download/$version/camunda-zeebe-$version.zip"
             }
         },
         "extract_dir": "camunda-zeebe-$version"
