@@ -1,7 +1,7 @@
 {
     "version": "1.4.0",
     "description": "A high-performance Markdown note tool",
-    "homepage": "http://flymd.llingfei.com/",
+    "homepage": "https://github.com/flyhunterl/flymd",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
@@ -16,9 +16,7 @@
             "FlyMD"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/flyhunterl/flymd"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
