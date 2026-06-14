@@ -1,34 +1,42 @@
 {
     "version": "0.10.3",
     "description": "Distribute and run LLMs with a single file.",
-    "homepage": "https://github.com/mozilla-ai/llamafile",
+    "homepage": "https://docs.mozilla.ai/llamafile",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/mozilla-ai/llamafile/releases/download/0.10.3/llamafile-0.10.3.zip",
-            "extract_dir": "home\\mala\\releases\\0.10.3\\llamafile-0.10.3\\bin",
             "hash": "8ff91166a39bb9d387bf5f3115d02b4b2cbd93870f77eefd1d312e27dbf527f7"
         }
     },
-    "pre_install": [
-        "$names = @('llamafile', 'whisperfile', 'zipalign')",
-        "$names | ForEach-Object { Get-ChildItem \"$dir\" $_ | Select-Object -First 1 | Rename-Item -NewName \"$_.exe\"  }"
-    ],
+    "extract_dir": "home\\mala\\releases\\0.10.3\\llamafile-0.10.3",
     "bin": [
-        "llamafile.exe",
-        "whisperfile.exe",
         [
-            "zipalign.exe",
-            "llamafile-zipalign"
+            "bin\\diffusionfile",
+            "diffusionfile"
+        ],
+        [
+            "bin\\llamafile",
+            "llamafile"
+        ],
+        [
+            "bin\\whisperfile",
+            "whisperfile"
+        ],
+        [
+            "bin\\zipalign",
+            "zipalign"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/mozilla-ai/llamafile"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mozilla-ai/llamafile/releases/download/$version/llamafile-$version.zip",
-                "extract_dir": "llamafile-$version\\bin"
+                "url": "https://github.com/mozilla-ai/llamafile/releases/download/$version/llamafile-$version.zip"
             }
-        }
+        },
+        "extract_dir": "home\\mala\\releases\\$version\\llamafile-$version"
     }
 }
