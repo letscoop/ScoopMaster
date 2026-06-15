@@ -14,6 +14,14 @@
             "pre_install": "Rename-Item \"$dir\\SKIF,2.exe\" SKIF.exe; Remove-Item \"$dir\\SKIF,1.exe\""
         }
     },
+    "post_install": [
+        "'PlugIns' | ForEach-Object {",
+        "    if (Test-Path -Path \"$dir\\$_.original\" -PathType Container) {",
+        "        Copy-Item -Path \"$dir\\$_.original\\*\" -Destination \"$dir\\$_\" -Force -Recurse",
+        "        Remove-Item -Path \"$dir\\$_.original\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "    }",
+        "}"
+    ],
     "bin": [
         "SKIF.exe",
         "SKIV.exe"
@@ -33,7 +41,6 @@
         "PlugIns",
         "Profiles"
     ],
-    "pre_uninstall": "$folder = \"$persist_dir\\PlugIns\\ThirdParty\\Steamworks\"; if (Test-Path $folder) { Remove-Item $folder -Recurse -Force }",
     "checkver": {
         "url": "https://sk-data.special-k.info/repository.json",
         "jp": "$.Main.Versions[0].Name"
