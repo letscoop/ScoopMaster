@@ -5,7 +5,8 @@
     "license": "MIT",
     "url": "https://github.com/BlueMap-Minecraft/BlueMap/releases/download/v5.21/bluemap-5.21-cli.jar#/bluemap-cli.jar",
     "hash": "b347fef1202563662a11f931ee52794d2cf1db207228edbcaa4a8a169be12b9d",
-    "bin": "bluemap-cli.jar",
+    "pre_install": "@($manifest.bin) | ForEach-Object { $n = [IO.Path]::GetFileNameWithoutExtension($_); Set-Content -Encoding ASCII -Path \"$dir\\$n.bat\" -Value \"@java -jar `\"%~dp0$n.jar`\" %*\" }",
+    "bin": "bluemap-cli.bat",
     "suggest": {
         "JDK": [
             "java/oraclejdk",
