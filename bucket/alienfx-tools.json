@@ -6,7 +6,7 @@
         "identifier": "MIT",
         "url": "https://github.com/T-Troll/alienfx-tools/blob/master/LICENSE"
     },
-    "url": "https://ghproxy.com/https://github.com/T-Troll/alienfx-tools/releases/download/9.6.1/alienfx-tools.zip",
+    "url": "https://github.com/T-Troll/alienfx-tools/releases/download/9.6.1/alienfx-tools.zip",
     "bin": [
         "alienfx-cli.exe",
         "alienfan-cli.exe"
@@ -21,12 +21,12 @@
             "AlienFX Monitor"
         ]
     ],
-    "hash": "94176d686473f905c7e64a2ef0a5a52e7194e02b7b8442b4ba7c941f10d589db",
+    "hash": "f59558a66f3b8362364743863466dc55f07aa6d9de51365cd0c941a188258de2",
     "checkver": {
         "github": "https://github.com/T-Troll/alienfx-tools",
         "regex": "\\/releases\\/tag\\/([\\d.a-z]+)"
     },
     "autoupdate": {
-        "url": "https://ghproxy.com/https://github.com/T-Troll/alienfx-tools/releases/download/$version/alienfx-tools.zip"
+        "url": "https://github.com/T-Troll/alienfx-tools/releases/download/$version/alienfx-tools.zip"
     }
 }
