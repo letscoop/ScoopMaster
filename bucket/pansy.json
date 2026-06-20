@@ -17,11 +17,7 @@
             "pansy"
         ]
     ],
-    "checkver": {
-        "github": "https://api.github.com/repos/niuhuan/pansy/releases",
-        "jp": "$[*].assets[*].browser_download_url",
-        "regex": "/releases/download/v([\\d.]+)/pansy-v([\\d.]+)-windows"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
