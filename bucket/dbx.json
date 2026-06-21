@@ -1,1 +1,40 @@
-{"version":"0.5.35","description":"A lightweight database client with support for MySQL, PostgreSQL, Redis, MongoDB, DuckDB, ClickHouse, SQL Server, and more.","homepage":"https://github.com/t8y2/dbx","license":"AGPL-3.0-only","architecture":{"64bit":{"url":"https://github.com/t8y2/dbx/releases/download/v0.5.35/DBX_0.5.35_x64-portable.zip","hash":"291ee92ece124af7b6870084f10c2300b28dd688f7716139e0530f8a693f01d0"}},"shortcuts":[["DBX.exe","DBX"]],"post_uninstall":"if ($purge) { Remove-Item \"$env:APPDATA\\com.dbx.app\", \"$env:LOCALAPPDATA\\com.dbx.app\" -Force -Recurse -ErrorAction SilentlyContinue }","notes":["DBX is NOT portable.","Settings are stored in '%APPDATA%\\com.dbx.app', and can be purged using 'scoop uninstall --purge dbx'."],"checkver":"github","autoupdate":{"architecture":{"64bit":{"url":"https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-portable.zip"}}},"from":"https://github.com/hoilc/scoop-lemon"}
+{
+    "version": "0.5.35",
+    "description": "Open-source database management tool",
+    "homepage": "https://github.com/t8y2/dbx",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.35/DBX_0.5.35_x64-setup.exe",
+            "hash": "bd71ac2c45ea6c17df2560bcfd5d1292679c38eadefff6a3b16c08b83d8a32db"
+        },
+        "arm64": {
+            "url": "https://github.com/t8y2/dbx/releases/download/v0.5.35/DBX_0.5.35_arm64-setup.exe",
+            "hash": "a69798b70f4eacee1fcecea7cda9ebde8a64c194726c5312d6dec1d464eb228a"
+        }
+    },
+    "innosetup": false,
+    "installer": {
+        "args": [
+            "/S",
+            "/D=$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall.exe",
+        "args": "/S"
+    },
+    "checkver": {
+        "github": "https://github.com/t8y2/dbx"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_x64-setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/t8y2/dbx/releases/download/v$version/DBX_$version_arm64-setup.exe"
+            }
+        }
+    }
+}

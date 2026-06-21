@@ -1,1 +1,7 @@
-{"version":"1.11","url":"http://ftp.vector.co.jp/43/51/2176/SoftTilt111.lzh","bin":["SoftTilt.exe"],"from":"https://github.com/Arama0517/scoop-bucket"}
+{
+  "version": "1.11",
+  "url": "http://ftp.vector.co.jp/43/51/2176/SoftTilt111.lzh",
+  "bin": [
+    "SoftTilt.exe"
+  ]
+}
