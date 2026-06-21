@@ -1,1 +1,19 @@
-{"hash":"10bf9be3cbd5a10e130fe7e24cb3375265250d810c50557f7e27b36f00d3c58a","license":"MIT","url":"https://github.com/TomBadash/Mouser/releases/download/v3.6.0/Mouser-Windows.zip","version":"3.6.0","homepage":"https://github.com/TomBadash/Mouser","bin":"Mouser.exe","shortcuts":[["Mouser.exe","Mouser"]],"extract_dir":"Mouser","checkver":"github","autoupdate":{"url":"https://github.com/TomBadash/Mouser/releases/download/v$version/Mouser-Windows.zip"},"from":"https://github.com/janlindblom/scoops"}
+{
+  "hash": "10bf9be3cbd5a10e130fe7e24cb3375265250d810c50557f7e27b36f00d3c58a",
+  "license": "MIT",
+  "url": "https://github.com/TomBadash/Mouser/releases/download/v3.6.0/Mouser-Windows.zip",
+  "version": "3.6.0",
+  "homepage": "https://github.com/TomBadash/Mouser",
+  "bin": "Mouser.exe",
+  "shortcuts": [
+    [
+      "Mouser.exe",
+      "Mouser"
+    ]
+  ],
+  "extract_dir": "Mouser",
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/TomBadash/Mouser/releases/download/v$version/Mouser-Windows.zip"
+  }
+}

@@ -1,1 +1,40 @@
-{"version":"1.453.205.0","description":"A scan tool designed to find and remove malware from Windows computers.","homepage":"https://learn.microsoft.com/en-us/defender-endpoint/safety-scanner-download","license":"Freeware","architecture":{"64bit":{"url":"https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=1.453.205.0&arch=amd64","hash":"4940cef90b62814bd6aa10b6e46de5ed4ee42eb65bc45ef71608c5b04c2a76f6"},"32bit":{"url":"https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=1.453.205.0&arch=x86","hash":"a81de31314467e4d7b38e84280f3f7b13cba78cdb26d92f580e6960a7aa8eaad"}},"bin":"msert.exe","shortcuts":[["msert.exe","Microsoft Safety Scanner"]],"checkver":{"script":["try { $detail = Invoke-WebRequest -Method HEAD 'https://definitionupdates.microsoft.com/packages?package=scanner&arch=x64' -MaximumRedirection 0 -ErrorAction Ignore } catch { $_.Exception.Response }","if ($detail.StatusCode -eq 200) { return $detail.Headers.Location } else { return '' }"],"regex":"packageVersion=([\\d.]+)"},"autoupdate":{"architecture":{"64bit":{"url":"https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=$version&arch=amd64"},"32bit":{"url":"https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=$version&arch=x86"}}},"from":"https://github.com/hoilc/scoop-lemon"}
+{
+    "version": "1.453.208.0",
+    "description": "A scan tool designed to find and remove malware from Windows computers.",
+    "homepage": "https://learn.microsoft.com/en-us/defender-endpoint/safety-scanner-download",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=1.453.208.0&arch=amd64",
+            "hash": "28d664b5be191c21386c51541c164318854228db0baa8b492de2d533b9c3df98"
+        },
+        "32bit": {
+            "url": "https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=1.453.208.0&arch=x86",
+            "hash": "1c689e81b9159d49129b4616131748e78fba9a9dd62bdd3e554031ea6bd20fe4"
+        }
+    },
+    "bin": "msert.exe",
+    "shortcuts": [
+        [
+            "msert.exe",
+            "Microsoft Safety Scanner"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "try { $detail = Invoke-WebRequest -Method HEAD 'https://definitionupdates.microsoft.com/packages?package=scanner&arch=x64' -MaximumRedirection 0 -ErrorAction Ignore } catch { $_.Exception.Response }",
+            "if ($detail.StatusCode -eq 200) { return $detail.Headers.Location } else { return '' }"
+        ],
+        "regex": "packageVersion=([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=$version&arch=amd64"
+            },
+            "32bit": {
+                "url": "https://definitionupdates.microsoft.com/packages/content/msert.exe?packageType=Scanner&packageVersion=$version&arch=x86"
+            }
+        }
+    }
+}
