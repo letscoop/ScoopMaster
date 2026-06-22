@@ -1,1 +1,38 @@
-{"version":"6.13.0-beta.2","description":"An Arknights game assissant","homepage":"https://maa.plus/","license":"AGPL-3.0-only","architecture":{"64bit":{"url":"https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.13.0-beta.2/MAA-v6.13.0-beta.2-win-x64.zip","hash":"311eeffcb00e92fc7a825cacd134e79101867931de34f6419d7f7d31f7b352c5"},"arm64":{"url":"https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.13.0-beta.2/MAA-v6.13.0-beta.2-win-arm64.zip","hash":"42de387ef53512ad01cccbcab8a70f574e46d4f052b03ffd3a04e0d5df61f505"}},"suggest":{"emulators":["main/bluestacks-np","main/bluestacks-hyperv-np"],"adb":"adb"},"persist":"config","checkver":{"url":"https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases","regex":"/releases/tag/(?:v)?([\\d.]+(-(alpha|beta|rc)\\.\\d+)?)"},"autoupdate":{"architecture":{"64bit":{"url":"https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"},"arm64":{"url":"https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-arm64.zip"}}},"from":"https://github.com/Lutra-Fs/scoop-bucket"}
+{
+    "version": "6.13.0-beta.2",
+    "description": "An Arknights game assissant",
+    "homepage": "https://maa.plus/",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.13.0-beta.2/MAA-v6.13.0-beta.2-win-x64.zip",
+            "hash": "311eeffcb00e92fc7a825cacd134e79101867931de34f6419d7f7d31f7b352c5"
+        },
+        "arm64": {
+            "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.13.0-beta.2/MAA-v6.13.0-beta.2-win-arm64.zip",
+            "hash": "42de387ef53512ad01cccbcab8a70f574e46d4f052b03ffd3a04e0d5df61f505"
+        }
+    },
+    "suggest": {
+        "emulators": [
+            "nonportable/bluestacks-np",
+            "nonportable/bluestacks-hyperv-np"
+        ],
+        "adb": "adb"
+    },
+    "persist": "config",
+    "checkver": {
+        "url": "https://api.github.com/repos/MaaAssistantArknights/MaaAssistantArknights/releases",
+        "regex": "/releases/tag/(?:v)?([\\d.]+(-(alpha|beta|rc)\\.\\d+)?)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-arm64.zip"
+            }
+        }
+    }
+}
