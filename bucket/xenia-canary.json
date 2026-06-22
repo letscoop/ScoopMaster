@@ -1,6 +1,6 @@
 {
     "version": "20260621161309-b268292",
-    "description": "Microsoft Xbox 360 emulator",
+    "description": "Xbox 360 Emulator Research Project (development version)",
     "homepage": "https://github.com/xenia-canary/xenia-canary",
     "license": {
         "identifier": "BSD-3-Clause",
@@ -11,7 +11,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xenia-canary/xenia-canary/releases/download/b268292/xenia_canary_windows.zip",
+            "url": "https://gh-proxy.org/https://github.com/xenia-canary/xenia-canary/releases/download/b268292/xenia_canary_windows.zip",
             "hash": "ffe8349f711c15d6f7af99cfae70da82e66c34428e4d7ed77c21ee4a5afd031c"
         }
     },
@@ -36,7 +36,7 @@
     "shortcuts": [
         [
             "xenia_canary.exe",
-            "Microsoft Xbox 360 [x360][xenia] (canary)"
+            "Xenia Canary"
         ]
     ],
     "persist": [
@@ -63,7 +63,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xenia-canary/xenia-canary/releases/download/$matchCommit/xenia_canary_windows.zip"
+                "url": "https://gh-proxy.org/https://github.com/xenia-canary/xenia-canary/releases/download/$matchCommit/xenia_canary_windows.zip"
             }
         }
     }
