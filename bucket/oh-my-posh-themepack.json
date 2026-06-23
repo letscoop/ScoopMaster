@@ -1,1 +1,22 @@
-{"version":"29.18.0","description":"All the official themes for Oh-My-Posh","homepage":"https://ohmyposh.dev","license":"MIT","notes":"Refer to 'https://ohmyposh.dev/docs/installation/prompt' for shell specific configurations.","url":"https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.18.0/themes.zip","hash":"3578b112d72422b5cc08d0c40f92b67ccd8d5104153d3e5c0568c679e5b93d6d","depends":["oh-my-posh"],"env_set":{"POSH_THEMES_PATH":"$dir"},"checkver":{"github":"https://github.com/JanDeDobbeleer/oh-my-posh"},"autoupdate":{"url":"https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/themes.zip","hash":{"url":"$url.sha256"}},"from":"https://github.com/okibcn/Bucket"}
+{
+    "version": "29.18.0",
+    "description": "All the official themes for Oh-My-Posh",
+    "homepage": "https://ohmyposh.dev",
+    "license": "MIT",
+    "notes": "Refer to 'https://ohmyposh.dev/docs/installation/prompt' for shell specific configurations.",
+    "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.18.0/themes.zip",
+    "hash": "3578b112d72422b5cc08d0c40f92b67ccd8d5104153d3e5c0568c679e5b93d6d",
+    "depends": "oh-my-posh",
+    "env_set": {
+        "POSH_THEMES_PATH": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/JanDeDobbeleer/oh-my-posh"
+    },
+    "autoupdate": {
+        "url": "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/themes.zip",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
