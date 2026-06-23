@@ -1,21 +1,21 @@
 {
     "version": "9080-20260623",
-    "description": "A fast, accurate, and portable GBA emulator (development version)",
+    "description": "Nintendo Game Boy Advance emulator",
     "homepage": "https://mgba.io/",
     "license": {
         "identifier": "MPL-2.0",
         "url": "https://github.com/mgba-emu/mgba/blob/master/LICENSE"
     },
     "architecture": {
-        "32bit": {
-            "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-2026-06-23-win32-9080-2ef492cb0262219e717c32d0e97a1465fbd26fe9.7z",
-            "hash": "9e1b6ba4c3514561fb84972ac73a163b578a9d1742ba7380277c893e282266a9",
-            "extract_dir": "mGBA-build-2026-06-23-win32-9080-2ef492cb0262219e717c32d0e97a1465fbd26fe9"
-        },
         "64bit": {
             "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-2026-06-23-win64-9080-2ef492cb0262219e717c32d0e97a1465fbd26fe9.7z",
             "hash": "7831fe4082c41eac76a9eac3898179f352ae8e6778c5327ac8c94a4a88555568",
             "extract_dir": "mGBA-build-2026-06-23-win64-9080-2ef492cb0262219e717c32d0e97a1465fbd26fe9"
+        },
+        "32bit": {
+            "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-2026-06-23-win32-9080-2ef492cb0262219e717c32d0e97a1465fbd26fe9.7z",
+            "hash": "9e1b6ba4c3514561fb84972ac73a163b578a9d1742ba7380277c893e282266a9",
+            "extract_dir": "mGBA-build-2026-06-23-win32-9080-2ef492cb0262219e717c32d0e97a1465fbd26fe9"
         }
     },
     "pre_install": [
@@ -49,7 +49,7 @@
     "shortcuts": [
         [
             "mGBA.exe",
-            "mGBA (dev)"
+            "Nintendo Gane Boy Advance [gba][mgba] (dev)"
         ]
     ],
     "persist": [
@@ -71,13 +71,13 @@
     },
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-$matchYear-$matchMonth-$matchDay-win32-$matchVer-$matchGit.7z",
-                "extract_dir": "mGBA-build-$matchYear-$matchMonth-$matchDay-win32-$matchVer-$matchGit"
-            },
             "64bit": {
                 "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-$matchYear-$matchMonth-$matchDay-win64-$matchVer-$matchGit.7z",
                 "extract_dir": "mGBA-build-$matchYear-$matchMonth-$matchDay-win64-$matchVer-$matchGit"
+            },
+            "32bit": {
+                "url": "https://s3.amazonaws.com/mgba/build/mGBA-build-$matchYear-$matchMonth-$matchDay-win32-$matchVer-$matchGit.7z",
+                "extract_dir": "mGBA-build-$matchYear-$matchMonth-$matchDay-win32-$matchVer-$matchGit"
             }
         }
     }
