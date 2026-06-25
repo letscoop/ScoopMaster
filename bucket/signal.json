@@ -9,18 +9,18 @@
             "hash": "sha512:2e1b56e440bab4c7471f55597ed6f497fba7699a3a8b1f958f70b1dd8300d10bbba93ce2a6f746ff43e40b1313d6f741bc8478769d49666c5f6ceacded3d2d33",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*.exe\" -Recurse -Force",
-                "Remove-Item \"$dir\\resources\\app-update.yml\" -Recurse -Force"
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*.exe\" -Recurse -Force"
             ]
         }
     },
-    "bin": "signal.exe",
     "shortcuts": [
         [
-            "signal.exe",
-            "Signal"
+            "Signal.exe",
+            "Signal",
+            "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
+    "persist": "User Data",
     "checkver": {
         "url": "https://updates.signal.org/desktop/latest.yml",
         "regex": "version:\\s([\\d.]+)"
