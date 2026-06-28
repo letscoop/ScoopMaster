@@ -1,1 +1,22 @@
-{"version":"6500","description":"AutoWikiBrowser is a semi-automated Wikipedia editor, designed to make tedious, repetitive tasks quicker and easier.","homepage":"http://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser","license":"GPL-2.0","url":"https://sourceforge.net/projects/autowikibrowser/files/autowikibrowser/AutoWikiBrowser6500/AutoWikiBrowser6500.zip","hash":"sha1:d8c9a5981b0fc6988912e1b39b77275009ef6400","bin":"AutoWikiBrowser.exe","shortcuts":[["AutoWikiBrowser.exe","AutoWikiBrowser"]],"checkver":{"url":"https://sourceforge.net/projects/autowikibrowser/rss?path=/autowikibrowser","regex":"AutoWikiBrowser([\\d]+)\\.zip"},"autoupdate":{"url":"https://sourceforge.net/projects/autowikibrowser/files/autowikibrowser/AutoWikiBrowser$version/AutoWikiBrowser$version.zip"},"from":"https://github.com/janlindblom/scoops"}
+{
+    "version": "6500",
+    "description": "AutoWikiBrowser is a semi-automated Wikipedia editor, designed to make tedious, repetitive tasks quicker and easier.",
+    "homepage": "http://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser",
+    "license": "GPL-2.0",
+    "url": "https://sourceforge.net/projects/autowikibrowser/files/autowikibrowser/AutoWikiBrowser6500/AutoWikiBrowser6500.zip",
+    "hash": "sha1:d8c9a5981b0fc6988912e1b39b77275009ef6400",
+    "bin": "AutoWikiBrowser.exe",
+    "shortcuts": [
+        [
+            "AutoWikiBrowser.exe",
+            "AutoWikiBrowser"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/autowikibrowser/rss?path=/autowikibrowser",
+        "regex": "AutoWikiBrowser([\\d]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/autowikibrowser/files/autowikibrowser/AutoWikiBrowser$version/AutoWikiBrowser$version.zip"
+    }
+}
