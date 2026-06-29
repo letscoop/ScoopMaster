@@ -1,58 +1,46 @@
 {
     "version": "0.11.17",
-    "description": "Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.",
+    "description": "An open-source ebook reader designed for immersive and deep reading experiences",
     "homepage": "https://readest.com/",
     "license": {
-        "identifier": "AGPL-3.0 license",
-        "url": "https://github.com/readest/readest#AGPL-3.0-1-ov-file"
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/readest/readest/blob/main/LICENSE"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/readest/readest/releases/download/v0.11.17/Readest_0.11.17_x64-setup.exe#dl.7z",
-            "hash": "fa1f941755849b816116e10e51512a9795ed2476ce6c9b7909f851c6a6712fa3"
+            "url": "https://github.com/readest/readest/releases/download/v0.11.17/Readest_0.11.17_x64-portable.exe#/Readest.exe",
+            "hash": "a83135c4738b2fd37dc0ed62bea5e0eb813f86641fa4318d02dba5d3b3859237"
         },
         "arm64": {
-            "url": "https://github.com/readest/readest/releases/download/v0.11.17/Readest_0.11.17_arm64-setup.exe#dl.7z",
-            "hash": "28f2cf3dccd4fe7a540f312597731fada68220ab9ab09de92eaeba74d7617c78"
+            "url": "https://github.com/readest/readest/releases/download/v0.11.17/Readest_0.11.17_arm64-portable.exe#/Readest.exe",
+            "hash": "42d2826096ec30e0511580c0b101fc47fc3e5b6a7b7171af64190477339b409a"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\*.dll\" -Force -Recurse",
-    "installer": {
-        "script": [
-            "# handle runtime cache",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\com.bilingify.readest\"",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\userdata\" -Target \"$env:APPDATA\\com.bilingify.readest\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\com.bilingify.readest\"",
-            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\com.bilingify.readest\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "bin": "Readest.exe",
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\settings.json\")) {",
+        "    Set-Content -Path \"$dir\\settings.json\" -Value '{\"autoCheckUpdates\":false}' -Encoding ASCII",
+        "}"
+    ],
     "shortcuts": [
         [
             "Readest.exe",
             "Readest"
         ]
     ],
+    "persist": [
+        "Readest",
+        "settings.json"
+    ],
     "checkver": {
-        "github": "https://api.github.com/repos/readest/readest/releases/latest",
-        "jp": ".assets[*].browser_download_url",
-        "regex": "/releases/download/v([\\d.]+)/Readest_([\\d.]+)_x64-setup.exe"
+        "github": "https://github.com/readest/readest"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-setup.exe#dl.7z"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
             },
             "arm64": {
-                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-setup.exe#dl.7z"
+                "url": "https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
             }
         }
     }
