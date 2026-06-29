@@ -1,43 +1,43 @@
 {
-  "homepage": "https://brave.com/download-nightly/",
-  "version": "1.94.10",
-  "description": "Brave Nightly. Secure, Fast & Private Web Browser with Adblocker (nightly release)",
-  "license": {
-    "identifier": "Freeware,BSD-3-Clause,GPL-3.0-only,...",
-    "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
-  },
-  "changelog": "",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/brave/brave-browser/releases/download/v1.94.10/brave-v1.94.10-win32-x64.zip",
-      "hash": "57977434d7d83162c8e2a894bd3a4c397eac403c9293e8186383e53c0b1185e5"
-    }
-  },
-  "bin": [
-    [
-      "brave.exe",
-      "brave-nightly"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "brave.exe",
-      "Brave Nightly"
-    ]
-  ],
-  "checkver": {
-    "url": "https://github.com/brave/brave-browser/releases",
-    "regex": "Nightly v([\\d.]+)"
-  },
-  "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
-      }
+    "homepage": "https://brave.com/download-nightly/",
+    "version": "1.94.11",
+    "description": "Brave Nightly. Secure, Fast & Private Web Browser with Adblocker (nightly release)",
+    "license": {
+        "identifier": "Freeware,BSD-3-Clause,GPL-3.0-only,...",
+        "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
     },
-    "hash": {
-      "url": "$url.sha256",
-      "regex": "$sha256.*?\\.zip"
+    "changelog": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.94.11/brave-v1.94.11-win32-x64.zip",
+            "hash": "bc8364fa93e6f3a8d8f4c041e2b0f9b2be9d24108e1e678c36cc043b5846eeca"
+        }
+    },
+    "bin": [
+        [
+            "brave.exe",
+            "brave-nightly"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "brave.exe",
+            "Brave Nightly"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/brave/brave-browser/releases",
+        "regex": "Nightly v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256",
+            "regex": "$sha256.*?\\.zip"
+        }
     }
-  }
 }
