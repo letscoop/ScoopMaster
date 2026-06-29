@@ -7,23 +7,28 @@
         "64bit": {
             "url": [
                 "https://github.com/5fish/SVT-AV1/releases/download/v2.3.260629/Windows_x86-64_x86-64-v3.tar.xz",
-                "https://github.com/5fish/SVT-AV1/releases/download/v2.3.260629/Windows_x86-64_znver2.tar.xz"
+                "https://github.com/5fish/SVT-AV1/releases/download/v2.3.260629/Windows_x86-64_znver2.tar.xz",
+                "https://github.com/5fish/SVT-AV1/releases/download/v2.3.260629/Windows_x86-64_icelake-server+znver5.tar.xz"
             ],
             "hash": [
                 "bcc572d658127691d9107500df2f91ea18213c1c2901deca3a0e165ebddc1977",
-                "5525896d30ed5953643353073a2465b12831ff0df97759c3d4892f6da2beff63"
+                "5525896d30ed5953643353073a2465b12831ff0df97759c3d4892f6da2beff63",
+                "35a6e069f7f17b0e3ede00d0510f6cfd4f97e0cc8f812c2bc16ba5894ecc24ae"
             ],
             "pre_install": [
                 "Move-Item \"$dir\\SvtAv1EncApp.exe\" \"$dir\\SvtAv1EncApp-v3.exe\" -Force",
-                "Move-Item \"$dir\\znver2\\SvtAv1EncApp.exe\" \"$dir\\SvtAv1EncApp.exe\" -Force",
-                "Remove-Item \"$dir\\znver2\" -Recurse -Force"
+                "Move-Item \"$dir\\znver2\\SvtAv1EncApp.exe\" \"$dir\\SvtAv1EncApp-znver2.exe\" -Force",
+                "Remove-Item \"$dir\\znver2\" -Recurse -Force",
+                "Move-Item \"$dir\\avx512\\SvtAv1EncApp.exe\" \"$dir\\SvtAv1EncApp-avx512.exe\" -Force",
+                "Remove-Item \"$dir\\avx512\" -Recurse -Force"
             ],
             "bin": [
-                "SvtAv1EncApp-v3.exe",
                 [
-                    "SvtAv1EncApp.exe",
+                    "SvtAv1EncApp-v3.exe",
                     "SvtAv1EncApp"
-                ]
+                ],
+                "SvtAv1EncApp-znver2.exe",
+                "SvtAv1EncApp-avx512.exe"
             ]
         },
         "arm64": {
@@ -34,16 +39,22 @@
     },
     "extract_to": [
         "",
-        "znver2"
+        "znver2",
+        "avx512"
     ],
     "notes": [
-        " ATTENTION: On x86 systems, the 'SvtAv1EncApp' alias points to the optimized zen2 binary by default.",
-        " If your CPU doesn't support it (older than AMD Zen 2 or Intel 11th gen),",
-        " you can call 'SvtAv1EncApp-v3', which is a generic build with better compatibility.",
+        " ATTENTION: The 'SvtAv1EncApp' alias points to the generic x86-64-v3 binary by default.",
         " ",
-        " Alternatively, set the 'SvtAv1EncApp' shortcut to point to it with the following command:",
+        " Depending on your hardware platform, you can manually use any of the alternative shims,",
+        " or set the 'SvtAv1EncApp' shortcut to point to them with the following commands:",
+        " ",
+        " - SvtAv1EncApp-avx512 (Intel Icelake+ / AMD Zen 4+)",
         " scoop shim add SvtAv1EncApp `",
-        " \"$dir\\SvtAv1EncApp-v3.exe\"",
+        "   \"$dir\\SvtAv1EncApp-avx512.exe\"",
+        " ",
+        " - SvtAv1EncApp-znver2 (AMD Zen 2 / 3)",
+        " scoop shim add SvtAv1EncApp `",
+        " \"$dir\\SvtAv1EncApp-znver2.exe\"",
         " -----"
     ],
     "checkver": {
@@ -56,7 +67,8 @@
             "64bit": {
                 "url": [
                     "https://github.com/5fish/SVT-AV1/releases/download/v$version/Windows_x86-64_x86-64-v3.tar.xz",
-                    "https://github.com/5fish/SVT-AV1/releases/download/v$version/Windows_x86-64_znver2.tar.xz"
+                    "https://github.com/5fish/SVT-AV1/releases/download/v$version/Windows_x86-64_znver2.tar.xz",
+                    "https://github.com/5fish/SVT-AV1/releases/download/v$version/Windows_x86-64_icelake-server+znver5.tar.xz"
                 ]
             },
             "arm64": {
