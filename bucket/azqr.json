@@ -1,1 +1,37 @@
-{"version":"3.2.0-preview.7","description":"Azure Quick Review (azqr) is a CLI tool specifically designed to analyze Azure resources and identify whether they comply with Azure's best practices and recommendations.","homepage":"https://azure.github.io/azqr","license":"MIT","architecture":{"64bit":{"url":"https://github.com/Azure/azqr/releases/download/v.3.2.0-preview.7/azqr-win-amd64.zip","extract_dir":"bin\\windows_amd64","hash":"c94752b04e3280374c544d67538e2f267daa4b9106084cc9c9fc74ce45d411eb"},"arm64":{"url":"https://github.com/Azure/azqr/releases/download/v.3.2.0-preview.7/azqr-win-arm64.zip","extract_dir":"bin\\windows_arm64","hash":"541ade9e1b0566b48243cc5894a6d1944af58841018843744df36168f3fab67c"}},"bin":"azqr.exe","checkver":{"url":"https://github.com/Azure/azqr/releases.atom","regex":"Repository/\\d+/v.(.+?)<"},"autoupdate":{"architecture":{"64bit":{"url":"https://github.com/Azure/azqr/releases/download/v.$version/azqr-win-amd64.zip"},"arm64":{"url":"https://github.com/Azure/azqr/releases/download/v.$version/azqr-win-arm64.zip"}},"hash":{"url":"$url.sha256","regex":"$sha256"}},"from":"https://github.com/hoilc/scoop-lemon"}
+{
+    "version": "3.2.0-preview.7",
+    "description": "Azure Quick Review (azqr) is a CLI tool specifically designed to analyze Azure resources and identify whether they comply with Azure's best practices and recommendations.",
+    "homepage": "https://azure.github.io/azqr",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Azure/azqr/releases/download/v.3.2.0-preview.7/azqr-win-amd64.zip",
+            "extract_dir": "bin\\windows_amd64",
+            "hash": "c94752b04e3280374c544d67538e2f267daa4b9106084cc9c9fc74ce45d411eb"
+        },
+        "arm64": {
+            "url": "https://github.com/Azure/azqr/releases/download/v.3.2.0-preview.7/azqr-win-arm64.zip",
+            "extract_dir": "bin\\windows_arm64",
+            "hash": "541ade9e1b0566b48243cc5894a6d1944af58841018843744df36168f3fab67c"
+        }
+    },
+    "bin": "azqr.exe",
+    "checkver": {
+        "url": "https://github.com/Azure/azqr/releases.atom",
+        "regex": "Repository/\\d+/v.(.+?)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Azure/azqr/releases/download/v.$version/azqr-win-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Azure/azqr/releases/download/v.$version/azqr-win-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256",
+            "regex": "$sha256"
+        }
+    }
+}
