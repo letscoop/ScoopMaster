@@ -1,35 +1,33 @@
 {
-    "version": "2.109.1-beta.1",
-    "description": "Supabase CLI (beta channel).",
-    "homepage": "https://supabase.com",
+    "version": "2.109.1-beta.3",
+    "description": "Supabase CLI",
+    "homepage": "https://supabase.com/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/supabase/cli/releases/download/v2.109.1-beta.1/supabase_2.109.1-beta.1_windows_amd64.zip",
-            "hash": "27d3d4dadd6ad771cada0c8d912a0c9d03b359a7586b830a8166b7589e08f65e"
+            "url": "https://github.com/supabase/cli/releases/download/v2.109.1-beta.3/supabase_windows_amd64.tar.gz",
+            "hash": "ed9936c8928359e02a3b663070f4cdc6ea8ef3d92310351336e543d89d29fcf5"
         },
         "arm64": {
-            "url": "https://github.com/supabase/cli/releases/download/v2.109.1-beta.1/supabase_2.109.1-beta.1_windows_arm64.zip",
-            "hash": "ab10111b6c6ec815416d17a2bb8e9e81fb2c72dbdcf03f71800e8ce34010c0d6"
+            "url": "https://github.com/supabase/cli/releases/download/v2.109.1-beta.3/supabase_windows_arm64.tar.gz",
+            "hash": "4384bec3f5fad2b84e10e79c153d856ded7fcc96f836a59ed0650573cac0a7c4"
         }
     },
     "bin": "supabase.exe",
     "checkver": {
-        "github": "https://api.github.com/repos/supabase/cli/releases",
-        "jsonpath": "$[*].tag_name",
-        "regex": "\"v([\\d.]+-beta\\.\\d+)\""
+        "github": "https://github.com/supabase/cli"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_$version_windows_amd64.zip"
+                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_windows_amd64.tar.gz"
             },
             "arm64": {
-                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_$version_windows_arm64.zip"
+                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_windows_arm64.tar.gz"
             }
         },
         "hash": {
-            "url": "$baseurl/checksums.txt"
+            "url": "$baseurl/supabase_$version_checksums.txt"
         }
     }
 }
