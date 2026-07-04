@@ -1,46 +1,32 @@
 {
     "version": "1.16.0",
-    "description": "Reasonix Desktop (Wails shell) | A native desktop window around the Reasonix Go kernel.",
-    "homepage": "https://reasonix.io/",
+    "description": "Tauri desktop client for DeepSeek-Reasonix",
+    "homepage": "https://github.com/esengine/DeepSeek-Reasonix",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v1.16.0/Reasonix-windows-amd64.zip",
-            "hash": "a24c44868c850bc752295a79282d502fe2bc07e849c1c9d9db3a886cb7f5a62e"
-        },
-        "arm64": {
-            "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v1.16.0/Reasonix-windows-arm64.zip",
-            "hash": "a234f3a620b8acf19ac09b65fed13bc73659938a51847b3c782a42a97251b02d"
+            "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v1.16.0/Reasonix-windows-amd64-installer.exe",
+            "hash": "c668dd7bc9ab65fd589f213e304e9de56f9d8503d3d187d7927c33471fffd67f"
         }
     },
+    "pre_install": [
+        "& 7z.exe x \"$dir\\Reasonix-windows-amd64-installer.exe\" -o\"$dir\" -y | Out-Null",
+        "Remove-Item \"$dir\\Reasonix-windows-amd64-installer.exe\", (Join-Path $dir '$PLUGINSDIR'), \"$dir\\webview2bootstrapper\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
     "shortcuts": [
         [
-            "Reasonix.exe",
-            "Reasonix"
+            "reasonix-desktop.exe",
+            "Reasonix Desktop"
         ]
-    ],
-    "installer": {
-        "script": [
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "New-PersistDirectory \"$env:APPDATA\\reasonix\" \"$persist_dir\\AppData\" -Migrate"
-        ]
-    },
-    "pre_uninstall": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Remove-Junction \"$env:APPDATA\\reasonix\""
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/esengine/DeepSeek-Reasonix/releases?per_page=1",
-        "jsonpath": "$.[0].tag_name",
-        "regex": "v([\\d.]+)"
+        "url": "https://github.com/esengine/DeepSeek-Reasonix/releases",
+        "regex": "tag/desktop-v(?<version>[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v$version/Reasonix-windows-amd64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v$version/Reasonix-windows-arm64.zip"
+                "url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/desktop-v$version/Reasonix-windows-amd64-installer.exe"
             }
         }
     }
