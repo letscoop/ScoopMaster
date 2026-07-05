@@ -1,1 +1,43 @@
-{"version":"0.37.5","description":"Catch broken agent configs before your AI tools silently ignore them.","homepage":"https://github.com/agent-sh/agnix","license":"Apache-2.0|MIT","suggest":{"vcredist":"extras/vcredist2022"},"architecture":{"64bit":{"url":["https://github.com/agent-sh/agnix/releases/download/v0.37.5/agnix-x86_64-pc-windows-msvc.zip","https://github.com/agent-sh/agnix/releases/download/v0.37.5/agnix-lsp-x86_64-pc-windows-msvc.zip","https://github.com/agent-sh/agnix/releases/download/v0.37.5/agnix-mcp-x86_64-pc-windows-msvc.zip"],"hash":["a570b6a9df4c5ab65cebf3c0d6596b73a27413ced7cda60a5252b636ba644969","5abe2f70f36df2f256990152c9251d6980b247c8553d6a60fe4157c988995422","1d81b892672df596ce60631f15a108145c3f7d588e74f10c71484a6f60b83a76"]}},"bin":["agnix.exe","agnix-lsp.exe","agnix-mcp.exe"],"checkver":"github","autoupdate":{"architecture":{"64bit":{"url":["https://github.com/agent-sh/agnix/releases/download/v$version/agnix-x86_64-pc-windows-msvc.zip","https://github.com/agent-sh/agnix/releases/download/v$version/agnix-lsp-x86_64-pc-windows-msvc.zip","https://github.com/agent-sh/agnix/releases/download/v$version/agnix-mcp-x86_64-pc-windows-msvc.zip"],"hash":{"url":"$url.sha256"}}}},"from":"https://github.com/scillidan/scoop-pile"}
+{
+    "version": "0.37.5",
+    "description": "Catch broken agent configs before your AI tools silently ignore them.",
+    "homepage": "https://github.com/agent-sh/agnix",
+    "license": "Apache-2.0|MIT",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://github.com/agent-sh/agnix/releases/download/v0.37.5/agnix-x86_64-pc-windows-msvc.zip",
+                "https://github.com/agent-sh/agnix/releases/download/v0.37.5/agnix-lsp-x86_64-pc-windows-msvc.zip",
+                "https://github.com/agent-sh/agnix/releases/download/v0.37.5/agnix-mcp-x86_64-pc-windows-msvc.zip"
+            ],
+            "hash": [
+                "a570b6a9df4c5ab65cebf3c0d6596b73a27413ced7cda60a5252b636ba644969",
+                "5abe2f70f36df2f256990152c9251d6980b247c8553d6a60fe4157c988995422",
+                "1d81b892672df596ce60631f15a108145c3f7d588e74f10c71484a6f60b83a76"
+            ]
+        }
+    },
+    "bin": [
+        "agnix.exe",
+        "agnix-lsp.exe",
+        "agnix-mcp.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://github.com/agent-sh/agnix/releases/download/v$version/agnix-x86_64-pc-windows-msvc.zip",
+                    "https://github.com/agent-sh/agnix/releases/download/v$version/agnix-lsp-x86_64-pc-windows-msvc.zip",
+                    "https://github.com/agent-sh/agnix/releases/download/v$version/agnix-mcp-x86_64-pc-windows-msvc.zip"
+                ],
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
