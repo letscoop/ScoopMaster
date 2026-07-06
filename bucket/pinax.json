@@ -1,19 +1,19 @@
 {
-    "version": "0.1.3",
+    "version": "0.1.5",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yeisme/pinax/releases/download/v0.1.3/pinax_0.1.3_windows_x86_64.zip",
+            "url": "https://github.com/yeisme/pinax/releases/download/v0.1.5/pinax_0.1.5_windows_x86_64.zip",
             "bin": [
                 "pinax.exe"
             ],
-            "hash": "c71acf76497f0351da980c9b02c05e26e76d65bde4e8cf4597ff9c1d5bf4071b"
+            "hash": "64c10e1ba15188b308d368c4d9b22b81ef5a1d9e94256866efcb822ad1aed68d"
         },
         "arm64": {
-            "url": "https://github.com/yeisme/pinax/releases/download/v0.1.3/pinax_0.1.3_windows_aarch64.zip",
+            "url": "https://github.com/yeisme/pinax/releases/download/v0.1.5/pinax_0.1.5_windows_aarch64.zip",
             "bin": [
                 "pinax.exe"
             ],
-            "hash": "b4193c0067817a17600c49c24ea3c5e37c753ba560ee2af9ee9c682ff8f3c41c"
+            "hash": "6c664207dd08620153a2a06713915a11f052401fa7bf1bc4538a4daf8203ed23"
         }
     },
     "homepage": "https://github.com/yeisme/pinax",
