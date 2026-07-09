@@ -1,5 +1,4 @@
 {
-    "##": "基于https://github.com/ScoopInstaller/Main/blob/master/bucket/eza.json",
     "version": "0.23.5",
     "description": "A modern, maintained replacement for ls, built on exa.",
     "homepage": "https://github.com/eza-community/eza",
@@ -17,10 +16,6 @@
             "exa"
         ]
     ],
-    "persist": "config",
-    "env_set": {
-        "EZA_CONFIG_DIR": "$dir\\config"
-    },
     "checkver": "github",
     "autoupdate": {
         "architecture": {
