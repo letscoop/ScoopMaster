@@ -1,29 +1,40 @@
 {
-    "version": "0.63.0",
-    "description": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device. It's like your personal Spotify!",
+    "version": "0.63.1",
+    "description": "🎧☁️ Your Personal Streaming Service",
     "homepage": "https://www.navidrome.org/",
-    "license": "GPL-3.0",
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/navidrome/navidrome#GPL-3.0-1-ov-file"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/navidrome/navidrome/releases/download/v0.63.0/navidrome_0.63.0_windows_amd64.zip",
-            "hash": "b4e2e32a08daf1091f145c429190155beca155c54d0e1aa5f308660993b869f8"
+            "url": "https://github.com/navidrome/navidrome/releases/download/v0.63.1/navidrome_0.63.1_windows_amd64_installer.msi",
+            "hash": "debba60982ce6fb10f69809246dca225eed470b2f783e834156ad7b0ced0da9b"
         },
         "32bit": {
-            "url": "https://github.com/navidrome/navidrome/releases/download/v0.63.0/navidrome_0.63.0_windows_386.zip",
-            "hash": "7f824942ace7c5ccbea9c5d349b13e2f3e6fa04355ba3a4f41fd3d3a1c927b54"
+            "url": "https://github.com/navidrome/navidrome/releases/download/v0.63.1/navidrome_0.63.1_windows_386_installer.msi",
+            "hash": "349c48b058db83fbab19ce5aa07e7469bb281a262c67d86b0fcd8052427beac6"
         }
     },
-    "bin": "navidrome.exe",
+    "bin": "Navidrome\\navidrome.exe",
+    "shortcuts": [
+        [
+            "Navidrome\\navidrome.exe",
+            "navidrome"
+        ]
+    ],
     "checkver": {
-        "github": "https://github.com/navidrome/navidrome/"
+        "github": "https://api.github.com/repos/navidrome/navidrome/releases",
+        "jp": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/navidrome/navidrome/releases/download/v$version/navidrome_$version_windows_amd64.zip"
+                "url": "https://github.com/navidrome/navidrome/releases/download/v$version/navidrome_$version_windows_amd64_installer.msi"
             },
             "32bit": {
-                "url": "https://github.com/navidrome/navidrome/releases/download/v$version/navidrome_$version_windows_386.zip"
+                "url": "https://github.com/navidrome/navidrome/releases/download/v$version/navidrome_$version_windows_386_installer.msi"
             }
         },
         "hash": {
