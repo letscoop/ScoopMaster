@@ -1,39 +1,35 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "2.1.33",
-    "description": "Free, local, open-source 24/7 Cowork app and OpenClaw for Gemini CLI, Claude Code, Codex, OpenCode, Qwen Code, Goose CLI, Auggie, and more",
+    "description": "AionUi - AI-powered desktop application",
     "homepage": "https://github.com/iOfficeAI/AionUi",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v2.1.33/AionUi-2.1.33-win-x64.exe#/dl.7z",
+            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v2.1.33/AionUi-2.1.33-win-x64.exe",
             "hash": "76ebda90273838a2bb1cd0ba4c42fb0b72093bf43f237106865fa35f2e195eca"
         },
         "arm64": {
-            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v2.1.33/AionUi-2.1.33-win-arm64.exe#/dl.7z",
+            "url": "https://github.com/iOfficeAI/AionUi/releases/download/v2.1.33/AionUi-2.1.33-win-arm64.exe",
             "hash": "d77b6044b0f7a43b829758be47ce1757a8bfe25c3196a6efd7ed3affda0a25b5"
         }
     },
+    "bin": "AionUi.exe",
     "shortcuts": [
         [
             "AionUi.exe",
             "AionUi"
         ]
     ],
-    "bin": [
-        [
-            "AionUi.exe",
-            "aionui"
-        ]
-    ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/iOfficeAI/AionUi"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-x64.exe#/dl.7z"
+                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-x64.exe"
             },
             "arm64": {
-                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-arm64.exe#/dl.7z"
+                "url": "https://github.com/iOfficeAI/AionUi/releases/download/v$version/AionUi-$version-win-arm64.exe"
             }
         }
     }
