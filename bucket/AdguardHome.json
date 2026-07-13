@@ -1,8 +1,7 @@
 {
     "version": "0.107.78",
-    "description": "AdGuardHome. Network-wide ads & trackers blocking DNS server",
-    "homepage": "https://github.com/AdguardTeam/AdGuardHome",
-    "notes": "Running as a service: AdGuardHome -s install (https://adguard-dns.io/kb/zh-CN/adguard-home/getting-started/#service)",
+    "description": "Network-wide ads & trackers blocking DNS server",
+    "homepage": "https://adguard.com/en/adguard-home/overview.html",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
@@ -12,20 +11,27 @@
         "32bit": {
             "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.107.78/AdGuardHome_windows_386.zip",
             "hash": "1be07b35765db199f88be3838473ba7682ef51dc58217dd49142c1650b5a4532"
+        },
+        "arm64": {
+            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.107.78/AdGuardHome_windows_arm64.zip",
+            "hash": "416f3e1f9a27a5704f51a63c8a3d07852e4bef390049722e6633c62ce657c4ba"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\AdGuardHome.yaml\")) { New-Item \"$dir\\AdGuardHome.yaml\" | Out-Null }",
-    "pre_uninstall": [
-        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-        "if (!(Test-Path \"$persist_dir\\vicrac.test\")) { }",
-        "Start-Process -Wait \"$dir\\AdGuardHome.exe\" -ArgumentList '-s stop' | Out-Null",
-        "Start-Process -Wait \"$dir\\AdGuardHome.exe\" -ArgumentList '-s uninstall' | Out-Null"
-    ],
     "extract_dir": "AdGuardHome",
+    "pre_install": [
+        "# Manually copy the configuration file if it exists, otherwise create an empty one causing AdGuard Home to fail to start",
+        "if (Test-Path -LiteralPath \"$persist_dir\\AdGuardHome.yaml\" -PathType Leaf) {",
+        "    Copy-Item -LiteralPath \"$persist_dir\\AdGuardHome.yaml\" -Destination \"$dir\\AdGuardHome.yaml\" -Force",
+        "}"
+    ],
     "bin": "AdGuardHome.exe",
-    "persist": [
-        "data",
-        "AdGuardHome.yaml"
+    "persist": "data",
+    "pre_uninstall": [
+        "# Manually copy the configuration file if it exists, otherwise create an empty one causing AdGuard Home to fail to start",
+        "if (Test-Path -LiteralPath \"$dir\\AdGuardHome.yaml\" -PathType Leaf) {",
+        "    ensure \"$persist_dir\" | Out-Null",
+        "    Copy-Item -LiteralPath \"$dir\\AdGuardHome.yaml\" -Destination \"$persist_dir\\AdGuardHome.yaml\" -Force",
+        "}"
     ],
     "checkver": {
         "github": "https://github.com/AdguardTeam/AdGuardHome"
@@ -37,7 +43,13 @@
             },
             "32bit": {
                 "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v$version/AdGuardHome_windows_386.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v$version/AdGuardHome_windows_arm64.zip"
             }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
         }
     }
 }
