@@ -1,28 +1,22 @@
 {
     "version": "1.4.17",
-    "description": "leetgo is a command line tool for leetcode.com. It can help you to login, submit, test, and view your submissions.",
-    "homepage": "https://github.com/j178/leetgo",
-    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/j178/leetgo/releases/download/v1.4.17/leetgo_windows_x86_64.zip",
+            "bin": [
+                "leetgo.exe"
+            ],
             "hash": "0c7015712a617532de99f3a08451227a4e4a191069f6ff96390997698dcbda14"
         },
         "arm64": {
             "url": "https://github.com/j178/leetgo/releases/download/v1.4.17/leetgo_windows_arm64.zip",
+            "bin": [
+                "leetgo.exe"
+            ],
             "hash": "17b63399ea6dfa0eb666337067bdad16cdfa54d65da208ea97a37f621019a928"
         }
     },
-    "bin": "leetgo.exe",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/j178/leetgo/releases/download/v$version/leetgo_windows_x86_64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/j178/leetgo/releases/download/v$version/leetgo_windows_arm64.zip"
-            }
-        }
-    }
+    "homepage": "https://github.com/j178/leetgo",
+    "license": "MIT",
+    "description": "leetgo is a command line tool for leetcode.com. It can help you to login, submit, test, and view your submissions."
 }
