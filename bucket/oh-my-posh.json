@@ -14,6 +14,16 @@
                 "d1a79400728eb84d22d75989d7bee59b91724a5a1bc413e61b37e52691404950",
                 "effa74ca461c6e467dd1c35801163697bf2055cf2fc9716550b0137cf89d9038"
             ]
+        },
+        "arm64": {
+            "url": [
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.28.0/themes.zip",
+                "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v29.28.0/posh-windows-arm64.exe#/oh-my-posh.exe"
+            ],
+            "hash": [
+                "d1a79400728eb84d22d75989d7bee59b91724a5a1bc413e61b37e52691404950",
+                "f8174f9551c9a378388a1f1c7f8d2adc8923bf609cedb14d3bcbb26232b04c40"
+            ]
         }
     },
     "extract_to": "themes",
@@ -31,10 +41,13 @@
                     "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/themes.zip",
                     "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-amd64.exe#/oh-my-posh.exe"
                 ]
+            },
+            "arm64": {
+                "url": [
+                    "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/themes.zip",
+                    "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$version/posh-windows-arm64.exe#/oh-my-posh.exe"
+                ]
             }
-        },
-        "hash": {
-            "url": "$url.sha256"
         }
     }
 }
