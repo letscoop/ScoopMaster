@@ -4,6 +4,7 @@
     "homepage": "https://github.com/dotnet/install-scripts",
     "license": "MIT",
     "url": "https://github.com/dotnet/install-scripts/archive/refs/tags/v2026.05.19.zip",
+    "hash": "04a18f7bda3e15b16d8c13c271939a90f322793fe3f3651508d3249e3cc2355d",
     "extract_dir": "install-scripts-2026.05.19",
     "bin": "src\\dotnet-install.ps1",
     "checkver": {
@@ -12,9 +13,6 @@
     },
     "autoupdate": {
         "url": "https://github.com/dotnet/install-scripts/archive/refs/tags/v$version.zip",
-        "extract_dir": "install-scripts-$version",
-        "hash": {
-            "url": "$url.sha256"
-        }
+        "extract_dir": "install-scripts-$version"
     }
 }
