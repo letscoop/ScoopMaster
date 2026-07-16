@@ -1,22 +1,28 @@
 {
-    "version": "42.56.2",
-    "description": "A Windows desktop rapid programming platform",
+    "version": "42.56.3",
+    "description": "aardio 编程语言，专注于桌面软件快速开发",
     "homepage": "https://www.aardio.com/",
-    "license": "freeware",
-    "url": "https://www.aardio.com/download/ide/aardio.7z",
-    "hash": "415f2a869c31598dade49c7287a261e98b718ae6c2db8c494a0841456c3313b1",
+    "license": "Freeware",
+    "url": "https://d.aardio.com/ide/aardio.7z",
+    "hash": "7752a7fa3372dd526f7b7162ec131c653e69f7570a94825e47417d977639af15",
+    "bin": "aardio.exe",
     "shortcuts": [
         [
             "aardio.exe",
             "aardio"
         ]
     ],
-    "persist": "config\\USR.CFG",
+    "persist": [
+        "config",
+        "download",
+        "project",
+        "codes\\我的代码段"
+    ],
     "checkver": {
-        "url": "https://ide.update.aardio.com/log/",
-        "regex": "aardio v([\\d\\.]+)"
+        "url": "http://d.aardio.com/ide/check/",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://www.aardio.com/download/ide/aardio.7z"
+        "url": "https://d.aardio.com/ide/aardio.7z"
     }
 }
