@@ -1,26 +1,27 @@
 {
-    "version": "4.9.7.3",
-    "description": "ToDesk Windows客户端",
     "homepage": "https://www.todesk.com/",
-    "license": {
-        "identifier": "Unknown",
-        "url": "https://www.todesk.com/pricing.html"
-    },
-    "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-    "hash": "4055f47da713ea1971eb0421489b14bb06aa7b444835406ccbb568e7b794281c",
+    "description": "A unlimited speed multifunctional remote control software",
+    "version": "4.9.7.3",
+    "license": "Proprietary",
+    "url": "https://dl.todesk.com/irrigation/ToDesk_4.9.7.3.exe#/dl.7z",
+    "hash": "14fef5d4d1bbad061b8c5c9c94065fda9fc8123a444d9970c3194aa5da792d2a",
     "pre_install": [
-        "Expand-7ZipArchive \"$dir\\app64.7z\" \"$dir\"",
-        "Remove-Item -R -Path \"$dir\\`$PLUGINSDIR\"",
-        "Write-Host `$null >> \"$dir\\config.ini\""
+        "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
+        "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
+        "}"
     ],
+    "installer": {
+        "script": "Expand-7zipArchive -Path \"$dir\\app64.7z\" -DestinationPath $dir"
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\", \"$dir\\app32.7z\", \"$dir\\app64.7z\" -Force -Recurse",
     "shortcuts": [
         [
             "ToDesk.exe",
-            "To Desk"
+            "ToDesk"
         ]
     ],
     "persist": [
-        "record",
+        "Logs",
         "config.ini"
     ],
     "checkver": {
@@ -28,9 +29,6 @@
         "regex": ">([\\d.]+)</div>"
     },
     "autoupdate": {
-        "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-        "hash": {
-            "mode": "download"
-        }
+        "url": "https://dl.todesk.com/irrigation/ToDesk_$version.exe#/dl.7z"
     }
 }
