@@ -1,37 +1,37 @@
 {
-    "homepage": "https://monkeysaudio.com/",
-    "version": "13.19",
-    "license": "",
-    "architecture": {
-        "64bit": {
-            "url": "https://monkeysaudio.com/files/MAC_1319_x64.exe",
-            "hash": "931ae83ea64d6c6fbc8d4a816a5eaffef8c7c8598040ae4fc3619ee42705ec0b"
-        },
-        "32bit": {
-            "url": "https://monkeysaudio.com/files/MAC_1319.exe",
-            "hash": "ffe29b20dff44e7ceb30bef88b03b2bd6df975727839cc35c6dcb43c0a7e5af6"
-        }
+  "homepage": "https://monkeysaudio.com/",
+  "version": "13.19",
+  "license": "",
+  "architecture": {
+    "64bit": {
+      "url": "https://monkeysaudio.com/files/MAC_1319_x64.exe",
+      "hash": "931ae83ea64d6c6fbc8d4a816a5eaffef8c7c8598040ae4fc3619ee42705ec0b"
     },
-    "innosetup": true,
-    "bin": [
-        "MAC.exe",
-        "Monkey's Audio.exe"
-    ],
-    "shortcuts": [
-        [
-            "Monkey's Audio.exe",
-            "Monkey's Audio"
-        ]
-    ],
-    "checkver": "([\\d.]+) <small>",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://monkeysaudio.com/files/MAC_$cleanVersion_x64.exe"
-            },
-            "32bit": {
-                "url": "https://monkeysaudio.com/files/MAC_$cleanVersion.exe"
-            }
-        }
+    "32bit": {
+      "url": "https://monkeysaudio.com/files/MAC_1319.exe",
+      "hash": "ffe29b20dff44e7ceb30bef88b03b2bd6df975727839cc35c6dcb43c0a7e5af6"
     }
+  },
+  "innosetup": true,
+  "bin": [
+    "MAC.exe",
+    "Monkey's Audio.exe"
+  ],
+  "shortcuts": [
+    [
+      "Monkey's Audio.exe",
+      "Monkey's Audio"
+    ]
+  ],
+  "checkver": "([\\d.]+) <small>",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://monkeysaudio.com/files/MAC_$cleanVersion_x64.exe"
+      },
+      "32bit": {
+        "url": "https://monkeysaudio.com/files/MAC_$cleanVersion.exe"
+      }
+    }
+  }
 }
