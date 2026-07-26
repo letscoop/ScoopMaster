@@ -1,7 +1,7 @@
 {
-    "version": "2.63.20",
-    "description": "Web File Browser",
     "homepage": "https://filebrowser.org/",
+    "description": "Web File Browser",
+    "version": "2.63.20",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
@@ -11,10 +11,6 @@
         "32bit": {
             "url": "https://github.com/filebrowser/filebrowser/releases/download/v2.63.20/windows-386-filebrowser.zip",
             "hash": "6468352dcae63762c1ea26df65aebf8c33f3fec10698deaad7b330058bd7cb1f"
-        },
-        "arm64": {
-            "url": "https://github.com/filebrowser/filebrowser/releases/download/v2.63.20/windows-arm64-filebrowser.zip",
-            "hash": "fad8f8ce6b9ddd5d135685fa3df8434064f30dbe8ccf66489145a20479a2469d"
         }
     },
     "bin": "filebrowser.exe",
@@ -24,26 +20,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-amd64-filebrowser.zip",
-                "hash": {
-                    "url": "$baseurl/filebrowser_$version_checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
+                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-amd64-filebrowser.zip"
             },
             "32bit": {
-                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-386-filebrowser.zip",
-                "hash": {
-                    "url": "$baseurl/filebrowser_$version_checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
-            },
-            "arm64": {
-                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-arm64-filebrowser.zip",
-                "hash": {
-                    "url": "$baseurl/filebrowser_$version_checksums.txt",
-                    "regex": "$sha256\\s+$basename"
-                }
+                "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/windows-386-filebrowser.zip"
             }
+        },
+        "hash": {
+            "url": "https://github.com/filebrowser/filebrowser/releases/download/v$version/filebrowser_$version_checksums.txt"
         }
     }
 }
