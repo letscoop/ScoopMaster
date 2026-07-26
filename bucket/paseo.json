@@ -1,8 +1,17 @@
 {
     "version": "0.2.2",
-    "description": "Orchestrate multiple coding agents from desktop and mobile",
+    "description": "Coding agents from your phone, desktop and CLI (Desktop Edition)",
     "homepage": "https://paseo.sh",
     "license": "AGPL-3.0-only",
+    "notes": [
+        "Paseo uses a local daemon to manage coding agents.",
+        "Desktop: opening the Paseo app starts the daemon automatically.",
+        "CLI / headless:",
+        "  paseo daemon start     # start the daemon",
+        "  paseo daemon status    # check status",
+        "  paseo daemon stop      # stop the daemon",
+        "CLI reference: https://paseo.sh/docs/cli"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/getpaseo/paseo/releases/download/v0.2.2/Paseo-Setup-0.2.2-x64.zip",
@@ -13,12 +22,7 @@
             "hash": "3905bbc4d35d05dcb430c7a5b5213fc26c365589c2b21a77a39f24bdab65a463"
         }
     },
-    "bin": [
-        [
-            "resources\\bin\\paseo.cmd",
-            "paseo"
-        ]
-    ],
+    "bin": "resources\\bin\\paseo.cmd",
     "shortcuts": [
         [
             "Paseo.exe",
