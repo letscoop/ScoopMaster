@@ -1,33 +1,35 @@
 {
     "version": "2.110.0-beta.40",
-    "description": "Supabase CLI",
-    "homepage": "https://supabase.com/",
+    "description": "Supabase CLI (beta channel).",
+    "homepage": "https://supabase.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/supabase/cli/releases/download/v2.110.0-beta.40/supabase_windows_amd64.tar.gz",
-            "hash": "540bf5cb85f1f011ac6b583afd8adb56ad9dad46d8d1eea6d42b03d327be3491"
+            "url": "https://github.com/supabase/cli/releases/download/v2.110.0-beta.40/supabase_2.110.0-beta.40_windows_amd64.zip",
+            "hash": "b5fc2a4c857aefed7031f736be968627f70e509f0b4a9b0acba2e4a806c30691"
         },
         "arm64": {
-            "url": "https://github.com/supabase/cli/releases/download/v2.110.0-beta.40/supabase_windows_arm64.tar.gz",
-            "hash": "139f7ead074df4e1c54047beffb3fb27d391474730823b725b8a9c5bd9d37bfd"
+            "url": "https://github.com/supabase/cli/releases/download/v2.110.0-beta.40/supabase_2.110.0-beta.40_windows_arm64.zip",
+            "hash": "ea8ce418cee985d8cc7fcc4239508b3fcbd9b620ce2562e3bc3bf6d00c2a3a6a"
         }
     },
     "bin": "supabase.exe",
     "checkver": {
-        "github": "https://github.com/supabase/cli"
+        "github": "https://api.github.com/repos/supabase/cli/releases",
+        "jsonpath": "$[*].tag_name",
+        "regex": "\"v([\\d.]+-beta\\.\\d+)\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_windows_amd64.tar.gz"
+                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_$version_windows_amd64.zip"
             },
             "arm64": {
-                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_windows_arm64.tar.gz"
+                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_$version_windows_arm64.zip"
             }
         },
         "hash": {
-            "url": "$baseurl/supabase_$version_checksums.txt"
+            "url": "$baseurl/checksums.txt"
         }
     }
 }
