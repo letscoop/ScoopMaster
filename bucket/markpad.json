@@ -13,13 +13,7 @@
             "hash": "bf866014f58a440a6e3b99deb1811443f15bb059f36eba86f6f6d75b69452633"
         }
     },
-    "bin": "Markpad.exe",
-    "shortcuts": [
-        [
-            "Markpad.exe",
-            "Markpad"
-        ]
-    ],
+    "bin": "markpad.exe",
     "checkver": {
         "github": "https://github.com/alecdotdev/Markpad"
     },
