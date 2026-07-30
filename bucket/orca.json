@@ -1,21 +1,19 @@
 {
     "version": "1.4.161",
-    "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription.",
-    "homepage": "https://onOrca.dev",
+    "description": "Agent development environment for working with a fleet of parallel coding agents.",
+    "homepage": "https://github.com/stablyai/orca",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/stablyai/orca/releases/download/v1.4.161/orca-windows-setup.exe#/dl.7z",
-            "hash": "a8d00e791fdaa016b0e0f17c1cc235d5e30485fa2751d7bdc0a2150e8345d943"
+            "hash": "sha512:139d8f513b7fda8669656642f792bd2d6dfaa06caec1db73f26a094a926c27a16e727d0a5ac176ac54d9665571b8154fdace657b5ac8a18bb18bafcbb85fc7e5"
         }
     },
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
-    ],
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Get-ChildItem \"$dir\" -Filter '$*' | Remove-Item -Recurse -Force",
     "bin": [
         [
-            "resources\\bin\\orca.cmd",
+            "resources\\bin\\orca.exe",
             "orca"
         ]
     ],
@@ -26,15 +24,17 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/stablyai/orca"
+        "url": "https://api.github.com/repos/stablyai/orca/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^v([\\d.]+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe#/dl.7z",
                 "hash": {
-                    "url": "https://api.github.com/repos/stablyai/orca/releases/tags/v$version",
-                    "regex": "\\\"name\\\":\\s*\\\"orca-windows-setup\\.exe\\\"[\\s\\S]*?\\\"digest\\\":\\s*\\\"sha256:([a-fA-F0-9]{64})\\\""
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
                 }
             }
         }
