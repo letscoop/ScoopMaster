@@ -1,80 +1,80 @@
 {
-    "version": "20260729-41db79f4",
-    "description": "PEASS - Privilege Escalation Awesome Scripts SUITE (with colors).",
-    "homepage": "https://github.com/peass-ng/PEASS-ng",
-    "license": "GNU GENERAL PUBLIC LICENSE",
-    "url": [
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas.sh",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_darwin_amd64",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_darwin_arm64",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_fat.sh",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_386",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_amd64",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_arm",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_arm64",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEAS.bat",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASany.exe",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASany_ofs.exe",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx64.exe",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx64_ofs.exe",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx86.exe",
-        "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx86_ofs.exe"
+  "version": "20260729-41db79f4",
+  "description": "PEASS - Privilege Escalation Awesome Scripts SUITE (with colors).",
+  "homepage": "https://github.com/peass-ng/PEASS-ng",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "url": [
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas.sh",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_darwin_amd64",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_darwin_arm64",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_fat.sh",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_386",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_amd64",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_arm",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/linpeas_linux_arm64",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEAS.bat",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASany.exe",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASany_ofs.exe",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx64.exe",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx64_ofs.exe",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx86.exe",
+    "https://github.com/peass-ng/PEASS-ng/releases/download/20260729-41db79f4/winPEASx86_ofs.exe"
+  ],
+  "hash": [
+    "78f995eb575ff62e7b4a129918bcc371cf0160257a1ce1794e97d814bc880dae",
+    "3e885f8d240ffcea1f8c016d1aba351604d467ff114150f59006ded984e31995",
+    "a3a9555ce5d7bf086e1c68a3590c2e07a982795f6c31270b5b9d30b3d2070473",
+    "1cad5499c07ce60ec6dcf486047031537165da76e992af802092fd2adf21992b",
+    "b613a05cdb4af200d4a7e9776dc627347c50d97c962694220984bba5cd4adf45",
+    "6d87d6c2c0d52f819ec5bf77b59b2693e82bce7bf134976591861a466cce7710",
+    "23a06425a18368512fb6c9ae5f0db1dcf5cdd94354aac8ce7a5920be1d5186e3",
+    "fb3a52b53dac340baf6605ce0b07096552fad6820c9a886844b831eab827d2b2",
+    "11e4ea92ce2465f3d30c5a56fd4aeba2aecaf4d1c2670ac42bd61c4db2becf87",
+    "3a9aba381f0420afad85dfb9fee5573c2d1b580a097fab4b675b39a933028acd",
+    "ac8d09b0ae09b599408337a81d88c4542bdeaa95a2db9f6c7716ee8689914aa2",
+    "4db244f2f9b6910d28b349180c012ed18db18b33844f66bfbe1900eee9150c33",
+    "1213b76b5cf4af7122422edff38969106e25aaebcf15a5ae1774d9f49070c9ff",
+    "81db759ce477fffb698b51dafca2a04741e901b955286eac965dfd0913744a8d",
+    "ed969985d82abbbee9068ce46e795b4a0fd1cb9e283407f7ea73ebf8c079e773"
+  ],
+  "bin": [
+    [
+      "winPEASx64.exe",
+      "winPEASx64"
     ],
-    "hash": [
-        "78f995eb575ff62e7b4a129918bcc371cf0160257a1ce1794e97d814bc880dae",
-        "3e885f8d240ffcea1f8c016d1aba351604d467ff114150f59006ded984e31995",
-        "a3a9555ce5d7bf086e1c68a3590c2e07a982795f6c31270b5b9d30b3d2070473",
-        "1cad5499c07ce60ec6dcf486047031537165da76e992af802092fd2adf21992b",
-        "b613a05cdb4af200d4a7e9776dc627347c50d97c962694220984bba5cd4adf45",
-        "6d87d6c2c0d52f819ec5bf77b59b2693e82bce7bf134976591861a466cce7710",
-        "23a06425a18368512fb6c9ae5f0db1dcf5cdd94354aac8ce7a5920be1d5186e3",
-        "fb3a52b53dac340baf6605ce0b07096552fad6820c9a886844b831eab827d2b2",
-        "11e4ea92ce2465f3d30c5a56fd4aeba2aecaf4d1c2670ac42bd61c4db2becf87",
-        "3a9aba381f0420afad85dfb9fee5573c2d1b580a097fab4b675b39a933028acd",
-        "ac8d09b0ae09b599408337a81d88c4542bdeaa95a2db9f6c7716ee8689914aa2",
-        "4db244f2f9b6910d28b349180c012ed18db18b33844f66bfbe1900eee9150c33",
-        "1213b76b5cf4af7122422edff38969106e25aaebcf15a5ae1774d9f49070c9ff",
-        "81db759ce477fffb698b51dafca2a04741e901b955286eac965dfd0913744a8d",
-        "ed969985d82abbbee9068ce46e795b4a0fd1cb9e283407f7ea73ebf8c079e773"
-    ],
-    "bin": [
-        [
-            "winPEASx64.exe",
-            "winPEASx64"
-        ],
-        [
-            "winPEAS.bat",
-            "winPEAS"
-        ]
-    ],
-    "checkver": {
-        "url": "https://api.github.com/repos/peass-ng/PEASS-ng/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "([\\w-]+)"
-    },
-    "autoupdate": {
-        "url": [
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas.sh",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_darwin_amd64",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_darwin_arm64",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_fat.sh",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_386",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_amd64",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_arm",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_arm64",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEAS.bat",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASany.exe",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASany_ofs.exe",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx64.exe",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx64_ofs.exe",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx86.exe",
-            "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx86_ofs.exe"
-        ]
-    },
-    "notes": [
-        "【工具类型】: 安全测试工具",
-        "【主要功能】: 权限提升脚本套件，包含linpeas和winPEAS，用于检测提权漏洞",
-        "【适用场景】: 权限提升、渗透测试、安全评估",
-        "【技术特点】: 支持Windows和Linux，命令行工具，彩色输出"
+    [
+      "winPEAS.bat",
+      "winPEAS"
     ]
+  ],
+  "checkver": {
+    "url": "https://api.github.com/repos/peass-ng/PEASS-ng/releases/latest",
+    "jsonpath": "$.tag_name",
+    "regex": "([\\w-]+)"
+  },
+  "autoupdate": {
+    "url": [
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas.sh",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_darwin_amd64",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_darwin_arm64",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_fat.sh",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_386",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_amd64",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_arm",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/linpeas_linux_arm64",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEAS.bat",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASany.exe",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASany_ofs.exe",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx64.exe",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx64_ofs.exe",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx86.exe",
+      "https://github.com/peass-ng/PEASS-ng/releases/download/$version/winPEASx86_ofs.exe"
+    ]
+  },
+  "notes": [
+    "【工具类型】: 安全测试工具",
+    "【主要功能】: 权限提升脚本套件，包含linpeas和winPEAS，用于检测提权漏洞",
+    "【适用场景】: 权限提升、渗透测试、安全评估",
+    "【技术特点】: 支持Windows和Linux，命令行工具，彩色输出"
+  ]
 }

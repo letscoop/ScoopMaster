@@ -13,11 +13,11 @@
             "hash": "68b47262a71e94ee5b9ff805d5072cf8d781e2bd8b57674ca0b62ae3f434fabb"
         }
     },
-    "bin": "Markpad.exe",
+    "bin": "markpad.exe",
     "shortcuts": [
         [
-            "Markpad.exe",
-            "Markpad"
+            "markpad.exe",
+            "MarkPad"
         ]
     ],
     "checkver": {
