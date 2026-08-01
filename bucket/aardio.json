@@ -1,11 +1,10 @@
 {
-    "version": "43.7.0",
-    "description": "aardio 编程语言，专注于桌面软件快速开发",
+    "version": "43.7.1",
+    "description": "灵活而强大的动态语言。A flexible and powerful dynamic language.",
     "homepage": "https://www.aardio.com/",
     "license": "Freeware",
     "url": "https://d.aardio.com/ide/aardio.7z",
-    "hash": "08a3eae67e742851bdb3420a942733d9e9a96ea0a0fa343d40135096156a5f0a",
-    "bin": "aardio.exe",
+    "hash": "406c1a40a359d61b8edda8120f148bc766fee78cdc9270fd1f594f0a5863e199",
     "shortcuts": [
         [
             "aardio.exe",
@@ -13,14 +12,12 @@
         ]
     ],
     "persist": [
-        "config",
-        "download",
-        "project",
-        "codes\\我的代码段"
+        "config\\USR.CFG",
+        "project"
     ],
     "checkver": {
-        "url": "http://d.aardio.com/ide/check/",
-        "jsonpath": "$.version"
+        "url": "https://ide.update.aardio.com/log/",
+        "regex": "aardio v([\\d\\.]+)"
     },
     "autoupdate": {
         "url": "https://d.aardio.com/ide/aardio.7z"
