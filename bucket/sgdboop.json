@@ -1,14 +1,14 @@
 {
     "version": "1.4.2",
-    "description": "Applies assets from SteamGridDB directly to your Steam library with a click of a button",
+    "description": "A program used for applying custom artwork to Steam, using SteamGridDB. Supports both Windows and Linux, written completely in C",
     "homepage": "https://github.com/SteamGridDB/SGDBoop",
-    "license": {
-        "identifier": "Zlib",
-        "url": "https://github.com/SteamGridDB/SGDBoop/blob/main/LICENSE"
+    "license": "CC-BY-NC-4.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/SteamGridDB/SGDBoop/releases/download/v1.4.2/sgdboop-win64.zip",
+            "hash": "232209ce5b742e0190552e7606a6ac266f11e7b19177ab5d09f92a1c3211b6a9"
+        }
     },
-    "url": "https://github.com/SteamGridDB/SGDBoop/releases/download/v1.4.2/sgdboop-win64.zip",
-    "hash": "232209ce5b742e0190552e7606a6ac266f11e7b19177ab5d09f92a1c3211b6a9",
-    "post_install": "Start-Process -Verb RunAs -Wait SGDBoop.exe",
     "bin": "SGDBoop.exe",
     "shortcuts": [
         [
@@ -16,11 +16,14 @@
             "SGDBoop"
         ]
     ],
-    "pre_uninstall": "If ($cmd -eq 'uninstall') { Start-Process -Verb RunAs -Wait SGDBoop.exe unregister }",
     "checkver": {
         "github": "https://github.com/SteamGridDB/SGDBoop"
     },
     "autoupdate": {
-        "url": "https://github.com/SteamGridDB/SGDBoop/releases/download/v$version/sgdboop-win64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/SteamGridDB/SGDBoop/releases/download/v$version/sgdboop-win64.zip"
+            }
+        }
     }
 }
