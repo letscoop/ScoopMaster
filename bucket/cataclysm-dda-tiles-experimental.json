@@ -5,7 +5,7 @@
     "license": "CC-BY-SA-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-experimental-2026-08-03-0536/cdda-windows-with-graphics-and-sounds-x64-2026-08-03-0536.zip",
+            "url": "https://gh-proxy.org/https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-experimental-2026-08-03-0536/cdda-windows-with-graphics-and-sounds-x64-2026-08-03-0536.zip",
             "hash": "8a37ace094f118eae9054676735630d40bda55083267f2198874ab09dc6362dc"
         }
     },
@@ -28,7 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-experimental-$version/cdda-windows-with-graphics-and-sounds-x64-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/CleverRaven/Cataclysm-DDA/releases/download/cdda-experimental-$version/cdda-windows-with-graphics-and-sounds-x64-$version.zip"
             }
         }
     }
