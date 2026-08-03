@@ -5,11 +5,11 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v2.0.0-rc.3/Cherry-Studio-2.0.0-rc.3-x64-portable.exe#/Cherry-Studio.exe",
+            "url": "https://gh-proxy.org/https://github.com/CherryHQ/cherry-studio/releases/download/v2.0.0-rc.3/Cherry-Studio-2.0.0-rc.3-x64-portable.exe#/Cherry-Studio.exe",
             "hash": "46d144caff7e547f58c4edd6a2e4600852a470a6a35ff8f8fdf4f70e504dab5b"
         },
         "arm64": {
-            "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v2.0.0-rc.3/Cherry-Studio-2.0.0-rc.3-arm64-portable.exe#/Cherry-Studio.exe",
+            "url": "https://gh-proxy.org/https://github.com/CherryHQ/cherry-studio/releases/download/v2.0.0-rc.3/Cherry-Studio-2.0.0-rc.3-arm64-portable.exe#/Cherry-Studio.exe",
             "hash": "581d6c7c0b4463f42af416d33a4112a5bbc786c0ed78815b2ffbd810abc4dc89"
         }
     },
@@ -28,10 +28,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-portable.exe#/Cherry-Studio.exe"
+                "url": "https://gh-proxy.org/https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-x64-portable.exe#/Cherry-Studio.exe"
             },
             "arm64": {
-                "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-portable.exe#/Cherry-Studio.exe"
+                "url": "https://gh-proxy.org/https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-arm64-portable.exe#/Cherry-Studio.exe"
             }
         }
     }

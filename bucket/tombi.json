@@ -1,17 +1,19 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/refs/heads/master/schema.json",
     "version": "1.2.6",
-    "description": "TOML Formatter / Linter / Language Server in Rust",
-    "homepage": "https://github.com/tombi-toml/tombi",
+    "description": "Feature-Rich TOML Toolkit.",
+    "homepage": "https://tombi-toml.github.io/tombi/",
     "license": "MIT",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
     "architecture": {
-        "arm64": {
-            "url": "https://github.com/tombi-toml/tombi/releases/download/v1.2.6/tombi-cli-1.2.6-aarch64-pc-windows-msvc.zip",
-            "hash": "f5d67d8336210baf60ab531075620c956b2a0f4b061f78f5de8050c0d11c23f9"
-        },
         "64bit": {
             "url": "https://github.com/tombi-toml/tombi/releases/download/v1.2.6/tombi-cli-1.2.6-x86_64-pc-windows-msvc.zip",
             "hash": "83c4deedd3f169485d5f83562087eb74187939bf10cb0ef9e5bed14bcfdad659"
+        },
+        "arm64": {
+            "url": "https://github.com/tombi-toml/tombi/releases/download/v1.2.6/tombi-cli-1.2.6-aarch64-pc-windows-msvc.zip",
+            "hash": "f5d67d8336210baf60ab531075620c956b2a0f4b061f78f5de8050c0d11c23f9"
         }
     },
     "bin": "tombi.exe",
