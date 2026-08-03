@@ -1,21 +1,19 @@
 {
-    "version": "1.4.165",
-    "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription.",
-    "homepage": "https://onOrca.dev",
+    "version": "1.4.167",
+    "description": "Agent development environment for working with a fleet of parallel coding agents.",
+    "homepage": "https://github.com/stablyai/orca",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stablyai/orca/releases/download/v1.4.165/orca-windows-setup.exe#/dl.7z",
-            "hash": "728f63e4548ed97a84a9bb65bc9bf6132239c21ac3a4b2d54d0042bd56f9855a"
+            "url": "https://github.com/stablyai/orca/releases/download/v1.4.167/orca-windows-setup.exe#/dl.7z",
+            "hash": "sha512:8fcb5ecc14fb4e92a80957ddf54df99f286f4843539d2e0c15f47de6b7c8ba5b910643112f7b24372801d4dfff606c43a1169cb24191d0a4d61ca4234adf87fa"
         }
     },
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
-    ],
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Get-ChildItem \"$dir\" -Filter '$*' | Remove-Item -Recurse -Force",
     "bin": [
         [
-            "resources\\bin\\orca.cmd",
+            "resources\\bin\\orca.exe",
             "orca"
         ]
     ],
@@ -26,15 +24,17 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/stablyai/orca"
+        "url": "https://api.github.com/repos/stablyai/orca/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^v([\\d.]+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe#/dl.7z",
                 "hash": {
-                    "url": "https://api.github.com/repos/stablyai/orca/releases/tags/v$version",
-                    "regex": "\\\"name\\\":\\s*\\\"orca-windows-setup\\.exe\\\"[\\s\\S]*?\\\"digest\\\":\\s*\\\"sha256:([a-fA-F0-9]{64})\\\""
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
                 }
             }
         }
