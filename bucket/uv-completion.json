@@ -1,8 +1,8 @@
 {
     "version": "0.12.1",
-    "description": "uv completion as a PowerShell module",
+    "description": "uv's shell completion",
     "homepage": "https://docs.astral.sh/uv",
-    "url": "https://github.com/Arama0517/scoop-bucket/releases/download/uv_completion_0.12.1/uv-completion.psm1",
+    "url": "https://github.com/Arama0517/completions/releases/download/uv_0.12.1/uv-completion.psm1",
     "hash": "b205892545e9e8b43da4d972ffa8e4adf7f3a0be37df0d9b1dc9bf7613ca7bc2",
     "license": "Apache-2.0|MIT",
     "depends": "uv",
@@ -36,11 +36,11 @@
         "name": "uv-completion"
     },
     "checkver": {
-        "url": "https://api.github.com/repos/Arama0517/scoop-bucket/releases",
-        "jsonpath": "$.[?(@.tag_name =~ /uv_completion_.*/)].tag_name",
-        "regex": "uv_completion_([\\d.]+)"
+        "url": "https://api.github.com/repos/Arama0517/completions/releases",
+        "jsonpath": "$.[?(@.tag_name =~ /uv_.*/)].tag_name",
+        "regex": "uv_([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/Arama0517/scoop-bucket/releases/download/uv_completion_$version/uv-completion.psm1"
+        "url": "https://github.com/Arama0517/completions/releases/download/uv_$version/uv-completion.psm1"
     }
 }
