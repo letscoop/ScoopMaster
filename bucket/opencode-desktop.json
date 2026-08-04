@@ -1,21 +1,22 @@
 {
     "version": "1.18.12",
-    "description": "Open source AI coding agent",
-    "homepage": "https://opencode.ai",
+    "description": "The open source AI coding agent.",
+    "homepage": "https://opencode.ai/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/anomalyco/opencode/releases/download/v1.18.12/opencode-desktop-win-x64.exe#/dl.7z",
-            "hash": "2ba83a1105d756532a91491b726978daa007d53d54ee2629d52074b746d55334",
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+            "hash": "2ba83a1105d756532a91491b726978daa007d53d54ee2629d52074b746d55334"
         },
         "arm64": {
             "url": "https://github.com/anomalyco/opencode/releases/download/v1.18.12/opencode-desktop-win-arm64.exe#/dl.7z",
-            "hash": "38a78ee5d314e55085e06a480872cf7d5b23332b0bd2867f410f6be8ffa8d884",
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
+            "hash": "38a78ee5d314e55085e06a480872cf7d5b23332b0bd2867f410f6be8ffa8d884"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\resources\\app-update.yml\" -Recurse -Force",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-*.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction Ignore"
+    ],
     "shortcuts": [
         [
             "OpenCode.exe",
