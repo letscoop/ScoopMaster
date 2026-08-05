@@ -1,12 +1,12 @@
 {
-    "version": "0.23.1",
+    "version": "0.23.2",
     "description": "Collaborative multi-agent AI coding workspace. Desktop (Tauri) edition.",
     "homepage": "https://github.com/xintaofei/codeg",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xintaofei/codeg/releases/download/v0.23.1/codeg_0.23.1_x64-setup.exe#/dl.7z",
-            "hash": "518d6480e63895c1eb6fe5cf656e0795536d421e34880f58f0b1cdd1ee015787"
+            "url": "https://github.com/xintaofei/codeg/releases/download/v0.23.2/codeg_0.23.2_x64-setup.exe#/dl.7z",
+            "hash": "368b50bef198699d29f25bc3d8fe49a70cb8076517936f3ac1b6d27686b54b34"
         }
     },
     "bin": "codeg.exe",
