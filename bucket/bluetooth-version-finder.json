@@ -7,7 +7,7 @@
         "url": "https://www.sordum.org/eula/"
     },
     "url": "https://www.sordum.org/files/download/bluetooth-version-finder/btVersion.zip",
-    "hash": "67f6849f08ad979f00ed3990358dea930ef244c1375c0e9d0dd91a6c35f003b7",
+    "hash": "e6afcd14664456b84b360a6ce66b9f25becab615ec268bfcfa4f7e4f3e5e8ed2",
     "extract_dir": "btVersion",
     "bin": "btVersion_x64.exe",
     "shortcuts": [
