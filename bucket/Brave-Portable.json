@@ -1,5 +1,5 @@
 {
-    "version": "1.93.132",
+    "version": "1.93.134",
     "description": "Brave. Secure, Fast & Private Web Browser with Adblocker",
     "homepage": "https://brave.com",
     "license": {
@@ -9,12 +9,16 @@
     "changelog": "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md",
     "architecture": {
         "64bit": {
-            "url": "https://brave-browser-downloads.s3.brave.com/latest/brave_installer-x64.exe#/dl.7z",
-            "hash": "4b01ce7c24050d940d0e2dcf462cd41be93e2b45f3f7e0e9b4b4601b266a0bd1"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.93.134/brave-v1.93.134-win32-x64.zip",
+            "hash": "4ae4cabdb5438896c3f53c00cf71f321ef9afb4af1f19cb0916591c9e66149bf"
         },
         "32bit": {
-            "url": "https://brave-browser-downloads.s3.brave.com/latest/brave_installer-ia32.exe#/dl.7z",
-            "hash": "2040e3f5c0920b57f0f917e60d3292b62bf344f9dbeded3e72340a7a8ffb3672"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.93.134/brave-v1.93.134-win32-ia32.zip",
+            "hash": "337066ccac15f95307573eda9ced41022467cf2e1c26976d19756b518aec1071"
+        },
+        "arm64": {
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.93.134/brave-v1.93.134-win32-arm64.zip",
+            "hash": "4ffe042b4ade5b1f44253aec89023b53707e25d1de3ed56ac28855988a0e0c04"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
@@ -32,11 +36,17 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://brave-browser-downloads.s3.brave.com/latest/brave_installer-x64.exe#/dl.7z"
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
             },
             "32bit": {
-                "url": "https://brave-browser-downloads.s3.brave.com/latest/brave_installer-ia32.exe#/dl.7z"
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-ia32.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-arm64.zip"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }
