@@ -1,55 +1,48 @@
 {
-    "version": "2.1.225",
-    "description": "An agentic coding tool built by Anthropic that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows.",
-    "homepage": "https://claude.com/product/claude-code",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.anthropic.com/legal/consumer-terms"
-    },
-    "notes": [
-        "Claude Code nonessential network traffic is disabled by default.",
-        "It's recommended to use `extras/cc-switch` to configure third-party API subscriptions."
-    ],
-    "suggest": {
-        "cc-switch": "extras/cc-switch"
-    },
+    "version": "2.1.226",
+    "description": "Agentic coding assistant by Anthropic — write, edit, debug, and explore your codebase in your terminal",
+    "homepage": "https://code.claude.com",
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anthropics/claude-code/releases/download/v2.1.225/claude-win32-x64.zip",
-            "hash": "1839ba9940ef83e8d3537bf0a50e62f3201382665b6ba9b42cac692258f8ac17"
-        },
-        "arm64": {
-            "url": "https://github.com/anthropics/claude-code/releases/download/v2.1.225/claude-win32-arm64.zip",
-            "hash": "ca8c117d02d4ce23f57f19554fe881df79dd1a3fcd638abf7e81979a081b12c1"
+            "url": "https://downloads.claude.ai/claude-code-releases/2.1.226/win32-x64/claude.exe#/claude.exe",
+            "hash": "cec4e772e8237357554a8a5a86f821db9081e9fb05499bc4e5fd14b73f48708c"
         }
     },
     "bin": "claude.exe",
-    "installer": {
-        "script": [
-            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-            "New-PersistDirectory \"$env:USERPROFILE\\.claude\" \"$persist_dir\\.claude\" -Migrate",
-            "if (!(Test-Path \"$persist_dir\\.claude\\settings.json\") -or !(Get-Item \"$persist_dir\\.claude\\settings.json\").Length) {",
-            "    New-Item \"$persist_dir\\.claude\\settings.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
-            "    Set-Content -Path \"$persist_dir\\.claude\\settings.json\" -Value '{\"env\":{\"CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC\":\"1\",\"CLAUDE_CODE_USE_POWERSHELL_TOOL\":\"1\"},\"skipWebFetchPreflight\":true}' -Encoding Ascii",
-            "}"
-        ]
-    },
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:USERPROFILE\\.claude\""
+    "pre_install": [
+        "# 将 ~/.claude 软链接到 persist/data，升级时数据不丢失",
+        "$claude_dir = Join-Path $env:USERPROFILE \".claude\"",
+        "$persist_data = Join-Path $persist_dir \"data\"",
+        "& \"$bucketsdir\\\\code\\\\scripts\\\\link.ps1\" $claude_dir $persist_data",
+        "# 确保 .local/bin 存在（Claude Code 自检依赖此路径）",
+        "$localBin = Join-Path $env:USERPROFILE \".local\\bin\"",
+        "if (-not (Test-Path $localBin)) { New-Item -ItemType Directory -Path $localBin -Force | Out-Null }"
     ],
+    "post_install": [
+        "# 复制 scoop shim + .shim 配置到 ~/.local/bin（Claude Code 自检需要）",
+        "$localBin = Join-Path $env:USERPROFILE \".local\\bin\"",
+        "# 直接从 E:\\scoop\\shims\\ 复制（已包含正确的 .shim 配置）",
+        "Copy-Item \"$env:SCOOP\\shims\\claude.exe\" \"$localBin\\claude.exe\" -Force",
+        "Copy-Item \"$env:SCOOP\\shims\\claude.shim\" \"$localBin\\claude.shim\" -Force"
+    ],
+    "post_uninstall": [
+        "## 卸载时清理",
+        "$claude_dir = Join-Path $env:USERPROFILE \".claude\"",
+        "& \"$bucketsdir\\\\code\\\\scripts\\\\unlink.ps1\" $claude_dir",
+        "# 清理 .local/bin 中的 shim 副本",
+        "$localBin = Join-Path $env:USERPROFILE \".local\\bin\"",
+        "@(\"$localBin\\claude.exe\", \"$localBin\\claude.shim\") | ForEach-Object { if (Test-Path $_) { Remove-Item -Force $_ -ErrorAction SilentlyContinue } }"
+    ],
+    "persist": "data",
     "checkver": {
-        "github": "https://github.com/anthropics/claude-code"
+        "url": "https://downloads.claude.ai/claude-code-releases/latest",
+        "regex": "^([\\d.]+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/anthropics/claude-code/releases/download/v$version/claude-win32-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/anthropics/claude-code/releases/download/v$version/claude-win32-arm64.zip"
+                "url": "https://downloads.claude.ai/claude-code-releases/$version/win32-x64/claude.exe#/claude.exe"
             }
         }
     }
