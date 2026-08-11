@@ -13,7 +13,7 @@
     "architecture": {
         "64bit": {
             "url": "https://git.ryujinx.app/ryubing/canary/releases/download/1.3.340/ryujinx-canary-1.3.340-win_x64.7z",
-            "hash": "6711a34979ff67dc85644e341219d0713abf3dbeaef6ebbcf4f13be0588b6b65"
+            "hash": "c998e92d924a40ebf4308ef5f0352c1ba8106d38586fab97422ef9462c378440"
         }
     },
     "extract_dir": "publish",
