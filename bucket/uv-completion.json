@@ -1,9 +1,9 @@
 {
-    "version": "0.12.3",
+    "version": "0.12.4",
     "description": "uv's shell completion",
     "homepage": "https://docs.astral.sh/uv",
-    "url": "https://github.com/Arama0517/completions/releases/download/uv_0.12.3/uv-completion.psm1",
-    "hash": "4670bd68e3fa74e61e4b4b8d15e8d21e8a7fbe4ca8591b945b6c2579e5297863",
+    "url": "https://github.com/Arama0517/completions/releases/download/uv_0.12.4/uv-completion.psm1",
+    "hash": "bd94c0e56f722b60a39e9402593a080a4120538ccf600a2c69f2f70a5c26127a",
     "license": "Apache-2.0|MIT",
     "depends": "uv",
     "notes": [
