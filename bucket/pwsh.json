@@ -1,67 +1,68 @@
 {
+    "##": [
+        "Why here? I want multiple PowerShell versions side by side.",
+        "Strategy for having multiple versions installed side by side:",
+        "* Add all versions to PATH (env_add_path), because a shim (bin) does not carry over the icon.",
+        "* Rename all versions but the current newest stable one to avoid naming conflict."
+    ],
     "version": "7.6.5",
-    "description": "Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.",
+    "description": "Latest stable PowerShell. Cross-platform automation and configuration tool/framework, known as Powershell Core, that works well with existing tools and is optimized for dealing with structured data.",
     "homepage": "https://github.com/PowerShell/PowerShell",
     "license": "MIT",
-    "notes": [
-        "Since Scoop uses pwsh.exe internally, to update PowerShell Core itself,",
-        "run `scoop update pwsh` from Windows PowerShell, i.e. powershell.exe.",
-        "",
-        "Add PowerShell Core as a explorer context menu by running: '$dir\\install-explorer-context.reg'",
-        "For file context menu, run '$dir\\install-file-context.reg'"
-    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.5/PowerShell-7.6.5-win-x64.zip",
             "hash": "32eb8f6cdce08f86e987d625a2733e54ac3e289ae7e1621b14c0b5bcec2434ea"
         },
-        "32bit": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.5/PowerShell-7.6.5-win-x86.zip",
-            "hash": "6444ecb222a6b51c8d10ffe9bda99b83eaeefe90160de90deea6b638914c4a25"
+        "arm64": {
+            "url": "https://github.com/PowerShell/PowerShell/releases/download/v7.6.5/PowerShell-7.6.5-win-arm64.zip",
+            "hash": "20514a755d16428dc4355c85e0883c859531e71cc3e122670aa1fccdbf96ba7e"
         }
     },
     "pre_install": [
-        "'Microsoft.PowerShell_profile.ps1', 'profile.ps1' | ForEach-Object {",
-        "    if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null }",
-        "}"
-    ],
-    "post_install": [
-        "if ($architecture -eq '32bit') { $pwshArch = 'x86' } else { $pwshArch = 'x64' }",
-        "$pwshPath = \"$dir\\pwsh.exe\".Replace('\\', '\\\\')",
-        "'install-explorer-context', 'uninstall-explorer-context', 'install-file-context' , 'uninstall-file-context' | ForEach-Object {",
-        "    if (Test-Path \"$bucketsdir\\main\\scripts\\pwsh\\$_.reg\") {",
-        "        $content = (Get-Content \"$bucketsdir\\main\\scripts\\pwsh\\$_.reg\").Replace('$pwshPath', $pwshPath)",
-        "        $content = $content.Replace('$pwshArch', $pwshArch)",
-        "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
-        "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
+        "# Delete some included modules",
+        "$ModulesToRemove = [string[]](",
+        "    'Microsoft.PowerShell.PSResourceGet',",
+        "    'PackageManagement',",
+        "    'PowerShellGet'",
+        ")",
+        "$ModulesToRemove.ForEach{",
+        "    $Path = [System.IO.Path]::Combine($dir, 'Modules', $_)",
+        "    if ([System.IO.Directory]::Exists($Path)) {",
+        "        info ('Removing included module \"{0}\".' -f $_)",
+        "        $null = [System.IO.Directory]::Delete($Path, $true)",
         "    }",
         "}"
     ],
-    "bin": "pwsh.exe",
+    "env_add_path": ".",
+    "env_set": {
+        "POWERSHELL_UPDATECHECK": "Off"
+    },
     "shortcuts": [
         [
             "pwsh.exe",
-            "PowerShell Core",
+            "PowerShell",
             "-WorkingDirectory ~"
+        ],
+        [
+            "pwsh.exe",
+            "PowerShell -NoProfile",
+            "-WorkingDirectory ~ -NoProfile"
         ]
     ],
-    "persist": [
-        "Microsoft.PowerShell_profile.ps1",
-        "profile.ps1"
-    ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/PowerShell/PowerShell/releases",
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "v([\\w.-]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.zip"
             },
-            "32bit": {
-                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
+            "arm64": {
+                "url": "https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.zip"
             }
-        },
-        "hash": {
-            "url": "https://github.com/PowerShell/PowerShell/releases/tag/v$version/",
-            "regex": "$basename\\s*<ul>\\s*<li>$sha256"
         }
     }
 }
