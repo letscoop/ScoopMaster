@@ -1,27 +1,29 @@
 {
-    "version": "1.28.0",
-    "description": "A terminal-based Markdown previewer with a GUI-like experience",
-    "homepage": "https://leaf.rivolink.mg/",
-    "license": "MIT",
-    "depends": "extras/vcredist2022",
+    "version": "0.14.2",
+    "description": "A versatile and efficient proxy framework.",
+    "homepage": "https://github.com/eycorsican/leaf",
+    "license": "Apache-2.0",
+    "suggest": {
+        "Wintun DLLs": "wintun-dll"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/RivoLink/leaf/releases/download/1.28.0/leaf-windows-x86_64.exe#/leaf.exe",
-            "hash": "32db587c6861622fed9d6d8c040de098fce1fa4b29c1a3c719a82edf76e8eef7"
+            "url": "https://github.com/eycorsican/leaf/releases/download/v0.14.2/leaf-x86_64-pc-windows-gnu.zip",
+            "hash": "d04705f049946473e117cff25b82b51bf3cbd421f484e041e390dd5ac640b59d",
+            "bin": [
+                [
+                    "leaf-x86_64-pc-windows-gnu.exe",
+                    "leaf"
+                ]
+            ]
         }
     },
-    "bin": "leaf.exe",
-    "checkver": {
-        "github": "https://github.com/RivoLink/leaf"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/RivoLink/leaf/releases/download/$version/leaf-windows-x86_64.exe#/leaf.exe"
+                "url": "https://github.com/eycorsican/leaf/releases/download/v$version/leaf-x86_64-pc-windows-gnu.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
         }
     }
 }

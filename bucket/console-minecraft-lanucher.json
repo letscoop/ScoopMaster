@@ -1,10 +1,10 @@
 {
-    "version": "2.2.2",
+    "version": "2.2.1",
     "description": "A Launcher for Minecraft Java Edition Running On The Console",
     "homepage": "https://github.com/MrShieh-X/console-minecraft-launcher",
     "license": "GPL-3.0-or-later",
-    "url": "https://ghproxy.com/https://github.com/MrShieh-X/console-minecraft-launcher/releases/download/2.2.2/cmcl.exe",
-    "hash": "94176d686473f905c7e64a2ef0a5a52e7194e02b7b8442b4ba7c941f10d589db",
+    "url": "https://github.com/MrShieh-X/console-minecraft-launcher/releases/download/2.2.1/cmcl.exe",
+    "hash": "1d9be00cb419612b31850480a42ee46af03e0fe8f51fe2f5093829a94c2cc87c",
     "suggest": {
         "JDK": [
             "java/oepnjdk8-redhat",
@@ -18,7 +18,7 @@
     },
     "bin": "cmcl.exe",
     "autoupdate": {
-        "url": "https://ghproxy.com/https://github.com/MrShieh-X/console-minecraft-launcher/releases/download/$version/cmcl.exe",
+        "url": "https://github.com/MrShieh-X/console-minecraft-launcher/releases/download/$version/cmcl.exe",
         "hash": {
             "url": "$url.sha256"
         }

@@ -1,38 +1,36 @@
 {
     "homepage": "https://github.com/xtaci/kcptun",
-    "description": "A Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC.",
-    "version": "20260101",
+    "description": "A Stable & Secure Tunnel based on KCP with N:M multiplexing and FEC. Available for ARM, MIPS, 386 and AMD64",
+    "version": "20210103",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xtaci/kcptun/releases/download/v20260101/kcptun-windows-amd64-20260101.tar.gz",
-            "hash": "sha1:71df59011cf478142d4786504c0d1582e4df6d07",
-            "bin": [
-                [
-                    "client_windows_amd64.exe",
-                    "kcptun-client"
-                ],
-                [
-                    "server_windows_amd64.exe",
-                    "kcptun-server"
-                ]
+            "url": "https://github.com/xtaci/kcptun/releases/download/v20210103/kcptun-windows-amd64-20210103.tar.gz",
+            "hash": "213601087b7f8892b0d9c600b47365ae8a81b6420aebf8041f658c83a92a7a90",
+            "pre_install": [
+                "Rename-Item \"$dir\\client_windows_amd64.exe\" -NewName \"$dir\\client.exe\"",
+                "Rename-Item \"$dir\\server_windows_amd64.exe\" -NewName \"$dir\\server.exe\""
             ]
         },
         "32bit": {
-            "url": "https://github.com/xtaci/kcptun/releases/download/v20260101/kcptun-windows-386-20260101.tar.gz",
-            "hash": "sha1:7ab1990d757a5dcc6aba3e2cbb74bc77b5864472",
-            "bin": [
-                [
-                    "client_windows_386.exe",
-                    "kcptun-client"
-                ],
-                [
-                    "server_windows_386.exe",
-                    "kcptun-server"
-                ]
+            "url": "https://github.com/xtaci/kcptun/releases/download/v20210103/kcptun-windows-386-20210103.tar.gz",
+            "hash": "56cc8bea39144a84d0ab1b761b51a80c3d7084a9954a9937b6736108c7dbfcf3",
+            "pre_install": [
+                "Rename-Item \"$dir\\client_windows_386.exe\" -NewName \"$dir\\client.exe\"",
+                "Rename-Item \"$dir\\server_windows_386.exe\" -NewName \"$dir\\server.exe\""
             ]
         }
     },
+    "bin": [
+        [
+            "client.exe",
+            "kcptunc"
+        ],
+        [
+            "server.exe",
+            "kcptuns"
+        ]
+    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -42,9 +40,6 @@
             "32bit": {
                 "url": "https://github.com/xtaci/kcptun/releases/download/v$version/kcptun-windows-386-$version.tar.gz"
             }
-        },
-        "hash": {
-            "url": "https://github.com/xtaci/kcptun/releases"
         }
     }
 }

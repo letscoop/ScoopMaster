@@ -1,25 +1,15 @@
 {
-    "version": "13.24",
-    "description": "a complete replacement for Explorer, with far more functionality than any other file manager available today.",
-    "homepage": "https://www.gpsoft.com.au",
+    "version": "12.30",
+    "description": "The file manager for Windows.",
+    "homepage": "https://www.gpsoft.com.au/",
     "license": "Proprietary",
-    "url": "https://cdn2.gpsoft.com.au/files/Opus13/DOpusInstall-13.24.exe",
-    "hash": "b085fcbd1920a3f9e2fdb7eaa5e39c07084b598d739fd019a4cdb9c89e4ca63c",
+    "url": "https://cdn.gpsoft.com.au/Opus12/DOpusInstall.exe",
+    "hash": "31a417f6b1f3e3a1ee01943e04ca53036327549e877b8a7f3bd522aeaa3a523f",
     "innosetup": true,
-    "persist_link": [
-        [
-            "$env:ProgramData\\GPSoftware\\Directory Opus",
-            "ProgramData"
-        ],
-        [
-            "$env:AppData\\GPSoftware\\Directory Opus",
-            "AppData"
-        ],
-        [
-            "$env:LocalAppData\\GPSoftware\\Directory Opus",
-            "LocalAppData"
-        ]
-    ],
+    "installer": {
+        "script": "Get-ChildItem -Recurse \"$dir\" -Filter \"*,*\" | Foreach-Object { Move-Item $_.FullName $_.FullName.Replace(\",1\", \"\") }"
+    },
+    "bin": "dopus.exe",
     "shortcuts": [
         [
             "dopus.exe",
@@ -27,10 +17,11 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.gpsoft.com.au/endpoints/curVersion.php",
-        "jp": ".release"
+        "url": "https://www.gpsoft.com.au/DScripts/download.asp",
+        "regex": "Download Directory Opus ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://cdn2.gpsoft.com.au/files/Opus$majorVersion/DOpusInstall-$version.exe"
+        "url": "https://cdn.gpsoft.com.au/Opus12/DOpusInstall.exe",
+        "hash": "$url.sha256"
     }
 }

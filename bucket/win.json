@@ -1,17 +1,20 @@
 {
-    "version": "1.2",
-    "homepage": "https://github.com/joaoricarte/jr-bucket",
-    "license": "GPL",
-    "url": "https://github.com/joaoricarte/jr-bucket/releases/download/v1.2/win.ps1",
-    "hash": "",
+    "version": "2026.07.06.1",
+    "description": "Windows command tools and setup scripts",
+    "homepage": "https://github.com/yzlc/win",
+    "url": "https://github.com/yzlc/win/archive/refs/heads/main.zip",
     "bin": [
         [
-            "win.ps1",
-            "win"
+            "win-main\\config\\tools\\commands\\shutdown23.bat",
+            "shutdown23"
         ]
     ],
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/joaoricarte/jr-bucket/releases/download/v$version/win.ps1"
-    }
+    "post_install": [
+        "cd $dir/win-main",
+        ". ./config/config.bat"
+    ],
+    "pre_uninstall": [
+        "Set-Location $env:USERPROFILE",
+        ". \"$dir\\win-main\\config\\tools\\uninstall.ps1\""
+    ]
 }
