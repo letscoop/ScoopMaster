@@ -1,32 +1,18 @@
 {
-    "version": "1.11.1",
-    "description": "An enhanced audio panel for Windows.",
-    "homepage": "https://github.com/Odizinne/QontrolPanel",
+    "version": "1.21.0",
+    "description": "Enhanced audio panel for Windows with HeadsetControl integration",
+    "homepage": "https://github.com/ChrisLauinger77/QontrolPanel",
     "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/Odizinne/QontrolPanel/releases/download/1.11.1/QontrolPanel_win64_msvc2022.zip",
-            "hash": "26d23bf981e09dcfe89d3ac0ca3e58a2e822d0e58988b0593884e7c64f648253"
-        }
-    },
-    "extract_dir": "QontrolPanel",
+    "url": "https://github.com/ChrisLauinger77/QontrolPanel/releases/download/1.21.0/QontrolPanel_win64_msvc2022.zip",
+    "hash": "646735ce01ddb091eebb4e2e5ca9e05fcd8426f4f61a1f750438521501fc4ecb",
     "shortcuts": [
         [
-            "bin\\QontrolPanel.exe",
+            "QontrolPanel\\bin\\QontrolPanel.exe",
             "QontrolPanel"
         ]
     ],
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\Odizinne\\QontrolPanel\", \"$env:LOCALAPPDATA\\Odizinne\\QontrolPanel\" -Force -Recurse -ErrorAction SilentlyContinue }",
-    "notes": [
-        "QontrolPanel is NOT portable.",
-        "Settings are stored in '%APPDATA%\\Odizinne\\QontrolPanel', and will be purged during uninstallation."
-    ],
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Odizinne/QontrolPanel/releases/download/$version/QontrolPanel_win64_msvc2022.zip"
-            }
-        }
+        "url": "https://github.com/ChrisLauinger77/QontrolPanel/releases/download/$version/QontrolPanel_win64_msvc2022.zip"
     }
 }

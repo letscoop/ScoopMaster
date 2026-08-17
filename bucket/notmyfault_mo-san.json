@@ -5,9 +5,9 @@
         "identifier": "Freeware",
         "url": "https://docs.microsoft.com/en-us/sysinternals/license-terms"
     },
-    "version": "4.6",
+    "version": "4.30",
     "url": "https://download.sysinternals.com/files/NotMyFault.zip",
-    "hash": "53da0187054b3a01ad0103b2ee302beb980ed98524a78bbf2213672c2dd6e535",
+    "hash": "ede9aff4ea78dc4f3ab6a4994c9f83fd951ec98b397cc52c4d73d1a7e0f99df5",
     "checkver": {
         "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/notmyfault",
         "re": "NotMyFault\\s(?:v|V)?([\\d.]+)"

@@ -1,44 +1,31 @@
 {
-    "version": "1.3.0-alpha.1.1025+abd8687",
+    "version": "7319",
     "description": "(Nightly Build) A free, open source, multiplatform digital audio workstation.",
     "homepage": "https://lmms.io/",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://lmms.io/download/artifact/9262312562#/dl.7z",
-            "hash": "ac275644385481bb666fcbdfc4a5e0d498031e54d4f0fe93f470ec8802e672a6"
-        },
-        "arm64": {
-            "url": "https://lmms.io/download/artifact/9262301364#/dl.7z",
-            "hash": "34a1be32d124a0d770485fa0e19638c0d17b54daf666c09569980c5f921f4028"
+            "url": "https://nightly.link/LMMS/lmms/actions/runs/21050873403/msvc-x64.zip",
+            "hash": "57c9e801512e54095cb097b053854a4c4ac7a06c0fee81378a6b142b9be0c293"
         }
     },
+    "pre_install": "Get-ChildItem \"$dir\" 'lmms-*.exe' | Select-Object -First 1 -ExpandProperty FullName | Expand-7zipArchive -Destination \"$dir\" -Removal",
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "shortcuts": [
         [
             "lmms.exe",
-            "LMMS Nightly"
+            "LMMS"
         ]
     ],
+    "notes": "LMMS is NOT portable.",
     "checkver": {
-        "script": [
-            "try {",
-            "    $workflows = Invoke-RestMethod 'https://api.github.com/repos/LMMS/lmms/actions/workflows/build.yml/runs?event=push&branch=master&status=success&per_page=1'",
-            "    $artifacts = Invoke-RestMethod ($workflows.workflow_runs[0].url + '/artifacts')",
-            "    $x64 = $artifacts.artifacts | Where-Object { $_.name -like '*msvc2022-win64*' } | Select-Object -First 1",
-            "    $arm64 = $artifacts.artifacts | Where-Object { $_.name -like '*mingw-arm64*' } | Select-Object -First 1",
-            "} catch { Write-Host $_.Exception.Message }",
-            "return \"{0}|{1}|{2}\" -f $x64.id, $arm64.id, $x64.name"
-        ],
-        "regex": "(?<x64id>\\d+)\\|(?<arm64id>\\d+)\\|lmms-(.+?)-msvc2022-win64"
+        "url": "https://github.com/LMMS/lmms/actions/workflows/build.yml?query=branch%3Amaster+is%3Asuccess+event%3Apush",
+        "regex": "(?sm)/actions/runs/(?<run>\\d+)\".*?#(\\d+):"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://lmms.io/download/artifact/$matchX64id#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://lmms.io/download/artifact/$matchArm64id#/dl.7z"
+                "url": "https://nightly.link/LMMS/lmms/actions/runs/$matchRun/msvc-x64.zip"
             }
         }
     }

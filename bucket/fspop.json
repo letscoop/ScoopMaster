@@ -1,0 +1,27 @@
+{
+    "version": "1.4.257",
+    "description": "Automate the creation of file structures using custom YAML templates.",
+    "homepage": "https://gitlab.com/merrittcorp/fspop",
+    "license": "",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.mrrtt.me/fspop/v1.4.257/fspop_1.4.257_windows_amd64.zip",
+            "hash": "4fb78548d6c7ab8fc2a28b54dbc6f4c1ad69a6d1c8294352b0addfb2b2a009fb"
+        }
+    },
+    "bin": "fspop.exe",
+    "checkver": {
+        "url": "https://releases.mrrtt.me/fspop/",
+        "regex": "(?<version>[0-9][\\.][0-9][\\.][0-9])",
+        "reverse": true,
+        "replace": "${version}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mrrtt.me/releases/fspop/v$version/fspop-v$version-windows_amd64.zip",
+                "extract_dir": "fspop-v$version-win-64bit"
+            }
+        }
+    }
+}
