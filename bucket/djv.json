@@ -17,6 +17,7 @@
             "DJV"
         ]
     ],
+    "notes": "DJV stores its settings and log by default in %USERPROFILE%\\Documents\\DJV\\djv.<major>.json and .log (not portable). Override with 'djv.exe -settingsFile <path> -logFile <path>' if you want them elsewhere.",
     "checkver": {
         "github": "https://github.com/grizzlypeak3d/DJV"
     },
