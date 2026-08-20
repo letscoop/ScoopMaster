@@ -1,5 +1,5 @@
 {
-    "version": "1.93.136",
+    "version": "1.93.137",
     "description": "Secure, Fast & Private Web Browser with Adblocker",
     "homepage": "https://brave.com",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.93.136/brave-v1.93.136-win32-x64.zip",
-            "hash": "ddbe2b22f7431e0c9b82e58c31ec003118b1f9110b5e15e8cf05f443b74dc889"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.93.137/brave-v1.93.137-win32-x64.zip",
+            "hash": "27846b7d30af50fb6d362234a64380e8aaeb444b594c3f0c8bb8555d201eead2"
         }
     },
     "bin": [
@@ -26,7 +26,6 @@
         ]
     ],
     "post_install": [
-        "# 数据迁移",
         "$runtimeCache = \"$env:LocalAppData\\BraveSoftware\\Brave-Browser\\User Data\"",
         "$runtimeCachePersist = \"$persist_dir\\User Data\"",
         "if (Test-Path $runtimeCachePersist) {",
@@ -37,7 +36,6 @@
         "New-DirectoryJunction $runtimeCache $runtimeCachePersist | Out-Null"
     ],
     "post_uninstall": [
-        "# 删除数据软连接",
         "$runtimeCache = \"$env:LocalAppData\\BraveSoftware\\Brave-Browser\\User Data\"",
         "Remove-Item -Path $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue"
     ],
