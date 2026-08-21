@@ -11,7 +11,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/has207/xenia-edge/releases/download/1fae8f4/xenia_edge_windows.zip",
+            "url": "https://gh-proxy.org/https://github.com/has207/xenia-edge/releases/download/1fae8f4/xenia_edge_windows.zip",
             "hash": "fbd547ea9d9543e1283d97a6f89863287fd438713da6e66d4c182735f5450411"
         }
     },
@@ -60,7 +60,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/has207/xenia-edge/releases/download/$matchCommit/xenia_edge_windows.zip"
+                "url": "https://gh-proxy.org/https://github.com/has207/xenia-edge/releases/download/$matchCommit/xenia_edge_windows.zip"
             }
         }
     }
