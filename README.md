@@ -26,7 +26,7 @@ To help users to maintain all the apss updated, this repo provides two services,
 
 - The database indexes **228648** manifests.
 - The harvester gathers data from **2695** buckets.
-- The Bucket provides last versions for all the **58855** apps.
+- The Bucket provides last versions for all the **58856** apps.
 
 The system uses the platform in two ways:
 </br>
