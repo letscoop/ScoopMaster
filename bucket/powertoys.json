@@ -1,7 +1,7 @@
 {
     "version": "0.101.2362.0",
-    "description": "A set of utilities for power users to tune and streamline their Windows experience for greater productivity.",
-    "homepage": "https://github.com/microsoft/PowerToys",
+    "description": "Windows Utilities for Power Users",
+    "homepage": "https://learn.microsoft.com/windows/powertoys",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -13,61 +13,28 @@
             "hash": "4c2ae5156b7e4f1f5ba744ba6e1cf6bfe3d9614978356e6b00aa47cab86350db"
         }
     },
-    "installer": {
-        "script": [
-            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\.tmp\"",
-            "Get-ChildItem \"$dir\\.tmp\\AttachedContainer\\PowerToysUserSetup*.msi\" | Rename-Item -NewName 'PowerToysSetup.msi' -Force",
-            "Expand-MsiArchive \"$dir\\.tmp\\AttachedContainer\\PowerToysSetup.msi\" \"$dir\" -ExtractDir 'PowerToys'",
-            "Remove-Item \"$dir\\.tmp\", \"$dir\\$fname\" -Force -Recurse"
-        ]
-    },
-    "persist": [
-        [
-            "RunPlugins\\Everything",
-            "Everything-plugin"
-        ]
+    "pre_install": [
+        "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\tmp\" -Removal",
+        "$msi = Get-ChildItem \"$dir\\tmp\\AttachedContainer\\*.msi\" | Select-Object -First 1",
+        "Expand-MsiArchive $msi -ExtractDir 'LocalApp\\PowerToys' -DestinationPath \"$dir\""
     ],
-    "post_install": [
-        "foreach ($f in @('modules\\FileLocksmith', 'modules\\Hosts', 'modules\\MeasureTool', ",
-        "                 'modules\\PowerRename', 'modules\\RegistryPreview', 'modules\\Peek')) {",
-        "    Get-ChildItem -Path \"$dir\\dll\\WinAppSDK\" | ForEach-Object {",
-        "        New-Item -ItemType HardLink -Path \"$dir\\$f\\$($_.Name)\" -Value $_.FullName -ErrorAction SilentlyContinue | Out-Null",
-        "    }",
-        "}",
-        "foreach ($f in @('Settings', 'modules\\Awake', 'modules\\ColorPicker', 'modules\\FancyZones', ",
-        "                 'modules\\FileExplorerPreview', 'modules\\FileLocksmith', 'modules\\Hosts', 'modules\\ImageResizer', ",
-        "                 'modules\\launcher', 'modules\\MeasureTool', 'modules\\MouseUtils\\MouseJumpUI', 'modules\\MouseWithoutBorders', ",
-        "                 'modules\\Peek', 'modules\\PowerAccent', 'modules\\PowerOCR', 'modules\\RegistryPreview')) {",
-        "    Get-ChildItem -Path \"$dir\\dll\\Interop\" | ForEach-Object {",
-        "        New-Item -ItemType HardLink -Path \"$dir\\$f\\$($_.Name)\" -Value $_.FullName -ErrorAction SilentlyContinue | Out-Null",
-        "    }",
-        "    Get-ChildItem -Path \"$dir\\dll\\dotnet\" | ForEach-Object {",
-        "        New-Item -ItemType HardLink -Path \"$dir\\$f\\$($_.Name)\" -Value $_.FullName -ErrorAction SilentlyContinue | Out-Null",
-        "    }",
-        "}"
-    ],
+    "post_install": "Remove-Item \"$dir\\tmp\" -Recurse -Force",
     "shortcuts": [
         [
             "PowerToys.exe",
             "PowerToys"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/microsoft/PowerToys"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-x64.exe",
-                "hash": {
-                    "url": "https://github.com/microsoft/PowerToys/releases/tag/v$version",
-                    "regex": ">$sha256<"
-                }
+                "url": "https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-x64.exe"
             },
             "arm64": {
-                "url": "https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-arm64.exe",
-                "hash": {
-                    "url": "https://github.com/microsoft/PowerToys/releases/tag/v$version",
-                    "regex": ">(?:[a-fA-F0-9]{64})<[\\s\\S]*?>([a-fA-F0-9]{64})<"
-                }
+                "url": "https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-arm64.exe"
             }
         }
     }
