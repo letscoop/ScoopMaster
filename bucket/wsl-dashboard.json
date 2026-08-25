@@ -1,10 +1,10 @@
 {
     "version": "0.11.0",
-    "description": "A modern, high-performance, and lightweight WSL (Windows Subsystem for Linux) instance management dashboard.",
-    "homepage": "https://github.com/owu/wsl-dashboard",
-    "license": {
-        "identifier": "GPL-3.0",
-        "url": "https://github.com/owu/wsl-dashboard/blob/main/LICENSE"
+    "description": "A modern, lightweight GUI manager for Windows Subsystem for Linux (WSL) instances.",
+    "homepage": "https://www.wslui.com",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
     },
     "architecture": {
         "64bit": {
@@ -12,8 +12,7 @@
             "hash": "f91fda8beb815b04e37c4c10d8014faafea171aec9b6f48ba266b30400ca728e"
         }
     },
-    "pre_install": "Rename-Item \"$dir\\WSLDashboard.$version.Portable.x64.exe\" \"$dir\\wsldashboard.exe\"",
-    "bin": "wsldashboard.exe",
+    "pre_install": "Get-ChildItem -Path \"$dir\\WSLDashboard*.exe\" | Select-Object -First 1 | Rename-Item -NewName 'wsldashboard.exe'",
     "shortcuts": [
         [
             "wsldashboard.exe",
