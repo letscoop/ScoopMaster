@@ -1,23 +1,23 @@
 {
-    "version": "0.24.2486",
-    "description": "Jacket. API Support for your favorite torrent trackers",
-    "homepage": "https://github.com/Jackett/Jackett",
-    "license": "GPL-2.0-or-later",
-    "changelog": "https://github.com/Jackett/Jackett/releases",
-    "url": "https://github.com/Jackett/Jackett/releases/download/v0.24.2486/Jackett.Binaries.Windows.zip",
-    "hash": "66166aaaaa90327a5ff248b677b9bad83621f636fb6cf14a301e2fc2c3817a48",
-    "shortcuts": [
-        [
-            "Jackett\\JackettTray.exe",
-            "Jackett"
-        ]
-    ],
-    "checkver": "github",
-    "autoupdate": {
-        "url": "https://github.com/Jackett/Jackett/releases/download/v$version/Jackett.Binaries.Windows.zip",
-        "hash": {
-            "url": "https://github.com/Jackett/Jackett/releases",
-            "regex": "Jackett\\.Binaries\\.Windows\\.zip.*?sha256:\\s*$sha256"
-        }
+  "version": "0.24.2486",
+  "description": "Jacket. API Support for your favorite torrent trackers",
+  "homepage": "https://github.com/Jackett/Jackett",
+  "license": "GPL-2.0-or-later",
+  "changelog": "https://github.com/Jackett/Jackett/releases",
+  "url": "https://github.com/Jackett/Jackett/releases/download/v0.24.2486/Jackett.Binaries.Windows.zip",
+  "hash": "66166aaaaa90327a5ff248b677b9bad83621f636fb6cf14a301e2fc2c3817a48",
+  "shortcuts": [
+    [
+      "Jackett\\JackettTray.exe",
+      "Jackett"
+    ]
+  ],
+  "checkver": "github",
+  "autoupdate": {
+    "url": "https://github.com/Jackett/Jackett/releases/download/v$version/Jackett.Binaries.Windows.zip",
+    "hash": {
+      "url": "https://github.com/Jackett/Jackett/releases",
+      "regex": "Jackett\\.Binaries\\.Windows\\.zip.*?sha256:\\s*$sha256"
     }
+  }
 }
