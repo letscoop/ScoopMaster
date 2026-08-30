@@ -1,7 +1,7 @@
 {
     "version": "3.3.0",
+    "homepage": "https://github.com/go-gost/gost",
     "description": "GO Simple Tunnel - a simple tunnel written in golang.",
-    "homepage": "https://gost.run/",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -11,18 +11,16 @@
         "32bit": {
             "url": "https://github.com/go-gost/gost/releases/download/v3.3.0/gost_3.3.0_windows_386.zip",
             "hash": "5db2e0e5941508ba4650075371fbcdf90b6908aff186db437efc1535518c62f6"
-        },
-        "arm64": {
-            "url": "https://github.com/go-gost/gost/releases/download/v3.3.0/gost_3.3.0_windows_arm64.zip",
-            "hash": "f423e10b0e5fac02ca1d2294e008bab16480938055e7620af27aba319979ccac"
         }
     },
-    "bin": "gost.exe",
-    "persist": "conf",
-    "checkver": {
-        "url": "https://github.com/go-gost/gost/releases.atom",
-        "regex": "Repository/\\d+/v(.+?)<"
-    },
+    "bin": [
+        [
+            "gost.exe",
+            "gost"
+        ]
+    ],
+    "post_install": "Invoke-WebRequest -URI \"https://raw.githubusercontent.com/go-gost/gost/master/gost.yml\" -OutFile \"$dir\\gost.yml\"",
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
@@ -30,13 +28,13 @@
             },
             "32bit": {
                 "url": "https://github.com/go-gost/gost/releases/download/v$version/gost_$version_windows_386.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/go-gost/gost/releases/download/v$version/gost_$version_windows_arm64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/checksums.txt"
         }
-    }
+    },
+    "notes": [
+        "【工具类型】: 网络工具",
+        "【主要功能】: GO Simple Tunnel，基于Go语言的简单隧道工具",
+        "【适用场景】: 网络代理、隧道穿透、网络安全测试",
+        "【技术特点】: 基于Go语言开发，支持多种协议，轻量级高性能"
+    ]
 }
