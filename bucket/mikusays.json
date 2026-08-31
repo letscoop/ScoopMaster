@@ -20,10 +20,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xxanqw/mikusays/releases/download/v$version/mikusays-windows-x86_64-0.1.4-2.exe"
+                "url": "https://github.com/xxanqw/mikusays/releases/download/v$version/mikusays-windows-x86_64-$version.exe"
             },
             "arm64": {
-                "url": "https://github.com/xxanqw/mikusays/releases/download/v$version/mikusays-windows-aarch64-0.1.4-2.exe"
+                "url": "https://github.com/xxanqw/mikusays/releases/download/v$version/mikusays-windows-aarch64-$version.exe"
             }
         }
     }
