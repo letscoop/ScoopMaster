@@ -1,6 +1,6 @@
 {
     "version": "0.0.37",
-    "description": "The open-source control plane for coding agents. Orchestrate Claude Code, Codex, OpenCode, Cursor, and Grok from one surface.",
+    "description": "A minimal web GUI for coding agents",
     "homepage": "https://t3.codes",
     "license": "MIT",
     "architecture": {
@@ -9,36 +9,27 @@
             "hash": "sha512:7a3f4b66924e328dd2d1f1fe924f714d4ea9051bafe58ef6ba1a91e74efeaf68383b1161da07687ae2d7ef68902b75f9ece56cfd1938c36519c0f2943b8b2802"
         }
     },
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-            "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\", \"$dir\\`$R0\" -Force -Recurse -ErrorAction SilentlyContinue"
-        ]
-    },
-    "bin": [
-        [
-            "T3 Code (Alpha).exe",
-            "t3code"
-        ]
-    ],
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
     "shortcuts": [
         [
             "T3 Code (Alpha).exe",
             "T3 Code"
         ]
     ],
+    "bin": "T3 Code (Alpha).exe",
     "checkver": {
-        "github": "https://github.com/pingdotgg/t3code"
+        "url": "https://github.com/pingdotgg/t3code/releases/latest",
+        "regex": "/releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#/dl.7z"
+                "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/pingdotgg/t3code/releases/download/v$version/latest.yml",
+                    "regex": "url:\\s+T3-Code-$version-x64\\.exe\\s+sha512:\\s+$base64"
+                }
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
     }
 }
