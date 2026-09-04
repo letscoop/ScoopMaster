@@ -11,6 +11,10 @@
         "32bit": {
             "url": "https://github.com/schollz/croc/releases/download/v11.4.0/croc_v11.4.0_Windows-32bit.zip",
             "hash": "6182ab937152af0d5abdc95555543acc362e509f3166080f81aeed2e3701b9d7"
+        },
+        "arm64": {
+            "url": "https://github.com/schollz/croc/releases/download/v11.4.0/croc_v11.4.0_Windows-ARM64.zip",
+            "hash": "9ae427907968274e5678af57415ebdf0478618303de4a08dcd749ed9fa348b49"
         }
     },
     "bin": "croc.exe",
@@ -24,6 +28,9 @@
             },
             "32bit": {
                 "url": "https://github.com/schollz/croc/releases/download/v$version/croc_v$version_Windows-32bit.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/schollz/croc/releases/download/v$version/croc_v$version_Windows-ARM64.zip"
             }
         },
         "hash": {
