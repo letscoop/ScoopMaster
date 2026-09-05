@@ -1,12 +1,12 @@
 {
-	"version": "1.26.1",
+	"version": "1.27.0",
 	"description": "Advanced Package Manager & Environment Orchestrator",
 	"homepage": "https://gitlab.com/zillowe/zillwen/zusty/zoi",
 	"license": "Apache-2.0",
 	"architecture": {
 		"64bit": {
-			"url": "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-1.26.1/downloads/zoi-windows-amd64.zip",
-			"hash": "2cd44e19bcb78d2582cbcc565f0ce6b6311ec553796c7271142ae132c3f196d9"
+			"url": "https://gitlab.com/zillowe/zillwen/zusty/zoi/-/releases/Prod-Release-1.27.0/downloads/zoi-windows-amd64.zip",
+			"hash": "c49b3232ea305c05bb52300dadf4b92f8029dfe5b76bd452d9cf33d435166bba"
 		}
 	},
 	"bin": "zoi.exe",
