@@ -14,21 +14,7 @@
             "hash": "57d5e7efd5f686f8ca543f382f81e1d00c54cd711c26c8b75dadc5b15b87b26b"
         }
     },
-    "pre_install": "Get-ChildItem \"$dir\" 'Gopeed*.exe' | Rename-Item -NewName 'setup.exe'",
-    "installer": {
-        "script": [
-            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/SP-', '/VERYSILENT', '/PORTABLE', \"/DIR=`\"$dir`\"\")",
-            "Remove-Item \"$dir\\setup.exe\""
-        ]
-    },
-    "uninstaller": {
-        "file": "unins000.exe",
-        "args": [
-            "/verysilent",
-            "/nocancel",
-            "/norestart"
-        ]
-    },
+    "innosetup": true,
     "bin": "gopeed.exe",
     "shortcuts": [
         [
@@ -36,6 +22,7 @@
             "Gopeed"
         ]
     ],
+    "persist": "storage",
     "checkver": {
         "github": "https://api.github.com/repos/GopeedLab/gopeed/releases",
         "jp": "$[*].tag_name",

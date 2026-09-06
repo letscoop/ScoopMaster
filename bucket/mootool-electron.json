@@ -7,6 +7,7 @@
         "url": "https://github.com/rememberber/MooTool#MIT-1-ov-file"
     },
     "url": "https://github.com/rememberber/MooTool/releases/download/next-electron-v1.1.4/MooTool-Next-Electron-1.1.4-win-x64-setup.exe#/dl.7z",
+    "hash": "d4ae75b152d33713b45b933f6fd6b8ac2229dc655355b44dda0836bbdbf34bff",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$*\" -Force -Recurse"
@@ -45,9 +46,5 @@
     },
     "autoupdate": {
         "url": "https://github.com/rememberber/MooTool/releases/download/next-electron-v$version/MooTool-Next-Electron-$version-win-x64-setup.exe#/dl.7z"
-    },
-    "hash": {
-        "url": "$baseurl/x64.yml",
-        "regex": "sha512:\\s+$base64"
     }
 }
