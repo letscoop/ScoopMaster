@@ -1,19 +1,19 @@
 {
-    "version": "0.1.2",
+    "version": "0.2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Amad3eu/mediaconv/releases/download/v0.1.2/mediaconv_0.1.2_windows_amd64.zip",
+            "url": "https://github.com/Amad3eu/mediaconv/releases/download/v0.2.0/mediaconv_0.2.0_windows_amd64.zip",
             "bin": [
                 "mediaconv.exe"
             ],
-            "hash": "25410d621099f1b1295c2117922d5a4dab811289bbe21367cb6542d5d9263964"
+            "hash": "64b095b5adee999340a4fc7ba6ac614e771bf42b7723ebef9265eeb3c25ae112"
         },
         "arm64": {
-            "url": "https://github.com/Amad3eu/mediaconv/releases/download/v0.1.2/mediaconv_0.1.2_windows_arm64.zip",
+            "url": "https://github.com/Amad3eu/mediaconv/releases/download/v0.2.0/mediaconv_0.2.0_windows_arm64.zip",
             "bin": [
                 "mediaconv.exe"
             ],
-            "hash": "a152ce56918cd98df8536eb039462da350f0963d48e50b883b3c55079ee7f7c8"
+            "hash": "23d09cee000ac9f58ca8347e635f2e342283809a87c07ebb3d550e52e819f793"
         }
     },
     "homepage": "https://amad3eu.github.io/mediaconv/",
