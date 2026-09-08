@@ -1,25 +1,28 @@
 {
-    "homepage": "https://github.com/chatboxai/chatbox",
-    "description": "a cross-platform desktop client for OpenAI API, also a prompt debugging and management tool.",
     "version": "1.23.1",
-    "license": "GPL-3.0",
-    "url": "https://download.chatboxai.app/releases/Chatbox-1.23.1-Setup.exe#/dl.7z",
-    "hash": "a3ca57b62188805b927f76f7d1f3d68240be4301a3bb597264262ed53aa5706d",
-    "bin": "Chatbox.exe",
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninst*\" -Force -Recurse"
-    ],
-    "shortcuts": [
-        [
-            "Chatbox.exe",
-            "ChatBox"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/chatboxai/chatbox"
+    "description": "ChatGPT客户端",
+    "homepage": "https://github.com/gendloop/chatbox",
+    "license": "LGPL-2.1-or-later",
+    "notes": "<Installer>",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/gendloop/chatbox/releases/download/v1.23.1/chatbox-1.23.1-win64.7z",
+            "hash": "bf4fe18e74d440deda657d86e092f365fad84505cf74a4154c1a884d5b4341cc"
+        }
     },
+    "installer": {
+        "script": [
+            "Push-Location \"$dir\"",
+            "Start-Process chatbox-$version-win64.exe",
+            "Pop-Location"
+        ]
+    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://download.chatboxai.app/releases/Chatbox-$version-Setup.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gendloop/chatbox/releases/download/v$version/chatbox-$version-win64.7z"
+            }
+        }
     }
 }
