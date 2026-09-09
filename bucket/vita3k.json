@@ -1,6 +1,6 @@
 {
     "version": "4093-257464a",
-    "description": "Experimental PlayStation Vita emulator",
+    "description": "Sony PlayStation Vita emulator",
     "homepage": "https://vita3k.org",
     "license": "GPL-2.0-only",
     "suggest": {
@@ -10,19 +10,22 @@
         "64bit": {
             "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip",
             "hash": "bb6796b0d853f5635c2e75791de22b39a621a9f807388c2b7c01cc78fc506ce5"
+        },
+        "arm64": {
+            "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip",
+            "hash": "01f93b1464e5ff43db8ccf3fc418c709d1f0c3771bea4fffdc5800a426509c47"
         }
     },
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.yml\")) {",
         "   New-Item \"$dir\\config.yml\" | Out-Null",
-        "   Add-Content -Path \"$dir\\config.yml\" -Value \"pref-path: $persist_dir\\pref\"-Encoding UTF8",
         "}"
     ],
     "bin": "Vita3K.exe",
     "shortcuts": [
         [
             "Vita3K.exe",
-            "Vita3K"
+            "Sony PlayStation Vita [vita][vita3k]"
         ]
     ],
     "persist": [
@@ -51,6 +54,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip"
             }
         }
     }

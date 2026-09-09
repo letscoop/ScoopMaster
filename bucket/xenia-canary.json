@@ -11,7 +11,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xenia-canary/xenia-canary/releases/download/5d4dc8a/xenia_canary_windows.7z",
+            "url": "https://gh-proxy.org/https://github.com/xenia-canary/xenia-canary/releases/download/5d4dc8a/xenia_canary_windows.7z",
             "hash": "6050fdf87ea291657082f34266ee1560667b1bcb89ec65e2cbfd3f31ce3b75de"
         }
     },
@@ -63,7 +63,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xenia-canary/xenia-canary/releases/download/$matchCommit/xenia_canary_windows.7z"
+                "url": "https://gh-proxy.org/https://github.com/xenia-canary/xenia-canary/releases/download/$matchCommit/xenia_canary_windows.7z"
             }
         }
     }
