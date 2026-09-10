@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://downloads.sourceforge.net/project/cc65/cc65-snapshot-win64.zip",
-            "hash": "sha1:fe6102dcbfe6c8dd21bb194124699bc867e89ef2"
+            "hash": "sha1:f12f070a599f2492f536d04b0adc5ec4dcc29350"
         },
         "32bit": {
             "url": "https://downloads.sourceforge.net/project/cc65/cc65-snapshot-win32.zip",
-            "hash": "sha1:342f13cb0e0a8698bf08d14e73cba9fd22e8b690"
+            "hash": "sha1:95cae61400fa6a730342bf25cd0776c1cc485fc6"
         }
     },
     "bin": [
