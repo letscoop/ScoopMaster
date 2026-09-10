@@ -20,6 +20,7 @@
             "hash": "5bbdcb2377ceb16ebbe98219707c012ebbebd17b49ac52594cb71709c566849a"
         }
     },
+    "pre_install": "Get-Process -Name 'PowerToys*', '*CmdPal*', '*CommandPalette*' -ErrorAction SilentlyContinue | Stop-Process -Force",
     "installer": {
         "script": [
             "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\.tmp\"",
@@ -59,6 +60,7 @@
         "    Invoke-Expression -Command \"& `\"$dir\\install-context.ps1`\"\"",
         "}"
     ],
+    "pre_uninstall": "Get-Process -Name 'PowerToys*', '*CmdPal*', '*CommandPalette*' -ErrorAction SilentlyContinue | Stop-Process -Force",
     "uninstaller": {
         "script": [
             "$regpath = 'HKCU:\\Software\\Classes\\powertoys'",

@@ -1,7 +1,7 @@
 {
     "version": "2.15.0",
     "description": "The modern, open source Flyout app for Windows 11. Media Flyouts, Taskbar Widgets and more.",
-    "homepage": "https://fluentflyout.com/",
+    "homepage": "https://github.com/unchihugo/FluentFlyout",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
@@ -44,11 +44,8 @@
         "}"
     ],
     "checkver": {
-        "script": [
-            ". \"$pwd\\bin\\utils.ps1\"",
-            "\"https://fluentflyout.com/files/latest/x64\" | Get-RedirectedUrl1st"
-        ],
-        "regex": "https://files.fluentflyout.com/FluentFlyout_([\\d.]+)_x64_Installer.zip"
+        "github": "https://github.com/unchihugo/FluentFlyout",
+        "regex": "v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
