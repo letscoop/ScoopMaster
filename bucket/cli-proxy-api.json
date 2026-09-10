@@ -1,26 +1,26 @@
 {
-  "version": "7.2.155",
-  "description": "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Qwen Code, iFlow as an OpenAI/Gemini/Claude/Codex compatible API service",
-  "homepage": "https://github.com/router-for-me/CLIProxyAPI",
-  "license": "MIT",
-  "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.155/CLIProxyAPI_7.2.155_windows_amd64.zip",
-  "hash": "b24d8f443c4cdc6229a6d1a769476328a3290512dd1f5f26a03c181c3e8e15b5",
-  "bin": [
-    [
-      "cli-proxy-api.exe",
-      "cli-proxy-api",
-      "--config $persist_dir\\config\\config.yaml"
-    ]
-  ],
-  "pre_install": [
-    "ensure \"$persist_dir\\config\" | Out-Null",
-    "if (!(Test-Path \"$persist_dir\\config\\config.yaml\") -and (Test-Path \"$dir\\config.example.yaml\")) {",
-    "Copy-Item \"$dir\\config.example.yaml\" \"$persist_dir\\config\\config.yaml\"",
-    "}"
-  ],
-  "persist": "config",
-  "checkver": "github",
-  "autoupdate": {
-    "url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_amd64.zip"
-  }
+	"version": "7.2.156",
+	"description": "Wrap Gemini CLI, Antigravity, ChatGPT Codex, Claude Code, Qwen Code, iFlow as an OpenAI/Gemini/Claude/Codex compatible API service",
+	"homepage": "https://github.com/router-for-me/CLIProxyAPI",
+	"license": "MIT",
+	"url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.156/CLIProxyAPI_7.2.156_windows_amd64.zip",
+	"hash": "763f91711d0891d681763ec320b1c3d475642f6202bd45a9c7bf34ee59aa9d27",
+	"bin": [
+		[
+			"cli-proxy-api.exe",
+			"cli-proxy-api",
+			"--config $persist_dir\\config\\config.yaml"
+		]
+	],
+	"pre_install": [
+		"ensure \"$persist_dir\\config\" | Out-Null",
+		"if (!(Test-Path \"$persist_dir\\config\\config.yaml\") -and (Test-Path \"$dir\\config.example.yaml\")) {",
+		"Copy-Item \"$dir\\config.example.yaml\" \"$persist_dir\\config\\config.yaml\"",
+		"}"
+	],
+	"persist": "config",
+	"checkver": "github",
+	"autoupdate": {
+		"url": "https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_amd64.zip"
+	}
 }
