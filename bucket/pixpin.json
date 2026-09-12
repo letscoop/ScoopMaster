@@ -1,16 +1,19 @@
 {
     "version": "3.4.3.2",
+    "description": "All-in-one screenshot tool with annotation, pinning, OCR and recording features",
     "homepage": "https://pixpin.com/",
-    "description": "截图、录屏、OCR - 一款快速灵活的工具",
     "license": "Freeware",
-    "architecture": {
-        "64bit": {
-            "url": "https://down.pixpin.cn/PixPin_win_3.4.3.2.zip",
-            "hash": "1ed2b048f7e1468cdd3dc869c3db0653d9308ffe4f48fb42091b0b559a90b211"
-        }
-    },
+    "url": "https://down.pixpin.cn/PixPin_win_3.4.3.2.zip",
+    "hash": "1ed2b048f7e1468cdd3dc869c3db0653d9308ffe4f48fb42091b0b559a90b211",
     "extract_dir": "PixPin",
-    "bin": "PixPin.exe",
+    "pre_install": [
+        "$config = \"$persist_dir\\Config\\PixPinConfig.json\"",
+        "if (!(Test-Path $config)) {",
+        "    $time = [int][DateTimeOffset]::UtcNow.ToUnixTimeSeconds()",
+        "    $content = @{ 'System.Update.UpgradeMode#s.win' = @{ 'v' = 0; 't' = $time } } | ConvertTo-Json -Compress",
+        "    New-Item $config -Force -Value $content | Out-Null",
+        "}"
+    ],
     "shortcuts": [
         [
             "PixPin.exe",
@@ -20,17 +23,18 @@
     "persist": [
         "Config",
         "Data",
-        "History"
+        "History",
+        "Temp"
     ],
     "checkver": {
         "url": "https://pixpin.com/download/",
-        "regex": "PixPin_win_([\\d\\.]+)\\.zip"
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "regex": "PixPin_win_([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://down.pixpin.cn/PixPin_win_$version.zip"
-            }
+        "url": "https://down.pixpin.cn/PixPin_win_$version.zip",
+        "hash": {
+            "mode": "download"
         }
     }
 }
