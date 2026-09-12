@@ -1,32 +1,41 @@
 {
+    "homepage": "https://github.com/lyswhut/lx-music-desktop",
+    "description": "一个基于 electron 的音乐软件",
     "version": "2.12.4",
-    "description": "一个免费&开源的音乐查找工具",
-    "homepage": "https://lxmusic.toside.cn/",
     "license": "Apache-2.0",
+    "notes": "Changing music download folder is HIGHLY recommended.",
     "architecture": {
         "64bit": {
             "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop-v2.12.4-win_x64-green.7z",
-            "hash": "md5:4536c1764a111a72f0ffd1b6bc26b291"
+            "hash": "c047dc2e8753151d168a2778c742e2495dd002e25740776e30de27e2ae12284c"
+        },
+        "32bit": {
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop-v2.12.4-win7_x86-green.7z",
+            "hash": "805ec6e6c53930bcb79ef89de1de1d904cbb62681bbc4161bf831a97a1ee86c8"
+        },
+        "arm64": {
+            "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.4/lx-music-desktop-v2.12.4-win_arm64-green.7z",
+            "hash": "7170933016de53576fca18e809f68ac0a6d08933b3805d2257e0817fb14da793"
         }
     },
     "shortcuts": [
         [
             "lx-music-desktop.exe",
-            "LX Music"
+            "洛雪音乐助手"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/lyswhut/lx-music-desktop"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_x64-green.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win7_x86-green.7z"
+            },
+            "arm64": {
+                "url": "https://github.com/lyswhut/lx-music-desktop/releases/download/v$version/lx-music-desktop-v$version-win_arm64-green.7z"
             }
-        },
-        "hash": {
-            "url": "https://github.com/lyswhut/lx-music-desktop/releases",
-            "regex": "$md5\\s+$basename"
         }
     }
 }
