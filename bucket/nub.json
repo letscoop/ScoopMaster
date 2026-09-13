@@ -1,6 +1,6 @@
 {
     "version": "0.9.1",
-    "description": "A fast all-in-one toolkit that augments Node.js instead of replacing it.",
+    "description": "The fast all-in-one Node.js toolkit",
     "homepage": "https://nubjs.com",
     "license": "MIT",
     "architecture": {
@@ -13,13 +13,11 @@
             "hash": "32773b9b5c8c1b6a9d90337a700c773962d6e9d118026dc15abc8e596dd5afb4"
         }
     },
-    "pre_install": "if (!(Test-Path \"$dir\\bin\\nubx.exe\")) { Copy-Item \"$dir\\bin\\nub.exe\" \"$dir\\bin\\nubx.exe\" -ErrorAction SilentlyContinue }",
-    "bin": [
-        "bin\\nub.exe",
-        "bin\\nubx.exe"
-    ],
+    "bin": "bin\\nub.exe",
     "checkver": {
-        "github": "https://github.com/nubjs/nub"
+        "url": "https://api.github.com/repos/nubjs/nub/releases",
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
