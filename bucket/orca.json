@@ -1,15 +1,21 @@
 {
-    "##": "Orca",
     "version": "1.4.201",
-    "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+    "description": "Agent development environment for working with a fleet of parallel coding agents.",
     "homepage": "https://github.com/stablyai/orca",
     "license": "MIT",
-    "url": "https://github.com/stablyai/orca/releases/download/v1.4.201/orca-windows-setup.exe#/dl.7z",
-    "hash": "a82bc845911e6b04e98da9bd7453dc19f37d734ae5220e0719e4aafac6b8e433",
-    "pre_install": [
-        "Move-Item \"$dir\\`$PLUGINSDIR\\app-64.7z\" $dir -Force",
-        "Remove-Item $dir\\* -Exclude app-64.7z -Force -Recurse",
-        "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal"
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/stablyai/orca/releases/download/v1.4.201/orca-windows-setup.exe#/dl.7z",
+            "hash": "sha512:ecbe5f8a9630d14dda4fd239846c13d8fee879a1fc16141a4abd60130158cb1ded4fc34a9daa6b27f241312b01509a5b8ee87c1805de3f22c776d104d4040e54"
+        }
+    },
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Get-ChildItem \"$dir\" -Filter '$*' | Remove-Item -Recurse -Force",
+    "bin": [
+        [
+            "resources\\bin\\orca.exe",
+            "orca"
+        ]
     ],
     "shortcuts": [
         [
@@ -17,14 +23,20 @@
             "Orca"
         ]
     ],
-    "bin": [
-        [
-            "resources\\bin\\orca.exe",
-            "orca"
-        ]
-    ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/stablyai/orca/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^v([\\d.]+)$"
+    },
     "autoupdate": {
-        "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
+            }
+        }
     }
 }
