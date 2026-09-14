@@ -1,5 +1,5 @@
 {
-    "version": "0.7.0",
+    "version": "0.9.0",
     "description": "Task manager that lives in the terminal and treats an AI agent as a normal user",
     "homepage": "https://github.com/dimitritholen/tasqx",
     "license": {
@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dimitritholen/tasqx/releases/download/v0.7.0/tasqx-v0.7.0-x86_64-pc-windows-msvc.zip",
-            "hash": "38df67601358e2806534e2957d379b826ba2b8eedf1b90a51d0d764d860a10e2"
+            "url": "https://github.com/dimitritholen/tasqx/releases/download/v0.9.0/tasqx-v0.9.0-x86_64-pc-windows-msvc.zip",
+            "hash": "605894878462cad7db03639673deebc29c85068ce48bbca27a2c25ebbee9d5e1"
         }
     },
-    "extract_dir": "tasqx-v0.7.0-x86_64-pc-windows-msvc",
+    "extract_dir": "tasqx-v0.9.0-x86_64-pc-windows-msvc",
     "bin": "tasqx.exe",
     "checkver": {
         "github": "https://github.com/dimitritholen/tasqx"
