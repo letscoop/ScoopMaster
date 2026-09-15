@@ -1,27 +1,27 @@
 {
-  "version": "4.0.19.2979",
-  "description": "Sonarr is an internet PVR for Usenet and Torrents.",
-  "homepage": "https://sonarr.tv/",
-  "license": "GPL-3.0-only",
-  "url": "https://github.com/Sonarr/Sonarr/releases/download/v4.0.19.2979/Sonarr.main.4.0.19.2979.win-x64.zip",
-  "hash": "12951800aabb37f842bcd061f10c89553334eb019c7e9fcf9824fad238261ee8",
-  "extract_dir": "Sonarr",
-  "bin": [
-    [
-      "Sonarr.Console.exe",
-      "sonarr"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "Sonarr.exe",
-      "Sonarr"
-    ]
-  ],
-  "checkver": {
-    "github": "https://github.com/Sonarr/Sonarr"
-  },
-  "autoupdate": {
-    "url": "https://github.com/Sonarr/Sonarr/releases/download/v$version/Sonarr.main.$version.win-x64.zip"
-  }
+    "version": "4.0.19.2979",
+    "description": "Sonarr is an internet PVR for Usenet and Torrents.",
+    "homepage": "https://sonarr.tv/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/Sonarr/Sonarr/releases/download/v4.0.19.2979/Sonarr.main.4.0.19.2979.win-x64.zip",
+    "hash": "12951800aabb37f842bcd061f10c89553334eb019c7e9fcf9824fad238261ee8",
+    "extract_dir": "Sonarr",
+    "bin": [
+        [
+            "Sonarr.Console.exe",
+            "sonarr"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Sonarr.exe",
+            "Sonarr"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Sonarr/Sonarr"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Sonarr/Sonarr/releases/download/v$version/Sonarr.main.$version.win-x64.zip"
+    }
 }
