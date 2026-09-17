@@ -1,18 +1,18 @@
 {
-    "version": "2.9.0",
+    "version": "2.10.0",
     "homepage": "https://github.com/arp242/uni",
     "license": "MIT",
     "description": "Unicode utility",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/arp242/uni/releases/download/v2.9.0/uni-v2.9.0-windows-amd64.exe.gz",
-            "hash": "6ee9617a9f779a74e85148c011abdaaf583f114246919ecf215c3f507d8f74a7"
+            "url": "https://github.com/arp242/uni/releases/download/v2.10.0/uni-v2.10.0-windows-amd64.exe.gz",
+            "hash": "a828970663b5355b106b7a94d2301a15c4aab96e2741d15ca09efd4c979272ae"
         }
     },
     "extract_to": "",
     "bin": [
         [
-            "uni-v2.9.0-windows-amd64.exe",
+            "uni-v2.10.0-windows-amd64.exe",
             "uni"
         ]
     ],
