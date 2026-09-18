@@ -3,7 +3,7 @@
     "description": "balenaEtcher lets you flash OS images to SD cards & USB drives, safely and easily.",
     "homepage": "https://etcher.balena.io/",
     "license": "Apache-2.0",
-    "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/balena-io/etcher/LatestRelease/balenaEtcher-win32-x64-2.1.7.zip",
+    "url": "https://github.com/balena-io/etcher/releases/download/v2.1.7/balenaEtcher-win32-x64-2.1.7.zip",
     "hash": "73d5460332280f4ea1e910ee360dca9b7795d8b50cf3665874c0d562989afb91",
     "shortcuts": [
         [
@@ -12,11 +12,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/balena-io/etcher/LatestRelease/",
-        "regex": "balenaEtcher-win32-x64-([\\d\\.]+)\\.zip"
+        "github": "https://github.com/balena-io/etcher"
     },
     "autoupdate": {
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/balena-io/etcher/LatestRelease/balenaEtcher-win32-x64-$version.zip",
+        "url": "https://github.com/balena-io/etcher/releases/download/v$version/balenaEtcher-win32-x64-$version.zip",
         "hash": {
             "url": "$baseurl/SHA256SUMS.Windows.x64.txt"
         }
