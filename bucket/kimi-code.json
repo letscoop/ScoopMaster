@@ -1,38 +1,28 @@
 {
     "version": "2.0.1",
-    "description": "Kimi Code CLI — The Starting Point for Next-Gen Agents",
-    "homepage": "https://github.com/MoonshotAI/kimi-code",
+    "description": "AI coding agent CLI by Moonshot AI for terminal-based code editing, shell execution, and web retrieval.",
+    "homepage": "https://github.com/moonshotai/kimi-code",
     "license": "MIT",
-    "suggest": {
-        "Git": "git"
-    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@2.0.1/kimi-code-win32-x64.zip",
-            "hash": "e5c5c313ea38dfca4a6a09fb9ef456c108f7a7b8796e35496d9a4f2eaf8c4b9e"
+            "hash": "sha256:e5c5c313ea38dfca4a6a09fb9ef456c108f7a7b8796e35496d9a4f2eaf8c4b9e"
         },
         "arm64": {
             "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@2.0.1/kimi-code-win32-arm64.zip",
-            "hash": "6c60c799cb05b3ebe031cfceda879db876e741262c4e6721ae5942bcbdaf91af"
+            "hash": "sha256:6c60c799cb05b3ebe031cfceda879db876e741262c4e6721ae5942bcbdaf91af"
         }
     },
     "bin": "kimi.exe",
     "checkver": {
-        "github": "https://github.com/MoonshotAI/kimi-code",
-        "regex": "kimi-code(?:@|%40)([\\d.]+)"
+        "url": "https://api.github.com/repos/moonshotai/kimi-code/releases",
+        "re": "@moonshot-ai/kimi-code@(\\d+\\.\\d+\\.\\d+)$"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$version/kimi-code-win32-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/MoonshotAI/kimi-code/releases/download/@moonshot-ai/kimi-code@$version/kimi-code-win32-arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        }
+        "github": "moonshotai/kimi-code"
     },
-    "notes": "Kimi Code CLI uses Git Bash (Git for Windows) as its shell environment. If Git Bash is installed in a custom location, set KIMI_SHELL_PATH to the absolute path of bash.exe."
+    "post_install": [
+        "Write-Host 'NOTE: Git for Windows must be installed for kimi-code to work.' -ForegroundColor Yellow",
+        "Write-Host \"If Git Bash is not found automatically, set the `$env:KIMI_SHELL_PATH environment variable to bash.exe.\" -ForegroundColor Yellow"
+    ]
 }
