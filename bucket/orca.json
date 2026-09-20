@@ -1,36 +1,30 @@
 {
     "version": "1.4.205",
-    "description": "The next-gen IDE for working with a fleet of parallel agents.",
-    "homepage": "https://onorca.dev",
-    "license": "MIT",
+    "description": "Orca - an AI-native desktop IDE that turns natural language into full-stack applications. Build, run, and ship apps with an agentic interface.",
+    "homepage": "https://github.com/stablyai/orca",
+    "license": "NOASSERTION",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stablyai/orca/releases/download/v1.4.205/orca-windows-setup.exe#/dl.7z",
-            "hash": "sha512:0c04b75d5c84132de7de327db3b3e8d760f21aceba6f3dda852eb12ded8af10bd848bf827b6d06aba22c7e1db738c5d05a8a6b6cf6408ed4d8f18c02b4e8400a",
-            "pre_install": [
-                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\*.nsi\" -Recurse"
-            ]
+            "url": "https://github.com/stablyai/orca/releases/download/v1.4.205/orca-windows-setup.exe",
+            "hash": "602cd4fcfd195b486cdf6d425426cff1361b6be06da0873abbdffd2d6ed8d86f"
         }
     },
-    "shortcuts": [
-        [
-            "Orca.exe",
-            "Orca"
-        ]
-    ],
+    "installer": {
+        "args": [
+            "/S",
+            "/allusers"
+        ],
+        "keep": true
+    },
     "checkver": {
-        "github": "https://github.com/stablyai/orca"
+        "url": "https://github.com/stablyai/orca/releases",
+        "regex": "/stablyai/orca/releases/tag/v([0-9]+\\.[0-9]+\\.[0-9]+)\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe#/dl.7z"
+                "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe"
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "sha512:\\s+$base64"
         }
     }
 }
