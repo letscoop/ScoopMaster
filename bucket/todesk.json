@@ -4,16 +4,13 @@
     "version": "5.0.2.0",
     "license": "Proprietary",
     "url": "https://dl.todesk.com/irrigation/ToDesk_5.0.2.0.exe#/dl.7z",
-    "hash": "f5f50ad192661d61916f0634eb78c9873a3ca3e73e4b4cf0c619e5e38d4a3a65",
+    "hash": "ce7307212dc6b77503a0e5a97d3d00004563947453e5b42483a4990bbbb47d5c",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
         "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
         "}"
     ],
-    "installer": {
-        "script": "Expand-7zipArchive -Path \"$dir\\app64.7z\" -DestinationPath $dir"
-    },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\", \"$dir\\app32.7z\", \"$dir\\app64.7z\" -Force -Recurse",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\" -Force -Recurse",
     "shortcuts": [
         [
             "ToDesk.exe",
