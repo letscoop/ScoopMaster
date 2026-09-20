@@ -34,16 +34,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/ysc3839/AudioPlaybackConnector/releases/download/v$version/AudioPlaybackConnector64.exe",
-                "hash": {
-                    "mode": "download"
-                }
+                "url": "https://github.com/ysc3839/AudioPlaybackConnector/releases/download/v$version/AudioPlaybackConnector64.exe"
             },
             "32bit": {
-                "url": "https://github.com/ysc3839/AudioPlaybackConnector/releases/download/v$version/AudioPlaybackConnector32.exe",
-                "hash": {
-                    "mode": "download"
-                }
+                "url": "https://github.com/ysc3839/AudioPlaybackConnector/releases/download/v$version/AudioPlaybackConnector32.exe"
             }
         }
     }
