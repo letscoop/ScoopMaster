@@ -45,7 +45,10 @@
         "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Froststrap.lnk\" -Force -ErrorAction SilentlyContinue"
     ],
     "uninstaller": {
-        "script": "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -FilePath \"$dir\\uninstall.exe\" -ArgumentList \"/S\" -Wait }"
+        "script": [
+            "if (Test-Path \"$dir\\uninstall.exe\") { Start-Process -FilePath \"$dir\\uninstall.exe\" -ArgumentList \"/S\" -Wait }",
+            "Remove-Item \"$env:LOCALAPPDATA\\Froststrap\" -Recurse -Force -ErrorAction SilentlyContinue"
+        ]
     },
     "checkver": {
         "url": "https://api.github.com/repos/Froststrap/Froststrap/releases",
