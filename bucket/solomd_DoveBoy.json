@@ -1,54 +1,54 @@
 {
-    "version": "4.13.1",
-    "description": "A lightweight Markdown and plain text editor built with Tauri 2.",
-    "homepage": "https://solomd.app",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/zhitongblog/solomd/releases/download/v4.13.1/SoloMD_4.13.1_x64_en-US.msi",
-            "hash": "b8afd67de39dba62040e3cc42a1e6b73009e5b7ff423b18784861bf11ecdfa8f"
-        },
-        "arm64": {
-            "url": "https://github.com/zhitongblog/solomd/releases/download/v4.13.1/SoloMD_4.13.1_arm64_en-US.msi",
-            "hash": "86b16d9cdce6d0334aec41dcd742eed7eeabf35a2eb4cd73d1fb8f4fc67376d2"
-        }
+  "version": "4.13.1",
+  "description": "A lightweight Markdown and plain text editor built with Tauri 2.",
+  "homepage": "https://solomd.app",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/zhitongblog/solomd/releases/download/v4.13.1/SoloMD_4.13.1_x64_en-US.msi",
+      "hash": "b8afd67de39dba62040e3cc42a1e6b73009e5b7ff423b18784861bf11ecdfa8f"
     },
-    "extract_dir": "PFiles\\SoloMD",
-    "installer": {
-        "script": [
-            "# handle runtime cache",
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\app.solomd\"",
-            "Mount-ExternalRuntimeData -Source \"$persist_dir\\userdata\" -Target \"$env:APPDATA\\app.solomd\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "uninstaller": {
-        "script": [
-            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
-            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\app.solomd\"",
-            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\app.solomd\"",
-            "Remove-Module -Name AppsUtils"
-        ]
-    },
-    "bin": "SoloMD.exe",
-    "shortcuts": [
-        [
-            "SoloMD.exe",
-            "SoloMD"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/zhitongblog/solomd"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64_en-US.msi"
-            },
-            "arm64": {
-                "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_arm64_en-US.msi"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/zhitongblog/solomd/releases/download/v4.13.1/SoloMD_4.13.1_arm64_en-US.msi",
+      "hash": "86b16d9cdce6d0334aec41dcd742eed7eeabf35a2eb4cd73d1fb8f4fc67376d2"
     }
+  },
+  "extract_dir": "PFiles\\SoloMD",
+  "installer": {
+    "script": [
+      "# handle runtime cache",
+      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+      "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\app.solomd\"",
+      "Mount-ExternalRuntimeData -Source \"$persist_dir\\userdata\" -Target \"$env:APPDATA\\app.solomd\"",
+      "Remove-Module -Name AppsUtils"
+    ]
+  },
+  "uninstaller": {
+    "script": [
+      "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+      "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\app.solomd\"",
+      "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\app.solomd\"",
+      "Remove-Module -Name AppsUtils"
+    ]
+  },
+  "bin": "SoloMD.exe",
+  "shortcuts": [
+    [
+      "SoloMD.exe",
+      "SoloMD"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/zhitongblog/solomd"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_x64_en-US.msi"
+      },
+      "arm64": {
+        "url": "https://github.com/zhitongblog/solomd/releases/download/v$version/SoloMD_$version_arm64_en-US.msi"
+      }
+    }
+  }
 }
