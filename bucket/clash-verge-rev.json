@@ -1,6 +1,6 @@
 {
     "version": "2.5.4",
-    "description": "Continuation of Clash Verge - A Clash Meta GUI based on Tauri.",
+    "description": "Continuation of Clash Verge - A Clash Meta GUI based on Tauri",
     "homepage": "https://github.com/clash-verge-rev/clash-verge-rev",
     "license": "GPL-3.0-only",
     "architecture": {
@@ -13,26 +13,18 @@
             "hash": "58130745c103544ee7b190ae0ea7cfc6f1ae42c1f3b2453298b4e7e45bec5d44"
         }
     },
-    "persist_link": [
-        [
-            "$env:AppData\\io.github.clash-verge-rev.clash-verge-rev",
-            "AppData"
-        ],
-        [
-            "$env:LocalAppData\\io.github.clash-verge-rev.clash-verge-rev",
-            "LocalAppData"
-        ]
-    ],
-    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*\" -Force -Recurse",
-    "pre_uninstall": [
-        "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-        "Start-Process \"$dir\\resources\\uninstall-service.exe\" -Wait -Verb 'RunAs' -WindowStyle 'Hidden'; Start-Sleep -Seconds 3"
-    ],
     "shortcuts": [
         [
             "clash-verge.exe",
             "Clash Verge"
         ]
+    ],
+    "persist": ".config",
+    "post_install": [
+        "# https://github.com/clash-verge-rev/clash-verge-rev/issues/21#issuecomment-1097467046",
+        "if (!(Test-Path \"$persist_dir\\.config\\PORTABLE\")) {",
+        "    New-Item -Path \"$persist_dir\\.config\\PORTABLE\" -ItemType file | Out-Null",
+        "}"
     ],
     "checkver": "github",
     "autoupdate": {
