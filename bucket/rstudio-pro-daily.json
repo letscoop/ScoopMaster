@@ -1,42 +1,42 @@
 {
-  "version": "2026.10.0+140.pro1-daily",
-  "homepage": "https://posit.co/products/open-source/rstudio",
-  "description": "An IDE for R, which includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.",
-  "license": "https://rstudio.com/about/eula/",
-  "architecture": {
-    "64bit": {
-      "url": "https://s3.amazonaws.com/rstudio-ide-build/electron/windows/RStudio-pro-2026.10.0-daily-140.pro1.zip",
-      "hash": "9cd931fdfd9c152c6413f5366bf12d36156a5a99418dfcf3c0ea90fa267d53c2"
-    }
-  },
-  "bin": [
-    [
-      "bin\\rstudio.exe",
-      "rstudio-pro-daily"
-    ]
-  ],
-  "shortcuts": [
-    [
-      "bin\\rstudio.exe",
-      "RStudio Pro Daily"
-    ]
-  ],
-  "checkver": {
-    "url": "https://dailies.rstudio.com/rstudio/latest/index.json",
-    "jsonpath": ".products['electron-pro'].platforms['windows-xcopy'].version",
-    "regex": "(?<date>[\\d.]+)(?<type>-(daily|preview))?\\+(?<build>\\d+)(?<pro>\\.pro\\d+)",
-    "replace": "${date}+${build}${pro}${type}"
-  },
-  "autoupdate": {
+    "version": "2026.10.0+143.pro2-daily",
+    "homepage": "https://posit.co/products/open-source/rstudio",
+    "description": "An IDE for R, which includes a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging and workspace management.",
+    "license": "https://rstudio.com/about/eula/",
     "architecture": {
-      "64bit": {
-        "url": "https://s3.amazonaws.com/rstudio-ide-build/electron/windows/RStudio-pro-$matchDate$matchType-$matchBuild$matchPro.zip",
-        "hash": {
-          "mode": "json",
-          "jsonpath": ".products['electron-pro'].platforms['windows-xcopy'].sha256",
-          "url": "https://dailies.rstudio.com/rstudio/latest/index.json"
+        "64bit": {
+            "url": "https://s3.amazonaws.com/rstudio-ide-build/electron/windows/RStudio-pro-2026.10.0-daily-143.pro2.zip",
+            "hash": "19f85765757ead23b33c29574d0db2c129b59d8206086d0fa3262948cc28bef1"
         }
-      }
+    },
+    "bin": [
+        [
+            "bin\\rstudio.exe",
+            "rstudio-pro-daily"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "bin\\rstudio.exe",
+            "RStudio Pro Daily"
+        ]
+    ],
+    "checkver": {
+        "url": "https://dailies.rstudio.com/rstudio/latest/index.json",
+        "jsonpath": ".products['electron-pro'].platforms['windows-xcopy'].version",
+        "regex": "(?<date>[\\d.]+)(?<type>-(daily|preview))?\\+(?<build>\\d+)(?<pro>\\.pro\\d+)",
+        "replace": "${date}+${build}${pro}${type}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://s3.amazonaws.com/rstudio-ide-build/electron/windows/RStudio-pro-$matchDate$matchType-$matchBuild$matchPro.zip",
+                "hash": {
+                    "mode": "json",
+                    "jsonpath": ".products['electron-pro'].platforms['windows-xcopy'].sha256",
+                    "url": "https://dailies.rstudio.com/rstudio/latest/index.json"
+                }
+            }
+        }
     }
-  }
 }

@@ -1,20 +1,23 @@
 {
-    "##": [
-        "Please avoid renaming the binaries, as this may cause compatibility issues.",
-        "Ensure you use the original filenames: 'TE64.exe' for 64-bit and 'TE32.exe' for 32-bit."
-    ],
-    "version": "26.6.11",
+    "version": "26.9.20",
     "description": "A tabbed file manager with Add-on support.",
     "homepage": "https://tablacus.github.io/explorer_en.html",
-    "license": "MIT",
-    "url": "https://github.com/tablacus/TablacusExplorer/releases/download/26.6.11/te260611.zip",
-    "hash": "b55e6384b3cbb8495c893606867d0f4e17b306c03f7b4cc30b13c279b35ab29e",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/tablacus/TablacusExplorer/blob/master/LICENSE"
+    },
+    "url": "https://github.com/tablacus/TablacusExplorer/releases/download/26.9.20/te260920.zip",
+    "hash": "eeec9af13377a52316ed4aa902921c23a42e57aa5964380279dfb2b71a4cf41f",
     "architecture": {
         "64bit": {
             "bin": [
                 [
                     "TE64.exe",
-                    "te64.exe"
+                    "te"
+                ],
+                [
+                    "TE64.exe",
+                    "tablacus"
                 ]
             ],
             "shortcuts": [
@@ -28,7 +31,11 @@
             "bin": [
                 [
                     "TE32.exe",
-                    "te32.exe"
+                    "te"
+                ],
+                [
+                    "TE32.exe",
+                    "tablacus"
                 ]
             ],
             "shortcuts": [
@@ -39,13 +46,15 @@
             ]
         }
     },
-    "persist": "config",
+    "persist": [
+        "config",
+        "addons",
+        "icons"
+    ],
     "checkver": {
-        "github": "https://api.github.com/repos/tablacus/TablacusExplorer/releases/latest",
-        "jsonpath": "$.assets[?(@.name =~ /te\\d+\\.zip/i)].browser_download_url",
-        "regex": "download/(?<version>[\\d.]+)/(?<filename>.*)\\.zip"
+        "regex": "Version <span id=\"ver\">([\\d.]+)</span>[\\w\\W]*?te(?<cleanpadding>\\d+)\\.zip"
     },
     "autoupdate": {
-        "url": "https://github.com/tablacus/TablacusExplorer/releases/download/$version/$matchFilename.zip"
+        "url": "https://github.com/tablacus/TablacusExplorer/releases/download/$version/te$matchCleanpadding.zip"
     }
 }
