@@ -12,6 +12,24 @@
             "hash": "bb1822ef80cb70caaa1a1688eb3b2e0b2d9628b8e0fff6605d1dfdba7cdd98f8"
         }
     },
+    "extract_dir": "PiPixiv\\PiPixiv",
+    "installer": {
+        "script": [
+            "# handle runtime cache",
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\appdata\" -Target \"$env:LOCALAPPDATA\\nucleus\"",
+            "Mount-ExternalRuntimeData -Source \"$persist_dir\\userdata\" -Target \"$env:APPDATA\\PiPixiv\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name apps) scripts/AppsUtils.psm1)",
+            "Dismount-ExternalRuntimeData -Target \"$env:LOCALAPPDATA\\nucleus\"",
+            "Dismount-ExternalRuntimeData -Target \"$env:APPDATA\\PiPixiv\"",
+            "Remove-Module -Name AppsUtils"
+        ]
+    },
     "bin": "PiPixiv.exe",
     "shortcuts": [
         [
