@@ -12,13 +12,6 @@
             "hash": "cd5e4aeff87ca3f178af8ab30b2c6709112f6c5c6dcb976b04e7d7edc3d61867"
         }
     },
-    "shortcuts": [
-        [
-            "BaiduNetdisk.exe",
-            "百度网盘"
-        ]
-    ],
-    "persist": "users",
     "post_install": [
         "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
         "Remove-Item \"$dir\\`$TEMP\" -Recurse"
@@ -46,16 +39,20 @@
         "Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
         "}"
     ],
+    "bin": "BaiduNetdisk.exe",
+    "shortcuts": [
+        [
+            "BaiduNetdisk.exe",
+            "百度网盘"
+        ]
+    ],
+    "persist": "users",
     "checkver": {
         "url": "https://pan.baidu.com/disk/cmsdata?do=client",
         "jsonpath": "$.guanjia.url",
         "regex": "BaiduNetdisk_([\\d.]+).exe"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_$version.exe#/dl.7z"
-            }
-        }
+        "url": "http://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_$version.exe#/dl.7z"
     }
 }
