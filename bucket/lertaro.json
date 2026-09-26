@@ -1,41 +1,47 @@
 {
     "version": "5.7.4",
-    "description": "",
-    "homepage": "https://lertaro.github.io",
-    "license": "MIT",
-    "checkver": {
-        "github": "https://github.com/Lertaro/Lertaro"
+    "description": "A modern, high-performance local file search and productivity tool for Windows. A sleek, customizable alternative to Everything and Listary built with C# WPF and NT Services, featuring instant NTFS MFT parsing, real-time USN monitoring, and plugin support.",
+    "homepage": "https://lertaro.github.io/",
+    "license": {
+        "identifier": "MIT license",
+        "url": "https://github.com/Lertaro/Lertaro#MIT-1-ov-file"
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.7.4/Lertaro-Portable.zip",
-            "hash": "a0652cb0d93400c4702105e8c32dd54434dbb35f43467ef679781a01064a1653"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.7.4/Lertaro-Setup.exe",
+            "hash": "64b9147ed9cf82005cf9de4e00766a8338bc52a98d1fb01a3e7bf7c42b1fd5ca"
         },
         "arm64": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.6.3/Lertaro-Portable-arm64.zip",
-            "hash": "251f12be02b8e174d658437bb3855be8fc199f4f93258700fe2433a356ec98ed"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.7.4/Lertaro-Setup-arm64.exe",
+            "hash": "93aaf08f1633b1b1788b959bea565839f669f69fc52a542b6db0666dc012a689"
         }
     },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.6.3/Lertaro-Portable-arm64.zip"
-            }
-        }
-    },
-    "extract_dir": "Lertaro",
+    "innosetup": true,
+    "bin": [
+        [
+            "Lertaro.App.exe",
+            "Lertaro"
+        ]
+    ],
     "shortcuts": [
         [
             "Lertaro.App.exe",
             "Lertaro"
         ]
     ],
-    "persist": "Data",
-    "bin": "lff.exe",
-    "uninstaller": {
-        "file": "portable-cleanup.bat"
+    "checkver": {
+        "github": "https://api.github.com/repos/Lertaro/Lertaro/releases",
+        "jp": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup-arm64.exe"
+            }
+        }
     }
 }
