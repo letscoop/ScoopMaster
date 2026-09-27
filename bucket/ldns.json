@@ -6,11 +6,11 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/shanto/Scoop/releases/download/ldns-1.9.2/ldns-windows-x64.zip",
-      "hash": "c6c2671638d3ef9b9c74d5d814dbdc17f2c47808234800217ab36516b3c8e221"
+      "hash": "6dac4014028a58e9b9bd5656040c728cbb4e8a2480c2f5a7770ea9ea07cc81af"
     },
     "arm64": {
       "url": "https://github.com/shanto/Scoop/releases/download/ldns-1.9.2/ldns-windows-arm64.zip",
-      "hash": "b48e2d938da3414bb16eeba7991da584c89d2a3f2ec40a689f1229a0d9a2a750"
+      "hash": "0aac0c9a66c91ea8fc818e42e5d9b284b3094a5cb7bc4cea0cb13fd22614d33a"
     }
   },
   "bin": [
@@ -43,7 +43,8 @@
   ],
   "persist": "root.key",
   "checkver": {
-    "github": "https://github.com/NLnetLabs/ldns"
+    "url": "https://nlnetlabs.nl/projects/ldns/about/",
+    "regex": "/ldns-([\\d.]+)\\.tar.gz"
   },
   "autoupdate": {
     "architecture": {
