@@ -6,33 +6,27 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/vladimiry/ElectronMail/releases/download/v5.3.10/electron-mail-5.3.10-windows-x64-nsis-installer.exe#/dl.7z",
-            "hash": "1b1ab30a86d21335d4e67cf807f0b808c1be2aa633d4dbaca1f9402de62ddfcb",
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+            "hash": "1b1ab30a86d21335d4e67cf807f0b808c1be2aa633d4dbaca1f9402de62ddfcb"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse -ErrorAction SilentlyContinue",
+    "extract_dir": "$PLUGINSDIR",
+    "pre_install": "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal",
     "shortcuts": [
         [
             "electron-mail.exe",
-            "ElectronMail",
-            "--user-data-dir=\"$dir\\User Data\""
+            "ElectronMail"
         ]
     ],
-    "env_set": {
-        "ELECTRON_MAIL_USER_DATA_DIR": "$dir\\User Data"
-    },
-    "persist": "User Data",
-    "notes": "Desktop notification is not working when using portable version.",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/vladimiry/ElectronMail/releases/download/v$version/electron-mail-$version-windows-x64-nsis-installer.exe#/dl.7z",
-                "hash": {
-                    "url": "https://github.com/vladimiry/ElectronMail/releases/tag/v$version",
-                    "regex": "$sha256\\s+$basename"
-                }
+                "url": "https://github.com/vladimiry/ElectronMail/releases/download/v$version/electron-mail-$version-windows-x64-nsis-installer.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "https://github.com/vladimiry/ElectronMail/releases/tag/v$version",
+            "regex": "$sha256\\s+$basename"
         }
     }
 }
