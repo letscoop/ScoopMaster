@@ -1,6 +1,6 @@
 {
     "version": "0.2.2",
-    "description": "The kryo.to desktop client: find a game, download it and play it",
+    "description": "Find a game, download it and play it",
     "homepage": "https://github.com/kyrotooooo/kryoto-desktop",
     "license": "MIT",
     "notes": "The app checks for updates on launch and installs them itself, which can make Scoop report the install as modified. Run 'scoop update kryoto-desktop' when that happens.",
