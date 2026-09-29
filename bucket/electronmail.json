@@ -1,32 +1,38 @@
 {
-    "version": "5.3.9",
+    "version": "5.3.10",
     "description": "An Electron-based unofficial desktop client for ProtonMail.",
     "homepage": "https://github.com/vladimiry/ElectronMail",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/vladimiry/ElectronMail/releases/download/v5.3.9/electron-mail-5.3.9-windows-x64-nsis-installer.exe#/dl.7z",
-            "hash": "975574c22b76c9350beb59243f3bc46185dd6c7f5070aefb12caee2e10e589f0"
+            "url": "https://github.com/vladimiry/ElectronMail/releases/download/v5.3.10/electron-mail-5.3.10-windows-x64-nsis-installer.exe#/dl.7z",
+            "hash": "1b1ab30a86d21335d4e67cf807f0b808c1be2aa633d4dbaca1f9402de62ddfcb",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         }
     },
-    "extract_dir": "$PLUGINSDIR",
-    "pre_install": "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal",
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\resources\\app-update.yml\" -Force -Recurse -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
             "electron-mail.exe",
-            "ElectronMail"
+            "ElectronMail",
+            "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
+    "env_set": {
+        "ELECTRON_MAIL_USER_DATA_DIR": "$dir\\User Data"
+    },
+    "persist": "User Data",
+    "notes": "Desktop notification is not working when using portable version.",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/vladimiry/ElectronMail/releases/download/v$version/electron-mail-$version-windows-x64-nsis-installer.exe#/dl.7z"
+                "url": "https://github.com/vladimiry/ElectronMail/releases/download/v$version/electron-mail-$version-windows-x64-nsis-installer.exe#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/vladimiry/ElectronMail/releases/tag/v$version",
+                    "regex": "$sha256\\s+$basename"
+                }
             }
-        },
-        "hash": {
-            "url": "https://github.com/vladimiry/ElectronMail/releases/tag/v$version",
-            "regex": "$sha256\\s+$basename"
         }
     }
 }
