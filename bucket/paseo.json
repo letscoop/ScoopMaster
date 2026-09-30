@@ -1,23 +1,15 @@
 {
-    "version": "0.10.1",
+    "##": "Paseo",
+    "version": "0.10.2",
     "description": "Orchestrate multiple coding agents from desktop and mobile",
-    "homepage": "https://paseo.sh",
-    "license": "AGPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/getpaseo/paseo/releases/download/v0.10.1/Paseo-Setup-0.10.1-x64.zip",
-            "hash": "1e283de3b8440a7de9e953df88810b71e508ac3046dc5dae67087acc30df6cd5"
-        },
-        "arm64": {
-            "url": "https://github.com/getpaseo/paseo/releases/download/v0.10.1/Paseo-Setup-0.10.1-arm64.zip",
-            "hash": "42c0cbd226d9dbf0c035368b651755847cd20b2ba3cdbeaa23b9216a721ce9be"
-        }
-    },
-    "bin": [
-        [
-            "resources\\bin\\paseo.cmd",
-            "paseo"
-        ]
+    "homepage": "https://github.com/getpaseo/paseo",
+    "license": "https://github.com/getpaseo/paseo#License-1-ov-file",
+    "url": "https://github.com/getpaseo/paseo/releases/download/v0.10.2/Paseo-Setup-0.10.2.exe#/dl.7z",
+    "hash": "5734184f18ec67cde32a60612a53a4077c10b66c65ab9e8f440e11e26c85a43d",
+    "pre_install": [
+        "Move-Item \"$dir\\`$PLUGINSDIR\\app-64.7z\" $dir -Force",
+        "Remove-Item $dir\\* -Exclude app-64.7z -Force -Recurse",
+        "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal"
     ],
     "shortcuts": [
         [
@@ -25,17 +17,8 @@
             "Paseo"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/getpaseo/paseo"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version-arm64.zip"
-            }
-        }
+        "url": "https://github.com/getpaseo/paseo/releases/download/v$version/Paseo-Setup-$version.exe#/dl.7z"
     }
 }
