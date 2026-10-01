@@ -1,29 +1,18 @@
 {
     "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "homepage": "https://github.com/kiennq/emacs-build",
-    "license": "GPL-3.0-or-later",
-    "version": "32.425.20260925.72dad8e9",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/kiennq/emacs-build/releases/download/v32.425.20260925.72dad8e9/mingw-w64-x86_64_emacs_72dad8e9_full.zip",
-            "hash": "ef5d5610a76181b2a7529fe028554020a024a7a00b0b83c08c937ffdf255cd2e"
-        }
-    },
+    "license": "GPLv3",
+    "version": "32.426.20261001.50230bfc",
+    "url": "https://github.com/kiennq/emacs-build/releases/download/v32.426.20261001.50230bfc/mingw-w64-ucrt-x86_64_emacs_50230bfc_mps_full.zip",
+    "hash": "28bdd6e4054561689b6be77c5163999f3e65866cbe157bd239d95b8869846614",
     "bin": [
         "bin\\runemacs.exe",
         "bin\\emacs.exe",
         "bin\\emacsclient.exe",
         "bin\\emacsclientw.exe",
-        "bin\\etags.exe"
-    ],
-    "shortcuts": [
-        [
-            "bin\\runemacs.exe",
-            "Emacs"
-        ],
         [
             "bin\\emacsclientw.exe",
-            "Emacs Client",
+            "emw",
             "-c -n -a \"\""
         ]
     ],
@@ -32,10 +21,6 @@
         "regex": "/tag/v([\\d\\w.-]+)"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/kiennq/emacs-build/releases/download/v$version/mingw-w64-x86_64_emacs_$buildVersion_full.zip"
-            }
-        }
+        "url": "https://github.com/kiennq/emacs-build/releases/download/v$version/mingw-w64-ucrt-x86_64_emacs_$buildVersion_mps_full.zip"
     }
 }
