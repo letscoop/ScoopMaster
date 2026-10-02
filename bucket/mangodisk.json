@@ -1,40 +1,39 @@
 {
     "version": "1.1.5",
-    "description": "A safety-first disk cleaner and disk space analyzer.",
-    "homepage": "https://mangodisk.app/",
+    "description": "Disk cleanup, storage analysis, and system optimization for Windows.",
+    "homepage": "https://github.com/harry0703/MangoDisk",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": [
-                "https://github.com/harry0703/MangoDisk/releases/download/v1.1.5/MangoDisk-1.1.5-windows.exe#/dl.7z",
-                "https://github.com/harry0703/MangoDisk/releases/download/v1.1.5/MangoDisk-1.1.5-windows-cli.exe#/mangodisk-cli.exe"
-            ],
-            "hash": [
-                "084086ad01f1035b75efbcaae61c028ed99ce35bc54ed7fc8a8d147011e91604",
-                "6c2d8833ba8e8eb42c7bf91adc90ac82e7ee0e317579b47b4d37c3a598c2d9c6"
-            ]
+            "url": "https://github.com/harry0703/MangoDisk/releases/download/v1.1.5/MangoDisk-1.1.5-windows-portable.exe",
+            "hash": "4fc3703a130f06b29e4c805214834b9c6a705f451da2e25069fa391844fc912c"
         }
     },
-    "bin": "mangodisk-cli.exe",
+    "bin": "MangoDisk-1.1.5-windows-portable.exe",
     "shortcuts": [
         [
-            "MangoDisk.exe",
+            "MangoDisk-1.1.5-windows-portable.exe",
             "MangoDisk"
         ]
     ],
-    "post_install": "Remove-Item \"$dir\\uninstall*\", \"$dir\\`$*\" -Force -Recurse -ErrorAction SilentlyContinue",
-    "post_uninstall": "if ($purge) { Remove-Item \"$env:LOCALAPPDATA\\app.mangodisk.desktop\" -Force -Recurse -ErrorAction SilentlyContinue }",
-    "checkver": {
-        "github": "https://github.com/harry0703/MangoDisk"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": [
-                    "https://github.com/harry0703/MangoDisk/releases/download/v$version/MangoDisk-$version-windows.exe#/dl.7z",
-                    "https://github.com/harry0703/MangoDisk/releases/download/v$version/MangoDisk-$version-windows-cli.exe#/mangodisk-cli.exe"
-                ]
+                "url": "https://github.com/harry0703/MangoDisk/releases/download/v$version/MangoDisk-$version-windows-portable.exe",
+                "hash": {
+                    "mode": "json",
+                    "url": "https://api.github.com/repos/harry0703/MangoDisk/releases/tags/v$version",
+                    "jp": "$.assets[?(@.name == '$basename')].digest"
+                }
             }
-        }
+        },
+        "bin": "MangoDisk-$version-windows-portable.exe",
+        "shortcuts": [
+            [
+                "MangoDisk-$version-windows-portable.exe",
+                "MangoDisk"
+            ]
+        ]
     }
 }
