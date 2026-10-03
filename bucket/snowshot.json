@@ -1,8 +1,7 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "1.2.1",
-    "description": "Capture, annotate, extract text, and record your screen. Turn a moment into something worth sharing",
-    "homepage": "https://github.com/mg-chao/snow-apps",
+    "description": "Screenshot and screen recording tool with annotations, OCR and translation",
+    "homepage": "https://snowshot.top/zh/index.html",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
@@ -10,23 +9,28 @@
             "hash": "c20812e3d866f6e2cfcce72967992664ab9ae41cd29bceacd7e0960a3f0deb5c"
         }
     },
-    "extract_dir": "bin",
-    "bin": "snow-shot-mcp.exe",
+    "bin": [
+        [
+            "bin\\snow_shot.exe",
+            "snowshot"
+        ]
+    ],
     "shortcuts": [
         [
-            "snow_shot.exe",
+            "bin\\snow_shot.exe",
             "Snow Shot"
         ]
     ],
-    "persist": "portable",
+    "persist": "bin\\portable",
     "checkver": {
-        "github": "https://github.com/mg-chao/snow-apps",
-        "regex": "v([\\d.]+(?:-beta\\d*)?)_snow-shot(?!-)"
+        "url": "https://api.github.com/repos/mg-chao/snow-apps/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "https://github\\.com/mg-chao/snow-apps/releases/download/(?<tag>[^/]+)/snow-shot-(?<version>[\\d.]+(?:-[a-zA-Z0-9.-]+)?)-windows-x64-portable\\.zip"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/mg-chao/snow-apps/releases/download/v$version_snow-shot/snow-shot-$version-windows-x64-portable.zip"
+                "url": "https://github.com/mg-chao/snow-apps/releases/download/$matchTag/snow-shot-$version-windows-x64-portable.zip"
             }
         }
     }
