@@ -1,26 +1,26 @@
 {
-    "homepage": "https://go.tacodewolff.nl/minify",
-    "description": "Go minifiers for web formats",
-    "version": "2.24.18",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/tdewolff/minify/releases/download/v2.24.18/minify_windows_amd64.zip",
-            "hash": "1825b1d5968cf66c7bda92a64faa5682cd29ac774523738352c441102c0595ee"
-        }
-    },
-    "bin": "minify.exe",
-    "checkver": {
-        "github": "https://github.com/tdewolff/minify"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/tdewolff/minify/releases/download/v$version/minify_windows_amd64.zip",
-                "hash": {
-                    "url": "https://github.com/tdewolff/minify/releases/download/v$version/checksums.txt"
-                }
-            }
-        }
+  "homepage": "https://go.tacodewolff.nl/minify",
+  "description": "Go minifiers for web formats",
+  "version": "2.24.18",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/tdewolff/minify/releases/download/v2.24.18/minify_windows_amd64.zip",
+      "hash": "1825b1d5968cf66c7bda92a64faa5682cd29ac774523738352c441102c0595ee"
     }
+  },
+  "bin": "minify.exe",
+  "checkver": {
+    "github": "https://github.com/tdewolff/minify"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/tdewolff/minify/releases/download/v$version/minify_windows_amd64.zip",
+        "hash": {
+          "url": "https://github.com/tdewolff/minify/releases/download/v$version/checksums.txt"
+        }
+      }
+    }
+  }
 }
