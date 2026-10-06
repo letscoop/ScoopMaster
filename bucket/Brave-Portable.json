@@ -1,52 +1,52 @@
 {
-    "version": "1.96.61",
-    "description": "Brave. Secure, Fast & Private Web Browser with Adblocker",
-    "homepage": "https://brave.com",
-    "license": {
-        "identifier": "MPL 2.0",
-        "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
+  "version": "1.96.61",
+  "description": "Brave. Secure, Fast & Private Web Browser with Adblocker",
+  "homepage": "https://brave.com",
+  "license": {
+    "identifier": "MPL 2.0",
+    "url": "https://github.com/brave/brave-browser/blob/master/LICENSE"
+  },
+  "changelog": "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-x64.zip",
+      "hash": "612dc0c661917cdda6d1444dbc055350ff36fd536f2f6ac95750077140b0b3f3"
     },
-    "changelog": "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-x64.zip",
-            "hash": "612dc0c661917cdda6d1444dbc055350ff36fd536f2f6ac95750077140b0b3f3"
-        },
-        "32bit": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-ia32.zip",
-            "hash": "0a5aa790a10dedccbcce1beea1b33cdea5090ca6459de43b92f3772362cd6bce"
-        },
-        "arm64": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-arm64.zip",
-            "hash": "c68fae85236d606e1b7aa79c430121a1a6fe1a501db400d304b5c226f863c35d"
-        }
+    "32bit": {
+      "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-ia32.zip",
+      "hash": "0a5aa790a10dedccbcce1beea1b33cdea5090ca6459de43b92f3772362cd6bce"
     },
-    "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
-    "bin": "brave.exe",
-    "shortcuts": [
-        [
-            "brave.exe",
-            "Brave"
-        ]
-    ],
-    "checkver": {
-        "url": "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md",
-        "regex": "releases/tag/v([\\d.]+)"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-ia32.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-arm64.zip"
-            }
-        },
-        "hash": {
-            "url": "$url.sha256"
-        }
+    "arm64": {
+      "url": "https://github.com/brave/brave-browser/releases/download/v1.96.61/brave-v1.96.61-win32-arm64.zip",
+      "hash": "c68fae85236d606e1b7aa79c430121a1a6fe1a501db400d304b5c226f863c35d"
     }
+  },
+  "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -Removal",
+  "bin": "brave.exe",
+  "shortcuts": [
+    [
+      "brave.exe",
+      "Brave"
+    ]
+  ],
+  "checkver": {
+    "url": "https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md",
+    "regex": "releases/tag/v([\\d.]+)"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
+      },
+      "32bit": {
+        "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-ia32.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-arm64.zip"
+      }
+    },
+    "hash": {
+      "url": "$url.sha256"
+    }
+  }
 }
