@@ -1,16 +1,16 @@
 {
-    "version": "0.33.3",
+    "version": "0.34.0",
     "description": "Cross-platform desktop automation driver for Cua.",
     "homepage": "https://github.com/trycua/cua",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/trycua/cua/releases/download/cua-driver-rs-v0.33.3/cua-driver-rs-0.33.3-windows-x86_64-binary.zip",
-            "hash": "4af1fe348b0e42ceef8e198eae2dd5c41f7fb8f0423f9a7908a957673e1603ea"
+            "url": "https://github.com/trycua/cua/releases/download/cua-driver-rs-v0.34.0/cua-driver-rs-0.34.0-windows-x86_64-binary.zip",
+            "hash": "bcc520e50861c7092cf775846fec76ae386d7dcd6b5b408608b0ea4423a8b888"
         },
         "arm64": {
-            "url": "https://github.com/trycua/cua/releases/download/cua-driver-rs-v0.33.3/cua-driver-rs-0.33.3-windows-arm64-binary.zip",
-            "hash": "26d8faf0a9f74c1769d14f2f950f628f00436751e680be246dcca3b4b162c694"
+            "url": "https://github.com/trycua/cua/releases/download/cua-driver-rs-v0.34.0/cua-driver-rs-0.34.0-windows-arm64-binary.zip",
+            "hash": "df5786c6e7841d2f0d88f31c627c487181463ed99614b03efc0e907acfc698c3"
         }
     },
     "bin": "cua-driver.exe",

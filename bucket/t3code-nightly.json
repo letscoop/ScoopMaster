@@ -1,12 +1,12 @@
 {
-    "version": "0.0.46-nightly.20261005.2667",
+    "version": "0.0.46-nightly.20261005.2702",
     "description": "Nightly builds of a minimal web GUI for coding agents",
     "homepage": "https://t3.codes",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.0.46-nightly.20261005.2667/T3-Code-0.0.46-nightly.20261005.2667-x64.exe#/dl.7z",
-            "hash": "sha512:ae55e0bdb8382669f1be5707e655e6ad8c7fc92bc7aa4d05c5ca1d74a649fdcd8322d7d60613da80d194b2780b498eb69d406ffdd7040f5358f254cc49346ce9"
+            "url": "https://github.com/pingdotgg/t3code/releases/download/v0.0.46-nightly.20261005.2702/T3-Code-0.0.46-nightly.20261005.2702-x64.exe#/dl.7z",
+            "hash": "sha512:dd49d8028c08e7590eded796a822cfb961812785ff40defa6dc48e1892be4a7bb885507746cb88cb06e416e20998f116ed670a929a4b095744bc0ff2c5778ec2"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
