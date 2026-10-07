@@ -1,16 +1,16 @@
 {
-    "version": "0.25.0",
+    "version": "0.25.2",
     "description": "Sync skills across all AI CLI tools with one command and simplify team sharing. Supporting Claude Code, OpenClaw, OpenCode & more",
     "homepage": "https://github.com/runkids/skillshare",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/runkids/skillshare/releases/download/v0.25.0/skillshare_0.25.0_windows_amd64.zip",
-            "hash": "746c7012296c3f75d7278d1b70987143e21c15a20f6163986ccd9f05be6875ca"
+            "url": "https://github.com/runkids/skillshare/releases/download/v0.25.2/skillshare_0.25.2_windows_amd64.zip",
+            "hash": "03060c742f68c38ccbf46e62f7cc896e8674cff84f47db0e097851b361ab93cd"
         },
         "arm64": {
-            "url": "https://github.com/runkids/skillshare/releases/download/v0.25.0/skillshare_0.25.0_windows_arm64.zip",
-            "hash": "67e92e944b3acc8d080d0bed38fc41287e010b8eb3bd3e43472dace5d190e6e8"
+            "url": "https://github.com/runkids/skillshare/releases/download/v0.25.2/skillshare_0.25.2_windows_arm64.zip",
+            "hash": "63e241cd460545321826f9a486aa29003ee8b902ae8166622210475fe1a93ae1"
         }
     },
     "bin": "skillshare.exe",
