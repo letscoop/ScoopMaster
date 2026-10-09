@@ -1,10 +1,10 @@
 {
-    "version": "0.21.0",
+    "version": "0.21.2",
     "description": "A cooperative gate for the shell commands AI coding agents run: previews the blast radius, backs up first, blocks the dangerous ones, escalates repeat offenders.",
     "homepage": "https://termaxa.com",
     "license": "MIT OR Apache-2.0",
-    "url": "https://github.com/termaxa/termaxa/releases/download/v0.21.0/termaxa-windows-x86_64.exe#/termaxa.exe",
-    "hash": "529e2c58d022858e5691962c2a5ff0d0b7368237af0cfb577691fe4838e8f2f4",
+    "url": "https://github.com/termaxa/termaxa/releases/download/v0.21.2/termaxa-windows-x86_64.exe#/termaxa.exe",
+    "hash": "dbcadc7a68a4e17e1e33a9325023476e5373b4046fe45f2c8a07498a5af7b655",
     "bin": "termaxa.exe",
     "checkver": {
         "github": "https://github.com/termaxa/termaxa"

@@ -3,18 +3,20 @@
     "description": "Modern model editor for boxy models and pixel art textures.",
     "homepage": "https://blockbench.net/",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/JannisX11/blockbench/releases/download/v5.2.2/Blockbench_5.2.2.exe#/dl.7z",
-    "hash": "sha512:e570596dc37b9ee5ef4f0740ce0ea5b038c657c32435242a76b7260d7acc9108caecc7af54b32b2a8c19bd4f35b59dd19f47ec33fbbd679d001620a29fbe78d1",
     "architecture": {
-        "32bit": {
+        "arm64": {
+            "url": "https://github.com/JannisX11/blockbench/releases/download/v5.2.2/Blockbench_arm64_5.2.2.exe#/dl.7z",
+            "hash": "12a3734d1c9328c936d31429015ae08e5aa76885d51e343eb6173de20301a3ed",
             "installer": {
                 "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                     "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
                 ]
             }
         },
         "64bit": {
+            "url": "https://github.com/JannisX11/blockbench/releases/download/v5.2.2/Blockbench_x64_5.2.2.exe#/dl.7z",
+            "hash": "e866484b770f81db9e3ce20ec2adefe19529f34cacb6d764feb17163a575cec1",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -33,10 +35,13 @@
         "github": "https://github.com/JannisX11/blockbench/"
     },
     "autoupdate": {
-        "url": "https://github.com/JannisX11/blockbench/releases/download/v$version/Blockbench_$version.exe#/dl.7z",
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "find": "sha512:\\s+(.*)"
+        "architecture": {
+            "arm64": {
+                "url": "https://github.com/JannisX11/blockbench/releases/download/v$version/Blockbench_arm64_$version.exe#/dl.7z"
+            },
+            "64bit": {
+                "url": "https://github.com/JannisX11/blockbench/releases/download/v$version/Blockbench_x64_$version.exe#/dl.7z"
+            }
         }
     }
 }
