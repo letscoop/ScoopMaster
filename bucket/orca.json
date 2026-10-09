@@ -1,41 +1,29 @@
 {
-    "version": "1.4.222",
-    "description": "Agent development environment for working with a fleet of parallel coding agents.",
+    "version": "1.4.223",
+    "description": "Orca - an AI-native desktop IDE that turns natural language into full-stack applications. Build, run, and ship apps with an agentic interface.",
     "homepage": "https://github.com/stablyai/orca",
-    "license": "MIT",
+    "license": "NOASSERTION",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stablyai/orca/releases/download/v1.4.222/orca-windows-setup.exe#/dl.7z",
-            "hash": "sha512:e950ad4b52ba4e78e6b5e4aedd034b0dc675c504f28e91f57ba84424ef2815daa616eb390fb273680f8c436ff36e5b076d932c5123b7a80e4bda1280e06895bd"
+            "url": "https://github.com/stablyai/orca/releases/download/v1.4.223/orca-windows-setup.exe",
+            "hash": "45c6a1bc8ea4144e106974d006a0f591b600d02eb1b9195842471be79ad35bdb"
         }
     },
-    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-    "post_install": "Get-ChildItem \"$dir\" -Filter '$*' | Remove-Item -Recurse -Force",
-    "bin": [
-        [
-            "resources\\bin\\orca.exe",
-            "orca"
-        ]
-    ],
-    "shortcuts": [
-        [
-            "Orca.exe",
-            "Orca"
-        ]
-    ],
+    "installer": {
+        "args": [
+            "/S",
+            "/allusers"
+        ],
+        "keep": true
+    },
     "checkver": {
-        "url": "https://api.github.com/repos/stablyai/orca/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "^v([\\d.]+)$"
+        "url": "https://github.com/stablyai/orca/releases",
+        "regex": "/stablyai/orca/releases/tag/v([0-9]+\\.[0-9]+\\.[0-9]+)\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe#/dl.7z",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512:\\s+$base64"
-                }
+                "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe"
             }
         }
     }
