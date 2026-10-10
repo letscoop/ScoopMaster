@@ -4,7 +4,7 @@
     "homepage": "https://github.com/microsoft/WSL",
     "license": "MIT",
     "url": "https://github.com/microsoft/WSL/releases/download/3.0.1/wsl.3.0.1.0.x64.msi",
-    "hash": "",
+    "hash": "28B1A0D013640A2AC95898EA705FA186E5B4FF767A1C1B49257161BC106599C6",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/microsoft/WSL/releases/download/$version/wsl.$version.0.x64.msi"
