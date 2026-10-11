@@ -1,32 +1,43 @@
 {
+    "version": "12.1.1",
+    "description": "LunaTranslator is a Visual Novel translate tool, support clipboard / OCR/ HOOK, support 40+ translate engines.",
     "homepage": "https://github.com/HIllya51/LunaTranslator",
-    "description": "Galgame translator",
-    "license": "GPL-3.0",
-    "version": "12.0.1",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v12.0.1/LunaTranslator_x64.zip",
-            "hash": "3555842e3e2d522fa330b723a4be5ece1e835ecd3659759bedc2aff178bd21ef",
-            "extract_dir": "LunaTranslator_x64"
+            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v12.1.1/LunaTranslator_x64.zip",
+            "extract_dir": "LunaTranslator_x64",
+            "hash": "687270f041e04c07483d3a6edba602e42f2f86761c992e4b575de287cce73964"
+        },
+        "32bit": {
+            "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v12.1.1/LunaTranslator_x86_winxp.zip",
+            "extract_dir": "LunaTranslator_x86_winxp",
+            "hash": "e48ed71a8ad70c1b04faf48df53650695488e01f8133cb526d7aa3a9fb1c3169"
         }
     },
     "shortcuts": [
         [
             "LunaTranslator.exe",
             "LunaTranslator"
+        ],
+        [
+            "LunaTranslator_admin.exe",
+            "LunaTranslator (Admin)"
         ]
     ],
     "persist": [
-        "cache",
+        "userconfig",
         "translation_record",
-        "userconfig"
+        "cache"
     ],
-    "notes": "Use '-win7' legacy version if you are using Windows 7.",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/HIllya51/LunaTranslator/releases/download/v$version/LunaTranslator_x86_winxp.zip"
             }
         }
     }
