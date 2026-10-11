@@ -1,6 +1,6 @@
 {
     "version": "0.12.19",
-    "description": "A pure Go implementation of jq",
+    "description": "Pure Go implementation of jq, an ultra-fast and flexible JSON processor.",
     "homepage": "https://github.com/itchyny/gojq",
     "license": "MIT",
     "architecture": {
