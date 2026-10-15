@@ -5,7 +5,7 @@
     "license": "AGPLv3",
     "url": "https://pkgs.fluxer.com/desktop/canary/win32/x64/2026.1014.180548/portable#/Fluxer-Canary-2026.1014.180548-portable-win-x64.zip",
     "hash": "a0db7e338cc6c77377ddb3c3422f5431aa156e2a1f71254df60d833eab046323",
-    "bin": ["Fluxer Canary.exe", "fluxer-canary"],
+    "bin": "Fluxer Canary.exe",
     "shortcuts": [
         ["Fluxer Canary.exe", "Fluxer Canary"]
     ],
