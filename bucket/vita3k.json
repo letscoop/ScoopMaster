@@ -1,19 +1,26 @@
 {
-    "version": "4187-55f88cd",
-    "description": "Sony PlayStation Vita emulator",
+    "version": "4188-86b8e2e",
+    "description": "Experimental PlayStation Vita emulator",
     "homepage": "https://vita3k.org",
     "license": "GPL-2.0-only",
     "suggest": {
-        "vcredist": "extras/vcredist2022"
+        "vcredist": "extras/vcredist2022",
+        "PS Vita Firmware": "games/psv-system-software"
     },
+    "notes": [
+        "ATTENTION: Vita3K requires official PS Vita firmware to function.",
+        "Install the psv-system-software package.",
+        "You must still manually load PSVUPDAT.PUP and PSP2UPDAT.PUP through Vita3K",
+        "See the quickstart guide for further instructions: https://vita3k.org/quickstart"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-latest.zip",
-            "hash": "393c7257ba4eeedf28914103bf66edfbdad9162d9d217c2f769c40accc508ecd"
+            "hash": "1ab190f188a0d6c8c10f276a4169f2378a579dd70bfc580e7624d1c77579718d"
         },
         "arm64": {
             "url": "https://github.com/Vita3K/Vita3K/releases/download/continuous/windows-arm64-latest.zip",
-            "hash": "fb70472863c7e17a83f6ae1bcaa3236cf8283d04c086ea93d6f1ef1c6e70e430"
+            "hash": "1967bf9dda8c900de0b38ccffe6f2e82c8c93acd295a9c5a8e65b7711285e63d"
         }
     },
     "pre_install": [
@@ -25,7 +32,7 @@
     "shortcuts": [
         [
             "Vita3K.exe",
-            "Sony PlayStation Vita [vita][vita3k]"
+            "Vita3K"
         ]
     ],
     "persist": [
