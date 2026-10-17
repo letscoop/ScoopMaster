@@ -1,32 +1,30 @@
 {
     "version": "202610162206",
+    "description": "Data files from Loyalsoldier/v2ray-rules-dat, works for v2ray, Xray and v2rayA.",
     "homepage": "https://github.com/Loyalsoldier/v2ray-rules-dat",
-    "description": "Enhanced edition of V2Ray rules dat files.",
-    "license": "GPL-3.0-or-later",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/raw/master/LICENSE"
+    },
     "url": [
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610162206/rules.zip",
-        "https://github.com/CALMorACT/hola_bucket/raw/master/scripts/v2ray-rules-search.ps1"
+        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610162206/geoip.dat",
+        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610162206/geosite.dat"
     ],
     "hash": [
-        "fe03b02a5863110f4a0bb1bf6cba0e1cd4b0fd4e67e4ecd3beec50b9e9760b5f",
-        "c189578c79940f3ab935df8c27d0e2e1ca9773acc7ef61f772f83e7c2523e700"
+        "010bfc2e353c5e34e23156004944444ca260bae999e73171bdd7974056557959",
+        "8474140bc89940897ee2b629be8fc92f34a496bd32e45829605d17715f4340d6"
     ],
-    "depends": "v2ray",
-    "post_install": [
-        "Copy-Item \"$dir/geoip.dat\" \"$dir/../../v2ray/current\" -Force",
-        "Copy-Item \"$dir/geosite.dat\" \"$dir/../../v2ray/current\" -Force"
-    ],
-    "bin": [
-        [
-            "v2ray-rules-search.ps1",
-            "v2rulesearch"
-        ]
-    ],
+    "env_set": {
+        "V2RAYA_V2RAY_ASSETSDIR": "$dir"
+    },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/rules.zip",
+        "url": [
+            "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/geoip.dat",
+            "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/geosite.dat"
+        ],
         "hash": {
-            "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/rules.zip.sha256sum"
+            "url": "$url.sha256sum"
         }
     }
 }
