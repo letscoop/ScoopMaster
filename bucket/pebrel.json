@@ -1,9 +1,9 @@
 {
     "version": "2.2.1",
-    "description": "AI-native, GPU-accelerated terminal emulator with SSH, persistent sessions, split panes, and first-class AI CLI workflows.",
+    "description": "GPU-accelerated terminal with native UI and AI-agent integration",
     "homepage": "https://github.com/Kuddev/pebrel",
-    "icon": "https://raw.githubusercontent.com/nonlog/scoop-www/master/icons/pebrel.ico",
-    "license": "GPL-3.0",
+    "license": "GPL-3.0-or-later",
+    "notes": "Configuration is stored in %APPDATA%\\Pebrel",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Kuddev/pebrel/releases/download/v2.2.1/Pebrel-v2.2.1-windows-x64.zip",
@@ -14,44 +14,24 @@
             "hash": "4cba3026abe7a91fc6558b33323f0ad1da04df5eec31a2f32b8bdcaf72624ce8"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\docs\", \"$dir\\skills\" -Force -Recurse -ErrorAction SilentlyContinue",
-    "bin": [
-        [
-            "pebrel.exe",
-            "pebrel"
-        ],
-        [
-            "pebrel.exe",
-            "nebula"
-        ]
-    ],
+    "pre_install": "[IO.File]::WriteAllText((Join-Path $dir 'pebrel-distribution'), \"scoop`n\", [Text.UTF8Encoding]::new($false))",
+    "bin": "pebrel.exe",
     "shortcuts": [
         [
             "pebrel.exe",
-            "Pebrel"
+            "Pebrel",
+            "--gpui"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/Kuddev/pebrel/releases/latest",
-        "regex": "/releases/tag/v([\\d.]+)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/Pebrel-v$version-windows-x64.zip",
-                "hash": {
-                    "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/SHA256SUMS",
-                    "regex": "$sha256\\s+Pebrel-v$version-windows-x64\\.zip"
-                }
+                "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/Pebrel-v$version-windows-x64.zip"
             },
             "arm64": {
-                "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/Pebrel-v$version-windows-arm64.zip",
-                "hash": {
-                    "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/SHA256SUMS",
-                    "regex": "$sha256\\s+Pebrel-v$version-windows-arm64\\.zip"
-                }
+                "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/Pebrel-v$version-windows-arm64.zip"
             }
         }
-    },
-    "notes": "Nebula Terminal was renamed to Pebrel. Existing settings are migrated by the application."
+    }
 }
