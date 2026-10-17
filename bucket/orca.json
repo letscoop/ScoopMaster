@@ -1,29 +1,41 @@
 {
     "version": "1.4.227",
-    "description": "Orca - an AI-native desktop IDE that turns natural language into full-stack applications. Build, run, and ship apps with an agentic interface.",
+    "description": "Agent development environment for working with a fleet of parallel coding agents.",
     "homepage": "https://github.com/stablyai/orca",
-    "license": "NOASSERTION",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/stablyai/orca/releases/download/v1.4.227/orca-windows-setup.exe",
-            "hash": "e601a2396b9824cf2cae1368dd55787b30715d9a8610ea500bd548a028ebe8c9"
+            "url": "https://github.com/stablyai/orca/releases/download/v1.4.227/orca-windows-setup.exe#/dl.7z",
+            "hash": "sha512:6608751a93d6011230c78023e16e3c88a74fa635f561eb1d8b15377d07a6ce6c9f814f99df55e5bdfa6724a7e793d33b1f4b204460019249f63dc18f44f1c66b"
         }
     },
-    "installer": {
-        "args": [
-            "/S",
-            "/allusers"
-        ],
-        "keep": true
-    },
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Get-ChildItem \"$dir\" -Filter '$*' | Remove-Item -Recurse -Force",
+    "bin": [
+        [
+            "resources\\bin\\orca.exe",
+            "orca"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "Orca.exe",
+            "Orca"
+        ]
+    ],
     "checkver": {
-        "url": "https://github.com/stablyai/orca/releases",
-        "regex": "/stablyai/orca/releases/tag/v([0-9]+\\.[0-9]+\\.[0-9]+)\""
+        "url": "https://api.github.com/repos/stablyai/orca/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "^v([\\d.]+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe"
+                "url": "https://github.com/stablyai/orca/releases/download/v$version/orca-windows-setup.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
             }
         }
     }
