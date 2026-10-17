@@ -1,24 +1,11 @@
 {
+    "homepage": "https://pixpinapp.com/",
+    "description": "功能强大、简单易用的截图与贴图工具，帮你提高效率",
     "version": "3.5.5.1",
-    "description": "An all-in-one, free screenshot tool with annotation, pinning, OCR and recording features.",
-    "homepage": "https://pixpin.com/",
-    "license": "Unknown",
-    "url": "https://down.pixpin.cn/PixPin_win_3.5.5.1.zip",
-    "hash": "1c6d81e7cc9791862553cceab5123e84d700b59efa2943aa17503fc81088106a",
-    "extract_dir": "PixPin",
-    "post_install": [
-        "$ConfigPath = Join-Path -Path \"$persist_dir\\Config\" -ChildPath \"PixPinConfig.json\"",
-        "if (-not (Test-Path $ConfigPath)) {",
-        "    $CurrentUnixTime = [int][Math]::Floor((Get-Date -Date (Get-Date).ToUniversalTime() -UFormat %s))",
-        "    $ConfigContent = @{",
-        "        'System.Update.UpgradeMode#s.win' = @{",
-        "            v = 0",
-        "            t = $CurrentUnixTime",
-        "        }",
-        "    }",
-        "    $ConfigContent | ConvertTo-Json -Depth 5 -Compress | Out-File -FilePath $ConfigPath -Encoding UTF8 -Force",
-        "}"
-    ],
+    "license": "Freeware",
+    "url": "https://down.pixpin.cn/PixPin_win_3.5.5.1.exe",
+    "hash": "5b88ce37a7c3dd244e2e48e0728f7fb03f108e770bf864ca68197a24e9a687e2",
+    "innosetup": true,
     "shortcuts": [
         [
             "PixPin.exe",
@@ -28,14 +15,13 @@
     "persist": [
         "Config",
         "Data",
-        "History",
-        "Temp"
+        "History"
     ],
     "checkver": {
-        "url": "https://pixpin.com/download/",
-        "regex": "PixPin_win_([\\d.]+)\\.zip"
+        "url": "https://pixpin.cn/download/",
+        "regex": "down\\.pixpin\\.cn/PixPin_win_([\\d.]+)\\.exe"
     },
     "autoupdate": {
-        "url": "https://down.pixpin.cn/PixPin_win_$version.zip"
+        "url": "https://down.pixpin.cn/PixPin_win_$version.exe"
     }
 }
