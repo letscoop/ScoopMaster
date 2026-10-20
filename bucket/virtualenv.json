@@ -5,11 +5,20 @@
     "version": "21.14.11",
     "url": "https://bootstrap.pypa.io/virtualenv/virtualenv.pyz",
     "hash": "98ac9189aaadfbed7f4f3e2d5a146688bd7230ffef2122419d83f71a7ffbbd41",
-    "installer": {
-        "script": "New-Item -Type SymbolicLink -Path $scoopdir\\shims\\virtualenv.pyz -Target $dir\\virtualenv.pyz"
+    "suggest": {
+        "Python": "python"
     },
-    "uninstaller": {
-        "script": "Remove-Item -ErrorAction 0 -Path $scoopdir\\shims\\virtualenv.pyz"
+    "bin": [
+        [
+            "python.exe",
+            "virtualenv",
+            "$dir\\virtualenv.pyz"
+        ]
+    ],
+    "pre_install": "if (-not (Test-Path \"$persist_dir\\virtualenv.ini\")) { New-Item \"$dir\\virtualenv.ini\" -ItemType file | Out-Null }",
+    "persist": "virtualenv.ini",
+    "env_set": {
+        "VIRTUALENV_CONFIG_FILE": "$persist_dir\\virtualenv.ini"
     },
     "checkver": {
         "url": "https://bootstrap.pypa.io/virtualenv/version.txt",
