@@ -1,0 +1,27 @@
+{
+    "version": "2.7",
+    "description": "Portable edition of Vovsoft Read Mode.",
+    "homepage": "https://vovsoft.com/software/read-mode/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/read-mode-portable.zip?v=2.7",
+    "checkver": {
+        "url": "https://vovsoft.com/download/read-mode-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/read-mode-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "readmode.exe",
+            "Vovsoft Read Mode"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

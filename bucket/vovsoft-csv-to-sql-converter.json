@@ -1,0 +1,27 @@
+{
+    "version": "2.1",
+    "description": "Portable edition of Vovsoft CSV to SQL Converter.",
+    "homepage": "https://vovsoft.com/software/csv-to-sql-converter/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/csv-to-sql-converter-portable.zip?v=2.1",
+    "checkver": {
+        "url": "https://vovsoft.com/download/csv-to-sql-converter-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/csv-to-sql-converter-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "sqlconv.exe",
+            "Vovsoft CSV to SQL Converter"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

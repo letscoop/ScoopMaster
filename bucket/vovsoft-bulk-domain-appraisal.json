@@ -1,0 +1,27 @@
+{
+    "version": "4.1",
+    "description": "Portable edition of Vovsoft Bulk Domain Appraisal.",
+    "homepage": "https://vovsoft.com/software/bulk-domain-appraisal/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/bulk-domain-appraisal-portable.zip?v=4.1",
+    "checkver": {
+        "url": "https://vovsoft.com/download/bulk-domain-appraisal-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/bulk-domain-appraisal-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "bulkdomainapp.exe",
+            "Vovsoft Bulk Domain Appraisal"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

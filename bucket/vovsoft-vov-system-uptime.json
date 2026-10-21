@@ -1,0 +1,27 @@
+{
+    "version": "1.8",
+    "description": "Portable edition of Vovsoft Vov System Uptime.",
+    "homepage": "https://vovsoft.com/software/vov-system-uptime/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/vov-system-uptime-portable.zip?v=1.8",
+    "checkver": {
+        "url": "https://vovsoft.com/download/vov-system-uptime-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/vov-system-uptime-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "vovsu.exe",
+            "Vovsoft Vov System Uptime"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

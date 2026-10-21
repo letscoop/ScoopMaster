@@ -1,0 +1,27 @@
+{
+    "version": "1.4",
+    "description": "Portable edition of Vovsoft Clipboard Reader.",
+    "homepage": "https://vovsoft.com/software/clipboard-reader/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/clipboard-reader-portable.zip?v=1.4",
+    "checkver": {
+        "url": "https://vovsoft.com/download/clipboard-reader-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/clipboard-reader-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "clipboardreader.exe",
+            "Vovsoft Clipboard Reader"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

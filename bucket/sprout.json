@@ -1,19 +1,19 @@
 {
-    "version": "0.5.0",
+    "version": "0.5.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Sprout-DevLabs/sprout/releases/download/v0.5.0/sprout_0.5.0_windows_amd64.zip",
+            "url": "https://github.com/Sprout-DevLabs/sprout/releases/download/v0.5.1/sprout_0.5.1_windows_amd64.zip",
             "bin": [
                 "sprout.exe"
             ],
-            "hash": "db966002f440c9e712a2ffabad56569970b933106fb64cadcba0c8895f8f5421"
+            "hash": "e6060cdecd2061e5c042b1131e787426aee7ecc1e2dfac194091dcc9eca51868"
         },
         "arm64": {
-            "url": "https://github.com/Sprout-DevLabs/sprout/releases/download/v0.5.0/sprout_0.5.0_windows_arm64.zip",
+            "url": "https://github.com/Sprout-DevLabs/sprout/releases/download/v0.5.1/sprout_0.5.1_windows_arm64.zip",
             "bin": [
                 "sprout.exe"
             ],
-            "hash": "afd87244f3725f30edc0809b8ce54ae73137c9f22cec8c66310849fd25f5b579"
+            "hash": "e5d20e612f81de3af295f38f0e0fc6b2d252bc9ef5dcc26c0a42d8cd812cdba8"
         }
     },
     "homepage": "https://sprout-devlabs.github.io/sprout-web/",

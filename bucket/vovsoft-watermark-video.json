@@ -1,0 +1,27 @@
+{
+    "version": "2.2",
+    "description": "Portable edition of Vovsoft Watermark Video.",
+    "homepage": "https://vovsoft.com/software/watermark-video/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/watermark-video-portable.zip?v=2.2",
+    "checkver": {
+        "url": "https://vovsoft.com/download/watermark-video-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/watermark-video-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "watermarkvideo.exe",
+            "Vovsoft Watermark Video"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

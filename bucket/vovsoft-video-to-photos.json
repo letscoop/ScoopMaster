@@ -1,0 +1,27 @@
+{
+    "version": "1.6",
+    "description": "Portable edition of Vovsoft Video to Photos.",
+    "homepage": "https://vovsoft.com/software/video-to-photos/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/video-to-photos-portable.zip?v=1.6",
+    "checkver": {
+        "url": "https://vovsoft.com/download/video-to-photos-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/video-to-photos-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "video2photos.exe",
+            "Vovsoft Video to Photos"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

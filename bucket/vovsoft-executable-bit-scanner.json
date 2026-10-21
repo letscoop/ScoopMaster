@@ -1,0 +1,27 @@
+{
+    "version": "1.0",
+    "description": "Portable edition of Vovsoft Executable Bit Scanner.",
+    "homepage": "https://vovsoft.com/software/executable-bit-scanner/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/executable-bit-scanner-portable.zip?v=1.0",
+    "checkver": {
+        "url": "https://vovsoft.com/download/executable-bit-scanner-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/executable-bit-scanner-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "bitscanner.exe",
+            "Vovsoft Executable Bit Scanner"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

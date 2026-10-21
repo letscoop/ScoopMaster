@@ -1,0 +1,27 @@
+{
+    "version": "3.3",
+    "description": "Portable edition of Vovsoft Math Practice.",
+    "homepage": "https://vovsoft.com/software/math-practice/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/math-practice-portable.zip?v=3.3",
+    "checkver": {
+        "url": "https://vovsoft.com/download/math-practice-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/math-practice-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "math.exe",
+            "Vovsoft Math Practice"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

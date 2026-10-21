@@ -1,0 +1,27 @@
+{
+    "version": "1.7",
+    "description": "Portable edition of Vovsoft Machine Learning Requester.",
+    "homepage": "https://vovsoft.com/software/machine-learning-requester/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/machine-learning-requester-portable.zip?v=1.7",
+    "checkver": {
+        "url": "https://vovsoft.com/download/machine-learning-requester-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/machine-learning-requester-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "mlrequester.exe",
+            "Vovsoft Machine Learning Requester"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}

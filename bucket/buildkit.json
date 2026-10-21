@@ -1,30 +1,21 @@
 {
-    "version": "0.34.0",
-    "description": "A toolkit for converting source code to build artifacts in an efficient, expressive and repeatable manner.",
     "homepage": "https://github.com/moby/buildkit",
+    "description": "concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit",
     "license": "Apache-2.0",
+    "version": "0.34.1",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/moby/buildkit/releases/download/v0.34.0/buildkit-v0.34.0.windows-amd64.tar.gz",
-            "hash": "600d20956b941284bf6421d6354ba6b2b462cc1697ae66b944bc5f6be367e0ae"
-        },
-        "arm64": {
-            "url": "https://github.com/moby/buildkit/releases/download/v0.34.0/buildkit-v0.34.0.windows-arm64.tar.gz",
-            "hash": "6cb35437dde6f6a17c4e9e6eba0cab76794c6b308cd3345d501f6e89fd3e6c2a"
+            "url": "https://github.com/moby/buildkit/releases/download/v0.34.1/buildkit-v0.34.1.windows-amd64.tar.gz",
+            "hash": "943a70e1e95e07b3c0ae776a964866574bb8a6533176377d7084a3999298ddd3"
         }
     },
-    "bin": [
-        "bin\\buildctl.exe",
-        "bin\\buildkitd.exe"
-    ],
+    "extract_dir": "bin",
+    "bin": "buildctl.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/moby/buildkit/releases/download/v$version/buildkit-v$version.windows-amd64.tar.gz"
-            },
-            "arm64": {
-                "url": "https://github.com/moby/buildkit/releases/download/v$version/buildkit-v$version.windows-arm64.tar.gz"
             }
         }
     }

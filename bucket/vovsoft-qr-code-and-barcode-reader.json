@@ -1,0 +1,27 @@
+{
+    "version": "1.6",
+    "description": "Portable edition of Vovsoft QR Code And Barcode Reader.",
+    "homepage": "https://vovsoft.com/software/qr-code-and-barcode-reader/",
+    "license": "Proprietary",
+    "url": "https://vovsoft.com/files/qr-code-and-barcode-reader-portable.zip?v=1.6",
+    "checkver": {
+        "url": "https://vovsoft.com/download/qr-code-and-barcode-reader-portable/",
+        "regex": "(?is)Version\\s*(?:<[^>]*>\\s*)*:?\\s*(?:<[^>]*>\\s*)*(?<version>\\d+(?:\\.\\d+)+)"
+    },
+    "autoupdate": {
+        "url": "https://vovsoft.com/files/qr-code-and-barcode-reader-portable.zip?v=$version"
+    },
+    "shortcuts": [
+        [
+            "codereader.exe",
+            "Vovsoft QR Code And Barcode Reader"
+        ]
+    ],
+    "notes": [
+        "SHA-256 has not been verified; archive contents and the shortcut target have been checked."
+    ],
+    "pre_install": [
+        "if (-not (Test-Path -LiteralPath \"$dir\\key.txt\" -PathType Leaf)) { New-Item -ItemType File -Path \"$dir\\key.txt\" | Out-Null }"
+    ],
+    "persist": "key.txt"
+}
