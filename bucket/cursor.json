@@ -1,38 +1,78 @@
 {
-    "##": "cursor 编辑器",
     "version": "3.26.13",
-    "description": "Cursor 旨在让您获得非凡的生产力，它是使用 AI 进行编码的最佳方式",
+    "description": "The AI Code Editor",
+    "homepage": "https://www.cursor.com/",
     "license": {
         "identifier": "Proprietary",
-        "url": "https://www.cursor.so/"
+        "url": "https://www.cursor.com/terms-of-service"
     },
-    "homepage": "https://www.cursor.so",
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Recurse"
+    "innosetup": true,
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.cursor.com/production/3bfec373749d3d4a53a151283022d49743ab50ba/win32/x64/user-setup/CursorUserSetup-x64-3.26.13.exe",
+            "hash": "ca580d79a870bfa3bf305c306822d1ab8071aab8491ce855bd6d1670bc5d8708"
+        },
+        "arm64": {
+            "url": "https://downloads.cursor.com/production/3bfec373749d3d4a53a151283022d49743ab50ba/win32/arm64/user-setup/CursorUserSetup-arm64-3.26.13.exe",
+            "hash": "36cffc12f53218581dc5acf2419cb6be6ef1d13068ef661003028482fc6b8e55"
+        }
+    },
+    "extract_dir": "{code_GetDestDir}",
+    "post_install": [
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse",
+        "if (!(Test-Path \"$dir\\data\\extensions\") -and (Test-Path \"$env:USERPROFILE\\.cursor\\extensions\")) {",
+        "    info '[Portable Mode] Copying extensions...'",
+        "    Copy-Item \"$env:USERPROFILE\\.cursor\\extensions\" \"$dir\\data\" -Recurse",
+        "}",
+        "if (!(Test-Path \"$dir\\data\\user-data\") -and (Test-Path \"$env:AppData\\Cursor\")) {",
+        "    info '[Portable Mode] Copying user data...'",
+        "    Copy-Item \"$env:AppData\\Cursor\" \"$dir\\data\\user-data\" -Recurse",
+        "}",
+        "$extensions_file = \"$dir\\data\\extensions\\extensions.json\"",
+        "if ((Test-Path \"$extensions_file\")) {",
+        "    info 'Adjusting path in extensions file...'",
+        "    (Get-Content \"$extensions_file\") -replace '(?<=cursor(/|\\\\\\\\)).*?(?=(/|\\\\\\\\)data(/|\\\\\\\\)extensions)', $version | Set-Content \"$extensions_file\"",
+        "}",
+        "$product_path = \"$dir\\resources\\app\\product.json\"",
+        "$product_text = [System.IO.File]::ReadAllText($product_path)",
+        "$product_patched = [regex]::Replace($product_text, ',\\s*\\r?\\n\\s*\"target\"\\s*:\\s*\"user\"(?=\\s*\\r?\\n\\})', '')",
+        "if ($product_patched -ne $product_text) {",
+        "    info '[Portable Mode] Removing \"target\" from product.json...'",
+        "    [System.IO.File]::WriteAllText($product_path, $product_patched, (New-Object System.Text.UTF8Encoding($false)))",
+        "} elseif (($product_text | ConvertFrom-Json).PSObject.Properties.Name -contains 'target') {",
+        "    warn 'Portable mode is not enabled: unexpected product.json layout.'",
+        "}",
+        "$argv_file = \"$dir\\data\\argv.json\"",
+        "if (!(Test-Path $argv_file) -and (Test-Path \"$env:USERPROFILE\\.cursor\\argv.json\")) {",
+        "    info '[Portable Mode] Copying argv.json...'",
+        "    Copy-Item \"$env:USERPROFILE\\.cursor\\argv.json\" $argv_file",
+        "}"
     ],
-    "url": "https://downloads.cursor.com/production/3bfec373749d3d4a53a151283022d49743ab50ba/win32/x64/user-setup/CursorUserSetup-x64-3.26.13.exe#/dl.7z",
-    "hash": "ca580d79a870bfa3bf305c306822d1ab8071aab8491ce855bd6d1670bc5d8708",
+    "bin": [
+        [
+            "resources\\app\\bin\\cursor.cmd",
+            "cursor"
+        ]
+    ],
     "shortcuts": [
         [
             "Cursor.exe",
             "Cursor"
         ]
     ],
+    "persist": "data",
     "checkver": {
-        "script": [
-            "$url = 'https://cursor.com/api/download?platform=win32-x64-user&releaseTrack=stable'",
-            "$res = Invoke-WebRequest -Uri $url -MaximumRedirection 0 -UseBasicParsing",
-            "$json = $res.Content | ConvertFrom-Json",
-            "$str = \"$($json.version)_____$($json.downloadUrl)\"",
-            "Write-Output $str"
-        ],
-        "regex": "^([\\d.]+)_____https://downloads.cursor.com/(?<url>.*?)$"
+        "url": "https://www.cursor.com/api/download?platform=win32-x64-user&releaseTrack=stable",
+        "regex": "production/(?<Code>[\\w]+)/win32.*-([\\d.]+)\\.exe"
     },
     "autoupdate": {
-        "url": "https://downloads.cursor.com/$matchUrl#/dl.7z",
-        "hash": {
-            "mode": "download"
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.cursor.com/production/$matchCode/win32/x64/user-setup/CursorUserSetup-x64-$version.exe"
+            },
+            "arm64": {
+                "url": "https://downloads.cursor.com/production/$matchCode/win32/arm64/user-setup/CursorUserSetup-arm64-$version.exe"
+            }
         }
     }
 }
