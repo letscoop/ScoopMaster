@@ -1,12 +1,17 @@
 {
     "version": "0.36.0",
-    "description": "A package manager for Kubernetes, powered by CUE and inspired by Helm.",
-    "homepage": "https://timoni.sh/",
+    "description": "The package manager for Kubernetes",
+    "homepage": "https://timoni.sh",
     "license": "Apache-2.0",
+    "depends": "cue",
     "architecture": {
         "64bit": {
             "url": "https://github.com/stefanprodan/timoni/releases/download/v0.36.0/timoni_0.36.0_windows_amd64.zip",
             "hash": "39d6bd87221af98a0993b9feecbbd471d341497fc4c884553ec7249398a2313b"
+        },
+        "arm64": {
+            "url": "https://github.com/stefanprodan/timoni/releases/download/v0.36.0/timoni_0.36.0_windows_arm64.zip",
+            "hash": "8d9193cabe3ea7b30823faeff106c9ba001c21e659a7bab98b920923f0e691f7"
         }
     },
     "bin": "timoni.exe",
@@ -17,6 +22,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/stefanprodan/timoni/releases/download/v$version/timoni_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/stefanprodan/timoni/releases/download/v$version/timoni_$version_windows_arm64.zip"
             }
         },
         "hash": {

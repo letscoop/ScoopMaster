@@ -1,32 +1,30 @@
 {
     "version": "1.3.73",
-    "description": "一款通用的 AI IDE 账号管理工具，目前支持 Antigravity、Codex、GitHub Copilot、Windsurf、Kiro、Cursor、Gemini Cli、CodeBuddy、CodeBuddy CN、Qoder、Trae 和 Zed，并支持多账号多实例并行运行。",
+    "description": "A universal AI IDE account management tool.",
     "homepage": "https://github.com/jlcodes99/cockpit-tools",
-    "license": {
-        "identifier": "CC-BY-NC-SA-4.0",
-        "url": "https://github.com/jlcodes99/cockpit-tools/blob/v0.24.8/README.en.md#license"
-    },
+    "license": "CC-BY-NC-SA-4.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v1.3.73/Cockpit.Tools_1.3.73_x64_en-US.msi",
             "hash": "fc3689490067795a36f76f63cdec8f3201804e7cff8f0d7e46a4f4cf90e2cbcc"
         }
     },
+    "extract_dir": "PFiles\\Cockpit Tools",
     "shortcuts": [
         [
             "cockpit-tools.exe",
             "Cockpit Tools"
         ]
     ],
-    "extract_dir": "PFiles\\Cockpit Tools",
-    "checkver": {
-        "github": "https://github.com/jlcodes99/cockpit-tools"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v$version/Cockpit.Tools_$version_x64_en-US.msi"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
