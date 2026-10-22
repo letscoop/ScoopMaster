@@ -1,39 +1,39 @@
 {
-    "version": "1.14.4",
+    "version": "1.14.5",
     "description": "Powerful knowledge base that works on top of a local folder of plain text Markdown files.",
     "homepage": "https://obsidian.md",
     "license": {
-        "identifier": "Freeware",
-        "url": "https://obsidian.md/license"
+        "identifier": "Proprietary",
+        "url": "https://obsidian.md/eula"
     },
-    "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.4/Obsidian-1.14.4.exe#/dl.7z",
-    "hash": "28662520368d5956df7798076b8370ac730164a8863dcd4f678ced53f63faa00",
+    "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.14.5/Obsidian-1.14.5.exe#/dl.7z",
+    "hash": "4b95aa855062fb253439c392a32b536c3f9f22ac7fad04f1a6cbf176ecbcfa2a",
     "architecture": {
         "64bit": {
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+            "pre_install": "Expand-SquirrelApp"
         },
         "32bit": {
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
+            "pre_install": "Expand-SquirrelApp"
         },
         "arm64": {
-            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\""
+            "pre_install": "Expand-SquirrelApp"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
-    "bin": [
-        [
-            "obsidian.com",
-            "obsidian"
-        ]
+    "post_install": [
+        "Remove-InstallerResidue -Include '$R0'",
+        "Set-Value 'User Data\\obsidian.json' 'updateDisabled' $true"
     ],
     "shortcuts": [
         [
             "Obsidian.exe",
-            "Obsidian"
+            "Obsidian",
+            "--user-data-dir=\"$persist_dir\\User Data\""
         ]
     ],
     "checkver": {
-        "github": "https://github.com/obsidianmd/obsidian-releases"
+        "github": "https://api.github.com/repos/obsidianmd/obsidian-releases/releases",
+        "jsonpath": "$[*].assets[*].name",
+        "regex": "Obsidian-([\\d.]+)\\.exe"
     },
     "autoupdate": {
         "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v$version/Obsidian-$version.exe#/dl.7z"
