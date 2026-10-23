@@ -22,10 +22,7 @@
 	"Plugins.ini",
 	"History.ini"
     ],
-    "checkver": {
-        "github": "https://github.com/codeleventh/typeandrun",
-        "regex": "([0-9]+[a-z][0-9]*)"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/codeleventh/typeandrun/releases/download/$version/TypeAndRun$version.zip"
     }    
