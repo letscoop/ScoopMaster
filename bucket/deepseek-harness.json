@@ -1,7 +1,7 @@
 {
     "version": "0.2.1-rc.2",
-    "description": "DeepSeek's open-source desktop AI agent harness with an everything-is-a-plugin architecture.",
-    "homepage": "https://www.deepseek.com/harness/",
+    "description": "DeepSeek Harness desktop application with a bundled DSH runtime and external plugins.",
+    "homepage": "https://www.deepseek.com/",
     "license": "MIT",
     "architecture": {
         "64bit": {
@@ -9,19 +9,18 @@
             "hash": "sha512:dfd3ce979a2c97d3ca32aacf5d0039d9d87f6c2574674daf395f5c4e33890c713a82c270a796efee57e00779955802aca57edaff0d624e2fbc2e2b2d761ab8e6"
         }
     },
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall DeepSeek Harness.exe\" -Force -Recurse"
-    ],
+    "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse -ErrorAction SilentlyContinue | Out-Null",
     "shortcuts": [
         [
             "DeepSeek Harness.exe",
             "DeepSeek Harness"
         ]
     ],
+    "persist": "AppData",
     "checkver": {
         "url": "https://download.deepseek.com/dsh-desk/feeds/win-x64/nightly.yml",
-        "regex": "version:\\s*([^\\s]+)"
+        "regex": "version:\\s*(?<version>\\S+)"
     },
     "autoupdate": {
         "architecture": {
@@ -31,7 +30,7 @@
         },
         "hash": {
             "url": "https://download.deepseek.com/dsh-desk/feeds/win-x64/nightly.yml",
-            "regex": "sha512:\\s*(?:>-\\s*)?$base64"
+            "regex": "(?m)^sha512:\\s*>-\\s*\\r?\\n\\s*$base64"
         }
     }
 }
