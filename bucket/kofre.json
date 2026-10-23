@@ -1,12 +1,12 @@
 {
-  "version": "0.4.6",
+  "version": "0.4.8",
   "description": "Secretos de proyecto cifrados en tu máquina",
   "homepage": "https://github.com/Edavi11/kofre-releases",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Edavi11/kofre-releases/releases/download/v0.4.6/kofre-windows-x64.exe#/kofre.exe",
-      "hash": "4b4ebc7dae04c4424bfdb8a1324e8df3045c00e87e262ccead94a95a0e3ecaa1"
+      "url": "https://github.com/Edavi11/kofre-releases/releases/download/v0.4.8/kofre-windows-x64.exe#/kofre.exe",
+      "hash": "3fdaed7c6cd26ed8f2ee3c4d10ddebd1095f036feeae7d3fe54aaebe498573af"
     }
   },
   "bin": "kofre.exe",
