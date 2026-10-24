@@ -22,8 +22,7 @@
         "bookmark.bat"
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/xwmx/pb/tags",
-        "jsonpath": "$[0].name"
+        "github": "https://github.com/xwmx/pb"
     },
     "autoupdate": {
         "url": "https://github.com/xwmx/pb/archive/refs/tags/$version.zip"
