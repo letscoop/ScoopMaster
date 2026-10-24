@@ -10,7 +10,7 @@
     "post_install": [
         "$binDir=\"C:\\Program Files\\R\\bin\"",
         "$curPath = [System.Environment]::GetEnvironmentVariable(\"Path\",\"User\")",
-        "$curPathArray=($curPath) -split ';' | ForEach-Object { $_.TrimEnd('\\') }",
+        "$curPathArray=($oldPath) -split ';'",
         "if(-Not($curPathArray -Contains \"$binDir\")) {",
         "    Write-Host -ForegroundColor Yellow \"Adding $binDir to User Path\"",
         "    $newPath = \"$curPath;$binDir\" -replace ';+', ';'",
