@@ -1,28 +1,24 @@
 {
-    "version": "202610222206",
-    "description": "Data files from Loyalsoldier/v2ray-rules-dat, works for v2ray, Xray and v2rayA.",
+    "version": "202610232206",
+    "description": "Enhanced ruleset for V2Ray (unofficial)",
     "homepage": "https://github.com/Loyalsoldier/v2ray-rules-dat",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/raw/master/LICENSE"
-    },
-    "url": [
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610222206/geoip.dat",
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610222206/geosite.dat"
-    ],
-    "hash": [
-        "a21bacd4e378bfec3bfb5426c08fd995d78ed31f6a44180c9449a61be185f85f",
-        "cfb4e3be914b5c887b9f67807171ec2887d34690252e4f011266d60fc6849602"
-    ],
-    "env_set": {
-        "V2RAYA_V2RAY_ASSETSDIR": "$dir"
+    "license": "GPL-3.0-only",
+    "depends": "v2ray",
+    "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202610232206/rules.zip",
+    "hash": "ac8a5f111ae55151b7d7720ac01fba80d28f9c636f54775164d1cc71016aa19f",
+    "installer": {
+        "script": [
+            "function LinkFile([String] $file, [String] $source = $file) {",
+            "    Write-Host \"Creating SymbolicLink for $file\"",
+            "    New-Item -Force -ItemType SymbolicLink -Path \"$(appdir v2ray $global)\\current\" -Name $file -Target \"$dir\\$source\" | Out-Null",
+            "}",
+            "LinkFile 'geoip.dat'",
+            "LinkFile 'geosite.dat'"
+        ]
     },
     "checkver": "github",
     "autoupdate": {
-        "url": [
-            "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/geoip.dat",
-            "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/geosite.dat"
-        ],
+        "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/rules.zip",
         "hash": {
             "url": "$url.sha256sum"
         }
