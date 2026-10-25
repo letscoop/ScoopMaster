@@ -1,7 +1,7 @@
 {
     "version": "7.3.2",
-    "description": "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others.",
-    "homepage": "https://dbgate.org/",
+    "description": "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others. Runs under Windows, Linux, Mac or as web application",
+    "homepage": "https://github.com/dbgate/dbgate",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
@@ -13,16 +13,14 @@
             "hash": "2628ae81a22e53e5272a5561616c4b961d6f085613b755a363723e72c1fb5c48"
         }
     },
-    "bin": "DbGate.exe",
+    "extract_to": "",
     "shortcuts": [
         [
             "DbGate.exe",
             "DbGate"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/dbgate/dbgate"
-    },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
