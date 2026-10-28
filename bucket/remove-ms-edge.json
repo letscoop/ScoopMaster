@@ -1,36 +1,36 @@
 {
-    "version": "0.2026.10.27.d1dae2a",
-    "description": "Uninstall Microsoft Edge silently, through an executable or batch script.",
-    "homepage": "https://github.com/ShadowWhisperer/Remove-MS-Edge",
-    "license": "Unknown",
-    "url": "https://github.com/ShadowWhisperer/Remove-MS-Edge/archive/d1dae2a05d0ea3566019e7589afa6dbda9d73474.zip",
-    "hash": "0ac3b2da96cbc387ad88ff1fb7fc8575264ae5c5b1eb6cfd9cb3fdb0e51877a0",
-    "extract_dir": "Remove-MS-Edge-d1dae2a05d0ea3566019e7589afa6dbda9d73474",
-    "shortcuts": [
-        [
-            "Remove-Edge.bat",
-            "Remove-Edge(bat)"
-        ],
-        [
-            "Remove-Edge.exe",
-            "Remove-Edge"
-        ],
-        [
-            "Remove-EdgeOnly.exe",
-            "Remove-EdgeOnly"
-        ],
-        [
-            "Remove-Edge_GUI.exe",
-            "Remove-Edge_GUI"
-        ]
+  "version": "0.2026.10.26.0bc17ff",
+  "description": "Uninstall Microsoft Edge silently, through an executable or batch script.",
+  "homepage": "https://github.com/ShadowWhisperer/Remove-MS-Edge",
+  "license": "Unknown",
+  "url": "https://github.com/ShadowWhisperer/Remove-MS-Edge/archive/0bc17ff77e2eb05adf9f856e3c47c65d4ac64a48.zip",
+  "hash": "571e83f886032468d3e85a66179a388910c812f77403cb27373852cd8da91fac",
+  "extract_dir": "Remove-MS-Edge-0bc17ff77e2eb05adf9f856e3c47c65d4ac64a48",
+  "shortcuts": [
+    [
+      "Remove-Edge.bat",
+      "Remove-Edge(bat)"
     ],
-    "checkver": {
-        "url": "https://github.com/ShadowWhisperer/Remove-MS-Edge/commits/main.atom",
-        "regex": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>(?<short>[0-9a-f]{7})[0-9a-f]{33})",
-        "replace": "0.${1}.${2}.${3}.${short}"
-    },
-    "autoupdate": {
-        "url": "https://github.com/ShadowWhisperer/Remove-MS-Edge/archive/$matchSha.zip",
-        "extract_dir": "Remove-MS-Edge-$matchSha"
-    }
+    [
+      "Remove-Edge.exe",
+      "Remove-Edge"
+    ],
+    [
+      "Remove-EdgeOnly.exe",
+      "Remove-EdgeOnly"
+    ],
+    [
+      "Remove-Edge_GUI.exe",
+      "Remove-Edge_GUI"
+    ]
+  ],
+  "checkver": {
+    "url": "https://github.com/ShadowWhisperer/Remove-MS-Edge/commits/main.atom",
+    "regex": "(?s)>(\\d+)-(\\d+)-(\\d+)T.*?/(?<sha>(?<short>[0-9a-f]{7})[0-9a-f]{33})",
+    "replace": "0.${1}.${2}.${3}.${short}"
+  },
+  "autoupdate": {
+    "url": "https://github.com/ShadowWhisperer/Remove-MS-Edge/archive/$matchSha.zip",
+    "extract_dir": "Remove-MS-Edge-$matchSha"
+  }
 }
