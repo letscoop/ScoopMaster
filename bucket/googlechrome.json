@@ -21,6 +21,12 @@
         }
     },
     "extract_dir": "Chrome-bin",
+    "post_install": [
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
+        "}"
+    ],
     "bin": [
         [
             "chrome.exe",
@@ -35,16 +41,13 @@
             "--user-data-dir=\"$dir\\User Data\""
         ]
     ],
-    "post_install": [
-        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\Google\\Chrome\\User Data\")) {",
-        "    info '[Portable Mode]: Copying user data...'",
-        "    Copy-Item \"$env:LocalAppData\\Google\\Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
-        "}"
-    ],
     "env_set": {
         "CHROME_EXECUTABLE": "$dir\\chrome.exe"
     },
-    "persist": "User Data",
+    "persist": [
+        "User Data",
+        "Dictionaries"
+    ],
     "checkver": {
         "script": [
             "$AppID = '{8A69D345-D564-463C-AFF1-A69D9E530F96}'",
