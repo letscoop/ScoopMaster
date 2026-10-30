@@ -1,7 +1,7 @@
 {
     "version": "0.4.27-2",
-    "description": "Discover, download, and run local LLMs",
-    "homepage": "https://lmstudio.ai/",
+    "description": "Discover, download, and run local LLMs (llama.cpp, MLX). Chat UI and OpenAI-compatible local API server.",
+    "homepage": "https://lmstudio.ai",
     "license": {
         "identifier": "Proprietary",
         "url": "https://lmstudio.ai/app-terms"
@@ -9,32 +9,19 @@
     "architecture": {
         "64bit": {
             "url": "https://installers.lmstudio.ai/win32/x64/0.4.27-2/LM-Studio-0.4.27-2-x64.exe#/dl.7z",
-            "hash": "6689fb083d0309692d0b3f8d741ec215098d5c2d2321019bdacc3d1628cff189",
-            "installer": {
-                "script": [
-                    "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
-                    "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\app-64.7z\"",
-                    ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-                    "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\LM Studio'; 'cache' = '$env:USERPROFILE\\.cache\\lm-studio'; 'userdata' = '$env:USERPROFILE\\.lm-studio' }"
-                ]
-            }
+            "hash": "6689fb083d0309692d0b3f8d741ec215098d5c2d2321019bdacc3d1628cff189"
         },
         "arm64": {
             "url": "https://installers.lmstudio.ai/win32/arm64/0.4.27-2/LM-Studio-0.4.27-2-arm64.exe#/dl.7z",
-            "hash": "46dee8139d6d12443c1b9de6c380879269668d8c18285757f7abe15efbf4f6e0",
-            "installer": {
-                "script": [
-                    "Remove-Item \"$dir\\*\" -Exclude \"app-arm64.7z\"",
-                    "Expand-7zipArchive \"$dir\\app-arm64.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\app-arm64.7z\"",
-                    ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-                    "Set-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\LM Studio'; 'cache' = '$env:USERPROFILE\\.cache\\lm-studio'; 'userdata' = '$env:USERPROFILE\\.lm-studio' }"
-                ]
-            }
+            "hash": "46dee8139d6d12443c1b9de6c380879269668d8c18285757f7abe15efbf4f6e0"
         }
     },
-    "extract_dir": "$PLUGINSDIR",
+    "installer": {
+        "script": [
+            "Get-Item -Path \"$dir\\`$PLUGINSDIR\\app*.7z\" | Expand-7zipArchive -DestinationPath \"$dir\"",
+            "Remove-Item -Path \"$dir\\`$*\", \"$dir\\Uninst*.exe\" -Force -Recurse -ErrorAction Ignore"
+        ]
+    },
     "bin": "resources\\app\\.webpack\\lms.exe",
     "shortcuts": [
         [
@@ -42,12 +29,6 @@
             "LM Studio"
         ]
     ],
-    "uninstaller": {
-        "script": [
-            ". \"$bucketsdir\\apeiraco\\bin\\persist-utils.ps1\"",
-            "Remove-PersistLinks -PersistDir $persist_dir -LinkMap @{ 'appdata' = '$env:APPDATA\\LM Studio'; 'cache' = '$env:USERPROFILE\\.cache\\lm-studio'; 'userdata' = '$env:USERPROFILE\\.lm-studio' }"
-        ]
-    },
     "checkver": {
         "url": "https://lmstudio.ai/download",
         "regex": "\\\\\"version\\\\\":\\\\\"(?<ver>[\\d.]+)\\\\\",\\\\\"build\\\\\":\\\\\"(?<build>\\d+)\\\\\"",

@@ -1,5 +1,5 @@
 {
-    "version": "641",
+    "version": "6.41",
     "description": "Freeware system optimization tool that removes unused and temporary files",
     "homepage": "https://www.ccleaner.com/ccleaner",
     "license": "Freeware",
@@ -31,9 +31,11 @@
     ],
     "checkver": {
         "url": "https://www.ccleaner.com/ccleaner/builds",
-        "regex": "https://download.ccleaner.com/portable/ccsetup([\\d.]+).zip"
+        "useragent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+        "regex": "portable/ccsetup(\\d)(\\d+).zip",
+        "replace": "$1.$2"
     },
     "autoupdate": {
-        "url": "https://download.ccleaner.com/portable/ccsetup$version.zip"
+        "url": "https://download.ccleaner.com/portable/ccsetup$majorVersion$minorVersion.zip"
     }
 }
