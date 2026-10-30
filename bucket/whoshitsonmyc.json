@@ -1,22 +1,25 @@
 {
-    "version": "1.1.7",
-    "description": "A lightweight disk space change comparison tool.",
+    "version": "1.1.8",
+    "description": "磁盘空间变化对比轻量小工具",
     "homepage": "https://github.com/Kami958/WhoShitsonMyC",
-    "license": "GPL-3.0",
-    "url": "https://github.com/Kami958/WhoShitsonMyC/releases/download/v1.1.7/wsmc-v1.1.7.exe#/WhoShitsOnMyC.exe",
-    "hash": "8a78448d59174ccc224868178041b6e6b14f6462670a043df84311ced782d912",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/Kami958/WhoShitsonMyC/releases/download/v1.1.8/wsmc-v1.1.8.exe#/whoshitsonmyc.exe",
+    "hash": "9f9e89883517aa00ef2f8b148e4a29ea366bb02cb80d541fda38708361b21e20",
+    "bin": [
+        "whoshitsonmyc.exe",
+        [
+            "whoshitsonmyc.exe",
+            "wsmc"
+        ]
+    ],
     "shortcuts": [
         [
-            "WhoShitsOnMyC.exe",
-            "WhoShitsOnMyC"
+            "whoshitsonmyc.exe",
+            "WhoShitsonMyC"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Kami958/WhoShitsonMyC/releases/download/v$version/wsmc-v$version.exe#/WhoShitsOnMyC.exe",
-        "hash": {
-            "url": "https://api.github.com/repos/Kami958/WhoShitsonMyC/releases/tags/v$version",
-            "regex": "wsmc-v$version\\.exe\"[\\s\\S]*?\"digest\"\\s*:\\s*\"sha256:($sha256)\""
-        }
+        "url": "https://github.com/Kami958/WhoShitsonMyC/releases/download/v$version/wsmc-v$version.exe#/whoshitsonmyc.exe"
     }
 }
