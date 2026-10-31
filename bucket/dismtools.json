@@ -1,12 +1,12 @@
 {
-    "version": "0.8.1",
-    "description": "DISMTools | The connected place for Windows system administration",
+    "version": "0.8.2_stable",
+    "description": "A front-end for DISM that lets you manage your Windows Imaging (WIM) files and a whole lot more.",
     "homepage": "https://github.com/CodingWonders/DISMTools",
-    "license": "GPL-3.0-or-later",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CodingWonders/DISMTools/releases/download/v0.8.1_stable/DISMTools.zip",
-            "hash": "f653685338cf223d5f7ce70d073c154672000ffd0524a26e2199cc98e5cb6115"
+            "url": "https://github.com/CodingWonders/DISMTools/releases/download/v0.8.2_stable/DISMTools.zip",
+            "hash": "a6fec8dd1b5e2fdeab87adb65b62b1a2b6c45278b6ebb16acfe4fc3b09b56375"
         }
     },
     "shortcuts": [
@@ -15,14 +15,18 @@
             "DISMTools"
         ]
     ],
-    "pre_install": [
-        "if (!(Test-Path \"$dir\\settings.ini\") -or !(Get-Item \"$dir\\settings.ini\").Length) {",
-        "    New-Item \"$dir\\settings.ini\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
-        "}"
-    ],
-    "persist": "settings.ini",
-    "checkver": "github",
+    "post_install": "@('settings.ini', 'userdata') | Foreach-Object { Get-ChildItem \"$persist_dir\" -Filter $_ -ErrorAction SilentlyContinue | Move-Item -Force -Destination \"$dir\" -ErrorAction SilentlyContinue }",
+    "pre_uninstall": "@('settings.ini', 'userdata') | Foreach-Object { Get-ChildItem \"$dir\" -Filter $_ -ErrorAction SilentlyContinue | Move-Item -Force -Destination \"$persist_dir\" -ErrorAction SilentlyContinue }",
+    "persist": "logs",
+    "checkver": {
+        "url": "https://github.com/CodingWonders/DISMTools/releases.atom",
+        "regex": "Repository/\\d+/v(((?!pre).)+?)<"
+    },
     "autoupdate": {
-        "url": "https://github.com/CodingWonders/DISMTools/releases/download/v$version_stable/DISMTools.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/CodingWonders/DISMTools/releases/download/v$version/DISMTools.zip"
+            }
+        }
     }
 }

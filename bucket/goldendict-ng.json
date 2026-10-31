@@ -1,31 +1,46 @@
 {
-    "version": "v25.06.0-Release.8a87a79b",
-    "description": "A feature-rich dictionary lookup program",
-    "homepage": "https://github.com/xiaoyifang/goldendict-ng",
-    "license": "GPL-3.0-only",
+    "version": "v26.11.0",
+    "description": "A feature-rich dictionary lookup program, supporting multiple dictionary formats (StarDict/Babylon/Lingvo/Dictd/AARD/MDict/SDict) and online dictionaries, featuring perfect article rendering with the complete markup, illustrations and other content retained, and allowing you to type in words without any accents or correct case.",
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://github.com/xiaoyifang/goldendict",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v25.06.0-Release.8a87a79b/GoldenDict-ng-25.06.0-Qt6.7.2-Windows-installer.7z"
+            "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/v26.11.0/GoldenDict-ng-26.11.0-Qt6.8.3-Windows.7z",
+            "hash": "d7e2dd203fa9828caf6850e5219f36b8fd7659909c1965adf68b65f393ea8e94",
+            "shortcuts": [
+                [
+                    "GoldenDict.exe",
+                    "GoldenDict"
+                ]
+            ]
         }
     },
-    "extract_dir": "GoldenDict-ng-25.06.0-Qt6.7.2",
-    "bin": "GoldenDict.exe",
-    "shortcuts": [
-        [
-            "GoldenDict.exe",
-            "GoldenDict"
-        ]
-    ],
     "persist": [
-        "portable",
-        "content"
+        "content",
+        "portable"
     ],
-    "checkver": "github",
+    "pre_install": [
+        "$unzip_dir = (Get-ChildItem -Path $original_dir -Directory)[0].FullName",
+        "Move-Item -Path \"${unzip_dir}\\*\" -Destination \"$original_dir\" -Force",
+        "Remove-Item –Path $unzip_dir -Recurse -Force"
+    ],
+    "checkver": {
+        "script": [
+            "$headers = @{ 'User-Agent' = 'KiroBucket-ScoopCheckver'; 'Accept' = 'application/vnd.github+json' }",
+            "if (-not [string]::IsNullOrWhiteSpace($env:GITHUB_TOKEN)) { $headers['Authorization'] = \"Bearer $env:GITHUB_TOKEN\" }",
+            "$release = Invoke-RestMethod -Uri 'https://api.github.com/repos/xiaoyifang/goldendict-ng/releases/latest' -Headers $headers -TimeoutSec 30",
+            "if ([string]::IsNullOrWhiteSpace([string]$release.tag_name)) { throw 'GitHub did not return the latest GoldenDict release tag.' }",
+            "$assets = @($release.assets | Where-Object { $_.name -match 'Qt6\\.8\\.3-Windows\\.7z$' })",
+            "if ($assets.Count -eq 0) { throw 'The latest GoldenDict release does not contain the expected Qt 6.8.3 Windows archive.' }",
+            "$name = $assets[0].name",
+            "Write-Output \"$($release.tag_name) $name\""
+        ],
+        "regex": "^(?<version>v\\d+(?:\\.\\d+)+)\\s(?<name>.+Windows\\.7z)$"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/$version/GoldenDict-ng-$matchHead-Qt6.7.2-Windows-installer.7z",
-                "extract_dir": "GoldenDict-ng-$matchHead-Qt6.7.2"
+                "url": "https://github.com/xiaoyifang/goldendict-ng/releases/download/$version/$matchName"
             }
         }
     }
