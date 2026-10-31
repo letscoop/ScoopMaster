@@ -1,8 +1,8 @@
 {
-    "version": "0.8.2_stable",
-    "description": "A front-end for DISM that lets you manage your Windows Imaging (WIM) files and a whole lot more.",
+    "version": "0.8.2",
+    "description": "DISMTools | The connected place for Windows system administration",
     "homepage": "https://github.com/CodingWonders/DISMTools",
-    "license": "GPL-3.0-only",
+    "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
             "url": "https://github.com/CodingWonders/DISMTools/releases/download/v0.8.2_stable/DISMTools.zip",
@@ -15,18 +15,14 @@
             "DISMTools"
         ]
     ],
-    "post_install": "@('settings.ini', 'userdata') | Foreach-Object { Get-ChildItem \"$persist_dir\" -Filter $_ -ErrorAction SilentlyContinue | Move-Item -Force -Destination \"$dir\" -ErrorAction SilentlyContinue }",
-    "pre_uninstall": "@('settings.ini', 'userdata') | Foreach-Object { Get-ChildItem \"$dir\" -Filter $_ -ErrorAction SilentlyContinue | Move-Item -Force -Destination \"$persist_dir\" -ErrorAction SilentlyContinue }",
-    "persist": "logs",
-    "checkver": {
-        "url": "https://github.com/CodingWonders/DISMTools/releases.atom",
-        "regex": "Repository/\\d+/v(((?!pre).)+?)<"
-    },
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\settings.ini\") -or !(Get-Item \"$dir\\settings.ini\").Length) {",
+        "    New-Item \"$dir\\settings.ini\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
+        "}"
+    ],
+    "persist": "settings.ini",
+    "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/CodingWonders/DISMTools/releases/download/v$version/DISMTools.zip"
-            }
-        }
+        "url": "https://github.com/CodingWonders/DISMTools/releases/download/v$version_stable/DISMTools.zip"
     }
 }
