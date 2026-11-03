@@ -1,23 +1,41 @@
 {
-    "version": "1.6.1",
-    "description": "A video downloader for bilibili",
-    "homepage": "https://github.com/leiurayer/downkyi",
-    "license": {
-        "identifier": "Apache-2.0",
-        "url": "https://github.com/leiurayer/downkyi/blob/main/LICENSE"
+    "version": "1.8.2",
+    "description": "哔哩下载姬(跨平台版)downkyi，哔哩哔哩网站视频下载工具，支持批量下载，支持8K、HDR、杜比视界，提供工具箱（音视频提取、去水印等）。",
+    "homepage": "https://github.com/crazysmile-PhD/downkyicore",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/crazysmile-PhD/downkyicore/releases/download/v1.8.2/DownKyi-1.8.2-1.win-x64.zip",
+            "hash": "1f617f92b508f28506f6b21fc59faad081d644df3dedc53a9e1fdc4bfd2f8f41"
+        },
+        "32bit": {
+            "url": "https://github.com/crazysmile-PhD/downkyicore/releases/download/v1.8.2/DownKyi-1.8.2-1.win-x86.zip",
+            "hash": "b9d316c364a8ec60a9d4e2e463980c8f2938e8eaa1382caf70037875215003d2"
+        }
     },
-    "notes": "If you cannot run this app, please install .NET Framework 4.7.2 or above.",
-    "url": "https://github.com/leiurayer/downkyi/releases/download/v1.6.1/DownKyi-1.6.1.zip",
-    "hash": "d809c230c9dd9ab18a7cbafc413db2d93eca25e45c4df5fa6aaad3f253015986",
     "shortcuts": [
         [
             "DownKyi.exe",
             "DownKyi"
         ]
     ],
-    "persist": "Config",
-    "checkver": "github",
+    "persist": [
+        "Config",
+        "Media",
+        "Aria",
+        "Storage"
+    ],
+    "checkver": {
+        "github": "https://github.com/crazysmile-PhD/downkyicore"
+    },
     "autoupdate": {
-        "url": "https://github.com/leiurayer/downkyi/releases/download/v$version/DownKyi-$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/crazysmile-PhD/downkyicore/releases/download/v$version/DownKyi-$version-1.win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/crazysmile-PhD/downkyicore/releases/download/v$version/DownKyi-$version-1.win-x86.zip"
+            }
+        }
     }
 }
