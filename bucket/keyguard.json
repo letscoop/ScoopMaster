@@ -1,29 +1,41 @@
 {
-    "version": "3.6.1",
-    "description": "Keyguard is an alternative client for the Bitwarden® platform, created to provide the best user experience possible.",
+    "version": "3.7.0-20261103",
+    "description": "Keyguard is an alternative client for the Bitwarden® platform, created to provide the best user experience possible",
     "homepage": "https://github.com/AChep/keyguard-app",
-    "license": "MIT",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/AChep/keyguard-app/blob/master/LICENSE"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/AChep/keyguard-app/releases/download/r20261028/Keyguard-3.6.1.msi",
-            "hash": "c0ff635759ab9febfb9b919f1722d45e5051c4bea96bf7cb38aae5b80fb485e4"
+            "url": "https://github.com/AChep/keyguard-app/releases/download/r20261103/Keyguard-3.7.0.msi",
+            "hash": "f92e40d05da567e2eb1fa0a339f1ab65843488efe356ff67c74a0db424f1207b"
+        },
+        "arm64": {
+            "url": "https://github.com/AChep/keyguard-app/releases/download/r20261103/Keyguard-3.7.0-aarch64.msi",
+            "hash": "fa61d6c04ec596f08f46badc776444ed1557e5a84c8d062ae94168a3b88254db"
         }
     },
-    "extract_dir": "Keyguard",
+    "bin": "Keyguard\\Keyguard.exe",
     "shortcuts": [
         [
-            "keyguard.exe",
+            "Keyguard\\Keyguard.exe",
             "Keyguard"
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repos/AChep/keyguard-app/releases",
-        "re": "(?<url>download/\\w+/Keyguard-(?<version>[\\d\\.]+).msi)"
+        "github": "https://api.github.com/repos/AChep/keyguard-app/releases/latest",
+        "jsonpath": "$.name",
+        "regex": "Release v([\\d\\.]+)-([\\d\\.]+)",
+        "replace": "${1}-${2}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AChep/keyguard-app/releases/$matchUrl"
+                "url": "https://github.com/AChep/keyguard-app/releases/download/r$preReleaseVersion/Keyguard-$matchHead.msi"
+            },
+            "arm64": {
+                "url": "https://github.com/AChep/keyguard-app/releases/download/r$preReleaseVersion/Keyguard-$matchHead-aarch64.msi"
             }
         }
     }
