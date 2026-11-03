@@ -14,10 +14,7 @@
         "(get-content \"$dir/wslcompact/WslCompact.psm1\") -replace '^Export.*', 'WslCompact @args' | Set-Content \"$dir/wslcompact.ps1\"",
         "Remove-Item \"$dir/wslcompact\" -Recurse -Force"
     ],
-    "checkver": {
-        "github": "https://api.github.com/repos/okibcn/wslcompact",
-        "regex": "v([\\d\\.\\-]+)\\.zip"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/okibcn/wslcompact/releases/download/$version/WslCompact-v$version.zip"
     }

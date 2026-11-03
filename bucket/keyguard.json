@@ -1,41 +1,29 @@
 {
-    "version": "3.7.0-20261103",
-    "description": "Keyguard is an alternative client for the Bitwarden® platform, created to provide the best user experience possible",
+    "version": "3.7.0",
+    "description": "Keyguard is an alternative client for the Bitwarden® platform, created to provide the best user experience possible.",
     "homepage": "https://github.com/AChep/keyguard-app",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://github.com/AChep/keyguard-app/blob/master/LICENSE"
-    },
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AChep/keyguard-app/releases/download/r20261103/Keyguard-3.7.0.msi",
             "hash": "f92e40d05da567e2eb1fa0a339f1ab65843488efe356ff67c74a0db424f1207b"
-        },
-        "arm64": {
-            "url": "https://github.com/AChep/keyguard-app/releases/download/r20261103/Keyguard-3.7.0-aarch64.msi",
-            "hash": "fa61d6c04ec596f08f46badc776444ed1557e5a84c8d062ae94168a3b88254db"
         }
     },
-    "bin": "Keyguard\\Keyguard.exe",
+    "extract_dir": "Keyguard",
     "shortcuts": [
         [
-            "Keyguard\\Keyguard.exe",
+            "keyguard.exe",
             "Keyguard"
         ]
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/AChep/keyguard-app/releases/latest",
-        "jsonpath": "$.name",
-        "regex": "Release v([\\d\\.]+)-([\\d\\.]+)",
-        "replace": "${1}-${2}"
+        "url": "https://api.github.com/repos/AChep/keyguard-app/releases",
+        "re": "(?<url>download/\\w+/Keyguard-(?<version>[\\d\\.]+).msi)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AChep/keyguard-app/releases/download/r$preReleaseVersion/Keyguard-$matchHead.msi"
-            },
-            "arm64": {
-                "url": "https://github.com/AChep/keyguard-app/releases/download/r$preReleaseVersion/Keyguard-$matchHead-aarch64.msi"
+                "url": "https://github.com/AChep/keyguard-app/releases/$matchUrl"
             }
         }
     }

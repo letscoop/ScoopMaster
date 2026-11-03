@@ -1,5 +1,5 @@
 {
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "The real Docker Engine on Windows, without Docker Desktop. Free for any company, terminal only.",
     "homepage": "https://lindowin.dev",
     "license": "MIT",
@@ -8,9 +8,9 @@
         "Open a new terminal and try:  docker run -d -p 8080:80 nginx",
         "Manage it with:  lindowin status | update | config | stop | uninstall"
     ],
-    "url": "https://github.com/alozdev/lindowin/archive/refs/tags/v1.2.1.zip",
-    "hash": "b242195baeee3859eea866d1c1abb007abf020b17dc679be822f93b085d16b30",
-    "extract_dir": "lindowin-1.2.1",
+    "url": "https://github.com/alozdev/lindowin/archive/refs/tags/v1.2.2.zip",
+    "hash": "5320d35c81568426aad0c319ec8c693f31d863acad1cefcda6f5a516f240e746",
+    "extract_dir": "lindowin-1.2.2",
     "installer": {
         "script": [
             "# lindowin sets itself up (WSL distro, Docker Engine, start task): Scoop runs its installer",
