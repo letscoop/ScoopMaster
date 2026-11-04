@@ -1,23 +1,29 @@
 {
-    "version": "2.6.0",
-    "description": "Agentic Development Environment based on OpenCode AI agent",
-    "homepage": "https://openchamber.dev",
+    "version": "2.6.1",
+    "description": "Open-source workspace for running, supervising, and reviewing AI coding agent work across desktop, web, VS Code, and mobile",
+    "homepage": "https://github.com/openchamber/openchamber",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/openchamber/openchamber/releases/download/v2.6.0/OpenChamber-2.6.0-win-x64.exe#/dl.7z",
-            "hash": "sha512:1e6cb76f4d23420b0cd9f04a24dcbf743f76ab2a562e28feab1a100f20e5351a9f1e24c0d4a3de7e965ff90689a9a6a9c07689e315ef46b8895d6c4b311dfd9b"
+            "url": "https://github.com/openchamber/openchamber/releases/download/v2.6.1/OpenChamber-2.6.1-win-x64.exe#/dl.7z",
+            "hash": "70735d2025704ba36f4d4d5ab75978965f1aed4ad7218daeb65c1d90fe4e7e6f",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Switches \"-t7z\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall OpenChamber.exe\", \"$dir\\uninstallerIcon.ico\" -Recurse -Force"
+                ]
+            }
         },
         "arm64": {
-            "url": "https://github.com/openchamber/openchamber/releases/download/v2.6.0/OpenChamber-2.6.0-win-arm64.exe#/dl.7z",
-            "hash": "sha512:dc8c83d96c04cc31dd5ac5723897c7f7a1abafb16e8e95681b09e0e873718b7c1019d2faa66fd09a5764a7da926fb1aad6aa1d1157bc69654cbdc382e1b2432b"
+            "url": "https://github.com/openchamber/openchamber/releases/download/v2.6.1/OpenChamber-2.6.1-win-arm64.exe#/dl.7z",
+            "hash": "1fa1834365deeeadf9b4e35f3d38030d645a540aeabda0f113c8c5804c1d64be",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\" -Switches \"-t7z\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall OpenChamber.exe\", \"$dir\\uninstallerIcon.ico\" -Recurse -Force"
+                ]
+            }
         }
-    },
-    "installer": {
-        "script": [
-            "Get-Item \"$dir\\`$PLUGINSDIR\\app-*.7z\" | Expand-7zipArchive -DestinationPath \"$dir\" -Removal",
-            "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse -Force -ErrorAction SilentlyContinue"
-        ]
     },
     "shortcuts": [
         [
@@ -34,16 +40,18 @@
                 "url": "https://github.com/openchamber/openchamber/releases/download/v$version/OpenChamber-$version-win-x64.exe#/dl.7z",
                 "hash": {
                     "url": "$baseurl/latest.yml",
-                    "regex": "sha512:\\s+$base64"
+                    "find": "$basename"
                 }
             },
             "arm64": {
                 "url": "https://github.com/openchamber/openchamber/releases/download/v$version/OpenChamber-$version-win-arm64.exe#/dl.7z",
                 "hash": {
                     "url": "$baseurl/latest-arm64.yml",
-                    "regex": "sha512:\\s+$base64"
+                    "find": "$basename"
                 }
             }
         }
-    }
+    },
+    "notes": "OpenChamber is an Electron app; user data (sessions, settings) is stored under %APPDATA%, outside the app directory, and is not managed by Scoop.",
+    "bin": "OpenChamber.exe"
 }
