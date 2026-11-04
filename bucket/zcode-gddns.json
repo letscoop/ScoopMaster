@@ -1,0 +1,41 @@
+{
+    "version": "3.17.1.202611041440",
+    "description": "An unofficial community-patched build of the ZCode AI coding desktop client by GDDNS.",
+    "homepage": "https://zcode.z.ai/",
+    "license": "Apache-2.0",
+    "notes": [
+        "This is an unofficial build patched and published by GDDNS (https://www.gddns.org/).",
+        "The installer is not digitally signed."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://zcode.66a.vip/ZCode-3.17.1.202611041440-patched-win-x64-2026year11month4day14hour52minute.exe#/dl.7z",
+            "hash": "sha512:6c74d0066668fc3dc163d659cd56aa469ec76c83cc22679f429aab9a73a78db7610896eb9021b52b1239d88fbf9ff49409d7bd751b9b07f8db0d621fa64d768d"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\", \"$dir\\Uninstall ZCode.exe\", \"$dir\\uninstallerIcon.ico\" -Force -Recurse -ErrorAction SilentlyContinue"
+    ],
+    "shortcuts": [
+        [
+            "ZCode.exe",
+            "ZCode GDDNS"
+        ]
+    ],
+    "checkver": {
+        "url": "https://zcode.66a.vip/manifest.yml",
+        "regex": "(?m)^version:\\s*([\\d.]+)\\s*$[\\s\\S]*?^\\s*-\\s*url:\\s*(?<file>\\S+\\.exe)\\s*$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://zcode.66a.vip/$matchFile#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "https://zcode.66a.vip/manifest.yml",
+            "regex": "sha512:\\s*([A-Za-z0-9+/=]+)"
+        }
+    }
+}

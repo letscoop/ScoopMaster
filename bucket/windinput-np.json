@@ -1,5 +1,5 @@
 {
-    "version": "0.129.0",
+    "version": "0.130.1",
     "description": "A lightweight, fast and customizable open-source Chinese input method (IME), designed for Wubi and code-table schemes, with Quanpin/Shuangpin support.",
     "homepage": "https://windinput.com",
     "license": "MIT",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://dl.windinput.com/WindInput-Setup-0.129.0.exe",
-            "hash": "a1c193e43a41aeebb664964a0c30f88c9e2f9dfb4f8ef16ca97785421cb9878d"
+            "url": "https://dl.windinput.com/WindInput-Setup-0.130.1.exe",
+            "hash": "d77c9be36a6900cce75dc7235c08a0cce6defbfdb9def9e6c26edc53111e6ab2"
         }
     },
     "installer": {
