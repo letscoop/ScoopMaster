@@ -1,5 +1,5 @@
 {
-    "version": "3.17.2.202611050231",
+    "version": "3.17.2.202611060158",
     "description": "An unofficial community-patched build of the ZCode AI coding desktop client by GDDNS.",
     "homepage": "https://zcode.z.ai/",
     "license": "Apache-2.0",
@@ -9,8 +9,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://zcode.66a.vip/ZCode-3.17.2.202611050231-patched-win-x64-2026year11month5day2hour32minute.exe#/dl.7z",
-            "hash": "sha512:5b59c4db6da8a7b39e7f37c4bd8b211e09cb5c5cb77d418a1b5af73a01ead7fe9205841e1f885f396f6fa1719cc96db41d049f4d2a5104418e077c3283bf2083"
+            "url": "https://zcode.66a.vip/ZCode-3.17.2.202611060158-patched-win-x64-2026year11month6day1hour59minute.exe#/dl.7z",
+            "hash": "sha512:5d964b7cfd72c6dac7fcd933eca6639e2214baf474cc1bb0d3a536e5132125c3c89e793acb294acc4645c6e7558fba98941ce87770ebdf4e80ec47975c6e1914"
         }
     },
     "pre_install": [

@@ -1,10 +1,10 @@
 {
-    "version": "26.4.0-3619",
+    "version": "26.4.0-3625",
     "description": "JPEXS Free Flash Decompiler is an open source Flash SWF decompiler and editor.",
     "homepage": "https://github.com/jindrapetrik/jpexs-decompiler",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/nightly3619/ffdec_26.4.0_nightly3619.zip",
-    "hash": "17e517b3fc825a27771370386a0fd46e00f5ccaa67d1884192c270a1a3a903a8",
+    "url": "https://github.com/jindrapetrik/jpexs-decompiler/releases/download/nightly3625/ffdec_26.4.0_nightly3625.zip",
+    "hash": "2bdab2e6f6f9623727f4970de4e8c7abeabfb7884dc5fe8a14501be58e0e8f12",
     "bin": "ffdec-cli.jar",
     "shortcuts": [
         [
