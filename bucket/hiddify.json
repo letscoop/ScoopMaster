@@ -1,7 +1,7 @@
 {
     "version": "5.5.5",
-    "description": "A multi-platform client based on Sing-box that serves as a universal proxy tool-chain.",
-    "homepage": "https://hiddify.com/",
+    "description": "A cross-platform auto-proxy client based on the Sing-box universal proxy toolchain, supporting protocols such as Sing-box, Xray, TUIC, Hysteria, Reality, Trojan, SSH, etc., and providing secure and flexible network access.",
+    "homepage": "https://hiddify.com",
     "license": {
         "identifier": "GPL-3.0-only",
         "url": "https://github.com/hiddify/hiddify-app/blob/main/LICENSE.md"
@@ -20,7 +20,7 @@
             "Hiddify"
         ]
     ],
-    "notes": "Hiddify is NOT portable.",
+    "persist": "hiddify_portable_data",
     "checkver": {
         "github": "https://github.com/hiddify/hiddify-app"
     },
