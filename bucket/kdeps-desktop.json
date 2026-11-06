@@ -1,12 +1,12 @@
 {
-    "version": "2.71.1",
+    "version": "2.71.3",
     "description": "Chat client for the kdeps agent loop (standalone, no kdeps CLI needed)",
     "homepage": "https://kdeps.com/",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kdeps/kdeps/releases/download/v2.71.1/kdeps-desktop_2.71.1_windows_amd64.zip",
-            "hash": "d01bc8289773b3aafe8e7d78ae3ab4d1745bb239eeae39d95c63db869838d23a"
+            "url": "https://github.com/kdeps/kdeps/releases/download/v2.71.3/kdeps-desktop_2.71.3_windows_amd64.zip",
+            "hash": "b5edfeeabc96a63e5b14bc67273dc08b75ff2dbb58f6d5d1c3c11e1b51a3e8a6"
         }
     },
     "shortcuts": [
