@@ -17,7 +17,7 @@
       "while ((get-service PulseService -ea 0).status -ne \"Stopped\") {",
       "    Start-Sleep 2",
       "}",
-      "remove-service -name $svc.name -ea 0",
+      "remove-service -name $svc.name -ea 0"
     ],
     "checkver": "github",
     "autoupdate": {
