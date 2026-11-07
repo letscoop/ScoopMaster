@@ -1,13 +1,13 @@
 {
-    "version": "0.47.0",
+    "version": "0.48.0",
     "description": "A native music streaming client, built with Rust and GPUI",
     "homepage": "https://sonorahq.org/",
     "license": {
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/sonorahq/sonora/blob/main/COPYING"
     },
-    "url": "https://github.com/sonorahq/sonora/releases/download/v0.47.0/sonora-v0.47.0-x86_64-pc-windows-msvc.exe",
-    "hash": "82e4ab84872cdb1da58da16dc6e822bfbc5d8eb25c29862d4a7da5cd31abb723",
+    "url": "https://github.com/sonorahq/sonora/releases/download/v0.48.0/sonora-v0.48.0-x86_64-pc-windows-msvc.exe",
+    "hash": "b18056845b59e8135037301ba2ff572062aba5f6bc66466c09ac454e468719e8",
     "pre_install": "Get-ChildItem \"$dir\" -Filter \"sonora-*.exe\" | Rename-Item -NewName \"sonora.exe\"",
     "post_install": [
         "$links = @{ \"$env:LOCALAPPDATA\\sonora\" = \"$persist_dir\\data\"; \"$env:APPDATA\\sonora\" = \"$persist_dir\\config\" }",
