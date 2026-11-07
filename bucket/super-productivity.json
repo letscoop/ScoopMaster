@@ -5,16 +5,16 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/johannesjo/super-productivity/releases/download/v20.0.0/Super-Productivity-Setup-x64.exe#/dl.7z",
-            "hash": "246b5e0ab1b2aa495353e2bcbeadb763747ecec90ae007f6273d24a5f0346350",
+            "url": "https://github.com/super-productivity/super-productivity/releases/download/v20.0.0/superProductivity-x64.exe#/dl.7z",
+            "hash": "ee53b488383dfce9cffd35f3ccf29a49811dd8218d3ff84aa7ead908f56193bc",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
             ]
         },
         "arm64": {
-            "url": "https://github.com/johannesjo/super-productivity/releases/download/v20.0.0/Super-Productivity-Setup-arm64.exe#/dl.7z",
-            "hash": "246b5e0ab1b2aa495353e2bcbeadb763747ecec90ae007f6273d24a5f0346350",
+            "url": "https://github.com/super-productivity/super-productivity/releases/download/v20.0.0/superProductivity-arm64.exe#/dl.7z",
+            "hash": "ee53b488383dfce9cffd35f3ccf29a49811dd8218d3ff84aa7ead908f56193bc",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-arm64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse"
@@ -27,36 +27,17 @@
             "Super Productivity"
         ]
     ],
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-        "if (!(Test-Path \"$persist_dir\")) {",
-        "    ensure \"$persist_dir\" | Out-Null",
-        "}",
-        "if (!(Test-Path \"$persist_dir\\data\")) {",
-        "    ensure \"$persist_dir\\data\" | Out-Null",
-        "}",
-        "New-Item $env:AppData\\superProductivity -ItemType Junction -Target \"$persist_dir\\data\" | Out-Null"
-    ],
-    "pre_uninstall": [
-        "if (Test-Path \"$Env:AppData\\superProductivity\\*\") {",
-        "    Remove-Item $env:APPDATA\\superProductivity -Force -Recurse",
-        "}"
-    ],
     "checkver": {
-        "github": "https://github.com/johannesjo/super-productivity"
+        "github": "https://github.com/super-productivity/super-productivity"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/johannesjo/super-productivity/releases/download/v$version/Super-Productivity-Setup-x64.exe#/dl.7z"
+                "url": "https://github.com/super-productivity/super-productivity/releases/download/v$version/superProductivity-x64.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/johannesjo/super-productivity/releases/download/v$version/Super-Productivity-Setup-arm64.exe#/dl.7z"
+                "url": "https://github.com/super-productivity/super-productivity/releases/download/v$version/superProductivity-arm64.exe#/dl.7z"
             }
-        },
-        "hash": {
-            "url": "$baseurl/latest.yml",
-            "regex": "(?sm)$basename.*?sha512:\\s+$base64"
         }
     }
 }
