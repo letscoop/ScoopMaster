@@ -6,7 +6,13 @@
         "identifier": "Proprietary",
         "url": "https://support.typora.io/License-Agreement/"
     },
-    "notes": "For old beta version, install: versions/typora0.11.18",
+    "notes": [
+        "The Typora ARM64 version is in a separate manifest: `typora-arm64`. To install it, run:",
+        "scoop install typora-arm64"
+    ],
+    "suggest": {
+        "pandoc": "pandoc"
+    },
     "architecture": {
         "64bit": {
             "url": "https://download.typora.io/windows/typora-setup-x64-1.14.15.exe",
@@ -26,8 +32,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://typora.io/releases/stable",
-        "regex": "<h2>([\\d.]+)"
+        "url": "https://typora.io/releases/windows_64.json",
+        "jsonpath": "$.version"
     },
     "autoupdate": {
         "architecture": {
