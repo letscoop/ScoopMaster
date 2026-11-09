@@ -1,39 +1,34 @@
 {
-    "version": "0.16.0",
-    "description": "Writing and document design; an open-source, clean-room reimplementation of Microsoft Word, rebuilt in pure Rust",
+    "version": "0.17.0",
+    "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
     "homepage": "https://github.com/storytold/wordcraft",
-    "license": "MIT|Apache-2.0",
+    "license": "Apache-2.0",
+    "url": "https://github.com/storytold/wordcraft/releases/download/v0.17.0/wordcraft-0.17.0-windows-x64-portable.zip",
+    "hash": "ad05af39d62504ddb382f93f9b7e2e7e9ce92938d132c18c4fb43e10822108ce",
+    "extract_dir": "wordcraft-0.17.0-windows-x64-portable",
+    "bin": [
+        "wordcraft.exe",
+        "wordcraft-cli.exe"
+    ],
     "architecture": {
-        "64bit": {
-            "url": "https://github.com/storytold/wordcraft/releases/download/v0.16.0/wordcraft-0.16.0-windows-x64-portable.zip",
-            "hash": "aab5bfc4b5ce63c1bb1036ea2ab68aa1dbb300d8936de948c29739b15b3118e3",
-            "extract_dir": "wordcraft-0.16.0-windows-x64-portable"
-        },
         "32bit": {
-            "url": "https://github.com/storytold/wordcraft/releases/download/v0.16.0/wordcraft-0.16.0-windows-x86-portable.zip",
-            "hash": "b9175daf264c514207116955b24ae7d7af74373dd1017d7e75a54034c8153dd5",
-            "extract_dir": "wordcraft-0.16.0-windows-x86-portable"
+            "url": "https://github.com/storytold/wordcraft/releases/download/v0.1.0/wordcraft-0.1.0-windows-x86-portable.zip",
+            "hash": "f996eed25cba72a783be83f12f2b2444dfba21428d660d4b9a5cb3fb2945448e",
+            "extract_dir": "wordcraft-0.1.0-windows-x86-portable"
         },
         "arm64": {
-            "url": "https://github.com/storytold/wordcraft/releases/download/v0.16.0/wordcraft-0.16.0-windows-arm64-portable.zip",
-            "hash": "0911abee37d9cc3797fd28e0d5694c9416f7c0d6d14e6c76ba820c10f461d377",
-            "extract_dir": "wordcraft-0.16.0-windows-arm64-portable"
+            "url": "https://github.com/storytold/wordcraft/releases/download/v0.1.0/wordcraft-0.1.0-windows-arm64-portable.zip",
+            "hash": "a4fd510bc470e343154cb2aefaccc458efa68d3f15ca2faa46eba74146277c6e",
+            "extract_dir": "wordcraft-0.1.0-windows-arm64-portable"
         }
     },
-    "bin": "wordcraft-cli.exe",
-    "shortcuts": [
-        [
-            "wordcraft.exe",
-            "WordCraft"
-        ]
-    ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/storytold/wordcraft"
+    },
     "autoupdate": {
+        "url": "https://github.com/storytold/wordcraft/releases/download/v$version/wordcraft-$version-windows-x64-portable.zip",
+        "extract_dir": "wordcraft-$version-windows-x64-portable",
         "architecture": {
-            "64bit": {
-                "url": "https://github.com/storytold/wordcraft/releases/download/v$version/wordcraft-$version-windows-x64-portable.zip",
-                "extract_dir": "wordcraft-$version-windows-x64-portable"
-            },
             "32bit": {
                 "url": "https://github.com/storytold/wordcraft/releases/download/v$version/wordcraft-$version-windows-x86-portable.zip",
                 "extract_dir": "wordcraft-$version-windows-x86-portable"
@@ -42,9 +37,6 @@
                 "url": "https://github.com/storytold/wordcraft/releases/download/v$version/wordcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "wordcraft-$version-windows-arm64-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
