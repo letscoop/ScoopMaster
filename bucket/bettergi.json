@@ -1,13 +1,8 @@
 {
     "version": "0.67.0",
-    "description": "Computer-vision based automation tool for Genshin Impact, with auto-pickup, auto-dialogue and more",
-    "homepage": "https://www.bettergi.com/",
+    "description": "📦BetterGI · 更好的原神 - UI Automation Testing Tools For Genshin Impact",
+    "homepage": "https://github.com/babalae/better-genshin-impact",
     "license": "GPL-3.0-only",
-    "notes": [
-        "BetterGI needs administrator privileges to simulate input. Accept the UAC prompt when launching.",
-        "Requires .NET 8 Desktop Runtime: https://dotnet.microsoft.com/download/dotnet/8.0",
-        "The built-in updater is removed; use 'scoop update bettergi'."
-    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/babalae/better-genshin-impact/releases/download/0.67.0/BetterGI_v0.67.0.7z",
@@ -15,25 +10,23 @@
             "extract_dir": "BetterGI"
         }
     },
-    "post_install": "Remove-Item \"$dir\\BetterGI.update.exe\" -Force -ErrorAction SilentlyContinue",
     "shortcuts": [
         [
             "BetterGI.exe",
             "BetterGI"
         ]
     ],
-    "persist": [
-        "User",
-        "log",
-        "Repos"
-    ],
+    "persist": "User",
     "checkver": {
-        "github": "https://github.com/babalae/better-genshin-impact"
+        "url": "https://api.github.com/repos/babalae/better-genshin-impact/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "/(?<tag>[\\d.]+[\\d])/BetterGI_v(?<version>[\\d.]+[\\d])\\.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/babalae/better-genshin-impact/releases/download/$version/BetterGI_v$version.7z"
+                "url": "https://github.com/babalae/better-genshin-impact/releases/download/$matchTag/BetterGI_v$version.7z",
+                "extract_dir": "BetterGI"
             }
         }
     }

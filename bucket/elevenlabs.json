@@ -1,12 +1,12 @@
 {
-  "version": "1.9.0",
+  "version": "1.9.2",
   "description": "CLI for the ElevenLabs API",
   "homepage": "https://github.com/elevenlabs/cli",
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/elevenlabs/cli/releases/download/v1.9.0/elevenlabs-cli-x86_64-pc-windows-msvc.zip",
-      "hash": "f5d44e169f077b075274f0acb58eefb2ba4309708393a3ae4b237b5d1d50ccde",
+      "url": "https://github.com/elevenlabs/cli/releases/download/v1.9.2/elevenlabs-cli-x86_64-pc-windows-msvc.zip",
+      "hash": "3a53ad19d27c1199531eb484ffafc1d986621fc9e708316bf66fcc8333d9d5cd",
       "bin": "elevenlabs.exe"
     }
   },
