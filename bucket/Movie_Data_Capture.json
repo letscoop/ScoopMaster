@@ -1,28 +1,28 @@
 {
-    "homepage": "https://github.com/mvdctop/Movie_Data_Capture",
-    "description": "Movie Metadata Crawler | Scraper",
-    "version": "8.2.4",
-    "license": "GNU General Public License v3.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/mvdctop/Movie_Data_Capture/releases/download/8.2.4/MDC-8.2.4-Windows-x86_64.exe#/MDC.exe",
-            "hash": "7234ce1f92cccf616d677a6811ace44822851da97cb0c72697986d8ca225384d"
-        }
-    },
-    "bin": "MDC.exe",
-    "shortcuts": [
-        [
-            "MDC.exe",
-            "Movie Data Capture"
-        ]
-    ],
-    "persist": "config.ini",
-    "checkver": "github",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/mvdctop/Movie_Data_Capture/releases/download/$version/MDC-$version-Windows-x86_64.exe#/MDC.exe"
-            }
-        }
+  "homepage": "https://github.com/mvdctop/Movie_Data_Capture",
+  "description": "Movie Metadata Crawler | Scraper",
+  "version": "8.2.4",
+  "license": "GNU General Public License v3.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/mvdctop/Movie_Data_Capture/releases/download/8.2.4/MDC-8.2.4-Windows-x86_64.exe#/MDC.exe",
+      "hash": "7234ce1f92cccf616d677a6811ace44822851da97cb0c72697986d8ca225384d"
     }
+  },
+  "bin": "MDC.exe",
+  "shortcuts": [
+    [
+      "MDC.exe",
+      "Movie Data Capture"
+    ]
+  ],
+  "persist": "config.ini",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/mvdctop/Movie_Data_Capture/releases/download/$version/MDC-$version-Windows-x86_64.exe#/MDC.exe"
+      }
+    }
+  }
 }
