@@ -1,8 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.19.0",
-    "description": "Page layout and publishing; an open-source, clean-room reimplementation of Adobe InDesign, rebuilt in pure Rust",
+    "description": "Open-source Adobe InDesign-style page layout and publishing app in pure Rust",
     "homepage": "https://github.com/storytold/designcraft",
-    "license": "MIT|Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/designcraft/releases/download/v0.19.0/designcraft-0.19.0-windows-x64-portable.zip",
@@ -15,11 +16,14 @@
             "extract_dir": "designcraft-0.19.0-windows-arm64-portable"
         }
     },
-    "bin": "designcraft-cli.exe",
+    "bin": [
+        "designcraft.exe",
+        "designcraft-cli.exe"
+    ],
     "shortcuts": [
         [
             "designcraft.exe",
-            "DesignCraft"
+            "Designcraft"
         ]
     ],
     "checkver": "github",
@@ -33,9 +37,6 @@
                 "url": "https://github.com/storytold/designcraft/releases/download/v$version/designcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "designcraft-$version-windows-arm64-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }

@@ -1,37 +1,37 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.19.0",
-    "description": "Open-source AutoCAD-style CAD app in pure Rust",
+    "description": "CADCraft: computer-aided design and drafting, an open-source clean-room AutoCAD-style app in pure Rust",
     "homepage": "https://github.com/storytold/cadcraft",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/storytold/cadcraft/releases/download/v0.19.0/cadcraft-0.19.0-windows-x64-portable.zip",
-            "hash": "38fa68aafef23e0ebbef78721180634e8a24ce6f7c590bbaabf003e7e9d88731",
-            "extract_dir": "cadcraft-0.19.0-windows-x64-portable"
-        },
-        "arm64": {
-            "url": "https://github.com/storytold/cadcraft/releases/download/v0.19.0/cadcraft-0.19.0-windows-arm64-portable.zip",
-            "hash": "1bc4a43ab0cffd60751b517b4c5ee40e32548a9e620176a0d22e2877fb66f1ea",
-            "extract_dir": "cadcraft-0.19.0-windows-arm64-portable"
-        }
-    },
+    "license": "Apache-2.0",
+    "url": "https://github.com/storytold/cadcraft/releases/download/v0.19.0/cadcraft-0.19.0-windows-x64-portable.zip",
+    "hash": "38fa68aafef23e0ebbef78721180634e8a24ce6f7c590bbaabf003e7e9d88731",
+    "extract_dir": "cadcraft-0.19.0-windows-x64-portable",
     "bin": [
         "cadcraft.exe",
         "cadcraft-cli.exe"
     ],
-    "shortcuts": [
-        [
-            "cadcraft.exe",
-            "Cadcraft"
-        ]
-    ],
-    "checkver": "github",
+    "architecture": {
+        "32bit": {
+            "url": "https://github.com/storytold/cadcraft/releases/download/v0.1.0/cadcraft-0.1.0-windows-x86-portable.zip",
+            "hash": "8db9e1349b2b844219973d60cdc31247a6a0a8d4bcba811dfe863d849efb32d5",
+            "extract_dir": "cadcraft-0.1.0-windows-x86-portable"
+        },
+        "arm64": {
+            "url": "https://github.com/storytold/cadcraft/releases/download/v0.1.0/cadcraft-0.1.0-windows-arm64-portable.zip",
+            "hash": "fa9ea12a2a7bdd7f050888e12ccffd8d8ee693b77c9f41020de68c72ee8b423b",
+            "extract_dir": "cadcraft-0.1.0-windows-arm64-portable"
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/storytold/cadcraft"
+    },
     "autoupdate": {
+        "url": "https://github.com/storytold/cadcraft/releases/download/v$version/cadcraft-$version-windows-x64-portable.zip",
+        "extract_dir": "cadcraft-$version-windows-x64-portable",
         "architecture": {
-            "64bit": {
-                "url": "https://github.com/storytold/cadcraft/releases/download/v$version/cadcraft-$version-windows-x64-portable.zip",
-                "extract_dir": "cadcraft-$version-windows-x64-portable"
+            "32bit": {
+                "url": "https://github.com/storytold/cadcraft/releases/download/v$version/cadcraft-$version-windows-x86-portable.zip",
+                "extract_dir": "cadcraft-$version-windows-x86-portable"
             },
             "arm64": {
                 "url": "https://github.com/storytold/cadcraft/releases/download/v$version/cadcraft-$version-windows-arm64-portable.zip",
