@@ -1,19 +1,19 @@
 {
-    "version": "0.45.4",
+    "version": "0.45.6",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Infisical/cli/releases/download/v0.45.4/cli_0.45.4_windows_amd64.zip",
+            "url": "https://github.com/Infisical/cli/releases/download/v0.45.6/cli_0.45.6_windows_amd64.zip",
             "bin": [
                 "infisical.exe"
             ],
-            "hash": "33537924a25e3fc9c9ddb56099ff308b3f281a218ecd8a369cf881490c8633d4"
+            "hash": "eab591da72ecc04eee8e220d7d803b7996ef4c968a41f38c8e19c596c2a22064"
         },
         "arm64": {
-            "url": "https://github.com/Infisical/cli/releases/download/v0.45.4/cli_0.45.4_windows_arm64.zip",
+            "url": "https://github.com/Infisical/cli/releases/download/v0.45.6/cli_0.45.6_windows_arm64.zip",
             "bin": [
                 "infisical.exe"
             ],
-            "hash": "5c26256d0740a88ecce978280101273317f3a7da4d26d59c990f04c9befdd0a2"
+            "hash": "a0c08b6b4c67699fcd8b70a6307c8b92160a33efaa7d53767f821edce08bb5d5"
         }
     },
     "homepage": "https://infisical.com",
