@@ -1,41 +1,36 @@
 {
-    "version": "2.4.0",
-    "description": "AI-native, GPU-accelerated terminal emulator for Windows",
+    "version": "2.5.3",
+    "description": "AI-native, GPU-accelerated terminal emulator with SSH, persistent sessions, split panes and AI CLI workflows.",
     "homepage": "https://github.com/Kuddev/pebrel",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Kuddev/pebrel/releases/download/v2.4.0/Pebrel-v2.4.0-windows-x64.zip",
-            "hash": "c3d88a428db402aff27af3a45e2550c8e3b8a5a77a079e580687ed56445c3dc7"
-        },
-        "arm64": {
-            "url": "https://github.com/Kuddev/pebrel/releases/download/v2.4.0/Pebrel-v2.4.0-windows-arm64.zip",
-            "hash": "14e22a37b1cfab797c964468d336508745c1a16ca4853e6e540e42ec5c7ec01d"
+            "url": "https://github.com/Kuddev/pebrel/releases/download/v2.5.3/Pebrel-v2.5.3-windows-x64.zip",
+            "hash": "c6d7faf53defa32fc43e596d5b8a34963ef6241e95d858762bea450d5f127141"
         }
     },
-    "env_set": {
-        "PEBREL_CONFIG_DIR": "$dir\\data"
-    },
-    "bin": "Pebrel.exe",
+    "bin": [
+        "pebrel.exe",
+        [
+            "runtime\\pebrel-hook.exe",
+            "pebrel-hook"
+        ]
+    ],
     "shortcuts": [
         [
-            "Pebrel.exe",
+            "pebrel.exe",
             "Pebrel"
         ]
     ],
-    "persist": "data",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/Kuddev/pebrel/releases",
+        "regex": "/releases/tag/v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/Pebrel-v$version-windows-x64.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/Kuddev/pebrel/releases/download/v$version/Pebrel-v$version-windows-arm64.zip"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS"
         }
     }
 }

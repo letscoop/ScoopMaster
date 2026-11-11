@@ -1,19 +1,11 @@
 {
-    "version": "3.12.0",
-    "description": "A wealth management tool designed to help users track and manage their financial portfolios.",
-    "homepage": "https://wealthfolio.app/",
-    "license": "LGPL-3.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/wealthfolio/wealthfolio/releases/download/v3.12.0/Wealthfolio_3.12.0_x64-setup.exe#/dl.7z",
-            "hash": "3948c38916cdb38b91bb5f932839f4e356d916e3f10de1098bcc19da686d0d81"
-        },
-        "arm64": {
-            "url": "https://github.com/wealthfolio/wealthfolio/releases/download/v3.12.0/Wealthfolio_3.12.0_arm64-setup.exe#/dl.7z",
-            "hash": "3c5f25da522c1b8f572737d22891004e938411adcba6f795e13caf84d7b98809"
-        }
-    },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "version": "3.13.0",
+    "description": "Wealthfolio App is a Beautiful and Boring Investment Tracker, with Local Data Storage. No Subscriptions, No Cloud.",
+    "homepage": "https://wealthfolio.app",
+    "license": "AGPL-3.0",
+    "url": "https://github.com/afadil/wealthfolio/releases/download/v3.13.0/Wealthfolio_3.13.0_x64-setup.exe/#dl.7z",
+    "hash": "6caeef41093e1340dd364ab062dc31b1bef89751ac1a20b66ce8c954b8fb61cb",
+    "post_install": "Remove-Item -LiteralPath \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
     "shortcuts": [
         [
             "Wealthfolio.exe",
@@ -21,16 +13,9 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/wealthfolio/wealthfolio"
+        "github": "https://github.com/afadil/wealthfolio"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/wealthfolio/wealthfolio/releases/download/v$version/Wealthfolio_$version_x64-setup.exe#/dl.7z"
-            },
-            "arm64": {
-                "url": "https://github.com/wealthfolio/wealthfolio/releases/download/v$version/Wealthfolio_$version_arm64-setup.exe#/dl.7z"
-            }
-        }
+        "url": "https://github.com/afadil/wealthfolio/releases/download/v$version/Wealthfolio_$version_x64-setup.exe/#dl.7z"
     }
 }
