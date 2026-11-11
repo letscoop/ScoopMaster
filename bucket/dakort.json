@@ -1,0 +1,22 @@
+{
+    "version": "0.1.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/dakort-app/dakort/releases/download/v0.1.1/dakort_0.1.1_windows_amd64.zip",
+            "bin": [
+                "dakort.exe"
+            ],
+            "hash": "d0455e6adcfaa4aa2b9062a7553e597bc8dd40eb9f6d196967b0f525cbb6c36d"
+        },
+        "arm64": {
+            "url": "https://github.com/dakort-app/dakort/releases/download/v0.1.1/dakort_0.1.1_windows_arm64.zip",
+            "bin": [
+                "dakort.exe"
+            ],
+            "hash": "8f591c14e1e76860207ca8647099c34b2cc461244306197e53a0001875381d23"
+        }
+    },
+    "homepage": "https://github.com/dakort-app/dakort",
+    "license": "MIT",
+    "description": "All your Claude Code and Codex projects in one light window, with the files beside the agent"
+}

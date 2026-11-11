@@ -1,7 +1,7 @@
 {
     "version": "0.20.0",
-    "description": "The PDF workbench; an open-source, clean-room reimplementation of Adobe Acrobat, rebuilt in pure Rust",
-    "homepage": "https://github.com/storytold/pdfcraft",
+    "description": "PdfCraft: An open-source PDF reader and editor written by scratch in pure Rust",
+    "homepage": "https://getartcraft.com/apps/pdfcraft",
     "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
@@ -22,7 +22,11 @@
             "PdfCraft"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://api.github.com/repos/storytold/pdfcraft/releases",
+        "jp": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
