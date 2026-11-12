@@ -1,11 +1,20 @@
 {
     "version": "4.14.4",
-    "description": "A Vim-inspired note-taking platform",
-    "homepage": "https://vnotex.github.io/vnote/en_us/",
+    "description": "A pleasant note-taking platform",
+    "homepage": "https://docs.vnote.fun",
     "license": "LGPL-3.0-only",
-    "url": "https://github.com/vnotex/vnote/releases/download/v4.14.4/VNote-4.14.4-win64.zip",
-    "hash": "c4411d96028f824499cbb567f6188dbab3ffa8de40849698297908ffcf0a70b1",
-    "extract_dir": "VNote-4.14.4-win64",
+    "notes": [
+        "VNote does not automatically migrate existing settings into the portable \"config\" folder.",
+        "To keep settings from a previous installation, copy the contents of \"$env:APPDATA\\VNote\" into \"$persist_dir\\config\\app\" and of \"$env:LOCALAPPDATA\\VNote\" into \"$persist_dir\\config\\local\" before the first launch."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/vnotex/vnote/releases/download/v4.14.4/VNote-4.14.4-win64.zip",
+            "hash": "c4411d96028f824499cbb567f6188dbab3ffa8de40849698297908ffcf0a70b1",
+            "extract_dir": "VNote-4.14.4-win64"
+        }
+    },
+    "bin": "vnote.exe",
     "shortcuts": [
         [
             "vnote.exe",
@@ -17,7 +26,11 @@
         "github": "https://github.com/vnotex/vnote"
     },
     "autoupdate": {
-        "url": "https://github.com/vnotex/vnote/releases/download/v$version/VNote-$version-win64.zip",
-        "extract_dir": "VNote-$version-win64"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/vnotex/vnote/releases/download/v$version/VNote-$version-win64.zip",
+                "extract_dir": "VNote-$version-win64"
+            }
+        }
     }
 }
