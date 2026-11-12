@@ -22,11 +22,11 @@
     "architecture": {
         "64bit": {
             "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/2.31.2-6470801290035200/windows-x64/Antigravity-x64.exe#/dl.7z",
-            "hash": "c8c5112e2e6fec74220a7ff016bd19bb3fa6e08d44438dcb14b5ecc23ffa2ba0"
+            "hash": "sha512:55895c75df145a8d8ecc678c9e2e42c828058842546001f844a575ecfe65c236e482674dc8ac59b3dfacb676dd4a15ca008195e65f296c13a401ba468c8961f9"
         },
         "arm64": {
             "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/2.31.2-6470801290035200/windows-arm/Antigravity-arm64.exe#/dl.7z",
-            "hash": "1d140a44fc2abcd10208bcaad3e1bb66333707f4735134880f755086822e03b4"
+            "hash": "sha512:a1eafc62504295f8defd4e9c7167fa002e9b398d7d1f5fb94ddeb3f1d29e5bb166288c4787158c02923fd605e9a45b6b80c82a752fd32c94b3dd116bfe88b594"
         }
     },
     "installer": {
@@ -50,22 +50,24 @@
         ]
     ],
     "checkver": {
-        "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/releases",
-        "script": [
-            "$jsonData = $page | ConvertFrom-Json",
-            "$version = $jsonData[0].version",
-            "$execId = $jsonData[0].execution_id",
-            "Write-Output \"$version $execId\""
-        ],
-        "regex": "(?<version>[\\d.]+) (?<build>[\\d]+)"
+        "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/manifest/latest-x64-win.yml",
+        "regex": "antigravity-hub/(?<version>[\\d.]+)-(?<build>\\d+)/"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-x64/Antigravity-x64.exe#/dl.7z"
+                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-x64/Antigravity-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/manifest/latest-x64-win.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
             },
             "arm64": {
-                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-arm/Antigravity-arm64.exe#/dl.7z"
+                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-arm/Antigravity-arm64.exe#/dl.7z",
+                "hash": {
+                    "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/manifest/latest-arm64-win.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
             }
         }
     }

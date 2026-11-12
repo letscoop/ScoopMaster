@@ -1,9 +1,8 @@
 {
-    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.23.0",
-    "description": "Open-source Adobe Photoshop-style image editor in pure Rust",
+    "description": "Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust",
     "homepage": "https://github.com/storytold/photocraft",
-    "license": "MIT",
+    "license": "MIT|Apache-2.0",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/photocraft/releases/download/v0.23.0/photocraft-0.23.0-windows-x64-portable.zip",
@@ -16,16 +15,14 @@
             "extract_dir": "photocraft-0.23.0-windows-arm64-portable"
         }
     },
-    "bin": [
-        "photocraft.exe",
-        "photocraft-cli.exe"
-    ],
+    "bin": "photocraft-cli.exe",
     "shortcuts": [
         [
             "photocraft.exe",
-            "Photocraft"
+            "PhotoCraft"
         ]
     ],
+    "persist": "PhotoCraftData",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
@@ -37,6 +34,9 @@
                 "url": "https://github.com/storytold/photocraft/releases/download/v$version/photocraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "photocraft-$version-windows-arm64-portable"
             }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
