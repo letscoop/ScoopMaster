@@ -1,41 +1,41 @@
 {
-  "version": "7.0.9",
-  "description": "Manage Vietnamese localization patches for games",
-  "homepage": "https://facebook.com/CanhCutTeamVN",
-  "license": "Freeware",
-  "architecture": {
-    "64bit": {
-      "url": "https://pub-cc298c2ae5d24b51864a139a31b6a3b3.r2.dev/Launcher/CanhCutTeam_Portable.zip",
-      "hash": "cf11e93a933fe0b50c0e50f38da61ad186983b4707bbf6a35a4ce5c36d5118a7"
-    }
-  },
-  "extract_dir": "CanhCutTeam_Portable",
-  "shortcuts": [
-    [
-      "CanhCutTeam.exe",
-      "CanhCutTeam Launcher"
-    ]
-  ],
-  "persist": "CanhCutTeam.exe.WebView2",
-  "checkver": {
-    "script": [
-      "$url = 'https://pub-cc298c2ae5d24b51864a139a31b6a3b3.r2.dev/Launcher/CanhCutTeam_Portable.zip'",
-      "$zip = cache_path 'canhcutteam-launcher' 'unknown' $url",
-      "Invoke-WebRequest $url -OutFile $zip",
-      "$tmp = \"$env:TEMP\\scoop_$(New-Guid)\"",
-      "Expand-Archive $zip $tmp -Force",
-      "$ver = (Get-Item \"$tmp\\CanhCutTeam_Portable\\CanhCutTeam.exe\").VersionInfo.FileVersion",
-      "Remove-Item $tmp -Recurse -Force",
-      "Move-Item $zip (cache_path 'canhcutteam-launcher' $ver $url) -Force",
-      "$ver"
-    ],
-    "regex": "([\\d.]+)"
-  },
-  "autoupdate": {
+    "version": "7.0.10",
+    "description": "Manage Vietnamese localization patches for games",
+    "homepage": "https://facebook.com/CanhCutTeamVN",
+    "license": "Freeware",
     "architecture": {
-      "64bit": {
-        "url": "https://pub-cc298c2ae5d24b51864a139a31b6a3b3.r2.dev/Launcher/CanhCutTeam_Portable.zip"
-      }
+        "64bit": {
+            "url": "https://pub-cc298c2ae5d24b51864a139a31b6a3b3.r2.dev/Launcher/CanhCutTeam_Portable.zip",
+            "hash": "04ddae57853f40e35f2beb10fbe36c6f16f672c4588420990d9fddbfd45522c3"
+        }
+    },
+    "extract_dir": "CanhCutTeam_Portable",
+    "shortcuts": [
+        [
+            "CanhCutTeam.exe",
+            "CanhCutTeam Launcher"
+        ]
+    ],
+    "persist": "CanhCutTeam.exe.WebView2",
+    "checkver": {
+        "script": [
+            "$url = 'https://pub-cc298c2ae5d24b51864a139a31b6a3b3.r2.dev/Launcher/CanhCutTeam_Portable.zip'",
+            "$zip = cache_path 'canhcutteam-launcher' 'unknown' $url",
+            "Invoke-WebRequest $url -OutFile $zip",
+            "$tmp = \"$env:TEMP\\scoop_$(New-Guid)\"",
+            "Expand-Archive $zip $tmp -Force",
+            "$ver = (Get-Item \"$tmp\\CanhCutTeam_Portable\\CanhCutTeam.exe\").VersionInfo.FileVersion",
+            "Remove-Item $tmp -Recurse -Force",
+            "Move-Item $zip (cache_path 'canhcutteam-launcher' $ver $url) -Force",
+            "$ver"
+        ],
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://pub-cc298c2ae5d24b51864a139a31b6a3b3.r2.dev/Launcher/CanhCutTeam_Portable.zip"
+            }
+        }
     }
-  }
 }

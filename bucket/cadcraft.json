@@ -1,8 +1,9 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
     "version": "0.20.1",
-    "description": "Computer-aided design and drafting; an open-source, clean-room reimplementation of Autodesk AutoCAD, rebuilt in pure Rust",
+    "description": "Open-source AutoCAD-style CAD app in pure Rust",
     "homepage": "https://github.com/storytold/cadcraft",
-    "license": "MIT|Apache-2.0",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/storytold/cadcraft/releases/download/v0.20.1/cadcraft-0.20.1-windows-x64-portable.zip",
@@ -22,7 +23,7 @@
     "shortcuts": [
         [
             "cadcraft.exe",
-            "CADCraft"
+            "Cadcraft"
         ]
     ],
     "checkver": "github",
@@ -36,9 +37,6 @@
                 "url": "https://github.com/storytold/cadcraft/releases/download/v$version/cadcraft-$version-windows-arm64-portable.zip",
                 "extract_dir": "cadcraft-$version-windows-arm64-portable"
             }
-        },
-        "hash": {
-            "url": "$baseurl/SHA256SUMS.txt"
         }
     }
 }
