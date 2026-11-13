@@ -1,12 +1,12 @@
 {
-    "version": "0.3.34",
-    "description": "Native Git client with AI change auditing and commit intelligence.",
-    "homepage": "https://carlopenlab.github.io/Gloss/",
+    "version": "0.3.35",
+    "description": "Git client with AI-assisted commits and change audits",
+    "homepage": "https://carlopenlab.github.io/Gloss",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/CarlOpenLab/Gloss/releases/download/v0.3.34/gloss-0.3.34-windows-amd64-portable.zip",
-            "hash": "c571dac285cbf2fbfcfab7bda834b1b99367be29eb7b3f7e87bbff01818a89ff"
+            "url": "https://github.com/CarlOpenLab/Gloss/releases/download/v0.3.35/gloss-0.3.35-windows-amd64-portable.zip",
+            "hash": "e91a4eac7a2673d298551132a6a0c4d5d5dc3c616c09153253789905a9aee4dd"
         }
     },
     "bin": "Gloss.exe",
@@ -16,6 +16,8 @@
             "Gloss"
         ]
     ],
+    "notes": "Settings (LLM providers, API keys) and repository state are stored in %APPDATA%\\dev.carl.gloss, outside the Scoop directory, and are kept across updates.",
+    "pre_install": "Remove-Item \"$dir\\Gloss Setup *.exe\", \"$dir\\gloss-*-windows-amd64.tar.gz\", \"$dir\\*.delta\", \"$dir\\update-windows-amd64.json\" -Force -ErrorAction SilentlyContinue",
     "checkver": {
         "github": "https://github.com/CarlOpenLab/Gloss"
     },
