@@ -15,10 +15,7 @@
             "extract_dir": "gridcraft-0.19.1-windows-arm64-portable"
         }
     },
-    "bin": [
-        "gridcraft.exe",
-        "gridcraft-cli.exe"
-    ],
+    "bin": "gridcraft-cli.exe",
     "shortcuts": [
         [
             "gridcraft.exe",

@@ -1,20 +1,52 @@
 {
-    "version": "0.4.585",
-    "description": "Elegant AI Provider Orchestration",
-    "homepage": "https://alma.now/",
-    "license": "Proprietary",
+    "version": "0.4.586",
+    "description": "GUI client for herdr: Claude Code, Codex and pi agent sessions as clean chats.",
+    "homepage": "https://alma.now",
+    "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yetone/alma-releases/releases/download/v0.4.585/alma-0.4.585-win-x64.exe#/dl.7z",
-            "hash": "40ed6898df3a5facd867943d1b67350575f2c7b6db28dcee062d75ce836b3e6d",
-            "installer": {
-                "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
-                ]
-            }
+            "url": "https://github.com/yetone/alma-releases/releases/download/v0.4.586/alma-0.4.586-win-x64.exe#/dl.7z",
+            "hash": "sha512:0c7a524ad08c08f0461720c19af6c48213649823cb27357fb1aa18dd54d3da95cd3ed96a8d1e6238236e38b990887fe08067d1299c46f4c5f2b71f855aa343ca",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse"
+            ]
         }
     },
+    "persist_external": [
+        [
+            "$env:AppData\\alma",
+            "data",
+            "directory"
+        ],
+        [
+            "$env:USERPROFILE\\.config\\alma",
+            "config",
+            "directory"
+        ],
+        [
+            "$env:USERPROFILE\\.alma",
+            "activity",
+            "directory"
+        ],
+        [
+            "$env:USERPROFILE\\.cache\\alma",
+            "cache",
+            "directory"
+        ]
+    ],
+    "post_install": [
+        "$helper = (Resolve-Path \"$bucketsdir/*/scripts/persist-external.ps1\" -ErrorAction SilentlyContinue | Select-Object -First 1).Path",
+        "if (!$helper) { throw 'persist_external: persist-external.ps1 not found under scripts/ in any bucket' }",
+        ". $helper",
+        "Invoke-PersistExternalInstall"
+    ],
+    "pre_uninstall": [
+        "$helper = (Resolve-Path \"$bucketsdir/*/scripts/persist-external.ps1\" -ErrorAction SilentlyContinue | Select-Object -First 1).Path",
+        "if (!$helper) { throw 'persist_external: persist-external.ps1 not found under scripts/ in any bucket' }",
+        ". $helper",
+        "Invoke-PersistExternalUninstall"
+    ],
     "shortcuts": [
         [
             "Alma.exe",
@@ -29,6 +61,10 @@
             "64bit": {
                 "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "$basename\\s+sha512:\\s+$base64"
         }
     }
 }
