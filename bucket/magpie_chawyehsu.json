@@ -1,35 +1,35 @@
 {
-    "version": "0.1.3961",
-    "description": "Unified model, provider, and gateway manager for AI coding agents.",
-    "homepage": "https://usemagpie.ai",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.3961/magpie-windows-amd64.exe#/magpie.exe",
-            "hash": "56c8e15eaf0ce8a47bcd5f1256ade30b4407811a24e772a22c6a2049777db51b"
-        },
-        "arm64": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.3961/magpie-windows-arm64.exe#/magpie.exe",
-            "hash": "128835dcedf50a2e329e3e6867c6632ef43bc5c12646f60aa6236ccf64111644"
-        }
+  "version": "0.1.3961",
+  "description": "Unified model, provider, and gateway manager for AI coding agents.",
+  "homepage": "https://usemagpie.ai",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.3961/magpie-windows-amd64.exe#/magpie.exe",
+      "hash": "56c8e15eaf0ce8a47bcd5f1256ade30b4407811a24e772a22c6a2049777db51b"
     },
-    "shortcuts": [
-        [
-            "magpie.exe",
-            "magpie"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/yetone/magpie-releases"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-amd64.exe#/magpie.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-arm64.exe#/magpie.exe"
-            }
-        }
+    "arm64": {
+      "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.3961/magpie-windows-arm64.exe#/magpie.exe",
+      "hash": "128835dcedf50a2e329e3e6867c6632ef43bc5c12646f60aa6236ccf64111644"
     }
+  },
+  "shortcuts": [
+    [
+      "magpie.exe",
+      "magpie"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/yetone/magpie-releases"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-amd64.exe#/magpie.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/yetone/magpie-releases/releases/download/v$version/magpie-windows-arm64.exe#/magpie.exe"
+      }
+    }
+  }
 }
