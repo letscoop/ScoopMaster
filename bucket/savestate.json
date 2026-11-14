@@ -5,9 +5,9 @@
     "autoupdate": {
         "url": "https://github.com/Matteo842/SaveState/releases/download/v$version/SaveState_v$version_Win.zip"
     },
-    "version": "3.2",
-    "url": "https://github.com/Matteo842/SaveState/releases/download/v3.2/SaveState_v3.2_Win.zip",
-    "hash": "906accf4cd86d886750e2ffbf3175f44eeb2d7ff52d8b5babf92ff0694c57467",
+    "version": "3.2.1",
+    "url": "https://github.com/Matteo842/SaveState/releases/download/v3.2.1/SaveState_v3.2.1_Win.zip",
+    "hash": "359bb46d7dd6447359687b1047bec4e7dd809dac32976b86e2dbb2757f196140",
     "shortcuts": [
         [
             "SaveState.exe",
