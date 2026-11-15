@@ -1,28 +1,41 @@
 {
     "version": "24.11",
-    "description": "A brand-new shell connection hub and remote file manager",
+    "description": "A connection hub and remote file manager to access your entire server infrastructure from your local desktop",
+    "homepage": "https://xpipe.io/",
     "license": "Apache-2.0",
-    "homepage": "https://github.com/xpipe-io/xpipe",
-    "url": "https://github.com/xpipe-io/xpipe/releases/download/24.11/xpipe-portable-windows-x86_64.zip",
-    "hash": "23ad2f8ca6d675d7ae5ceaa40d7dcf64ce35fc7041a8a9a7991a846f7d5833d5",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xpipe-io/xpipe/releases/download/24.11/xpipe-portable-windows-x86_64.zip",
+            "hash": "23ad2f8ca6d675d7ae5ceaa40d7dcf64ce35fc7041a8a9a7991a846f7d5833d5"
+        },
+        "arm64": {
+            "url": "https://github.com/xpipe-io/xpipe/releases/download/24.11/xpipe-portable-windows-arm64.zip",
+            "hash": "7b6accc9bbf2962abb8890ffe3ce2055935e4553102547053c925a5af7d7ba5b"
+        }
+    },
     "extract_dir": "xpipe-24.11",
-    "bin": [
-        [
-            "cli\\bin\\xpipe.exe",
-            "xpipe",
-            "open"
-        ]
-    ],
+    "bin": "xpipe.exe",
     "shortcuts": [
         [
-            "cli\\bin\\xpipe.exe",
-            "XPipe",
-            "open"
+            "xpiped.exe",
+            "XPipe"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/xpipe-io/xpipe"
+    },
     "autoupdate": {
-        "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-x86_64.zip",
-        "extract_dir": "xpipe-$version"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/xpipe-io/xpipe/releases/download/$version/xpipe-portable-windows-arm64.zip"
+            }
+        },
+        "extract_dir": "xpipe-$version",
+        "hash": {
+            "url": "$baseurl/sha256sums.txt"
+        }
     }
 }

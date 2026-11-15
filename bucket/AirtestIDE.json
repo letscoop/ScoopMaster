@@ -1,19 +1,17 @@
 {
+    "homepage": "https://airtest.netease.com",
+    "description": "Cross platform UI automation IDE",
     "version": "1.2.17",
-    "description": "跨平台的UI自动化编辑器",
-    "homepage": "https://airtest.netease.com/index.html",
-    "license": "网易公司版权所有",
+    "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://airtestproject.s3.netease.com/downloads/AirtestIDE/win64/AirtestIDE-win-1.2.17.zip",
-            "hash": "cf750d0112a165db8d7bec4a4647a86b8cd1660305e740685553d03ad0092f95",
-            "extract_dir": "AirtestIDE"
+            "hash": "cf750d0112a165db8d7bec4a4647a86b8cd1660305e740685553d03ad0092f95"
         }
     },
-    "bin": "AirtestIDE.exe",
     "checkver": {
         "url": "https://airtest.netease.com/changelog.html",
-        "regex": "v([\\d.]+)</h1>"
+        "regex": "<a data-offset=\"100\" class=\"nav-link\" href=[^>]*>([^<]*)</a>"
     },
     "autoupdate": {
         "architecture": {
@@ -21,5 +19,15 @@
                 "url": "https://airtestproject.s3.netease.com/downloads/AirtestIDE/win64/AirtestIDE-win-$version.zip"
             }
         }
-    }
+    },
+    "shortcuts": [
+        [
+            "AirtestIDE/AirtestIDE.exe",
+            "AirtestIDE"
+        ],
+        [
+            "AirtestIDE/兼容模式启动.bat",
+            "AirtestIDE-兼容模式启动"
+        ]
+    ]
 }
