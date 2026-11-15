@@ -1,55 +1,55 @@
 {
-  "version": "177",
-  "description": "Experimental Nintendo Switch and Switch 2 emulator",
-  "homepage": "https://lichiiemulator.app/",
-  "license": {
-    "identifier": "GPL-3.0",
-    "url": "https://github.com/zortos293/Lichii/blob/nx2/LICENSE.txt"
-  },
-  "notes": [
-    "Lichii requires legally obtained game files, keys, and firmware to function. These are not included.",
-    "Lichii is experimental. Back up your saves before testing builds."
-  ],
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/zortos293/Lichii/releases/download/build-177/lichii-windows-x86_64.zip",
-      "hash": "e6ac8c09ddd00cb64e539f2a85f9f9f32d579c772b3619aed0d4d3910a93e833"
-    }
-  },
-  "pre_install": [
-    "if (!(Test-Path \"$persist_dir\")) {",
-    "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
-    "   New-item \"$persist_dir\\user\" -ItemType Directory | Out-Null",
-    "   if (Test-Path \"$env:APPDATA\\lichii\") {",
-    "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
-    "       Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse",
-    "       Remove-Item -Path \"$env:APPDATA\\lichii\" -Recurse",
-    "   }",
-    "}"
-  ],
-  "bin": "eden-cli.exe",
-  "shortcuts": [
-    [
-      "lichii.exe",
-      "Nintendo Switch 2 [nsw2][lichii]"
-    ]
-  ],
-  "persist": "user",
-  "checkver": {
-    "url": "https://api.github.com/repos/zortos293/Lichii/releases?per_page=20",
-    "jsonpath": "$[0].tag_name",
-    "regex": "build-([\\d]+)"
-  },
-  "autoupdate": {
+    "version": "228",
+    "description": "Experimental Nintendo Switch and Switch 2 emulator",
+    "homepage": "https://lichiiemulator.app/",
+    "license": {
+        "identifier": "GPL-3.0",
+        "url": "https://github.com/zortos293/Lichii/blob/nx2/LICENSE.txt"
+    },
+    "notes": [
+        "Lichii requires legally obtained game files, keys, and firmware to function. These are not included.",
+        "Lichii is experimental. Back up your saves before testing builds."
+    ],
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/zortos293/Lichii/releases/download/build-$version/lichii-windows-x86_64.zip",
-        "hash": {
-          "url": "https://api.github.com/repos/zortos293/Lichii/releases/tags/build-$version",
-          "jsonpath": "$.assets[?(@.name == '$basename')].digest",
-          "mode": "json"
+        "64bit": {
+            "url": "https://github.com/zortos293/Lichii/releases/download/build-228/lichii-windows-x86_64.zip",
+            "hash": "156b48bbfd4bba2dfb7291c63413a682b2b07ccdc5f44e815f4c4098228e2c4a"
         }
-      }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\")) {",
+        "   New-item \"$persist_dir\" -ItemType Directory | Out-Null",
+        "   New-item \"$persist_dir\\user\" -ItemType Directory | Out-Null",
+        "   if (Test-Path \"$env:APPDATA\\lichii\") {",
+        "       Write-host \"Migrating AppData...\" -ForegroundColor yellow",
+        "       Copy-Item -Path \"$env:APPDATA\\lichii\\*\" -Destination \"$persist_dir\\user\" -Recurse",
+        "       Remove-Item -Path \"$env:APPDATA\\lichii\" -Recurse",
+        "   }",
+        "}"
+    ],
+    "bin": "eden-cli.exe",
+    "shortcuts": [
+        [
+            "lichii.exe",
+            "Nintendo Switch 2 [nsw2][lichii]"
+        ]
+    ],
+    "persist": "user",
+    "checkver": {
+        "url": "https://api.github.com/repos/zortos293/Lichii/releases?per_page=20",
+        "jsonpath": "$[0].tag_name",
+        "regex": "build-([\\d]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/zortos293/Lichii/releases/download/build-$version/lichii-windows-x86_64.zip",
+                "hash": {
+                    "url": "https://api.github.com/repos/zortos293/Lichii/releases/tags/build-$version",
+                    "jsonpath": "$.assets[?(@.name == '$basename')].digest",
+                    "mode": "json"
+                }
+            }
+        }
     }
-  }
 }
