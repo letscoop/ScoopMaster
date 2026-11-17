@@ -17,7 +17,11 @@
             "hash": "301e7bfe41d7fa15bf75da189302eb797986a77629ea4e41b172431beef2744c"
         }
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir\\rufus.ini\")) { New-Item \"$dir\\rufus.ini\" | Out-Null }",
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\rufus.ini\")) {",
+        "    Set-Content \"$dir\\rufus.ini\" 'UpdateCheckInterval = -1' -Encoding Ascii",
+        "}"
+    ],
     "bin": "rufus.exe",
     "shortcuts": [
         [
@@ -26,8 +30,8 @@
         ]
     ],
     "persist": [
-        "rufus.ini",
-        "Rufus"
+        "Rufus",
+        "rufus.ini"
     ],
     "checkver": {
         "github": "https://github.com/pbatard/rufus"
