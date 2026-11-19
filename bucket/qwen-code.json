@@ -1,27 +1,28 @@
 {
     "version": "0.28.0",
-    "description": "Open-source AI coding agent that lives in your terminal, powered by Qwen models.",
-    "homepage": "https://qwenlm.github.io/qwen-code-docs/",
+    "description": "An open-source AI coding agent that lives in your terminal.",
+    "homepage": "https://qwen.ai/qwencode",
     "license": "Apache-2.0",
-    "notes": "Run 'qwen' to start. This build bundles its own Node.js runtime, so no 'nodejs' dependency is needed.",
-    "url": "https://github.com/QwenLM/qwen-code/releases/download/v0.28.0/qwen-code-win-x64.zip",
-    "hash": "9a758331884870e1d6073cc24f5a2545543127df0b6fb91db6a2e8a97bfd25ed",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/QwenLM/qwen-code/releases/download/v0.28.0/qwen-code-win-x64.zip",
+            "hash": "9a758331884870e1d6073cc24f5a2545543127df0b6fb91db6a2e8a97bfd25ed"
+        }
+    },
     "extract_dir": "qwen-code",
-    "bin": [
-        [
-            "bin\\qwen.cmd",
-            "qwen"
-        ]
-    ],
+    "bin": "bin\\qwen.cmd",
     "checkver": {
-        "script": [
-            "$ErrorActionPreference = 'Stop'",
-            "$releases = Invoke-RestMethod 'https://api.github.com/repos/QwenLM/qwen-code/releases?per_page=30'",
-            "($releases | Where-Object { !$_.prerelease -and $_.tag_name -match '^v[0-9.]+$' } | Select-Object -First 1).tag_name"
-        ],
-        "regex": "^v([\\d.]+)$"
+        "url": "https://api.github.com/repos/QwenLM/qwen-code/releases",
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
     },
     "autoupdate": {
-        "url": "https://github.com/QwenLM/qwen-code/releases/download/v$version/qwen-code-win-x64.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/QwenLM/qwen-code/releases/download/v$version/qwen-code-win-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/QwenLM/qwen-code/releases/download/v$version/SHA256SUMS"
+        }
     }
 }

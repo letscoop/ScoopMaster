@@ -1,35 +1,33 @@
 {
-    "version": "3.3.0-beta.5",
-    "description": "Supabase CLI (beta channel).",
-    "homepage": "https://supabase.com",
+    "version": "3.3.0-beta.7",
+    "description": "Supabase CLI",
+    "homepage": "https://supabase.com/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/supabase/cli/releases/download/v3.3.0-beta.5/supabase_3.3.0-beta.5_windows_amd64.zip",
-            "hash": "7fdee2a6d752a7c920e0d51809506b769680decb23509af3bd5eeefdfb8327b2"
+            "url": "https://github.com/supabase/cli/releases/download/v3.3.0-beta.7/supabase_windows_amd64.tar.gz",
+            "hash": "4e0e2cf5f226d574490aa546d0d8f56c15511720463014a63342a7ba4f047414"
         },
         "arm64": {
-            "url": "https://github.com/supabase/cli/releases/download/v3.3.0-beta.5/supabase_3.3.0-beta.5_windows_arm64.zip",
-            "hash": "41b7d22af27cd67edbe939103285cbf8b1f13ffe2f3577cc944cb226b3a05a17"
+            "url": "https://github.com/supabase/cli/releases/download/v3.3.0-beta.7/supabase_windows_arm64.tar.gz",
+            "hash": "f6fead8d6fcc470a3fe072faa6c71faae13779305102509cc361308fb8d1651d"
         }
     },
     "bin": "supabase.exe",
     "checkver": {
-        "github": "https://api.github.com/repos/supabase/cli/releases",
-        "jsonpath": "$[*].tag_name",
-        "regex": "\"v([\\d.]+-beta\\.\\d+)\""
+        "github": "https://github.com/supabase/cli"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_$version_windows_amd64.zip"
+                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_windows_amd64.tar.gz"
             },
             "arm64": {
-                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_$version_windows_arm64.zip"
+                "url": "https://github.com/supabase/cli/releases/download/v$version/supabase_windows_arm64.tar.gz"
             }
         },
         "hash": {
-            "url": "$baseurl/checksums.txt"
+            "url": "$baseurl/supabase_$version_checksums.txt"
         }
     }
 }

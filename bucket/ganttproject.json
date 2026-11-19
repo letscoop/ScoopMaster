@@ -1,31 +1,23 @@
 {
     "version": "3.3.3323",
-    "license": "GPL-3.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-3.3.3323/ganttproject-3.3.3323.zip",
-            "hash": "fa3910fd502bf8b2864cbd2bba8befa3b90a10970e1cade6f81feb1672033626"
-        }
-    },
-    "homepage": "https://github.com/bardsoftware/ganttproject",
-    "description": "Free project scheduling and management app for Windows, OSX and Linux.",
-    "bin": "ganttproject.exe",
+    "description": "Desktop project planning tool for scheduling tasks and visualizing timelines with Gantt charts.",
+    "homepage": "https://www.ganttproject.biz/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-3.3.3323/ganttproject-3.3.3323.zip",
+    "hash": "fa3910fd502bf8b2864cbd2bba8befa3b90a10970e1cade6f81feb1672033626",
     "shortcuts": [
         [
-            "ganttproject.exe",
+            "ganttproject.bat",
             "ganttproject"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/bardsoftware/ganttproject",
-        "regex": "/releases/tag/ganttproject-(?<version>[\\d.\\w.-]+)"
+        "github": "https://api.github.com/repos/bardsoftware/ganttproject/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "/releases/download/ganttproject-(?<tag>\\d+(?:\\.\\d+)+)/ganttproject-(?<version>\\d+(?:\\.\\d+)+)\\.zip"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-$matchVersion/ganttproject-$matchVersion.zip",
-                "extract_dir": "ganttproject-$matchVersion"
-            }
-        }
-    }
+        "url": "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-$matchTag/ganttproject-$version.zip"
+    },
+    "notes": "Install a Java 17 or newer runtime with JavaFX, such as BellSoft Liberica Full JRE, and configure JAVA_HOME or PATH before launching GanttProject."
 }
