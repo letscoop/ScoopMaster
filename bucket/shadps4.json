@@ -1,5 +1,5 @@
 {
-    "version": "20261119105453-36a6072",
+    "version": "20261119133638-1c35b9b",
     "description": "PlayStation 4 emulator",
     "homepage": "https://shadps4.net/",
     "license": {
@@ -15,8 +15,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/shadps4-emu/shadps4-qtlauncher/releases/download/shadPS4QtLauncher-2026-11-19-36a60723a12d13633f673a0347daa5a816649b89/shadPS4QtLauncher-win64-qt-2026-11-19-36a6072.zip",
-            "hash": "64ffa7b3346b9181ccbb8abc0a61cd823ad918ecf403b04be61787bc2bd70115"
+            "url": "https://github.com/shadps4-emu/shadps4-qtlauncher/releases/download/shadPS4QtLauncher-2026-11-19-1c35b9b147a8e67474fba6500bdfc309bef6f8e1/shadPS4QtLauncher-win64-qt-2026-11-19-1c35b9b.zip",
+            "hash": "937b71b9643a554de8411bd424fc14bdf52624f7b63d971412aa801dec9aa4ec"
         }
     },
     "pre_install": [
