@@ -1,10 +1,14 @@
 {
     "version": "1.0.8",
-    "description": "Portable taskbar and system-tray battery monitor for wireless mice, headsets, keyboards and controllers",
+    "description": "Windows system tray app showing battery levels of wireless mice, keyboards, headsets and controllers.",
     "homepage": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
     "license": "GPL-3.0-or-later",
-    "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor/releases/download/v1.0.8/WirelessBattery-1.0.8-portable.zip",
-    "hash": "86e6de44d00f7d9846797a48fa74af73938bb4441c48a8163eebcdfebf2ada1c",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor/releases/download/v1.0.8/WirelessBattery-1.0.8-portable.zip",
+            "hash": "86e6de44d00f7d9846797a48fa74af73938bb4441c48a8163eebcdfebf2ada1c"
+        }
+    },
     "bin": "WirelessBattery.exe",
     "shortcuts": [
         [
@@ -12,16 +16,12 @@
             "Wireless Battery"
         ]
     ],
-    "checkver": {
-        "url": "https://api.github.com/repos/krisgfx9/Wireless-Device-Battery-Monitor/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "^v(?<version>[\\d.]+)$"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor/releases/download/v$version/WirelessBattery-$version-portable.zip"
-    },
-    "notes": [
-        "This manifest installs the vendor-provided portable ZIP. It does not run the Inno Setup installer.",
-        "Preferences are stored in HKCU\\Software\\WirelessBattery. The Start with Windows option writes an entry under HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run."
-    ]
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor/releases/download/v$version/WirelessBattery-$version-portable.zip"
+            }
+        }
+    }
 }
