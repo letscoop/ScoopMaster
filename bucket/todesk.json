@@ -1,17 +1,16 @@
 {
+    "homepage": "https://www.todesk.com/",
+    "description": "An unlimited speed multifunctional remote control software",
     "version": "5.3.4.0",
-    "description": "ToDesk",
-    "homepage": "https://www.todesk.com",
-    "license": "Freeware",
+    "license": "Proprietary",
     "url": "https://dl.todesk.com/windows/ToDesk_Setup.exe#/dl.7z",
-    "hash": "95d43fc9d7d48d408a82c91424869034a5806fe943f4b1ee713639b0b91ad2e0",
+    "hash": "906f6649586fb352634d867bc5d9fe8a9ef0f7e6f03dec8da4888781741bcac5",
     "pre_install": [
-        "Expand-7zipArchive \"$dir\\app64.7z\" \"$dir\"",
-        "Remove-Item \"$dir\\app32.7z\",\"$dir\\app64.7z\",\"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\",\"$dir\\CrashReport.exe\" -Force -Recurse",
         "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
         "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
         "}"
     ],
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\" -Force -Recurse",
     "shortcuts": [
         [
             "ToDesk.exe",
