@@ -1,10 +1,36 @@
 {
+    "version": "3.3.4",
+    "description": "Cross-Platform Cipboard Syncing Solution",
     "homepage": "https://github.com/Jeric-X/SyncClipboard",
-    "description": "跨平台剪贴板同步方案，支持文字、图片和文件。",
-    "version": "3.3.3",
     "license": "MIT",
-    "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v3.3.3/SyncClipboard_win_x64_portable.zip",
-    "hash": "2f60d3dd0121ecaf593e874d4618718d6b2eaa1ce15a77c08ec74fbd526fc930",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v3.3.4/SyncClipboard_win_x64_portable.zip",
+            "hash": "231732e8ac116924e03121524df8c69eebe74336c003e8beb1faf30ae1bab491"
+        },
+        "arm64": {
+            "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v3.3.4/SyncClipboard_win_arm64_portable.zip",
+            "hash": "e14cad20d964a24f153277ee5bb99e58ac6f622c40d50204b712b71407ef6917"
+        }
+    },
+    "installer": {
+        "script": [
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "New-PersistDirectory \"$env:APPDATA\\SyncClipboard\" \"$persist_dir\\AppData\" -Migrate",
+            "if (!(Test-Path \"$persist_dir\\AppData\\SyncClipboard.json\") -or !(Get-Item \"$persist_dir\\AppData\\SyncClipboard.json\").Length) {",
+            "    New-Item \"$persist_dir\\AppData\\SyncClipboard.json\" -ItemType File -Force -ErrorAction SilentlyContinue | Out-Null",
+            "    Set-Content -Path \"$persist_dir\\AppData\\SyncClipboard.json\" -Value '{\"Program\":{\"CheckUpdateOnStartUp\":false}}'",
+            "}"
+        ]
+    },
+    "pre_uninstall": [
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App",
+        "Remove-Junction \"$env:APPDATA\\SyncClipboard\"",
+        "Remove-Item \"$([Environment]::GetFolderPath('programs'))\\SyncClipboard.lnk\" -Force -ErrorAction SilentlyContinue | Out-Null"
+    ],
+    "bin": "SyncClipboard.exe",
     "shortcuts": [
         [
             "SyncClipboard.exe",
@@ -13,6 +39,13 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v$version/SyncClipboard_win_x64_portable.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v$version/SyncClipboard_win_x64_portable.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Jeric-X/SyncClipboard/releases/download/v$version/SyncClipboard_win_arm64_portable.zip"
+            }
+        }
     }
 }
