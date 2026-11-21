@@ -1,35 +1,19 @@
 {
-    "version": "1.19.9",
-    "description": "A network debugging and rule-based traffic splitting client powered by the Mihomo",
     "homepage": "https://github.com/appshubcc/Bettbox",
+    "description": "Another Better Mihomo Client",
+    "version": "1.19.9",
     "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.19.9/Bettbox-1.19.9-windows-amd64-setup.exe",
-            "hash": "c58b73e9312b0e8b08be3b879a5b287cc2a362a04d0e7b88606073f1724771a2"
-        },
-        "arm64": {
-            "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.19.9/Bettbox-1.19.9-windows-arm64-setup.exe",
-            "hash": "9ab8ddcccf188e015bcee29ef2ef20a0d1a31b3571584b3743ac0d3b4a2928ea"
-        }
-    },
-    "innosetup": true,
+    "url": "https://github.com/appshubcc/Bettbox/releases/download/v1.19.9/Bettbox-1.19.9-windows-amd64-compatible-portable.zip",
+    "hash": "cde5c46f1d6fe44cfff8b46abd22cd054edf2d95376242a72841a2ab6e8a0ae8",
     "shortcuts": [
         [
             "Bettbox.exe",
             "Bettbox"
         ]
     ],
-    "pre_uninstall": "if (Get-Service -Name 'BettboxHelperService' -ErrorAction SilentlyContinue | Where-Object { $_.Status -eq 'Running' }) { info \"If file locks prevent uninstallation, run 'sudo sc stop BettboxHelperService' and 'sudo sc delete BettboxHelperService' manually.\" }",
+    "persist": "portable",
     "checkver": "github",
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-amd64-setup.exe"
-            },
-            "arm64": {
-                "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-arm64-setup.exe"
-            }
-        }
+        "url": "https://github.com/appshubcc/Bettbox/releases/download/v$version/Bettbox-$version-windows-amd64-compatible-portable.zip"
     }
 }

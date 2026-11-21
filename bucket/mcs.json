@@ -1,11 +1,11 @@
 {
-    "version": "0.11.2",
+    "version": "0.11.4",
     "description": "Maven Central Search",
     "homepage": "https://maarten.mulders.it/projects/mcs/",
     "license": "MIT",
-    "url": "https://github.com/mthmulders/mcs/releases/download/v0.11.2/mcs-0.11.2-windows-x86_64.zip",
-    "hash": "sha256:7341cc604e13c3b1836997ab37accf6d89bc59c20eae5103736672637df404b3",
-    "extract_dir": "mcs-0.11.2-windows-x86_64",
+    "url": "https://github.com/mthmulders/mcs/releases/download/v0.11.4/mcs-0.11.4-windows-x86_64.zip",
+    "hash": "sha256:5364480fcc299c411e34aa1aa0ef2e60dbb8242c3d75cbf7c05e06a55b38654a",
+    "extract_dir": "mcs-0.11.4-windows-x86_64",
     "env_add_path": "bin",
     "checkver": {
         "url": "https://github.com/mthmulders/mcs/releases/latest",
