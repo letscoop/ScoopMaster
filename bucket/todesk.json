@@ -1,26 +1,19 @@
 {
-    "version": "5.3.4.0",
-    "description": "A unlimited speed multifunctional remote control software",
     "homepage": "https://www.todesk.com/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://www.todesk.com/licence.html"
-    },
-    "architecture": {
-        "64bit": {
-            "url": "https://update.todesk.com/irrigation/ToDesk_Setup_5.3.4.0_x64.exe#/dl.7z",
-            "hash": "edcfd2aa41678655395b040d74df9328640900dc85590087b0c4e4c9a356020d",
-            "installer": {
-                "script": "Expand-7ZipArchive \"$dir\\app64.7z\" \"$dir\" -Removal"
-            }
-        }
-    },
+    "description": "A unlimited speed multifunctional remote control software",
+    "version": "5.3.4.0",
+    "license": "Proprietary",
+    "url": "https://dl.todesk.com/irrigation/ToDesk_5.3.4.0.exe#/dl.7z",
+    "hash": "7522ae9b9cda4255a583fabcc98d4aa76bcea94bbb343f5e3cc9db344bd12f07",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\config.ini\")) {",
         "    New-Item -Force -Path \"$persist_dir\\config.ini\" -ItemType File -Value \"[ConfigInfo]`nautoStart=0\" | Out-Null",
         "}"
     ],
-    "post_install": "Remove-Item -Path \"$dir\\`$PLUGINSDIR\",\"$dir\\app*.7z\",\"$dir\\uninst.exe\" -Force -Recurse",
+    "installer": {
+        "script": "Expand-7zipArchive -Path \"$dir\\app64.7z\" -DestinationPath $dir"
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\uninst.exe\", \"$dir\\app32.7z\", \"$dir\\app64.7z\" -Force -Recurse",
     "shortcuts": [
         [
             "ToDesk.exe",
@@ -31,21 +24,11 @@
         "Logs",
         "config.ini"
     ],
-    "pre_uninstall": [
-        "if ($cmd -eq 'uninstall') {",
-        "    # -RunAs 在已经提权时不会再弹 UAC",
-        "    Invoke-ExternalCommand -FilePath sc.exe -ArgumentList @('delete', 'ToDesk_Service') -Quiet -RunAs",
-        "}"
-    ],
     "checkver": {
-        "url": "https://www.todesk.com/download.html",
-        "regex": "win_link_gray:\"[^\"]*ToDesk_([\\d.]+)\\.exe\""
+        "url": "https://update.todesk.com/windows/uplog.html",
+        "regex": ">([\\d.]+)</div>"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://update.todesk.com/irrigation/ToDesk_Setup_$version_x64.exe#/dl.7z"
-            }
-        }
+        "url": "https://dl.todesk.com/irrigation/ToDesk_$version.exe#/dl.7z"
     }
 }
