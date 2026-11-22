@@ -1,25 +1,26 @@
 {
     "version": "0.7.9",
-    "description": "Hermes Desktop - A desktop application",
+    "description": "Desktop Companion for Hermes Agent",
     "homepage": "https://github.com/fathah/hermes-desktop",
     "license": "MIT",
-    "url": "https://github.com/fathah/hermes-desktop/releases/download/v0.7.9/hermes-desktop-0.7.9-setup.exe",
-    "hash": "78f338fe7f340bc9ac24ffc0363e264dfcd48364c6be646feacec37f78744dfe",
-    "installer": {
-        "script": [
-            "Expand-7zipArchive -Path \"$dir\\$fname\" -Removal",
-            "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app-64.7z\" -DestinationPath $dir"
-        ]
+    "url": "https://github.com/fathah/hermes-desktop/releases/download/v0.7.9/hermes-desktop-0.7.9-portable.exe#/hermes-desktop.exe",
+    "hash": "f87a328da9a4e18511636078d8a183412615c07f69f162fdd11b809bb0ac717c",
+    "suggest": {
+        "cli": "geeks/hermes"
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\",\"$dir\\`$R0\"  -Force -Recurse",
     "shortcuts": [
         [
-            "hermes-agent.exe",
-            "Hermes Desktop"
+            "hermes-desktop.exe",
+            "Hermes"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/fathah/hermes-desktop/releases/download/v$version/hermes-desktop-$version-setup.exe"
+        "url": "https://github.com/fathah/hermes-desktop/releases/download/v$version/hermes-desktop-$version-portable.exe#/hermes-desktop.exe",
+        "hash": {
+            "mode": "extract",
+            "url": "https://github.com/fathah/hermes-desktop/releases/expanded_assets/v$version",
+            "regex": "hermes-desktop-$version-portable\\.exe.*?sha256:$sha256"
+        }
     }
 }
