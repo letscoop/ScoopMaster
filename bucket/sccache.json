@@ -16,11 +16,6 @@
         }
     },
     "bin": "sccache.exe",
-    "env_set": {
-        "SCCACHE_DIR": "$persist_dir\\cache",
-        "SCCACHE_CACHE_SIZE": "20G"
-    },
-    "persist": "cache",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
