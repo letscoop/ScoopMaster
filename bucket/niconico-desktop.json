@@ -1,0 +1,33 @@
+{
+    "version": "0.3.0",
+    "description": "Unofficial Windows browser for Niconico videos, tag search, and saved search results.",
+    "homepage": "https://github.com/sh4869221b/niconico-desktop",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sh4869221b/niconico-desktop/releases/download/v0.3.0/NiconicoDesktop-win-x64.zip",
+            "hash": "c6b160be9e29bd160fd819b7c3d50db52fe2c88d19f9f3a5dcc7089c0220dc76"
+        }
+    },
+    "bin": "NiconicoDesktop.exe",
+    "shortcuts": [
+        [
+            "NiconicoDesktop.exe",
+            "Niconico Desktop"
+        ]
+    ],
+    "notes": "Microsoft Edge WebView2 Runtime is required. Your Niconico settings and saved links are stored in %LOCALAPPDATA%\\NiconicoDesktop.",
+    "checkver": {
+        "github": "https://github.com/sh4869221b/niconico-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sh4869221b/niconico-desktop/releases/download/v$version/NiconicoDesktop-win-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/sh4869221b/niconico-desktop/releases/download/v$version/SHA256SUMS.txt"
+        }
+    }
+}

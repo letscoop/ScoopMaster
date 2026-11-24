@@ -1,16 +1,12 @@
 {
     "version": "0.23.3",
-    "description": "A small, fast code editor written in Go, drawing a native GPU UI with no webview and no Electron.",
+    "description": "A small, fast code editor written in Go, with a native GPU-drawn UI (no webview, no Electron)",
     "homepage": "https://github.com/sorrycc/Mayoi",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.23.3/mayoi-0.23.3-windows-amd64.tar.gz",
             "hash": "c6ec56af4c76e9befdf8059f9be2f777503ba16770d2aa81bf5afe1c078210bc"
-        },
-        "arm64": {
-            "url": "https://github.com/sorrycc/Mayoi/releases/download/v0.23.3/mayoi-0.23.3-windows-arm64.tar.gz",
-            "hash": "a6bcb856cc0fa1bc44f005d45aacc337fedc98ce0200e6ef2df03dfa6dfa5bca"
         }
     },
     "bin": "Mayoi.exe",
@@ -20,22 +16,23 @@
             "Mayoi"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/sorrycc/Mayoi"
+    },
+    "persist": [
+        [
+            "ghostty-vt.dll",
+            "ghostty-vt.dll"
+        ],
+        [
+            "icon.png",
+            "icon.png"
+        ]
+    ],
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/mayoi-$version-windows-amd64.tar.gz",
-                "hash": {
-                    "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/SHA256SUMS",
-                    "regex": "$sha256\\s+mayoi-$version-windows-amd64\\.tar\\.gz"
-                }
-            },
-            "arm64": {
-                "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/mayoi-$version-windows-arm64.tar.gz",
-                "hash": {
-                    "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/SHA256SUMS",
-                    "regex": "$sha256\\s+mayoi-$version-windows-arm64\\.tar\\.gz"
-                }
+                "url": "https://github.com/sorrycc/Mayoi/releases/download/v$version/mayoi-$version-windows-amd64.tar.gz"
             }
         }
     }
