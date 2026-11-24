@@ -1,25 +1,35 @@
 {
-    "version": "0.4.1088",
-    "description": "Elegant AI Provider Orchestration",
-    "homepage": "https://alma.now/",
+    "version": "0.4.1110",
+    "description": "A powerful harness of its own, and the best herdr GUI.",
+    "homepage": "https://alma.now",
     "license": "Proprietary",
+    "notes": "Please manually disable Alma's auto-update feature in the settings to prevent the updater from installing the program in unintended locations.",
+    "suggest": {
+        "herdr": "herdr"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yetone/alma-releases/releases/download/v0.4.1088/alma-0.4.1088-win-x64.exe#/dl.7z",
-            "hash": "7660f43da5e0a57a498a04910d3c3c595fa32560c9dfcaebdaa3ee1202817915",
-            "installer": {
-                "script": [
-                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
-                ]
-            }
+            "url": "https://github.com/yetone/alma-releases/releases/download/v0.4.1110/alma-0.4.1110-win-x64.exe#/dl.7z",
+            "hash": "sha512:3a934cc52bb2819db48c193ababfaa2bf54fd1e1e6f6b1ea91bd87e2310e0e8f1fd6e4c9a62179d22fb86653cd9c4d4cfcc142ca40328dcf78cc5f38f185a031"
         }
     },
+    "pre_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse",
+        "if (!(Test-Path \"$persist_dir\\ui-prefs.json\")) { New-Item \"$dir\\ui-prefs.json\" | Out-Null }"
+    ],
     "shortcuts": [
         [
             "Alma.exe",
             "Alma"
         ]
+    ],
+    "env_set": {
+        "ALMA_DATA_DIR": "$dir\\data",
+        "ALMA_NATIVE_PREFS": "$dir\\ui-prefs.json"
+    },
+    "persist": [
+        "data",
+        "ui-prefs.json"
     ],
     "checkver": {
         "github": "https://github.com/yetone/alma-releases"
@@ -29,6 +39,10 @@
             "64bit": {
                 "url": "https://github.com/yetone/alma-releases/releases/download/v$version/alma-$version-win-x64.exe#/dl.7z"
             }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "(?s)$basename.*?sha512: $base64"
         }
     }
 }

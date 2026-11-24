@@ -1,28 +1,24 @@
 {
     "version": "202611232203",
-    "description": "Data files from Loyalsoldier/v2ray-rules-dat, works for v2ray, Xray and v2rayA.",
+    "description": "Enhanced ruleset for V2Ray (unofficial)",
     "homepage": "https://github.com/Loyalsoldier/v2ray-rules-dat",
-    "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/raw/master/LICENSE"
-    },
-    "url": [
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202611232203/geoip.dat",
-        "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202611232203/geosite.dat"
-    ],
-    "hash": [
-        "d4ec4c5e5d5a38c1399964ea9fd8c94288426a3b31b483904b67819fc07f4466",
-        "2750ac87489925b493cdfe16a5478b332ecc7e748fc017f9f1a3c63ae30e25ba"
-    ],
-    "env_set": {
-        "V2RAYA_V2RAY_ASSETSDIR": "$dir"
+    "license": "GPL-3.0-only",
+    "depends": "v2ray",
+    "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/202611232203/rules.zip",
+    "hash": "bc39214b23958c535089b5648c93bd178aae3b45223690d35e6e68519ddf8177",
+    "installer": {
+        "script": [
+            "function LinkFile([String] $file, [String] $source = $file) {",
+            "    Write-Host \"Creating SymbolicLink for $file\"",
+            "    New-Item -Force -ItemType SymbolicLink -Path \"$(appdir v2ray $global)\\current\" -Name $file -Target \"$dir\\$source\" | Out-Null",
+            "}",
+            "LinkFile 'geoip.dat'",
+            "LinkFile 'geosite.dat'"
+        ]
     },
     "checkver": "github",
     "autoupdate": {
-        "url": [
-            "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/geoip.dat",
-            "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/geosite.dat"
-        ],
+        "url": "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/download/$version/rules.zip",
         "hash": {
             "url": "$url.sha256sum"
         }
