@@ -1,5 +1,5 @@
 {
-    "version": "2.35.0",
+    "version": "2.35.1",
     "description": "Agent orchestration platform developed by Google.",
     "homepage": "https://antigravity.google/product/antigravity-2",
     "license": {
@@ -21,12 +21,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/2.35.0-6394266482769920/windows-x64/Antigravity-x64.exe#/dl.7z",
-            "hash": "14289414612ae336933a6963880b3996ab34f47d7d6f4951e0eae1871694050e"
+            "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/2.35.1-4615540875067392/windows-x64/Antigravity-x64.exe#/dl.7z",
+            "hash": "sha512:9ef2324ee671b56f677e7286558eece41e457b19fee3d11b00ccc3fad6d554d5f01fd444b81e879b1fbca321f6fbb8d6f1069152c6e1cad1ef1908b15c0d6130"
         },
         "arm64": {
-            "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/2.35.0-6394266482769920/windows-arm/Antigravity-arm64.exe#/dl.7z",
-            "hash": "bc8a9b821f51e1dbcd93dab613a28cb3945751c12fc866f1a6523dc08bc4d391"
+            "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/2.35.1-4615540875067392/windows-arm/Antigravity-arm64.exe#/dl.7z",
+            "hash": "sha512:7f6e541e29792f71ab856b759e718e48624294492a298e1b7b2177759801c1007e0684bc62236879b9245feabafe7c179bef4dbec96f0bd8039f18734b4baa16"
         }
     },
     "installer": {
@@ -50,22 +50,24 @@
         ]
     ],
     "checkver": {
-        "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/releases",
-        "script": [
-            "$jsonData = $page | ConvertFrom-Json",
-            "$version = $jsonData[0].version",
-            "$execId = $jsonData[0].execution_id",
-            "Write-Output \"$version $execId\""
-        ],
-        "regex": "(?<version>[\\d.]+) (?<build>[\\d]+)"
+        "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/manifest/latest-x64-win.yml",
+        "regex": "antigravity-hub/(?<version>[\\d.]+)-(?<build>\\d+)/"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-x64/Antigravity-x64.exe#/dl.7z"
+                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-x64/Antigravity-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/manifest/latest-x64-win.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
             },
             "arm64": {
-                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-arm/Antigravity-arm64.exe#/dl.7z"
+                "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/$version-$matchBuild/windows-arm/Antigravity-arm64.exe#/dl.7z",
+                "hash": {
+                    "url": "https://antigravity-hub-auto-updater-974169037036.us-central1.run.app/manifest/latest-arm64-win.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
             }
         }
     }

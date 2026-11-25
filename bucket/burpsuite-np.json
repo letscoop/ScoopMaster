@@ -7,7 +7,7 @@
     "architecture": {
         "64bit": {
             "url": "https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.11.2&type=WindowsX64",
-            "hash": "886f405209f9ce695c2bcf692eff4a2474c4f00e3bd23035fd10d3d7d732491a"
+            "hash": "903279137018204b6d01235490c0f78d39e08613df70e4cedb39e7eda98431ca"
         }
     },
     "installer": {
