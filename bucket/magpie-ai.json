@@ -1,16 +1,21 @@
 {
-    "version": "0.1.4777",
+    "version": "0.1.4786",
     "description": "Unified model, provider, and gateway manager for AI coding agents.",
     "homepage": "https://usemagpie.ai",
     "license": "MIT",
+    "notes": [
+        "Scoop persists data since version 0.1.1067. You may need to move data by yourself.",
+        "Before: '$env:USERPROFILE\\.config\\magpie'",
+        "After : '$persist_dir\\data'"
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4777/magpie-windows-amd64.exe#/magpie.exe",
-            "hash": "d3d5b9cf0a48afc9c7e6b8f9c232d1cbe36129ef7d1fff671234ebbce8fe02e2"
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4786/magpie-windows-amd64.exe#/magpie.exe",
+            "hash": "15ca55c618e5a59e7d2e7c8eb3c239fc33f767b287be601ebd1efe12241918ba"
         },
         "arm64": {
-            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4777/magpie-windows-arm64.exe#/magpie.exe",
-            "hash": "9f5e78516a32a5fa979296504294248363ad84e3b22c657f03d36994c970cc48"
+            "url": "https://github.com/yetone/magpie-releases/releases/download/v0.1.4786/magpie-windows-arm64.exe#/magpie.exe",
+            "hash": "2fed110dc6236c16ba9e84ac13f7a2d217d49c3f9327da9d2e61506ceb047ff5"
         }
     },
     "pre_install": [

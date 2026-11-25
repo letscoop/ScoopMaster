@@ -1,29 +1,8 @@
 {
     "version": "1.35.8",
-    "description": "Minimal web browser with tab organization and built-in ad and tracker blocking.",
-    "homepage": "https://minbrowser.github.io/min",
+    "description": "A fast, minimal browser that protects your privacy",
+    "homepage": "https://minbrowser.org/",
     "license": "Apache-2.0",
-    "extract_dir": "Min-v1.35.8",
-    "shortcuts": [
-        [
-            "Min.exe",
-            "Min Browser"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/minbrowser/min"
-    },
-    "autoupdate": {
-        "extract_dir": "Min-v$version",
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/minbrowser/min/releases/download/v$version/Min-v$version-windows.zip"
-            },
-            "arm64": {
-                "url": "https://github.com/minbrowser/min/releases/download/v$version/Min-v$version-windows-arm64.zip"
-            }
-        }
-    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/minbrowser/min/releases/download/v1.35.8/Min-v1.35.8-windows.zip",
@@ -33,5 +12,27 @@
             "url": "https://github.com/minbrowser/min/releases/download/v1.35.8/Min-v1.35.8-windows-arm64.zip",
             "hash": "2a4baf370ddde32fd2941a77ed50e35a23a37de7cdab90f6296c8537719e131c"
         }
+    },
+    "extract_dir": "Min-v1.35.8",
+    "bin": "Min.exe",
+    "shortcuts": [
+        [
+            "Min.exe",
+            "Min"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/minbrowser/min"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/minbrowser/min/releases/download/v$version/Min-v$version-windows.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/minbrowser/min/releases/download/v$version/Min-v$version-windows-arm64.zip"
+            }
+        },
+        "extract_dir": "Min-v$version"
     }
 }

@@ -1,20 +1,16 @@
 {
-    "version": "1.6.1",
-    "description": "A free, open-source Windows desktop organizer with native-feeling WinUI 3 widgets.",
-    "homepage": "https://github.com/Tianyu199509/DeskBox",
-    "license": "GPL-3.0-only",
-    "notes": [
-        "DeskBox stores app data under %LocalAppData%\\DeskBox; managed storage may live on a non-system drive (e.g. D:\\DeskBox).",
-        "Scoop does not remove app data or managed storage on uninstall."
-    ],
+    "version": "1.6.2",
+    "description": "Free open-source Windows desktop organizer with native-feeling WinUI 3 widgets (file organizing, sticky notes, todos, weather, system monitoring, and more)",
+    "homepage": "https://deskbox.fun",
+    "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v1.6.1/DeskBox_Setup_1.6.1_x64.exe",
-            "hash": "d4fff3fd66886ffed54be56850bdf78d5dad2d7fdd1ac9ece0259dbb313b3604"
+            "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v1.6.2/DeskBox_Setup_1.6.2_x64.exe",
+            "hash": "b23dbbe0e9cc84e1efda8f6a916bfafef4a8922f044c3363c55c86a0a9f4f600"
         },
         "arm64": {
-            "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v1.6.1/DeskBox_Setup_1.6.1_arm64.exe",
-            "hash": "da5a803bcbb19568d28232f78326e4beaf7e1bec3aab048fc6dd41ed2f2f770e"
+            "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v1.6.2/DeskBox_Setup_1.6.2_arm64.exe",
+            "hash": "882951ea0934c44bb4bc5cfcbd7a6ec124bda8eb16aab6eef72ce618c25744cd"
         }
     },
     "innosetup": true,
@@ -31,11 +27,21 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v$version/DeskBox_Setup_$version_x64.exe"
+                "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v$version/DeskBox_Setup_$version_x64.exe",
+                "hash": {
+                    "url": "$url.sha256"
+                }
             },
             "arm64": {
-                "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v$version/DeskBox_Setup_$version_arm64.exe"
+                "url": "https://github.com/Tianyu199509/DeskBox/releases/download/v$version/DeskBox_Setup_$version_arm64.exe",
+                "hash": {
+                    "url": "$url.sha256"
+                }
             }
         }
-    }
+    },
+    "notes": [
+        "Upstream only ships an Inno Setup installer: scoop unpacks it automatically on install (innounp extracts the {app} program files) without running the installer, touching the registry, or requiring UAC; Start Menu/desktop shortcuts are created by scoop.",
+        "The app bundles the full WinAppSDK runtime (self-contained deployment), so there are no extra system dependencies; if shortcuts break after an upgrade, run scoop uninstall followed by install to recreate them."
+    ]
 }

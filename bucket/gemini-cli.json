@@ -1,30 +1,22 @@
 {
     "version": "0.71.1",
-    "description": "Gemini CLI: A command-line AI workflow tool that connects to your tools, understands your code and accelerates your workflows.",
-    "homepage": "https://github.com/google-gemini/gemini-cli",
+    "description": "Brings the power of Gemini directly into your terminal",
+    "homepage": "https://geminicli.com",
     "license": "Apache-2.0",
-    "suggest": {
-        "Node.js": [
-            "nodejs",
-            "nodejs-lts"
-        ]
-    },
-    "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-0.71.1.tgz",
-    "hash": "3381cebd8a58b43ab161fd9302d5b1f097ab2eb010278176e8afd3533d1c98bc",
-    "extract_dir": "package",
+    "depends": "nodejs-lts",
+    "url": "https://github.com/google-gemini/gemini-cli/releases/download/v0.71.1/gemini-cli-bundle.zip",
+    "hash": "2761ebcdf6a0e5610e80a6541596ba9c71cdcf13ce837f3a7cba8c3763ff7f62",
     "bin": [
         [
             "node",
-            "dist/index.js",
-            "gemini"
+            "gemini",
+            "$dir\\gemini.js"
         ]
     ],
     "checkver": {
-        "url": "https://registry.npmjs.org/@google/gemini-cli",
-        "jsonpath": "$.['dist-tags'].latest"
+        "github": "https://github.com/google-gemini/gemini-cli"
     },
     "autoupdate": {
-        "url": "https://registry.npmjs.org/@google/gemini-cli/-/gemini-cli-$version.tgz",
-        "extract_dir": "package"
+        "url": "https://github.com/google-gemini/gemini-cli/releases/download/v$version/gemini-cli-bundle.zip"
     }
 }
