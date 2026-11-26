@@ -1,34 +1,55 @@
 {
     "version": "0.5.2",
-    "description": "An open-source, clean-room download manager written from scratch in pure Rust.",
+    "description": "Open-source, clean-room download manager written in Rust — downloads, videos and torrents",
     "homepage": "https://misterdownloadmanager.com",
-    "license": "GPL-3.0-or-later",
-    "extract_dir": "MisterDownloadManager-0.5.2-portable",
+    "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v0.5.2/MisterDownloadManager-0.5.2-portable.zip",
-            "hash": "0907a6c6aed5c4967e89549e883147d2b33b073e6f8b0d914dff84d32f3b7cf7"
+            "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v0.5.2/MisterDownloadManager-0.5.2-x64.zip",
+            "hash": "703c1676c90e34869dfd8e7fb675e06c9093bb5e23db92232a6a7534a50b9f63",
+            "extract_dir": "MisterDownloadManager-0.5.2-x64"
         }
     },
-    "bin": [
-        "misterdownloadmanager-cli.exe",
-        "misterdownloadmanager-mcp.exe"
-    ],
+    "bin": "misterdownloadmanager-cli.exe",
     "shortcuts": [
         [
             "misterdownloadmanager.exe",
             "Mister Download Manager"
         ]
     ],
-    "persist": "data",
+    "post_install": [
+        "$nmhost = \"$dir\\misterdownloadmanager-nmhost.exe\"",
+        "if (Test-Path $nmhost) {",
+        "    Push-Location $dir",
+        "    try { & $nmhost --register | Out-Null } finally { Pop-Location }",
+        "    if ($LASTEXITCODE -ne 0) { warn 'Browser integration was not registered, see notes.' }",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "$nmhost = \"$dir\\misterdownloadmanager-nmhost.exe\"",
+            "if (Test-Path $nmhost) { Push-Location $dir; & $nmhost --unregister | Out-Null; Pop-Location }"
+        ]
+    },
+    "notes": [
+        "Browser integration is registered by this manifest for Chrome, Chromium, Edge, Brave and Firefox,",
+        "and removed again on uninstall. To finish the setup:",
+        "  1. Load the extension from '$dir\\extension\\chromium' via chrome://extensions (Developer mode -> Load unpacked),",
+        "     or install it from the browser's add-on store as 'Mister Download Manager'.",
+        "  2. In the app enable Options -> General -> 'Use advanced browser integration' and tick the browsers to capture from.",
+        "Undo the registration manually with: & \"$dir\\misterdownloadmanager-nmhost.exe\" --unregister",
+        "Settings are kept in %APPDATA%\\misterdownloadmanager. The portable zip is not used here: its 'data' folder",
+        "next to misterdownloadmanager.exe puts MDM in portable mode, which refuses to register browser integration.",
+        "Docs: https://misterdownloadmanager.com/zh-hans/help/portable.html"
+    ],
     "checkver": {
         "github": "https://github.com/anefzaoui/misterdownloadmanager"
     },
     "autoupdate": {
-        "extract_dir": "MisterDownloadManager-$version-portable",
         "architecture": {
             "64bit": {
-                "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v$version/MisterDownloadManager-$version-portable.zip"
+                "url": "https://github.com/anefzaoui/misterdownloadmanager/releases/download/v$version/MisterDownloadManager-$version-x64.zip",
+                "extract_dir": "MisterDownloadManager-$version-x64"
             }
         },
         "hash": {
