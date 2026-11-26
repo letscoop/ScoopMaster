@@ -1,0 +1,30 @@
+{
+    "version": "0.17.0",
+    "description": "Upload files, screenshots and the clipboard to your own S3, Cloudflare R2 or Backblaze B2 bucket and get a link.",
+    "homepage": "https://getaktar.com",
+    "license": "MIT",
+    "notes": [
+        "Aktar is installed with its own installer, per user, in %LOCALAPPDATA%\\Aktar, and keeps itself up to date.",
+        "Start it from the Start menu. `scoop update aktar` reinstalls the newest version."
+    ],
+    "url": "https://github.com/getaktar/desktop/releases/download/v0.17.0/Aktar_0.17.0_x64-setup.exe#/setup.exe",
+    "hash": "3e0ffb19be1220d27e3c92eb480079d2afad00189f1a0ce715ec4f99577bce28",
+    "installer": {
+        "script": [
+            "Start-Process -Wait -FilePath \"$dir\\setup.exe\" -ArgumentList '/S'",
+            "Remove-Item \"$dir\\setup.exe\""
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "$uninstaller = \"$env:LOCALAPPDATA\\Aktar\\uninstall.exe\"",
+            "if ($cmd -eq 'uninstall' -and (Test-Path $uninstaller)) { Start-Process -Wait -FilePath $uninstaller -ArgumentList '/S' }"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/getaktar/desktop"
+    },
+    "autoupdate": {
+        "url": "https://github.com/getaktar/desktop/releases/download/v$version/Aktar_$version_x64-setup.exe#/setup.exe"
+    }
+}
