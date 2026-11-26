@@ -1,10 +1,16 @@
 {
     "version": "2.30.0",
-    "description": "Open-source Windows tool for building custom scripts for debloating, privacy, performance and app installation.",
+    "description": "Open-source tool to build your Windows script from scratch.",
     "homepage": "https://winscript.cc/",
-    "license": "GPL-3.0-only",
+    "license": {
+        "identifier": "GPL-3.0-or-later",
+        "url": "https://github.com/flick9000/winscript/blob/main/LICENSE"
+    },
     "url": "https://github.com/flick9000/winscript/releases/download/v2.30.0/winscript-portable.exe",
     "hash": "422b918e705ea38dcba25ef93c40e177cfe6a4b0c0cd07117a96a96fae27f3be",
+    "uninstaller": {
+        "script": "Remove-Item $env:LOCALAPPDATA\\flick.winscript.dev -Force -Recurse"
+    },
     "bin": "winscript-portable.exe",
     "shortcuts": [
         [
@@ -13,7 +19,9 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/flick9000/winscript"
+        "url": "https://api.github.com/repos/flick9000/winscript/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v?([\\d.]+)"
     },
     "autoupdate": {
         "url": "https://github.com/flick9000/winscript/releases/download/v$version/winscript-portable.exe"
