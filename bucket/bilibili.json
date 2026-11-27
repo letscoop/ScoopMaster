@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dl.hdslb.com/mobile/pack/bili_win/31987907/public/bilibili-setup-v1.21.0.exe#/dl.7z",
-            "hash": "sha512:286c9d7b4bf2c319b8ea0353ed1a18239149d18d1915522cd1c80a2ca4d48a03ea2944b42468c25050738abd09af1123935ff65f083500045285e41067ce512d",
+            "url": "https://dl.hdslb.com/mobile/pack/bili_win/31979478/public/bilibili-setup-v1.21.0.exe#/dl.7z",
+            "hash": "sha512:29461ac7601b4b9afbc48fd50dc9b103a3e42f121962b962ed662bd133fee6dacf5c3913eedcab4142925b78bd0982b05490f1bde0a1aaf7f0f26ef3bddf0e28",
             "extract_dir": "$PLUGINSDIR"
         }
     },
@@ -45,6 +45,7 @@
             "$assetUrl = \"https://api.bilibili.com/x/elec-frontend/update/bilibili-setup-v$ver.exe.blockmap\"",
             "$assetReq = [System.Net.HttpWebRequest]::Create($assetUrl)",
             "$assetReq.Headers.Add('appversion', '0.0.0')",
+            "$assetReq.UserAgent = 'bilibili_pc'",
             "$assetCont = $assetReq.GetResponse().ResponseUri.AbsoluteUri",
             "$r = 'win/([\\d]+)/public'",
             "if (!($assetCont -match $r)) { Write-Error \"Could not match $r in $url\"; continue }",

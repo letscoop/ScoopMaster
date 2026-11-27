@@ -25,9 +25,7 @@
             "WinMerge"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/WinMerge/winmerge"
-    },
+    "checkver": "WinMerge ([\\d.]+) - latest stable version",
     "autoupdate": {
         "architecture": {
             "64bit": {

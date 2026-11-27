@@ -1,22 +1,22 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A shell.",
   "homepage": "https://github.com/cerfsh/cerf",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/cerfsh/cerf/releases/download/v0.3.2/cerf-0.3.2-x86_64-pc-windows-msvc.zip",
-      "hash": "c9675ef3760d133d2bc001505806fa2ed0ecb6affcb0c2d6d166026297db2df4",
+      "url": "https://github.com/cerfsh/cerf/releases/download/v0.3.3/cerf-0.3.3-x86_64-pc-windows-msvc.zip",
+      "hash": "e7da05f28f9e7802a942655f79cbe6b5a038c69745ef4fd6182a97d3b28fa8cd",
       "bin": "cerf.exe"
     },
     "32bit": {
-      "url": "https://github.com/cerfsh/cerf/releases/download/v0.3.2/cerf-0.3.2-i686-pc-windows-msvc.zip",
-      "hash": "d6069d0ab3b37947481f9a52915a760b2f15b9af1303771466279e7b67fd16aa",
+      "url": "https://github.com/cerfsh/cerf/releases/download/v0.3.3/cerf-0.3.3-i686-pc-windows-msvc.zip",
+      "hash": "829a5cc55a2810575eb980c02c82730d4a58b2689ac10723523a06c1566393a5",
       "bin": "cerf.exe"
     },
     "arm64": {
-      "url": "https://github.com/cerfsh/cerf/releases/download/v0.3.2/cerf-0.3.2-aarch64-pc-windows-msvc.zip",
-      "hash": "ec99a5598681f44c5150dcba82d75f1de64d2eb201fb6ad0d57ae0a843e58b47",
+      "url": "https://github.com/cerfsh/cerf/releases/download/v0.3.3/cerf-0.3.3-aarch64-pc-windows-msvc.zip",
+      "hash": "6e2f22aa2b7a272a080b0696d74bf43f3b0a41438a858bf0d430d90e970f43e1",
       "bin": "cerf.exe"
     }
   },

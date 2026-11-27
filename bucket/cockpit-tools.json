@@ -1,18 +1,30 @@
 {
     "version": "1.5.3",
-    "description": "通用 AI IDE 账号管理工具",
-    "homepage": "https://github.com/jlcodes99/cockpit-tools/",
-    "license": "Unknown",
-    "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v1.5.3/Cockpit.Tools_1.5.3_x64-setup.exe#/dl.7z",
-    "hash": "45d5ed56706834d97b7db92647047460cbf2c6318fc219393c50f55b1399b262",
+    "description": "A universal AI IDE account management tool.",
+    "homepage": "https://github.com/jlcodes99/cockpit-tools",
+    "license": "CC-BY-NC-SA-4.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v1.5.3/Cockpit.Tools_1.5.3_x64_en-US.msi",
+            "hash": "3165c0f355fe87488cdf65a4bcfa80e39505aa4aeb4243430b6a59251464c587"
+        }
+    },
+    "extract_dir": "PFiles\\Cockpit Tools",
     "shortcuts": [
         [
             "cockpit-tools.exe",
-            "Cockpit-Tools"
+            "Cockpit Tools"
         ]
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v$version/Cockpit.Tools_$version_x64-setup.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jlcodes99/cockpit-tools/releases/download/v$version/Cockpit.Tools_$version_x64_en-US.msi"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
     }
 }
