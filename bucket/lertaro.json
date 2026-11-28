@@ -1,20 +1,27 @@
 {
     "version": "5.14.0",
-    "description": "",
+    "description": "适用于 Windows 的高性能本地文件检索与效率启动工具 | High-performance local file search and productivity launcher for Windows",
     "homepage": "https://lertaro.github.io",
     "license": "MIT",
-    "checkver": {
-        "github": "https://github.com/Lertaro/Lertaro"
-    },
     "architecture": {
         "64bit": {
             "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.14.0/Lertaro-Portable.zip",
             "hash": "2c4ba67b3dfdfb7a32d389838a70b48e07a438238acb7885148bc3d0ca90f10e"
         },
         "arm64": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.6.3/Lertaro-Portable-arm64.zip",
-            "hash": "251f12be02b8e174d658437bb3855be8fc199f4f93258700fe2433a356ec98ed"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.14.0/Lertaro-Portable-arm64.zip",
+            "hash": "4ba0f8d230d3736b6908afec4f4df979b639180810d2d10f51b8c1bb4d4ec972"
         }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "Lertaro.App.exe",
+            "Lertaro"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Lertaro/Lertaro"
     },
     "autoupdate": {
         "architecture": {
@@ -22,20 +29,8 @@
                 "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable.zip"
             },
             "arm64": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.6.3/Lertaro-Portable-arm64.zip"
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable-arm64.zip"
             }
         }
-    },
-    "extract_dir": "Lertaro",
-    "shortcuts": [
-        [
-            "Lertaro.App.exe",
-            "Lertaro"
-        ]
-    ],
-    "persist": "Data",
-    "bin": "lff.exe",
-    "uninstaller": {
-        "file": "portable-cleanup.bat"
     }
 }

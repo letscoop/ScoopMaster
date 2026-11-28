@@ -1,34 +1,29 @@
 {
-    "version": "3.10.0-20261127",
-    "description": "Keyguard is an alternative client for the Bitwarden® platform, created to provide the best user experience possible",
-    "homepage": "https://keyguard.dev",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://github.com/AChep/keyguard-app/blob/master/LICENSE"
-    },
+    "version": "3.10.0",
+    "description": "Keyguard is an alternative client for the Bitwarden® platform, created to provide the best user experience possible.",
+    "homepage": "https://github.com/AChep/keyguard-app",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/AChep/keyguard-app/releases/download/r20261127/Keyguard-3.10.0.msi",
             "hash": "eedae788c20a02723502e9e795fb87ff12b330d8c165d3c38dcb3d54a910842f"
         }
     },
-    "bin": "Keyguard\\Keyguard.exe",
+    "extract_dir": "Keyguard",
     "shortcuts": [
         [
-            "Keyguard\\Keyguard.exe",
+            "keyguard.exe",
             "Keyguard"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/AChep/keyguard-app",
-        "jsonpath": "$.assets[?(@.name =~ /msi$/i)].browser_download_url",
-        "regex": "(?i)download/r(?<suffix>[\\d.]+)/Keyguard-(?<prefix>[\\d.]+)\\.msi",
-        "replace": "${prefix}-${suffix}"
+        "url": "https://api.github.com/repos/AChep/keyguard-app/releases",
+        "re": "(?<url>download/\\w+/Keyguard-(?<version>[\\d\\.]+).msi)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/AChep/keyguard-app/releases/download/r$preReleaseVersion/Keyguard-$matchHead.msi"
+                "url": "https://github.com/AChep/keyguard-app/releases/$matchUrl"
             }
         }
     }
