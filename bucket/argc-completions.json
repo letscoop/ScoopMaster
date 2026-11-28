@@ -1,10 +1,10 @@
 {
-    "version": "2026.11.27.055455",
+    "version": "2026.11.28.113335",
     "description": "Completions for argc, covering a wide range of CLI tools",
     "homepage": "https://github.com/sigoden/argc-completions",
     "license": "MIT",
     "url": "https://github.com/sigoden/argc-completions/archive/refs/heads/main.zip",
-    "hash": "ef784421eb256d14a8d4379fa32eced2e7aed76fe62e7bd83a4b9af056d077df",
+    "hash": "0d0fb72502eedeb6834741577260299130b414ad36f93f61efa1b182a03a037c",
     "env_set": {
         "ARGC_COMPLETIONS_ROOT": "$dir\\argc-completions-main",
         "ARGC_COMPLETIONS_PATH": "$dir\\argc-completions-main\\completions\\windows;$dir\\argc-completions-main\\completions"

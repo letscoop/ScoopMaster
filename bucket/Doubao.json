@@ -6,10 +6,7 @@
     "url": "https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao_pc/2.37.18/Doubao_installer_2.37.18.exe",
     "hash": "7eda546f43af056055a9ab74039106ed3d42a2d3c8540159a50d4ba720f37d32",
     "installer": {
-        "script": [
-            "Expand-7zipArchive -Path \"$dir\\Doubao_installer_$version.exe\" -DestinationPath \"$dir\" -Removal",
-            "Get-ChildItem \"$dir\" -File | ForEach-Object { Expand-7zipArchive -Path $_.FullName -DestinationPath \"$dir\" -Removal }"
-        ]
+        "script": "Expand-7zipArchive -Path \"$dir\\Doubao_installer_$version.exe\" -DestinationPath \"$dir\" -Removal"
     },
     "shortcuts": [
         [
